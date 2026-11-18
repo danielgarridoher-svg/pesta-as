@@ -1568,6 +1568,39 @@ body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-capacidades{
   opacity:1!important;
   -webkit-text-fill-color:currentColor!important
 }
+
+/* ZWCAD · comparación: jerarquía y matriz alineadas con la paleta oficial */
+.mp-page[data-page="zwcad"] #zwcad-comparacion{background:linear-gradient(180deg,#FFFFFF 0%,#F5F9FF 100%)!important}
+.mp-page[data-page="zwcad"] #mp-zcad-compare{max-width:1280px}
+.mp-page[data-page="zwcad"] #mp-zcad-compare>.mp-ey{margin:0 0 12px;font-size:12px;font-weight:800;line-height:1.4;letter-spacing:.14em;text-transform:uppercase;color:#00AEB5!important;text-shadow:0 0 18px rgba(0,184,189,.18)}
+.mp-page[data-page="zwcad"] #mp-zcad-compare #zcad-comparison-title{max-width:900px;margin:0 0 14px;font-size:clamp(32px,4vw,48px);font-weight:800;line-height:1.1;letter-spacing:-.035em;background:linear-gradient(100deg,#1558C0 0%,#2E82F0 56%,#00AEB5 100%)!important;background-clip:text!important;-webkit-background-clip:text!important;-webkit-text-fill-color:transparent!important;text-shadow:0 0 24px rgba(21,88,192,.10)}
+.mp-page[data-page="zwcad"] #mp-zcad-compare .mp-zcad-intro{max-width:790px;margin:0;color:#526783!important;font-size:16px;line-height:1.7}
+.mp-page[data-page="zwcad"] #mp-zcad-compare .mp-zcad-toolbar{margin:26px 0 14px;align-items:center}
+.mp-page[data-page="zwcad"] #mp-zcad-compare .mp-zcad-actions button{padding:10px 17px;border:1px solid rgba(21,88,192,.22);border-radius:9px;background:#fff;color:#1558C0;font:700 13px inherit;box-shadow:0 3px 10px rgba(14,27,51,.04)}
+.mp-page[data-page="zwcad"] #mp-zcad-compare .mp-zcad-actions button:hover{border-color:#00B8BD;background:#F1FCFC;color:#075F83;transform:translateY(-1px)}
+.mp-page[data-page="zwcad"] #mp-zcad-compare .mp-zcad-legend{gap:14px;color:#536884;font-size:12px}
+.mp-page[data-page="zwcad"] #mp-zcad-compare .mp-zcad-legend b{background:rgba(0,184,189,.13);color:#009DA5}
+.mp-page[data-page="zwcad"] #mp-zcad-compare .mp-zcad-table-scroll{overflow-x:auto;border:1px solid rgba(21,88,192,.16);border-radius:15px;background:#fff;box-shadow:0 14px 34px rgba(14,27,51,.08)}
+.mp-page[data-page="zwcad"] #mp-zcad-compare .mp-zcad-matrix{width:100%;min-width:760px;border-collapse:separate;border-spacing:0;font-size:13px}
+.mp-page[data-page="zwcad"] #mp-zcad-compare .mp-zcad-matrix th,.mp-page[data-page="zwcad"] #mp-zcad-compare .mp-zcad-matrix td{padding:13px 15px;border-bottom:1px solid #E8EEF6;text-align:center}
+.mp-page[data-page="zwcad"] #mp-zcad-compare .mp-zcad-matrix thead th{position:sticky;top:0;z-index:2;background:#0E1B33;color:#F4F6F9;font-size:12px;font-weight:750;line-height:1.45}
+.mp-page[data-page="zwcad"] #mp-zcad-compare .mp-zcad-matrix thead th:first-child{width:40%;padding-left:20px;text-align:left}
+.mp-page[data-page="zwcad"] #mp-zcad-compare .mp-zcad-matrix thead th b{color:#00B8BD;font-size:13px}
+.mp-page[data-page="zwcad"] #mp-zcad-compare .mp-zcad-category-row th{padding:0!important;border-bottom:1px solid #DCE8F5}
+.mp-page[data-page="zwcad"] #mp-zcad-compare .mp-zcad-category-toggle{min-height:48px;padding:13px 18px;gap:12px;background:#EAF3FF;color:#142642;font:750 13px inherit;transition:background .2s ease,color .2s ease}
+.mp-page[data-page="zwcad"] #mp-zcad-compare .mp-zcad-category-toggle:hover{background:#DDEBFC;color:#1558C0}
+.mp-page[data-page="zwcad"] #mp-zcad-compare .mp-zcad-category-toggle small{color:#60748E;font-size:11px;font-weight:650}
+.mp-page[data-page="zwcad"] #mp-zcad-compare .mp-zcad-category-chevron{border-color:#00AEB5}
+.mp-page[data-page="zwcad"] #mp-zcad-compare .mp-zcad-feature-row th{background:#fff;color:#243B59;font-weight:550;text-align:left;padding-left:20px;line-height:1.45}
+.mp-page[data-page="zwcad"] #mp-zcad-compare .mp-zcad-feature-row td{background:#fff}
+.mp-page[data-page="zwcad"] #mp-zcad-compare .mp-zcad-feature-row:nth-child(odd) th,.mp-page[data-page="zwcad"] #mp-zcad-compare .mp-zcad-feature-row:nth-child(odd) td{background:#F8FAFD}
+.mp-page[data-page="zwcad"] #mp-zcad-compare .mp-zcad-feature-row:hover th,.mp-page[data-page="zwcad"] #mp-zcad-compare .mp-zcad-feature-row:hover td{background:#EFF6FF}
+.mp-page[data-page="zwcad"] #mp-zcad-compare .mp-zcad-matrix td[data-state="yes"] .mp-zcad-state{width:24px;height:24px;background:rgba(0,184,189,.13);color:#009DA5;font-size:15px}
+.mp-page[data-page="zwcad"] #mp-zcad-compare .mp-zcad-matrix td[data-state="no"] .mp-zcad-state{color:#9AA8B9;font-size:17px}
+.mp-page[data-page="zwcad"] #mp-zcad-compare .mp-zcad-footnote{margin:16px 2px 0;color:#63758C;font-size:12px;line-height:1.7}
+.mp-page[data-page="zwcad"] #mp-zcad-compare .mp-zcad-footnote a{color:#1558C0;font-weight:700;text-decoration-thickness:1px;text-underline-offset:3px}
+@media(max-width:640px){.mp-page[data-page="zwcad"] #mp-zcad-compare .mp-zcad-toolbar{align-items:flex-start}.mp-page[data-page="zwcad"] #mp-zcad-compare .mp-zcad-matrix{min-width:720px}.mp-page[data-page="zwcad"] #mp-zcad-compare .mp-zcad-matrix th,.mp-page[data-page="zwcad"] #mp-zcad-compare .mp-zcad-matrix td{padding:11px 10px}.mp-page[data-page="zwcad"] #mp-zcad-compare .mp-zcad-matrix thead th:first-child,.mp-page[data-page="zwcad"] #mp-zcad-compare .mp-zcad-matrix tbody th{padding-left:13px}}
+
 </style>
 </head>
 <body>
