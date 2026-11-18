@@ -2642,5 +2642,33 @@ var hero=page.querySelector('.zcad-hero');if(hero&&!reduce&&window.matchMedia('(
   cards.forEach(function(card){observer.observe(card)});
 })();
 </script>
+<style id="mp-zwcad-cta-dark-centered">
+/* CTA final ZWCAD · fondo oscuro y contenido centrado */
+#zwcad-demo.zcad-cta{
+  background:linear-gradient(125deg,#0C1422 0%,#10213A 58%,#0E1B33 100%)!important;
+  color:#F4F6F9!important;text-align:center!important;
+}
+#zwcad-demo.zcad-cta::before{
+  background:radial-gradient(ellipse at 50% 0%,rgba(46,130,240,.18),transparent 48%),
+             radial-gradient(ellipse at 12% 100%,rgba(0,184,189,.12),transparent 42%)!important;
+}
+#zwcad-demo .mp-co{display:flex;flex-direction:column;align-items:center;text-align:center}
+#zwcad-demo .zcad-ey-light{color:#A8F0E8!important}
+#zwcad-demo .zcad-light-title{
+  max-width:850px;margin-left:auto!important;margin-right:auto!important;
+  background:linear-gradient(100deg,#B9F3EF 0%,#C8DEFF 55%,#D2F5E5 100%)!important;
+  background-clip:text!important;-webkit-background-clip:text!important;
+  -webkit-text-fill-color:transparent!important;
+}
+#zwcad-demo .mp-co>p:not(.zcad-ey-light):not(.zcad-back){
+  max-width:700px;margin-left:auto!important;margin-right:auto!important;
+  color:#D5E5F6!important;
+}
+#zwcad-demo .zcad-cta-actions{display:flex;justify-content:center!important;align-items:center;gap:14px;flex-wrap:wrap;width:100%}
+#zwcad-demo .mp-white{color:#FFFFFF!important;background:linear-gradient(110deg,#00AEB5,#2E82F0)!important}
+#zwcad-demo .mp-ghost{border:1px solid rgba(190,220,255,.58)!important;color:#E6F2FF!important;background:rgba(255,255,255,.06)!important}
+#zwcad-demo .zcad-back{width:100%;text-align:center!important}
+#zwcad-demo .zcad-back a{color:#B7C4D6!important}
+</style>
 </body>
 </html>
