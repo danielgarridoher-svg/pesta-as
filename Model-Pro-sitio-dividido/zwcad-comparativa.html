@@ -1085,8 +1085,6 @@ a.mp-card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(11,20,34,.
       </div>
       <button type="button" class="zwcad-calc-prompt-button" data-zwcad-open-calculator>Ver cuánto puedes ahorrar <span aria-hidden="true">→</span></button>
     </div>
-
->
   </div>
 </section>
 
@@ -1725,6 +1723,67 @@ document.querySelectorAll('img[data-ph]').forEach(function(im){
 #zwcad-precios .zwcad-card-description{min-height:0!important}
 #zwcad-precios .zwcad-calc-prompt{margin-top:10px!important;padding:13px!important}
 #zwcad-ahorro.mp-sect{padding-top:17px!important}
+}
+</style>
+<style id="zwcad-final-polish">
+/* Correcciones de alineación, selección y jerarquía visual */
+#zwcad-precios .zwcad-price-card,
+#zwcad-precios .zwcad-price-card.is-selected{
+  border:1px solid var(--zwcad-border)!important;
+  padding:16px 16px 14px!important;
+  box-shadow:0 5px 16px rgba(28,52,80,.045)!important;
+  transform:none!important;
+}
+#zwcad-precios .zwcad-price-card.is-selected{
+  border-color:#b8d9fb!important;
+  box-shadow:inset 0 0 0 1px #0878e8,0 7px 20px rgba(8,120,232,.09)!important;
+  background:#fbfdff!important;
+}
+#zwcad-precios .zwcad-price-card:hover{transform:translateY(-2px)!important}
+#zwcad-precios .zwcad-price-card.is-selected:hover{transform:translateY(-2px)!important}
+#zwcad-precios .zwcad-price-card .zwcad-card-top h3{font-size:18px!important}
+#zwcad-precios .zwcad-price-card .zwcad-card-description{min-height:30px!important;font-size:10.5px!important}
+#zwcad-precios .zwcad-price-card .zwcad-price-area{margin-top:10px!important}
+#zwcad-precios .zwcad-price-card .zwcad-card-divider{margin:10px 0 9px!important}
+#zwcad-precios .zwcad-price-card .zwcad-feature-list{gap:6px!important;margin-bottom:12px!important}
+#zwcad-precios .zwcad-price-card .zwcad-feature-list li{font-size:10.5px!important}
+#zwcad-precios .zwcad-price-card .zwcad-card-actions{gap:6px!important}
+#zwcad-precios .zwcad-price-card .zwcad-btn-primary,
+#zwcad-precios .zwcad-price-card .zwcad-btn-secondary{min-height:34px!important;padding:6px 9px!important;font-size:10.5px!important}
+#zwcad-precios .zwcad-calc-prompt{margin:10px 0 0!important;padding:11px 15px!important}
+#zwcad-precios .zwcad-calc-prompt strong{font-size:12px!important}
+#zwcad-ahorro{padding-top:16px!important}
+#mp-zcad-savings .sv-head{margin-bottom:22px!important}
+#mp-zcad-savings .sv-layout{gap:16px!important}
+#mp-zcad-savings .sv-form,#mp-zcad-savings .sv-results{border-radius:14px!important;box-shadow:0 8px 24px rgba(25,48,77,.065)!important}
+#mp-zcad-savings .sv-form{padding:20px!important}
+#mp-zcad-savings .sv-results{padding:20px!important;background:linear-gradient(180deg,#fff 0%,#fbfdff 100%)!important}
+#mp-zcad-savings .sv-step{padding-bottom:16px!important;margin-bottom:16px!important}
+#mp-zcad-savings .sv-step-title{margin-bottom:12px!important}
+#mp-zcad-savings .sv-step-title>span{width:24px!important;height:24px!important;flex-basis:24px!important}
+#mp-zcad-savings .sv-step-title h3{font-size:14px!important}
+#mp-zcad-savings .sv-money{display:block!important}
+#mp-zcad-savings .sv-money input{padding-left:28px!important;padding-right:104px!important}
+#mp-zcad-savings .sv-money>span,#mp-zcad-savings .sv-money em{top:50%!important;transform:translateY(-50%)!important;line-height:1!important}
+#mp-zcad-savings .sv-money em{right:11px!important;font-size:10px!important;white-space:nowrap!important}
+#mp-zcad-savings .sv-totals{gap:9px!important}
+#mp-zcad-savings .sv-total{display:flex!important;min-width:0!important;min-height:112px!important;flex-direction:column!important;justify-content:center!important;align-items:flex-start!important;padding:13px!important;border:1px solid #e2ebf5!important;border-radius:11px!important;background:linear-gradient(145deg,#f7faff,#eef5fc)!important;box-shadow:0 3px 10px rgba(33,67,105,.035)!important}
+#mp-zcad-savings .sv-total small{margin-bottom:7px!important;font-size:10px!important;letter-spacing:.35px!important;text-transform:uppercase!important}
+#mp-zcad-savings .sv-total strong{font-size:clamp(20px,2.2vw,27px)!important;line-height:1.12!important;overflow-wrap:anywhere!important}
+#mp-zcad-savings .sv-total em{margin-top:7px!important;padding:4px 7px!important;border-radius:5px!important;background:#e5f5ee!important;font-size:10px!important}
+#mp-zcad-savings .sv-chart{margin-top:19px!important;padding-top:15px!important}
+#mp-zcad-savings .sv-chart-title{font-size:12px!important}
+#mp-zcad-savings .sv-bar{height:9px!important;border-radius:5px!important}
+#mp-zcad-savings .sv-table-wrap{margin-top:15px!important;padding:8px 10px!important;border:1px solid #e8eef5!important;border-radius:9px!important;background:#fff!important}
+#mp-zcad-savings .sv-table th,#mp-zcad-savings .sv-table td{padding:8px 6px!important}
+#mp-zcad-savings .sv-cta{min-height:42px!important;margin-top:15px!important;font-size:12px!important}
+@media(max-width:700px){
+ #zwcad-precios .zwcad-price-card,#zwcad-precios .zwcad-price-card.is-selected{padding:15px!important}
+ #mp-zcad-savings .sv-form,#mp-zcad-savings .sv-results{padding:16px!important}
+ #mp-zcad-savings .sv-total{min-height:100px!important;padding:10px!important}
+ #mp-zcad-savings .sv-total strong{font-size:20px!important}
+ #mp-zcad-savings .sv-money input{padding-right:92px!important}
+ #mp-zcad-savings .sv-money em{font-size:9px!important}
 }
 </style>
 </body></html>
