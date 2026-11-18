@@ -1505,6 +1505,51 @@ body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-capacidades{
     background-size:36px 36px,36px 36px,100% 100%!important;
   }
 }
+
+/* Nota de alcance de la matriz */
+.mp-page[data-page="zwcad"] #mp-zcad-compare .mp-zcad-footnote{
+  position:relative;
+  margin:22px 0 0;
+  padding:15px 18px 15px 48px;
+  color:#43566F;
+  background:linear-gradient(110deg,#F1F5FC 0%,#EDF5F7 100%);
+  border:1px solid rgba(21,88,192,.12);
+  border-left:3px solid #6A9ACB;
+  border-radius:10px;
+  font-size:12.5px;
+  line-height:1.7;
+  box-shadow:0 3px 12px rgba(21,54,91,.045);
+}
+.mp-page[data-page="zwcad"] #mp-zcad-compare .mp-zcad-footnote::before{
+  content:"i";
+  position:absolute;
+  left:17px;
+  top:16px;
+  display:grid;
+  place-items:center;
+  width:19px;
+  height:19px;
+  border:1px solid rgba(21,88,192,.28);
+  border-radius:50%;
+  color:#376A9D;
+  font-size:12px;
+  font-weight:700;
+  font-style:normal;
+  line-height:1;
+}
+.mp-page[data-page="zwcad"] #mp-zcad-compare .mp-zcad-footnote a{
+  color:#1558C0;
+  font-weight:700;
+  text-decoration:underline;
+  text-decoration-thickness:1px;
+  text-underline-offset:3px;
+}
+.mp-page[data-page="zwcad"] #mp-zcad-compare .mp-zcad-footnote a:hover{color:#0E1B33}
+@media(max-width:600px){
+  .mp-page[data-page="zwcad"] #mp-zcad-compare .mp-zcad-footnote{padding:13px 14px 13px 42px;font-size:12px}
+  .mp-page[data-page="zwcad"] #mp-zcad-compare .mp-zcad-footnote::before{left:13px;top:14px}
+}
+
 </style>
 
 
