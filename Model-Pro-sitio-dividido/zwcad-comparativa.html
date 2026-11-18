@@ -1047,6 +1047,7 @@ a.mp-card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(11,20,34,.
 (function(){var root=document.getElementById('mp-zcad-compare');if(!root||root.dataset.ready==='1')return;root.dataset.ready='1';var categories=[].slice.call(root.querySelectorAll('.mp-zcad-category-toggle'));function setCategory(button,open){button.setAttribute('aria-expanded',String(open));var row=button.closest('tr'),next=row.nextElementSibling;while(next&&!next.classList.contains('mp-zcad-category-row')){next.hidden=!open;next=next.nextElementSibling;}}categories.forEach(function(button){button.addEventListener('click',function(){setCategory(button,button.getAttribute('aria-expanded')!=='true');});});var expand=root.querySelector('[data-zcad-expand]'),collapse=root.querySelector('[data-zcad-collapse]');if(expand)expand.addEventListener('click',function(){categories.forEach(function(b){setCategory(b,true);});});if(collapse)collapse.addEventListener('click',function(){categories.forEach(function(b){setCategory(b,false);});});})();
 </script>
 </div></section>
+<span id="zwcad-licencias" aria-hidden="true" style="display:block;height:0;scroll-margin-top:90px"></span>
 <section class="mp-zwcad-pricing" id="zwcad-precios">
   <div class="zwcad-pricing-container">
     <div class="zwcad-pricing-header">
