@@ -2280,4 +2280,46 @@ var hero=page.querySelector('.zcad-hero');if(hero&&!reduce&&window.matchMedia('(
 @media(max-width:520px){#mp-zcad-savings .sv-form{gap:14px!important}#mp-zcad-savings .sv-form .sv-step{padding:16px!important}}
 
 </style>
+<style id="zwcad-calculator-compact-finish">
+/* Acabado compacto: los pasos conservan sus tarjetas, sin un fondo exterior */
+#mp-zcad-savings .sv-form{
+ background:transparent!important;border:0!important;box-shadow:none!important;
+ padding:0!important;border-radius:0!important;gap:14px!important;
+ align-self:start!important;height:auto!important;min-height:0!important;
+}
+#mp-zcad-savings .sv-form .sv-step{
+ padding:17px!important;margin:0!important;border:1px solid #e2eaf3!important;
+ border-radius:14px!important;background:#fff!important;
+ box-shadow:0 3px 12px rgba(20,45,75,.045)!important;
+}
+#mp-zcad-savings .sv-results{
+ align-self:start!important;height:fit-content!important;min-height:0!important;
+ padding:19px!important;margin:0!important;
+}
+#mp-zcad-savings .sv-result-label{margin-bottom:10px!important}
+#mp-zcad-savings .sv-totals{gap:9px!important}
+#mp-zcad-savings .sv-total{min-height:0!important;padding:12px!important}
+#mp-zcad-savings .sv-total small{margin-bottom:6px!important}
+#mp-zcad-savings .sv-total strong{font-size:clamp(20px,2vw,27px)!important}
+#mp-zcad-savings .sv-total em{margin-top:5px!important}
+#mp-zcad-savings .sv-chart{margin-top:13px!important;padding-top:12px!important}
+#mp-zcad-savings .sv-chart-title{margin-bottom:8px!important}
+#mp-zcad-savings .sv-legend{gap:11px!important;margin-bottom:8px!important}
+#mp-zcad-savings .sv-bars{gap:6px!important}
+#mp-zcad-savings .sv-bar{height:8px!important}
+#mp-zcad-savings .sv-table-wrap{margin-top:12px!important}
+#mp-zcad-savings .sv-table th,#mp-zcad-savings .sv-table td{padding:7px 6px!important}
+#mp-zcad-savings .sv-cta{width:auto!important;max-width:280px!important;min-height:40px!important;margin:12px auto 0!important;padding:9px 18px!important}
+#mp-zcad-savings .sv-disclaimer{margin-top:13px!important}
+@media(max-width:850px){
+ #mp-zcad-savings .sv-layout{grid-template-columns:minmax(0,1fr)!important;gap:14px!important}
+ #mp-zcad-savings .sv-results{width:100%!important;box-sizing:border-box!important}
+}
+@media(max-width:520px){
+ #mp-zcad-savings .sv-form .sv-step{padding:14px!important}
+ #mp-zcad-savings .sv-results{padding:15px!important}
+ #mp-zcad-savings .sv-total strong{font-size:20px!important}
+ #mp-zcad-savings .sv-cta{max-width:100%!important}
+}
+</style>
 </body></html>
