@@ -2475,6 +2475,24 @@ var hero=page.querySelector('.zcad-hero');if(hero&&!reduce&&window.matchMedia('(
   border:2px solid #2E82F0!important;
   box-shadow:0 12px 35px rgba(0,184,189,.13)!important;
 }
+
+/* Aviso para abrir la calculadora: integrado visualmente al fondo oscuro */
+#zwcad-precios .zwcad-calc-prompt:not([hidden]){
+  background:linear-gradient(110deg,#142746 0%,#10243D 65%,#0E1B33 100%)!important;
+  border:1px solid rgba(0,184,189,.34)!important;
+  box-shadow:0 10px 26px rgba(0,0,0,.18),inset 0 0 0 1px rgba(46,130,240,.08)!important;
+}
+#zwcad-precios .zwcad-calc-prompt strong{color:#F4F6F9!important}
+#zwcad-precios .zwcad-calc-prompt strong span{color:#45D5D8!important}
+#zwcad-precios .zwcad-calc-prompt p{color:#B7C4D6!important}
+#zwcad-precios .zwcad-calc-prompt-button{
+  background:linear-gradient(135deg,#00B8BD,#2E82F0)!important;
+  color:#FFFFFF!important;
+  box-shadow:0 5px 16px rgba(0,184,189,.18)!important;
+}
+#zwcad-precios .zwcad-calc-prompt-button:hover{
+  filter:brightness(1.08);
+}
 </style>
 </body>
 </html>
