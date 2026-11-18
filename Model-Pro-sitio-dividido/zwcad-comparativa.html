@@ -1409,8 +1409,8 @@ a.mp-card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(11,20,34,.
 
 
 /* CONTRASTE VISUAL OSCURO — secciones «¿Qué es ZWCAD?» y «Funciones» */
-#zwcad-que-es,
-#zwcad-capacidades{
+body .mp-wrap > #zwcad-que-es,
+body .mp-wrap > #zwcad-capacidades{
   --section-bg:#0C1422;
   --section-card:#0E1B33;
   --section-text:#F4F6F9;
@@ -1419,6 +1419,7 @@ a.mp-card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(11,20,34,.
   position:relative;
   isolation:isolate;
   overflow:hidden;
+  background:var(--section-bg)!important;
   background-color:var(--section-bg)!important;
   background-image:
     linear-gradient(rgba(0,184,189,.065) 1px,transparent 1px),
