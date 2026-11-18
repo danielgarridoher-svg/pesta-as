@@ -995,7 +995,188 @@ a.mp-card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(11,20,34,.
 (function(){var root=document.getElementById('mp-zcad-compare');if(!root||root.dataset.ready==='1')return;root.dataset.ready='1';var items=[].slice.call(root.querySelectorAll('.mp-zcad-category'));var expand=root.querySelector('[data-zcad-expand]');var collapse=root.querySelector('[data-zcad-collapse]');if(expand)expand.addEventListener('click',function(){items.forEach(function(x){x.open=true;});});if(collapse)collapse.addEventListener('click',function(){items.forEach(function(x){x.open=false;});});})();
 </script>
 </div></section>
-<section class="mp-sect zcad-dark zcad-section" id="zwcad-licencias" aria-labelledby="zcad-license-title"><div class="mp-co"><p class="zcad-ey-light">Opciones para tu operación</p><h2 class="mp-h2 zcad-light-title" id="zcad-license-title">Licenciamiento y acompañamiento</h2><p class="zcad-section-lead">Te ayudamos a elegir la modalidad adecuada y a ponerla en marcha con tu equipo.</p><div class="zcad-license-grid"><article><i class="ti ti-license" aria-hidden="true"></i><h3>Licencia perpetua</h3><p>Una alternativa para adquirir el software con inversión de largo plazo.</p></article><article><i class="ti ti-users-group" aria-hidden="true"></i><h3>Licencia de red</h3><p>Consulta opciones para compartir licencias entre usuarios de tu organización.</p></article><article><i class="ti ti-headset" aria-hidden="true"></i><h3>Soporte Model Pro</h3><p>Demostración, capacitación y acompañamiento en español para adoptar ZWCAD.</p></article></div><p class="zcad-price-note">ZWSOFT indica que el precio de referencia inicia en USD 899 y puede variar por país o región. Consulta a Model Pro las modalidades y precios vigentes en México.</p></div></section>
+<section class="mp-zwcad-pricing" id="zwcad-precios">
+  <div class="zwcad-pricing-container">
+    <div class="zwcad-pricing-header">
+      <span class="zwcad-pricing-eyebrow">LICENCIAS ZWCAD</span>
+      <h2>Elige la licencia que mejor <span>se adapta a tu trabajo</span></h2>
+      <p>Una solución CAD profesional con licencia perpetua. Elige la edición y modalidad que necesitas.</p>
+      <div class="zwcad-license-switch" role="group" aria-label="Modalidad de licencia">
+        <button type="button" class="zwcad-switch-option active" data-license="standalone" aria-pressed="true">
+          <span class="zwcad-switch-icon" aria-hidden="true">◉</span>Standalone<small>Licencia individual</small>
+        </button>
+        <button type="button" class="zwcad-switch-option" data-license="network" aria-pressed="false">
+          <span class="zwcad-switch-icon" aria-hidden="true">⌘</span>Red<small>Licencia compartida</small>
+        </button>
+      </div>
+      <div class="zwcad-license-description" id="zwcad-license-description" aria-live="polite">Licencia individual para utilizar ZWCAD en un equipo a la vez.</div>
+    </div>
+
+    <div class="zwcad-pricing-grid">
+      <article class="zwcad-price-card">
+        <div class="zwcad-card-top">
+          <span class="zwcad-edition-label">CAD 2D</span>
+          <h3>ZWCAD Standard</h3>
+          <p class="zwcad-card-description">Herramientas esenciales para dibujo técnico y documentación 2D.</p>
+        </div>
+        <div class="zwcad-price-area">
+          <span class="zwcad-price-label">Precio de licencia</span>
+          <div class="zwcad-price"><span class="zwcad-currency">$</span><strong data-standalone="17,980" data-network="18,980">17,980</strong><span class="zwcad-currency-code">MXN</span></div>
+          <span class="zwcad-price-tax">+ IVA</span>
+        </div>
+        <div class="zwcad-card-divider"></div>
+        <ul class="zwcad-feature-list">
+          <li><span>✓</span>Compatibilidad con DWG</li><li><span>✓</span>Herramientas de dibujo 2D</li><li><span>✓</span>Edición y anotación</li><li><span>✓</span>Rutinas LISP</li><li><span>✓</span>Licencia perpetua</li>
+        </ul>
+        <div class="zwcad-card-actions">
+          <a href="#contacto" class="zwcad-btn-primary">Cotizar licencia <span>→</span></a>
+          <a href="#descargar" class="zwcad-btn-secondary">Prueba gratis 30 días</a>
+        </div>
+      </article>
+
+      <article class="zwcad-price-card zwcad-price-featured">
+        <div class="zwcad-popular-tag">SOLUCIÓN AVANZADA</div>
+        <div class="zwcad-card-top">
+          <span class="zwcad-edition-label">CAD 2D + 3D</span>
+          <h3>ZWCAD Professional</h3>
+          <p class="zwcad-card-description">Amplía tus posibilidades con herramientas avanzadas de diseño y modelado 3D.</p>
+        </div>
+        <div class="zwcad-price-area">
+          <span class="zwcad-price-label">Precio de licencia</span>
+          <div class="zwcad-price"><span class="zwcad-currency">$</span><strong data-standalone="23,980" data-network="24,980">23,980</strong><span class="zwcad-currency-code">MXN</span></div>
+          <span class="zwcad-price-tax">+ IVA</span>
+        </div>
+        <div class="zwcad-card-divider"></div>
+        <ul class="zwcad-feature-list">
+          <li><span>✓</span>Todo lo incluido en Standard</li><li><span>✓</span>Modelado 3D</li><li><span>✓</span>Nube de puntos</li><li><span>✓</span>Herramientas GIS</li><li><span>✓</span>Conversión ráster a vector</li><li><span>✓</span>Funcionalidades API completas</li><li><span>✓</span>Licencia perpetua</li>
+        </ul>
+        <div class="zwcad-card-actions">
+          <a href="#contacto" class="zwcad-btn-primary">Cotizar licencia <span>→</span></a>
+          <a href="#descargar" class="zwcad-btn-secondary">Prueba gratis 30 días</a>
+        </div>
+      </article>
+
+      <article class="zwcad-price-card">
+        <div class="zwcad-card-top">
+          <span class="zwcad-edition-label">CAD MECÁNICO</span>
+          <h3>ZWCAD MFG</h3>
+          <p class="zwcad-card-description">Herramientas especializadas para diseño mecánico y procesos de manufactura.</p>
+        </div>
+        <div class="zwcad-price-area">
+          <span class="zwcad-price-label">Precio de licencia</span>
+          <div class="zwcad-price"><span class="zwcad-currency">$</span><strong data-standalone="27,980" data-network="28,980">27,980</strong><span class="zwcad-currency-code">MXN</span></div>
+          <span class="zwcad-price-tax">+ IVA</span>
+        </div>
+        <div class="zwcad-card-divider"></div>
+        <ul class="zwcad-feature-list">
+          <li><span>✓</span>Todo lo incluido en Professional</li><li><span>✓</span>Biblioteca de piezas estándar</li><li><span>✓</span>Herramientas de dibujo mecánico</li><li><span>✓</span>Generación de listas de materiales</li><li><span>✓</span>Acotación y anotación mecánica</li><li><span>✓</span>Herramientas de cálculo mecánico</li><li><span>✓</span>Compatibilidad con AutoCAD Mechanical</li>
+        </ul>
+        <div class="zwcad-card-actions">
+          <a href="#contacto" class="zwcad-btn-primary">Cotizar licencia <span>→</span></a>
+          <a href="#descargar" class="zwcad-btn-secondary">Prueba gratis 30 días</a>
+        </div>
+      </article>
+    </div>
+
+    <div class="zwcad-pricing-notes">
+      <div class="zwcad-note-icon" aria-hidden="true">i</div>
+      <div><strong>Información sobre las licencias</strong><p>Los precios están expresados en pesos mexicanos (MXN) y no incluyen IVA. Las licencias son perpetuas. La modalidad de red permite compartir el acceso entre usuarios de una misma red, sujeto al número de licencias adquiridas.</p></div>
+    </div>
+  </div>
+</section>
+
+<style id="zwcad-pricing-styles">
+.mp-zwcad-pricing{--zwcad-blue:#0878e8;--zwcad-blue-dark:#075fc0;--zwcad-text:#202b3b;--zwcad-muted:#6d7888;--zwcad-border:#e4eaf1;--zwcad-background:#f6f9fc;position:relative;width:100%;padding:105px 24px;background:var(--zwcad-background);font-family:inherit;overflow:hidden}
+.mp-zwcad-pricing *{box-sizing:border-box}
+.mp-zwcad-pricing .zwcad-pricing-container{width:100%;max-width:1240px;margin:0 auto}
+.mp-zwcad-pricing .zwcad-pricing-header{max-width:760px;margin:0 auto 55px;text-align:center}
+.mp-zwcad-pricing .zwcad-pricing-eyebrow{display:inline-block;margin-bottom:17px;color:var(--zwcad-blue);font-size:12px;font-weight:800;letter-spacing:2px}
+.mp-zwcad-pricing .zwcad-pricing-header h2{margin:0;color:var(--zwcad-text);font-size:clamp(32px,4vw,48px);font-weight:750;line-height:1.13;letter-spacing:-1.5px}
+.mp-zwcad-pricing .zwcad-pricing-header h2 span{display:block;color:var(--zwcad-blue)}
+.mp-zwcad-pricing .zwcad-pricing-header>p{max-width:590px;margin:18px auto 30px;color:var(--zwcad-muted);font-size:16px;line-height:1.7}
+.mp-zwcad-pricing .zwcad-license-switch{display:inline-flex;gap:7px;padding:6px;background:#e9eff6;border:1px solid #e1e8f0;border-radius:15px}
+.mp-zwcad-pricing .zwcad-switch-option{position:relative;min-width:170px;padding:13px 20px;display:flex;flex-direction:column;align-items:center;gap:4px;border:1px solid transparent;border-radius:11px;background:transparent;color:#526174;font-family:inherit;font-size:14px;font-weight:750;cursor:pointer;transition:all .25s ease}
+.mp-zwcad-pricing .zwcad-switch-option small{color:#8995a4;font-size:11px;font-weight:500}
+.mp-zwcad-pricing .zwcad-switch-icon{font-size:18px}
+.mp-zwcad-pricing .zwcad-switch-option.active{color:var(--zwcad-blue);background:#fff;border-color:#dce8f5;box-shadow:0 3px 12px rgba(24,55,90,.08)}
+.mp-zwcad-pricing .zwcad-switch-option.active small{color:#73849a}
+.mp-zwcad-pricing .zwcad-license-description{margin-top:15px;color:#758194;font-size:13px}
+.mp-zwcad-pricing .zwcad-pricing-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch;gap:22px}
+.mp-zwcad-pricing .zwcad-price-card{position:relative;display:flex;flex-direction:column;min-width:0;padding:32px 28px 27px;background:#fff;border:1px solid var(--zwcad-border);border-radius:18px;box-shadow:0 8px 30px rgba(28,52,80,.045);transition:transform .3s ease,box-shadow .3s ease}
+.mp-zwcad-pricing .zwcad-price-card:hover{transform:translateY(-6px);box-shadow:0 18px 42px rgba(28,52,80,.10)}
+.mp-zwcad-pricing .zwcad-price-featured{border:2px solid var(--zwcad-blue);box-shadow:0 12px 35px rgba(8,120,232,.10)}
+.mp-zwcad-pricing .zwcad-popular-tag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);padding:7px 17px;color:#fff;background:var(--zwcad-blue);border-radius:30px;font-size:10px;font-weight:800;letter-spacing:1px;white-space:nowrap}
+.mp-zwcad-pricing .zwcad-edition-label{display:inline-block;margin-bottom:13px;padding:6px 10px;color:var(--zwcad-blue);background:#edf6ff;border-radius:5px;font-size:10px;font-weight:800;letter-spacing:1px}
+.mp-zwcad-pricing .zwcad-card-top h3{margin:0 0 11px;color:var(--zwcad-text);font-size:23px;font-weight:750;letter-spacing:-.5px}
+.mp-zwcad-pricing .zwcad-card-description{min-height:55px;margin:0;color:var(--zwcad-muted);font-size:13px;line-height:1.65}
+.mp-zwcad-pricing .zwcad-price-area{margin-top:27px}
+.mp-zwcad-pricing .zwcad-price-label{display:block;margin-bottom:8px;color:#8591a0;font-size:11px;font-weight:650;text-transform:uppercase;letter-spacing:.8px}
+.mp-zwcad-pricing .zwcad-price{display:flex;align-items:baseline;gap:3px;color:var(--zwcad-text)}
+.mp-zwcad-pricing .zwcad-currency{font-size:23px;font-weight:650}
+.mp-zwcad-pricing .zwcad-price strong{font-size:clamp(30px,3vw,38px);font-weight:800;letter-spacing:-1.5px;line-height:1;transition:opacity .15s ease,transform .15s ease}
+.mp-zwcad-pricing .zwcad-currency-code{margin-left:5px;color:#778496;font-size:12px;font-weight:700}
+.mp-zwcad-pricing .zwcad-price-tax{display:block;margin-top:8px;color:#8490a0;font-size:12px}
+.mp-zwcad-pricing .zwcad-card-divider{width:100%;height:1px;margin:25px 0 20px;background:var(--zwcad-border)}
+.mp-zwcad-pricing .zwcad-feature-list{display:flex;flex-direction:column;gap:14px;margin:0 0 30px;padding:0;list-style:none}
+.mp-zwcad-pricing .zwcad-feature-list li{display:flex;align-items:flex-start;gap:10px;color:#526174;font-size:13px;line-height:1.5}
+.mp-zwcad-pricing .zwcad-feature-list li span{flex-shrink:0;color:var(--zwcad-blue);font-size:15px;font-weight:800}
+.mp-zwcad-pricing .zwcad-card-actions{display:flex;flex-direction:column;gap:11px;margin-top:auto}
+.mp-zwcad-pricing .zwcad-btn-primary,.mp-zwcad-pricing .zwcad-btn-secondary{display:flex;justify-content:center;align-items:center;gap:10px;width:100%;min-height:47px;padding:12px 17px;border-radius:8px;text-align:center;text-decoration:none!important;font-family:inherit;font-size:13px;font-weight:750;transition:all .25s ease}
+.mp-zwcad-pricing .zwcad-btn-primary{color:#fff!important;background:var(--zwcad-blue);border:1px solid var(--zwcad-blue)}
+.mp-zwcad-pricing .zwcad-btn-primary:hover{color:#fff!important;background:var(--zwcad-blue-dark);border-color:var(--zwcad-blue-dark);transform:translateY(-2px)}
+.mp-zwcad-pricing .zwcad-btn-primary span{font-size:17px;transition:transform .2s ease}
+.mp-zwcad-pricing .zwcad-btn-primary:hover span{transform:translateX(4px)}
+.mp-zwcad-pricing .zwcad-btn-secondary{color:#526174!important;background:#fff;border:1px solid #dfe6ee}
+.mp-zwcad-pricing .zwcad-btn-secondary:hover{color:var(--zwcad-blue)!important;background:#f5faff;border-color:#b8d8f8}
+.mp-zwcad-pricing .zwcad-pricing-notes{display:flex;align-items:flex-start;gap:14px;max-width:850px;margin:35px auto 0;padding:19px 22px;background:#edf4fb;border:1px solid #e0eaf5;border-radius:11px}
+.mp-zwcad-pricing .zwcad-note-icon{display:flex;flex-shrink:0;justify-content:center;align-items:center;width:22px;height:22px;color:#fff;background:var(--zwcad-blue);border-radius:50%;font-size:13px;font-weight:800}
+.mp-zwcad-pricing .zwcad-pricing-notes strong{display:block;margin-bottom:5px;color:var(--zwcad-text);font-size:12px}
+.mp-zwcad-pricing .zwcad-pricing-notes p{margin:0;color:#6e7c8e;font-size:12px;line-height:1.65}
+.mp-zwcad-pricing .zwcad-price strong.price-changing{opacity:0;transform:translateY(5px)}
+@media(max-width:1000px){.mp-zwcad-pricing .zwcad-pricing-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.mp-zwcad-pricing .zwcad-price-featured{order:-1}}
+@media(max-width:650px){.mp-zwcad-pricing{padding:70px 17px}.mp-zwcad-pricing .zwcad-pricing-header{margin-bottom:40px}.mp-zwcad-pricing .zwcad-pricing-header h2{font-size:34px}.mp-zwcad-pricing .zwcad-pricing-header>p{font-size:14px}.mp-zwcad-pricing .zwcad-license-switch{display:flex;width:100%}.mp-zwcad-pricing .zwcad-switch-option{min-width:0;flex:1;padding:12px 8px}.mp-zwcad-pricing .zwcad-pricing-grid{grid-template-columns:1fr;gap:25px}.mp-zwcad-pricing .zwcad-price-featured{order:initial}.mp-zwcad-pricing .zwcad-price-card{padding:29px 23px 24px}.mp-zwcad-pricing .zwcad-card-description{min-height:auto}.mp-zwcad-pricing .zwcad-price strong{font-size:37px}.mp-zwcad-pricing .zwcad-pricing-notes{padding:16px}}
+@media(prefers-reduced-motion:reduce){.mp-zwcad-pricing *,.mp-zwcad-pricing *:before,.mp-zwcad-pricing *:after{transition-duration:.01ms!important}}
+</style>
+
+<script id="zwcad-pricing-script">
+(function(){
+  function initZwcadPricing(){
+    var section=document.getElementById("zwcad-precios");
+    if(!section||section.dataset.initialized==="true")return;
+    section.dataset.initialized="true";
+    var buttons=section.querySelectorAll(".zwcad-switch-option");
+    var prices=section.querySelectorAll(".zwcad-price strong[data-standalone]");
+    var description=section.querySelector("#zwcad-license-description");
+    var descriptions={
+      standalone:"Licencia individual para utilizar ZWCAD en un equipo a la vez.",
+      network:"Licencia de red para compartir el acceso entre usuarios de una misma red."
+    };
+    function updateLicense(type){
+      buttons.forEach(function(button){
+        var active=button.dataset.license===type;
+        button.classList.toggle("active",active);
+        button.setAttribute("aria-pressed",active?"true":"false");
+      });
+      prices.forEach(function(price){
+        price.classList.add("price-changing");
+        var next=price.dataset[type];
+        window.setTimeout(function(){
+          if(next)price.textContent=next;
+          price.classList.remove("price-changing");
+        },150);
+      });
+      if(description)description.textContent=descriptions[type]||descriptions.standalone;
+    }
+    buttons.forEach(function(button){
+      button.addEventListener("click",function(){updateLicense(this.dataset.license);});
+    });
+    updateLicense("standalone");
+  }
+  if(document.readyState==="loading")document.addEventListener("DOMContentLoaded",initZwcadPricing);
+  else initZwcadPricing();
+})();
+</script>
+
 <section class="mp-sect zcad-light zcad-section" id="zwcad-ahorro" aria-labelledby="zcad-savings-title"><div class="mp-co zcad-calc-grid"><div><p class="mp-ey">Calculadora de ahorro</p><h2 class="mp-h2 zcad-gradient-title" id="zcad-savings-title">Estima el costo para tu equipo</h2><p class="zcad-intro">Compara lo que pagarías por tu CAD actual durante varios años con el precio de una licencia perpetua ZWCAD cotizada para tu equipo.</p><p class="zcad-price-note">Usa la cotización vigente en MXN. La estimación no incluye IVA, actualizaciones opcionales, capacitación ni soporte.</p></div><form class="zcad-calc-card" id="zcad-savings-form"><label>Costo anual actual por usuario (MXN)<input type="number" min="0" step="100" inputmode="decimal" data-zcad-current placeholder="Ej. 12000"></label><label>Precio cotizado de ZWCAD por usuario (MXN)<input type="number" min="0" step="100" inputmode="decimal" data-zcad-license placeholder="Ingresa tu cotización"></label><div class="zcad-calc-row"><label>Usuarios<input type="number" min="1" max="500" step="1" value="1" inputmode="numeric" data-zcad-seats></label><label>Periodo (años)<input type="number" min="1" max="10" step="1" value="3" inputmode="numeric" data-zcad-years></label></div><div class="zcad-calc-result" aria-live="polite"><span>Ahorro estimado en el periodo</span><strong data-zcad-savings-total>Ingresa los dos precios</strong><small data-zcad-savings-caption>La estimación se actualizará al completar los campos.</small></div></form></div></section>
 <section class="mp-sect zcad-light zcad-section" id="zwcad-versiones" aria-labelledby="zcad-versions-title"><div class="mp-co">
 <p class="mp-ey">Comparativa de ediciones</p>
