@@ -16,32 +16,7 @@
 @keyframes z3d-menu-in{from{opacity:0;transform:translateY(8px) scale(.985)}to{opacity:1;transform:translateY(0) scale(1)}}
 @media(min-width:1800px){.mp-zw3d-page .z3d-floating-nav.is-wide-dock{top:50%;bottom:auto;left:max(12px,calc((100vw - 1280px)/2 - 260px));width:240px;transform:translateY(-50%)}.mp-zw3d-page .z3d-floating-nav.is-wide-dock.is-visible{transform:translateY(-50%)}}
 @media(max-width:800px){.mp-zw3d-page .z3d-floating-nav{left:10px;right:auto;bottom:calc(10px + env(safe-area-inset-bottom,0px));width:min(280px,calc(100vw - 20px))}.mp-zw3d-page .z3d-nav-panel{max-height:72vh;padding:10px}.mp-zw3d-page .z3d-menu-toggle{min-height:54px}}
-@media(prefers-reduced-motion:reduce){.mp-zw3d-page .z3d-floating-nav,.mp-zw3d-page .z3d-menu-toggle,.mp-zw3d-page .z3d-menu-toggle>svg{transition:none}.mp-zw3d-page .z3d-nav-panel{animation:none}}</style><style id="mp-palette-tokens">
-:root{
-  --background:#FFFFFF;
-  --foreground:#161616;
-  --card:#FFFFFF;
-  --primary:#00B8BD;
-  --brand-blue:#1558C0;
-  --brand-blue-bright:#2E82F0;
-  --secondary:#0E1B33;
-  --muted-foreground:#666666;
-  --accent:#EE1C25;
-  --cta-gradient:linear-gradient(135deg,#00B8BD,#2E82F0);
-  --cta-glow:0 8px 24px -4px rgba(0,184,189,.45);
-  --title-gradient:linear-gradient(90deg,#1558C0,#00B8BD);
-}
-.dark{
-  --background:#0C1422;
-  --card:#0E1B33;
-  --foreground:#F4F6F9;
-  --primary:#00B8BD;
-  --brand-blue-bright:#2E82F0;
-  --accent:#EE1C25;
-  --title-gradient:linear-gradient(90deg,#00B8BD,#2E82F0);
-  --title-glow:0 0 24px rgba(0,184,189,.35);
-}
-</style>
+@media(prefers-reduced-motion:reduce){.mp-zw3d-page .z3d-floating-nav,.mp-zw3d-page .z3d-menu-toggle,.mp-zw3d-page .z3d-menu-toggle>svg{transition:none}.mp-zw3d-page .z3d-nav-panel{animation:none}}</style>
 </head><body>
 <!DOCTYPE html>
 <html lang="es"><head>
@@ -61,23 +36,23 @@
      Los nombres viejos se conservan como alias y apuntan a los tokens
      oficiales. No se pegan HEX de marca a mano: lo que no tiene token 1:1
      se deriva con color-mix sobre los tokens (blanco/negro solo como tinte). */
-  --carbon:color-mix(in srgb,var(--secondary) 82%,#161616);               /* navy casi negro, bandas oscuras */
+  --carbon:color-mix(in srgb,var(--secondary) 82%,var(--foreground));               /* navy casi negro, bandas oscuras */
   --marino:var(--secondary);                                           /* marino profundo */
   --profundo:color-mix(in srgb,var(--secondary) 62%,var(--brand-blue));/* navy azulado */
   --az:var(--brand-blue);                                              /* azul CAD */
   --azsh:var(--brand-blue-bright);                                     /* azul luminoso */
-  --azlum:color-mix(in srgb,var(--brand-blue-bright) 60%,#ffffff);        /* azul claro */
+  --azlum:color-mix(in srgb,var(--brand-blue-bright) 60%,var(--background));        /* azul claro */
   --tq:var(--primary);                                                 /* cian de marca */
-  --tq2:color-mix(in srgb,var(--primary) 66%,#ffffff);                    /* cian claro */
+  --tq2:color-mix(in srgb,var(--primary) 66%,var(--background));                    /* cian claro */
   --ink:var(--foreground);                                             /* texto principal */
   --mut:var(--muted-foreground);                                       /* gris medio */
-  --gris:color-mix(in srgb,var(--muted-foreground) 50%,#ffffff);          /* gris claro */
+  --gris:color-mix(in srgb,var(--muted-foreground) 50%,var(--background));          /* gris claro */
   --bg:var(--background);                                              /* fondo */
   --bg2:color-mix(in srgb,var(--primary) 5%,var(--background));        /* banda alterna (mp-alt) */
-  --ln:color-mix(in srgb,var(--brand-blue) 16%,#ffffff);                  /* bordes / retícula */
+  --ln:color-mix(in srgb,var(--brand-blue) 16%,var(--background));                  /* bordes / retícula */
   --az2:color-mix(in srgb,var(--secondary) 62%,var(--brand-blue));
   --dk:var(--secondary);
-  --dk2:color-mix(in srgb,var(--secondary) 82%,#161616);
+  --dk2:color-mix(in srgb,var(--secondary) 82%,var(--foreground));
 }
 *{box-sizing:border-box}
 body{margin:0;font-family:"Archivo",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
@@ -731,7 +706,7 @@ a.mp-card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(18,24,35,.
 .mp-zw3d-page .z3d-format-chips span,.mp-zw3d-page .z3d-format-chips strong{padding:7px 10px;border:1px solid rgba(217,233,252,.22);border-radius:999px;background:rgba(255,255,255,.07);color:#d9e9fc;font-size:12px}
 .mp-zw3d-page .z3d-format-chips strong{border-color:rgba(66,230,208,.4);color:#80dcde}
 .mp-zw3d-page .z3d-calc-lead{max-width:740px;margin-bottom:26px}
-.mp-zw3d-page .z3d-calc{--line:#d9e9fc;--g1:#144fab;--g2:#2E82F0;--n:#0E1B33;--m:#606978;display:grid;grid-template-columns:minmax(0,1.55fr) minmax(280px,.85fr);gap:24px;align-items:start;margin:28px 0 42px;text-align:left}
+.mp-zw3d-page .z3d-calc{--line:color-mix(in srgb,var(--brand-blue) 14%,var(--background));--g1:var(--brand-blue);--g2:var(--brand-blue-bright);--n:var(--secondary);--m:var(--muted-foreground);display:grid;grid-template-columns:minmax(0,1.55fr) minmax(280px,.85fr);gap:24px;align-items:start;margin:28px 0 42px;text-align:left}
 .mp-zw3d-page .z3d-calc-main{display:grid;gap:14px;min-width:0}
 .mp-zw3d-page .z3d-calc-step{padding:20px;border:1px solid var(--line);border-radius:18px;background:#ffffff;box-shadow:0 6px 20px rgba(14,27,51,.045)}
 .mp-zw3d-page .z3d-calc-heading{display:flex;align-items:center;gap:11px;margin-bottom:14px}
@@ -1116,7 +1091,7 @@ a.mp-card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(18,24,35,.
 </section>
 
 <style id="zwcad-pricing-styles">
-.mp-zwcad-pricing{--zwcad-blue:#2973d4;--zwcad-blue-dark:#1558C0;--zwcad-text:#0E1B33;--zwcad-muted:#828282;--zwcad-border:#e3e3e3;--zwcad-background:#ffffff;position:relative;width:100%;padding:105px 24px;background:var(--zwcad-background);font-family:inherit;overflow:hidden}
+.mp-zwcad-pricing{--zwcad-blue:var(--brand-blue);--zwcad-blue-dark:var(--brand-blue);--zwcad-text:var(--foreground);--zwcad-muted:var(--muted-foreground);--zwcad-border:color-mix(in srgb,var(--brand-blue) 14%,var(--background));--zwcad-background:var(--background);position:relative;width:100%;padding:105px 24px;background:var(--zwcad-background);font-family:inherit;overflow:hidden}
 .mp-zwcad-pricing *{box-sizing:border-box}
 .mp-zwcad-pricing .zwcad-pricing-container{width:100%;max-width:1240px;margin:0 auto}
 .mp-zwcad-pricing .zwcad-pricing-header{max-width:760px;margin:0 auto 55px;text-align:center}
@@ -1209,7 +1184,7 @@ a.mp-card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(18,24,35,.
 
 <section class="mp-sect zcad-light zcad-section" id="zwcad-ahorro" aria-labelledby="mp-sv-title" hidden>
 <style id="mp-sv-styles">
-#mp-zcad-savings{--sv-blue:#2973d4;--sv-ink:#0E1B33;--sv-muted:#606978;--sv-line:#d9e9fc;--sv-bg:#ffffff;color:var(--sv-ink)}
+#mp-zcad-savings{--sv-blue:var(--brand-blue);--sv-ink:var(--foreground);--sv-muted:var(--muted-foreground);--sv-line:color-mix(in srgb,var(--brand-blue) 14%,var(--background));--sv-bg:var(--background);color:var(--sv-ink)}
 #mp-zcad-savings .sv-head{max-width:790px;margin:0 auto 38px;text-align:center}
 #mp-zcad-savings .sv-eyebrow{display:inline-block;margin:0 0 12px;color:var(--sv-blue);font-size:11px;font-weight:800;letter-spacing:1.8px;text-transform:uppercase}
 #mp-zcad-savings h2{margin:0 0 14px;font-size:clamp(30px,4vw,44px);line-height:1.12;letter-spacing:-1.2px}
@@ -1856,8 +1831,8 @@ document.querySelectorAll('img[data-ph]').forEach(function(im){
 <style id="zwcad-brand-polish">
 /* Paleta oficial Model Pro: cian, azul CAD y marino */
 #zwcad-precios{
- --mp-cyan:#00B8BD;--mp-blue:#1558C0;--mp-blue-bright:#2E82F0;
- --mp-navy:#0E1B33;--mp-muted:#666666;
+ --mp-cyan:var(--primary);--mp-blue:var(--brand-blue);--mp-blue-bright:var(--brand-blue-bright);
+ --mp-navy:var(--secondary);--mp-muted:var(--muted-foreground);
 }
 #zwcad-precios .zwcad-price-card .zwcad-card-top h3{
  color:var(--mp-navy)!important;font-size:20px!important;line-height:1.2!important;
