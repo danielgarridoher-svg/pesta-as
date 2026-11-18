@@ -1826,6 +1826,82 @@ document.querySelectorAll('img[data-ph]').forEach(function(im){
  #zwcad-precios .zwcad-calc-prompt-button{width:100%!important;max-width:none!important}
 }
 </style>
+<style id="zwcad-brand-polish">
+/* Paleta oficial Model Pro: cian, azul CAD y marino */
+#zwcad-precios{
+ --mp-cyan:#00B8BD;--mp-blue:#1558C0;--mp-blue-bright:#2E82F0;
+ --mp-navy:#0E1B33;--mp-muted:#666666;
+}
+#zwcad-precios .zwcad-price-card .zwcad-card-top h3{
+ color:var(--mp-navy)!important;font-size:20px!important;line-height:1.2!important;
+}
+#zwcad-precios .zwcad-price-card .zwcad-edition-label{
+ color:var(--mp-blue)!important;background:rgba(46,130,240,.10)!important;
+ font-size:11px!important;padding:7px 11px!important;border-radius:8px!important;
+}
+#zwcad-precios .zwcad-price-card .zwcad-price strong{font-size:clamp(32px,3vw,39px)!important}
+#zwcad-precios .zwcad-price-card .zwcad-feature-list li{font-size:12px!important;line-height:1.55!important}
+#zwcad-precios .zwcad-price-card .zwcad-feature-list li span{color:var(--mp-cyan)!important}
+#zwcad-precios .zwcad-price-card .zwcad-btn-primary,
+#zwcad-precios .zwcad-price-card .zwcad-btn-secondary{
+ width:100%!important;max-width:205px!important;min-height:42px!important;
+ align-self:center!important;padding:10px 17px!important;
+ border-radius:999px!important;font-size:12px!important;font-weight:750!important;
+ letter-spacing:.1px!important;
+}
+#zwcad-precios .zwcad-price-card .zwcad-btn-primary{
+ color:#fff!important;background:var(--cta-gradient,linear-gradient(135deg,#00B8BD,#2E82F0))!important;
+ border:0!important;box-shadow:0 7px 17px rgba(0,184,189,.22)!important;
+}
+#zwcad-precios .zwcad-price-card .zwcad-btn-primary:hover{
+ filter:brightness(1.06)!important;transform:translateY(-2px)!important;
+ box-shadow:0 9px 22px rgba(0,184,189,.3)!important;
+}
+#zwcad-precios .zwcad-price-card .zwcad-btn-secondary{
+ color:var(--mp-blue)!important;background:#fff!important;
+ border:1px solid rgba(21,88,192,.22)!important;
+}
+#zwcad-precios .zwcad-price-card .zwcad-btn-secondary:hover{
+ color:var(--mp-navy)!important;background:rgba(0,184,189,.07)!important;
+ border-color:var(--mp-cyan)!important;
+}
+#zwcad-precios .zwcad-calc-prompt{
+ display:flex!important;flex-direction:column!important;align-items:center!important;
+ justify-content:center!important;text-align:center!important;gap:12px!important;
+ width:min(100%,760px)!important;margin:18px auto 0!important;padding:22px 24px!important;
+ border:1px solid rgba(21,88,192,.14)!important;border-radius:20px!important;
+ background:linear-gradient(120deg,rgba(0,184,189,.08),rgba(46,130,240,.08))!important;
+}
+#zwcad-precios .zwcad-calc-prompt[hidden]{display:none!important}
+#zwcad-precios .zwcad-calc-prompt-copy{width:100%!important;text-align:center!important}
+#zwcad-precios .zwcad-calc-prompt-copy strong{
+ display:block!important;color:var(--mp-navy)!important;font-size:17px!important;line-height:1.4!important;
+}
+#zwcad-precios .zwcad-calc-prompt-copy p{
+ margin:4px 0 0!important;color:var(--mp-muted)!important;font-size:13px!important;
+}
+#zwcad-precios .zwcad-calc-prompt-button{
+ display:inline-flex!important;align-items:center!important;justify-content:center!important;
+ gap:9px!important;width:auto!important;min-width:0!important;max-width:100%!important;
+ min-height:44px!important;padding:11px 24px!important;border:0!important;
+ border-radius:999px!important;color:#fff!important;
+ background:linear-gradient(135deg,#00B8BD,#2E82F0)!important;
+ box-shadow:0 8px 22px rgba(0,184,189,.27)!important;
+ font:750 13px/1.2 inherit!important;white-space:normal!important;cursor:pointer!important;
+ transition:transform .2s ease,box-shadow .2s ease!important;
+}
+#zwcad-precios .zwcad-calc-prompt-button:hover{
+ transform:translateY(-2px)!important;box-shadow:0 11px 26px rgba(0,184,189,.34)!important;
+}
+#zwcad-precios .zwcad-calc-prompt-button span{font-size:17px!important}
+@media(max-width:650px){
+ #zwcad-precios .zwcad-calc-prompt{padding:18px 14px!important;border-radius:16px!important}
+ #zwcad-precios .zwcad-calc-prompt-copy strong{font-size:15px!important}
+ #zwcad-precios .zwcad-calc-prompt-button{width:100%!important;padding:12px 18px!important}
+ #zwcad-precios .zwcad-price-card .zwcad-btn-primary,
+ #zwcad-precios .zwcad-price-card .zwcad-btn-secondary{max-width:230px!important}
+}
+</style>
 </body></html>
 <script id="mp-about-carousel-script">
 (function(){
