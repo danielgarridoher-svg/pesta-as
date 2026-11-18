@@ -984,7 +984,58 @@ a.mp-card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(11,20,34,.
 #mp-zcad-compare .mp-zcad-feature-row[hidden]{display:none!important}
 @media(max-width:640px){#mp-zcad-compare .mp-zcad-category-toggle{padding:13px 12px}#mp-zcad-compare .mp-zcad-matrix{min-width:620px}#mp-zcad-compare .mp-zcad-matrix th,#mp-zcad-compare .mp-zcad-matrix td{padding:11px 9px}#mp-zcad-compare .mp-zcad-matrix thead th:first-child,#mp-zcad-compare .mp-zcad-matrix tbody th{padding-left:13px}}
 @media(prefers-reduced-motion:reduce){#mp-zcad-compare *{transition:none!important;scroll-behavior:auto!important}}
-</style>
+
+/* Refuerzo visual de la comparativa: identidad Model Pro */
+#mp-zcad-compare{
+ --cmp-blue:var(--brand-blue,#0878e8);
+ --cmp-navy:var(--secondary,#0e1b33);
+ --cmp-primary:var(--primary,#0878e8);
+ --cmp-bg:var(--background,#fff);
+ --cmp-text:var(--foreground,#172b45);
+ --cmp-muted:var(--muted-foreground,#64748b);
+ color:var(--cmp-text)
+}
+#mp-zcad-compare .mp-h2{color:var(--cmp-navy);letter-spacing:-.035em}
+#mp-zcad-compare .mp-zcad-intro{max-width:790px;color:var(--cmp-muted);font-size:15px;line-height:1.75;margin:0 0 25px}
+#mp-zcad-compare .mp-zcad-toolbar{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap;margin:26px 0 16px;padding:13px 15px;border:1px solid color-mix(in srgb,var(--cmp-blue) 18%,white);border-radius:14px;background:linear-gradient(105deg,color-mix(in srgb,var(--cmp-blue) 8%,white),white 72%)}
+#mp-zcad-compare .mp-zcad-actions{display:flex;gap:9px;flex-wrap:wrap}
+#mp-zcad-compare .mp-zcad-actions button{border:1px solid color-mix(in srgb,var(--cmp-blue) 35%,white);background:white;color:var(--cmp-navy);border-radius:9px;padding:10px 15px;font:700 12px inherit;cursor:pointer;transition:background .2s,border-color .2s,transform .2s}
+#mp-zcad-compare .mp-zcad-actions button:first-child{background:var(--cmp-blue);border-color:var(--cmp-blue);color:white;box-shadow:0 5px 14px color-mix(in srgb,var(--cmp-blue) 23%,transparent)}
+#mp-zcad-compare .mp-zcad-actions button:hover{border-color:var(--cmp-blue);background:var(--cmp-navy);color:white;transform:translateY(-2px)}
+#mp-zcad-compare .mp-zcad-legend{display:flex;gap:14px;flex-wrap:wrap;color:var(--cmp-muted);font-size:12px;font-weight:600}
+#mp-zcad-compare .mp-zcad-legend span{display:inline-flex;align-items:center;gap:7px}
+#mp-zcad-compare .mp-zcad-legend b{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:7px;background:color-mix(in srgb,var(--cmp-primary) 13%,white);color:var(--cmp-primary);font-size:14px}
+#mp-zcad-compare .mp-zcad-table-scroll{overflow-x:auto;border:1px solid color-mix(in srgb,var(--cmp-blue) 22%,white);border-radius:17px;background:white;box-shadow:0 16px 38px rgba(14,27,51,.09)}
+#mp-zcad-compare .mp-zcad-matrix{width:100%;border-collapse:separate;border-spacing:0;min-width:720px;font-size:13px}
+#mp-zcad-compare .mp-zcad-matrix th,#mp-zcad-compare .mp-zcad-matrix td{padding:14px 15px;border-bottom:1px solid #e8eef6;text-align:center}
+#mp-zcad-compare .mp-zcad-matrix thead th{position:sticky;top:0;background:var(--cmp-navy);color:white;font-size:11px;font-weight:700;line-height:1.5;letter-spacing:.035em;padding-top:18px;padding-bottom:18px}
+#mp-zcad-compare .mp-zcad-matrix thead th:first-child{text-align:left;width:40%;padding-left:22px;border-top-left-radius:0}
+#mp-zcad-compare .mp-zcad-matrix thead th:last-child{border-top-right-radius:0}
+#mp-zcad-compare .mp-zcad-matrix thead th b{display:inline-block;margin-top:3px;color:#fff;font-size:14px;letter-spacing:0}
+#mp-zcad-compare .mp-zcad-matrix thead th:nth-child(2),#mp-zcad-compare .mp-zcad-matrix thead th:nth-child(3){background:linear-gradient(150deg,var(--cmp-blue),var(--cmp-navy));}
+#mp-zcad-compare .mp-zcad-category-row th{padding:0!important;border-bottom:1px solid color-mix(in srgb,var(--cmp-blue) 20%,white);background:#edf5ff}
+#mp-zcad-compare .mp-zcad-category-toggle{width:100%;display:flex;align-items:center;gap:13px;padding:15px 19px;border:0;border-left:4px solid var(--cmp-blue);background:linear-gradient(90deg,#e8f3ff,#f5f9ff 65%,#fff);color:var(--cmp-navy);font:750 13px inherit;text-align:left;cursor:pointer;transition:background .2s}
+#mp-zcad-compare .mp-zcad-category-toggle:hover{background:linear-gradient(90deg,#d9ebff,#edf5ff)}
+#mp-zcad-compare .mp-zcad-category-toggle>span:nth-child(2){font-size:13px;letter-spacing:.01em}
+#mp-zcad-compare .mp-zcad-category-toggle small{margin-left:auto;color:var(--cmp-blue);font-size:11px;font-weight:750;background:white;border:1px solid #d8e9fc;padding:4px 9px;border-radius:999px}
+#mp-zcad-compare .mp-zcad-category-chevron{width:9px;height:9px;flex:0 0 9px;border-right:2px solid var(--cmp-blue);border-bottom:2px solid var(--cmp-blue);transform:rotate(-45deg);transition:transform .2s}
+#mp-zcad-compare .mp-zcad-category-toggle[aria-expanded="true"] .mp-zcad-category-chevron{transform:rotate(45deg)}
+#mp-zcad-compare .mp-zcad-feature-row th{font-weight:600;text-align:left;color:var(--cmp-text);padding-left:23px;background:white}
+#mp-zcad-compare .mp-zcad-feature-row td{background:white}
+#mp-zcad-compare .mp-zcad-feature-row th:first-child{position:relative}
+#mp-zcad-compare .mp-zcad-feature-row:nth-child(even) th,#mp-zcad-compare .mp-zcad-feature-row:nth-child(even) td{background:#f7faff}
+#mp-zcad-compare .mp-zcad-feature-row td:nth-child(2),#mp-zcad-compare .mp-zcad-feature-row td:nth-child(3){background-color:#f0f7ff}
+#mp-zcad-compare .mp-zcad-feature-row:nth-child(even) td:nth-child(2),#mp-zcad-compare .mp-zcad-feature-row:nth-child(even) td:nth-child(3){background-color:#eaf3ff}
+#mp-zcad-compare .mp-zcad-feature-row:hover th,#mp-zcad-compare .mp-zcad-feature-row:hover td{background:#e4f1ff}
+#mp-zcad-compare .mp-zcad-feature-row:hover td:nth-child(2),#mp-zcad-compare .mp-zcad-feature-row:hover td:nth-child(3){background:#d9eaff}
+#mp-zcad-compare .mp-zcad-matrix td[data-state=yes] .mp-zcad-state{display:inline-grid;place-items:center;width:25px;height:25px;border-radius:8px;background:#dff4ea;color:#13834c;font-weight:850;font-size:15px}
+#mp-zcad-compare .mp-zcad-matrix td[data-state=no] .mp-zcad-state{color:#a0adbd;font-size:18px}
+#mp-zcad-compare .mp-zcad-footnote{font-size:12px;line-height:1.7;color:var(--cmp-muted);margin:16px 0 0;padding:12px 15px;border-left:3px solid var(--cmp-blue);background:#f4f8fd;border-radius:0 9px 9px 0}
+#mp-zcad-compare .mp-zcad-footnote a{color:var(--cmp-blue);font-weight:700;text-decoration:underline;text-underline-offset:3px}
+#mp-zcad-compare .mp-zcad-feature-row[hidden]{display:none!important}
+@media(max-width:640px){#mp-zcad-compare .mp-zcad-toolbar{padding:11px}#mp-zcad-compare .mp-zcad-category-toggle{padding:13px 12px}#mp-zcad-compare .mp-zcad-matrix{min-width:650px}#mp-zcad-compare .mp-zcad-matrix th,#mp-zcad-compare .mp-zcad-matrix td{padding:11px 9px}#mp-zcad-compare .mp-zcad-matrix thead th:first-child,#mp-zcad-compare .mp-zcad-matrix tbody th{padding-left:13px}}
+@media(prefers-reduced-motion:reduce){#mp-zcad-compare *{transition:none!important;scroll-behavior:auto!important}}
+
 <div class="mp-co" id="mp-zcad-compare">
 <p class="mp-ey">Compara las herramientas antes de decidir</p>
 <h2 class="mp-h2 zcad-gradient-title" id="zcad-comparison-title">Comparación de ZWCAD con AutoCAD®</h2>
