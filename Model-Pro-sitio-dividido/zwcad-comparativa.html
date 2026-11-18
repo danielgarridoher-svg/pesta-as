@@ -987,12 +987,12 @@ a.mp-card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(11,20,34,.
 
 /* Refuerzo visual de la comparativa: identidad Model Pro */
 #mp-zcad-compare{
- --cmp-blue:var(--brand-blue,#0878e8);
+ --cmp-blue:var(--brand-blue,var(--brand-blue));
  --cmp-navy:var(--secondary,#0e1b33);
- --cmp-primary:var(--primary,#0878e8);
- --cmp-bg:var(--background,#fff);
- --cmp-text:var(--foreground,#172b45);
- --cmp-muted:var(--muted-foreground,#64748b);
+ --cmp-primary:var(--primary,var(--brand-blue));
+ --cmp-bg:var(--background,var(--background));
+ --cmp-text:var(--foreground,var(--secondary));
+ --cmp-muted:var(--muted-foreground,var(--muted-foreground));
  color:var(--cmp-text)
 }
 #mp-zcad-compare .mp-h2{color:var(--cmp-navy);letter-spacing:-.035em}
@@ -1005,17 +1005,17 @@ a.mp-card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(11,20,34,.
 #mp-zcad-compare .mp-zcad-legend{display:flex;gap:14px;flex-wrap:wrap;color:var(--cmp-muted);font-size:12px;font-weight:600}
 #mp-zcad-compare .mp-zcad-legend span{display:inline-flex;align-items:center;gap:7px}
 #mp-zcad-compare .mp-zcad-legend b{display:inline-grid;place-items:center;width:22px;height:22px;border-radius:7px;background:color-mix(in srgb,var(--cmp-primary) 13%,white);color:var(--cmp-primary);font-size:14px}
-#mp-zcad-compare .mp-zcad-table-scroll{overflow-x:auto;border:1px solid color-mix(in srgb,var(--cmp-blue) 22%,white);border-radius:17px;background:white;box-shadow:0 16px 38px rgba(14,27,51,.09)}
+#mp-zcad-compare .mp-zcad-table-scroll{overflow-x:auto;border:1px solid color-mix(in srgb,var(--cmp-blue) 22%,white);border-radius:17px;background:white;box-shadow:0 16px 38px color-mix(in srgb,var(--secondary) 10%,transparent)}
 #mp-zcad-compare .mp-zcad-matrix{width:100%;border-collapse:separate;border-spacing:0;min-width:720px;font-size:13px}
-#mp-zcad-compare .mp-zcad-matrix th,#mp-zcad-compare .mp-zcad-matrix td{padding:14px 15px;border-bottom:1px solid #e8eef6;text-align:center}
+#mp-zcad-compare .mp-zcad-matrix th,#mp-zcad-compare .mp-zcad-matrix td{padding:14px 15px;border-bottom:1px solid color-mix(in srgb,var(--brand-blue) 14%,var(--background));text-align:center}
 #mp-zcad-compare .mp-zcad-matrix thead th{position:sticky;top:0;background:var(--cmp-navy);color:white;font-size:11px;font-weight:700;line-height:1.5;letter-spacing:.035em;padding-top:18px;padding-bottom:18px}
 #mp-zcad-compare .mp-zcad-matrix thead th:first-child{text-align:left;width:40%;padding-left:22px;border-top-left-radius:0}
 #mp-zcad-compare .mp-zcad-matrix thead th:last-child{border-top-right-radius:0}
-#mp-zcad-compare .mp-zcad-matrix thead th b{display:inline-block;margin-top:3px;color:#fff;font-size:14px;letter-spacing:0}
-#mp-zcad-compare .mp-zcad-matrix thead th:nth-child(2),#mp-zcad-compare .mp-zcad-matrix thead th:nth-child(3){background:linear-gradient(150deg,var(--cmp-blue),var(--cmp-navy));}
-#mp-zcad-compare .mp-zcad-category-row th{padding:0!important;border-bottom:1px solid color-mix(in srgb,var(--cmp-blue) 20%,white);background:#edf5ff}
-#mp-zcad-compare .mp-zcad-category-toggle{width:100%;display:flex;align-items:center;gap:13px;padding:15px 19px;border:0;border-left:4px solid var(--cmp-blue);background:linear-gradient(90deg,#e8f3ff,#f5f9ff 65%,#fff);color:var(--cmp-navy);font:750 13px inherit;text-align:left;cursor:pointer;transition:background .2s}
-#mp-zcad-compare .mp-zcad-category-toggle:hover{background:linear-gradient(90deg,#d9ebff,#edf5ff)}
+#mp-zcad-compare .mp-zcad-matrix thead th b{display:inline-block;margin-top:3px;color:var(--background);font-size:14px;letter-spacing:0}
+#mp-zcad-compare .mp-zcad-matrix thead th:nth-child(2),#mp-zcad-compare .mp-zcad-matrix thead th:nth-child(3){background:linear-gradient(150deg,var(--brand-blue),var(--brand-blue-bright));}
+#mp-zcad-compare .mp-zcad-category-row th{padding:0!important;border-bottom:1px solid color-mix(in srgb,var(--cmp-blue) 20%,white);background:var(--background)}
+#mp-zcad-compare .mp-zcad-category-toggle{width:100%;display:flex;align-items:center;gap:13px;padding:15px 19px;border:0;border-left:4px solid var(--cmp-blue);background:linear-gradient(90deg,color-mix(in srgb,var(--brand-blue) 10%,var(--background)),color-mix(in srgb,var(--primary) 8%,var(--background)));color:var(--cmp-navy);font:750 13px inherit;text-align:left;cursor:pointer;transition:background .2s}
+#mp-zcad-compare .mp-zcad-category-toggle:hover{background:linear-gradient(90deg,var(--background),var(--background))}
 #mp-zcad-compare .mp-zcad-category-toggle>span:nth-child(2){font-size:13px;letter-spacing:.01em}
 #mp-zcad-compare .mp-zcad-category-toggle small{margin-left:auto;color:var(--cmp-blue);font-size:11px;font-weight:750;background:white;border:1px solid #d8e9fc;padding:4px 9px;border-radius:999px}
 #mp-zcad-compare .mp-zcad-category-chevron{width:9px;height:9px;flex:0 0 9px;border-right:2px solid var(--cmp-blue);border-bottom:2px solid var(--cmp-blue);transform:rotate(-45deg);transition:transform .2s}
@@ -1023,14 +1023,14 @@ a.mp-card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(11,20,34,.
 #mp-zcad-compare .mp-zcad-feature-row th{font-weight:600;text-align:left;color:var(--cmp-text);padding-left:23px;background:white}
 #mp-zcad-compare .mp-zcad-feature-row td{background:white}
 #mp-zcad-compare .mp-zcad-feature-row th:first-child{position:relative}
-#mp-zcad-compare .mp-zcad-feature-row:nth-child(even) th,#mp-zcad-compare .mp-zcad-feature-row:nth-child(even) td{background:#f7faff}
-#mp-zcad-compare .mp-zcad-feature-row td:nth-child(2),#mp-zcad-compare .mp-zcad-feature-row td:nth-child(3){background-color:#f0f7ff}
-#mp-zcad-compare .mp-zcad-feature-row:nth-child(even) td:nth-child(2),#mp-zcad-compare .mp-zcad-feature-row:nth-child(even) td:nth-child(3){background-color:#eaf3ff}
-#mp-zcad-compare .mp-zcad-feature-row:hover th,#mp-zcad-compare .mp-zcad-feature-row:hover td{background:#e4f1ff}
-#mp-zcad-compare .mp-zcad-feature-row:hover td:nth-child(2),#mp-zcad-compare .mp-zcad-feature-row:hover td:nth-child(3){background:#d9eaff}
-#mp-zcad-compare .mp-zcad-matrix td[data-state=yes] .mp-zcad-state{display:inline-grid;place-items:center;width:25px;height:25px;border-radius:8px;background:#dff4ea;color:#13834c;font-weight:850;font-size:15px}
-#mp-zcad-compare .mp-zcad-matrix td[data-state=no] .mp-zcad-state{color:#a0adbd;font-size:18px}
-#mp-zcad-compare .mp-zcad-footnote{font-size:12px;line-height:1.7;color:var(--cmp-muted);margin:16px 0 0;padding:12px 15px;border-left:3px solid var(--cmp-blue);background:#f4f8fd;border-radius:0 9px 9px 0}
+#mp-zcad-compare .mp-zcad-feature-row:nth-child(even) th,#mp-zcad-compare .mp-zcad-feature-row:nth-child(even) td{background:var(--background)}
+#mp-zcad-compare .mp-zcad-feature-row td:nth-child(2),#mp-zcad-compare .mp-zcad-feature-row td:nth-child(3){background-color:var(--background)}
+#mp-zcad-compare .mp-zcad-feature-row:nth-child(even) td:nth-child(2),#mp-zcad-compare .mp-zcad-feature-row:nth-child(even) td:nth-child(3){background-color:var(--background)}
+#mp-zcad-compare .mp-zcad-feature-row:hover th,#mp-zcad-compare .mp-zcad-feature-row:hover td{background:var(--background)}
+#mp-zcad-compare .mp-zcad-feature-row:hover td:nth-child(2),#mp-zcad-compare .mp-zcad-feature-row:hover td:nth-child(3){background:var(--background)}
+#mp-zcad-compare .mp-zcad-matrix td[data-state=yes] .mp-zcad-state{display:inline-grid;place-items:center;width:25px;height:25px;border-radius:8px;background:var(--background);color:var(--background);font-weight:850;font-size:15px}
+#mp-zcad-compare .mp-zcad-matrix td[data-state=no] .mp-zcad-state{color:var(--background);font-size:18px}
+#mp-zcad-compare .mp-zcad-footnote{font-size:12px;line-height:1.7;color:var(--cmp-muted);margin:16px 0 0;padding:12px 15px;border-left:3px solid var(--cmp-blue);background:var(--background);border-radius:0 9px 9px 0}
 #mp-zcad-compare .mp-zcad-footnote a{color:var(--cmp-blue);font-weight:700;text-decoration:underline;text-underline-offset:3px}
 #mp-zcad-compare .mp-zcad-feature-row[hidden]{display:none!important}
 @media(max-width:640px){#mp-zcad-compare .mp-zcad-toolbar{padding:11px}#mp-zcad-compare .mp-zcad-category-toggle{padding:13px 12px}#mp-zcad-compare .mp-zcad-matrix{min-width:650px}#mp-zcad-compare .mp-zcad-matrix th,#mp-zcad-compare .mp-zcad-matrix td{padding:11px 9px}#mp-zcad-compare .mp-zcad-matrix thead th:first-child,#mp-zcad-compare .mp-zcad-matrix tbody th{padding-left:13px}}
@@ -1141,7 +1141,7 @@ a.mp-card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(11,20,34,.
 </section>
 
 <style id="zwcad-pricing-styles">
-.mp-zwcad-pricing{--zwcad-blue:#0878e8;--zwcad-blue-dark:#075fc0;--zwcad-text:#202b3b;--zwcad-muted:#6d7888;--zwcad-border:#e4eaf1;--zwcad-background:#f6f9fc;position:relative;width:100%;padding:105px 24px;background:var(--zwcad-background);font-family:inherit;overflow:hidden}
+.mp-zwcad-pricing{--zwcad-blue:var(--brand-blue);--zwcad-blue-dark:#075fc0;--zwcad-text:#202b3b;--zwcad-muted:#6d7888;--zwcad-border:#e4eaf1;--zwcad-background:#f6f9fc;position:relative;width:100%;padding:105px 24px;background:var(--zwcad-background);font-family:inherit;overflow:hidden}
 .mp-zwcad-pricing *{box-sizing:border-box}
 .mp-zwcad-pricing .zwcad-pricing-container{width:100%;max-width:1240px;margin:0 auto}
 .mp-zwcad-pricing .zwcad-pricing-header{max-width:760px;margin:0 auto 55px;text-align:center}
@@ -1153,14 +1153,14 @@ a.mp-card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(11,20,34,.
 .mp-zwcad-pricing .zwcad-switch-option{position:relative;min-width:170px;padding:13px 20px;display:flex;flex-direction:column;align-items:center;gap:4px;border:1px solid transparent;border-radius:11px;background:transparent;color:#526174;font-family:inherit;font-size:14px;font-weight:750;cursor:pointer;transition:all .25s ease}
 .mp-zwcad-pricing .zwcad-switch-option small{color:#8995a4;font-size:11px;font-weight:500}
 .mp-zwcad-pricing .zwcad-switch-icon{font-size:18px}
-.mp-zwcad-pricing .zwcad-switch-option.active{color:var(--zwcad-blue);background:#fff;border-color:#dce8f5;box-shadow:0 3px 12px rgba(24,55,90,.08)}
+.mp-zwcad-pricing .zwcad-switch-option.active{color:var(--zwcad-blue);background:var(--background);border-color:#dce8f5;box-shadow:0 3px 12px rgba(24,55,90,.08)}
 .mp-zwcad-pricing .zwcad-switch-option.active small{color:#73849a}
 .mp-zwcad-pricing .zwcad-license-description{margin-top:15px;color:#758194;font-size:13px}
 .mp-zwcad-pricing .zwcad-pricing-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch;gap:22px}
-.mp-zwcad-pricing .zwcad-price-card{position:relative;display:flex;flex-direction:column;min-width:0;padding:32px 28px 27px;background:#fff;border:1px solid var(--zwcad-border);border-radius:18px;box-shadow:0 8px 30px rgba(28,52,80,.045);transition:transform .3s ease,box-shadow .3s ease}
+.mp-zwcad-pricing .zwcad-price-card{position:relative;display:flex;flex-direction:column;min-width:0;padding:32px 28px 27px;background:var(--background);border:1px solid var(--zwcad-border);border-radius:18px;box-shadow:0 8px 30px rgba(28,52,80,.045);transition:transform .3s ease,box-shadow .3s ease}
 .mp-zwcad-pricing .zwcad-price-card:hover{transform:translateY(-6px);box-shadow:0 18px 42px rgba(28,52,80,.10)}
 .mp-zwcad-pricing .zwcad-price-featured{border:2px solid var(--zwcad-blue);box-shadow:0 12px 35px rgba(8,120,232,.10)}
-.mp-zwcad-pricing .zwcad-popular-tag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);padding:7px 17px;color:#fff;background:var(--zwcad-blue);border-radius:30px;font-size:10px;font-weight:800;letter-spacing:1px;white-space:nowrap}
+.mp-zwcad-pricing .zwcad-popular-tag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);padding:7px 17px;color:var(--background);background:var(--zwcad-blue);border-radius:30px;font-size:10px;font-weight:800;letter-spacing:1px;white-space:nowrap}
 .mp-zwcad-pricing .zwcad-edition-label{display:inline-block;margin-bottom:13px;padding:6px 10px;color:var(--zwcad-blue);background:#edf6ff;border-radius:5px;font-size:10px;font-weight:800;letter-spacing:1px}
 .mp-zwcad-pricing .zwcad-card-top h3{margin:0 0 11px;color:var(--zwcad-text);font-size:23px;font-weight:750;letter-spacing:-.5px}
 .mp-zwcad-pricing .zwcad-card-description{min-height:55px;margin:0;color:var(--zwcad-muted);font-size:13px;line-height:1.65}
@@ -1177,20 +1177,61 @@ a.mp-card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(11,20,34,.
 .mp-zwcad-pricing .zwcad-feature-list li span{flex-shrink:0;color:var(--zwcad-blue);font-size:15px;font-weight:800}
 .mp-zwcad-pricing .zwcad-card-actions{display:flex;flex-direction:column;gap:11px;margin-top:auto}
 .mp-zwcad-pricing .zwcad-btn-primary,.mp-zwcad-pricing .zwcad-btn-secondary{display:flex;justify-content:center;align-items:center;gap:10px;width:100%;min-height:47px;padding:12px 17px;border-radius:8px;text-align:center;text-decoration:none!important;font-family:inherit;font-size:13px;font-weight:750;transition:all .25s ease}
-.mp-zwcad-pricing .zwcad-btn-primary{color:#fff!important;background:var(--zwcad-blue);border:1px solid var(--zwcad-blue)}
-.mp-zwcad-pricing .zwcad-btn-primary:hover{color:#fff!important;background:var(--zwcad-blue-dark);border-color:var(--zwcad-blue-dark);transform:translateY(-2px)}
+.mp-zwcad-pricing .zwcad-btn-primary{color:var(--background)!important;background:var(--zwcad-blue);border:1px solid var(--zwcad-blue)}
+.mp-zwcad-pricing .zwcad-btn-primary:hover{color:var(--background)!important;background:var(--zwcad-blue-dark);border-color:var(--zwcad-blue-dark);transform:translateY(-2px)}
 .mp-zwcad-pricing .zwcad-btn-primary span{font-size:17px;transition:transform .2s ease}
 .mp-zwcad-pricing .zwcad-btn-primary:hover span{transform:translateX(4px)}
-.mp-zwcad-pricing .zwcad-btn-secondary{color:#526174!important;background:#fff;border:1px solid #dfe6ee}
+.mp-zwcad-pricing .zwcad-btn-secondary{color:#526174!important;background:var(--background);border:1px solid #dfe6ee}
 .mp-zwcad-pricing .zwcad-btn-secondary:hover{color:var(--zwcad-blue)!important;background:#f5faff;border-color:#b8d8f8}
 .mp-zwcad-pricing .zwcad-pricing-notes{display:flex;align-items:flex-start;gap:14px;max-width:850px;margin:35px auto 0;padding:19px 22px;background:#edf4fb;border:1px solid #e0eaf5;border-radius:11px}
-.mp-zwcad-pricing .zwcad-note-icon{display:flex;flex-shrink:0;justify-content:center;align-items:center;width:22px;height:22px;color:#fff;background:var(--zwcad-blue);border-radius:50%;font-size:13px;font-weight:800}
+.mp-zwcad-pricing .zwcad-note-icon{display:flex;flex-shrink:0;justify-content:center;align-items:center;width:22px;height:22px;color:var(--background);background:var(--zwcad-blue);border-radius:50%;font-size:13px;font-weight:800}
 .mp-zwcad-pricing .zwcad-pricing-notes strong{display:block;margin-bottom:5px;color:var(--zwcad-text);font-size:12px}
 .mp-zwcad-pricing .zwcad-pricing-notes p{margin:0;color:#6e7c8e;font-size:12px;line-height:1.65}
 .mp-zwcad-pricing .zwcad-price strong.price-changing{opacity:0;transform:translateY(5px)}
 @media(max-width:1000px){.mp-zwcad-pricing .zwcad-pricing-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.mp-zwcad-pricing .zwcad-price-featured{order:-1}}
 @media(max-width:650px){.mp-zwcad-pricing{padding:70px 17px}.mp-zwcad-pricing .zwcad-pricing-header{margin-bottom:40px}.mp-zwcad-pricing .zwcad-pricing-header h2{font-size:34px}.mp-zwcad-pricing .zwcad-pricing-header>p{font-size:14px}.mp-zwcad-pricing .zwcad-license-switch{display:flex;width:100%}.mp-zwcad-pricing .zwcad-switch-option{min-width:0;flex:1;padding:12px 8px}.mp-zwcad-pricing .zwcad-pricing-grid{grid-template-columns:1fr;gap:25px}.mp-zwcad-pricing .zwcad-price-featured{order:initial}.mp-zwcad-pricing .zwcad-price-card{padding:29px 23px 24px}.mp-zwcad-pricing .zwcad-card-description{min-height:auto}.mp-zwcad-pricing .zwcad-price strong{font-size:37px}.mp-zwcad-pricing .zwcad-pricing-notes{padding:16px}}
 @media(prefers-reduced-motion:reduce){.mp-zwcad-pricing *,.mp-zwcad-pricing *:before,.mp-zwcad-pricing *:after{transition-duration:.01ms!important}}
+
+/* Colores oficiales: paleta-tokens.css */
+#mp-zcad-compare{
+ --cmp-blue:var(--brand-blue);
+ --cmp-navy:var(--secondary);
+ --cmp-primary:var(--primary);
+ --cmp-bg:var(--background);
+ --cmp-text:var(--foreground);
+ --cmp-muted:var(--muted-foreground);
+ color:var(--foreground)
+}
+#mp-zcad-compare .mp-zcad-toolbar{background:color-mix(in srgb,var(--brand-blue) 7%,var(--background));border-color:color-mix(in srgb,var(--brand-blue) 24%,var(--background))}
+#mp-zcad-compare .mp-zcad-actions button{background:var(--background);color:var(--secondary);border-color:color-mix(in srgb,var(--brand-blue) 35%,var(--background))}
+#mp-zcad-compare .mp-zcad-actions button:first-child{background:var(--cta-gradient);border-color:var(--primary);color:#fff;box-shadow:var(--cta-glow)}
+#mp-zcad-compare .mp-zcad-actions button:hover{background:var(--secondary);border-color:var(--brand-blue-bright);color:#fff}
+#mp-zcad-compare .mp-zcad-legend b{background:color-mix(in srgb,var(--primary) 17%,var(--background));color:var(--secondary)}
+#mp-zcad-compare .mp-zcad-table-scroll{background:var(--background);border-color:color-mix(in srgb,var(--brand-blue) 28%,var(--background));box-shadow:0 16px 38px color-mix(in srgb,var(--secondary) 10%,transparent)}
+#mp-zcad-compare .mp-zcad-matrix th,#mp-zcad-compare .mp-zcad-matrix td{border-color:color-mix(in srgb,var(--brand-blue) 15%,var(--background))}
+#mp-zcad-compare .mp-zcad-matrix thead th{background:var(--secondary);color:#fff}
+#mp-zcad-compare .mp-zcad-matrix thead th:nth-child(2),#mp-zcad-compare .mp-zcad-matrix thead th:nth-child(3){background:linear-gradient(145deg,var(--brand-blue),var(--brand-blue-bright))}
+#mp-zcad-compare .mp-zcad-matrix thead th b{color:var(--primary)}
+#mp-zcad-compare .mp-zcad-category-row th{background:color-mix(in srgb,var(--brand-blue) 8%,var(--background));border-color:color-mix(in srgb,var(--brand-blue) 22%,var(--background))}
+#mp-zcad-compare .mp-zcad-category-toggle{background:linear-gradient(90deg,color-mix(in srgb,var(--brand-blue) 12%,var(--background)),color-mix(in srgb,var(--primary) 7%,var(--background)));color:var(--secondary);border-left-color:var(--primary)}
+#mp-zcad-compare .mp-zcad-category-toggle:hover{background:linear-gradient(90deg,color-mix(in srgb,var(--brand-blue) 19%,var(--background)),color-mix(in srgb,var(--primary) 13%,var(--background)))}
+#mp-zcad-compare .mp-zcad-category-toggle small{background:var(--background);color:var(--brand-blue);border-color:color-mix(in srgb,var(--brand-blue) 25%,var(--background))}
+#mp-zcad-compare .mp-zcad-category-chevron{border-color:var(--brand-blue)}
+#mp-zcad-compare .mp-zcad-feature-row th,#mp-zcad-compare .mp-zcad-feature-row td{background:var(--background);color:var(--foreground)}
+#mp-zcad-compare .mp-zcad-feature-row:nth-child(even) th,#mp-zcad-compare .mp-zcad-feature-row:nth-child(even) td{background:color-mix(in srgb,var(--brand-blue) 4%,var(--background))}
+#mp-zcad-compare .mp-zcad-feature-row td:nth-child(2),#mp-zcad-compare .mp-zcad-feature-row td:nth-child(3){background:color-mix(in srgb,var(--brand-blue) 7%,var(--background))}
+#mp-zcad-compare .mp-zcad-feature-row:nth-child(even) td:nth-child(2),#mp-zcad-compare .mp-zcad-feature-row:nth-child(even) td:nth-child(3){background:color-mix(in srgb,var(--brand-blue) 11%,var(--background))}
+#mp-zcad-compare .mp-zcad-feature-row:hover th,#mp-zcad-compare .mp-zcad-feature-row:hover td{background:color-mix(in srgb,var(--primary) 13%,var(--background))}
+#mp-zcad-compare .mp-zcad-feature-row:hover td:nth-child(2),#mp-zcad-compare .mp-zcad-feature-row:hover td:nth-child(3){background:color-mix(in srgb,var(--primary) 19%,var(--background))}
+#mp-zcad-compare .mp-zcad-matrix td[data-state=yes] .mp-zcad-state{background:color-mix(in srgb,var(--primary) 22%,var(--background));color:var(--secondary)}
+#mp-zcad-compare .mp-zcad-matrix td[data-state=no] .mp-zcad-state{color:var(--muted-foreground)}
+#mp-zcad-compare .mp-zcad-footnote{background:color-mix(in srgb,var(--brand-blue) 6%,var(--background));border-left-color:var(--primary);color:var(--muted-foreground)}
+#mp-zcad-compare .mp-zcad-footnote a{color:var(--brand-blue)}
+.dark #mp-zcad-compare .mp-zcad-matrix thead th{background:var(--card);color:var(--foreground)}
+.dark #mp-zcad-compare .mp-zcad-matrix thead th:nth-child(2),.dark #mp-zcad-compare .mp-zcad-matrix thead th:nth-child(3){background:linear-gradient(145deg,var(--brand-blue),var(--brand-blue-bright))}
+.dark #mp-zcad-compare .mp-zcad-category-toggle{color:var(--foreground)}
+.dark #mp-zcad-compare .mp-zcad-feature-row th,#mp-zcad-compare.dark .mp-zcad-feature-row th{color:var(--foreground)}
+.dark #mp-zcad-compare .mp-zcad-category-toggle small{color:var(--primary)}
 </style>
 
 <script id="zwcad-pricing-script">
