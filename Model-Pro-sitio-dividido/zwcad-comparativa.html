@@ -1337,6 +1337,75 @@ a.mp-card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(11,20,34,.
  #zwcad-precios .zwcad-price-card .zwcad-btn-secondary{max-width:230px!important}
 }
 
+
+/* PALETA OFICIAL MODEL PRO — repintado general ZWCAD */
+:root{
+  --mp-page-bg:var(--background);
+  --mp-page-text:var(--foreground);
+  --mp-page-card:var(--card);
+  --mp-page-cyan:var(--primary);
+  --mp-page-blue:var(--brand-blue);
+  --mp-page-blue-bright:var(--brand-blue-bright);
+  --mp-page-navy:var(--secondary);
+  --mp-page-muted:var(--muted-foreground);
+  --mp-page-line:color-mix(in srgb,var(--brand-blue) 16%,var(--background));
+}
+/* Cabecera y navegación */
+.mp-header{background:var(--background)!important;color:var(--foreground)!important;border-color:var(--mp-page-line)!important}
+.mp-header .mp-top,.mp-header .mp-nav a,.mp-header .mp-logo{color:var(--foreground)!important}
+.mp-header .mp-top:hover,.mp-header .mp-nav a:hover,.mp-header .mp-nav a[aria-current="page"]{color:var(--brand-blue)!important}
+.mp-header .mp-btn,.mp-header .mp-nav-cta{background:var(--cta-gradient)!important;color:#fff!important}
+/* Hero: fondo claro, texto oscuro y acentos de marca */
+.mp-zwcad-page .zcad-hero{background:var(--background)!important;color:var(--foreground)!important}
+.mp-zwcad-page .zcad-hero::after{background:linear-gradient(90deg,rgba(255,255,255,.97),rgba(255,255,255,.84))!important}
+.mp-zwcad-page .zcad-hero h1,.mp-zwcad-page .zcad-hero h2,.mp-zwcad-page .zcad-hero .zcad-title{color:var(--foreground)!important}
+.mp-zwcad-page .zcad-hero .zcad-eyebrow,.mp-zwcad-page .zcad-hero .zcad-kicker{color:var(--brand-blue)!important}
+.mp-zwcad-page .zcad-hero .zcad-highlight,.mp-zwcad-page .zcad-hero .zcad-gradient-text{background:var(--title-gradient)!important;background-clip:text!important;-webkit-background-clip:text!important;-webkit-text-fill-color:transparent!important}
+.mp-zwcad-page .zcad-actions a,.mp-zwcad-page .zcad-actions button,.mp-zwcad-page .zcad-results-cta .mp-btn{background:var(--cta-gradient)!important;color:#fff!important;border-color:transparent!important}
+.mp-zwcad-page .zcad-actions .mp-ghost{background:var(--background)!important;color:var(--brand-blue)!important;border:1px solid color-mix(in srgb,var(--brand-blue) 30%,var(--background))!important}
+/* Secciones oscuras: marino oficial y cian como acento */
+.mp-zwcad-page .zcad-dark:not(#zwcad-ahorro){background:var(--secondary)!important;color:#F4F6F9!important}
+.mp-zwcad-page .zcad-dark:not(#zwcad-ahorro) h2,.mp-zwcad-page .zcad-dark:not(#zwcad-ahorro) h3,.mp-zwcad-page .zcad-dark:not(#zwcad-ahorro) strong{color:#F4F6F9}
+.mp-zwcad-page .zcad-dark:not(#zwcad-ahorro) p,.mp-zwcad-page .zcad-dark:not(#zwcad-ahorro) li{color:rgba(244,246,249,.82)}
+.mp-zwcad-page .zcad-dark:not(#zwcad-ahorro) .zcad-ey,.mp-zwcad-page .zcad-dark:not(#zwcad-ahorro) .zcad-ey-light,.mp-zwcad-page .zcad-dark:not(#zwcad-ahorro) .zcad-cap-label{color:var(--primary)!important}
+.mp-zwcad-page .zcad-dark:not(#zwcad-ahorro) a:not(.mp-btn){color:var(--primary)}
+.mp-zwcad-page .zcad-dark:not(#zwcad-ahorro) .zcad-what-card,.mp-zwcad-page .zcad-dark:not(#zwcad-ahorro) .zcad-cap-panel,.mp-zwcad-page .zcad-dark:not(#zwcad-ahorro) .zcad-format-card,.mp-zwcad-page .zcad-dark:not(#zwcad-ahorro) .zcad-case-card{background:rgba(255,255,255,.055)!important;border-color:rgba(0,184,189,.24)!important}
+.mp-zwcad-page .zcad-dark:not(#zwcad-ahorro) .zcad-what-card b,.mp-zwcad-page .zcad-dark:not(#zwcad-ahorro) .zcad-format-list span{background:rgba(0,184,189,.10)!important;border-color:rgba(0,184,189,.28)!important;color:#F4F6F9!important}
+.mp-zwcad-page .zcad-dark:not(#zwcad-ahorro) .zcad-text-link,.mp-zwcad-page .zcad-dark:not(#zwcad-ahorro) .zcad-case-card a{color:var(--primary)!important}
+/* Secciones claras y tarjetas de contenido */
+.mp-zwcad-page .zcad-light:not(#zwcad-ahorro){background:var(--background)!important;color:var(--foreground)!important}
+.mp-zwcad-page .zcad-light:not(#zwcad-ahorro) h2,.mp-zwcad-page .zcad-light:not(#zwcad-ahorro) h3,.mp-zwcad-page .zcad-light:not(#zwcad-ahorro) strong{color:var(--foreground)}
+.mp-zwcad-page .zcad-light:not(#zwcad-ahorro) p,.mp-zwcad-page .zcad-light:not(#zwcad-ahorro) li{color:var(--muted-foreground)}
+.mp-zwcad-page .zcad-light:not(#zwcad-ahorro) .zcad-ey,.mp-zwcad-page .zcad-light:not(#zwcad-ahorro) .zcad-ey-light{color:var(--brand-blue)!important}
+.mp-zwcad-page .zcad-light:not(#zwcad-ahorro) .zcad-light-title{background:var(--title-gradient)!important;background-clip:text!important;-webkit-background-clip:text!important;-webkit-text-fill-color:transparent!important}
+.mp-zwcad-page .zcad-light:not(#zwcad-ahorro) .zcad-benchmark-grid article,.mp-zwcad-page .zcad-light:not(#zwcad-ahorro) .zcad-result-grid article,.mp-zwcad-page .zcad-light:not(#zwcad-ahorro) .zcad-flow-grid article{background:var(--card)!important;border:1px solid var(--mp-page-line)!important;box-shadow:0 10px 28px color-mix(in srgb,var(--secondary) 7%,transparent)!important}
+.mp-zwcad-page .zcad-light:not(#zwcad-ahorro) .zcad-benchmark-grid article>span,.mp-zwcad-page .zcad-light:not(#zwcad-ahorro) .zcad-flow-grid b,.mp-zwcad-page .zcad-light:not(#zwcad-ahorro) .zcad-result-grid b{color:var(--brand-blue)!important}
+.mp-zwcad-page .zcad-light:not(#zwcad-ahorro) .zcad-benchmark-grid h3,.mp-zwcad-page .zcad-light:not(#zwcad-ahorro) .zcad-flow-grid h3,.mp-zwcad-page .zcad-light:not(#zwcad-ahorro) .zcad-result-grid h3{color:var(--foreground)!important}
+.mp-zwcad-page .zcad-light:not(#zwcad-ahorro) .zcad-benchmark-grid p,.mp-zwcad-page .zcad-light:not(#zwcad-ahorro) .zcad-flow-grid p,.mp-zwcad-page .zcad-light:not(#zwcad-ahorro) .zcad-result-grid p{color:var(--muted-foreground)!important}
+.mp-zwcad-page .zcad-light:not(#zwcad-ahorro) a:not(.mp-btn){color:var(--brand-blue)}
+/* Comparativa, versiones, navegación flotante y FAQ */
+.mp-zwcad-page .zcad-compare-table,.mp-zwcad-page .mp-verstable-wrap{border-color:var(--mp-page-line)!important;background:var(--card)!important}
+.mp-zwcad-page .zcad-compare-table>div:first-child{background:color-mix(in srgb,var(--primary) 9%,var(--background))!important;color:var(--secondary)!important}
+.mp-zwcad-page .zcad-subnav .z3d-subnav-inner{border-color:var(--mp-page-line)!important;background:rgba(255,255,255,.97)!important}
+.mp-zwcad-page .zcad-subnav a{color:var(--muted-foreground)!important}
+.mp-zwcad-page .zcad-subnav a:hover,.mp-zwcad-page .zcad-subnav a[aria-current="location"]{color:var(--brand-blue)!important;background:color-mix(in srgb,var(--primary) 10%,var(--background))!important;box-shadow:none!important}
+.mp-zwcad-page .zcad-subnav a.z3d-nav-cta{background:var(--cta-gradient)!important;color:#fff!important}
+.mp-zwcad-page .zcad-faq.zcad-light{background:var(--background)!important;color:var(--foreground)!important}
+.mp-zwcad-page .zcad-faq.zcad-light .mp-fq{border-color:var(--mp-page-line)!important}
+.mp-zwcad-page .zcad-faq.zcad-light .mp-fq button,.mp-zwcad-page .zcad-faq.zcad-light .mp-fa p{color:var(--foreground)!important}
+.mp-zwcad-page .zcad-faq.zcad-light .mp-fq button:hover,.mp-zwcad-page .zcad-faq.zcad-light .mp-fq .mp-fi,.mp-zwcad-page .zcad-faq.zcad-light a{color:var(--brand-blue)!important}
+/* CTA final y pie: contraste marino con acento cian */
+.mp-zwcad-page .zcad-cta,.mp-zwcad-page .zcad-cta-dark{background:var(--secondary)!important;color:#F4F6F9!important}
+.mp-zwcad-page .zcad-cta h2,.mp-zwcad-page .zcad-cta h3,.mp-zwcad-page .zcad-cta-dark h2,.mp-zwcad-page .zcad-cta-dark h3{color:#F4F6F9!important}
+.mp-zwcad-page .zcad-cta p,.mp-zwcad-page .zcad-cta-dark p{color:rgba(244,246,249,.82)!important}
+.mp-zwcad-page .zcad-cta .zcad-ey-light,.mp-zwcad-page .zcad-cta-dark .zcad-ey-light{color:var(--primary)!important}
+.mp-zwcad-page .zcad-cta .mp-white,.mp-zwcad-page .zcad-cta-dark .mp-white{background:var(--cta-gradient)!important;color:#fff!important;border:0!important}
+.mp-zwcad-page .zcad-cta .mp-ghost,.mp-zwcad-page .zcad-cta-dark .mp-ghost{background:transparent!important;color:#F4F6F9!important;border:1px solid rgba(244,246,249,.55)!important}
+.mp-foot{background:var(--secondary)!important;color:#F4F6F9!important}
+.mp-foot h2,.mp-foot h3,.mp-foot strong{color:#F4F6F9!important}
+.mp-foot p,.mp-foot li,.mp-foot a{color:rgba(244,246,249,.78)!important}
+.mp-foot a:hover{color:var(--primary)!important}
+
 </style>
 
 
