@@ -2115,4 +2115,37 @@ var hero=page.querySelector('.zcad-hero');if(hero&&!reduce&&window.matchMedia('(
  #mp-zcad-savings .sv-cta{width:100%!important;max-width:280px!important;min-width:0!important}
 }
 </style>
+<style id="zwcad-card-balance">
+/* Tarjetas: contenido equilibrado y con margen interior uniforme */
+.mp-zwcad-pricing .zwcad-price-card,
+.mp-zwcad-pricing .zwcad-price-card.is-selected{
+ box-sizing:border-box!important;
+ padding:27px 31px 24px!important;
+}
+.mp-zwcad-pricing .zwcad-card-top,
+.mp-zwcad-pricing .zwcad-price-area,
+.mp-zwcad-pricing .zwcad-feature-list,
+.mp-zwcad-pricing .zwcad-card-actions{
+ width:100%!important;min-width:0!important;
+}
+.mp-zwcad-pricing .zwcad-feature-list{
+ gap:5px!important;margin:0 0 17px!important;padding:0!important;
+}
+.mp-zwcad-pricing .zwcad-feature-list li{
+ display:grid!important;grid-template-columns:16px minmax(0,1fr)!important;
+ align-items:start!important;column-gap:9px!important;
+ margin:0!important;padding:0!important;
+ font-size:11.5px!important;line-height:1.35!important;
+}
+.mp-zwcad-pricing .zwcad-feature-list li span{
+ display:inline-flex!important;align-items:center!important;justify-content:center!important;
+ width:16px!important;height:16px!important;margin:0!important;
+ font-size:12px!important;line-height:1!important;
+}
+.mp-zwcad-pricing .zwcad-card-actions{align-items:center!important}
+@media(max-width:650px){
+ .mp-zwcad-pricing .zwcad-price-card,
+ .mp-zwcad-pricing .zwcad-price-card.is-selected{padding:24px 25px 22px!important}
+}
+</style>
 </body></html>
