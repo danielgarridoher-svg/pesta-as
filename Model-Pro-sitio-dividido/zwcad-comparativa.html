@@ -1408,82 +1408,99 @@ a.mp-card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(11,20,34,.
 
 
 
-/* CONTRASTE VISUAL OSCURO — únicamente «¿Qué es ZWCAD?» y «Funciones» */
-.mp-zwcad-page #zwcad-que-es,
-.mp-zwcad-page #zwcad-capacidades{
-  --zwcad-dark-bg:#0C1422;
-  --zwcad-dark-card:#0E1B33;
-  --zwcad-dark-text:#F4F6F9;
-  --zwcad-dark-cyan:#00B8BD;
-  --zwcad-dark-blue:#2E82F0;
-  background-color:var(--zwcad-dark-bg)!important;
+/* CONTRASTE VISUAL OSCURO — secciones «¿Qué es ZWCAD?» y «Funciones» */
+#zwcad-que-es,
+#zwcad-capacidades{
+  --section-bg:#0C1422;
+  --section-card:#0E1B33;
+  --section-text:#F4F6F9;
+  --section-cyan:#00B8BD;
+  --section-blue:#2E82F0;
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  background-color:var(--section-bg)!important;
   background-image:
-    linear-gradient(rgba(0,184,189,.075) 1px,transparent 1px),
-    linear-gradient(90deg,rgba(0,184,189,.075) 1px,transparent 1px),
-    radial-gradient(ellipse at 50% 0%,rgba(0,184,189,.10),transparent 68%)!important;
+    linear-gradient(rgba(0,184,189,.065) 1px,transparent 1px),
+    linear-gradient(90deg,rgba(0,184,189,.065) 1px,transparent 1px),
+    radial-gradient(ellipse at 50% 0%,rgba(0,184,189,.12),transparent 70%)!important;
   background-size:48px 48px,48px 48px,100% 100%!important;
-  color:var(--zwcad-dark-text)!important;
+  color:var(--section-text)!important;
 }
-.mp-zwcad-page #zwcad-que-es h2,
-.mp-zwcad-page #zwcad-capacidades h2{
+#zwcad-que-es h2,
+#zwcad-capacidades h2{
   background:linear-gradient(90deg,#00B8BD,#2E82F0)!important;
   background-clip:text!important;
   -webkit-background-clip:text!important;
   -webkit-text-fill-color:transparent!important;
-  text-shadow:0 0 24px rgba(0,184,189,.22)!important;
+  text-shadow:0 0 24px rgba(0,184,189,.24)!important;
 }
-.mp-zwcad-page #zwcad-que-es p,
-.mp-zwcad-page #zwcad-capacidades p,
-.mp-zwcad-page #zwcad-que-es li,
-.mp-zwcad-page #zwcad-capacidades li{
-  color:rgba(244,246,249,.86)!important;
+#zwcad-que-es p,
+#zwcad-capacidades p,
+#zwcad-que-es li,
+#zwcad-capacidades li{
+  color:rgba(244,246,249,.88)!important;
 }
-.mp-zwcad-page #zwcad-que-es .zcad-ey-light,
-.mp-zwcad-page #zwcad-capacidades .zcad-ey-light,
-.mp-zwcad-page #zwcad-capacidades .zcad-cap-label{
+#zwcad-que-es .zcad-ey-light,
+#zwcad-capacidades .zcad-ey-light,
+#zwcad-capacidades .zcad-cap-label{
   color:#00B8BD!important;
   text-shadow:0 0 18px rgba(0,184,189,.28)!important;
 }
-.mp-zwcad-page #zwcad-que-es .zcad-what-card,
-.mp-zwcad-page #zwcad-capacidades .zcad-cap-panel{
+#zwcad-que-es .zcad-what-card,
+#zwcad-capacidades .zcad-cap-panel{
   background:
     linear-gradient(#0E1B33,#0E1B33) padding-box,
-    linear-gradient(135deg,rgba(0,184,189,.30),rgba(46,130,240,.30)) border-box!important;
+    linear-gradient(135deg,rgba(0,184,189,.38),rgba(46,130,240,.34)) border-box!important;
   border:1px solid transparent!important;
+  border-radius:16px!important;
   color:#F4F6F9!important;
-  box-shadow:0 14px 38px rgba(0,0,0,.20),0 0 24px rgba(0,184,189,.06)!important;
+  box-shadow:0 14px 38px rgba(0,0,0,.24),0 0 24px rgba(0,184,189,.07)!important;
 }
-.mp-zwcad-page #zwcad-que-es .zcad-what-card span,
-.mp-zwcad-page #zwcad-que-es .zcad-what-card b,
-.mp-zwcad-page #zwcad-capacidades .zcad-cap-panel h3,
-.mp-zwcad-page #zwcad-capacidades .zcad-cap-panel strong{
+#zwcad-que-es .zcad-what-card>span,
+#zwcad-que-es .zcad-what-card small,
+#zwcad-que-es .zcad-what-card b,
+#zwcad-capacidades .zcad-cap-panel h3,
+#zwcad-capacidades .zcad-cap-panel strong{
   color:#F4F6F9!important;
 }
-.mp-zwcad-page #zwcad-que-es .zcad-what-card b{
-  background:rgba(0,184,189,.10)!important;
-  border:1px solid rgba(0,184,189,.28)!important;
+#zwcad-que-es .zcad-what-card b{
+  background:rgba(0,184,189,.12)!important;
+  border:1px solid rgba(0,184,189,.32)!important;
 }
-.mp-zwcad-page #zwcad-capacidades .zcad-cap-tabs button[aria-selected="true"]{
+#zwcad-que-es .zcad-what-card i{color:#00B8BD!important}
+#zwcad-capacidades .zcad-cap-tabs button{
+  color:rgba(244,246,249,.78)!important;
+  background:rgba(14,27,51,.72)!important;
+  border:1px solid rgba(0,184,189,.18)!important;
+}
+#zwcad-capacidades .zcad-cap-tabs button[aria-selected="true"]{
   color:#F4F6F9!important;
-  background:linear-gradient(135deg,rgba(0,184,189,.20),rgba(46,130,240,.20))!important;
-  border-color:rgba(0,184,189,.48)!important;
-  box-shadow:0 0 20px rgba(0,184,189,.12)!important;
+  background:linear-gradient(135deg,rgba(0,184,189,.24),rgba(46,130,240,.24))!important;
+  border-color:rgba(0,184,189,.58)!important;
+  box-shadow:0 0 20px rgba(0,184,189,.14)!important;
 }
-.mp-zwcad-page #zwcad-que-es .mp-btn,
-.mp-zwcad-page #zwcad-capacidades .mp-btn{
+#zwcad-capacidades .zcad-cap-visual{
+  border:1px solid rgba(0,184,189,.24)!important;
+  border-radius:12px!important;
+  background:linear-gradient(145deg,rgba(0,184,189,.08),rgba(46,130,240,.08))!important;
+}
+#zwcad-capacidades .zcad-cap-visual svg{color:#00B8BD!important}
+#zwcad-que-es .mp-btn,
+#zwcad-capacidades .mp-btn{
   color:#fff!important;
   background:linear-gradient(135deg,#00B8BD,#2E82F0)!important;
   border:0!important;
   box-shadow:0 8px 24px -4px rgba(0,184,189,.45)!important;
 }
-.mp-zwcad-page #zwcad-que-es .mp-btn:hover,
-.mp-zwcad-page #zwcad-capacidades .mp-btn:hover{
+#zwcad-que-es .mp-btn:hover,
+#zwcad-capacidades .mp-btn:hover{
   filter:brightness(1.08)!important;
   box-shadow:0 10px 28px -4px rgba(0,184,189,.52)!important;
 }
 @media(max-width:700px){
-  .mp-zwcad-page #zwcad-que-es,
-  .mp-zwcad-page #zwcad-capacidades{
+  #zwcad-que-es,
+  #zwcad-capacidades{
     background-size:36px 36px,36px 36px,100% 100%!important;
   }
 }
