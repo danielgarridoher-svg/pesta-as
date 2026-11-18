@@ -2670,5 +2670,41 @@ var hero=page.querySelector('.zcad-hero');if(hero&&!reduce&&window.matchMedia('(
 #zwcad-demo .zcad-back{width:100%;text-align:center!important}
 #zwcad-demo .zcad-back a{color:#B7C4D6!important}
 </style>
+
+<style id="mp-zwcad-heading-hierarchy-final">
+/* Jerarquía tipográfica de encabezados y etiquetas superiores */
+/* Grupo 1 · degradado pastel del CTA */
+#zwcad-que-es #zcad-what-title,
+#zwcad-capacidades #zcad-cap-title,
+#zwcad-casos #zcad-case-title{
+  background:linear-gradient(100deg,#B9F3EF 0%,#C8DEFF 55%,#D2F5E5 100%)!important;
+  background-clip:text!important;-webkit-background-clip:text!important;-webkit-text-fill-color:transparent!important;
+  font-size:clamp(22px,3.2vw,32px)!important;font-weight:700!important;letter-spacing:-.02em!important;
+}
+/* Grupo 2 · degradado blanco-azul */
+#zwcad-diferencias #zcad-difference-title,
+#zwcad-precios .zwcad-pricing-header h2,
+#zwcad-comparacion #zcad-comparison-title,
+#zwcad-preguntas #zcad-faq-title{
+  background:linear-gradient(100deg,#FFFFFF 0%,#AEE6FF 58%,#8BE3DB 100%)!important;
+  background-clip:text!important;-webkit-background-clip:text!important;-webkit-text-fill-color:transparent!important;
+  font-size:clamp(22px,3.2vw,32px)!important;font-weight:700!important;letter-spacing:-.02em!important;
+}
+/* Grupo 3 · etiquetas superiores en mayúsculas y color sólido */
+#zwcad-que-es .zcad-ey-light,
+#zwcad-capacidades .zcad-ey-light,
+#zwcad-casos .mp-cs-eyebrow,
+#zwcad-demo .zcad-ey-light{
+  color:#FFFFFF!important;font-weight:800!important;letter-spacing:.14em!important;text-transform:uppercase!important;
+}
+#zwcad-diferencias>.mp-co>.mp-ey,
+#zwcad-precios .zwcad-pricing-eyebrow,
+#zwcad-ahorro .sv-eyebrow,
+#zwcad-comparacion .mp-ey,
+#zwcad-preguntas .mp-ey{
+  color:#0B559A!important;font-weight:800!important;letter-spacing:.14em!important;text-transform:uppercase!important;
+}
+</style>
+
 </body>
 </html>
