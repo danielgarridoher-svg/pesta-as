@@ -1,0 +1,33 @@
+/* ============================================================
+   Model Pro — Tokens de color (paleta oficial)
+   Modo claro = :root  ·  Modo oscuro = .dark
+   Valores en HEX (OKLCH de referencia en comentario).
+   ============================================================ */
+:root{
+  --background:#FFFFFF;        /* oklch(1 0 0)          fondo principal */
+  --foreground:#161616;        /* oklch(0.2 0 0)        textos / "MODEL" */
+  --card:#FFFFFF;              /* superficie de tarjetas */
+  --primary:#00B8BD;           /* oklch(0.71 0.145 193) cian de marca */
+  --brand-blue:#1558C0;        /* oklch(0.47 0.175 260) azul CAD (software, enlaces) */
+  --brand-blue-bright:#2E82F0; /* oklch(0.61 0.165 256) azul luminoso (hover, degradados) */
+  --secondary:#0E1B33;         /* oklch(0.21 0.045 260) marino profundo */
+  --muted-foreground:#666666;  /* oklch(0.51 0 0)       gris / "PRO", subtítulos */
+  --accent:#EE1C25;            /* oklch(0.6 0.235 27)   rojo señal (solo alertas/límite) */
+
+  /* Derivados de uso frecuente */
+  --cta-gradient:linear-gradient(135deg,#00B8BD,#2E82F0);
+  --cta-glow:0 8px 24px -4px rgba(0,184,189,.45);
+  --title-gradient:linear-gradient(90deg,#1558C0,#00B8BD); /* palabra clave en titular, modo claro */
+}
+
+.dark{
+  --background:#0C1422;        /* oklch(0.17 0.035 260) azul abisal */
+  --card:#0E1B33;             /* oklch(0.21 0.045 260) marino (tarjetas/HUD) */
+  --foreground:#F4F6F9;       /* oklch(0.98 0.005 250) texto alta legibilidad */
+  --primary:#00B8BD;          /* cian luminoso (grid, puntos de escaneo) */
+  --brand-blue-bright:#2E82F0;/* mallas 3D, bordes brillantes */
+  --accent:#EE1C25;           /* desviación fuera de tolerancia */
+
+  --title-gradient:linear-gradient(90deg,#00B8BD,#2E82F0); /* titular, modo oscuro */
+  --title-glow:0 0 24px rgba(0,184,189,.35);
+}
