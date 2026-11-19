@@ -2377,4 +2377,22 @@ visual.addEventListener('pointerleave',function(){visual.classList.remove('is-po
   color:#123F91
 }
 </style>
+
+<style id="zw3d-demo-button-hover-fix">
+/* Mantiene el degradado del botón de demostración también al pasar el cursor. */
+#zw3d-demo .mp-white,
+#zw3d-demo .mp-white:hover,
+#zw3d-demo .mp-white:focus-visible{
+  background:linear-gradient(110deg,#00B8BD 0%,#2E82F0 100%)!important;
+  background-image:linear-gradient(110deg,#00B8BD 0%,#2E82F0 100%)!important;
+  color:#FFFFFF!important;
+  transition:transform .2s ease,box-shadow .2s ease;
+}
+#zw3d-demo .mp-white:hover,
+#zw3d-demo .mp-white:focus-visible{
+  transform:translateY(-2px);
+  box-shadow:0 12px 26px rgba(23,78,173,.24)!important;
+}
+</style>
+
 </body></html>
