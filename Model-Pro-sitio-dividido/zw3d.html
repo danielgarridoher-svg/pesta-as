@@ -884,7 +884,6 @@ a.mp-card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(11,20,34,.
 @media(max-width:640px){#mp-z3d-compare .mp-zcad-category-toggle{padding:13px 12px}#mp-z3d-compare .mp-zcad-matrix th,#mp-z3d-compare .mp-zcad-matrix td{padding:11px 8px}#mp-z3d-compare .mp-zcad-matrix thead th:first-child,#mp-z3d-compare .mp-zcad-matrix tbody th{padding-left:13px}}
 @media(prefers-reduced-motion:reduce){#mp-z3d-compare *{transition:none!important;scroll-behavior:auto!important}}
 
-
 /* Encabezado fijo sincronizado: solo una versión visible; el original conserva el flujo. */
 #mp-z3d-compare .mp-zcad-table-scroll{position:relative}
 #mp-z3d-compare .mp-zcad-matrix thead.mp-z3d-head-hidden{visibility:hidden}
@@ -1254,7 +1253,6 @@ a.mp-card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(11,20,34,.
     });
   }
 
-
   /* Encabezado dinámico: el original conserva el espacio; la capa fija es su única
      representación visible durante el recorrido. Sus anchos se miden del thead real. */
   var tableScroll = root.querySelector('.mp-zcad-table-scroll');
@@ -1608,7 +1606,6 @@ document.querySelectorAll('img[data-ph]').forEach(function(im){
 #zw3d-demo .z3d-back a{color:#B7C4D6!important}
 </style>
 
-
 <style id="zw3d-trial-form-styles">
 /* Formulario de prueba: sección clara, independiente del CTA oscuro. */
 #zw3d-trial-form{
@@ -1952,8 +1949,6 @@ visual.addEventListener('pointerleave',function(){visual.classList.remove('is-po
   background:linear-gradient(140deg,oklch(0.25 0.05 260) 0%,oklch(0.32 0.09 256) 52%,oklch(0.30 0.08 205) 100%)!important;
 }
 
-
-
 /* Fondo oscuro unificado para las secciones señaladas. */
 #zw3d-que-es,
 #zw3d-capacidades,
@@ -1984,7 +1979,6 @@ visual.addEventListener('pointerleave',function(){visual.classList.remove('is-po
 #zw3d-produccion .z3d-step-icon{margin-bottom:5px!important}
 #zw3d-produccion .z3d-production-card h3{color:#1558C0!important}
 #zw3d-produccion .z3d-production-card p{color:#40546D!important}
-
 
 /* Producción CAM: jerarquía visual, iconos destacados e interacción sutil. */
 #zw3d-produccion .z3d-step-icon{
@@ -2063,14 +2057,11 @@ visual.addEventListener('pointerleave',function(){visual.classList.remove('is-po
 #zw3d-casos>.mp-co>.mp-lead{color:#E0EAF6!important}
 #zw3d-demo .z3d-dark-ey{color:#FFFFFF!important}
 
-
-
 /* ZW3D: contraste de los títulos de las tarjetas en la sección ¿Qué es? */
 #zw3d-que-es .z3d-whatis-grid .mp-card h3{
   color:#8AF5F0!important;
   -webkit-text-fill-color:#8AF5F0!important;
 }
-
 
 /* ZW3D: contraste de los títulos de las tarjetas «Qué lo hace diferente». */
 #zw3d-porque .z3d-why-grid .z3d-why h3{
@@ -2089,7 +2080,6 @@ visual.addEventListener('pointerleave',function(){visual.classList.remove('is-po
   #zw3d-porque .z3d-why-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
 }
 </style>
-
 
 <style id="mp-z3d-capabilities-refinement">
 /* Funciones: seis pestañas visibles y panel con contraste legible. */
@@ -2141,7 +2131,6 @@ visual.addEventListener('pointerleave',function(){visual.classList.remove('is-po
   #zw3d-capacidades .z3d-tabs button{min-height:46px;font-size:12px}
 }
 </style>
-
 
 <style id="mp-z3d-capabilities-smooth">
 /* Funciones: presentar los elementos como una lista visual, no como texto corrido. */
@@ -2264,7 +2253,6 @@ visual.addEventListener('pointerleave',function(){visual.classList.remove('is-po
 }
 </style>
 
-
 <style id="zw3d-cta-light-form-dark">
 /* CTA claro y formulario oscuro: mantener ambas secciones independientes. */
 #zw3d-demo,
@@ -2333,8 +2321,6 @@ visual.addEventListener('pointerleave',function(){visual.classList.remove('is-po
 #zw3d-trial-form .z3d-trial-privacy a{color:#8AF5F0!important}
 </style>
 
-
-
 <style id="zw3d-faq-title-white">
 /* Preguntas frecuentes: texto base blanco y degradado únicamente en ZW3D. */
 #zw3d-preguntas #zw3d-faq-title{
@@ -2353,33 +2339,15 @@ visual.addEventListener('pointerleave',function(){visual.classList.remove('is-po
 }
 </style>
 
-
-<style id="zw3d-form-title-contrast">
-/* Formulario: texto principal blanco y nombre del producto con degradado suave. */
-#zw3d-trial-form #z3d-trial-title{
-  background:none!important;
-  background-clip:border-box!important;
-  -webkit-background-clip:border-box!important;
-  color:#FFFFFF!important;
-  -webkit-text-fill-color:#FFFFFF!important;
-}
-#zw3d-trial-form #z3d-trial-title .z3d-title-highlight{
-  background:linear-gradient(135deg,#8AF5F0 0%,#A9C8FF 100%)!important;
-  background-clip:text!important;
-  -webkit-background-clip:text!important;
-  color:transparent!important;
-  -webkit-text-fill-color:transparent!important;
-}
-</style>
-
-
-<style id="zw3d-form-card-title-gradient">
-/* Mayor especificidad para prevalecer sobre el estilo general del encabezado de la tarjeta. */
+<style id="zw3d-form-heading-contrast">
+/* Formulario: títulos blancos con palabras destacadas en degradado. */
+#zw3d-trial-form #z3d-trial-title,
 #zw3d-trial-form .z3d-trial-form-card h3.z3d-trial-card-title{
+  background:none!important;
   color:#FFFFFF!important;
   -webkit-text-fill-color:#FFFFFF!important;
-  background:none!important;
 }
+#zw3d-trial-form #z3d-trial-title .z3d-title-highlight,
 #zw3d-trial-form .z3d-trial-form-card h3.z3d-trial-card-title span{
   display:inline;
   background:linear-gradient(135deg,#8AF5F0 0%,#A9C8FF 100%)!important;
