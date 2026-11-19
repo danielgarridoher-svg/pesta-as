@@ -2379,19 +2379,40 @@ visual.addEventListener('pointerleave',function(){visual.classList.remove('is-po
 </style>
 
 <style id="zw3d-demo-button-hover-fix">
-/* Mantiene el degradado del botón de demostración también al pasar el cursor. */
-#zw3d-demo .mp-white,
-#zw3d-demo .mp-white:hover,
-#zw3d-demo .mp-white:focus-visible{
+/* CTA: degradado visible en reposo y respuesta perceptible al interactuar. */
+#zw3d-demo .z3d-cta-actions a.mp-white{
+  display:inline-flex!important;
+  align-items:center;justify-content:center;
   background:linear-gradient(110deg,#00B8BD 0%,#2E82F0 100%)!important;
   background-image:linear-gradient(110deg,#00B8BD 0%,#2E82F0 100%)!important;
   color:#FFFFFF!important;
-  transition:transform .2s ease,box-shadow .2s ease;
+  border:1px solid transparent!important;
+  box-shadow:0 8px 20px rgba(23,78,173,.18)!important;
+  transition:background .22s ease,background-image .22s ease,transform .22s ease,box-shadow .22s ease,filter .22s ease!important;
+  cursor:pointer;
 }
-#zw3d-demo .mp-white:hover,
-#zw3d-demo .mp-white:focus-visible{
-  transform:translateY(-2px);
-  box-shadow:0 12px 26px rgba(23,78,173,.24)!important;
+#zw3d-demo .z3d-cta-actions a.mp-white:hover{
+  background:linear-gradient(110deg,#009DA4 0%,#1558C0 100%)!important;
+  background-image:linear-gradient(110deg,#009DA4 0%,#1558C0 100%)!important;
+  transform:translateY(-3px)!important;
+  box-shadow:0 14px 28px rgba(23,78,173,.30)!important;
+  filter:saturate(1.12);
+}
+#zw3d-demo .z3d-cta-actions a.mp-white:focus,
+#zw3d-demo .z3d-cta-actions a.mp-white:focus-visible{
+  background:linear-gradient(110deg,#009DA4 0%,#1558C0 100%)!important;
+  background-image:linear-gradient(110deg,#009DA4 0%,#1558C0 100%)!important;
+  color:#FFFFFF!important;
+  transform:translateY(-2px)!important;
+  box-shadow:0 0 0 4px rgba(0,184,189,.22),0 12px 26px rgba(23,78,173,.26)!important;
+  outline:none!important;
+}
+#zw3d-demo .z3d-cta-actions a.mp-white:active{
+  transform:translateY(0) scale(.98)!important;
+  box-shadow:0 4px 12px rgba(23,78,173,.22)!important;
+}
+@media(prefers-reduced-motion:reduce){
+  #zw3d-demo .z3d-cta-actions a.mp-white{transition:none!important}
 }
 </style>
 
