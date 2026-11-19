@@ -1648,7 +1648,11 @@ document.querySelectorAll('img[data-ph]').forEach(function(im){
   background:#FFFFFF!important;color:#172B45!important;
   box-shadow:0 18px 48px rgba(20,55,95,.10)!important;
 }
-#zw3d-trial-form .z3d-trial-form-card h3{margin:0 0 8px;color:#172B45!important;font-size:1.45rem}
+#zw3d-trial-form .z3d-trial-form-card h3{
+  margin:0 0 8px!important;color:#1558C0!important;
+  -webkit-text-fill-color:#1558C0!important;background:none!important;
+  font-size:1.45rem;
+}
 #zw3d-trial-form .z3d-trial-form-note{margin:0 0 22px;color:#667A91!important}
 #zw3d-trial-form .z3d-trial-form{
   display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;
@@ -1669,7 +1673,8 @@ document.querySelectorAll('img[data-ph]').forEach(function(im){
 }
 #zw3d-trial-form .z3d-trial-form .z3d-trial-full{grid-column:1/-1}
 #zw3d-trial-form .z3d-trial-form button{
-  grid-column:1/-1;min-height:48px;margin-top:4px;padding:12px 20px;border:0;border-radius:10px;
+  grid-column:1/-1;justify-self:start;width:auto;min-width:0;min-height:42px;
+  margin-top:4px;padding:10px 24px;border:0;border-radius:999px;
   background:linear-gradient(135deg,#00B8BD,#2E82F0)!important;color:#FFFFFF!important;
   font:inherit;font-weight:700;cursor:pointer;
 }
