@@ -2352,7 +2352,7 @@ visual.addEventListener('pointerleave',function(){visual.classList.remove('is-po
 
 
 <style id="z3d-hero-light-gradients">
-/* Hero claro: reutiliza los degradados oficiales de títulos y CTA. */
+/* Hero claro: degradados visibles y estados interactivos en ambos botones. */
 .mp-zw3d-page .z3d-hero h1.z3d-title{
   background-color:transparent!important;
   background-image:linear-gradient(105deg,#1558C0 0%,#2E82F0 52%,#00AEB5 100%)!important;
@@ -2360,21 +2360,53 @@ visual.addEventListener('pointerleave',function(){visual.classList.remove('is-po
   color:transparent!important;-webkit-text-fill-color:transparent!important
 }
 .mp-zw3d-page .z3d-hero .z3d-actions .mp-btn{
-  background:var(--cta-gradient);
-  color:#fff;border:1px solid transparent;
-  box-shadow:var(--cta-glow)
+  background:linear-gradient(110deg,#00AEB5 0%,#1689E8 48%,#174EAD 100%)!important;
+  background-image:linear-gradient(110deg,#00AEB5 0%,#1689E8 48%,#174EAD 100%)!important;
+  color:#fff!important;border:1px solid transparent!important;
+  box-shadow:0 8px 20px rgba(23,78,173,.22)!important;
+  transition:background .22s ease,background-image .22s ease,transform .22s ease,box-shadow .22s ease,filter .22s ease!important;
+  cursor:pointer
 }
-.mp-zw3d-page .z3d-hero .z3d-actions .mp-btn:hover{
-  background:linear-gradient(135deg,#1558C0 0%,#2E82F0 52%,#00999E 100%)
+.mp-zw3d-page .z3d-hero .z3d-actions .mp-btn:hover,
+.mp-zw3d-page .z3d-hero .z3d-actions .mp-btn:focus-visible{
+  background:linear-gradient(110deg,#008F98 0%,#126FCB 52%,#123F91 100%)!important;
+  background-image:linear-gradient(110deg,#008F98 0%,#126FCB 52%,#123F91 100%)!important;
+  color:#fff!important;transform:translateY(-3px)!important;
+  box-shadow:0 14px 28px rgba(23,78,173,.32)!important;
+  filter:saturate(1.12)
+}
+.mp-zw3d-page .z3d-hero .z3d-actions .mp-btn:focus-visible{
+  outline:3px solid rgba(0,174,181,.35)!important;outline-offset:3px
+}
+.mp-zw3d-page .z3d-hero .z3d-actions .mp-btn:active{
+  transform:translateY(0) scale(.98)!important;
+  box-shadow:0 4px 12px rgba(23,78,173,.22)!important
 }
 .mp-zw3d-page .z3d-hero .z3d-outline{
-  border-color:rgba(21,88,192,.2);
-  background:linear-gradient(105deg,#F8FBFF 0%,#F0F6FF 52%,#E5F3F8 100%);
-  color:#174EAD;box-shadow:0 6px 18px rgba(23,78,173,.08)
+  display:inline-flex;align-items:center;justify-content:center;
+  min-height:48px;padding:11px 18px;
+  border:1px solid rgba(21,88,192,.24)!important;border-radius:10px;
+  background:linear-gradient(105deg,#EAF3FF 0%,#DCEBFF 52%,#D9F3F0 100%)!important;
+  color:#174EAD!important;box-shadow:0 6px 18px rgba(23,78,173,.10)!important;
+  transition:background .22s ease,background-image .22s ease,color .22s ease,transform .22s ease,box-shadow .22s ease!important;
+  cursor:pointer
 }
-.mp-zw3d-page .z3d-hero .z3d-outline:hover{
-  background:linear-gradient(105deg,#EDF5FF 0%,#E4F0FF 52%,#DDF3EF 100%);
-  color:#123F91
+.mp-zw3d-page .z3d-hero .z3d-actions .z3d-outline:hover,
+.mp-zw3d-page .z3d-hero .z3d-actions .z3d-outline:focus-visible{
+  background:linear-gradient(105deg,#CFE2FF 0%,#BBD8FF 52%,#BCEAE3 100%)!important;
+  background-image:linear-gradient(105deg,#CFE2FF 0%,#BBD8FF 52%,#BCEAE3 100%)!important;
+  color:#123F91!important;transform:translateY(-3px)!important;
+  box-shadow:0 13px 26px rgba(23,78,173,.18)!important
+}
+.mp-zw3d-page .z3d-hero .z3d-actions .z3d-outline:focus-visible{
+  outline:3px solid rgba(22,137,232,.3)!important;outline-offset:3px
+}
+.mp-zw3d-page .z3d-hero .z3d-actions .z3d-outline:active{
+  transform:translateY(0) scale(.98)!important
+}
+@media(prefers-reduced-motion:reduce){
+  .mp-zw3d-page .z3d-hero .z3d-actions .mp-btn,
+  .mp-zw3d-page .z3d-hero .z3d-actions .z3d-outline{transition:none!important}
 }
 </style>
 
