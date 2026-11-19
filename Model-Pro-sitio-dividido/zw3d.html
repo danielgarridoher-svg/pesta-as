@@ -1931,5 +1931,57 @@ visual.addEventListener('pointerleave',function(){visual.classList.remove('is-po
 }
 </style>
 
+
+<style id="mp-z3d-capabilities-refinement">
+/* Funciones: seis pestañas visibles y panel con contraste legible. */
+#zw3d-capacidades .z3d-cap-layout{
+  grid-template-columns:minmax(0,1.2fr) minmax(300px,.8fr)!important;
+  gap:clamp(24px,3vw,42px)!important;
+}
+#zw3d-capacidades .z3d-tabs{
+  display:grid!important;
+  grid-template-columns:repeat(6,minmax(0,1fr))!important;
+  gap:8px!important;
+  width:100%;
+  margin-bottom:22px;
+  padding:2px 0 8px;
+  overflow:visible!important;
+}
+#zw3d-capacidades .z3d-tabs button{
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  min-width:0;
+  min-height:52px;
+  padding:8px 5px;
+  white-space:normal!important;
+  overflow-wrap:anywhere;
+  text-align:center;
+  font-size:clamp(10px,.85vw,12px);
+  line-height:1.25;
+}
+#zw3d-capacidades .z3d-panel h3{
+  color:#1558C0!important;
+  -webkit-text-fill-color:#1558C0!important;
+}
+#zw3d-capacidades .z3d-panel>p,
+#zw3d-capacidades .z3d-panel li{
+  color:#40546D!important;
+  -webkit-text-fill-color:#40546D!important;
+}
+#zw3d-capacidades .z3d-panel li i{
+  color:#0E9E8E!important;
+}
+@media(max-width:950px){
+  #zw3d-capacidades .z3d-cap-layout{grid-template-columns:1fr 1fr!important}
+  #zw3d-capacidades .z3d-tabs button{font-size:11px}
+}
+@media(max-width:700px){
+  #zw3d-capacidades .z3d-cap-layout{grid-template-columns:1fr!important}
+  #zw3d-capacidades .z3d-tabs{grid-template-columns:repeat(3,minmax(0,1fr))!important}
+  #zw3d-capacidades .z3d-tabs button{min-height:46px;font-size:12px}
+}
+</style>
+
 <script id="mp-z3d-faq-and-license-script">(function(){var page=document.querySelector('.mp-page[data-page="zw3d"]');if(!page)return;var faq=page.querySelector('#zw3d-preguntas .z3d-faq-list');if(faq){var items=[].slice.call(faq.querySelectorAll('.mp-fq'));if('IntersectionObserver'in window){var reveal=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add('is-visible');reveal.unobserve(entry.target)}})},{threshold:.12,rootMargin:'0px 0px -35px 0px'});items.forEach(function(item,index){item.style.transitionDelay=(index*110)+'ms';reveal.observe(item)})}else items.forEach(function(item){item.classList.add('is-visible')})}var cards=[].slice.call(page.querySelectorAll('#zw3d-licencias .z3d-price-card'));function selectCard(card){cards.forEach(function(item){var selected=item===card;item.classList.toggle('is-selected',selected);item.setAttribute('aria-pressed',String(selected))})}cards.forEach(function(card){card.tabIndex=0;card.setAttribute('role','button');card.setAttribute('aria-pressed','false');card.addEventListener('click',function(event){if(event.target.closest('a,button'))return;selectCard(card)});card.addEventListener('keydown',function(event){if(event.target!==card)return;if(event.key==='Enter'||event.key===' '){event.preventDefault();selectCard(card)}})})})();</script>
 </body></html>
