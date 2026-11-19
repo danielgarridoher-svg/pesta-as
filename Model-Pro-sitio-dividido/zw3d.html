@@ -1875,6 +1875,50 @@ visual.addEventListener('pointerleave',function(){visual.classList.remove('is-po
 #zw3d-produccion .z3d-production-card h3{color:#1558C0!important}
 #zw3d-produccion .z3d-production-card p{color:#40546D!important}
 
+
+/* Producción CAM: jerarquía visual, iconos destacados e interacción sutil. */
+#zw3d-produccion .z3d-step-icon{
+  margin:0 0 1px!important;
+  padding:8px;
+  box-sizing:content-box;
+  border:1px solid #D7E8FA;
+  border-radius:14px;
+  background:linear-gradient(145deg,#F1F8FF 0%,#E5F2FF 58%,#E4FAF8 100%);
+  color:#0B559A!important;
+  filter:drop-shadow(0 4px 7px rgba(21,88,192,.10));
+  transition:transform .28s ease,box-shadow .28s ease,background .28s ease;
+}
+#zw3d-produccion .z3d-production-card h3{
+  margin-top:0!important;
+  color:#0B559A!important;
+  transition:color .25s ease;
+}
+#zw3d-produccion .z3d-production-card{
+  overflow:hidden;
+  border-top:3px solid transparent!important;
+  background:
+    linear-gradient(#FFFFFF,#FFFFFF) padding-box,
+    linear-gradient(110deg,#00B8BD,#2E82F0) border-box!important;
+  transition:transform .28s ease,box-shadow .28s ease,border-color .28s ease;
+}
+#zw3d-produccion .z3d-production-card:hover{
+  transform:translateY(-7px);
+  box-shadow:0 18px 38px rgba(21,88,192,.15)!important;
+}
+#zw3d-produccion .z3d-production-card:hover .z3d-step-icon{
+  transform:translateY(-2px) scale(1.06);
+  box-shadow:0 8px 18px rgba(21,88,192,.12);
+  background:linear-gradient(145deg,#E5F8F7 0%,#E5F0FF 100%);
+}
+#zw3d-produccion .z3d-production-card:hover h3{color:#087E9A!important}
+@media(prefers-reduced-motion:reduce){
+  #zw3d-produccion .z3d-production-card,
+  #zw3d-produccion .z3d-step-icon,
+  #zw3d-produccion .z3d-production-card h3{transition:none!important}
+  #zw3d-produccion .z3d-production-card:hover,
+  #zw3d-produccion .z3d-production-card:hover .z3d-step-icon{transform:none!important}
+}
+
 /* Licencias: cuatro tarjetas arriba y tres centradas debajo, con texto más cómodo. */
 @media(min-width:1001px){
   #zw3d-licencias .z3d-pricing-grid{
