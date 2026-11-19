@@ -125,35 +125,36 @@
 @media(max-width:640px){#mp-z3d-compare .mp-zcad-category-toggle{padding:13px 12px}#mp-z3d-compare .mp-zcad-matrix th,#mp-z3d-compare .mp-zcad-matrix td{padding:11px 8px}#mp-z3d-compare .mp-zcad-matrix thead th:first-child,#mp-z3d-compare .mp-zcad-matrix tbody th{padding-left:13px}}
 @media(prefers-reduced-motion:reduce){#mp-z3d-compare *{transition:none!important;scroll-behavior:auto!important}}
 
-/* Encabezado dinámico de la matriz: conserva el ancho real de cada columna. */
+
+/* Encabezado fijo sincronizado: solo una versión visible; el original conserva el flujo. */
 #mp-z3d-compare .mp-zcad-table-scroll{position:relative}
-#mp-z3d-compare .mp-zcad-matrix thead th{
-  position:sticky;top:0;z-index:4;
-  transition:padding .24s ease,font-size .24s ease,box-shadow .24s ease,background-color .24s ease;
+#mp-z3d-compare .mp-zcad-matrix thead.mp-z3d-head-hidden{visibility:hidden}
+#mp-z3d-compare .mp-z3d-fixed-head{
+  position:fixed;top:0;left:0;z-index:30;overflow:hidden;display:none;
+  opacity:0;background:#0C1422;box-shadow:0 6px 18px rgba(5,18,36,.2);
+  pointer-events:none;transition:opacity .2s ease;
 }
-#mp-z3d-compare .mp-zcad-table-scroll.mp-z3d-sticky-head .mp-zcad-matrix thead th{
-  padding-top:7px;padding-bottom:7px;
-  font-size:10px;
-  box-shadow:0 5px 14px rgba(5,18,36,.18);
-  background:#0C1422;
+#mp-z3d-compare .mp-z3d-fixed-head.is-visible{display:block;opacity:1}
+#mp-z3d-compare .mp-z3d-fixed-head table{
+  table-layout:fixed;border-collapse:collapse;margin:0;background:#0C1422;
 }
-#mp-z3d-compare .mp-zcad-table-scroll.mp-z3d-sticky-head .mp-zcad-matrix thead th b{
-  margin-top:3px;font-size:9px;transition:font-size .24s ease,margin .24s ease;
+#mp-z3d-compare .mp-z3d-fixed-head th{
+  box-sizing:border-box;padding:7px 10px!important;background:#0C1422!important;color:#F4F6F9!important;
+  font-size:10px!important;line-height:1.25!important;box-shadow:none!important;
+  transition:padding .22s ease,font-size .22s ease;
 }
-#mp-z3d-compare .mp-zcad-table-scroll.mp-z3d-sticky-head .mp-zcad-matrix thead th:first-child{
-  padding-left:20px;
+#mp-z3d-compare .mp-z3d-fixed-head th b{
+  display:block;margin-top:3px!important;color:#00B8BD!important;font-size:9px!important;
+  transition:font-size .22s ease,margin .22s ease;
 }
 @media(max-width:640px){
-  #mp-z3d-compare .mp-zcad-matrix thead th{top:0}
-  #mp-z3d-compare .mp-zcad-table-scroll.mp-z3d-sticky-head .mp-zcad-matrix thead th{
-    padding:7px 6px;font-size:9px;line-height:1.25;
-  }
-  #mp-z3d-compare .mp-zcad-table-scroll.mp-z3d-sticky-head .mp-zcad-matrix thead th b{font-size:8px}
-  #mp-z3d-compare .mp-zcad-table-scroll.mp-z3d-sticky-head .mp-zcad-matrix thead th:first-child{padding-left:10px}
+  #mp-z3d-compare .mp-z3d-fixed-head th{padding:7px 6px!important;font-size:9px!important}
+  #mp-z3d-compare .mp-z3d-fixed-head th b{font-size:8px!important}
 }
 @media(prefers-reduced-motion:reduce){
-  #mp-z3d-compare .mp-zcad-matrix thead th,
-  #mp-z3d-compare .mp-zcad-matrix thead th b{transition:none!important}
+  #mp-z3d-compare .mp-z3d-fixed-head,
+  #mp-z3d-compare .mp-z3d-fixed-head th,
+  #mp-z3d-compare .mp-z3d-fixed-head th b{transition:none!important}
 }
 </style>
 </head><body>
@@ -1220,40 +1221,49 @@ a.mp-card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(11,20,34,.
     });
   }
 
-  /* Detecta el cruce del encabezado con el borde superior y activa su estado compacto.
-     Se usa el thead existente: no se clona ni se duplica el encabezado. */
+
+  /* Encabezado dinámico: el original conserva el espacio; la capa fija es su única
+     representación visible durante el recorrido. Sus anchos se miden del thead real. */
   var tableScroll = root.querySelector('.mp-zcad-table-scroll');
   var table = tableScroll && tableScroll.querySelector('.mp-zcad-matrix');
   var tableHead = table && table.querySelector('thead');
+  if (tableScroll && table && tableHead) {
+    var fixedHead = document.createElement('div');
+    fixedHead.className = 'mp-z3d-fixed-head';
+    fixedHead.setAttribute('aria-hidden', 'true');
+    var fixedTable = document.createElement('table');
+    fixedTable.className = table.className;
+    var fixedThead = tableHead.cloneNode(true);
+    fixedTable.appendChild(fixedThead);
+    fixedHead.appendChild(fixedTable);
+    root.appendChild(fixedHead);
 
-  if (tableScroll && table && tableHead && 'IntersectionObserver' in window) {
-    var sentinel = document.createElement('span');
-    sentinel.className = 'mp-z3d-sticky-sentinel';
-    sentinel.setAttribute('aria-hidden', 'true');
-    sentinel.style.cssText = 'display:block;width:1px;height:1px;pointer-events:none;';
-    tableScroll.parentNode.insertBefore(sentinel, tableScroll);
-
-    var stickyObserver = new IntersectionObserver(function () {
-      var scrollRect = tableScroll.getBoundingClientRect();
+    var headCells = Array.prototype.slice.call(tableHead.querySelectorAll('th'));
+    var fixedCells = Array.prototype.slice.call(fixedThead.querySelectorAll('th'));
+    function syncFixedHead() {
+      var rect = tableScroll.getBoundingClientRect();
+      var tableWidth = table.offsetWidth;
+      fixedHead.style.left = rect.left + 'px';
+      fixedHead.style.width = tableScroll.clientWidth + 'px';
+      fixedTable.style.width = tableWidth + 'px';
+      fixedTable.style.transform = 'translateX(' + (-tableScroll.scrollLeft) + 'px)';
+      headCells.forEach(function (cell, index) {
+        if (fixedCells[index]) fixedCells[index].style.width = cell.getBoundingClientRect().width + 'px';
+      });
       var headHeight = tableHead.getBoundingClientRect().height;
-      var pastTop = sentinel.getBoundingClientRect().top < 0;
-      var tableStillVisible = scrollRect.bottom > headHeight;
-      tableScroll.classList.toggle('mp-z3d-sticky-head', pastTop && tableStillVisible);
-    }, { root: null, threshold: 0 });
-
-    stickyObserver.observe(sentinel);
-    window.addEventListener('scroll', function () {
-      var scrollRect = tableScroll.getBoundingClientRect();
-      var headHeight = tableHead.getBoundingClientRect().height;
-      var pastTop = sentinel.getBoundingClientRect().top < 0;
-      tableScroll.classList.toggle('mp-z3d-sticky-head', pastTop && scrollRect.bottom > headHeight);
-    }, { passive: true });
-    window.addEventListener('resize', function () {
-      var scrollRect = tableScroll.getBoundingClientRect();
-      var headHeight = tableHead.getBoundingClientRect().height;
-      var pastTop = sentinel.getBoundingClientRect().top < 0;
-      tableScroll.classList.toggle('mp-z3d-sticky-head', pastTop && scrollRect.bottom > headHeight);
-    });
+      var active = rect.top < 0 && rect.bottom > headHeight;
+      fixedHead.classList.toggle('is-visible', active);
+      tableHead.classList.toggle('mp-z3d-head-hidden', active);
+    }
+    window.addEventListener('scroll', syncFixedHead, { passive: true });
+    window.addEventListener('resize', syncFixedHead);
+    tableScroll.addEventListener('scroll', syncFixedHead, { passive: true });
+    if ('ResizeObserver' in window) {
+      var tableResizeObserver = new ResizeObserver(syncFixedHead);
+      tableResizeObserver.observe(table);
+      tableResizeObserver.observe(tableScroll);
+    }
+    syncFixedHead();
   }
 
 })();
