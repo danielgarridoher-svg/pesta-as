@@ -1,168 +1,3 @@
-<!doctype html><html><head><meta charset=utf8><meta name=viewport content="width=device-width,initial-scale=1,viewport-fit=cover"><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}/* ZW3D: menú lateral de vidrio, compartiendo el patrón de navegación ZWCAD. */
-.mp-zw3d-page .z3d-floating-nav{position:fixed;z-index:130;left:12px;right:auto;bottom:calc(16px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;align-items:flex-start;gap:10px;width:min(290px,calc(100vw - 24px));pointer-events:none;opacity:0;visibility:hidden;transform:translateX(-12px);transition:opacity .24s ease,transform .24s ease,visibility .24s}
-.mp-zw3d-page .z3d-floating-nav.is-visible{opacity:1;visibility:visible;transform:translateX(0)}
-.mp-zw3d-page .z3d-floating-nav .z3d-menu-toggle,.mp-zw3d-page .z3d-floating-nav .z3d-nav-panel{pointer-events:auto}
-.mp-zw3d-page .z3d-menu-toggle{display:flex;align-items:center;gap:10px;min-height:58px;padding:7px 14px 7px 8px;border:1px solid rgba(255,255,255,.88);border-radius:999px;background:rgba(248,252,255,.94);box-shadow:0 12px 32px rgba(10,37,71,.27),0 0 0 1px rgba(46,117,184,.18);backdrop-filter:blur(18px) saturate(145%);-webkit-backdrop-filter:blur(18px) saturate(145%);color:#173A61;font:inherit;text-align:left;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s}
-.mp-zw3d-page .z3d-menu-toggle:hover,.mp-zw3d-page .z3d-menu-toggle:focus-visible{transform:translateY(-2px);box-shadow:0 15px 35px rgba(10,37,71,.3),0 0 0 2px rgba(34,131,209,.22);outline:none}
-.mp-zw3d-page .z3d-menu-toggle img{flex:0 0 auto;width:42px;height:42px;padding:3px;border:1px solid rgba(79,145,205,.16);border-radius:50%;background:linear-gradient(145deg,#E3F2FF,#FFF);object-fit:contain}
-.mp-zw3d-page .z3d-menu-toggle>span{display:grid;gap:1px;min-width:0}.mp-zw3d-page .z3d-menu-toggle b{font-size:12px;font-weight:800;line-height:1.1}.mp-zw3d-page .z3d-menu-toggle small{max-width:150px;overflow:hidden;color:#4C6784;font-size:11px;text-overflow:ellipsis;white-space:nowrap}.mp-zw3d-page .z3d-menu-toggle>svg{width:18px;height:18px;margin-left:5px;color:#0877D8;transition:transform .2s}.mp-zw3d-page .z3d-floating-nav.is-open .z3d-menu-toggle>svg{transform:rotate(180deg)}
-.mp-zw3d-page .z3d-nav-panel{display:flex;flex-direction:column;gap:4px;width:100%;max-height:min(68vh,590px);overflow-y:auto;padding:12px;border:1px solid rgba(255,255,255,.84);border-radius:20px;background:rgba(247,251,255,.91);box-shadow:0 18px 48px rgba(10,37,71,.29),0 0 0 1px rgba(54,126,188,.16);backdrop-filter:blur(20px) saturate(150%);-webkit-backdrop-filter:blur(20px) saturate(150%);scrollbar-width:thin;scrollbar-color:#9bbbd9 transparent;animation:z3d-menu-in .18s ease-out}
-.mp-zw3d-page .z3d-nav-panel[hidden]{display:none!important}.mp-zw3d-page .z3d-nav-panel>p{margin:2px 8px 7px;color:#65809A;font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
-.mp-zw3d-page .z3d-nav-panel a{display:flex;align-items:center;min-height:38px;padding:9px 11px;border:1px solid transparent;border-radius:10px;background:transparent;color:#294967;font-size:13px;font-weight:650;line-height:1.25;text-decoration:none;transition:color .18s,background .18s,border-color .18s,transform .18s}
-.mp-zw3d-page .z3d-nav-panel a:hover,.mp-zw3d-page .z3d-nav-panel a:focus-visible{border-color:rgba(50,133,207,.22);background:rgba(230,243,255,.92);color:#075EA8;outline:none}
-.mp-zw3d-page .z3d-nav-panel a[aria-current="location"]{border-color:rgba(43,136,210,.24);background:linear-gradient(100deg,rgba(220,239,255,.98),rgba(231,250,248,.98));box-shadow:inset 3px 0 #1689E8;color:#075EA8;font-weight:800}
-.mp-zw3d-page .z3d-nav-panel a.z3d-nav-cta{justify-content:center;margin-top:6px;border-color:transparent;border-radius:999px;background:linear-gradient(105deg,#174EAD,#1689E8);box-shadow:0 6px 16px rgba(23,78,173,.22);color:#fff}
-.mp-zw3d-page .z3d-nav-panel a.z3d-nav-cta:hover,.mp-zw3d-page .z3d-nav-panel a.z3d-nav-cta:focus-visible{background:linear-gradient(105deg,#123F91,#0879D7);color:#fff}
-@keyframes z3d-menu-in{from{opacity:0;transform:translateY(8px) scale(.985)}to{opacity:1;transform:translateY(0) scale(1)}}
-@media(min-width:1800px){.mp-zw3d-page .z3d-floating-nav.is-wide-dock{top:50%;bottom:auto;left:max(12px,calc((100vw - 1280px)/2 - 260px));width:240px;transform:translateY(-50%)}.mp-zw3d-page .z3d-floating-nav.is-wide-dock.is-visible{transform:translateY(-50%)}}
-@media(max-width:800px){.mp-zw3d-page .z3d-floating-nav{left:10px;right:auto;bottom:calc(10px + env(safe-area-inset-bottom,0px));width:min(280px,calc(100vw - 20px))}.mp-zw3d-page .z3d-nav-panel{max-height:72vh;padding:10px}.mp-zw3d-page .z3d-menu-toggle{min-height:54px}}
-@media(prefers-reduced-motion:reduce){.mp-zw3d-page .z3d-floating-nav,.mp-zw3d-page .z3d-menu-toggle,.mp-zw3d-page .z3d-menu-toggle>svg{transition:none}.mp-zw3d-page .z3d-nav-panel{animation:none}}</style>
-<style id="mp-z3d-licensing-base">
-.mp-zwcad-pricing{--zwcad-blue:#0878e8;--zwcad-blue-dark:#075fc0;--zwcad-text:#202b3b;--zwcad-muted:#6d7888;--zwcad-border:#e4eaf1;--zwcad-background:#f6f9fc;position:relative;width:100%;padding:105px 24px;background:var(--zwcad-background);font-family:inherit;overflow:hidden}
-.mp-zwcad-pricing *{box-sizing:border-box}
-.mp-zwcad-pricing .zwcad-pricing-container{width:100%;max-width:1240px;margin:0 auto}
-.mp-zwcad-pricing .zwcad-pricing-header{max-width:760px;margin:0 auto 55px;text-align:center}
-.mp-zwcad-pricing .zwcad-pricing-eyebrow{display:inline-block;margin-bottom:17px;color:var(--zwcad-blue);font-size:12px;font-weight:800;letter-spacing:2px}
-.mp-zwcad-pricing .zwcad-pricing-header h2{margin:0;color:var(--zwcad-text);font-size:clamp(32px,4vw,48px);font-weight:750;line-height:1.13;letter-spacing:-1.5px}
-.mp-zwcad-pricing .zwcad-pricing-header h2 span{display:block;color:var(--zwcad-blue)}
-.mp-zwcad-pricing .zwcad-pricing-header>p{max-width:590px;margin:18px auto 30px;color:var(--zwcad-muted);font-size:16px;line-height:1.7}
-.mp-zwcad-pricing .zwcad-license-switch{display:inline-flex;gap:7px;padding:6px;background:#e9eff6;border:1px solid #e1e8f0;border-radius:15px}
-.mp-zwcad-pricing .zwcad-switch-option{position:relative;min-width:170px;padding:13px 20px;display:flex;flex-direction:column;align-items:center;gap:4px;border:1px solid transparent;border-radius:11px;background:transparent;color:#526174;font-family:inherit;font-size:14px;font-weight:750;cursor:pointer;transition:all .25s ease}
-.mp-zwcad-pricing .zwcad-switch-option small{color:#8995a4;font-size:11px;font-weight:500}
-.mp-zwcad-pricing .zwcad-switch-icon{font-size:18px}
-.mp-zwcad-pricing .zwcad-switch-option.active{color:var(--zwcad-blue);background:#fff;border-color:#dce8f5;box-shadow:0 3px 12px rgba(24,55,90,.08)}
-.mp-zwcad-pricing .zwcad-switch-option.active small{color:#73849a}
-.mp-zwcad-pricing .zwcad-license-description{margin-top:15px;color:#758194;font-size:13px}
-.mp-zwcad-pricing .zwcad-pricing-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch;gap:22px}
-.mp-zwcad-pricing .zwcad-price-card{position:relative;display:flex;flex-direction:column;min-width:0;padding:32px 28px 27px;background:#fff;border:1px solid var(--zwcad-border);border-radius:18px;box-shadow:0 8px 30px rgba(28,52,80,.045);transition:transform .3s ease,box-shadow .3s ease}
-.mp-zwcad-pricing .zwcad-price-card:hover{transform:translateY(-6px);box-shadow:0 18px 42px rgba(28,52,80,.10)}
-.mp-zwcad-pricing .zwcad-price-featured{border:2px solid var(--zwcad-blue);box-shadow:0 12px 35px rgba(8,120,232,.10)}
-.mp-zwcad-pricing .zwcad-popular-tag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);padding:7px 17px;color:#fff;background:var(--zwcad-blue);border-radius:30px;font-size:10px;font-weight:800;letter-spacing:1px;white-space:nowrap}
-.mp-zwcad-pricing .zwcad-edition-label{display:inline-block;margin-bottom:13px;padding:6px 10px;color:var(--zwcad-blue);background:#edf6ff;border-radius:5px;font-size:10px;font-weight:800;letter-spacing:1px}
-.mp-zwcad-pricing .zwcad-card-top h3{margin:0 0 11px;color:var(--zwcad-text);font-size:23px;font-weight:750;letter-spacing:-.5px}
-.mp-zwcad-pricing .zwcad-card-description{min-height:55px;margin:0;color:var(--zwcad-muted);font-size:13px;line-height:1.65}
-.mp-zwcad-pricing .zwcad-price-area{margin-top:27px}
-.mp-zwcad-pricing .zwcad-price-label{display:block;margin-bottom:8px;color:#8591a0;font-size:11px;font-weight:650;text-transform:uppercase;letter-spacing:.8px}
-.mp-zwcad-pricing .zwcad-price{display:flex;align-items:baseline;gap:3px;color:var(--zwcad-text)}
-.mp-zwcad-pricing .zwcad-currency{font-size:23px;font-weight:650}
-.mp-zwcad-pricing .zwcad-price strong{font-size:clamp(30px,3vw,38px);font-weight:800;letter-spacing:-1.5px;line-height:1;transition:opacity .15s ease,transform .15s ease}
-.mp-zwcad-pricing .zwcad-currency-code{margin-left:5px;color:#778496;font-size:12px;font-weight:700}
-.mp-zwcad-pricing .zwcad-price-tax{display:block;margin-top:8px;color:#8490a0;font-size:12px}
-.mp-zwcad-pricing .zwcad-card-divider{width:100%;height:1px;margin:25px 0 20px;background:var(--zwcad-border)}
-.mp-zwcad-pricing .zwcad-feature-list{display:flex;flex-direction:column;gap:14px;margin:0 0 30px;padding:0;list-style:none}
-.mp-zwcad-pricing .zwcad-feature-list li{display:flex;align-items:flex-start;gap:10px;color:#526174;font-size:13px;line-height:1.5}
-.mp-zwcad-pricing .zwcad-feature-list li span{flex-shrink:0;color:var(--zwcad-blue);font-size:15px;font-weight:800}
-.mp-zwcad-pricing .zwcad-card-actions{display:flex;flex-direction:column;gap:11px;margin-top:auto}
-.mp-zwcad-pricing .zwcad-btn-primary,.mp-zwcad-pricing .zwcad-btn-secondary{display:flex;justify-content:center;align-items:center;gap:10px;width:100%;min-height:47px;padding:12px 17px;border-radius:8px;text-align:center;text-decoration:none!important;font-family:inherit;font-size:13px;font-weight:750;transition:all .25s ease}
-.mp-zwcad-pricing .zwcad-btn-primary{color:#fff!important;background:var(--zwcad-blue);border:1px solid var(--zwcad-blue)}
-.mp-zwcad-pricing .zwcad-btn-primary:hover{color:#fff!important;background:var(--zwcad-blue-dark);border-color:var(--zwcad-blue-dark);transform:translateY(-2px)}
-.mp-zwcad-pricing .zwcad-btn-primary span{font-size:17px;transition:transform .2s ease}
-.mp-zwcad-pricing .zwcad-btn-primary:hover span{transform:translateX(4px)}
-.mp-zwcad-pricing .zwcad-btn-secondary{color:#526174!important;background:#fff;border:1px solid #dfe6ee}
-.mp-zwcad-pricing .zwcad-btn-secondary:hover{color:var(--zwcad-blue)!important;background:#f5faff;border-color:#b8d8f8}
-.mp-zwcad-pricing .zwcad-pricing-notes{display:flex;align-items:flex-start;gap:14px;max-width:850px;margin:35px auto 0;padding:19px 22px;background:#edf4fb;border:1px solid #e0eaf5;border-radius:11px}
-.mp-zwcad-pricing .zwcad-note-icon{display:flex;flex-shrink:0;justify-content:center;align-items:center;width:22px;height:22px;color:#fff;background:var(--zwcad-blue);border-radius:50%;font-size:13px;font-weight:800}
-.mp-zwcad-pricing .zwcad-pricing-notes strong{display:block;margin-bottom:5px;color:var(--zwcad-text);font-size:12px}
-.mp-zwcad-pricing .zwcad-pricing-notes p{margin:0;color:#6e7c8e;font-size:12px;line-height:1.65}
-.mp-zwcad-pricing .zwcad-price strong.price-changing{opacity:0;transform:translateY(5px)}
-@media(max-width:1000px){.mp-zwcad-pricing .zwcad-pricing-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.mp-zwcad-pricing .zwcad-price-featured{order:-1}}
-@media(max-width:650px){.mp-zwcad-pricing{padding:70px 17px}.mp-zwcad-pricing .zwcad-pricing-header{margin-bottom:40px}.mp-zwcad-pricing .zwcad-pricing-header h2{font-size:34px}.mp-zwcad-pricing .zwcad-pricing-header>p{font-size:14px}.mp-zwcad-pricing .zwcad-license-switch{display:flex;width:100%}.mp-zwcad-pricing .zwcad-switch-option{min-width:0;flex:1;padding:12px 8px}.mp-zwcad-pricing .zwcad-pricing-grid{grid-template-columns:1fr;gap:25px}.mp-zwcad-pricing .zwcad-price-featured{order:initial}.mp-zwcad-pricing .zwcad-price-card{padding:29px 23px 24px}.mp-zwcad-pricing .zwcad-card-description{min-height:auto}.mp-zwcad-pricing .zwcad-price strong{font-size:37px}.mp-zwcad-pricing .zwcad-pricing-notes{padding:16px}}
-@media(prefers-reduced-motion:reduce){.mp-zwcad-pricing *,.mp-zwcad-pricing *:before,.mp-zwcad-pricing *:after{transition-duration:.01ms!important}}
-</style>
-<style id="mp-z3d-licensing-design">
-/* Tarjetas ZW3D: reutilizan el sistema visual de licencias ZWCAD, sin precios ni selector de modalidad. */
-#zw3d-licencias.mp-zwcad-pricing{padding:68px 24px;background:linear-gradient(110deg,#F8FBFF 0%,#F1F7FF 58%,#EAF4FF 100%);color:#172B45}
-#zw3d-licencias .zwcad-pricing-header{max-width:820px;margin:0 auto 28px;text-align:left}
-#zw3d-licencias .zwcad-pricing-eyebrow{display:block;width:100%;margin:0 0 10px;text-align:left;color:#0B559A;font-weight:800;letter-spacing:.14em}
-#zw3d-licencias .zwcad-pricing-header h2{display:block;width:100%;margin:0;text-align:left;color:#172B45;font-size:clamp(27px,3.4vw,38px);letter-spacing:-.03em}
-#zw3d-licencias .zwcad-pricing-header h2 .z3d-license-highlight{display:inline;background:linear-gradient(100deg,#1e96de 0%,#00b7be 100%);background-clip:text;-webkit-background-clip:text;color:transparent;-webkit-text-fill-color:transparent;font-weight:800}
-#zw3d-porque .z3d-section-title-highlight,#zw3d-produccion .z3d-section-title-highlight,#zw3d-versiones .z3d-section-title-highlight,#zw3d-preguntas .z3d-section-title-highlight{display:inline;background:linear-gradient(100deg,#1e96de 0%,#00b7be 100%);background-clip:text;-webkit-background-clip:text;color:transparent;-webkit-text-fill-color:transparent;font-weight:800}
-#zw3d-porque #zw3d-why-title,#zw3d-produccion #zw3d-production-title,#zw3d-versiones #zw3d-compare-title,#zw3d-preguntas #zw3d-faq-title{color:#172b45!important;-webkit-text-fill-color:#172b45!important}
-#zw3d-licencias .zwcad-pricing-header>p{display:block;width:100%;max-width:760px;margin:15px 0 0;text-align:left;color:#607087}
-#zw3d-licencias .z3d-pricing-grid{grid-template-columns:repeat(3,minmax(0,1fr));column-gap:20px;row-gap:14px}
-#zw3d-licencias .z3d-price-card{padding:28px 25px 24px}
-#zw3d-licencias .z3d-price-card .zwcad-card-divider{margin:20px 0 18px}
-#zw3d-licencias .z3d-price-card .zwcad-feature-list{gap:11px;margin-bottom:26px}
-#zw3d-licencias .z3d-price-card .zwcad-card-description{min-height:42px}
-#zw3d-licencias .z3d-price-card .zwcad-feature-list li{font-size:12px}
-@media(max-width:1000px){#zw3d-licencias .z3d-pricing-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:650px){#zw3d-licencias.mp-zwcad-pricing{padding:65px 17px}#zw3d-licencias .z3d-pricing-grid{grid-template-columns:1fr}}
-</style>
-
-<style id="mp-z3d-comparison-design">
-/* Matriz ZW3D: misma paleta, jerarquía y comportamiento desplegable que la comparación ZWCAD. */
-#zw3d-versiones.z3d-comparison-section{background:#0C1422!important;color:#F4F6F9!important}
-#zw3d-versiones .mp-ey{display:block;width:auto;max-width:100%;padding:0;border:0;border-radius:0;background:transparent;color:#0B559A!important;-webkit-text-fill-color:#0B559A!important;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
-#zw3d-versiones .z3d-comparison-title{background:linear-gradient(100deg,#00B7BE 0%,#1E96DE 100%);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-size:clamp(22px,3.2vw,32px);font-weight:700;letter-spacing:-.02em}
-#mp-z3d-compare{--cmp-blue:var(--brand-blue);--cmp-ink:var(--foreground);--cmp-muted:var(--muted-foreground);color:var(--cmp-ink)}
-#mp-z3d-compare .mp-zcad-intro{max-width:850px;color:#C1CDDC;line-height:1.7;margin:0 0 26px}
-#mp-z3d-compare .mp-zcad-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:24px 0 14px}
-#mp-z3d-compare .mp-zcad-actions{display:flex;gap:8px;flex-wrap:wrap}
-#mp-z3d-compare .mp-zcad-actions button{border:1px solid rgba(0,184,189,.28);background:#14243B;color:#EAF3FF;border-radius:999px;padding:10px 16px;font:600 13px inherit;cursor:pointer;transition:.2s}
-#mp-z3d-compare .mp-zcad-actions button:hover{border-color:#00B8BD;background:#1B3453;color:#fff;transform:translateY(-1px)}
-#mp-z3d-compare .mp-zcad-legend{display:flex;gap:16px;flex-wrap:wrap;color:#D4DFEC;font-size:12px}
-#mp-z3d-compare .mp-zcad-legend span{display:inline-flex;align-items:center;gap:6px}
-#mp-z3d-compare .mp-zcad-legend b:not(.mp-zcad-unavailable-mark){display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;background:rgba(0,184,189,.15);color:#00B8BD}
-#mp-z3d-compare .mp-zcad-legend .mp-zcad-unavailable-mark{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;background:rgba(255,255,255,.09);color:#AAB8C9}
-#mp-z3d-compare .mp-zcad-legend .mp-z3d-limited{display:inline-flex;align-items:center;justify-content:center;width:auto!important;min-width:0;height:auto!important;padding:4px 7px;border-radius:999px;background:#FFF1D8;color:#A96500;font-size:10px;font-weight:800;line-height:1.2;white-space:nowrap}
-#mp-z3d-compare .mp-zcad-legend .mp-z3d-limited-marker{display:inline-block;flex:0 0 20px;width:20px;height:20px;padding:0;border:2px solid #D99A24;border-radius:50%;background:#FFF1D8!important;color:transparent!important;-webkit-text-fill-color:transparent!important}
-#mp-z3d-compare .mp-zcad-table-scroll{overflow-x:auto;border:1px solid rgba(46,130,240,.24);border-radius:16px;background:#fff;box-shadow:0 12px 30px rgba(0,0,0,.2)}
-#mp-z3d-compare .mp-zcad-matrix{width:100%;border-collapse:collapse;min-width:1260px;font-size:12px;background:#fff}
-#mp-z3d-compare .mp-zcad-matrix th,#mp-z3d-compare .mp-zcad-matrix td{padding:12px 10px;border-bottom:1px solid #DCE7F4;text-align:center}
-#mp-z3d-compare .mp-zcad-matrix thead th{background:#0E1B33;color:#F4F6F9;font-size:11px;font-weight:700;line-height:1.4;vertical-align:middle}
-#mp-z3d-compare .mp-zcad-matrix thead th:first-child{text-align:left;width:30%;min-width:280px;padding-left:20px}
-#mp-z3d-compare .mp-zcad-matrix thead th b{display:block;margin-top:5px;color:#00B8BD;font-size:10px;font-weight:650}
-#mp-z3d-compare .mp-zcad-category-row th{padding:0!important;border-bottom:1px solid #C9DDF2}
-#mp-z3d-compare .mp-zcad-category-toggle{width:100%;display:flex;align-items:center;gap:12px;padding:14px 18px;border:0;background:#EAF3FC;color:#0E1B33;font:750 13px inherit;text-align:left;cursor:pointer}
-#mp-z3d-compare .mp-zcad-category-toggle:hover{background:#DCEBFA}
-#mp-z3d-compare .mp-zcad-category-toggle small{margin-left:auto;color:#607087;font-size:11px;font-weight:600}
-#mp-z3d-compare .mp-zcad-category-chevron{width:8px;height:8px;flex:0 0 8px;border-right:2px solid #1558C0;border-bottom:2px solid #1558C0;transform:rotate(-45deg);transition:transform .2s}
-#mp-z3d-compare .mp-zcad-category-toggle[aria-expanded="true"] .mp-zcad-category-chevron{transform:rotate(45deg)}
-#mp-z3d-compare .mp-zcad-feature-row th{font-weight:550;text-align:left;color:#172B45;padding-left:20px}
-#mp-z3d-compare .mp-zcad-feature-row:nth-child(odd) td,#mp-z3d-compare .mp-zcad-feature-row:nth-child(odd) th{background:#F7FAFE}
-#mp-z3d-compare .mp-zcad-feature-row:hover th,#mp-z3d-compare .mp-zcad-feature-row:hover td{background:#EAF4FF}
-#mp-z3d-compare .mp-zcad-matrix td[data-state=yes] .mp-zcad-state{display:inline-grid;place-items:center;width:23px;height:23px;border-radius:50%;background:#D9F5EF;color:#0E9E8E;font-weight:800;font-size:14px}
-#mp-z3d-compare .mp-zcad-matrix td[data-state=no] .mp-zcad-state{color:#AAB5C3;font-size:18px}
-#mp-z3d-compare .mp-z3d-limited{display:inline-block;padding:4px 7px;border-radius:999px;background:#FFF1D8;color:#A96500;font-size:10px;font-weight:800;white-space:nowrap}
-#mp-z3d-compare .mp-zcad-matrix td[data-state=limited]{white-space:nowrap}
-#mp-z3d-compare .mp-zcad-footnote{font-size:12px;line-height:1.65;color:#C1CDDC;margin:16px 0 0}
-#mp-z3d-compare .mp-zcad-feature-row[hidden]{display:none!important}
-@media(max-width:640px){#mp-z3d-compare .mp-zcad-category-toggle{padding:13px 12px}#mp-z3d-compare .mp-zcad-matrix th,#mp-z3d-compare .mp-zcad-matrix td{padding:11px 8px}#mp-z3d-compare .mp-zcad-matrix thead th:first-child,#mp-z3d-compare .mp-zcad-matrix tbody th{padding-left:13px}}
-@media(prefers-reduced-motion:reduce){#mp-z3d-compare *{transition:none!important;scroll-behavior:auto!important}}
-
-
-/* Encabezado fijo sincronizado: solo una versión visible; el original conserva el flujo. */
-#mp-z3d-compare .mp-zcad-table-scroll{position:relative}
-#mp-z3d-compare .mp-zcad-matrix thead.mp-z3d-head-hidden{visibility:hidden}
-#mp-z3d-compare .mp-z3d-fixed-head{
-  position:fixed;top:0;left:0;z-index:30;overflow:hidden;visibility:hidden;
-  opacity:0;background:#0C1422;box-shadow:0 6px 18px rgba(5,18,36,.2);
-  pointer-events:none;transition:opacity .2s ease,visibility .2s ease;
-}
-#mp-z3d-compare .mp-z3d-fixed-head.is-visible{visibility:visible;opacity:1}
-#mp-z3d-compare .mp-z3d-fixed-head table{
-  table-layout:fixed;border-collapse:collapse;margin:0;background:#0C1422;
-}
-#mp-z3d-compare .mp-z3d-fixed-head th{
-  box-sizing:border-box;padding:7px 10px!important;background:#0C1422!important;color:#F4F6F9!important;
-  font-size:10px!important;line-height:1.25!important;box-shadow:none!important;
-  transition:padding .22s ease,font-size .22s ease;
-}
-#mp-z3d-compare .mp-z3d-fixed-head th b{
-  display:block;margin-top:3px!important;color:#00B8BD!important;font-size:9px!important;
-  transition:font-size .22s ease,margin .22s ease;
-}
-@media(max-width:640px){
-  #mp-z3d-compare .mp-z3d-fixed-head th{padding:7px 6px!important;font-size:9px!important}
-  #mp-z3d-compare .mp-z3d-fixed-head th b{font-size:8px!important}
-}
-@media(prefers-reduced-motion:reduce){
-  #mp-z3d-compare .mp-z3d-fixed-head,
-  #mp-z3d-compare .mp-z3d-fixed-head th,
-  #mp-z3d-compare .mp-z3d-fixed-head th b{transition:none!important}
-}
-</style>
-</head><body>
 <!DOCTYPE html>
 <html lang="es"><head>
 <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
@@ -918,7 +753,170 @@ a.mp-card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(11,20,34,.
 .mp-verstable td.col-reco{background:rgba(21,88,192,.05)}
 .mp-vers-note{margin-top:12px;font-size:12px;color:#64748B}
 
-.mp-vt-tag{display:block;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-top:3px;opacity:.92}.z3d-compare-note{margin-top:18px;font-size:14px;line-height:1.55;opacity:.78}.z3d-whatis-grid .mp-card i{font-size:26px;color:#42E6D0;margin-bottom:6px;display:block}.z3d-case i{font-size:26px;color:#1689E8;margin-bottom:6px;display:block}</style></head>
+.mp-vt-tag{display:block;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;margin-top:3px;opacity:.92}.z3d-compare-note{margin-top:18px;font-size:14px;line-height:1.55;opacity:.78}.z3d-whatis-grid .mp-card i{font-size:26px;color:#42E6D0;margin-bottom:6px;display:block}.z3d-case i{font-size:26px;color:#1689E8;margin-bottom:6px;display:block}</style><style>:root{color-scheme:light;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}html{scroll-padding-top:env(safe-area-inset-top,0px)}body{margin:0;padding:0;font:14px -apple-system,BlinkMacSystemFont,sans-serif;background:#fff;color:#000}img{max-width:100%}[hidden]:not([hidden=until-found i]){display:none!important}/* ZW3D: menú lateral de vidrio, compartiendo el patrón de navegación ZWCAD. */
+.mp-zw3d-page .z3d-floating-nav{position:fixed;z-index:130;left:12px;right:auto;bottom:calc(16px + env(safe-area-inset-bottom,0px));display:flex;flex-direction:column;align-items:flex-start;gap:10px;width:min(290px,calc(100vw - 24px));pointer-events:none;opacity:0;visibility:hidden;transform:translateX(-12px);transition:opacity .24s ease,transform .24s ease,visibility .24s}
+.mp-zw3d-page .z3d-floating-nav.is-visible{opacity:1;visibility:visible;transform:translateX(0)}
+.mp-zw3d-page .z3d-floating-nav .z3d-menu-toggle,.mp-zw3d-page .z3d-floating-nav .z3d-nav-panel{pointer-events:auto}
+.mp-zw3d-page .z3d-menu-toggle{display:flex;align-items:center;gap:10px;min-height:58px;padding:7px 14px 7px 8px;border:1px solid rgba(255,255,255,.88);border-radius:999px;background:rgba(248,252,255,.94);box-shadow:0 12px 32px rgba(10,37,71,.27),0 0 0 1px rgba(46,117,184,.18);backdrop-filter:blur(18px) saturate(145%);-webkit-backdrop-filter:blur(18px) saturate(145%);color:#173A61;font:inherit;text-align:left;cursor:pointer;transition:transform .2s,box-shadow .2s,background .2s}
+.mp-zw3d-page .z3d-menu-toggle:hover,.mp-zw3d-page .z3d-menu-toggle:focus-visible{transform:translateY(-2px);box-shadow:0 15px 35px rgba(10,37,71,.3),0 0 0 2px rgba(34,131,209,.22);outline:none}
+.mp-zw3d-page .z3d-menu-toggle img{flex:0 0 auto;width:42px;height:42px;padding:3px;border:1px solid rgba(79,145,205,.16);border-radius:50%;background:linear-gradient(145deg,#E3F2FF,#FFF);object-fit:contain}
+.mp-zw3d-page .z3d-menu-toggle>span{display:grid;gap:1px;min-width:0}.mp-zw3d-page .z3d-menu-toggle b{font-size:12px;font-weight:800;line-height:1.1}.mp-zw3d-page .z3d-menu-toggle small{max-width:150px;overflow:hidden;color:#4C6784;font-size:11px;text-overflow:ellipsis;white-space:nowrap}.mp-zw3d-page .z3d-menu-toggle>svg{width:18px;height:18px;margin-left:5px;color:#0877D8;transition:transform .2s}.mp-zw3d-page .z3d-floating-nav.is-open .z3d-menu-toggle>svg{transform:rotate(180deg)}
+.mp-zw3d-page .z3d-nav-panel{display:flex;flex-direction:column;gap:4px;width:100%;max-height:min(68vh,590px);overflow-y:auto;padding:12px;border:1px solid rgba(255,255,255,.84);border-radius:20px;background:rgba(247,251,255,.91);box-shadow:0 18px 48px rgba(10,37,71,.29),0 0 0 1px rgba(54,126,188,.16);backdrop-filter:blur(20px) saturate(150%);-webkit-backdrop-filter:blur(20px) saturate(150%);scrollbar-width:thin;scrollbar-color:#9bbbd9 transparent;animation:z3d-menu-in .18s ease-out}
+.mp-zw3d-page .z3d-nav-panel[hidden]{display:none!important}.mp-zw3d-page .z3d-nav-panel>p{margin:2px 8px 7px;color:#65809A;font-size:10px;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+.mp-zw3d-page .z3d-nav-panel a{display:flex;align-items:center;min-height:38px;padding:9px 11px;border:1px solid transparent;border-radius:10px;background:transparent;color:#294967;font-size:13px;font-weight:650;line-height:1.25;text-decoration:none;transition:color .18s,background .18s,border-color .18s,transform .18s}
+.mp-zw3d-page .z3d-nav-panel a:hover,.mp-zw3d-page .z3d-nav-panel a:focus-visible{border-color:rgba(50,133,207,.22);background:rgba(230,243,255,.92);color:#075EA8;outline:none}
+.mp-zw3d-page .z3d-nav-panel a[aria-current="location"]{border-color:rgba(43,136,210,.24);background:linear-gradient(100deg,rgba(220,239,255,.98),rgba(231,250,248,.98));box-shadow:inset 3px 0 #1689E8;color:#075EA8;font-weight:800}
+.mp-zw3d-page .z3d-nav-panel a.z3d-nav-cta{justify-content:center;margin-top:6px;border-color:transparent;border-radius:999px;background:linear-gradient(105deg,#174EAD,#1689E8);box-shadow:0 6px 16px rgba(23,78,173,.22);color:#fff}
+.mp-zw3d-page .z3d-nav-panel a.z3d-nav-cta:hover,.mp-zw3d-page .z3d-nav-panel a.z3d-nav-cta:focus-visible{background:linear-gradient(105deg,#123F91,#0879D7);color:#fff}
+@keyframes z3d-menu-in{from{opacity:0;transform:translateY(8px) scale(.985)}to{opacity:1;transform:translateY(0) scale(1)}}
+@media(min-width:1800px){.mp-zw3d-page .z3d-floating-nav.is-wide-dock{top:50%;bottom:auto;left:max(12px,calc((100vw - 1280px)/2 - 260px));width:240px;transform:translateY(-50%)}.mp-zw3d-page .z3d-floating-nav.is-wide-dock.is-visible{transform:translateY(-50%)}}
+@media(max-width:800px){.mp-zw3d-page .z3d-floating-nav{left:10px;right:auto;bottom:calc(10px + env(safe-area-inset-bottom,0px));width:min(280px,calc(100vw - 20px))}.mp-zw3d-page .z3d-nav-panel{max-height:72vh;padding:10px}.mp-zw3d-page .z3d-menu-toggle{min-height:54px}}
+@media(prefers-reduced-motion:reduce){.mp-zw3d-page .z3d-floating-nav,.mp-zw3d-page .z3d-menu-toggle,.mp-zw3d-page .z3d-menu-toggle>svg{transition:none}.mp-zw3d-page .z3d-nav-panel{animation:none}}</style>
+<style id="mp-z3d-licensing-base">
+.mp-zwcad-pricing{--zwcad-blue:#0878e8;--zwcad-blue-dark:#075fc0;--zwcad-text:#202b3b;--zwcad-muted:#6d7888;--zwcad-border:#e4eaf1;--zwcad-background:#f6f9fc;position:relative;width:100%;padding:105px 24px;background:var(--zwcad-background);font-family:inherit;overflow:hidden}
+.mp-zwcad-pricing *{box-sizing:border-box}
+.mp-zwcad-pricing .zwcad-pricing-container{width:100%;max-width:1240px;margin:0 auto}
+.mp-zwcad-pricing .zwcad-pricing-header{max-width:760px;margin:0 auto 55px;text-align:center}
+.mp-zwcad-pricing .zwcad-pricing-eyebrow{display:inline-block;margin-bottom:17px;color:var(--zwcad-blue);font-size:12px;font-weight:800;letter-spacing:2px}
+.mp-zwcad-pricing .zwcad-pricing-header h2{margin:0;color:var(--zwcad-text);font-size:clamp(32px,4vw,48px);font-weight:750;line-height:1.13;letter-spacing:-1.5px}
+.mp-zwcad-pricing .zwcad-pricing-header h2 span{display:block;color:var(--zwcad-blue)}
+.mp-zwcad-pricing .zwcad-pricing-header>p{max-width:590px;margin:18px auto 30px;color:var(--zwcad-muted);font-size:16px;line-height:1.7}
+.mp-zwcad-pricing .zwcad-license-switch{display:inline-flex;gap:7px;padding:6px;background:#e9eff6;border:1px solid #e1e8f0;border-radius:15px}
+.mp-zwcad-pricing .zwcad-switch-option{position:relative;min-width:170px;padding:13px 20px;display:flex;flex-direction:column;align-items:center;gap:4px;border:1px solid transparent;border-radius:11px;background:transparent;color:#526174;font-family:inherit;font-size:14px;font-weight:750;cursor:pointer;transition:all .25s ease}
+.mp-zwcad-pricing .zwcad-switch-option small{color:#8995a4;font-size:11px;font-weight:500}
+.mp-zwcad-pricing .zwcad-switch-icon{font-size:18px}
+.mp-zwcad-pricing .zwcad-switch-option.active{color:var(--zwcad-blue);background:#fff;border-color:#dce8f5;box-shadow:0 3px 12px rgba(24,55,90,.08)}
+.mp-zwcad-pricing .zwcad-switch-option.active small{color:#73849a}
+.mp-zwcad-pricing .zwcad-license-description{margin-top:15px;color:#758194;font-size:13px}
+.mp-zwcad-pricing .zwcad-pricing-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));align-items:stretch;gap:22px}
+.mp-zwcad-pricing .zwcad-price-card{position:relative;display:flex;flex-direction:column;min-width:0;padding:32px 28px 27px;background:#fff;border:1px solid var(--zwcad-border);border-radius:18px;box-shadow:0 8px 30px rgba(28,52,80,.045);transition:transform .3s ease,box-shadow .3s ease}
+.mp-zwcad-pricing .zwcad-price-card:hover{transform:translateY(-6px);box-shadow:0 18px 42px rgba(28,52,80,.10)}
+.mp-zwcad-pricing .zwcad-price-featured{border:2px solid var(--zwcad-blue);box-shadow:0 12px 35px rgba(8,120,232,.10)}
+.mp-zwcad-pricing .zwcad-popular-tag{position:absolute;top:-13px;left:50%;transform:translateX(-50%);padding:7px 17px;color:#fff;background:var(--zwcad-blue);border-radius:30px;font-size:10px;font-weight:800;letter-spacing:1px;white-space:nowrap}
+.mp-zwcad-pricing .zwcad-edition-label{display:inline-block;margin-bottom:13px;padding:6px 10px;color:var(--zwcad-blue);background:#edf6ff;border-radius:5px;font-size:10px;font-weight:800;letter-spacing:1px}
+.mp-zwcad-pricing .zwcad-card-top h3{margin:0 0 11px;color:var(--zwcad-text);font-size:23px;font-weight:750;letter-spacing:-.5px}
+.mp-zwcad-pricing .zwcad-card-description{min-height:55px;margin:0;color:var(--zwcad-muted);font-size:13px;line-height:1.65}
+.mp-zwcad-pricing .zwcad-price-area{margin-top:27px}
+.mp-zwcad-pricing .zwcad-price-label{display:block;margin-bottom:8px;color:#8591a0;font-size:11px;font-weight:650;text-transform:uppercase;letter-spacing:.8px}
+.mp-zwcad-pricing .zwcad-price{display:flex;align-items:baseline;gap:3px;color:var(--zwcad-text)}
+.mp-zwcad-pricing .zwcad-currency{font-size:23px;font-weight:650}
+.mp-zwcad-pricing .zwcad-price strong{font-size:clamp(30px,3vw,38px);font-weight:800;letter-spacing:-1.5px;line-height:1;transition:opacity .15s ease,transform .15s ease}
+.mp-zwcad-pricing .zwcad-currency-code{margin-left:5px;color:#778496;font-size:12px;font-weight:700}
+.mp-zwcad-pricing .zwcad-price-tax{display:block;margin-top:8px;color:#8490a0;font-size:12px}
+.mp-zwcad-pricing .zwcad-card-divider{width:100%;height:1px;margin:25px 0 20px;background:var(--zwcad-border)}
+.mp-zwcad-pricing .zwcad-feature-list{display:flex;flex-direction:column;gap:14px;margin:0 0 30px;padding:0;list-style:none}
+.mp-zwcad-pricing .zwcad-feature-list li{display:flex;align-items:flex-start;gap:10px;color:#526174;font-size:13px;line-height:1.5}
+.mp-zwcad-pricing .zwcad-feature-list li span{flex-shrink:0;color:var(--zwcad-blue);font-size:15px;font-weight:800}
+.mp-zwcad-pricing .zwcad-card-actions{display:flex;flex-direction:column;gap:11px;margin-top:auto}
+.mp-zwcad-pricing .zwcad-btn-primary,.mp-zwcad-pricing .zwcad-btn-secondary{display:flex;justify-content:center;align-items:center;gap:10px;width:100%;min-height:47px;padding:12px 17px;border-radius:8px;text-align:center;text-decoration:none!important;font-family:inherit;font-size:13px;font-weight:750;transition:all .25s ease}
+.mp-zwcad-pricing .zwcad-btn-primary{color:#fff!important;background:var(--zwcad-blue);border:1px solid var(--zwcad-blue)}
+.mp-zwcad-pricing .zwcad-btn-primary:hover{color:#fff!important;background:var(--zwcad-blue-dark);border-color:var(--zwcad-blue-dark);transform:translateY(-2px)}
+.mp-zwcad-pricing .zwcad-btn-primary span{font-size:17px;transition:transform .2s ease}
+.mp-zwcad-pricing .zwcad-btn-primary:hover span{transform:translateX(4px)}
+.mp-zwcad-pricing .zwcad-btn-secondary{color:#526174!important;background:#fff;border:1px solid #dfe6ee}
+.mp-zwcad-pricing .zwcad-btn-secondary:hover{color:var(--zwcad-blue)!important;background:#f5faff;border-color:#b8d8f8}
+.mp-zwcad-pricing .zwcad-pricing-notes{display:flex;align-items:flex-start;gap:14px;max-width:850px;margin:35px auto 0;padding:19px 22px;background:#edf4fb;border:1px solid #e0eaf5;border-radius:11px}
+.mp-zwcad-pricing .zwcad-note-icon{display:flex;flex-shrink:0;justify-content:center;align-items:center;width:22px;height:22px;color:#fff;background:var(--zwcad-blue);border-radius:50%;font-size:13px;font-weight:800}
+.mp-zwcad-pricing .zwcad-pricing-notes strong{display:block;margin-bottom:5px;color:var(--zwcad-text);font-size:12px}
+.mp-zwcad-pricing .zwcad-pricing-notes p{margin:0;color:#6e7c8e;font-size:12px;line-height:1.65}
+.mp-zwcad-pricing .zwcad-price strong.price-changing{opacity:0;transform:translateY(5px)}
+@media(max-width:1000px){.mp-zwcad-pricing .zwcad-pricing-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.mp-zwcad-pricing .zwcad-price-featured{order:-1}}
+@media(max-width:650px){.mp-zwcad-pricing{padding:70px 17px}.mp-zwcad-pricing .zwcad-pricing-header{margin-bottom:40px}.mp-zwcad-pricing .zwcad-pricing-header h2{font-size:34px}.mp-zwcad-pricing .zwcad-pricing-header>p{font-size:14px}.mp-zwcad-pricing .zwcad-license-switch{display:flex;width:100%}.mp-zwcad-pricing .zwcad-switch-option{min-width:0;flex:1;padding:12px 8px}.mp-zwcad-pricing .zwcad-pricing-grid{grid-template-columns:1fr;gap:25px}.mp-zwcad-pricing .zwcad-price-featured{order:initial}.mp-zwcad-pricing .zwcad-price-card{padding:29px 23px 24px}.mp-zwcad-pricing .zwcad-card-description{min-height:auto}.mp-zwcad-pricing .zwcad-price strong{font-size:37px}.mp-zwcad-pricing .zwcad-pricing-notes{padding:16px}}
+@media(prefers-reduced-motion:reduce){.mp-zwcad-pricing *,.mp-zwcad-pricing *:before,.mp-zwcad-pricing *:after{transition-duration:.01ms!important}}
+</style>
+<style id="mp-z3d-licensing-design">
+/* Tarjetas ZW3D: reutilizan el sistema visual de licencias ZWCAD, sin precios ni selector de modalidad. */
+#zw3d-licencias.mp-zwcad-pricing{padding:68px 24px;background:linear-gradient(110deg,#F8FBFF 0%,#F1F7FF 58%,#EAF4FF 100%);color:#172B45}
+#zw3d-licencias .zwcad-pricing-header{max-width:820px;margin:0 auto 28px;text-align:left}
+#zw3d-licencias .zwcad-pricing-eyebrow{display:block;width:100%;margin:0 0 10px;text-align:left;color:#0B559A;font-weight:800;letter-spacing:.14em}
+#zw3d-licencias .zwcad-pricing-header h2{display:block;width:100%;margin:0;text-align:left;color:#172B45;font-size:clamp(27px,3.4vw,38px);letter-spacing:-.03em}
+#zw3d-licencias .zwcad-pricing-header h2 .z3d-license-highlight{display:inline;background:linear-gradient(100deg,#1e96de 0%,#00b7be 100%);background-clip:text;-webkit-background-clip:text;color:transparent;-webkit-text-fill-color:transparent;font-weight:800}
+#zw3d-porque .z3d-section-title-highlight,#zw3d-produccion .z3d-section-title-highlight,#zw3d-versiones .z3d-section-title-highlight,#zw3d-preguntas .z3d-section-title-highlight{display:inline;background:linear-gradient(100deg,#1e96de 0%,#00b7be 100%);background-clip:text;-webkit-background-clip:text;color:transparent;-webkit-text-fill-color:transparent;font-weight:800}
+#zw3d-porque #zw3d-why-title,#zw3d-produccion #zw3d-production-title,#zw3d-versiones #zw3d-compare-title,#zw3d-preguntas #zw3d-faq-title{color:#172b45!important;-webkit-text-fill-color:#172b45!important}
+#zw3d-licencias .zwcad-pricing-header>p{display:block;width:100%;max-width:760px;margin:15px 0 0;text-align:left;color:#607087}
+#zw3d-licencias .z3d-pricing-grid{grid-template-columns:repeat(3,minmax(0,1fr));column-gap:20px;row-gap:14px}
+#zw3d-licencias .z3d-price-card{padding:28px 25px 24px}
+#zw3d-licencias .z3d-price-card .zwcad-card-divider{margin:20px 0 18px}
+#zw3d-licencias .z3d-price-card .zwcad-feature-list{gap:11px;margin-bottom:26px}
+#zw3d-licencias .z3d-price-card .zwcad-card-description{min-height:42px}
+#zw3d-licencias .z3d-price-card .zwcad-feature-list li{font-size:12px}
+@media(max-width:1000px){#zw3d-licencias .z3d-pricing-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:650px){#zw3d-licencias.mp-zwcad-pricing{padding:65px 17px}#zw3d-licencias .z3d-pricing-grid{grid-template-columns:1fr}}
+</style>
+<style id="mp-z3d-comparison-design">
+/* Matriz ZW3D: misma paleta, jerarquía y comportamiento desplegable que la comparación ZWCAD. */
+#zw3d-versiones.z3d-comparison-section{background:#0C1422!important;color:#F4F6F9!important}
+#zw3d-versiones .mp-ey{display:block;width:auto;max-width:100%;padding:0;border:0;border-radius:0;background:transparent;color:#0B559A!important;-webkit-text-fill-color:#0B559A!important;font-weight:800;letter-spacing:.14em;text-transform:uppercase}
+#zw3d-versiones .z3d-comparison-title{background:linear-gradient(100deg,#00B7BE 0%,#1E96DE 100%);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;font-size:clamp(22px,3.2vw,32px);font-weight:700;letter-spacing:-.02em}
+#mp-z3d-compare{--cmp-blue:var(--brand-blue);--cmp-ink:var(--foreground);--cmp-muted:var(--muted-foreground);color:var(--cmp-ink)}
+#mp-z3d-compare .mp-zcad-intro{max-width:850px;color:#C1CDDC;line-height:1.7;margin:0 0 26px}
+#mp-z3d-compare .mp-zcad-toolbar{display:flex;align-items:center;justify-content:space-between;gap:12px;flex-wrap:wrap;margin:24px 0 14px}
+#mp-z3d-compare .mp-zcad-actions{display:flex;gap:8px;flex-wrap:wrap}
+#mp-z3d-compare .mp-zcad-actions button{border:1px solid rgba(0,184,189,.28);background:#14243B;color:#EAF3FF;border-radius:999px;padding:10px 16px;font:600 13px inherit;cursor:pointer;transition:.2s}
+#mp-z3d-compare .mp-zcad-actions button:hover{border-color:#00B8BD;background:#1B3453;color:#fff;transform:translateY(-1px)}
+#mp-z3d-compare .mp-zcad-legend{display:flex;gap:16px;flex-wrap:wrap;color:#D4DFEC;font-size:12px}
+#mp-z3d-compare .mp-zcad-legend span{display:inline-flex;align-items:center;gap:6px}
+#mp-z3d-compare .mp-zcad-legend b:not(.mp-zcad-unavailable-mark){display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;background:rgba(0,184,189,.15);color:#00B8BD}
+#mp-z3d-compare .mp-zcad-legend .mp-zcad-unavailable-mark{display:inline-grid;place-items:center;width:20px;height:20px;border-radius:50%;background:rgba(255,255,255,.09);color:#AAB8C9}
+#mp-z3d-compare .mp-zcad-legend .mp-z3d-limited{display:inline-flex;align-items:center;justify-content:center;width:auto!important;min-width:0;height:auto!important;padding:4px 7px;border-radius:999px;background:#FFF1D8;color:#A96500;font-size:10px;font-weight:800;line-height:1.2;white-space:nowrap}
+#mp-z3d-compare .mp-zcad-legend .mp-z3d-limited-marker{display:inline-block;flex:0 0 20px;width:20px;height:20px;padding:0;border:2px solid #D99A24;border-radius:50%;background:#FFF1D8!important;color:transparent!important;-webkit-text-fill-color:transparent!important}
+#mp-z3d-compare .mp-zcad-table-scroll{overflow-x:auto;border:1px solid rgba(46,130,240,.24);border-radius:16px;background:#fff;box-shadow:0 12px 30px rgba(0,0,0,.2)}
+#mp-z3d-compare .mp-zcad-matrix{width:100%;border-collapse:collapse;min-width:1260px;font-size:12px;background:#fff}
+#mp-z3d-compare .mp-zcad-matrix th,#mp-z3d-compare .mp-zcad-matrix td{padding:12px 10px;border-bottom:1px solid #DCE7F4;text-align:center}
+#mp-z3d-compare .mp-zcad-matrix thead th{background:#0E1B33;color:#F4F6F9;font-size:11px;font-weight:700;line-height:1.4;vertical-align:middle}
+#mp-z3d-compare .mp-zcad-matrix thead th:first-child{text-align:left;width:30%;min-width:280px;padding-left:20px}
+#mp-z3d-compare .mp-zcad-matrix thead th b{display:block;margin-top:5px;color:#00B8BD;font-size:10px;font-weight:650}
+#mp-z3d-compare .mp-zcad-category-row th{padding:0!important;border-bottom:1px solid #C9DDF2}
+#mp-z3d-compare .mp-zcad-category-toggle{width:100%;display:flex;align-items:center;gap:12px;padding:14px 18px;border:0;background:#EAF3FC;color:#0E1B33;font:750 13px inherit;text-align:left;cursor:pointer}
+#mp-z3d-compare .mp-zcad-category-toggle:hover{background:#DCEBFA}
+#mp-z3d-compare .mp-zcad-category-toggle small{margin-left:auto;color:#607087;font-size:11px;font-weight:600}
+#mp-z3d-compare .mp-zcad-category-chevron{width:8px;height:8px;flex:0 0 8px;border-right:2px solid #1558C0;border-bottom:2px solid #1558C0;transform:rotate(-45deg);transition:transform .2s}
+#mp-z3d-compare .mp-zcad-category-toggle[aria-expanded="true"] .mp-zcad-category-chevron{transform:rotate(45deg)}
+#mp-z3d-compare .mp-zcad-feature-row th{font-weight:550;text-align:left;color:#172B45;padding-left:20px}
+#mp-z3d-compare .mp-zcad-feature-row:nth-child(odd) td,#mp-z3d-compare .mp-zcad-feature-row:nth-child(odd) th{background:#F7FAFE}
+#mp-z3d-compare .mp-zcad-feature-row:hover th,#mp-z3d-compare .mp-zcad-feature-row:hover td{background:#EAF4FF}
+#mp-z3d-compare .mp-zcad-matrix td[data-state=yes] .mp-zcad-state{display:inline-grid;place-items:center;width:23px;height:23px;border-radius:50%;background:#D9F5EF;color:#0E9E8E;font-weight:800;font-size:14px}
+#mp-z3d-compare .mp-zcad-matrix td[data-state=no] .mp-zcad-state{color:#AAB5C3;font-size:18px}
+#mp-z3d-compare .mp-z3d-limited{display:inline-block;padding:4px 7px;border-radius:999px;background:#FFF1D8;color:#A96500;font-size:10px;font-weight:800;white-space:nowrap}
+#mp-z3d-compare .mp-zcad-matrix td[data-state=limited]{white-space:nowrap}
+#mp-z3d-compare .mp-zcad-footnote{font-size:12px;line-height:1.65;color:#C1CDDC;margin:16px 0 0}
+#mp-z3d-compare .mp-zcad-feature-row[hidden]{display:none!important}
+@media(max-width:640px){#mp-z3d-compare .mp-zcad-category-toggle{padding:13px 12px}#mp-z3d-compare .mp-zcad-matrix th,#mp-z3d-compare .mp-zcad-matrix td{padding:11px 8px}#mp-z3d-compare .mp-zcad-matrix thead th:first-child,#mp-z3d-compare .mp-zcad-matrix tbody th{padding-left:13px}}
+@media(prefers-reduced-motion:reduce){#mp-z3d-compare *{transition:none!important;scroll-behavior:auto!important}}
+
+
+/* Encabezado fijo sincronizado: solo una versión visible; el original conserva el flujo. */
+#mp-z3d-compare .mp-zcad-table-scroll{position:relative}
+#mp-z3d-compare .mp-zcad-matrix thead.mp-z3d-head-hidden{visibility:hidden}
+#mp-z3d-compare .mp-z3d-fixed-head{
+  position:fixed;top:0;left:0;z-index:30;overflow:hidden;visibility:hidden;
+  opacity:0;background:#0C1422;box-shadow:0 6px 18px rgba(5,18,36,.2);
+  pointer-events:none;transition:opacity .2s ease,visibility .2s ease;
+}
+#mp-z3d-compare .mp-z3d-fixed-head.is-visible{visibility:visible;opacity:1}
+#mp-z3d-compare .mp-z3d-fixed-head table{
+  table-layout:fixed;border-collapse:collapse;margin:0;background:#0C1422;
+}
+#mp-z3d-compare .mp-z3d-fixed-head th{
+  box-sizing:border-box;padding:7px 10px!important;background:#0C1422!important;color:#F4F6F9!important;
+  font-size:10px!important;line-height:1.25!important;box-shadow:none!important;
+  transition:padding .22s ease,font-size .22s ease;
+}
+#mp-z3d-compare .mp-z3d-fixed-head th b{
+  display:block;margin-top:3px!important;color:#00B8BD!important;font-size:9px!important;
+  transition:font-size .22s ease,margin .22s ease;
+}
+@media(max-width:640px){
+  #mp-z3d-compare .mp-z3d-fixed-head th{padding:7px 6px!important;font-size:9px!important}
+  #mp-z3d-compare .mp-z3d-fixed-head th b{font-size:8px!important}
+}
+@media(prefers-reduced-motion:reduce){
+  #mp-z3d-compare .mp-z3d-fixed-head,
+  #mp-z3d-compare .mp-z3d-fixed-head th,
+  #mp-z3d-compare .mp-z3d-fixed-head th b{transition:none!important}
+}
+</style>
+</head>
 <body><div class="mp-wrap">
 <header class="mp-header">
   <div class="mp-co mp-bar">
@@ -1691,7 +1689,7 @@ document.querySelectorAll('img[data-ph]').forEach(function(im){
 }
 </style>
 
-</body></html>
+
 <script id="mp-about-carousel-script">
 (function(){
   function initModelProAbout(){
