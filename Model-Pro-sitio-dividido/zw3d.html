@@ -1985,6 +1985,38 @@ visual.addEventListener('pointerleave',function(){visual.classList.remove('is-po
 
 
 <style id="mp-z3d-capabilities-smooth">
+/* Funciones: presentar los elementos como una lista visual, no como texto corrido. */
+#zw3d-capacidades [data-z3d-list]{
+  display:grid;
+  gap:12px;
+  margin:22px 0 0;
+  padding:0;
+  list-style:none;
+}
+#zw3d-capacidades [data-z3d-list] li{
+  display:flex;
+  align-items:flex-start;
+  gap:11px;
+  margin:0;
+  line-height:1.55;
+}
+#zw3d-capacidades [data-z3d-list] li i{display:none!important}
+#zw3d-capacidades [data-z3d-list] li::before{
+  content:"✓";
+  display:inline-flex;
+  flex:0 0 21px;
+  width:21px;
+  height:21px;
+  align-items:center;
+  justify-content:center;
+  margin-top:2px;
+  border-radius:50%;
+  background:rgba(138,245,240,.13);
+  color:#8AF5F0;
+  font-size:13px;
+  font-weight:800;
+  line-height:1;
+}
 /* Funciones: tonos claros y transición suave entre capacidades. */
 #zw3d-capacidades .z3d-panel h3{
   color:#8AF5F0!important;
