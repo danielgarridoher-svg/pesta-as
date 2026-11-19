@@ -2921,6 +2921,51 @@ var hero=page.querySelector('.zcad-hero');if(hero&&!reduce&&window.matchMedia('(
     align-items:flex-start!important;
   }
 }
+
+/* ¿Qué es ZWCAD? · estilo oscuro alineado con la sección equivalente de ZW3D */
+#zwcad-que-es{
+  position:relative!important;
+  isolation:isolate!important;
+  overflow:hidden!important;
+  background:linear-gradient(125deg,#0C1422 0%,#10213A 58%,#0E1B33 100%)!important;
+  color:#F4F6F9!important;
+}
+#zwcad-que-es::before{
+  content:""!important;
+  position:absolute!important;inset:0!important;z-index:0!important;
+  pointer-events:none!important;
+  background:
+    radial-gradient(ellipse at 88% 10%,rgba(46,130,240,.16),transparent 38%),
+    radial-gradient(ellipse at 10% 100%,rgba(0,184,189,.10),transparent 42%)!important;
+}
+#zwcad-que-es>.mp-co{position:relative!important;z-index:1!important}
+#zwcad-que-es .zcad-ey-light{
+  color:#00B8BD!important;
+  font-weight:800!important;letter-spacing:.14em!important;text-transform:uppercase!important;
+}
+#zwcad-que-es #zcad-what-title{
+  background:linear-gradient(100deg,#B9F3EF 0%,#C8DEFF 55%,#D2F5E5 100%)!important;
+  background-clip:text!important;-webkit-background-clip:text!important;
+  -webkit-text-fill-color:transparent!important;
+  text-shadow:none!important;
+}
+#zwcad-que-es .zcad-section-lead{color:#D5E5F6!important;line-height:1.7!important}
+#zwcad-que-es .zcad-what-card{
+  background:#0E1B33!important;
+  border:1px solid rgba(183,212,247,.20)!important;
+  border-radius:16px!important;
+  box-shadow:0 12px 28px rgba(0,0,0,.16)!important;
+  color:#F4F6F9!important;
+}
+#zwcad-que-es .zcad-what-card>span{color:#A8F0E8!important}
+#zwcad-que-es .zcad-what-card b{
+  background:rgba(0,184,189,.10)!important;
+  border:1px solid rgba(0,184,189,.28)!important;
+  color:#F4F6F9!important;
+}
+#zwcad-que-es .zcad-what-card i{color:#00B8BD!important}
+#zwcad-que-es .zcad-what-card small{color:#D5E5F6!important}
+
 </style>
 
 </body>
