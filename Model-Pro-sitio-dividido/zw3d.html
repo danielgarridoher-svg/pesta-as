@@ -1314,7 +1314,7 @@ a.mp-card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(11,20,34,.
   <div class="mp-co">
     <div class="z3d-trial-layout">
       <div class="z3d-trial-intro">
-        <h2 class="mp-h2" id="z3d-trial-title">Conoce todo lo que puedes hacer con ZW3D.</h2>
+        <h2 class="mp-h2" id="z3d-trial-title">Conoce todo lo que puedes hacer con <span class="z3d-title-highlight">ZW3D.</span></h2>
         <p>Déjanos tus datos y conoce una nueva forma de conectar diseño y manufactura en un solo entorno.</p>
         <ul>
           <li><span aria-hidden="true">✓</span> Explora las herramientas de ZW3D durante 30 días</li>
@@ -2345,6 +2345,25 @@ visual.addEventListener('pointerleave',function(){visual.classList.remove('is-po
   -webkit-text-fill-color:#FFFFFF!important;
 }
 #zw3d-preguntas #zw3d-faq-title .z3d-section-title-highlight{
+  background:linear-gradient(135deg,#8AF5F0 0%,#A9C8FF 100%)!important;
+  background-clip:text!important;
+  -webkit-background-clip:text!important;
+  color:transparent!important;
+  -webkit-text-fill-color:transparent!important;
+}
+</style>
+
+
+<style id="zw3d-form-title-contrast">
+/* Formulario: texto principal blanco y nombre del producto con degradado suave. */
+#zw3d-trial-form #z3d-trial-title{
+  background:none!important;
+  background-clip:border-box!important;
+  -webkit-background-clip:border-box!important;
+  color:#FFFFFF!important;
+  -webkit-text-fill-color:#FFFFFF!important;
+}
+#zw3d-trial-form #z3d-trial-title .z3d-title-highlight{
   background:linear-gradient(135deg,#8AF5F0 0%,#A9C8FF 100%)!important;
   background-clip:text!important;
   -webkit-background-clip:text!important;
