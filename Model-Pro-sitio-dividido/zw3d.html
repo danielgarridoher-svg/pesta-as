@@ -1316,13 +1316,17 @@ a.mp-card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(11,20,34,.
     <div class="z3d-trial-layout">
       <div class="z3d-trial-intro">
         <p class="z3d-trial-eyebrow">PRUEBA GRATUITA · 30 DÍAS</p>
-        <h2 id="z3d-demo-title">Conoce todo lo que puedes hacer con ZW3D.</h2>
+        <h2 class="mp-h2" id="z3d-demo-title">Conoce todo lo que puedes hacer con ZW3D.</h2>
         <p>Déjanos tus datos y conoce una nueva forma de conectar diseño y manufactura en un solo entorno.</p>
         <ul>
           <li><span aria-hidden="true">✓</span> Explora las herramientas de ZW3D durante 30 días</li>
           <li><span aria-hidden="true">✓</span> Conoce las capacidades adecuadas para tu trabajo</li>
           <li><span aria-hidden="true">✓</span> Recibe orientación de nuestro equipo en español</li>
         </ul>
+        <div class="z3d-trial-cta-actions">
+          <a class="z3d-trial-primary" href="index.html#contacto">Solicitar demostración</a>
+          <a class="z3d-trial-secondary" href="index.html#contacto">Cotizar licencia</a>
+        </div>
       </div>
       <div class="z3d-trial-form-card">
         <h3>Solicita tu prueba gratuita</h3>
@@ -1346,6 +1350,24 @@ a.mp-card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(11,20,34,.
 #zw3d-demo{padding:82px 24px;background:linear-gradient(120deg,#1558C0 0%,#1D69D2 55%,#2479DF 100%)!important;color:#fff!important}
 #zw3d-demo .z3d-trial-layout{display:grid;grid-template-columns:minmax(0,.9fr) minmax(480px,1.1fr);gap:clamp(38px,6vw,82px);align-items:center;max-width:1120px;margin:0 auto}
 #zw3d-demo .z3d-trial-intro{max-width:470px}
+#zw3d-demo .z3d-trial-intro h2.mp-h2{
+  display:block;
+  margin:0 0 18px;
+  color:#FFFFFF!important;
+  background:linear-gradient(100deg,#FFFFFF 0%,#D5F7F2 55%,#D5E5FF 100%)!important;
+  background-clip:text!important;
+  -webkit-background-clip:text!important;
+  -webkit-text-fill-color:transparent!important;
+  font-size:clamp(30px,3.5vw,42px);
+  font-weight:800;
+  line-height:1.12;
+  letter-spacing:-.035em
+}
+#zw3d-demo .z3d-trial-cta-actions{display:flex;flex-wrap:wrap;gap:11px;margin-top:26px}
+#zw3d-demo .z3d-trial-cta-actions a{display:inline-flex;align-items:center;justify-content:center;min-height:44px;padding:0 18px;border-radius:8px;font-size:13px;font-weight:750;text-decoration:none;transition:transform .2s ease,background .2s ease}
+#zw3d-demo .z3d-trial-primary{background:linear-gradient(110deg,#00B8BD,#2E82F0);color:#fff}
+#zw3d-demo .z3d-trial-secondary{border:1px solid rgba(225,240,255,.65);background:rgba(255,255,255,.07);color:#fff}
+#zw3d-demo .z3d-trial-cta-actions a:hover{transform:translateY(-2px)}
 #zw3d-demo .z3d-trial-eyebrow{margin:0 0 18px;color:#B9F3EF;font-size:11px;font-weight:800;letter-spacing:.16em}
 #zw3d-demo .z3d-trial-intro h2{margin:0 0 18px;color:#fff;font-size:clamp(30px,3.5vw,42px);line-height:1.12;letter-spacing:-.035em}
 #zw3d-demo .z3d-trial-intro>p:not(.z3d-trial-eyebrow){margin:0 0 24px;color:#E2EDFF;font-size:15px;line-height:1.7}
