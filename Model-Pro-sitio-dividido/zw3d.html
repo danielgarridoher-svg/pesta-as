@@ -2353,10 +2353,11 @@ visual.addEventListener('pointerleave',function(){visual.classList.remove('is-po
 
 <style id="z3d-hero-light-gradients">
 /* Hero claro: reutiliza los degradados oficiales de títulos y CTA. */
-.mp-zw3d-page .z3d-hero .z3d-title{
-  background:var(--title-gradient);
-  -webkit-background-clip:text;background-clip:text;
-  color:transparent;-webkit-text-fill-color:transparent
+.mp-zw3d-page .z3d-hero h1.z3d-title{
+  background-color:transparent!important;
+  background-image:linear-gradient(105deg,#1558C0 0%,#2E82F0 52%,#00AEB5 100%)!important;
+  -webkit-background-clip:text!important;background-clip:text!important;
+  color:transparent!important;-webkit-text-fill-color:transparent!important
 }
 .mp-zw3d-page .z3d-hero .z3d-actions .mp-btn{
   background:var(--cta-gradient);
