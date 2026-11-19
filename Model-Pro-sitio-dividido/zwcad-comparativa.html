@@ -3412,14 +3412,13 @@ body .mp-page[data-page="zwcad"] .mp-zwcad-page #mp-zcad-savings .sv-lead{
 
 
 <style id="mp-zwcad-comparison-zw3d-header-finish">
-/* Comparativa ZWCAD: jerarquía clara de títulos y controles ligeros */
+/* Comparativa ZWCAD: conserva el desglose claro y replica el encabezado ligero de referencia */
 body .mp-page[data-page="zwcad"] .mp-zwcad-page #mp-zcad-compare>.mp-ey{
   color:#1558C0!important;-webkit-text-fill-color:#1558C0!important;
   background:none!important;font-weight:800!important;letter-spacing:.14em!important;
 }
 body .mp-page[data-page="zwcad"] .mp-zwcad-page #zcad-comparison-title{
-  color:#172B45!important;-webkit-text-fill-color:#172B45!important;
-  background:none!important;
+  color:#172B45!important;-webkit-text-fill-color:#172B45!important;background:none!important;
 }
 body .mp-page[data-page="zwcad"] .mp-zwcad-page #zcad-comparison-title .zcad-comparison-highlight{
   background:linear-gradient(100deg,#1558C0 0%,#2E82F0 55%,#00B8BD 100%)!important;
@@ -3434,26 +3433,37 @@ body .mp-page[data-page="zwcad"] .mp-zwcad-page #mp-zcad-compare .mp-zcad-action
 body .mp-page[data-page="zwcad"] .mp-zwcad-page #mp-zcad-compare .mp-zcad-actions button:hover{
   border-color:#2E82F0!important;background:#EAF3FF!important;color:#1558C0!important;
 }
+/* Encabezado original: fondo azul-gris muy claro, tipografía marino y edición destacada */
 body .mp-page[data-page="zwcad"] .mp-zwcad-page #mp-zcad-compare .mp-zcad-matrix thead th{
-  background:#0E1B33!important;color:#F4F6F9!important;font-size:11px!important;
-  font-weight:700!important;line-height:1.4!important;vertical-align:middle!important;
+  background:linear-gradient(90deg,#F0F4FC 0%,#E8EFFA 30%,#E5F1F4 66%,#E2EFF0 100%)!important;
+  color:#26364D!important;font-size:11px!important;font-weight:750!important;
+  line-height:1.4!important;vertical-align:middle!important;
+  border-bottom:1px solid rgba(21,88,192,.10)!important;
 }
 body .mp-page[data-page="zwcad"] .mp-zwcad-page #mp-zcad-compare .mp-zcad-matrix thead th b{
-  display:block!important;margin-top:5px!important;color:#00B8BD!important;
-  font-size:10px!important;font-weight:650!important;
+  display:block!important;margin-top:5px!important;
+  background:linear-gradient(100deg,#1558C0 0%,#2E82F0 55%,#00AEB5 100%)!important;
+  background-clip:text!important;-webkit-background-clip:text!important;
+  color:transparent!important;-webkit-text-fill-color:transparent!important;
+  font-size:10px!important;font-weight:750!important;
 }
+/* El encabezado fijo replica exactamente el aspecto claro de la tabla */
 body .mp-page[data-page="zwcad"] .mp-zwcad-page #mp-zcad-compare .mp-z3d-fixed-head{
-  background:#0C1422!important;box-shadow:0 6px 18px rgba(5,18,36,.2)!important;
+  background:linear-gradient(90deg,#F0F4FC 0%,#E8EFFA 30%,#E5F1F4 66%,#E2EFF0 100%)!important;
+  box-shadow:0 6px 18px rgba(14,27,51,.12)!important;
 }
-body .mp-page[data-page="zwcad"] .mp-zwcad-page #mp-zcad-compare .mp-z3d-fixed-head table{
-  background:#0C1422!important;border-collapse:collapse!important;
-}
+body .mp-page[data-page="zwcad"] .mp-zwcad-page #mp-zcad-compare .mp-z3d-fixed-head table{background:transparent!important}
 body .mp-page[data-page="zwcad"] .mp-zwcad-page #mp-zcad-compare .mp-z3d-fixed-head th{
-  padding:7px 10px!important;background:#0C1422!important;color:#F4F6F9!important;
-  font-size:10px!important;line-height:1.25!important;
+  padding:7px 10px!important;
+  background:linear-gradient(90deg,#F0F4FC 0%,#E8EFFA 30%,#E5F1F4 66%,#E2EFF0 100%)!important;
+  color:#26364D!important;font-size:10px!important;line-height:1.25!important;
+  border-bottom:1px solid rgba(21,88,192,.10)!important;
 }
 body .mp-page[data-page="zwcad"] .mp-zwcad-page #mp-zcad-compare .mp-z3d-fixed-head th b{
-  display:block!important;margin-top:3px!important;color:#00B8BD!important;font-size:9px!important;
+  display:block!important;margin-top:3px!important;
+  background:linear-gradient(100deg,#1558C0 0%,#2E82F0 55%,#00AEB5 100%)!important;
+  background-clip:text!important;-webkit-background-clip:text!important;
+  color:transparent!important;-webkit-text-fill-color:transparent!important;font-size:9px!important;
 }
 @media(max-width:640px){
   body .mp-page[data-page="zwcad"] .mp-zwcad-page #mp-zcad-compare .mp-z3d-fixed-head th{padding:7px 6px!important;font-size:9px!important}
