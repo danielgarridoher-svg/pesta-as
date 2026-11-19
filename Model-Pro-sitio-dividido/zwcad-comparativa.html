@@ -1997,6 +1997,7 @@ body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-capacidades{
         <div class="sv-total"><small>A 3 años</small><strong data-sv-saving3>—</strong><em data-sv-percent3></em></div>
         <div class="sv-total"><small>A 5 años</small><strong data-sv-saving5>—</strong><em data-sv-percent5></em></div>
       </div>
+      <div class="sv-payback" data-sv-payback hidden aria-live="polite"><strong>Recuperas tu inversión</strong><span data-sv-payback-year></span><p>Desde ahí, todo es ahorro.</p></div>
       <div class="sv-chart">
         <h3 class="sv-chart-title">Comparación del costo acumulado</h3>
         <div class="sv-legend"><span><i></i>Suscripción actual</span><span><i class="sv-blue-dot"></i>ZWCAD</span></div>
@@ -2008,7 +2009,7 @@ body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-capacidades{
           <tbody>
             <tr><td>Suscripción actual</td><td data-sv-current3>—</td><td data-sv-current5>—</td></tr>
             <tr><td>ZWCAD</td><td data-sv-zwcad3>—</td><td data-sv-zwcad5>—</td></tr>
-            <tr><td><b>Ahorro</b></td><td data-sv-diff3>—</td><td data-sv-diff5>—</td></tr>
+            <tr><td><b data-sv-diff-label>Ahorro</b></td><td data-sv-diff3>—</td><td data-sv-diff5>—</td></tr>
           </tbody>
         </table>
       </div>
@@ -2056,7 +2057,15 @@ body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-capacidades{
           adviceLink.href="https://wa.me/524426044489?text="+encodeURIComponent(message);
         }
         function difference(value){return value<0?money(Math.abs(value))+" más con ZWCAD":money(value)+" de ahorro";}
-        function percentage(value,total){return total>0?(Math.abs(value/total*100).toFixed(0)+(value<0?" % más":" % menos")):"Compara tus costos";}
+        function percentage(value,total){return value>0&&total>0?(value/total*100).toFixed(0)+" % menos":"";}
+        var recoveryYear=0;
+        for(var year=1;year<=5;year++){if(calculate(year).saving>=0){recoveryYear=year;break;}}
+        var payback=root.querySelector("[data-sv-payback]");
+        var paybackYear=root.querySelector("[data-sv-payback-year]");
+        if(payback)payback.hidden=!recoveryYear;
+        if(paybackYear&&recoveryYear)paybackYear.textContent="Año "+recoveryYear;
+        var diffLabel=root.querySelector("[data-sv-diff-label]");
+        if(diffLabel)diffLabel.textContent=(a.saving<0||b.saving<0)?"Diferencia":"Ahorro";
         root.querySelector("[data-sv-saving3]").textContent=difference(a.saving);
         root.querySelector("[data-sv-saving5]").textContent=difference(b.saving);
         root.querySelector("[data-sv-percent3]").textContent=percentage(a.saving,a.current);
@@ -2065,8 +2074,8 @@ body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-capacidades{
         root.querySelector("[data-sv-current5]").textContent=money(b.current);
         root.querySelector("[data-sv-zwcad3]").textContent=money(a.zwcad);
         root.querySelector("[data-sv-zwcad5]").textContent=money(b.zwcad);
-        root.querySelector("[data-sv-diff3]").textContent=money(a.saving);
-        root.querySelector("[data-sv-diff5]").textContent=money(b.saving);
+        root.querySelector("[data-sv-diff3]").textContent=difference(a.saving);
+        root.querySelector("[data-sv-diff5]").textContent=difference(b.saving);
         var max=Math.max(1,b.current,b.zwcad),bars=root.querySelector("[data-sv-bars]");
         bars.innerHTML="";
         for(var y=1;y<=5;y++){
@@ -3092,6 +3101,14 @@ body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-que-es{
 #zwcad-ahorro .sv-results h3,#zwcad-ahorro .sv-results strong{color:#172B45!important}
 #zwcad-ahorro .sv-results p,#zwcad-ahorro .sv-results small{color:#52657D!important}
 @media(prefers-reduced-motion:reduce){#zwcad-ahorro *{scroll-behavior:auto!important}}
+</style>
+
+<style id="mp-zwcad-calculator-dynamic-payback">
+#zwcad-ahorro .sv-payback{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin:14px 0 4px;padding:13px 15px;border:1px solid rgba(0,184,189,.28);border-radius:12px;background:linear-gradient(110deg,#F0FBFA,#F1F6FF);color:#172B45}
+#zwcad-ahorro .sv-payback[hidden]{display:none!important}
+#zwcad-ahorro .sv-payback strong{color:#1558C0;font-size:14px}
+#zwcad-ahorro .sv-payback span{padding:4px 9px;border-radius:7px;background:#DDF5F2;color:#087F87;font-weight:800}
+#zwcad-ahorro .sv-payback p{flex-basis:100%;margin:0;color:#52657D;font-size:13px}
 </style>
 </body>
 </html>
