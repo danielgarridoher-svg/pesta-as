@@ -2943,5 +2943,13 @@ var hero=page.querySelector('.zcad-hero');if(hero&&!reduce&&window.matchMedia('(
 #zwcad-que-es .zcad-what-card i{color:#00B8BD!important}
 #zwcad-que-es .zcad-what-card small{color:#B7C7DA!important}
 </style>
+<style id="mp-zwcad-que-es-gradient-fix">
+/* Mayor especificidad para sustituir la retícula heredada por el degradado oficial. */
+body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-que-es{
+  background-color:#0C1422!important;
+  background-image:linear-gradient(125deg,#0C1422 0%,#10213A 58%,#0E1B33 100%)!important;
+  background-size:100% 100%!important;
+}
+</style>
 </body>
 </html>
