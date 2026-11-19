@@ -1051,6 +1051,8 @@ a.mp-card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(11,20,34,.
 #mp-zcad-savings .sv-advice[hidden]{display:none}
 #mp-zcad-savings .sv-advice b{display:block;margin-bottom:5px;color:#1558c0;font-size:13px}
 #mp-zcad-savings .sv-advice p{margin:0;font-size:12px;line-height:1.6}
+#mp-zcad-savings .sv-advice-link{display:inline-block;margin-top:10px;color:#1558c0;font-size:12px;font-weight:800;text-decoration:none}
+#mp-zcad-savings .sv-advice-link:hover{text-decoration:underline}
 #mp-zcad-savings .sv-total{padding:17px;background:var(--sv-bg);border:1px solid #eaf0f6;border-radius:12px}
 #mp-zcad-savings .sv-total small{display:block;margin-bottom:8px;color:#718095;font-size:11px;font-weight:700}
 #mp-zcad-savings .sv-total strong{display:block;color:var(--sv-ink);font-size:clamp(22px,2.5vw,31px);letter-spacing:-1px;line-height:1.1}
@@ -1990,7 +1992,7 @@ body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-capacidades{
     </form>
     <div class="sv-results" aria-live="polite">
       <p class="sv-result-label" data-sv-result-heading>Tu ahorro estimado</p>
-      <aside class="sv-advice" data-sv-advice hidden aria-live="polite"><b>¿Tu proyecto es de corta duración?</b><p data-sv-advice-text></p></aside>
+      <aside class="sv-advice" data-sv-advice hidden aria-live="polite"><b>¿Buscas una opción más accesible?</b><p>Platica con un asesor sobre las formas de adquirir ZWCAD.</p><a class="sv-advice-link" data-sv-advice-link href="https://wa.me/524426044489" target="_blank" rel="noopener">Platicar con un asesor →</a></aside>
       <div class="sv-totals">
         <div class="sv-total"><small>A 3 años</small><strong data-sv-saving3>—</strong><em data-sv-percent3></em></div>
         <div class="sv-total"><small>A 5 años</small><strong data-sv-saving5>—</strong><em data-sv-percent5></em></div>
@@ -2042,15 +2044,17 @@ body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-capacidades{
       }
       function render(){
         var a=calculate(3),b=calculate(5);
-        var hasShortfall=a.saving<0;
+        var hasShortfall=a.saving<0||b.saving<0;
         var heading=root.querySelector("[data-sv-result-heading]");
         var advice=root.querySelector("[data-sv-advice]");
-        var adviceText=root.querySelector("[data-sv-advice-text]");
+        var adviceLink=root.querySelector("[data-sv-advice-link]");
         if(heading)heading.textContent=hasShortfall?"Comparación de costos":"Tu ahorro estimado";
         if(advice)advice.hidden=!hasShortfall;
-        if(adviceText)adviceText.textContent=b.saving>0
-          ?"Para un proyecto temporal o de pocos años, mantener tu suscripción actual puede ser más conveniente: a 3 años, ZWCAD representa una inversión mayor. Si planeas utilizar CAD durante más tiempo, compara el resultado a 5 años, donde la licencia perpetua ya podría generar ahorro."
-          :"Si tu proyecto es temporal o prevés utilizar CAD por pocos años, mantener tu esquema actual puede ser más conveniente. En este escenario, la inversión en ZWCAD no se recupera dentro de los periodos comparados; una licencia perpetua suele tener más sentido cuando planeas utilizarla durante varios años.";
+        if(adviceLink){
+          var count=Math.min(200,Math.max(1,parseInt(seats.value,10)||1));
+          var message="Hola ProTech, hoy pago "+money(num(current.value))+" al año por licencia de CAD (sin IVA) y me interesa conocer las formas de adquirir ZWCAD ("+count+" licencia(s)).";
+          adviceLink.href="https://wa.me/524426044489?text="+encodeURIComponent(message);
+        }
         function difference(value){return value<0?money(Math.abs(value))+" más con ZWCAD":money(value)+" de ahorro";}
         function percentage(value,total){return total>0?(Math.abs(value/total*100).toFixed(0)+(value<0?" % más":" % menos")):"Compara tus costos";}
         root.querySelector("[data-sv-saving3]").textContent=difference(a.saving);
