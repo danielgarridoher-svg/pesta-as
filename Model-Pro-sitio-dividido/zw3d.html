@@ -991,7 +991,7 @@ a.mp-card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(11,20,34,.
     <h2 class="mp-h2" id="zw3d-production-title">Del diseño a la fabricación, paso a paso</h2>
     <p class="mp-lead">¿Cómo pasa una pieza diseñada en 3D a convertirse en una pieza física? ZW3D conecta el diseño con la manufactura mediante un flujo CAM que permite planear, revisar y preparar el mecanizado antes de llevarlo a la máquina CNC.</p>
     <figure class="z3d-production-route" aria-label="Cuatro etapas del diseño al mecanizado CNC">
-      <svg viewBox="0 0 1000 150" aria-hidden="true" focusable="false">
+      <svg viewBox="0 0 1000 112" aria-hidden="true" focusable="false">
         <defs><linearGradient id="z3d-route-stroke" x1="0" x2="1"><stop stop-color="#42E6D0"/><stop offset=".55" stop-color="#1689E8"/><stop offset="1" stop-color="#9CCBFF"/></linearGradient></defs>
         <path d="M120 62H880" stroke="url(#z3d-route-stroke)" stroke-width="4" stroke-dasharray="8 9"/>
         <g fill="#EAF4FF" stroke="#1689E8" stroke-width="3"><circle cx="120" cy="62" r="35"/><circle cx="373" cy="62" r="35"/><circle cx="627" cy="62" r="35"/><circle cx="880" cy="62" r="35"/></g>
@@ -1667,6 +1667,10 @@ visual.addEventListener('pointerleave',function(){visual.classList.remove('is-po
   background:linear-gradient(105deg,#F8FBFF 0%,rgba(242,248,255,.96) 42%,rgba(220,235,255,.52) 100%)!important;
 }
 #zw3d-porque .z3d-watermark{color:rgba(21,88,192,.07)!important}
+/* Producción CAM: acercar los rótulos al gráfico de etapas. */
+#zw3d-produccion .z3d-production-route svg{height:112px!important}
+#zw3d-produccion .z3d-production-route figcaption{margin-top:0!important;gap:8px!important}
+#zw3d-produccion .z3d-production-route figcaption>span{gap:2px!important}
 /* Producción CAM: secuencia didáctica de cuatro pasos, adaptable a cada pantalla. */
 #zw3d-produccion .z3d-production-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));align-items:stretch;gap:18px}
 #zw3d-produccion .z3d-production-card{position:relative;height:100%;padding-top:28px}
