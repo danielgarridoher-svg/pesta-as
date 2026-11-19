@@ -2116,7 +2116,79 @@ body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-capacidades{
 <p class="mp-zcad-footnote">La disponibilidad corresponde a la matriz publicada por ZWSOFT para las ediciones comparadas. Algunas funciones pueden depender de la versión, módulos o complementos instalados. Para confirmar requisitos y diferencias vigentes, consulta la <a href="#zwcad-capacidades">información de capacidades de ZWCAD</a>. Nota: IFC, RVT y otras funciones tienen restricciones específicas indicadas por el fabricante.</p>
 </div>
 <script id="mp-zcad-comparison-script">
-(function(){var root=document.getElementById('mp-zcad-compare');if(!root||root.dataset.ready==='1')return;root.dataset.ready='1';var categories=[].slice.call(root.querySelectorAll('.mp-zcad-category-toggle'));function setCategory(button,open){button.setAttribute('aria-expanded',String(open));var row=button.closest('tr'),next=row.nextElementSibling;while(next&&!next.classList.contains('mp-zcad-category-row')){next.hidden=!open;next=next.nextElementSibling;}}categories.forEach(function(button){button.addEventListener('click',function(){setCategory(button,button.getAttribute('aria-expanded')!=='true');});});var expand=root.querySelector('[data-zcad-expand]'),collapse=root.querySelector('[data-zcad-collapse]');if(expand)expand.addEventListener('click',function(){categories.forEach(function(b){setCategory(b,true);});});if(collapse)collapse.addEventListener('click',function(){categories.forEach(function(b){setCategory(b,false);});});})();
+(function () {
+  var root = document.getElementById('mp-zcad-compare');
+  if (!root || root.dataset.ready === '1') return;
+  root.dataset.ready = '1';
+
+  var categories = Array.prototype.slice.call(root.querySelectorAll('.mp-zcad-category-toggle'));
+  function setCategory(button, open) {
+    button.setAttribute('aria-expanded', String(open));
+    var row = button.closest('tr');
+    var next = row.nextElementSibling;
+    while (next && !next.classList.contains('mp-zcad-category-row')) {
+      next.hidden = !open;
+      next = next.nextElementSibling;
+    }
+  }
+  categories.forEach(function (button) {
+    button.addEventListener('click', function () {
+      setCategory(button, button.getAttribute('aria-expanded') !== 'true');
+    });
+  });
+
+  var expand = root.querySelector('[data-zcad-expand]');
+  var collapse = root.querySelector('[data-zcad-collapse]');
+  if (expand) expand.addEventListener('click', function () {
+    categories.forEach(function (button) { setCategory(button, true); });
+  });
+  if (collapse) collapse.addEventListener('click', function () {
+    categories.forEach(function (button) { setCategory(button, false); });
+  });
+
+  /* Encabezado fijo sincronizado, replicando el comportamiento de la tabla ZW3D. */
+  var tableScroll = root.querySelector('.mp-zcad-table-scroll');
+  var table = tableScroll && tableScroll.querySelector('.mp-zcad-matrix');
+  var tableHead = table && table.querySelector('thead');
+  if (tableScroll && table && tableHead) {
+    var fixedHead = document.createElement('div');
+    fixedHead.className = 'mp-z3d-fixed-head';
+    fixedHead.setAttribute('aria-hidden', 'true');
+    var fixedTable = document.createElement('table');
+    fixedTable.className = table.className;
+    var fixedThead = tableHead.cloneNode(true);
+    fixedTable.appendChild(fixedThead);
+    fixedHead.appendChild(fixedTable);
+    root.appendChild(fixedHead);
+
+    var headCells = Array.prototype.slice.call(tableHead.querySelectorAll('th'));
+    var fixedCells = Array.prototype.slice.call(fixedThead.querySelectorAll('th'));
+    function syncFixedHead() {
+      var rect = tableScroll.getBoundingClientRect();
+      var tableWidth = table.offsetWidth;
+      fixedHead.style.left = rect.left + 'px';
+      fixedHead.style.width = tableScroll.clientWidth + 'px';
+      fixedTable.style.width = tableWidth + 'px';
+      fixedTable.style.transform = 'translateX(' + (-tableScroll.scrollLeft) + 'px)';
+      headCells.forEach(function (cell, index) {
+        if (fixedCells[index]) fixedCells[index].style.width = cell.getBoundingClientRect().width + 'px';
+      });
+      var headHeight = tableHead.getBoundingClientRect().height;
+      var active = rect.top < 0 && rect.bottom > headHeight;
+      fixedHead.classList.toggle('is-visible', active);
+      tableHead.classList.toggle('mp-z3d-head-hidden', active);
+    }
+    window.addEventListener('scroll', syncFixedHead, { passive: true });
+    window.addEventListener('resize', syncFixedHead);
+    tableScroll.addEventListener('scroll', syncFixedHead, { passive: true });
+    if ('ResizeObserver' in window) {
+      var tableResizeObserver = new ResizeObserver(syncFixedHead);
+      tableResizeObserver.observe(table);
+      tableResizeObserver.observe(tableScroll);
+    }
+    syncFixedHead();
+  }
+})();
 </script>
 </div></section>
 
@@ -3109,6 +3181,32 @@ body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-que-es{
 #zwcad-ahorro .sv-payback strong{color:#1558C0;font-size:14px}
 #zwcad-ahorro .sv-payback span{padding:4px 9px;border-radius:7px;background:#DDF5F2;color:#087F87;font-weight:800}
 #zwcad-ahorro .sv-payback p{flex-basis:100%;margin:0;color:#52657D;font-size:13px}
+</style>
+
+<style id="mp-zwcad-comparison-sticky-header">
+#mp-zcad-compare .mp-zcad-table-scroll{position:relative}
+#mp-zcad-compare .mp-zcad-matrix thead.mp-z3d-head-hidden{visibility:hidden}
+#mp-zcad-compare .mp-z3d-fixed-head{
+  position:fixed;top:0;left:0;z-index:30;overflow:hidden;visibility:hidden;
+  opacity:0;background:linear-gradient(90deg,#F0F4FC 0%,#E8EFFA 30%,#E5F1F4 66%,#E2EFF0 100%);
+  box-shadow:0 6px 18px rgba(14,27,51,.12);pointer-events:none;
+  transition:opacity .2s ease,visibility .2s ease;
+}
+#mp-zcad-compare .mp-z3d-fixed-head.is-visible{visibility:visible;opacity:1}
+#mp-zcad-compare .mp-z3d-fixed-head table{table-layout:fixed;border-collapse:separate;border-spacing:0;margin:0;background:transparent}
+#mp-zcad-compare .mp-z3d-fixed-head th{
+  box-sizing:border-box;padding:15px 10px!important;background:transparent!important;color:#26364D!important;
+  font-size:12px!important;line-height:1.45!important;font-weight:750!important;
+  border-bottom:1px solid rgba(21,88,192,.10);box-shadow:none!important;
+}
+#mp-zcad-compare .mp-z3d-fixed-head th b{display:block;margin-top:3px!important;color:#37677B!important;font-size:13px!important}
+@media(max-width:640px){
+  #mp-zcad-compare .mp-z3d-fixed-head th{padding:12px 7px!important;font-size:11px!important}
+  #mp-zcad-compare .mp-z3d-fixed-head th b{font-size:11px!important}
+}
+@media(prefers-reduced-motion:reduce){
+  #mp-zcad-compare .mp-z3d-fixed-head,#mp-zcad-compare .mp-z3d-fixed-head th{transition:none!important}
+}
 </style>
 </body>
 </html>
