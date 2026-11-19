@@ -2820,5 +2820,93 @@ var hero=page.querySelector('.zcad-hero');if(hero&&!reduce&&window.matchMedia('(
 }
 </style>
 
+
+<style id="mp-zwcad-alternating-sections">
+/* Alternancia visual ZWCAD: claro / oscuro, siguiendo la paleta Model Pro */
+/* 1. Hero claro · 2. Qué es oscuro · 3. Diferencias claro · 4. Funciones oscuro */
+#zwcad-que-es{background:linear-gradient(140deg,#0C1422 0%,#10213A 55%,#0E1B33 100%)!important;color:#F4F6F9!important}
+#zwcad-diferencias{background:linear-gradient(110deg,#FFFFFF 0%,#F5F9FF 58%,#EAF4FF 100%)!important;color:#161616!important}
+#zwcad-capacidades{background:linear-gradient(140deg,#0C1422 0%,#10213A 55%,#0E1B33 100%)!important;color:#F4F6F9!important}
+
+/* 5. Licenciamiento claro */
+#zwcad-precios{background:linear-gradient(110deg,#FFFFFF 0%,#F5F9FF 58%,#EAF4FF 100%)!important;color:#161616!important}
+#zwcad-precios .zwcad-pricing-header h2{color:#1558C0!important}
+#zwcad-precios .zwcad-pricing-header p{color:#52657D!important}
+#zwcad-precios .zwcad-price-card{background:#FFFFFF!important;color:#172B45!important;border-color:#DCE7F4!important}
+#zwcad-precios .zwcad-price-card h3{color:#173A61!important}
+#zwcad-precios .zwcad-price-card p,#zwcad-precios .zwcad-feature-list{color:#52657D!important}
+
+/* 6. Calculadora oscura (se muestra al activarla desde licenciamiento) */
+#zwcad-ahorro{background:linear-gradient(140deg,#0C1422 0%,#10213A 55%,#0E1B33 100%)!important;color:#F4F6F9!important}
+#zwcad-ahorro .sv-eyebrow{color:#8AF5F0!important}
+#zwcad-ahorro #mp-sv-title{background:linear-gradient(100deg,#B9F3EF 0%,#C8DEFF 55%,#D2F5E5 100%)!important;background-clip:text!important;-webkit-background-clip:text!important;-webkit-text-fill-color:transparent!important}
+#zwcad-ahorro .sv-lead{color:#D5E5F6!important}
+#zwcad-ahorro .sv-form,#zwcad-ahorro .sv-results{background:#0E1B33!important;color:#F4F6F9!important;border:1px solid rgba(183,212,247,.2)!important}
+#zwcad-ahorro .sv-step-title h3,#zwcad-ahorro .sv-form label{color:#E5EEF8!important}
+#zwcad-ahorro .sv-hint,#zwcad-ahorro .sv-disclaimer{color:#B7C7DA!important}
+
+/* 7. Comparativa clara */
+#zwcad-comparacion{background:linear-gradient(110deg,#FFFFFF 0%,#F5F9FF 58%,#EAF4FF 100%)!important;color:#172B45!important}
+#zwcad-comparacion .mp-ey{color:#0B8F9B!important}
+#zwcad-comparacion #zcad-comparison-title{background:linear-gradient(100deg,#1558C0 0%,#2E82F0 58%,#00B8BD 100%)!important;background-clip:text!important;-webkit-background-clip:text!important;-webkit-text-fill-color:transparent!important}
+#zwcad-comparacion .mp-zcad-intro{color:#52657D!important}
+
+/* 8. Caso de éxito oscuro */
+#zwcad-casos{background:linear-gradient(140deg,#0C1422 0%,#10213A 55%,#0E1B33 100%)!important;color:#F4F6F9!important}
+#zwcad-casos .mp-cs-head h2{background:linear-gradient(100deg,#B9F3EF 0%,#C8DEFF 55%,#D2F5E5 100%)!important;background-clip:text!important;-webkit-background-clip:text!important;-webkit-text-fill-color:transparent!important}
+#zwcad-casos .mp-cs-head>p:not(.mp-cs-eyebrow){color:#D5E5F6!important}
+#zwcad-casos .mp-cs-eyebrow{color:#8AF5F0!important}
+
+/* 9. Preguntas frecuentes claras */
+#zwcad-preguntas{background:linear-gradient(110deg,#FFFFFF 0%,#F5F9FF 58%,#EAF4FF 100%)!important;color:#172B45!important}
+#zwcad-preguntas .mp-ey{color:#0B8F9B!important}
+#zwcad-preguntas #zcad-faq-title{background:linear-gradient(100deg,#1558C0 0%,#2E82F0 58%,#00B8BD 100%)!important;background-clip:text!important;-webkit-background-clip:text!important;-webkit-text-fill-color:transparent!important}
+#zwcad-preguntas .zcad-faq-list .mp-fq{background:#FFFFFF!important;border:1px solid #DCE7F4!important;box-shadow:0 8px 22px rgba(14,27,51,.07)!important}
+#zwcad-preguntas .zcad-faq-list .mp-fq button{color:#172B45!important}
+#zwcad-preguntas .zcad-faq-list .mp-fq button:hover,#zwcad-preguntas .zcad-faq-list .mp-fq .mp-fi{color:#1558C0!important}
+#zwcad-preguntas .zcad-faq-list .mp-fq .mp-fa p{color:#52657D!important}
+
+/* 10. CTA oscuro · 11. Formulario claro */
+#zwcad-demo{background:linear-gradient(140deg,#0C1422 0%,#10213A 55%,#0E1B33 100%)!important;color:#F4F6F9!important}
+#zwcad-descarga{
+  background:linear-gradient(110deg,#FFFFFF 0%,#F5F9FF 58%,#EAF4FF 100%)!important;
+  color:#172B45!important;
+}
+#zwcad-descarga .zcad-download-eyebrow{color:#087F9C!important}
+#zwcad-descarga .zcad-download-intro h2{color:#172B45!important;-webkit-text-fill-color:#172B45!important}
+#zwcad-descarga .zcad-download-intro h2 span{
+  background:linear-gradient(100deg,#1558C0 0%,#2E82F0 58%,#00B8BD 100%)!important;
+  background-clip:text!important;-webkit-background-clip:text!important;
+  color:transparent!important;-webkit-text-fill-color:transparent!important;
+}
+#zwcad-descarga .zcad-download-intro>p:not(.zcad-download-eyebrow),
+#zwcad-descarga .zcad-download-intro li{color:#52657D!important}
+#zwcad-descarga .zcad-download-intro li span{background:rgba(0,184,189,.12)!important;color:#078B91!important}
+#zwcad-descarga .zcad-download-card{
+  background:#FFFFFF!important;color:#172B45!important;border:1px solid #DCE7F4!important;
+  box-shadow:0 18px 48px rgba(20,55,95,.10)!important;
+}
+#zwcad-descarga .zcad-download-card h3{color:#1558C0!important;-webkit-text-fill-color:#1558C0!important}
+#zwcad-descarga .zcad-download-card h3 span{
+  background:linear-gradient(100deg,#1558C0,#00AEB5)!important;background-clip:text!important;
+  -webkit-background-clip:text!important;color:transparent!important;-webkit-text-fill-color:transparent!important;
+}
+#zwcad-descarga .zcad-download-note{color:#667A91!important}
+#zwcad-descarga .zcad-download-form label{color:#344B66!important}
+#zwcad-descarga .zcad-download-form input,#zwcad-descarga .zcad-download-form select{
+  background:#FFFFFF!important;color:#172B45!important;border:1px solid #CCD9E8!important;
+}
+#zwcad-descarga .zcad-download-form input::placeholder{color:#91A0B2!important}
+#zwcad-descarga .zcad-download-form select option{background:#FFFFFF!important;color:#172B45!important}
+#zwcad-descarga .zcad-download-form input:focus,#zwcad-descarga .zcad-download-form select:focus{
+  outline:2px solid rgba(46,130,240,.22)!important;border-color:#2E82F0!important;
+}
+#zwcad-descarga .zcad-download-privacy{color:#7A8A9D!important}
+#zwcad-descarga .zcad-download-privacy a{color:#1558C0!important}
+@media(prefers-reduced-motion:reduce){
+  #zwcad-descarga .zcad-download-form button{transition:none!important}
+}
+</style>
+
 </body>
 </html>
