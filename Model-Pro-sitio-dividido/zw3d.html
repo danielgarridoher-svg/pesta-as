@@ -1890,7 +1890,12 @@ visual.addEventListener('pointerleave',function(){visual.classList.remove('is-po
 }
 #zw3d-produccion .z3d-production-card h3{
   margin-top:0!important;
+  background:none!important;
+  background-image:none!important;
+  background-clip:border-box!important;
+  -webkit-background-clip:border-box!important;
   color:#0B559A!important;
+  -webkit-text-fill-color:#0B559A!important;
   transition:color .25s ease;
 }
 #zw3d-produccion .z3d-production-card{
@@ -1910,7 +1915,7 @@ visual.addEventListener('pointerleave',function(){visual.classList.remove('is-po
   box-shadow:0 8px 18px rgba(21,88,192,.12);
   background:linear-gradient(145deg,#E5F8F7 0%,#E5F0FF 100%);
 }
-#zw3d-produccion .z3d-production-card:hover h3{color:#087E9A!important}
+#zw3d-produccion .z3d-production-card:hover h3{color:#087E9A!important;-webkit-text-fill-color:#087E9A!important}
 @media(prefers-reduced-motion:reduce){
   #zw3d-produccion .z3d-production-card,
   #zw3d-produccion .z3d-step-icon,
