@@ -2267,11 +2267,13 @@ visual.addEventListener('pointerleave',function(){visual.classList.remove('is-po
 
 <style id="zw3d-cta-light-form-dark">
 /* CTA claro y formulario oscuro: mantener ambas secciones independientes. */
-#zw3d-demo{
+#zw3d-demo,
+#zw3d-demo.z3d-cta{
   background:linear-gradient(110deg,#F8FBFF 0%,#F1F7FF 58%,#EAF4FF 100%)!important;
   color:#172B45!important;
 }
-#zw3d-demo::before{display:none!important}
+#zw3d-demo::before,
+#zw3d-demo.z3d-cta::before{display:none!important;background:none!important;content:none!important}
 #zw3d-demo .z3d-dark-ey{
   color:#0B8F9B!important;-webkit-text-fill-color:#0B8F9B!important;
 }
