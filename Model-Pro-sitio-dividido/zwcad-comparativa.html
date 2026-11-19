@@ -1977,7 +1977,7 @@ body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-capacidades{
       <div class="sv-step">
         <div class="sv-step-title"><span>2</span><h3>Lo que pagas hoy</h3></div>
         <label>Costo anual de tu suscripción CAD por licencia
-          <span class="sv-money"><span>$</span><input type="text" inputmode="numeric" value="30,000" data-sv-current><em>MXN / año</em></span>
+          <span class="sv-money"><span>$</span><input type="text" inputmode="numeric" placeholder="Ej. 30,000" data-sv-current><em>MXN / año</em></span>
           <small class="sv-hint">Introduce el costo anual antes de IVA.</small>
         </label>
       </div>
@@ -2044,11 +2044,26 @@ body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-capacidades{
         return {current:currentYear*years,zwcad:total,saving:currentYear*years-total};
       }
       function render(){
-        var a=calculate(3),b=calculate(5);
-        var hasShortfall=a.saving<0||b.saving<0;
         var heading=root.querySelector("[data-sv-result-heading]");
         var advice=root.querySelector("[data-sv-advice]");
         var adviceLink=root.querySelector("[data-sv-advice-link]");
+        var currentAmount=num(current.value);
+        if(!currentAmount){
+          if(heading)heading.textContent="Ingresa tu gasto anual para comparar";
+          if(advice)advice.hidden=true;
+          var paybackEmpty=root.querySelector("[data-sv-payback]");
+          if(paybackEmpty)paybackEmpty.hidden=true;
+          ["[data-sv-saving3]","[data-sv-saving5]","[data-sv-percent3]","[data-sv-percent5]","[data-sv-current3]","[data-sv-current5]","[data-sv-zwcad3]","[data-sv-zwcad5]","[data-sv-diff3]","[data-sv-diff5]"].forEach(function(selector){
+            var cell=root.querySelector(selector);if(cell)cell.textContent="—";
+          });
+          var diffLabelEmpty=root.querySelector("[data-sv-diff-label]");
+          if(diffLabelEmpty)diffLabelEmpty.textContent="Ahorro";
+          var barsEmpty=root.querySelector("[data-sv-bars]");
+          if(barsEmpty)barsEmpty.innerHTML="";
+          return;
+        }
+        var a=calculate(3),b=calculate(5);
+        var hasShortfall=a.saving<0||b.saving<0;
         if(heading)heading.textContent=hasShortfall?"Comparación de costos":"Tu ahorro estimado";
         if(advice)advice.hidden=!hasShortfall;
         if(adviceLink){
@@ -2096,7 +2111,7 @@ body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-capacidades{
       root.querySelectorAll("[data-sv-year]").forEach(function(btn){btn.addEventListener("click",function(e){e.stopPropagation();flexYear=Number(btn.dataset.svYear);root.querySelectorAll("[data-sv-year]").forEach(function(x){x.setAttribute("aria-pressed",String(x===btn));});plan="flex";root.querySelectorAll("[data-sv-plan]").forEach(function(x){x.setAttribute("aria-checked",String(x.dataset.svPlan==="flex"));});render();});});
       root.querySelectorAll("[data-sv-qty]").forEach(function(btn){btn.addEventListener("click",function(){seats.value=Math.min(200,Math.max(1,(parseInt(seats.value,10)||1)+Number(btn.dataset.svQty)));render();});});
       [version,seats,current].forEach(function(el){el.addEventListener("input",render);el.addEventListener("change",render);});
-      current.addEventListener("blur",function(){current.value=num(current.value).toLocaleString("en-US");});
+      current.addEventListener("blur",function(){if(String(current.value).trim())current.value=num(current.value).toLocaleString("en-US");});
       render();
     });
   }
