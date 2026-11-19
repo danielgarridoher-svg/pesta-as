@@ -2906,6 +2906,21 @@ var hero=page.querySelector('.zcad-hero');if(hero&&!reduce&&window.matchMedia('(
 @media(prefers-reduced-motion:reduce){
   #zwcad-descarga .zcad-download-form button{transition:none!important}
 }
+
+/* Menú flotante ZWCAD · anclado al lado izquierdo */
+.mp-zwcad-page .zcad-floating-nav{
+  right:auto!important;
+  left:clamp(12px,2vw,24px)!important;
+  align-items:flex-start!important;
+}
+@media(max-width:600px){
+  .mp-zwcad-page .zcad-floating-nav{
+    right:auto!important;
+    left:10px!important;
+    width:min(280px,calc(100vw - 20px))!important;
+    align-items:flex-start!important;
+  }
+}
 </style>
 
 </body>
