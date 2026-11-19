@@ -1809,6 +1809,11 @@ visual.addEventListener('pointerleave',function(){visual.classList.remove('is-po
 #zw3d-preguntas .z3d-faq-list .mp-fq[open] .mp-fa{max-height:500px}
 #zw3d-preguntas .z3d-faq-list .mp-fq .mp-fa p{padding:0 22px 22px!important;color:#607087!important}
 @media(prefers-reduced-motion:reduce){#zw3d-preguntas .z3d-faq-list .mp-fq>summary .mp-fi{transition:none!important}#zw3d-preguntas .z3d-faq-list .mp-fq .mp-fa{transition:none!important}}
+/* Degradado solicitado para todo el contenedor «Qué es ZW3D». */
+#zw3d-que-es{
+  background:linear-gradient(140deg,oklch(0.25 0.05 260) 0%,oklch(0.32 0.09 256) 52%,oklch(0.30 0.08 205) 100%)!important;
+}
+
 </style>
 
 <script id="mp-z3d-faq-and-license-script">(function(){var page=document.querySelector('.mp-page[data-page="zw3d"]');if(!page)return;var faq=page.querySelector('#zw3d-preguntas .z3d-faq-list');if(faq){var items=[].slice.call(faq.querySelectorAll('.mp-fq'));if('IntersectionObserver'in window){var reveal=new IntersectionObserver(function(entries){entries.forEach(function(entry){if(entry.isIntersecting){entry.target.classList.add('is-visible');reveal.unobserve(entry.target)}})},{threshold:.12,rootMargin:'0px 0px -35px 0px'});items.forEach(function(item,index){item.style.transitionDelay=(index*110)+'ms';reveal.observe(item)})}else items.forEach(function(item){item.classList.add('is-visible')})}var cards=[].slice.call(page.querySelectorAll('#zw3d-licencias .z3d-price-card'));function selectCard(card){cards.forEach(function(item){var selected=item===card;item.classList.toggle('is-selected',selected);item.setAttribute('aria-pressed',String(selected))})}cards.forEach(function(card){card.tabIndex=0;card.setAttribute('role','button');card.setAttribute('aria-pressed','false');card.addEventListener('click',function(event){if(event.target.closest('a,button'))return;selectCard(card)});card.addEventListener('keydown',function(event){if(event.target!==card)return;if(event.key==='Enter'||event.key===' '){event.preventDefault();selectCard(card)}})})})();</script>
