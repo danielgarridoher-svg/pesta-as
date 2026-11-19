@@ -1047,6 +1047,10 @@ a.mp-card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(11,20,34,.
 #mp-zcad-savings .sv-results{padding:25px}
 #mp-zcad-savings .sv-result-label{margin:0 0 15px;color:#748297;font-size:11px;font-weight:800;letter-spacing:1px;text-transform:uppercase}
 #mp-zcad-savings .sv-totals{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+#mp-zcad-savings .sv-advice{margin:0 0 16px;padding:15px 17px;border:1px solid #cfe2f4;border-left:4px solid #00aeb5;border-radius:10px;background:linear-gradient(110deg,#f4f9ff,#effaf9);color:#344b64}
+#mp-zcad-savings .sv-advice[hidden]{display:none}
+#mp-zcad-savings .sv-advice b{display:block;margin-bottom:5px;color:#1558c0;font-size:13px}
+#mp-zcad-savings .sv-advice p{margin:0;font-size:12px;line-height:1.6}
 #mp-zcad-savings .sv-total{padding:17px;background:var(--sv-bg);border:1px solid #eaf0f6;border-radius:12px}
 #mp-zcad-savings .sv-total small{display:block;margin-bottom:8px;color:#718095;font-size:11px;font-weight:700}
 #mp-zcad-savings .sv-total strong{display:block;color:var(--sv-ink);font-size:clamp(22px,2.5vw,31px);letter-spacing:-1px;line-height:1.1}
@@ -1985,7 +1989,8 @@ body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-capacidades{
       </div>
     </form>
     <div class="sv-results" aria-live="polite">
-      <p class="sv-result-label">Tu ahorro estimado</p>
+      <p class="sv-result-label" data-sv-result-heading>Tu ahorro estimado</p>
+      <aside class="sv-advice" data-sv-advice hidden aria-live="polite"><b>¿Tu proyecto es de corta duración?</b><p data-sv-advice-text></p></aside>
       <div class="sv-totals">
         <div class="sv-total"><small>A 3 años</small><strong data-sv-saving3>—</strong><em data-sv-percent3></em></div>
         <div class="sv-total"><small>A 5 años</small><strong data-sv-saving5>—</strong><em data-sv-percent5></em></div>
@@ -2037,10 +2042,21 @@ body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-capacidades{
       }
       function render(){
         var a=calculate(3),b=calculate(5);
-        root.querySelector("[data-sv-saving3]").textContent=money(a.saving);
-        root.querySelector("[data-sv-saving5]").textContent=money(b.saving);
-        root.querySelector("[data-sv-percent3]").textContent=(a.current>0?(a.saving/a.current*100).toFixed(0)+" % menos":"Compara tus costos");
-        root.querySelector("[data-sv-percent5]").textContent=(b.current>0?(b.saving/b.current*100).toFixed(0)+" % menos":"Compara tus costos");
+        var hasShortfall=a.saving<0;
+        var heading=root.querySelector("[data-sv-result-heading]");
+        var advice=root.querySelector("[data-sv-advice]");
+        var adviceText=root.querySelector("[data-sv-advice-text]");
+        if(heading)heading.textContent=hasShortfall?"Comparación de costos":"Tu ahorro estimado";
+        if(advice)advice.hidden=!hasShortfall;
+        if(adviceText)adviceText.textContent=b.saving>0
+          ?"Para un proyecto temporal o de pocos años, mantener tu suscripción actual puede ser más conveniente: a 3 años, ZWCAD representa una inversión mayor. Si planeas utilizar CAD durante más tiempo, compara el resultado a 5 años, donde la licencia perpetua ya podría generar ahorro."
+          :"Si tu proyecto es temporal o prevés utilizar CAD por pocos años, mantener tu esquema actual puede ser más conveniente. En este escenario, la inversión en ZWCAD no se recupera dentro de los periodos comparados; una licencia perpetua suele tener más sentido cuando planeas utilizarla durante varios años.";
+        function difference(value){return value<0?money(Math.abs(value))+" más con ZWCAD":money(value)+" de ahorro";}
+        function percentage(value,total){return total>0?(Math.abs(value/total*100).toFixed(0)+(value<0?" % más":" % menos")):"Compara tus costos";}
+        root.querySelector("[data-sv-saving3]").textContent=difference(a.saving);
+        root.querySelector("[data-sv-saving5]").textContent=difference(b.saving);
+        root.querySelector("[data-sv-percent3]").textContent=percentage(a.saving,a.current);
+        root.querySelector("[data-sv-percent5]").textContent=percentage(b.saving,b.current);
         root.querySelector("[data-sv-current3]").textContent=money(a.current);
         root.querySelector("[data-sv-current5]").textContent=money(b.current);
         root.querySelector("[data-sv-zwcad3]").textContent=money(a.zwcad);
