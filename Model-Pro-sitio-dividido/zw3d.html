@@ -2352,19 +2352,22 @@ visual.addEventListener('pointerleave',function(){visual.classList.remove('is-po
 
 
 <style id="z3d-hero-light-gradients">
+/* Hero claro: reutiliza los degradados oficiales de títulos y CTA. */
 .mp-zw3d-page .z3d-hero .z3d-title{
-  background:linear-gradient(105deg,var(--brand-blue) 0%,var(--brand-blue-bright) 52%,var(--primary) 100%);
-  -webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent
+  background:var(--title-gradient);
+  -webkit-background-clip:text;background-clip:text;
+  color:transparent;-webkit-text-fill-color:transparent
 }
 .mp-zw3d-page .z3d-hero .z3d-actions .mp-btn{
-  background:linear-gradient(105deg,var(--brand-blue) 0%,var(--brand-blue-bright) 52%,var(--primary) 100%);
-  color:#fff;border:1px solid transparent;box-shadow:0 8px 20px rgba(23,78,173,.18)
+  background:var(--cta-gradient);
+  color:#fff;border:1px solid transparent;
+  box-shadow:var(--cta-glow)
 }
 .mp-zw3d-page .z3d-hero .z3d-actions .mp-btn:hover{
-  background:linear-gradient(105deg,#123F91 0%,#0879D7 52%,#159C91 100%)
+  background:linear-gradient(135deg,#1558C0 0%,#2E82F0 52%,#00999E 100%)
 }
 .mp-zw3d-page .z3d-hero .z3d-outline{
-  border-color:rgba(23,78,173,.2);
+  border-color:rgba(21,88,192,.2);
   background:linear-gradient(105deg,#F8FBFF 0%,#F0F6FF 52%,#E5F3F8 100%);
   color:#174EAD;box-shadow:0 6px 18px rgba(23,78,173,.08)
 }
