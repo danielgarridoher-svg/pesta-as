@@ -130,11 +130,11 @@
 #mp-z3d-compare .mp-zcad-table-scroll{position:relative}
 #mp-z3d-compare .mp-zcad-matrix thead.mp-z3d-head-hidden{visibility:hidden}
 #mp-z3d-compare .mp-z3d-fixed-head{
-  position:fixed;top:0;left:0;z-index:30;overflow:hidden;display:none;
+  position:fixed;top:0;left:0;z-index:30;overflow:hidden;visibility:hidden;
   opacity:0;background:#0C1422;box-shadow:0 6px 18px rgba(5,18,36,.2);
-  pointer-events:none;transition:opacity .2s ease;
+  pointer-events:none;transition:opacity .2s ease,visibility .2s ease;
 }
-#mp-z3d-compare .mp-z3d-fixed-head.is-visible{display:block;opacity:1}
+#mp-z3d-compare .mp-z3d-fixed-head.is-visible{visibility:visible;opacity:1}
 #mp-z3d-compare .mp-z3d-fixed-head table{
   table-layout:fixed;border-collapse:collapse;margin:0;background:#0C1422;
 }
