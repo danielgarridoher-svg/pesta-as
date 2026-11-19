@@ -2374,13 +2374,14 @@ visual.addEventListener('pointerleave',function(){visual.classList.remove('is-po
 
 
 <style id="zw3d-form-card-title-gradient">
-/* Tarjeta del formulario: texto base blanco y frase destacada con degradado. */
-#zw3d-trial-form .z3d-trial-card-title{
+/* Mayor especificidad para prevalecer sobre el estilo general del encabezado de la tarjeta. */
+#zw3d-trial-form .z3d-trial-form-card h3.z3d-trial-card-title{
   color:#FFFFFF!important;
-  background:none!important;
   -webkit-text-fill-color:#FFFFFF!important;
+  background:none!important;
 }
-#zw3d-trial-form .z3d-trial-card-title span{
+#zw3d-trial-form .z3d-trial-form-card h3.z3d-trial-card-title span{
+  display:inline;
   background:linear-gradient(135deg,#8AF5F0 0%,#A9C8FF 100%)!important;
   background-clip:text!important;
   -webkit-background-clip:text!important;
