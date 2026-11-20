@@ -1856,6 +1856,12 @@ a.mp-card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(11,20,34,.
 #zw3d-trial-form .z3d-request-fields input,#zw3d-trial-form .z3d-request-fields select{box-sizing:border-box!important;width:100%!important;min-width:0!important;min-height:46px!important;padding:12px 14px!important;border:1.5px solid #DCE6F2!important;border-radius:10px!important;background:#fff!important;color:#131C2B!important;font:500 15px Archivo,system-ui,sans-serif!important}
 #zw3d-trial-form .z3d-request-fields input:focus,#zw3d-trial-form .z3d-request-fields select:focus{outline:0!important;border-color:#1E6FE0!important;box-shadow:0 0 0 3px rgba(30,111,224,.15)!important}
 #zw3d-trial-form .z3d-request-full{grid-column:1/-1!important}
+#zw3d-trial-form .z3d-request-project{grid-column:span 1!important;display:flex!important;flex-direction:column!important;gap:7px!important;min-width:0!important;color:#344B68!important;font-size:14px!important;font-weight:600!important}
+#zw3d-trial-form .z3d-request-project span{color:#718096!important;font-weight:400!important}
+#zw3d-trial-form .z3d-request-project[hidden]{display:none!important}
+#zw3d-trial-form .z3d-request-project textarea{box-sizing:border-box!important;width:100%!important;min-height:112px!important;padding:12px 14px!important;border:1.5px solid #DCE6F2!important;border-radius:10px!important;background:#fff!important;color:#131C2B!important;font:500 15px Archivo,system-ui,sans-serif!important;resize:vertical!important}
+#zw3d-trial-form .z3d-request-project textarea:focus{outline:0!important;border-color:#1E6FE0!important;box-shadow:0 0 0 3px rgba(30,111,224,.15)!important}
+#zw3d-trial-form .z3d-request-project-wide{grid-column:1/-1!important}
 #zw3d-trial-form .z3d-request-submit{display:flex!important;flex-direction:column!important;align-items:center!important;gap:0!important;margin-top:8px!important}
 #zw3d-trial-form .z3d-request-submit button{display:block!important;width:100%!important;min-height:58px!important;margin:0!important;padding:15px 22px!important;border:0!important;border-radius:13px!important;background:linear-gradient(100deg,#00BFAF 0%,#2E82F0 100%)!important;color:#fff!important;font:700 16px Archivo,system-ui,sans-serif!important;box-shadow:none!important;cursor:pointer!important}
 #zw3d-trial-form .z3d-request-submit button:hover{filter:brightness(1.04)!important;transform:translateY(-1px)!important}
@@ -1869,6 +1875,17 @@ a.mp-card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(11,20,34,.
 @media(max-width:1000px){#zw3d-trial-form .z3d-request-grid{grid-template-columns:1fr!important;gap:34px!important}#zw3d-trial-form .z3d-request-intro h2{font-size:clamp(34px,6vw,46px)!important}}
 @media(max-width:700px){#zw3d-trial-form.z3d-request-section{padding:64px 20px!important}#zw3d-trial-form .z3d-request-options{grid-template-columns:1fr!important}#zw3d-trial-form .z3d-request-option-box{min-height:0!important;flex-direction:row!important;align-items:center!important;padding:14px 44px 14px 16px!important}#zw3d-trial-form .z3d-request-option-box small{display:block!important}}
 @media(max-width:520px){#zw3d-trial-form .z3d-request-card{padding:22px!important}#zw3d-trial-form .z3d-request-form,#zw3d-trial-form .z3d-request-fields{grid-template-columns:1fr!important}#zw3d-trial-form .z3d-request-fields>*{grid-column:1/-1!important}}
+</style>
+<style id="mp-zw3d-form-column-fix">
+/* Mantener la columna del formulario anclada sin que cambie de ancho al crecer los campos. */
+#zw3d-trial-form .z3d-request-grid{grid-template-columns:minmax(0,5fr) minmax(520px,6fr)!important;align-items:start!important}
+#zw3d-trial-form .z3d-request-intro{position:sticky!important;top:112px!important;align-self:start!important}
+#zw3d-trial-form .z3d-request-card{position:sticky!important;top:96px!important;align-self:start!important;width:100%!important;min-width:0!important}
+@media(max-width:1000px){
+ #zw3d-trial-form .z3d-request-grid{grid-template-columns:minmax(0,1fr)!important}
+ #zw3d-trial-form .z3d-request-intro,#zw3d-trial-form .z3d-request-card{position:static!important;top:auto!important}
+}
+@media(max-width:700px){#zw3d-trial-form .z3d-request-grid{grid-template-columns:minmax(0,1fr)!important}}
 </style>
 </head>
 <body><div class="mp-wrap">
@@ -2254,7 +2271,7 @@ a.mp-card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(11,20,34,.
 <details class="mp-fq"><summary>¿Hay una versión de prueba? <svg class="mp-fi" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 4v12M4 10h12" fill="none" stroke="currentColor" stroke-width="2"/></svg></summary><div class="mp-fa" id="z3d-faq-4"><p>En Model Pro te ofrecemos una prueba gratuita de ZW3D durante 30 días. <a href="#zw3d-trial-form" data-zw3d-intent="descarga">Solicítala mediante nuestro formulario</a> y te orientaremos para iniciar el proceso.</p></div></details>
 <details class="mp-fq"><summary>¿ZW3D permite diseñar moldes y cavidades?</summary><div class="mp-fa" id="z3d-faq-5"><p>Sí. ZW3D cuenta con herramientas especializadas para diseñar moldes, electrodos y cavidades. Las funciones disponibles dependen de la edición; en Model Pro podemos ayudarte a identificar cuál corresponde a tus necesidades.</p></div></details>
 <details class="mp-fq"><summary>¿Puedo preparar el mecanizado CNC dentro de ZW3D?</summary><div class="mp-fa" id="z3d-faq-6"><p>Sí. ZW3D integra herramientas CAM para preparar operaciones y trayectorias CNC a partir del modelo 3D. Las estrategias y capacidades varían según la edición. En Model Pro podemos orientarte sobre las opciones de mecanizado que necesitas.</p></div></details></div></div></section>
-<section class="mp-sect z3d-cta" id="zw3d-demo" aria-labelledby="z3d-demo-title"><div class="mp-co"><p class="z3d-dark-ey">Hablemos de tu proyecto</p><h2 class="mp-h2" id="z3d-demo-title">¿Quieres ver ZW3D en acción?</h2><p>Agenda una demostración o solicita una cotización. Te asesoramos para elegir el licenciamiento adecuado para tu equipo.</p><div class="z3d-cta-actions"><a class="mp-white" href="#zw3d-trial-form">Elegir cómo quieres avanzar</a></div><p class="z3d-back"><a href="index.html#inicio"><i class="ti ti-arrow-left" aria-hidden="true"></i> Volver al inicio</a></p></div></section>
+
 <section class="mp-sect z3d-section z3d-request-section" id="zw3d-trial-form" aria-labelledby="z3d-trial-title">
   <div class="mp-co z3d-request-grid">
     <div class="z3d-request-intro">
@@ -2291,6 +2308,7 @@ a.mp-card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(11,20,34,.
           <label>País / Región*<select name="pais" required><option value="">Selecciona tu país</option><option value="México">México</option><option value="Otro">Otro</option></select></label>
           <label>Número de teléfono*<input type="tel" name="telefono" placeholder="+52" autocomplete="tel" required></label>
           <label class="z3d-request-full">Industria*<select name="industria" required><option value="">Selecciona una industria</option><option>Automotriz</option><option>Manufactura</option><option>Maquinaria y equipo</option><option>Plásticos y moldes</option><option>Educación</option><option>Otra</option></select></label>
+          <label class="z3d-request-project" data-z3d-project-group>Cuéntanos de tu proyecto <span>(Opcional)</span><textarea name="mensaje" rows="4" placeholder="Describe brevemente lo que necesitas"></textarea></label>
         </div>
         <div class="z3d-request-submit" data-z3d-submit-wrap hidden>
           <button type="submit" data-z3d-submit>Enviar</button>
@@ -2353,6 +2371,12 @@ a.mp-card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(11,20,34,.
     hidden.value=values.join(',');
     fields.hidden=!values.length;
     submitWrap.hidden=!values.length;
+    var projectGroup=form.querySelector('[data-z3d-project-group]');
+    if(projectGroup){
+      var showProject=values.indexOf('demostracion')!==-1||values.indexOf('cotizacion')!==-1;
+      projectGroup.hidden=!showProject;
+      projectGroup.classList.toggle('z3d-request-project-wide',values.indexOf('demostracion')!==-1&&values.indexOf('cotizacion')===-1);
+    }
     updateIntro(values);
     updateSteps(values);
     error.textContent='';
