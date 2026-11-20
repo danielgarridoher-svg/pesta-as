@@ -1100,9 +1100,9 @@ body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-que-es .zcad-section-lead
   }
   function next(values){
     var content={
-      descarga:['Descargas ZWCAD','Al enviar tu solicitud podremos orientarte para continuar con la prueba gratuita.'],
-      demostracion:['Acordamos tu demostración','Nuestro equipo te contactará para conocer tu proyecto y coordinarla.'],
-      cotizacion:['Preparamos tu cotización','Revisaremos la edición y modalidad que necesitas para orientarte.']
+      descarga:['Descargas ZWCAD','Al enviar el formulario ves tu enlace de descarga y también te lo mandamos por correo.'],
+      demostracion:['Acordamos tu demostración','Te escribimos para elegir fecha y formato (remota o presencial, según tu proyecto).'],
+      cotizacion:['Te preparamos una cotización','Un asesor te contacta con la propuesta según tu edición y número de licencias.']
     };
     section.querySelector('[data-zcad-download-benefits]').innerHTML=values.map(function(value){
       var item=content[value];
@@ -1730,6 +1730,7 @@ var hero=page.querySelector('.zcad-hero');if(hero&&!reduce&&window.matchMedia('(
 #zwcad-descarga .zcad-meli-next li{
   box-sizing:border-box!important;display:flex!important;flex-flow:row nowrap!important;
   align-items:flex-start!important;gap:14px!important;width:100%!important;min-width:0!important;
+  height:auto!important;min-height:0!important;max-height:none!important;overflow:visible!important;
   margin:0!important;padding:16px 17px!important;border:1px solid #DCE6F2!important;
   border-radius:14px!important;background:#FFFFFF!important;box-shadow:0 5px 16px rgba(22,65,112,.045)!important;
 }
@@ -1748,9 +1749,10 @@ var hero=page.querySelector('.zcad-hero');if(hero&&!reduce&&window.matchMedia('(
   font-size:15px!important;line-height:1.4!important;font-weight:750!important;
 }
 #zwcad-descarga .zcad-meli-next li small{
-  display:block!important;width:100%!important;text-decoration:none!important;border:0!important;box-shadow:none!important;color:#64768B!important;
+  display:block!important;width:100%!important;height:auto!important;max-height:none!important;overflow:visible!important;
+  text-decoration:none!important;border:0!important;box-shadow:none!important;color:#64768B!important;
   font-size:13px!important;line-height:1.55!important;white-space:normal!important;
-  overflow-wrap:break-word!important;word-break:normal!important;
+  overflow-wrap:anywhere!important;word-break:normal!important;
 }
 #zwcad-descarga .zcad-download-card{
   box-sizing:border-box!important;align-self:start!important;
