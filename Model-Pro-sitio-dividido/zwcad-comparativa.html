@@ -2851,26 +2851,39 @@ var hero=page.querySelector('.zcad-hero');if(hero&&!reduce&&window.matchMedia('(
 
 
 <style id="mp-zwcad-coconal-dark-section">
-/* Caso COCONAL: encabezado alineado y paleta pastel de alto contraste */
-#zwcad-casos.mp-cs{background:linear-gradient(125deg,#0C1422 0%,#10213A 58%,#0E1B33 100%)!important;color:#F4F6F9!important}
+/* Caso COCONAL · lenguaje visual de las secciones oscuras */
+#zwcad-casos.mp-cs{
+  position:relative;isolation:isolate;overflow:hidden;
+  background:radial-gradient(ellipse at 84% 12%,rgba(65,160,255,.20),transparent 38%),radial-gradient(ellipse at 8% 96%,rgba(0,190,190,.13),transparent 36%),linear-gradient(125deg,#0A1528 0%,#102B50 58%,#0D2340 100%)!important;
+  color:#F2F7FF!important
+}
+#zwcad-casos.mp-cs:before{position:absolute;inset:0;z-index:-1;content:"";pointer-events:none;background-image:linear-gradient(rgba(151,202,237,.045) 1px,transparent 1px),linear-gradient(90deg,rgba(151,202,237,.045) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(115deg,rgba(0,0,0,.7),transparent 82%)}
+#zwcad-casos .mp-co{position:relative;z-index:1}
 #zwcad-casos .mp-cs-head{width:100%!important;max-width:none!important;margin:0 0 38px!important;padding:0!important;text-align:left!important}
-#zwcad-casos .mp-cs-eyebrow{color:#A8F0E8!important;text-align:left!important}
-#zwcad-casos .mp-cs-head h2{margin:0!important;text-align:left!important;background:linear-gradient(100deg,#B9F3EF 0%,#C8DEFF 55%,#D2F5E5 100%)!important;background-clip:text!important;-webkit-background-clip:text!important;-webkit-text-fill-color:transparent!important}
-#zwcad-casos .mp-cs-head>p:last-child{width:100%!important;max-width:760px!important;margin:15px 0 0!important;text-align:left!important;color:#D5E5F6!important;font-size:16px!important;line-height:1.65!important}
-#zwcad-casos .mp-cs-brand{background:#FFFFFF!important;color:#172B45!important;border:1px solid #DCE7F4!important;box-shadow:0 18px 40px rgba(0,0,0,.22)!important}
-#zwcad-casos .mp-cs-brand:after{border-color:rgba(0,184,189,.22)!important}
-#zwcad-casos .mp-cs-kicker{color:#087F9C!important}
-#zwcad-casos .mp-cs-logo{background:#F4F8FE!important;border:1px solid #E1EAF4!important}
-#zwcad-casos .mp-cs-brand h3{background:none!important;color:#173253!important;-webkit-text-fill-color:#173253!important;font-size:clamp(21px,2.3vw,28px)!important;font-weight:800!important;line-height:1.2!important}
-#zwcad-casos .mp-cs-brand>p{color:#526783!important}
-#zwcad-casos .mp-cs-brand>a{color:#1558C0!important}
-#zwcad-casos .mp-cs-project{background:#FFFFFF!important;color:#172B45!important;border-color:#DCE7F4!important}
-#zwcad-casos .mp-cs-project>span{color:#087F9C!important}
-#zwcad-casos .mp-cs-project p{color:#526783!important}
-#zwcad-casos .mp-cs-project strong{color:#1558C0!important}
-#zwcad-casos .mp-cs-video{box-shadow:0 16px 36px rgba(0,0,0,.28)!important}
+#zwcad-casos .mp-cs-eyebrow{color:#8BD8FF!important;text-align:left!important;text-shadow:0 0 16px rgba(80,180,255,.24)}
+#zwcad-casos .mp-cs-head h2{margin:0!important;text-align:left!important;background:linear-gradient(100deg,#FFFFFF 0%,#C8E8FF 56%,#8BE3DB 100%)!important;background-clip:text!important;-webkit-background-clip:text!important;-webkit-text-fill-color:transparent!important}
+#zwcad-casos .mp-cs-head>p:last-child{width:100%!important;max-width:760px!important;margin:15px 0 0!important;text-align:left!important;color:#CEDCF0!important;font-size:16px!important;line-height:1.7!important}
+#zwcad-casos .mp-cs-brand{background:linear-gradient(145deg,rgba(255,255,255,.085),rgba(255,255,255,.035))!important;color:#F2F7FF!important;border:1px solid rgba(170,205,245,.2)!important;box-shadow:0 20px 46px rgba(0,0,0,.25),inset 0 1px rgba(255,255,255,.07)!important;backdrop-filter:blur(8px)}
+#zwcad-casos .mp-cs-brand:after{border-color:rgba(91,203,232,.3)!important;box-shadow:0 0 0 24px rgba(46,130,240,.08),0 0 0 52px rgba(0,184,189,.045)!important}
+#zwcad-casos .mp-cs-kicker{color:#8BE3DB!important}
+#zwcad-casos .mp-cs-logo{background:#FFFFFF!important;border:1px solid rgba(255,255,255,.7)!important;box-shadow:0 8px 22px rgba(0,0,0,.14)}
+#zwcad-casos .mp-cs-brand h3{background:none!important;color:#FFFFFF!important;-webkit-text-fill-color:#FFFFFF!important;font-size:clamp(21px,2.3vw,28px)!important;font-weight:800!important;line-height:1.2!important}
+#zwcad-casos .mp-cs-brand>p{color:#C4D5EA!important}
+#zwcad-casos .mp-cs-brand>a{color:#8BE3DB!important;transition:color .2s,transform .2s}
+#zwcad-casos .mp-cs-brand>a:hover{color:#FFFFFF!important;transform:translateX(3px)}
+#zwcad-casos .mp-cs-project{background:linear-gradient(110deg,rgba(255,255,255,.09),rgba(255,255,255,.045))!important;color:#F2F7FF!important;border:1px solid rgba(170,205,245,.2)!important;border-left:3px solid #55C9D5!important;box-shadow:0 10px 26px rgba(0,0,0,.16)!important}
+#zwcad-casos .mp-cs-project>span{color:#8BE3DB!important}
+#zwcad-casos .mp-cs-project p{color:#D5E5F6!important}
+#zwcad-casos .mp-cs-project strong{color:#FFFFFF!important}
+#zwcad-casos .mp-cs-video{box-shadow:0 20px 42px rgba(0,0,0,.32)!important;border:1px solid rgba(170,205,245,.18)}
+#zwcad-casos .mp-cs-video:before{background:linear-gradient(135deg,rgba(7,18,34,.08),rgba(0,184,189,.12)),repeating-linear-gradient(0deg,transparent 0 35px,rgba(151,202,237,.09) 35px 36px),repeating-linear-gradient(90deg,transparent 0 35px,rgba(151,202,237,.09) 35px 36px)}
 #zwcad-casos .mp-cs-video-caption{color:#D5E5F6!important}
 #zwcad-casos .mp-cs-play{color:#FFFFFF!important}
+#zwcad-casos .mp-cs-play span:first-child{background:linear-gradient(135deg,#1689E8,#00B8BD)!important;box-shadow:0 0 0 10px rgba(0,184,189,.16),0 10px 28px rgba(0,0,0,.3)!important}
+#zwcad-casos .mp-cs-play:focus-visible{outline:3px solid #8BD8FF;outline-offset:8px;border-radius:12px}
+@media(hover:hover){#zwcad-casos .mp-cs-brand:hover{transform:translateY(-3px);border-color:rgba(91,203,232,.38)!important;box-shadow:0 25px 54px rgba(0,0,0,.32),inset 0 1px rgba(255,255,255,.08)!important}}
+@media(prefers-reduced-motion:reduce){#zwcad-casos .mp-cs-brand,#zwcad-casos .mp-cs-brand>a,#zwcad-casos .mp-cs-play span:first-child{transition:none!important}}
+@media(max-width:760px){#zwcad-casos.mp-cs:before{background-size:32px 32px}}
 </style>
 
 <style id="mp-zwcad-faq-light-motion">
