@@ -1054,7 +1054,7 @@ body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-que-es .zcad-section-lead
           </div>
 
           <div class="zcad-meli-submit" data-zcad-submit-wrap hidden>
-            <button type="submit" data-zcad-submit>Enviar solicitud</button>
+            <button type="submit" data-zcad-submit>Enviar</button>
             <p class="zcad-download-privacy">Al enviar aceptas nuestro <a href="index.html#aviso-privacidad">aviso de privacidad</a>.</p>
           </div>
         </form>
@@ -1122,7 +1122,7 @@ body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-que-es .zcad-section-lead
     });
     fields.hidden=!values.length;
     submitWrap.hidden=!values.length;
-    submit.textContent=values.length===1?({descarga:'Solicitar prueba gratuita',demostracion:'Solicitar demostración',cotizacion:'Solicitar cotización'})[values[0]]:'Enviar solicitud';
+    submit.textContent='Enviar';
   }
   function refresh(){
     var values=selected();
@@ -1796,12 +1796,13 @@ var hero=page.querySelector('.zcad-hero');if(hero&&!reduce&&window.matchMedia('(
   color:#15202E!important;white-space:normal!important;
 }
 #zwcad-descarga .zcad-download-intro ul.zcad-meli-next>li>span:first-child{
-  box-sizing:border-box!important;display:block!important;flex:none!important;
-  width:22px!important;height:auto!important;min-height:0!important;
-  margin:1px 0 0!important;padding:0!important;border:0!important;border-radius:0!important;
-  background:transparent!important;box-shadow:none!important;
-  color:#0B559A!important;font-size:17px!important;line-height:1.3!important;
-  font-weight:800!important;text-align:left!important;
+  box-sizing:border-box!important;display:grid!important;place-items:center!important;flex:none!important;
+  width:28px!important;height:28px!important;min-height:28px!important;
+  margin:0!important;padding:0!important;border:1px solid rgba(46,130,240,.16)!important;border-radius:50%!important;
+  background:linear-gradient(135deg,rgba(0,191,175,.16) 0%,rgba(46,130,240,.18) 100%)!important;
+  box-shadow:0 2px 7px rgba(46,130,240,.07)!important;
+  color:#0B559A!important;font-size:14px!important;line-height:1!important;
+  font-weight:800!important;text-align:center!important;
 }
 #zwcad-descarga .zcad-download-intro ul.zcad-meli-next>li>span:last-child{
   display:block!important;min-width:0!important;width:100%!important;
@@ -1824,6 +1825,26 @@ var hero=page.querySelector('.zcad-hero');if(hero&&!reduce&&window.matchMedia('(
 }
 #zwcad-descarga .zcad-download-intro ul.zcad-meli-next>li small{
   color:#515D6E!important;font-size:13px!important;line-height:1.6!important;
+}
+
+/* Envío compacto a la derecha y leyenda de privacidad */
+#zwcad-descarga .zcad-meli-submit{
+  display:flex!important;flex-direction:row!important;align-items:center!important;
+  justify-content:space-between!important;gap:16px!important;margin-top:22px!important;
+}
+#zwcad-descarga .zcad-meli-submit button{
+  order:2!important;flex:0 0 auto!important;width:auto!important;min-width:112px!important;
+  min-height:44px!important;padding:11px 26px!important;border-radius:9px!important;
+  font:700 14px Archivo,system-ui,sans-serif!important;
+}
+#zwcad-descarga .zcad-download-privacy{
+  order:1!important;flex:1 1 auto!important;margin:0!important;
+  color:#59697F!important;font-size:12px!important;line-height:1.5!important;
+}
+#zwcad-descarga .zcad-download-privacy a{color:#0B559A!important;text-decoration:underline!important;text-underline-offset:2px!important}
+@media(max-width:520px){
+  #zwcad-descarga .zcad-meli-submit{align-items:flex-start!important;gap:12px!important}
+  #zwcad-descarga .zcad-meli-submit button{min-width:100px!important;padding:10px 20px!important}
 }
 </style>
 
