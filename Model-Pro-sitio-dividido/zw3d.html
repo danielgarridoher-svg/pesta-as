@@ -2353,7 +2353,19 @@ a.mp-card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(11,20,34,.
       var names=values.map(function(v){return short[v].toLowerCase();});
       sub='Elegiste '+names.slice(0,-1).join(', ')+' y '+names[names.length-1]+'. Lo atenderemos en un solo contacto.';
     }
-    section.querySelector('[data-z3d-main-title]').textContent=title;
+    var titleNode=section.querySelector('[data-z3d-main-title]');
+    titleNode.replaceChildren();
+    var productMark=title.lastIndexOf('ZW3D');
+    if(productMark!==-1){
+      titleNode.appendChild(document.createTextNode(title.slice(0,productMark)));
+      var productSpan=document.createElement('span');
+      productSpan.className='z3d-request-title-gradient';
+      productSpan.textContent='ZW3D';
+      titleNode.appendChild(productSpan);
+      titleNode.appendChild(document.createTextNode(title.slice(productMark+4)));
+    }else{
+      titleNode.textContent=title;
+    }
     section.querySelector('[data-z3d-intro-description]').textContent=sub;
   }
   function updateSteps(values){
