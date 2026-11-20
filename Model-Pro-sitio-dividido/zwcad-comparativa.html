@@ -1681,5 +1681,61 @@ var hero=page.querySelector('.zcad-hero');if(hero&&!reduce&&window.matchMedia('(
 }
 </style>
 
+
+<style id="mp-zwcad-form-balance-fix">
+/* Equilibrar el bloque informativo y el formulario, conservando márgenes de página */
+#zwcad-descarga{box-sizing:border-box!important;width:100%!important;padding:88px 32px 96px!important}
+#zwcad-descarga>.mp-co.zcad-meli-grid{
+  box-sizing:border-box!important;
+  display:grid!important;
+  width:100%!important;
+  max-width:1240px!important;
+  margin:0 auto!important;
+  padding:0!important;
+  grid-template-columns:minmax(0,.92fr) minmax(0,1.08fr)!important;
+  column-gap:clamp(40px,5vw,76px)!important;
+  row-gap:40px!important;
+  align-items:center!important;
+}
+#zwcad-descarga .zcad-download-intro{box-sizing:border-box!important;min-width:0!important;width:100%!important}
+#zwcad-descarga .zcad-download-intro h2{max-width:18ch!important;overflow-wrap:normal!important}
+#zwcad-descarga .zcad-download-lead{max-width:48ch!important}
+#zwcad-descarga .zcad-meli-next{
+  display:grid!important;grid-template-columns:minmax(0,1fr)!important;
+  width:100%!important;min-width:0!important;gap:12px!important;
+}
+#zwcad-descarga .zcad-meli-next li{
+  box-sizing:border-box!important;display:flex!important;flex-flow:row nowrap!important;
+  align-items:flex-start!important;gap:12px!important;width:100%!important;min-width:0!important;
+  padding:16px 18px!important;line-height:1.5!important;
+}
+#zwcad-descarga .zcad-meli-next li .zcad-meli-step{
+  box-sizing:border-box!important;display:grid!important;place-items:center!important;
+  flex:0 0 28px!important;width:28px!important;height:28px!important;
+}
+#zwcad-descarga .zcad-meli-next li>span:last-child{
+  display:block!important;flex:1 1 auto!important;width:auto!important;min-width:0!important;
+  white-space:normal!important;overflow-wrap:break-word!important;
+}
+#zwcad-descarga .zcad-meli-next li b,
+#zwcad-descarga .zcad-meli-next li small{
+  display:block!important;width:100%!important;white-space:normal!important;
+  overflow-wrap:break-word!important;word-break:normal!important;
+}
+#zwcad-descarga .zcad-download-card{
+  box-sizing:border-box!important;width:100%!important;max-width:none!important;min-width:0!important;
+}
+@media(max-width:900px){
+ #zwcad-descarga{padding:68px 28px 76px!important}
+ #zwcad-descarga>.mp-co.zcad-meli-grid{grid-template-columns:minmax(0,1fr)!important;max-width:720px!important;gap:34px!important}
+ #zwcad-descarga .zcad-download-intro h2{max-width:24ch!important}
+}
+@media(max-width:600px){
+ #zwcad-descarga{padding:52px 18px 60px!important}
+ #zwcad-descarga>.mp-co.zcad-meli-grid{gap:26px!important}
+ #zwcad-descarga .zcad-meli-next li{padding:14px!important}
+}
+</style>
+
 </body>
 </html>
