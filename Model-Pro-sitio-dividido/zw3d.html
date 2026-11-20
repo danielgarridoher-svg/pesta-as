@@ -1817,6 +1817,59 @@ a.mp-card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(11,20,34,.
 
 
 
+<style id="mp-zw3d-form-reference-design">
+/* Formulario ZW3D: composición y comportamiento visual alineados con ZWCAD, conservando sus campos propios. */
+#zw3d-trial-form.z3d-request-section{padding:90px 24px!important;background:linear-gradient(180deg,#FFFFFF 0%,#F1F6FD 100%)!important;color:#17202E!important}
+#zw3d-trial-form>.mp-co{width:100%;max-width:1484px;padding:0!important;margin:0 auto!important}
+#zw3d-trial-form .z3d-request-grid{display:grid!important;grid-template-columns:minmax(0,5fr) minmax(0,6fr)!important;gap:64px!important;align-items:center!important}
+#zw3d-trial-form .z3d-request-intro{min-width:0}
+#zw3d-trial-form .z3d-request-eyebrow{margin:0 0 18px!important;color:#2879E8!important;font-size:15px!important;font-weight:800!important;letter-spacing:.13em!important}
+#zw3d-trial-form .z3d-request-intro h2{margin:0 0 20px!important;color:#17202E!important;-webkit-text-fill-color:#17202E!important;background:none!important;font-size:clamp(36px,3.5vw,52px)!important;line-height:1.12!important;letter-spacing:-.035em!important;font-weight:800!important}
+#zw3d-trial-form .z3d-request-lead{margin:0;color:#59697F!important;font-size:21px!important;line-height:1.55!important}
+#zw3d-trial-form .z3d-request-steps{display:grid!important;gap:12px!important;list-style:none!important;margin:26px 0 0!important;padding:0!important}
+#zw3d-trial-form .z3d-request-steps[hidden]{display:none!important}
+#zw3d-trial-form .z3d-request-steps li{display:flex!important;align-items:flex-start!important;gap:12px!important;padding:14px 16px!important;background:#fff!important;border:1px solid #DCE6F2!important;border-radius:12px!important;box-shadow:0 5px 18px rgba(26,64,110,.045)!important;color:#172B45!important;line-height:1.45!important}
+#zw3d-trial-form .z3d-request-steps li b{display:block!important;color:#15202E!important;font-size:15px!important}
+#zw3d-trial-form .z3d-request-steps li small{display:block!important;color:#515D6E!important;font-size:14px!important}
+#zw3d-trial-form .z3d-request-step{flex:0 0 26px!important;width:26px!important;height:26px!important;display:grid!important;place-items:center!important;border-radius:50%!important;background:linear-gradient(135deg,rgba(0,196,179,.12),rgba(46,130,240,.12))!important;color:#1E6FE0!important;font-size:13px!important;font-weight:800!important}
+#zw3d-trial-form .z3d-request-card{min-width:0;padding:clamp(26px,3vw,38px)!important;border:1px solid #D8E4F3!important;border-radius:24px!important;background:#FFFFFF!important;box-shadow:0 18px 48px rgba(28,59,96,.10)!important}
+#zw3d-trial-form .z3d-request-form{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:14px!important}
+#zw3d-trial-form .z3d-request-question,#zw3d-trial-form .z3d-request-options,#zw3d-trial-form .z3d-request-error,#zw3d-trial-form .z3d-request-fields,#zw3d-trial-form .z3d-request-submit{grid-column:1/-1!important}
+#zw3d-trial-form .z3d-request-question{margin:0 0 4px!important;color:#15202E!important;font-size:18px!important;font-weight:700!important}
+#zw3d-trial-form .z3d-request-question small{margin-left:7px!important;color:#59697F!important;font-size:14px!important;font-weight:500!important}
+#zw3d-trial-form .z3d-request-options{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:13px!important;margin:12px 0 6px!important}
+#zw3d-trial-form .z3d-request-option{position:relative!important;display:block!important;min-width:0!important;cursor:pointer!important}
+#zw3d-trial-form .z3d-request-option input{position:absolute!important;opacity:0!important;width:1px!important;height:1px!important}
+#zw3d-trial-form .z3d-request-option-box{display:flex!important;flex-direction:column!important;align-items:flex-start!important;justify-content:flex-start!important;gap:7px!important;height:100%!important;min-height:140px!important;padding:16px 18px!important;border:1.5px solid #DCE6F2!important;border-radius:15px!important;background:#fff!important;transition:border-color .15s,background .15s,box-shadow .15s!important}
+#zw3d-trial-form .z3d-request-option-box svg{width:24px!important;height:24px!important;stroke:#59697F!important;fill:none!important;stroke-width:1.8!important}
+#zw3d-trial-form .z3d-request-option-box b{color:#15202E!important;font-size:15px!important;line-height:1.25!important}
+#zw3d-trial-form .z3d-request-option-box small{color:#59697F!important;font-size:13px!important;line-height:1.35!important}
+#zw3d-trial-form .z3d-request-option input:checked+.z3d-request-option-box{border-color:#1E6FE0!important;background:#F2F7FF!important;box-shadow:0 0 0 3px rgba(30,111,224,.12)!important}
+#zw3d-trial-form .z3d-request-option input:checked+.z3d-request-option-box svg{stroke:#1E6FE0!important}
+#zw3d-trial-form .z3d-request-option input:focus-visible+.z3d-request-option-box{outline:2px solid #1E6FE0!important;outline-offset:3px!important}
+#zw3d-trial-form .z3d-request-tick{position:absolute!important;top:10px!important;right:10px!important;width:20px!important;height:20px!important;border:1.5px solid #DCE6F2!important;border-radius:6px!important;background:#fff!important}
+#zw3d-trial-form .z3d-request-option input:checked~.z3d-request-tick{background:#1E6FE0!important;border-color:#1E6FE0!important}
+#zw3d-trial-form .z3d-request-error{min-height:0!important;margin:0!important;color:#B42318!important;font-size:13px!important}
+#zw3d-trial-form .z3d-request-fields{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:14px!important;margin-top:14px!important}
+#zw3d-trial-form .z3d-request-fields[hidden],#zw3d-trial-form .z3d-request-submit[hidden]{display:none!important}
+#zw3d-trial-form .z3d-request-fields label{display:flex!important;flex-direction:column!important;gap:7px!important;min-width:0!important;color:#344B68!important;font-size:14px!important;font-weight:600!important}
+#zw3d-trial-form .z3d-request-fields input,#zw3d-trial-form .z3d-request-fields select{box-sizing:border-box!important;width:100%!important;min-width:0!important;min-height:46px!important;padding:12px 14px!important;border:1.5px solid #DCE6F2!important;border-radius:10px!important;background:#fff!important;color:#131C2B!important;font:500 15px Archivo,system-ui,sans-serif!important}
+#zw3d-trial-form .z3d-request-fields input:focus,#zw3d-trial-form .z3d-request-fields select:focus{outline:0!important;border-color:#1E6FE0!important;box-shadow:0 0 0 3px rgba(30,111,224,.15)!important}
+#zw3d-trial-form .z3d-request-full{grid-column:1/-1!important}
+#zw3d-trial-form .z3d-request-submit{display:flex!important;flex-direction:column!important;align-items:center!important;gap:0!important;margin-top:8px!important}
+#zw3d-trial-form .z3d-request-submit button{display:block!important;width:100%!important;min-height:58px!important;margin:0!important;padding:15px 22px!important;border:0!important;border-radius:13px!important;background:linear-gradient(100deg,#00BFAF 0%,#2E82F0 100%)!important;color:#fff!important;font:700 16px Archivo,system-ui,sans-serif!important;box-shadow:none!important;cursor:pointer!important}
+#zw3d-trial-form .z3d-request-submit button:hover{filter:brightness(1.04)!important;transform:translateY(-1px)!important}
+#zw3d-trial-form .z3d-request-privacy{align-self:stretch!important;margin:16px 0 0!important;color:#59697F!important;font-size:13px!important;line-height:1.5!important;text-align:left!important}
+#zw3d-trial-form .z3d-request-privacy a{color:#1558C0!important;text-decoration:underline!important}
+#zw3d-trial-form .z3d-request-thanks{padding:26px!important;color:#17202E!important}
+#zw3d-trial-form .z3d-request-thanks h3{margin:0 0 10px!important;color:#1558C0!important}
+#zw3d-trial-form .z3d-request-thanks button{margin-top:12px!important;padding:12px 20px!important;border:0!important;border-radius:10px!important;background:#1E6FE0!important;color:#fff!important;font-weight:700!important;cursor:pointer!important}
+@keyframes z3dRequestFlash{0%{box-shadow:0 0 0 0 rgba(30,111,224,0)}35%{box-shadow:0 0 0 5px rgba(30,111,224,.09)}100%{box-shadow:0 18px 48px rgba(28,59,96,.10)}}
+#zw3d-trial-form .z3d-request-flash{animation:z3dRequestFlash .55s ease}
+@media(max-width:1000px){#zw3d-trial-form .z3d-request-grid{grid-template-columns:1fr!important;gap:34px!important}#zw3d-trial-form .z3d-request-intro h2{font-size:clamp(34px,6vw,46px)!important}}
+@media(max-width:700px){#zw3d-trial-form.z3d-request-section{padding:64px 20px!important}#zw3d-trial-form .z3d-request-options{grid-template-columns:1fr!important}#zw3d-trial-form .z3d-request-option-box{min-height:0!important;flex-direction:row!important;align-items:center!important;padding:14px 44px 14px 16px!important}#zw3d-trial-form .z3d-request-option-box small{display:block!important}}
+@media(max-width:520px){#zw3d-trial-form .z3d-request-card{padding:22px!important}#zw3d-trial-form .z3d-request-form,#zw3d-trial-form .z3d-request-fields{grid-template-columns:1fr!important}#zw3d-trial-form .z3d-request-fields>*{grid-column:1/-1!important}}
+</style>
 </head>
 <body><div class="mp-wrap">
 <header class="mp-header">
@@ -2202,84 +2255,134 @@ a.mp-card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(11,20,34,.
 <details class="mp-fq"><summary>¿ZW3D permite diseñar moldes y cavidades?</summary><div class="mp-fa" id="z3d-faq-5"><p>Sí. ZW3D cuenta con herramientas especializadas para diseñar moldes, electrodos y cavidades. Las funciones disponibles dependen de la edición; en Model Pro podemos ayudarte a identificar cuál corresponde a tus necesidades.</p></div></details>
 <details class="mp-fq"><summary>¿Puedo preparar el mecanizado CNC dentro de ZW3D?</summary><div class="mp-fa" id="z3d-faq-6"><p>Sí. ZW3D integra herramientas CAM para preparar operaciones y trayectorias CNC a partir del modelo 3D. Las estrategias y capacidades varían según la edición. En Model Pro podemos orientarte sobre las opciones de mecanizado que necesitas.</p></div></details></div></div></section>
 <section class="mp-sect z3d-cta" id="zw3d-demo" aria-labelledby="z3d-demo-title"><div class="mp-co"><p class="z3d-dark-ey">Hablemos de tu proyecto</p><h2 class="mp-h2" id="z3d-demo-title">¿Quieres ver ZW3D en acción?</h2><p>Agenda una demostración o solicita una cotización. Te asesoramos para elegir el licenciamiento adecuado para tu equipo.</p><div class="z3d-cta-actions"><a class="mp-white" href="#zw3d-trial-form">Elegir cómo quieres avanzar</a></div><p class="z3d-back"><a href="index.html#inicio"><i class="ti ti-arrow-left" aria-hidden="true"></i> Volver al inicio</a></p></div></section>
-<section class="mp-sect z3d-section" id="zw3d-trial-form" aria-labelledby="z3d-trial-title">
-  <div class="mp-co">
-    <div class="z3d-trial-layout">
-      <div class="z3d-trial-intro">
-        <p class="z3d-trial-eyebrow" data-z3d-intro-eyebrow>PRUEBA GRATUITA</p>
-        <h2 class="mp-h2" id="z3d-trial-title" data-z3d-main-title>Prueba gratuita de <span class="z3d-title-highlight">ZW3D.</span></h2>
-        <p data-z3d-intro-description>Completa tus datos para solicitar la prueba gratuita de ZW3D durante 30 días.</p>
-        <ul data-z3d-benefits>
-          <li><span aria-hidden="true">✓</span> Explora las herramientas de ZW3D durante 30 días</li>
-          <li><span aria-hidden="true">✓</span> Conoce las capacidades adecuadas para tu trabajo</li>
-          <li><span aria-hidden="true">✓</span> Recibe orientación de nuestro equipo en español</li>
-        </ul>
-</div>
-      <div class="z3d-trial-form-card">
-        <h3 class="z3d-trial-card-title" data-z3d-form-title>Solicita tu <span>prueba gratuita</span></h3>
-        <p class="z3d-trial-form-note" data-z3d-form-note>Completa tus datos para continuar.</p>
-        <form class="z3d-trial-form" aria-label="Formulario de ZW3D" onsubmit="return false">
-          <label class="z3d-trial-full">¿Qué necesitas?*
-            <select name="tipo_solicitud_selector" data-z3d-intent-select required>
-              <option value="descarga">Prueba gratuita 30 días</option>
-              <option value="cotizacion">Solicitar una cotización</option>
-              <option value="demostracion">Solicitar una demostración</option>
-            </select>
+<section class="mp-sect z3d-section z3d-request-section" id="zw3d-trial-form" aria-labelledby="z3d-trial-title">
+  <div class="mp-co z3d-request-grid">
+    <div class="z3d-request-intro">
+      <p class="z3d-request-eyebrow" data-z3d-intro-eyebrow>HABLEMOS DE TU PROYECTO</p>
+      <h2 class="mp-h2" id="z3d-trial-title" data-z3d-main-title>¿Cómo quieres avanzar con ZW3D?</h2>
+      <p class="z3d-request-lead" data-z3d-intro-description>Elige una o varias opciones y completa tus datos.</p>
+      <ul class="z3d-request-steps" data-z3d-benefits aria-live="polite" hidden></ul>
+    </div>
+
+    <div class="z3d-request-card" id="z3d-request-card">
+      <form class="z3d-request-form" aria-label="Formulario de ZW3D" novalidate autocomplete="on">
+        <p class="z3d-request-question" id="z3d-request-question">¿Qué necesitas?<small>Puedes elegir más de una</small></p>
+        <div class="z3d-request-options" role="group" aria-labelledby="z3d-request-question">
+          <label class="z3d-request-option">
+            <input type="checkbox" name="necesidad" value="descarga" data-z3d-option>
+            <span class="z3d-request-option-box"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4v11m0 0l-4-4m4 4l4-4M5 19h14"/></svg><b>Prueba gratuita 30 días</b><small>Explorar ZW3D</small></span><span class="z3d-request-tick"></span>
           </label>
-          <input type="hidden" name="tipo_solicitud" value="descarga" data-z3d-intent-hidden>
-          <label>Nombre*<input type="text" name="nombre" placeholder="Tu nombre"></label>
-          <label>Apellido*<input type="text" name="apellido" placeholder="Tu apellido"></label>
-          <label>Correo de trabajo*<input type="email" name="correo" placeholder="nombre@empresa.com"></label>
-          <label>Empresa*<input type="text" name="empresa" placeholder="Nombre de tu empresa"></label>
-          <label>País / Región*<select name="pais"><option value="">Selecciona tu país</option><option>México</option><option>Otro</option></select></label>
-          <label>Número de teléfono*<input type="tel" name="telefono" placeholder="+52"></label>
-          <label class="z3d-trial-full">Industria*<select name="industria"><option value="">Selecciona una industria</option><option>Automotriz</option><option>Manufactura</option><option>Maquinaria y equipo</option><option>Plásticos y moldes</option><option>Educación</option><option>Otra</option></select></label>
-          <button type="submit" data-z3d-submit>Solicitar prueba gratuita</button>
-        </form>
-        <p class="z3d-trial-privacy">Al enviar este formulario aceptas nuestro <a href="index.html#aviso-privacidad">aviso de privacidad</a>.</p>
-      </div>
+          <label class="z3d-request-option">
+            <input type="checkbox" name="necesidad" value="demostracion" data-z3d-option>
+            <span class="z3d-request-option-box"><svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="4" width="18" height="12" rx="2"/><path d="M8 20h8M12 16v4"/></svg><b>Demostración</b><small>Verlo aplicado a tu trabajo</small></span><span class="z3d-request-tick"></span>
+          </label>
+          <label class="z3d-request-option">
+            <input type="checkbox" name="necesidad" value="cotizacion" data-z3d-option>
+            <span class="z3d-request-option-box"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M7 3h7l5 5v13H7z"/><path d="M14 3v5h5M10 13h6M10 17h6"/></svg><b>Cotización</b><small>Precio y licenciamiento</small></span><span class="z3d-request-tick"></span>
+          </label>
+        </div>
+        <p class="z3d-request-error" data-z3d-error role="alert"></p>
+        <div class="z3d-request-fields" data-z3d-fields hidden>
+          <input type="hidden" name="tipo_solicitud" value="" data-z3d-intent-hidden>
+          <label>Nombre*<input type="text" name="nombre" placeholder="Tu nombre" autocomplete="given-name" required></label>
+          <label>Apellido*<input type="text" name="apellido" placeholder="Tu apellido" autocomplete="family-name" required></label>
+          <label>Correo de trabajo*<input type="email" name="correo" placeholder="nombre@empresa.com" autocomplete="email" required></label>
+          <label>Empresa*<input type="text" name="empresa" placeholder="Nombre de tu empresa" autocomplete="organization" required></label>
+          <label>País / Región*<select name="pais" required><option value="">Selecciona tu país</option><option value="México">México</option><option value="Otro">Otro</option></select></label>
+          <label>Número de teléfono*<input type="tel" name="telefono" placeholder="+52" autocomplete="tel" required></label>
+          <label class="z3d-request-full">Industria*<select name="industria" required><option value="">Selecciona una industria</option><option>Automotriz</option><option>Manufactura</option><option>Maquinaria y equipo</option><option>Plásticos y moldes</option><option>Educación</option><option>Otra</option></select></label>
+        </div>
+        <div class="z3d-request-submit" data-z3d-submit-wrap hidden>
+          <button type="submit" data-z3d-submit>Enviar</button>
+          <p class="z3d-request-privacy">Al enviar aceptas nuestro <a href="index.html#aviso-privacidad">aviso de privacidad</a>.</p>
+        </div>
+      </form>
+      <div class="z3d-request-thanks" data-z3d-thanks hidden aria-live="polite"></div>
     </div>
   </div>
 </section>
-
 <script id="mp-zw3d-form-intent">
 (function(){
   var section=document.getElementById('zw3d-trial-form');
   if(!section)return;
-  var form=section.querySelector('.z3d-trial-form');
-  var selector=form&&form.querySelector('[data-z3d-intent-select]');
-  var hidden=form&&form.querySelector('[data-z3d-intent-hidden]');
-  if(!form||!selector||!hidden)return;
-  var eyebrow=section.querySelector('[data-z3d-intro-eyebrow]');
-  var title=section.querySelector('[data-z3d-main-title]');
-  var description=section.querySelector('[data-z3d-intro-description]');
-  var benefits=section.querySelector('[data-z3d-benefits]');
-  var formTitle=section.querySelector('[data-z3d-form-title]');
-  var formNote=section.querySelector('[data-z3d-form-note]');
+  var form=section.querySelector('.z3d-request-form');
+  if(!form)return;
+  var options=Array.prototype.slice.call(form.querySelectorAll('[data-z3d-option]'));
+  var fields=form.querySelector('[data-z3d-fields]');
+  var submitWrap=form.querySelector('[data-z3d-submit-wrap]');
+  var hidden=form.querySelector('[data-z3d-intent-hidden]');
+  var error=form.querySelector('[data-z3d-error]');
   var submit=form.querySelector('[data-z3d-submit]');
-  var copy={
-    descarga:{eyebrow:'PRUEBA GRATUITA',title:'Prueba gratuita de <span class="z3d-title-highlight">ZW3D.</span>',intro:'Completa tus datos para solicitar la prueba gratuita de ZW3D durante 30 días.',formTitle:'Prueba gratuita <span>ZW3D</span>',note:'Completa tus datos para continuar con la prueba gratuita.',button:'Solicitar prueba gratuita',aria:'Formulario para solicitar la prueba gratuita de ZW3D'},
-    cotizacion:{eyebrow:'COTIZACIÓN ZW3D',title:'Cotiza <span class="z3d-title-highlight">ZW3D.</span>',intro:'Comparte tus datos y te ayudaremos a cotizar la licencia de ZW3D que necesitas.',formTitle:'Solicitar <span>cotización</span>',note:'Déjanos tus datos para preparar tu solicitud de cotización.',button:'Solicitar cotización',aria:'Formulario para solicitar una cotización de ZW3D'},
-    demostracion:{eyebrow:'DEMOSTRACIÓN ZW3D',title:'Solicita una <span class="z3d-title-highlight">demostración.</span>',intro:'Cuéntanos sobre tu trabajo y coordinaremos una demostración de ZW3D.',formTitle:'Solicitar <span>demostración</span>',note:'Déjanos tus datos para coordinar una demostración.',button:'Solicitar demostración',aria:'Formulario para solicitar una demostración de ZW3D'}
-  };
-  function setIntent(value){
-    var intent=['cotizacion','demostracion'].indexOf(value)>=0?value:'descarga';
-    var data=copy[intent];
-    hidden.value=intent;
-    eyebrow.textContent=data.eyebrow;
-    title.innerHTML=data.title;
-    description.textContent=data.intro;
-    formTitle.innerHTML=data.formTitle;
-    formNote.textContent=data.note;
-    submit.textContent=data.button;
-    form.setAttribute('aria-label',data.aria);
-    benefits.hidden=intent!=='descarga';
+  var card=section.querySelector('#z3d-request-card');
+  var formWrap=form;
+  var thanks=section.querySelector('[data-z3d-thanks]');
+  var labels={descarga:'Prueba gratuita 30 días',demostracion:'Demostración',cotizacion:'Cotización'};
+  var short={descarga:'Prueba',demostracion:'Demostración',cotizacion:'Cotización'};
+  var order=['descarga','demostracion','cotizacion'];
+  function selected(){return order.filter(function(v){return options.some(function(o){return o.value===v&&o.checked;});});}
+  function updateIntro(values){
+    var title,sub;
+    if(!values.length){title='¿Cómo quieres avanzar con ZW3D?';sub='Elige una o varias opciones y completa tus datos.';}
+    else if(values.length===1){
+      if(values[0]==='descarga'){title='Prueba gratuita de ZW3D';sub='Completa tus datos para solicitar la prueba gratuita de ZW3D durante 30 días.';}
+      if(values[0]==='cotizacion'){title='Solicita tu cotización de ZW3D';sub='Cuéntanos qué necesitas y te orientaremos con la propuesta.';}
+      if(values[0]==='demostracion'){title='Agenda una demostración de ZW3D';sub='Conoce ZW3D aplicado a las necesidades de tu trabajo.';}
+    }else{
+      title='Cuéntanos qué necesitas de ZW3D';
+      var names=values.map(function(v){return short[v].toLowerCase();});
+      sub='Elegiste '+names.slice(0,-1).join(', ')+' y '+names[names.length-1]+'. Lo atenderemos en un solo contacto.';
+    }
+    section.querySelector('[data-z3d-main-title]').textContent=title;
+    section.querySelector('[data-z3d-intro-description]').textContent=sub;
   }
-  selector.addEventListener('change',function(){setIntent(selector.value)});
+  function updateSteps(values){
+    var content={
+      descarga:['Exploras ZW3D','Podrás conocer sus herramientas durante 30 días.'],
+      demostracion:['Acordamos tu demostración','Te contactaremos para conocer tu proyecto y coordinarla.'],
+      cotizacion:['Preparamos tu cotización','Revisaremos la solución y el licenciamiento que necesitas.']
+    };
+    var list=section.querySelector('[data-z3d-benefits]');
+    list.hidden=!values.length;
+    list.innerHTML=values.map(function(value){
+      var item=content[value];
+      return '<li><span class="z3d-request-step">'+(order.indexOf(value)+1)+'</span><span><b>'+item[0]+'</b><small>'+item[1]+'</small></span></li>';
+    }).join('');
+  }
+  function refresh(){
+    var values=selected();
+    hidden.value=values.join(',');
+    fields.hidden=!values.length;
+    submitWrap.hidden=!values.length;
+    updateIntro(values);
+    updateSteps(values);
+    error.textContent='';
+  }
+  function setIntent(values){
+    options.forEach(function(option){option.checked=values.indexOf(option.value)!==-1;});
+    thanks.hidden=true;formWrap.hidden=false;
+    refresh();
+    card.classList.remove('z3d-request-flash');void card.offsetWidth;card.classList.add('z3d-request-flash');
+  }
+  options.forEach(function(option){option.addEventListener('change',refresh);});
   document.querySelectorAll('[data-zw3d-intent]').forEach(function(link){
-    link.addEventListener('click',function(){selector.value=link.getAttribute('data-zw3d-intent')||'descarga';setIntent(selector.value)});
+    link.addEventListener('click',function(){
+      var intent=link.getAttribute('data-zw3d-intent');
+      if(labels[intent])setIntent([intent]);
+    });
   });
-  setIntent(selector.value);
+  form.addEventListener('submit',function(event){
+    event.preventDefault();
+    var values=selected();
+    if(!values.length){error.textContent='Elige al menos una opción para continuar.';options[0].focus();return;}
+    if(!form.reportValidity())return;
+    var first=form.elements.nombre.value.trim().split(/\s+/)[0];
+    thanks.innerHTML='<h3>Gracias, '+first.replace(/[&<>"]/g,'')+'.</h3><p>Tu solicitud quedó preparada en este prototipo. El formulario todavía no está conectado a Odoo ni envía datos.</p><ul>'+values.map(function(v){return '<li>'+labels[v]+'</li>';}).join('')+'</ul><button type="button" data-z3d-again>Enviar otra solicitud</button>';
+    formWrap.hidden=true;thanks.hidden=false;
+    thanks.querySelector('[data-z3d-again]').addEventListener('click',function(){
+      form.reset();setIntent([]);
+    });
+  });
+  refresh();
 })();
 </script>
 <!-- ======== FOOTER ======== -->
