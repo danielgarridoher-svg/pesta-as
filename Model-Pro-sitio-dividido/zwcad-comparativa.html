@@ -878,6 +878,12 @@ body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-que-es .zcad-section-lead
       setIntent(selector.value);
     });
   });
+  document.addEventListener('click',function(event){
+    var heroLink=event.target.closest('#h-c2[data-zcad-intent="demostracion"]');
+    if(!heroLink)return;
+    selector.value='demostracion';
+    setIntent('demostracion');
+  });
   setIntent(selector.value);
 })();
 </script>
