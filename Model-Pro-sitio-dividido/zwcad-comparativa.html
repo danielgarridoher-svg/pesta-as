@@ -51,19 +51,15 @@ body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-capacidades .zcad-section
   background:linear-gradient(135deg,#F8FBFF 0%,#EDF5FF 54%,#E5F5F3 100%)!important;
   color:#172B45!important;
 }
-#zwcad-comparacion::before{
-  content:"";position:absolute;inset:0 0 auto;height:4px;
-  background:linear-gradient(90deg,#1558C0 0%,#2E82F0 55%,#00B8BD 100%);
-}
+#zwcad-comparacion::before{content:none!important;display:none!important}
 #zwcad-comparacion #mp-zcad-compare{position:relative;z-index:1;max-width:1240px;color:#243B59!important}
 #zwcad-comparacion .mp-ey{
-  display:inline-flex;align-items:center;gap:9px;
-  margin:0 0 16px!important;padding:8px 13px;
-  border:1px solid #C9E8EB;border-radius:999px;
-  background:rgba(255,255,255,.78);color:#087F91!important;
-  font-size:11px!important;font-weight:800!important;letter-spacing:.13em!important;
+  display:block;width:fit-content;margin:0 0 13px!important;padding:0!important;
+  border:0!important;border-radius:0!important;background:transparent!important;
+  color:#173B68!important;font-size:12px!important;font-weight:800!important;
+  letter-spacing:.08em!important;text-transform:uppercase!important;
 }
-#zwcad-comparacion .mp-ey::before{content:"";width:7px;height:7px;border-radius:50%;background:#00AEB5;box-shadow:0 0 0 4px rgba(0,184,189,.12)}
+#zwcad-comparacion .mp-ey::before{content:none!important;display:none!important}
 #zwcad-comparacion #zcad-comparison-title{
   max-width:900px;margin:0 0 16px!important;
   color:#172B45!important;-webkit-text-fill-color:#172B45!important;
@@ -81,9 +77,9 @@ body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-capacidades .zcad-section
 }
 #zwcad-comparacion .mp-zcad-toolbar{
   display:flex;align-items:center;justify-content:space-between;gap:16px;
-  flex-wrap:wrap;margin:30px 0 16px!important;padding:14px 16px;
-  border:1px solid #D8E6F5;border-radius:16px;
-  background:rgba(255,255,255,.82);box-shadow:0 8px 24px rgba(30,70,115,.055);
+  flex-wrap:wrap;margin:28px 0 16px!important;padding:0!important;
+  border:0!important;border-radius:0!important;
+  background:transparent!important;box-shadow:none!important;
 }
 #zwcad-comparacion .mp-zcad-actions{display:flex;gap:9px;flex-wrap:wrap}
 #zwcad-comparacion .mp-zcad-actions button{
