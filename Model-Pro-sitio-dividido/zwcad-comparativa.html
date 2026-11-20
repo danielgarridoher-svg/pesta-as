@@ -2167,8 +2167,14 @@ body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-capacidades{
       }
     });
   }
-  /* Estado inicial: todas las categorías contraídas, como en la referencia. */
-  categories.forEach(function (button) { setCategory(button, false); });
+  /* Estado inicial: desplegar desde el inicio hasta "Referencia", inclusive. */
+  var expandThroughReference = true;
+  categories.forEach(function (button) {
+    var label = button.querySelector('span:not(.mp-zcad-category-chevron)');
+    var categoryName = label ? label.textContent.trim() : '';
+    setCategory(button, expandThroughReference);
+    if (categoryName === 'Referencia') expandThroughReference = false;
+  });
 
   categories.forEach(function (button) {
     button.addEventListener('click', function () {
