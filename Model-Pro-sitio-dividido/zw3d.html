@@ -1849,6 +1849,8 @@ a.mp-card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(11,20,34,.
 #zw3d-trial-form .z3d-request-option input:focus-visible+.z3d-request-option-box{outline:2px solid #1E6FE0!important;outline-offset:3px!important}
 #zw3d-trial-form .z3d-request-tick{position:absolute!important;top:10px!important;right:10px!important;width:20px!important;height:20px!important;border:1.5px solid #DCE6F2!important;border-radius:6px!important;background:#fff!important}
 #zw3d-trial-form .z3d-request-option input:checked~.z3d-request-tick{background:#1E6FE0!important;border-color:#1E6FE0!important}
+#zw3d-trial-form .z3d-request-tick::after{content:"✓"!important;display:flex!important;align-items:center!important;justify-content:center!important;width:100%!important;height:100%!important;color:transparent!important;font:700 14px/1 Arial,sans-serif!important}
+#zw3d-trial-form .z3d-request-option input:checked~.z3d-request-tick::after{color:#fff!important}
 #zw3d-trial-form .z3d-request-error{min-height:0!important;margin:0!important;color:#B42318!important;font-size:13px!important}
 #zw3d-trial-form .z3d-request-fields{display:grid!important;grid-template-columns:repeat(2,minmax(0,1fr))!important;gap:14px!important;margin-top:14px!important}
 #zw3d-trial-form .z3d-request-fields[hidden],#zw3d-trial-form .z3d-request-submit[hidden]{display:none!important}
