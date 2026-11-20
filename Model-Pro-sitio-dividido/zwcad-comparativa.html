@@ -193,7 +193,7 @@ body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-que-es .zcad-section-lead
 }
 
 
-</style>
+[data-zcad-download-field][hidden],#zwcad-descarga [data-zcad-download-benefits][hidden]{display:none!important}</style>
 
 
 
@@ -335,7 +335,7 @@ body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-que-es .zcad-section-lead
         </ul>
         <div class="zwcad-card-actions">
           <a href="#zwcad-demo" class="zwcad-btn-primary">Cotizar licencia <span>→</span></a>
-          <a href="#zwcad-descarga" class="zwcad-btn-secondary">Descargar ZWCAD</a>
+          <a href="#zwcad-descarga" class="zwcad-btn-secondary" data-zcad-intent="descarga">Prueba gratuita 30 días</a>
         </div>
       </article>
 
@@ -357,7 +357,7 @@ body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-que-es .zcad-section-lead
         </ul>
         <div class="zwcad-card-actions">
           <a href="#zwcad-demo" class="zwcad-btn-primary">Cotizar licencia <span>→</span></a>
-          <a href="#zwcad-descarga" class="zwcad-btn-secondary">Descargar ZWCAD</a>
+          <a href="#zwcad-descarga" class="zwcad-btn-secondary" data-zcad-intent="descarga">Prueba gratuita 30 días</a>
         </div>
       </article>
 
@@ -378,7 +378,7 @@ body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-que-es .zcad-section-lead
         </ul>
         <div class="zwcad-card-actions">
           <a href="#zwcad-demo" class="zwcad-btn-primary">Cotizar licencia <span>→</span></a>
-          <a href="#zwcad-descarga" class="zwcad-btn-secondary">Descargar ZWCAD</a>
+          <a href="#zwcad-descarga" class="zwcad-btn-secondary" data-zcad-intent="descarga">Prueba gratuita 30 días</a>
         </div>
       </article>
     </div>
@@ -767,34 +767,41 @@ body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-que-es .zcad-section-lead
 <div class="mp-fq"><button type="button" aria-expanded="false" aria-controls="zcad-faq-4">¿Qué opciones de licencia hay y cuánto cuesta?<svg class="mp-fi" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 4v12M4 10h12" fill="none" stroke="currentColor" stroke-width="2"/></svg></button><div class="mp-fa" id="zcad-faq-4"><p>Hay modalidades Standalone y de red, con licencias perpetuas. En esta página puedes consultar las ediciones y precios de referencia. Si necesitas varias licencias o quieres confirmar qué modalidad conviene a tu equipo, solicita una cotización y revisamos tu caso.</p></div></div>
 <div class="mp-fq"><button type="button" aria-expanded="false" aria-controls="zcad-faq-5">¿Cómo puedo descargar ZWCAD?<svg class="mp-fi" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 4v12M4 10h12" fill="none" stroke="currentColor" stroke-width="2"/></svg></button><div class="mp-fa" id="zcad-faq-5"><p>En la sección <a href="#zwcad-descarga">Descargar ZWCAD</a> encontrarás el formulario para continuar. Completa los datos solicitados y selecciona el idioma de instalación.</p></div></div>
 </div><p class="zcad-official-link"><a href="#zwcad-capacidades">Conoce las capacidades de ZWCAD</a> <span aria-hidden="true">·</span> <a href="#zwcad-precios">Revisa las ediciones y opciones de licencia</a></p></div></section>
-<section class="mp-sect zcad-cta zcad-light zcad-section" id="zwcad-demo" aria-labelledby="zcad-demo-title"><div class="mp-co"><p class="zcad-ey-light">Hablemos de tu proyecto</p><h2 class="mp-h2 zcad-light-title" id="zcad-demo-title">¿Listo para mejorar tu flujo CAD?</h2><p>Cuéntanos cómo trabaja tu equipo. Revisamos tus necesidades y te mostramos cómo ZWCAD puede integrarse a tus proyectos.</p><div class="zcad-cta-actions"><a class="mp-white" href="index.html#contacto">Solicitar demostración</a><a class="mp-ghost" href="index.html#contacto">Cotizar licencia</a></div><p class="zcad-back"><a href="index.html#inicio"><i class="ti ti-arrow-left" aria-hidden="true"></i> Volver al inicio</a></p></div></section>
+<section class="mp-sect zcad-cta zcad-light zcad-section" id="zwcad-demo" aria-labelledby="zcad-demo-title"><div class="mp-co"><p class="zcad-ey-light">Hablemos de tu proyecto</p><h2 class="mp-h2 zcad-light-title" id="zcad-demo-title">¿Listo para mejorar tu flujo CAD?</h2><p>Cuéntanos cómo trabaja tu equipo. Revisamos tus necesidades y te mostramos cómo ZWCAD puede integrarse a tus proyectos.</p><div class="zcad-cta-actions"><a class="mp-white" href="#zwcad-descarga" data-zcad-intent="contacto">Solicitar demostración</a><a class="mp-ghost" href="#zwcad-descarga" data-zcad-intent="contacto">Cotizar licencia</a></div><p class="zcad-back"><a href="index.html#inicio"><i class="ti ti-arrow-left" aria-hidden="true"></i> Volver al inicio</a></p></div></section>
 
 <section class="mp-sect zcad-download-section zcad-section" id="zwcad-descarga" aria-labelledby="zcad-download-title">
   <div class="mp-co">
     <div class="zcad-download-layout">
       <div class="zcad-download-intro">
-        <p class="zcad-download-eyebrow">DESCARGA ZWCAD</p>
-        <h2 class="mp-h2" id="zcad-download-title">Descarga <span>ZWCAD.</span></h2>
-        <p>Completa tus datos para continuar con la descarga de ZWCAD.</p>
-        <ul>
+        <p class="zcad-download-eyebrow" data-zcad-intro-eyebrow>PRUEBA GRATUITA</p>
+        <h2 class="mp-h2" id="zcad-download-title" data-zcad-main-title>Prueba gratuita de <span>ZWCAD.</span></h2>
+        <p data-zcad-intro-description>Completa tus datos para solicitar la prueba gratuita de ZWCAD durante 30 días.</p>
+        <ul data-zcad-download-benefits>
           <li><span aria-hidden="true">✓</span> Selecciona el idioma de tu descarga</li>
           <li><span aria-hidden="true">✓</span> Cuéntanos sobre tu empresa y tus herramientas de trabajo</li>
           <li><span aria-hidden="true">✓</span> Continúa con la descarga</li>
         </ul>
       </div>
       <div class="zcad-download-card">
-        <h3>Descarga <span>ZWCAD</span></h3>
-        <p class="zcad-download-note">Completa tus datos para continuar con la descarga.</p>
-        <form class="zcad-download-form" aria-label="Formulario de descarga de ZWCAD" onsubmit="return false">
+        <h3 data-zcad-form-title>Prueba gratuita <span>ZWCAD</span></h3>
+        <p class="zcad-download-note" data-zcad-form-note>Completa tus datos para continuar con la prueba gratuita.</p>
+        <form class="zcad-download-form" aria-label="Formulario de ZWCAD" onsubmit="return false">
+          <label class="zcad-download-full">¿Qué necesitas?*
+            <select name="tipo_solicitud_selector" data-zcad-intent-select required>
+              <option value="descarga">Prueba gratuita 30 días</option>
+              <option value="contacto">Contactar a Model Pro</option>
+            </select>
+          </label>
+          <input type="hidden" name="tipo_solicitud" value="descarga" data-zcad-intent-hidden>
           <label>Nombre*<input type="text" name="nombre" placeholder="Tu nombre" autocomplete="given-name" required></label>
           <label>Teléfono / WhatsApp*<input type="tel" name="telefono" placeholder="Tu número de contacto" autocomplete="tel" required></label>
           <label>Correo electrónico*<input type="email" name="correo" placeholder="nombre@empresa.com" autocomplete="email" required></label>
           <label>Nombre de la empresa*<input type="text" name="empresa" placeholder="Nombre de tu empresa" autocomplete="organization" required></label>
-          <label>Industria*<select name="industria" required><option value="">Selecciona una industria</option><option>Automotriz</option><option>Manufactura</option><option>Maquinaria y equipo</option><option>Construcción y arquitectura</option><option>Plásticos y moldes</option><option>Educación</option><option>Otra</option></select></label>
-          <label>Tipo de uso<input type="text" name="tipo_uso" placeholder="¿Para qué utilizarás ZWCAD?"></label>
-          <label class="zcad-download-full">¿Qué tipo de herramientas utilizas?*<select name="tipo_herramientas" required><option value="">Selecciona una opción</option><option>Principalmente 2D</option><option>Principalmente 2D y 3D</option></select></label>
-          <label class="zcad-download-full">Idioma de descarga*<select name="idioma" required><option value="">Selecciona el idioma</option><option value="es">Español</option><option value="en">Inglés</option></select></label>
-          <button type="submit">Descargar ZWCAD</button>
+          <label data-zcad-download-field>Industria*<select name="industria" required><option value="">Selecciona una industria</option><option>Automotriz</option><option>Manufactura</option><option>Maquinaria y equipo</option><option>Construcción y arquitectura</option><option>Plásticos y moldes</option><option>Educación</option><option>Otra</option></select></label>
+          <label data-zcad-download-field>Tipo de uso<input type="text" name="tipo_uso" placeholder="¿Para qué utilizarás ZWCAD?"></label>
+          <label class="zcad-download-full" data-zcad-download-field>¿Qué tipo de herramientas utilizas?*<select name="tipo_herramientas" required><option value="">Selecciona una opción</option><option>Principalmente 2D</option><option>Principalmente 2D y 3D</option></select></label>
+          <label class="zcad-download-full" data-zcad-download-field>Idioma de descarga*<select name="idioma" required><option value="">Selecciona el idioma</option><option value="es">Español</option><option value="en">Inglés</option></select></label>
+          <button type="submit" data-zcad-submit>Solicitar prueba gratuita</button>
         </form>
         <p class="zcad-download-privacy">Al continuar, aceptas nuestro <a href="index.html#aviso-privacidad">aviso de privacidad</a>.</p>
       </div>
@@ -802,6 +809,74 @@ body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-que-es .zcad-section-lead
   </div>
 </section>
 </div></div>
+<script id="mp-zwcad-form-intent">
+(function(){
+  var section=document.getElementById('zwcad-descarga');
+  if(!section)return;
+  var form=section.querySelector('.zcad-download-form');
+  var selector=form&&form.querySelector('[data-zcad-intent-select]');
+  var hidden=form&&form.querySelector('[data-zcad-intent-hidden]');
+  if(!form||!selector||!hidden)return;
+  var introEyebrow=section.querySelector('[data-zcad-intro-eyebrow]');
+  var mainTitle=section.querySelector('[data-zcad-main-title]');
+  var introDescription=section.querySelector('[data-zcad-intro-description]');
+  var benefits=section.querySelector('[data-zcad-download-benefits]');
+  var formTitle=section.querySelector('[data-zcad-form-title]');
+  var formNote=section.querySelector('[data-zcad-form-note]');
+  var submit=form.querySelector('[data-zcad-submit]');
+  var downloadFields=Array.prototype.slice.call(form.querySelectorAll('[data-zcad-download-field]'));
+  var copy={
+    descarga:{
+      eyebrow:'PRUEBA GRATUITA',
+      title:'Prueba gratuita de <span>ZWCAD.</span>',
+      intro:'Completa tus datos para solicitar la prueba gratuita de ZWCAD durante 30 días.',
+      formTitle:'Prueba gratuita <span>ZWCAD</span>',
+      note:'Completa tus datos para continuar con la prueba gratuita.',
+      button:'Solicitar prueba gratuita',
+      aria:'Formulario para solicitar la prueba gratuita de ZWCAD'
+    },
+    contacto:{
+      eyebrow:'CONTACTO MODEL PRO',
+      title:'Hablemos de tu proyecto <span>ZWCAD.</span>',
+      intro:'Cuéntanos qué necesita tu equipo. Nuestro personal puede orientarte sobre ZWCAD.',
+      formTitle:'Contacta a <span>Model Pro</span>',
+      note:'Déjanos tus datos y cuéntanos cómo podemos ayudarte.',
+      button:'Enviar solicitud de contacto',
+      aria:'Formulario de contacto sobre ZWCAD'
+    }
+  };
+  function setIntent(value){
+    var intent=value==='contacto'?'contacto':'descarga';
+    var data=copy[intent];
+    hidden.value=intent;
+    introEyebrow.textContent=data.eyebrow;
+    mainTitle.innerHTML=data.title;
+    introDescription.textContent=data.intro;
+    formTitle.innerHTML=data.formTitle;
+    formNote.textContent=data.note;
+    submit.textContent=data.button;
+    form.setAttribute('aria-label',data.aria);
+    downloadFields.forEach(function(label){
+      var control=label.querySelector('input,select,textarea');
+      label.hidden=intent==='contacto';
+      if(control)control.required=intent==='descarga'&&control.hasAttribute('data-required-download');
+    });
+    benefits.hidden=intent==='contacto';
+  }
+  downloadFields.forEach(function(label){
+    var control=label.querySelector('input,select,textarea');
+    if(control&&control.required)control.setAttribute('data-required-download','true');
+  });
+  selector.addEventListener('change',function(){setIntent(selector.value)});
+  section.querySelectorAll('[data-zcad-intent]').forEach(function(link){
+    link.addEventListener('click',function(){
+      selector.value=link.getAttribute('data-zcad-intent')==='contacto'?'contacto':'descarga';
+      setIntent(selector.value);
+    });
+  });
+  setIntent(selector.value);
+})();
+</script>
 </main>
 <!-- ======== FOOTER ======== -->
 <footer class="mp-foot">
