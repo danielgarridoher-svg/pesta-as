@@ -2852,6 +2852,36 @@ var hero=page.querySelector('.zcad-hero');if(hero&&!reduce&&window.matchMedia('(
 
 <style id="mp-zwcad-coconal-dark-section">
 /* Caso COCONAL · lenguaje visual de las secciones oscuras */
+/* Jerarquía tipográfica · etiqueta sólida + título con degradado */
+#zwcad-casos.mp-cs .mp-cs-head .mp-cs-eyebrow{
+  display:inline-block!important;
+  color:#8BD8FF!important;
+  background:none!important;
+  -webkit-text-fill-color:#8BD8FF!important;
+  font-weight:800!important;
+  letter-spacing:.16em!important;
+  text-shadow:0 0 18px rgba(90,190,255,.22)!important;
+}
+#zwcad-casos.mp-cs .mp-cs-head h2,
+#zwcad-casos.mp-cs .mp-cs-head h2#zcad-case-title{
+  display:block!important;
+  color:#C8E8FF!important;
+  background-image:linear-gradient(100deg,#FFFFFF 0%,#BFE4FF 48%,#83E1D8 100%)!important;
+  background-repeat:no-repeat!important;
+  background-size:100% 100%!important;
+  background-clip:text!important;
+  -webkit-background-clip:text!important;
+  -webkit-text-fill-color:transparent!important;
+  font-weight:800!important;
+  letter-spacing:-.035em!important;
+  line-height:1.12!important;
+  text-shadow:none!important;
+}
+#zwcad-casos.mp-cs .mp-cs-head>p:last-child{
+  color:#D5E5F6!important;
+  -webkit-text-fill-color:#D5E5F6!important;
+  background:none!important;
+}
 #zwcad-casos.mp-cs{
   position:relative;isolation:isolate;overflow:hidden;
   background:radial-gradient(ellipse at 84% 12%,rgba(65,160,255,.20),transparent 38%),radial-gradient(ellipse at 8% 96%,rgba(0,190,190,.13),transparent 36%),linear-gradient(125deg,#0A1528 0%,#102B50 58%,#0D2340 100%)!important;
