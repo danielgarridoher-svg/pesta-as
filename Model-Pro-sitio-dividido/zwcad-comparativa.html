@@ -1774,34 +1774,56 @@ var hero=page.querySelector('.zcad-hero');if(hero&&!reduce&&window.matchMedia('(
  #zwcad-descarga .zcad-meli-next li{padding:13px 14px!important}
 }
 
-/* Corrección definitiva: las tarjetas de pasos crecen con todo su contenido */
+/* Tarjetas de pasos: estilos unificados y aislados */
 #zwcad-descarga .zcad-download-intro,
 #zwcad-descarga [data-zcad-download-benefits]{
   height:auto!important;min-height:0!important;max-height:none!important;
   overflow:visible!important;
 }
-#zwcad-descarga [data-zcad-download-benefits]{
+#zwcad-descarga .zcad-download-intro ul.zcad-meli-next{
   display:flex!important;flex-direction:column!important;align-items:stretch!important;
-  gap:12px!important;width:100%!important;
+  gap:12px!important;width:100%!important;margin:26px 0 0!important;padding:0!important;
+  list-style:none!important;
 }
-#zwcad-descarga [data-zcad-download-benefits] li{
-  display:grid!important;grid-template-columns:22px minmax(0,1fr)!important;
-  align-items:start!important;column-gap:14px!important;
-  width:100%!important;height:auto!important;min-height:0!important;max-height:none!important;
-  overflow:visible!important;white-space:normal!important;
+#zwcad-descarga .zcad-download-intro ul.zcad-meli-next>li{
+  box-sizing:border-box!important;display:grid!important;
+  grid-template-columns:22px minmax(0,1fr)!important;align-items:start!important;
+  column-gap:14px!important;width:100%!important;height:auto!important;
+  min-height:0!important;max-height:none!important;overflow:visible!important;
+  margin:0!important;padding:16px 17px!important;
+  background:#FFFFFF!important;border:1px solid #DCE6F2!important;
+  border-radius:14px!important;box-shadow:0 5px 16px rgba(22,65,112,.045)!important;
+  color:#15202E!important;white-space:normal!important;
 }
-#zwcad-descarga [data-zcad-download-benefits] li>span:last-child{
+#zwcad-descarga .zcad-download-intro ul.zcad-meli-next>li>span:first-child{
+  box-sizing:border-box!important;display:block!important;flex:none!important;
+  width:22px!important;height:auto!important;min-height:0!important;
+  margin:1px 0 0!important;padding:0!important;border:0!important;border-radius:0!important;
+  background:transparent!important;box-shadow:none!important;
+  color:#0B559A!important;font-size:17px!important;line-height:1.3!important;
+  font-weight:800!important;text-align:left!important;
+}
+#zwcad-descarga .zcad-download-intro ul.zcad-meli-next>li>span:last-child{
   display:block!important;min-width:0!important;width:100%!important;
-  height:auto!important;max-height:none!important;overflow:visible!important;
+  height:auto!important;max-height:none!important;margin:0!important;padding:0!important;
+  border:0!important;border-radius:0!important;background:transparent!important;
+  box-shadow:none!important;color:#15202E!important;
+  overflow:visible!important;white-space:normal!important;overflow-wrap:break-word!important;
 }
-#zwcad-descarga [data-zcad-download-benefits] li b,
-#zwcad-descarga [data-zcad-download-benefits] li small{
+#zwcad-descarga .zcad-download-intro ul.zcad-meli-next>li b,
+#zwcad-descarga .zcad-download-intro ul.zcad-meli-next>li small{
   display:block!important;width:100%!important;height:auto!important;
-  max-height:none!important;overflow:visible!important;
-  white-space:normal!important;overflow-wrap:anywhere!important;
+  max-height:none!important;margin:0!important;padding:0!important;
+  border:0!important;border-radius:0!important;background:transparent!important;
+  box-shadow:none!important;overflow:visible!important;white-space:normal!important;
+  overflow-wrap:break-word!important;
 }
-#zwcad-descarga [data-zcad-download-benefits] li small{
-  font-size:13px!important;line-height:1.6!important;
+#zwcad-descarga .zcad-download-intro ul.zcad-meli-next>li b{
+  color:#15202E!important;font-size:15px!important;line-height:1.4!important;
+  font-weight:700!important;margin-bottom:3px!important;
+}
+#zwcad-descarga .zcad-download-intro ul.zcad-meli-next>li small{
+  color:#515D6E!important;font-size:13px!important;line-height:1.6!important;
 }
 </style>
 
