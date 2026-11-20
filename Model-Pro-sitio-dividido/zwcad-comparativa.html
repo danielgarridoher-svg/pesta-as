@@ -193,7 +193,11 @@ body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-que-es .zcad-section-lead
 }
 
 
-[data-zcad-download-field][hidden],#zwcad-descarga [data-zcad-download-benefits][hidden]{display:none!important}</style>
+[data-zcad-download-field][hidden],#zwcad-descarga [data-zcad-download-benefits][hidden]{display:none!important}
+/* Restaurar visibilidad de la navegación flotante ZWCAD */
+.mp-page[data-page="zwcad"].is-active .mp-zwcad-page .zcad-floating-nav{display:flex!important;position:fixed!important;z-index:9999!important;visibility:visible!important;opacity:1!important;pointer-events:none!important;}
+.mp-page[data-page="zwcad"].is-active .mp-zwcad-page .zcad-floating-nav .zcad-menu-toggle{display:flex!important;visibility:visible!important;opacity:1!important;pointer-events:auto!important;}
+</style>
 
 
 
