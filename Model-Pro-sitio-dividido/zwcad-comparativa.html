@@ -1098,14 +1098,16 @@ body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-que-es .zcad-section-lead
     section.querySelector('[data-zcad-main-title]').textContent=title;
     section.querySelector('[data-zcad-intro-description]').textContent=sub;
   }
-  function next(){
-    var content=[
-      ['Descargas ZWCAD','Al enviar tu solicitud podremos orientarte para continuar con la prueba gratuita.'],
-      ['Acordamos tu demostración','Nuestro equipo te contactará para conocer tu proyecto y coordinarla.'],
-      ['Preparamos tu cotización','Revisaremos la edición y modalidad que necesitas para orientarte.']
-    ];
-    section.querySelector('[data-zcad-download-benefits]').innerHTML=content.map(function(item,i){
-      return '<li><span class="zcad-meli-step">'+(i+1)+'</span><span><b>'+item[0]+'</b><small>'+item[1]+'</small></span></li>';
+  function next(values){
+    var content={
+      descarga:['Descargas ZWCAD','Al enviar tu solicitud podremos orientarte para continuar con la prueba gratuita.'],
+      demostracion:['Acordamos tu demostración','Nuestro equipo te contactará para conocer tu proyecto y coordinarla.'],
+      cotizacion:['Preparamos tu cotización','Revisaremos la edición y modalidad que necesitas para orientarte.']
+    };
+    section.querySelector('[data-zcad-download-benefits]').innerHTML=values.map(function(value){
+      var item=content[value];
+      var number=order.indexOf(value)+1;
+      return '<li><span class="zcad-meli-step">'+number+'</span><span><b>'+item[0]+'</b><small>'+item[1]+'</small></span></li>';
     }).join('');
   }
   function groups(values){
@@ -1125,7 +1127,7 @@ body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-que-es .zcad-section-lead
   function refresh(){
     var values=selected();
     hidden.value=values.join(',');
-    next();groups(values);
+    next(values);groups(values);
     error.textContent='';
   }
   function setIntent(values,source){
@@ -1722,16 +1724,15 @@ var hero=page.querySelector('.zcad-hero');if(hero&&!reduce&&window.matchMedia('(
 }
 #zwcad-descarga .zcad-meli-next{
   display:grid!important;grid-template-columns:minmax(0,1fr)!important;
-  width:100%!important;min-width:0!important;gap:0!important;
+  width:100%!important;min-width:0!important;gap:12px!important;
   margin:26px 0 0!important;padding:0!important;list-style:none!important;
 }
 #zwcad-descarga .zcad-meli-next li{
   box-sizing:border-box!important;display:flex!important;flex-flow:row nowrap!important;
   align-items:flex-start!important;gap:14px!important;width:100%!important;min-width:0!important;
-  margin:0!important;padding:15px 0!important;border:0!important;border-bottom:1px solid #DCE6F2!important;
-  border-radius:0!important;background:transparent!important;box-shadow:none!important;
+  margin:0!important;padding:16px 17px!important;border:1px solid #DCE6F2!important;
+  border-radius:14px!important;background:#FFFFFF!important;box-shadow:0 5px 16px rgba(22,65,112,.045)!important;
 }
-#zwcad-descarga .zcad-meli-next li:last-child{border-bottom:0!important}
 #zwcad-descarga .zcad-meli-next li .zcad-meli-step{
   box-sizing:border-box!important;display:block!important;flex:0 0 22px!important;
   width:22px!important;height:auto!important;padding:0!important;margin:1px 0 0!important;
@@ -1743,11 +1744,11 @@ var hero=page.querySelector('.zcad-hero');if(hero&&!reduce&&window.matchMedia('(
   white-space:normal!important;overflow-wrap:break-word!important;
 }
 #zwcad-descarga .zcad-meli-next li b{
-  display:block!important;margin:0 0 4px!important;color:#172B45!important;
+  display:block!important;margin:0 0 4px!important;text-decoration:none!important;border:0!important;box-shadow:none!important;color:#172B45!important;
   font-size:15px!important;line-height:1.4!important;font-weight:750!important;
 }
 #zwcad-descarga .zcad-meli-next li small{
-  display:block!important;width:100%!important;color:#64768B!important;
+  display:block!important;width:100%!important;text-decoration:none!important;border:0!important;box-shadow:none!important;color:#64768B!important;
   font-size:13px!important;line-height:1.55!important;white-space:normal!important;
   overflow-wrap:break-word!important;word-break:normal!important;
 }
@@ -1768,7 +1769,7 @@ var hero=page.querySelector('.zcad-hero');if(hero&&!reduce&&window.matchMedia('(
 @media(max-width:600px){
  #zwcad-descarga{padding:52px 18px 60px!important}
  #zwcad-descarga>.mp-co.zcad-meli-grid{gap:22px!important}
- #zwcad-descarga .zcad-meli-next li{padding:13px 0!important}
+ #zwcad-descarga .zcad-meli-next li{padding:13px 14px!important}
 }
 </style>
 
