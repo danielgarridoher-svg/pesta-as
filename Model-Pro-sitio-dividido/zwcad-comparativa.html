@@ -971,7 +971,7 @@ body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-que-es .zcad-section-lead
       group.hidden=!show;
       group.querySelectorAll('input,select,textarea').forEach(function(control){
         control.disabled=!show;
-        if(['industria','tipo_herramientas'].indexOf(control.name)!==-1)control.required=show;
+        if(['industria','tipo_herramientas','idioma'].indexOf(control.name)!==-1)control.required=show;
       });
     });
     fields.hidden=!values.length;
