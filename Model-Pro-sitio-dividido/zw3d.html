@@ -1858,12 +1858,12 @@ a.mp-card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(11,20,34,.
 #zw3d-trial-form .z3d-request-fields input,#zw3d-trial-form .z3d-request-fields select{box-sizing:border-box!important;width:100%!important;min-width:0!important;min-height:46px!important;padding:12px 14px!important;border:1.5px solid #DCE6F2!important;border-radius:10px!important;background:#fff!important;color:#131C2B!important;font:500 15px Archivo,system-ui,sans-serif!important}
 #zw3d-trial-form .z3d-request-fields input:focus,#zw3d-trial-form .z3d-request-fields select:focus{outline:0!important;border-color:#1E6FE0!important;box-shadow:0 0 0 3px rgba(30,111,224,.15)!important}
 #zw3d-trial-form .z3d-request-full{grid-column:1/-1!important}
-#zw3d-trial-form .z3d-request-project{grid-column:span 1!important;display:flex!important;flex-direction:column!important;gap:7px!important;min-width:0!important;color:#344B68!important;font-size:14px!important;font-weight:600!important}
+#zw3d-trial-form .z3d-request-project{grid-column:1/-1!important;justify-self:center!important;width:calc((100% - 14px)/2)!important;display:flex!important;flex-direction:column!important;gap:7px!important;min-width:0!important;color:#344B68!important;font-size:14px!important;font-weight:600!important}
 #zw3d-trial-form .z3d-request-project span{color:#718096!important;font-weight:400!important}
 #zw3d-trial-form .z3d-request-project[hidden]{display:none!important}
 #zw3d-trial-form .z3d-request-project textarea{box-sizing:border-box!important;width:100%!important;min-height:112px!important;padding:12px 14px!important;border:1.5px solid #DCE6F2!important;border-radius:10px!important;background:#fff!important;color:#131C2B!important;font:500 15px Archivo,system-ui,sans-serif!important;resize:vertical!important}
 #zw3d-trial-form .z3d-request-project textarea:focus{outline:0!important;border-color:#1E6FE0!important;box-shadow:0 0 0 3px rgba(30,111,224,.15)!important}
-#zw3d-trial-form .z3d-request-project-wide{grid-column:span 1!important}
+#zw3d-trial-form .z3d-request-project-wide{grid-column:1/-1!important;justify-self:center!important;width:calc((100% - 14px)/2)!important}
 #zw3d-trial-form .z3d-request-submit{display:flex!important;flex-direction:column!important;align-items:center!important;gap:0!important;margin-top:8px!important}
 #zw3d-trial-form .z3d-request-submit button{display:inline-flex!important;align-items:center!important;justify-content:center!important;width:auto!important;min-width:168px!important;min-height:48px!important;margin:0 auto!important;padding:12px 30px!important;border:0!important;border-radius:999px!important;background:linear-gradient(100deg,#00BFAF 0%,#2E82F0 100%)!important;color:#fff!important;font:700 15px Archivo,system-ui,sans-serif!important;box-shadow:none!important;cursor:pointer!important}
 #zw3d-trial-form .z3d-request-submit button:hover{filter:brightness(1.04)!important;transform:translateY(-1px)!important}
@@ -1876,7 +1876,7 @@ a.mp-card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(11,20,34,.
 #zw3d-trial-form .z3d-request-flash{animation:z3dRequestFlash .55s ease}
 @media(max-width:1000px){#zw3d-trial-form .z3d-request-grid{grid-template-columns:1fr!important;gap:34px!important}#zw3d-trial-form .z3d-request-intro h2{font-size:clamp(34px,6vw,46px)!important}}
 @media(max-width:700px){#zw3d-trial-form.z3d-request-section{padding:64px 20px!important}#zw3d-trial-form .z3d-request-options{grid-template-columns:1fr!important}#zw3d-trial-form .z3d-request-option-box{min-height:0!important;flex-direction:row!important;align-items:center!important;padding:14px 44px 14px 16px!important}#zw3d-trial-form .z3d-request-option-box small{display:block!important}}
-@media(max-width:520px){#zw3d-trial-form .z3d-request-card{padding:22px!important}#zw3d-trial-form .z3d-request-form,#zw3d-trial-form .z3d-request-fields{grid-template-columns:1fr!important}#zw3d-trial-form .z3d-request-fields>*{grid-column:1/-1!important}}
+@media(max-width:520px){#zw3d-trial-form .z3d-request-card{padding:22px!important}#zw3d-trial-form .z3d-request-form,#zw3d-trial-form .z3d-request-fields{grid-template-columns:1fr!important}#zw3d-trial-form .z3d-request-fields>*{grid-column:1/-1!important}#zw3d-trial-form .z3d-request-project,#zw3d-trial-form .z3d-request-project-wide{width:100%!important;justify-self:stretch!important}}
 </style>
 <style id="mp-zw3d-form-column-fix">
 /* Mantener la columna del formulario anclada sin que cambie de ancho al crecer los campos. */
