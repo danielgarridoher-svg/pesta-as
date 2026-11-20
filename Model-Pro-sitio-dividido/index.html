@@ -1258,7 +1258,7 @@ a.mp-card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(11,20,34,.
     fade.style.opacity=0;
     setTimeout(function(){
       set('h-slab',s.slab);set('h-tit',s.tit);document.getElementById('h-sub').innerHTML=s.sub;set('h-c1',s.c1);
-      var c2=document.getElementById('h-c2');c2.innerHTML=s.c2+(s.wa?' <i class="ti ti-brand-whatsapp"></i>':'');
+      var c2=document.getElementById('h-c2');c2.innerHTML=s.c2+(s.wa?' <i class="ti ti-brand-whatsapp"></i>':'');if(n===2){c2.href='#zwcad-descarga';c2.setAttribute('data-zcad-intent','demostracion');}else{c2.href='#contacto';c2.removeAttribute('data-zcad-intent');}
       fade.style.opacity=1;
     },200);
     var media=document.getElementById('heromedia');
