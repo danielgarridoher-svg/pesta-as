@@ -209,6 +209,28 @@ body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-que-es .zcad-section-lead
 
 
 
+<style id="mp-zwcad-multi-intent-styles">
+#zwcad-descarga .zcad-download-form [hidden],
+#zwcad-descarga .zcad-form-group[hidden]{display:none!important}
+#zwcad-descarga .zcad-intent-options{min-width:0;margin:0;padding:0;border:0}
+#zwcad-descarga .zcad-intent-options legend{margin:0 0 10px;color:#344B68;font-size:.9rem;font-weight:700}
+#zwcad-descarga .zcad-intent-options legend small,
+#zwcad-descarga .zcad-form-group label small{font-size:.82em;font-weight:500;color:#718198}
+#zwcad-descarga .zcad-intent-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:9px}
+#zwcad-descarga .zcad-intent-option{position:relative;display:block;cursor:pointer}
+#zwcad-descarga .zcad-intent-option input{position:absolute;inset:0;width:100%;height:100%;min-height:0;opacity:0;cursor:pointer}
+#zwcad-descarga .zcad-intent-option-box{display:flex;flex-direction:column;justify-content:center;gap:5px;min-height:82px;padding:12px;border:1.5px solid #C9D9EB;border-radius:10px;background:#fff;transition:border-color .15s,background .15s,box-shadow .15s}
+#zwcad-descarga .zcad-intent-option-box b{font-size:.83rem;line-height:1.25;color:#172B45}
+#zwcad-descarga .zcad-intent-option-box small{font-size:.72rem;line-height:1.3;color:#718198}
+#zwcad-descarga .zcad-intent-option input:checked+.zcad-intent-option-box{border-color:#1E6FE0;background:#F2F7FF;box-shadow:0 0 0 2px rgba(30,111,224,.1)}
+#zwcad-descarga .zcad-intent-option input:focus-visible+.zcad-intent-option-box{outline:3px solid rgba(30,111,224,.35);outline-offset:2px}
+#zwcad-descarga .zcad-intent-error{min-height:0;margin:5px 0 0;color:#B42318;font-size:.82rem}
+#zwcad-descarga .zcad-form-group{display:contents}
+#zwcad-descarga .zcad-download-form textarea{box-sizing:border-box;width:100%;min-height:90px;padding:11px 13px;border:1px solid #C9D9EB;border-radius:9px;background:#F8FBFF;color:#172B45;font:inherit;resize:vertical}
+#zwcad-descarga .zcad-download-form textarea:focus{outline:2px solid rgba(0,184,189,.25);border-color:#2E82F0}
+#zwcad-descarga .zcad-download-form button:disabled{opacity:.55;cursor:not-allowed}
+@media(max-width:520px){#zwcad-descarga .zcad-intent-grid{grid-template-columns:1fr}#zwcad-descarga .zcad-intent-option-box{min-height:0}}
+</style>
 </head>
 <body>
 <div class="mp-wrap">
@@ -775,118 +797,146 @@ body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-que-es .zcad-section-lead
   <div class="mp-co">
     <div class="zcad-download-layout">
       <div class="zcad-download-intro">
-        <p class="zcad-download-eyebrow" data-zcad-intro-eyebrow>PRUEBA GRATUITA</p>
-        <h2 class="mp-h2" id="zcad-download-title" data-zcad-main-title>Prueba gratuita de <span>ZWCAD.</span></h2>
-        <p data-zcad-intro-description>Completa tus datos para solicitar la prueba gratuita de ZWCAD durante 30 días.</p>
-        <ul data-zcad-download-benefits>
-          <li><span aria-hidden="true">✓</span> Selecciona el idioma de tu descarga</li>
-          <li><span aria-hidden="true">✓</span> Cuéntanos sobre tu empresa y tus herramientas de trabajo</li>
-          <li><span aria-hidden="true">✓</span> Continúa con la descarga</li>
+        <p class="zcad-download-eyebrow" data-zcad-intro-eyebrow>HABLEMOS DE TU PROYECTO</p>
+        <h2 class="mp-h2" id="zcad-download-title" data-zcad-main-title>¿Cómo quieres avanzar con <span>ZWCAD?</span></h2>
+        <p data-zcad-intro-description>Elige una o varias opciones y completa tus datos. Así podremos orientarte según lo que necesitas.</p>
+        <ul data-zcad-download-benefits aria-live="polite">
+          <li><span>1</span> Selecciona lo que necesitas</li>
+          <li><span>2</span> Comparte los datos de tu empresa</li>
+          <li><span>3</span> Nuestro equipo dará seguimiento a tu solicitud</li>
         </ul>
       </div>
       <div class="zcad-download-card">
-        <h3 data-zcad-form-title>Prueba gratuita <span>ZWCAD</span></h3>
-        <p class="zcad-download-note" data-zcad-form-note>Completa tus datos para continuar con la prueba gratuita.</p>
+        <h3 data-zcad-form-title>Cuéntanos qué necesitas de <span>ZWCAD</span></h3>
+        <p class="zcad-download-note" data-zcad-form-note>Puedes elegir más de una opción; atenderemos tus solicitudes en un solo contacto.</p>
         <form class="zcad-download-form" aria-label="Formulario de ZWCAD" onsubmit="return false">
-          <label class="zcad-download-full">¿Qué necesitas?*
-            <select name="tipo_solicitud_selector" data-zcad-intent-select required>
-              <option value="descarga">Prueba gratuita 30 días</option>
-              <option value="cotizacion">Solicitar una cotización</option>
-              <option value="demostracion">Solicitar una demostración</option>
-            </select>
-          </label>
-          <input type="hidden" name="tipo_solicitud" value="descarga" data-zcad-intent-hidden>
-          <label>Nombre*<input type="text" name="nombre" placeholder="Tu nombre" autocomplete="given-name" required></label>
+          <fieldset class="zcad-intent-options zcad-download-full">
+            <legend>¿Qué necesitas?* <small>Puedes elegir más de una</small></legend>
+            <div class="zcad-intent-grid">
+              <label class="zcad-intent-option">
+                <input type="checkbox" name="necesidad" value="descarga" data-zcad-option>
+                <span class="zcad-intent-option-box"><b>Prueba gratuita 30 días</b><small>Descargar y probar ZWCAD</small></span>
+              </label>
+              <label class="zcad-intent-option">
+                <input type="checkbox" name="necesidad" value="demostracion" data-zcad-option>
+                <span class="zcad-intent-option-box"><b>Demostración</b><small>Conocer sus herramientas</small></span>
+              </label>
+              <label class="zcad-intent-option">
+                <input type="checkbox" name="necesidad" value="cotizacion" data-zcad-option>
+                <span class="zcad-intent-option-box"><b>Cotización</b><small>Precio y licenciamiento</small></span>
+              </label>
+            </div>
+            <p class="zcad-intent-error" data-zcad-error role="alert"></p>
+          </fieldset>
+          <input type="hidden" name="tipo_solicitud" value="" data-zcad-intent-hidden>
+          <label>Nombre*<input type="text" name="nombre" placeholder="Tu nombre" autocomplete="name" required></label>
           <label>Teléfono / WhatsApp*<input type="tel" name="telefono" placeholder="Tu número de contacto" autocomplete="tel" required></label>
           <label>Correo electrónico*<input type="email" name="correo" placeholder="nombre@empresa.com" autocomplete="email" required></label>
           <label>Nombre de la empresa*<input type="text" name="empresa" placeholder="Nombre de tu empresa" autocomplete="organization" required></label>
-          <label data-zcad-download-field>Industria*<select name="industria" required><option value="">Selecciona una industria</option><option>Automotriz</option><option>Manufactura</option><option>Maquinaria y equipo</option><option>Construcción y arquitectura</option><option>Plásticos y moldes</option><option>Educación</option><option>Otra</option></select></label>
-          <label data-zcad-download-field>Tipo de uso<input type="text" name="tipo_uso" placeholder="¿Para qué utilizarás ZWCAD?"></label>
-          <label class="zcad-download-full" data-zcad-download-field>¿Qué tipo de herramientas utilizas?*<select name="tipo_herramientas" required><option value="">Selecciona una opción</option><option>Principalmente 2D</option><option>Principalmente 2D y 3D</option></select></label>
-          <label class="zcad-download-full" data-zcad-download-field>Idioma de descarga*<select name="idioma" required><option value="">Selecciona el idioma</option><option value="es">Español</option><option value="en">Inglés</option></select></label>
-          <button type="submit" data-zcad-submit>Solicitar prueba gratuita</button>
+
+          <div class="zcad-form-group zcad-download-full" data-zcad-group="descarga" hidden>
+            <label>Industria*<select name="industria" required disabled><option value="">Selecciona una industria</option><option>Automotriz</option><option>Manufactura</option><option>Maquinaria y equipo</option><option>Construcción y arquitectura</option><option>Plásticos y moldes</option><option>Educación</option><option>Otra</option></select></label>
+            <label>Tipo de uso<input type="text" name="tipo_uso" placeholder="¿Para qué utilizarás ZWCAD?" disabled></label>
+            <label class="zcad-download-full">¿Qué tipo de herramientas utilizas?*<select name="tipo_herramientas" required disabled><option value="">Selecciona una opción</option><option>Principalmente 2D</option><option>Principalmente 2D y 3D</option></select></label>
+            <label class="zcad-download-full">Idioma de descarga*<select name="idioma" required disabled><option value="">Selecciona el idioma</option><option value="es">Español</option><option value="en">Inglés</option></select></label>
+          </div>
+
+          <div class="zcad-form-group zcad-download-full" data-zcad-group="cotizacion" hidden>
+            <label>¿Cuántas licencias necesitas? <small>(Opcional)</small><select name="licencias" disabled><option value="">Aún no lo sé</option><option>1</option><option>2 a 5</option><option>6 o más</option></select></label>
+          </div>
+          <div class="zcad-form-group zcad-download-full" data-zcad-group="cotizacion demostracion" hidden>
+            <label>Cuéntanos de tu proyecto <small>(Opcional)</small><textarea name="mensaje" rows="3" placeholder="Por ejemplo: qué actividades realizas, qué software utilizas actualmente o qué te gustaría resolver." disabled></textarea></label>
+          </div>
+          <button type="submit" data-zcad-submit disabled>Enviar solicitud</button>
         </form>
         <p class="zcad-download-privacy">Al continuar, aceptas nuestro <a href="index.html#aviso-privacidad">aviso de privacidad</a>.</p>
       </div>
     </div>
   </div>
 </section>
-</div></div>
 <script id="mp-zwcad-form-intent">
 (function(){
   var section=document.getElementById('zwcad-descarga');
   if(!section)return;
   var form=section.querySelector('.zcad-download-form');
-  var selector=form&&form.querySelector('[data-zcad-intent-select]');
-  var hidden=form&&form.querySelector('[data-zcad-intent-hidden]');
-  if(!form||!selector||!hidden)return;
+  if(!form)return;
+  var options=Array.prototype.slice.call(form.querySelectorAll('[data-zcad-option]'));
+  var hidden=form.querySelector('[data-zcad-intent-hidden]');
+  var submit=form.querySelector('[data-zcad-submit]');
   var introEyebrow=section.querySelector('[data-zcad-intro-eyebrow]');
   var mainTitle=section.querySelector('[data-zcad-main-title]');
   var introDescription=section.querySelector('[data-zcad-intro-description]');
   var benefits=section.querySelector('[data-zcad-download-benefits]');
   var formTitle=section.querySelector('[data-zcad-form-title]');
   var formNote=section.querySelector('[data-zcad-form-note]');
-  var submit=form.querySelector('[data-zcad-submit]');
-  var downloadFields=Array.prototype.slice.call(form.querySelectorAll('[data-zcad-download-field]'));
+  var error=section.querySelector('[data-zcad-error]');
+  var order=['descarga','demostracion','cotizacion'];
+  var labels={descarga:'Prueba gratuita 30 días',demostracion:'Demostración',cotizacion:'Cotización'};
   var copy={
-    descarga:{
-      eyebrow:'PRUEBA GRATUITA',
-      title:'Prueba gratuita de <span>ZWCAD.</span>',
-      intro:'Completa tus datos para solicitar la prueba gratuita de ZWCAD durante 30 días.',
-      formTitle:'Prueba gratuita <span>ZWCAD</span>',
-      note:'Completa tus datos para continuar con la prueba gratuita.',
-      button:'Solicitar prueba gratuita',
-      aria:'Formulario para solicitar la prueba gratuita de ZWCAD'
-    },
-    cotizacion:{
-      eyebrow:'COTIZACIÓN ZWCAD',
-      title:'Solicita una cotización <span>para tu proyecto.</span>',
-      intro:'Comparte tus datos y te ayudaremos a cotizar la licencia de ZWCAD que necesitas.',
-      formTitle:'Solicitar <span>cotización</span>',
-      note:'Déjanos tus datos para preparar tu solicitud de cotización.',
-      button:'Solicitar cotización',
-      aria:'Formulario para solicitar una cotización de ZWCAD'
-    },
-    demostracion:{
-      eyebrow:'DEMOSTRACIÓN ZWCAD',
-      title:'Conoce ZWCAD en una <span>demostración.</span>',
-      intro:'Cuéntanos sobre tu trabajo y coordinaremos una demostración de ZWCAD.',
-      formTitle:'Solicitar <span>demostración</span>',
-      note:'Déjanos tus datos para coordinar una demostración.',
-      button:'Solicitar demostración',
-      aria:'Formulario para solicitar una demostración de ZWCAD'
-    }
+    descarga:{eyebrow:'PRUEBA GRATUITA',title:'Prueba ZWCAD durante <span>30 días.</span>',intro:'Completa tus datos y cuéntanos sobre tu empresa y tus herramientas de trabajo.',formTitle:'Solicita tu prueba gratuita de <span>ZWCAD</span>',note:'Incluiremos los datos necesarios para orientarte con la descarga.'},
+    demostracion:{eyebrow:'DEMOSTRACIÓN ZWCAD',title:'Conoce ZWCAD aplicado a <span>tu trabajo.</span>',intro:'Cuéntanos qué necesitas resolver y coordinaremos una demostración.',formTitle:'Solicita una <span>demostración</span>',note:'Nuestro equipo podrá conocer tu proyecto antes de coordinar la demostración.'},
+    cotizacion:{eyebrow:'COTIZACIÓN ZWCAD',title:'Revisemos la opción adecuada <span>para tu proyecto.</span>',intro:'Comparte tus datos y las necesidades de tu equipo para preparar una cotización.',formTitle:'Solicita una <span>cotización</span>',note:'Si ya conoces el número de licencias, puedes indicarlo. Si no, déjalo pendiente.'}
   };
-  function setIntent(value){
-    var intent=['cotizacion','demostracion'].indexOf(value)>=0?value:'descarga';
-    var data=copy[intent];
-    hidden.value=intent;
-    introEyebrow.textContent=data.eyebrow;
-    mainTitle.innerHTML=data.title;
-    introDescription.textContent=data.intro;
-    formTitle.innerHTML=data.formTitle;
-    formNote.textContent=data.note;
-    submit.textContent=data.button;
-    form.setAttribute('aria-label',data.aria);
-    downloadFields.forEach(function(label){
-      var control=label.querySelector('input,select,textarea');
-      label.hidden=intent!=='descarga';
-      if(control)control.required=intent==='descarga'&&control.hasAttribute('data-required-download');
+  function selected(){return order.filter(function(value){return options.some(function(option){return option.value===value&&option.checked;});});}
+  function update(){
+    var values=selected();
+    hidden.value=values.join(',');
+    submit.disabled=!values.length;
+    error.textContent='';
+    form.querySelectorAll('[data-zcad-group]').forEach(function(group){
+      var needs=group.getAttribute('data-zcad-group').split(' ');
+      var visible=needs.some(function(value){return values.indexOf(value)!==-1;});
+      group.hidden=!visible;
+      group.querySelectorAll('input,select,textarea').forEach(function(control){
+        control.disabled=!visible;
+        if(control.name==='industria'||control.name==='tipo_herramientas'||control.name==='idioma'){
+          control.required=visible;
+        }
+      });
     });
-    benefits.hidden=intent!=='descarga';
+    if(!values.length){
+      introEyebrow.textContent='HABLEMOS DE TU PROYECTO';
+      mainTitle.innerHTML='¿Cómo quieres avanzar con <span>ZWCAD?</span>';
+      introDescription.textContent='Elige una o varias opciones y completa tus datos. Así podremos orientarte según lo que necesitas.';
+      formTitle.innerHTML='Cuéntanos qué necesitas de <span>ZWCAD</span>';
+      formNote.textContent='Puedes elegir más de una opción; atenderemos tus solicitudes en un solo contacto.';
+      benefits.innerHTML='<li><span>1</span> Selecciona lo que necesitas</li><li><span>2</span> Comparte los datos de tu empresa</li><li><span>3</span> Nuestro equipo dará seguimiento a tu solicitud</li>';
+      return;
+    }
+    if(values.length===1){
+      var data=copy[values[0]];
+      introEyebrow.textContent=data.eyebrow;
+      mainTitle.innerHTML=data.title;
+      introDescription.textContent=data.intro;
+      formTitle.innerHTML=data.formTitle;
+      formNote.textContent=data.note;
+    }else{
+      introEyebrow.textContent='SOLICITUD ZWCAD';
+      mainTitle.innerHTML='Cuéntanos qué necesitas <span>de ZWCAD.</span>';
+      introDescription.textContent='Elegiste '+values.map(function(value){return labels[value].toLowerCase();}).join(', ')+'. Reuniremos todo en una sola solicitud.';
+      formTitle.innerHTML='Tus solicitudes de <span>ZWCAD</span>';
+      formNote.textContent='Completa tus datos una sola vez; nuestro equipo dará seguimiento a cada opción seleccionada.';
+    }
+    benefits.innerHTML=values.map(function(value,index){
+      var descriptions={descarga:'Te orientaremos para continuar con la prueba gratuita.',demostracion:'Revisaremos tu necesidad para coordinar la demostración.',cotizacion:'Prepararemos la información para cotizar tu licencia.'};
+      return '<li><span>'+(index+1)+'</span> '+descriptions[value]+'</li>';
+    }).join('');
   }
-  downloadFields.forEach(function(label){
-    var control=label.querySelector('input,select,textarea');
-    if(control&&control.required)control.setAttribute('data-required-download','true');
-  });
-  selector.addEventListener('change',function(){setIntent(selector.value)});
+  options.forEach(function(option){option.addEventListener('change',update);});
   document.querySelectorAll('[data-zcad-intent]').forEach(function(link){
     link.addEventListener('click',function(){
-      selector.value=link.getAttribute('data-zcad-intent')||'descarga';
-      setIntent(selector.value);
+      var intent=link.getAttribute('data-zcad-intent');
+      options.forEach(function(option){option.checked=option.value===intent;});
+      update();
     });
   });
-  setIntent(selector.value);
+  form.addEventListener('submit',function(event){
+    event.preventDefault();
+    if(!selected().length){error.textContent='Elige al menos una opción para continuar.';options[0].focus();return;}
+    if(!form.reportValidity())return;
+    /* Prototipo: todavía no conectado a Odoo ni a otro sistema de recepción. */
+  });
+  update();
 })();
 </script>
 </main>
