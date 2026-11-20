@@ -1104,7 +1104,8 @@ body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-que-es .zcad-section-lead
       demostracion:['Acordamos tu demostración','Te escribimos para elegir fecha y formato (remota o presencial, según tu proyecto).'],
       cotizacion:['Te preparamos una cotización','Un asesor te contacta con la propuesta según tu edición y número de licencias.']
     };
-    section.querySelector('[data-zcad-download-benefits]').innerHTML=values.map(function(value){
+    var visibleValues=values.length?values:order;
+    section.querySelector('[data-zcad-download-benefits]').innerHTML=visibleValues.map(function(value){
       var item=content[value];
       var number=order.indexOf(value)+1;
       return '<li><span class="zcad-meli-step">'+number+'</span><span><b>'+item[0]+'</b><small>'+item[1]+'</small></span></li>';
@@ -1121,7 +1122,7 @@ body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-que-es .zcad-section-lead
       });
     });
     fields.hidden=!values.length;
-    submitWrap.hidden=!values.length;
+    submitWrap.hidden=false;
     submit.textContent='Enviar';
   }
   function refresh(){
@@ -1798,11 +1799,11 @@ var hero=page.querySelector('.zcad-hero');if(hero&&!reduce&&window.matchMedia('(
 #zwcad-descarga .zcad-download-intro ul.zcad-meli-next>li>span:first-child{
   box-sizing:border-box!important;display:grid!important;place-items:center!important;flex:none!important;
   width:28px!important;height:28px!important;min-height:28px!important;
-  margin:0!important;padding:0!important;border:1px solid rgba(46,130,240,.16)!important;border-radius:50%!important;
-  background:linear-gradient(135deg,rgba(0,191,175,.16) 0%,rgba(46,130,240,.18) 100%)!important;
-  box-shadow:0 2px 7px rgba(46,130,240,.07)!important;
-  color:#0B559A!important;font-size:14px!important;line-height:1!important;
-  font-weight:800!important;text-align:center!important;
+  margin:0!important;padding:0!important;border:1px solid rgba(24,150,137,.10)!important;border-radius:50%!important;
+  background:linear-gradient(135deg,rgba(103,207,190,.10) 0%,rgba(157,211,202,.13) 52%,rgba(193,220,239,.12) 100%)!important;
+  box-shadow:0 1px 4px rgba(39,117,110,.035)!important;
+  color:#438F86!important;font-size:14px!important;line-height:1!important;
+  font-weight:700!important;text-align:center!important;
 }
 #zwcad-descarga .zcad-download-intro ul.zcad-meli-next>li>span:last-child{
   display:block!important;min-width:0!important;width:100%!important;
@@ -1829,21 +1830,21 @@ var hero=page.querySelector('.zcad-hero');if(hero&&!reduce&&window.matchMedia('(
 
 /* Envío compacto a la derecha y leyenda de privacidad */
 #zwcad-descarga .zcad-meli-submit{
-  display:flex!important;flex-direction:row!important;align-items:center!important;
-  justify-content:space-between!important;gap:16px!important;margin-top:22px!important;
+  display:flex!important;flex-direction:column!important;align-items:flex-end!important;
+  justify-content:flex-start!important;gap:9px!important;margin-top:22px!important;
 }
 #zwcad-descarga .zcad-meli-submit button{
-  order:2!important;flex:0 0 auto!important;width:auto!important;min-width:112px!important;
+  order:1!important;align-self:flex-end!important;flex:0 0 auto!important;width:auto!important;min-width:112px!important;
   min-height:44px!important;padding:11px 26px!important;border-radius:9px!important;
   font:700 14px Archivo,system-ui,sans-serif!important;
 }
 #zwcad-descarga .zcad-download-privacy{
-  order:1!important;flex:1 1 auto!important;margin:0!important;
-  color:#59697F!important;font-size:12px!important;line-height:1.5!important;
+  order:2!important;align-self:stretch!important;margin:0!important;
+  color:#718078!important;font-size:12px!important;line-height:1.5!important;text-align:right!important;
 }
-#zwcad-descarga .zcad-download-privacy a{color:#0B559A!important;text-decoration:underline!important;text-underline-offset:2px!important}
+#zwcad-descarga .zcad-download-privacy a{color:#438F86!important;text-decoration:underline!important;text-underline-offset:2px!important}
 @media(max-width:520px){
-  #zwcad-descarga .zcad-meli-submit{align-items:flex-start!important;gap:12px!important}
+  #zwcad-descarga .zcad-meli-submit{align-items:flex-end!important;gap:8px!important}
   #zwcad-descarga .zcad-meli-submit button{min-width:100px!important;padding:10px 20px!important}
 }
 </style>
