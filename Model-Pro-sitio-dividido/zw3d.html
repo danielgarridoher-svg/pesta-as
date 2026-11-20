@@ -2310,7 +2310,7 @@ a.mp-card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(11,20,34,.
           <label class="z3d-request-full">Industria*<select name="industria" required><option value="">Selecciona una industria</option><option>Automotriz</option><option>Manufactura</option><option>Maquinaria y equipo</option><option>Plásticos y moldes</option><option>Educación</option><option>Otra</option></select></label>
           <label class="z3d-request-project" data-z3d-project-group>Cuéntanos de tu proyecto <span>(Opcional)</span><textarea name="mensaje" rows="4" placeholder="Describe brevemente lo que necesitas"></textarea></label>
         </div>
-        <div class="z3d-request-submit" data-z3d-submit-wrap hidden>
+        <div class="z3d-request-submit" data-z3d-submit-wrap>
           <button type="submit" data-z3d-submit>Enviar</button>
           <p class="z3d-request-privacy">Al enviar aceptas nuestro <a href="index.html#aviso-privacidad">aviso de privacidad</a>.</p>
         </div>
@@ -2370,7 +2370,6 @@ a.mp-card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(11,20,34,.
     var values=selected();
     hidden.value=values.join(',');
     fields.hidden=!values.length;
-    submitWrap.hidden=!values.length;
     var projectGroup=form.querySelector('[data-z3d-project-group]');
     if(projectGroup){
       var showProject=values.indexOf('demostracion')!==-1||values.indexOf('cotizacion')!==-1;
