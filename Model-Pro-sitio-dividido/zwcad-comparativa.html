@@ -2272,7 +2272,7 @@ body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-capacidades{
 </section>
 
 
-<section class="mp-sect zcad-faq zcad-dark zcad-section" id="zwcad-preguntas" aria-labelledby="zcad-faq-title"><div class="mp-co"><p class="mp-ey">Preguntas frecuentes</p><h2 class="mp-h2 zcad-gradient-title" id="zcad-faq-title">Lo que conviene saber sobre ZWCAD</h2><div class="mp-faq zcad-faq-list">
+<section class="mp-sect zcad-faq zcad-dark zcad-section" id="zwcad-preguntas" aria-labelledby="zcad-faq-title"><div class="mp-co"><p class="mp-ey">Preguntas frecuentes</p><h2 class="mp-h2 zcad-gradient-title" id="zcad-faq-title">Lo que conviene saber sobre <span class="zcad-faq-title-highlight">ZWCAD</span></h2><div class="mp-faq zcad-faq-list">
 <div class="mp-fq"><button type="button" aria-expanded="false" aria-controls="zcad-faq-1">¿Qué formatos abre ZWCAD?<svg class="mp-fi" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 4v12M4 10h12" fill="none" stroke="currentColor" stroke-width="2"/></svg></button><div class="mp-fa" id="zcad-faq-1"><p>ZWCAD trabaja principalmente con DWG y también permite abrir e intercambiar archivos DXF, DWT y otros formatos habituales. Si compartes archivos con herramientas o equipos específicos, podemos ayudarte a revisar la compatibilidad de tu flujo de trabajo.</p></div></div>
 <div class="mp-fq"><button type="button" aria-expanded="false" aria-controls="zcad-faq-2">¿Qué herramientas incluye?<svg class="mp-fi" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 4v12M4 10h12" fill="none" stroke="currentColor" stroke-width="2"/></svg></button><div class="mp-fa" id="zcad-faq-2"><p>Incluye herramientas de dibujo y edición 2D, visualización 3D y funciones como diseño paramétrico, Flexiblock, nubes de puntos, importación de PDF y comparación de archivos. Las herramientas disponibles pueden variar según la edición y la versión; si tienes una necesidad concreta, podemos ayudarte a identificar cuál la cubre.</p></div></div>
 <div class="mp-fq"><button type="button" aria-expanded="false" aria-controls="zcad-faq-3">¿Puedo adaptar ZWCAD a mis procesos?<svg class="mp-fi" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 4v12M4 10h12" fill="none" stroke="currentColor" stroke-width="2"/></svg></button><div class="mp-fa" id="zcad-faq-3"><p>Sí. ZWCAD admite personalización mediante herramientas como LISP, VBA, ZRX y .NET. Si utilizas rutinas, plantillas o estándares propios, podemos revisar contigo qué elementos conviene validar antes de migrar.</p></div></div>
@@ -3672,6 +3672,76 @@ body .mp-page[data-page="zwcad"] #zwcad-casos.mp-cs .mp-cs-head>p:last-child{
   background:none!important;
   font-size:16px!important;
   line-height:1.7!important;
+}
+</style>
+
+
+<style id="mp-zwcad-faq-light-finish">
+/* Preguntas frecuentes: sección clara, etiqueta sólida y título con acento degradado */
+body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-preguntas{
+  position:relative!important;
+  overflow:hidden!important;
+  background-color:#EAF3FF!important;
+  background-image:linear-gradient(115deg,#F8FBFF 0%,#EAF3FF 54%,#D9F3F0 100%)!important;
+  color:#172B45!important;
+}
+body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-preguntas>.mp-co>.mp-ey{
+  color:#1558C0!important;-webkit-text-fill-color:#1558C0!important;
+  background:none!important;background-image:none!important;
+  font-weight:800!important;letter-spacing:.14em!important;
+}
+body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-preguntas #zcad-faq-title{
+  color:#172B45!important;-webkit-text-fill-color:#172B45!important;
+  background:none!important;background-image:none!important;text-shadow:none!important;
+  font-size:clamp(30px,3.5vw,42px)!important;line-height:1.14!important;
+}
+body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-preguntas #zcad-faq-title .zcad-faq-title-highlight{
+  background:linear-gradient(100deg,#1558C0 0%,#2E82F0 55%,#00B8BD 100%)!important;
+  background-clip:text!important;-webkit-background-clip:text!important;
+  color:transparent!important;-webkit-text-fill-color:transparent!important;
+}
+body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-preguntas .zcad-faq-list{
+  max-width:900px!important;margin:32px auto 0!important;
+  border:0!important;display:grid!important;gap:12px!important;
+}
+body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-preguntas .zcad-faq-list .mp-fq{
+  overflow:hidden!important;border:1px solid #D7E5F5!important;border-radius:14px!important;
+  background:rgba(255,255,255,.92)!important;
+  box-shadow:0 5px 18px rgba(21,58,96,.045)!important;
+  transition:border-color .22s ease,box-shadow .22s ease,transform .22s ease!important;
+}
+body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-preguntas .zcad-faq-list .mp-fq:hover,
+body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-preguntas .zcad-faq-list .mp-fq.is-open{
+  border-color:rgba(46,130,240,.48)!important;
+  box-shadow:0 10px 25px rgba(21,88,192,.09)!important;
+}
+body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-preguntas .zcad-faq-list .mp-fq button{
+  padding:20px 22px!important;color:#172B45!important;
+  font-size:16px!important;font-weight:700!important;
+}
+body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-preguntas .zcad-faq-list .mp-fq button:hover{
+  color:#1558C0!important;
+}
+body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-preguntas .zcad-faq-list .mp-fq .mp-fi{
+  color:#1558C0!important;
+}
+body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-preguntas .zcad-faq-list .mp-fa p{
+  padding:0 22px 21px!important;color:#52657D!important;
+  font-size:15px!important;line-height:1.75!important;
+}
+body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-preguntas .zcad-faq-list .mp-fa a,
+body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-preguntas .zcad-official-link a{
+  color:#1558C0!important;text-decoration-color:rgba(21,88,192,.35)!important;
+}
+body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-preguntas .zcad-official-link{
+  color:#607087!important;text-align:center!important;margin-top:26px!important;
+}
+@media(max-width:600px){
+  body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-preguntas .zcad-faq-list .mp-fq button{padding:17px 16px!important;font-size:15px!important}
+  body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-preguntas .zcad-faq-list .mp-fa p{padding:0 16px 18px!important}
+}
+@media(prefers-reduced-motion:reduce){
+  body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-preguntas .zcad-faq-list .mp-fq{transition:none!important}
 }
 </style>
 
