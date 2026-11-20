@@ -280,6 +280,37 @@ body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-que-es .zcad-section-lead
 @keyframes zcad-meli-flash{0%{box-shadow:0 0 0 0 rgba(30,111,224,.4)}100%{box-shadow:0 0 0 18px rgba(30,111,224,0)}}
 @media(max-width:900px){#zwcad-descarga .zcad-meli-grid{grid-template-columns:1fr;gap:30px}#zwcad-descarga .zcad-meli-options{grid-template-columns:1fr}#zwcad-descarga .zcad-meli-option-box{min-height:0;flex-direction:row;align-items:center;padding:12px 44px 12px 14px}#zwcad-descarga .zcad-meli-option-box small{display:none}}
 @media(max-width:520px){#zwcad-descarga .zcad-meli-fields{grid-template-columns:1fr}#zwcad-descarga .zcad-meli-full{grid-column:1}}
+/* Formulario único: presentación integrada según la referencia de Meli */
+#zwcad-descarga{padding:90px 24px!important;background:linear-gradient(180deg,#FFFFFF 0%,#F1F6FD 100%)!important;color:#17202E!important}
+#zwcad-descarga>.mp-co{width:100%;max-width:1484px;padding:0!important;margin:0 auto!important}
+#zwcad-descarga .zcad-meli-grid{grid-template-columns:minmax(0,5fr) minmax(0,6fr);gap:64px;align-items:center}
+#zwcad-descarga .zcad-download-intro{min-width:0}
+#zwcad-descarga .zcad-download-eyebrow{margin:0 0 18px;color:#2879E8;font-size:15px;font-weight:800;letter-spacing:.13em}
+#zwcad-descarga .zcad-download-intro h2{margin:0 0 20px!important;color:#17202E!important;-webkit-text-fill-color:#17202E!important;background:none!important;font-size:clamp(36px,3.5vw,52px)!important;line-height:1.12!important;letter-spacing:-.035em!important;font-weight:800!important}
+#zwcad-descarga .zcad-download-intro h2 span{color:inherit!important;-webkit-text-fill-color:inherit!important;background:none!important}
+#zwcad-descarga .zcad-download-intro>p:not(.zcad-download-eyebrow){margin:0;color:#59697F!important;font-size:21px;line-height:1.55}
+#zwcad-descarga .zcad-meli-next{margin-top:26px}
+#zwcad-descarga .zcad-meli-next li{box-shadow:0 5px 18px rgba(26,64,110,.045)}
+#zwcad-descarga .zcad-meli-next li span{color:#172B45!important}
+#zwcad-descarga .zcad-download-card{padding:clamp(26px,3vw,38px);border:1px solid #D8E4F3;border-radius:24px;background:#FFFFFF;box-shadow:0 18px 48px rgba(28,59,96,.10)}
+#zwcad-descarga .zcad-download-form{display:block}
+#zwcad-descarga .zcad-meli-question{font-size:18px;margin:0 0 12px}
+#zwcad-descarga .zcad-meli-question small{font-size:14px}
+#zwcad-descarga .zcad-meli-options{gap:13px;margin:12px 0 6px}
+#zwcad-descarga .zcad-meli-option-box{min-height:140px;padding:16px 18px;border-radius:15px}
+#zwcad-descarga .zcad-meli-option-box svg{width:24px;height:24px}
+#zwcad-descarga .zcad-meli-option-box b{font-size:16px}
+#zwcad-descarga .zcad-meli-option-box small{font-size:14px}
+#zwcad-descarga .zcad-meli-fields{margin-top:20px}
+#zwcad-descarga .zcad-meli-fields>label,#zwcad-descarga .zcad-meli-group label{font-size:14px}
+#zwcad-descarga .zcad-meli-fields input,#zwcad-descarga .zcad-meli-fields select,#zwcad-descarga .zcad-meli-fields textarea{font:500 15px Archivo,system-ui,sans-serif}
+#zwcad-descarga .zcad-meli-submit{margin-top:22px}
+#zwcad-descarga .zcad-meli-submit button{min-height:58px;border-radius:13px;font:700 16px Archivo,system-ui,sans-serif;background:linear-gradient(100deg,#00BFAF 0%,#2E82F0 100%);box-shadow:none}
+#zwcad-descarga .zcad-meli-submit button:hover{filter:brightness(1.04);transform:translateY(-1px)}
+#zwcad-descarga .zcad-download-privacy{margin:16px 0 0;color:#59697F;font-size:14px}
+@media(max-width:1000px){#zwcad-descarga .zcad-meli-grid{grid-template-columns:1fr;gap:34px}#zwcad-descarga .zcad-download-intro h2{font-size:clamp(34px,6vw,46px)!important}}
+@media(max-width:700px){#zwcad-descarga{padding:64px 20px!important}#zwcad-descarga .zcad-meli-options{grid-template-columns:1fr}#zwcad-descarga .zcad-meli-option-box{min-height:0;flex-direction:row;align-items:center;padding:14px 48px 14px 16px}#zwcad-descarga .zcad-meli-option-box small{display:block}}
+@media(max-width:520px){#zwcad-descarga .zcad-meli-fields{grid-template-columns:1fr}#zwcad-descarga .zcad-meli-full{grid-column:1}}
 </style></head>
 <body>
 <div class="mp-wrap">
@@ -830,17 +861,6 @@ body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-que-es .zcad-section-lead
 <div class="mp-fq"><button type="button" aria-expanded="false" aria-controls="zcad-faq-5">¿Cómo puedo descargar ZWCAD?<svg class="mp-fi" viewBox="0 0 20 20" aria-hidden="true"><path d="M10 4v12M4 10h12" fill="none" stroke="currentColor" stroke-width="2"/></svg></button><div class="mp-fa" id="zcad-faq-5"><p>En la sección <a href="#zwcad-descarga">Descargar ZWCAD</a> encontrarás el formulario para continuar. Completa los datos solicitados y selecciona el idioma de instalación.</p></div></div>
 </div><p class="zcad-official-link"><a href="#zwcad-capacidades">Conoce las capacidades de ZWCAD</a> <span aria-hidden="true">·</span> <a href="#zwcad-precios">Revisa las ediciones y opciones de licencia</a></p></div></section>
 
-
-<section class="mp-sect zcad-cta zcad-light zcad-section" id="zwcad-demo" aria-labelledby="zcad-demo-title">
-  <div class="mp-co">
-    <p class="zcad-ey-light">Hablemos de tu proyecto</p>
-    <h2 class="mp-h2 zcad-light-title" id="zcad-demo-title">¿Listo para mejorar tu flujo CAD?</h2>
-    <p>Cuéntanos qué necesita tu equipo. Puedes solicitar una prueba gratuita de 30 días, una demostración de ZWCAD o una cotización para tu proyecto.</p>
-    <div class="zcad-cta-actions">
-      <a class="mp-white" href="#zwcad-descarga">Elegir cómo quieres avanzar</a>
-    </div>
-  </div>
-</section>
 
 <section class="mp-sect zcad-download-section zcad-section" id="zwcad-descarga" aria-labelledby="zcad-download-title">
   <div class="mp-co zcad-meli-grid">
