@@ -2141,10 +2141,31 @@ body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-capacidades{
     button.setAttribute('aria-expanded', String(open));
     var row = button.closest('tr');
     var next = row.nextElementSibling;
+    var featureRows = [];
     while (next && !next.classList.contains('mp-zcad-category-row')) {
-      next.hidden = !open;
+      featureRows.push(next);
       next = next.nextElementSibling;
     }
+
+    featureRows.forEach(function (feature) {
+      if (open) {
+        feature.hidden = false;
+        feature.classList.remove('mp-row-fading');
+        feature.classList.add('mp-row-entering');
+        requestAnimationFrame(function () {
+          feature.classList.remove('mp-row-entering');
+        });
+      } else if (!feature.hidden) {
+        feature.classList.remove('mp-row-entering');
+        feature.classList.add('mp-row-fading');
+        window.setTimeout(function () {
+          if (button.getAttribute('aria-expanded') !== 'true') {
+            feature.hidden = true;
+          }
+          feature.classList.remove('mp-row-fading');
+        }, 220);
+      }
+    });
   }
   /* Estado inicial: todas las categorías contraídas, como en la referencia. */
   categories.forEach(function (button) { setCategory(button, false); });
@@ -3523,6 +3544,46 @@ body .mp-page[data-page="zwcad"] .mp-zwcad-page #mp-zcad-compare .mp-zcad-footno
 @media(max-width:640px){
   body .mp-page[data-page="zwcad"] .mp-zwcad-page #mp-zcad-compare .mp-zcad-matrix thead th{padding:13px 7px!important}
   body .mp-page[data-page="zwcad"] .mp-zwcad-page #mp-zcad-compare .mp-z3d-fixed-head th{padding:12px 7px!important;font-size:11px!important}
+}
+</style>
+
+
+
+<style id="mp-zcad-comparison-interaction-finish">
+/* Detalles de interacción inspirados en la matriz ZW3D: chevron, fundido y respuesta al hover. */
+#mp-zcad-compare .mp-zcad-category-toggle{
+  position:relative;isolation:isolate;overflow:hidden;
+  transition:background .24s ease,color .24s ease,box-shadow .24s ease;
+}
+#mp-zcad-compare .mp-zcad-category-toggle::after{
+  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;
+  background:linear-gradient(100deg,rgba(46,130,240,.08),rgba(0,184,189,.10));
+  opacity:0;transition:opacity .28s ease;
+}
+#mp-zcad-compare .mp-zcad-category-toggle:hover::after,
+#mp-zcad-compare .mp-zcad-category-toggle:focus-visible::after{opacity:1}
+#mp-zcad-compare .mp-zcad-category-chevron{
+  width:9px;height:9px;flex:0 0 9px;
+  border-right:2px solid #1558C0;border-bottom:2px solid #1558C0;
+  transform:rotate(-45deg);transform-origin:center;
+  transition:transform .28s cubic-bezier(.2,.75,.25,1),border-color .2s ease;
+}
+#mp-zcad-compare .mp-zcad-category-toggle[aria-expanded="true"] .mp-zcad-category-chevron{
+  transform:rotate(45deg);border-color:#00AEB5;
+}
+#mp-zcad-compare .mp-zcad-feature-row{
+  opacity:1;transition:opacity .22s ease,filter .22s ease;
+}
+#mp-zcad-compare .mp-zcad-feature-row.mp-row-entering,
+#mp-zcad-compare .mp-zcad-feature-row.mp-row-fading{
+  opacity:0;filter:blur(2px);
+}
+#mp-zcad-compare .mp-zcad-feature-row[hidden]{display:none!important}
+@media(prefers-reduced-motion:reduce){
+  #mp-zcad-compare .mp-zcad-category-toggle,
+  #mp-zcad-compare .mp-zcad-category-toggle::after,
+  #mp-zcad-compare .mp-zcad-category-chevron,
+  #mp-zcad-compare .mp-zcad-feature-row{transition:none!important}
 }
 </style>
 
