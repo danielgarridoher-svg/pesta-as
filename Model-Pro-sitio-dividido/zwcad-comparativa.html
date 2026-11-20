@@ -264,6 +264,7 @@ body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-que-es .zcad-section-lead
 #zwcad-descarga .zcad-meli-fields input:focus,#zwcad-descarga .zcad-meli-fields select:focus,#zwcad-descarga .zcad-meli-fields textarea:focus{outline:0;border-color:#1E6FE0;box-shadow:0 0 0 3px rgba(30,111,224,.15)}
 #zwcad-descarga .zcad-meli-group{display:contents}
 #zwcad-descarga .zcad-meli-full{grid-column:1/-1}
+#zwcad-descarga .zcad-meli-project-field.is-wide{grid-column:1/-1}
 #zwcad-descarga .zcad-meli-group small{font-size:12px;color:#607087;font-weight:500}
 #zwcad-descarga .zcad-meli-label{display:block;font-size:14px;font-weight:600;color:#15202E;margin-bottom:6px}
 #zwcad-descarga .zcad-meli-pills{display:flex;gap:8px;flex-wrap:wrap}
@@ -1048,7 +1049,7 @@ body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-que-es .zcad-section-lead
               <label>¿Cuántas licencias necesitas? <small>(Opcional)</small><select name="licencias" disabled><option value="">Aún no lo sé</option><option>1</option><option>2 a 5</option><option>6 o más</option></select></label>
             </div>
             <div class="zcad-meli-group zcad-meli-full" data-zcad-group="cotizacion demostracion" hidden>
-              <label>Cuéntanos de tu proyecto <small>(Opcional)</small><textarea name="mensaje" rows="3" placeholder="Por ejemplo: qué dibujas o fabricas, cuántas personas lo usarían o qué software utilizas actualmente." disabled></textarea></label>
+              <label class="zcad-meli-project-field">Cuéntanos de tu proyecto <small>(Opcional)</small><textarea name="mensaje" rows="3" placeholder="Por ejemplo: qué dibujas o fabricas, cuántas personas lo usarían o qué software utilizas actualmente." disabled></textarea></label>
             </div>
             <div class="zcad-meli-hp" aria-hidden="true"><label>No llenar<input type="text" name="sitio_web" tabindex="-1" autocomplete="off"></label></div>
           </div>
@@ -1122,6 +1123,9 @@ body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-que-es .zcad-section-lead
         if(['industria','tipo_herramientas','idioma'].indexOf(control.name)!==-1)control.required=show;
       });
     });
+    var projectGroup=form.querySelector('[data-zcad-group="cotizacion demostracion"]');
+    var projectLabel=projectGroup&&projectGroup.querySelector('label');
+    if(projectLabel)projectLabel.classList.toggle('is-wide',values.indexOf('demostracion')!==-1&&values.indexOf('cotizacion')===-1);
     fields.hidden=!values.length;
     submitWrap.hidden=false;
     submit.textContent='Enviar';
