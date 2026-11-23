@@ -672,26 +672,31 @@ small,.small{font-size:var(--fs-small);line-height:1.5;}
 .scanner-guide-contact strong{display:block;color:#183458;font-size:16px}
 .scanner-guide-contact p{max-width:690px;margin:6px 0 0;color:#526783;font-size:12px;line-height:1.65}
 .scanner-guide-contact-link{flex-shrink:0;display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:10px;background:linear-gradient(100deg,#1558C0 0%,#2E82F0 58%,#00AEB5 100%);color:#FFFFFF;font-size:11px;font-weight:750;text-decoration:none}
-.scanner-catalog-intro{max-width:850px;margin:0 auto 34px;text-align:center}
+.scanner-catalog-intro{max-width:100%;margin:0 0 34px;text-align:left}
 .scanner-catalog-intro h2{margin:10px 0;color:#183458}
-.scanner-catalog-intro>p{max-width:760px;margin:0 auto;color:#526783;font-size:13px;line-height:1.7}
-.scanner-subheading{margin:0 0 20px}
+.scanner-catalog-intro>p{max-width:820px;margin:0;color:#526783;font-size:14px;line-height:1.7}
+.scanner-subheading{display:block;margin:0 0 20px}
 .scanner-subheading h3{margin:0;color:#183458;font-size:22px}
-.scanner-subheading .section-sub{max-width:520px;color:#526783}
+.scanner-subheading .section-sub{max-width:760px;margin:8px 0 0;color:#526783}
 .scanner-workshop-heading{margin-top:46px;padding-top:34px;border-top:1px solid #DCE6F2}
-.scanner-catalog-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;align-items:stretch}
+.scanner-catalog-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-items:stretch}
 .scanner-catalog-grid .scanner-card{min-width:0;display:flex;flex-direction:column}
-.scanner-catalog-grid .scanner-image{aspect-ratio:1.35}
-.scanner-catalog-grid .scanner-body{display:flex;flex:1;flex-direction:column;padding:15px 14px 10px}
-.scanner-catalog-grid .scanner-body h3{min-height:0;margin:6px 0;font-size:16px;line-height:1.3}
-.scanner-catalog-grid .scanner-body>p{min-height:0;margin:4px 0 0;font-size:11px;line-height:1.5}
-.scanner-catalog-grid .eyebrow.small{min-height:0;font-size:9px}
-.scanner-catalog-grid .scanner-card-specs{margin-top:12px}
-.scanner-catalog-grid .scanner-card-specs>div{grid-template-columns: minmax(76px,.72fr) minmax(0,1.28fr);gap:7px;padding:6px 0}
-.scanner-catalog-grid .scanner-card-specs dt,.scanner-catalog-grid .scanner-card-specs dd{font-size:9px;line-height:1.4}
-.scanner-catalog-grid .scanner-card .product-feature{margin-top:auto;padding-top:11px;font-size:10px}
-.scanner-catalog-grid .scanner-card-actions{grid-template-columns:1fr 1fr;gap:7px;padding:10px 0 2px}
-.scanner-catalog-grid .scanner-select-model,.scanner-catalog-grid .scanner-demo-link{min-width:0;min-height:37px;padding:7px 6px;font-size:9px}
+.scanner-catalog-grid .scanner-image{aspect-ratio:1.45}
+.scanner-catalog-grid .scanner-body{display:flex;flex:1;flex-direction:column;padding:17px 16px 11px}
+.scanner-catalog-grid .scanner-body h3{min-height:0;margin:7px 0;font-size:17px;line-height:1.35}
+.scanner-catalog-grid .scanner-body>p{min-height:0;margin:5px 0 0;font-size:13px;line-height:1.5}
+.scanner-catalog-grid .eyebrow.small{min-height:0;font-size:11px}
+.scanner-catalog-grid .scanner-card-specs{margin-top:13px}
+.scanner-catalog-grid .scanner-card-specs>div{grid-template-columns:minmax(82px,.72fr) minmax(0,1.28fr);gap:8px;padding:7px 0}
+.scanner-catalog-grid .scanner-card-specs dt,.scanner-catalog-grid .scanner-card-specs dd{font-size:11px;line-height:1.45}
+.scanner-catalog-grid .scanner-card .product-feature{margin-top:auto;padding-top:12px;font-size:12px}
+.scanner-catalog-grid .scanner-card-actions{grid-template-columns:1fr 1fr;gap:8px;padding:11px 0 2px}
+.scanner-catalog-grid .scanner-select-model,.scanner-catalog-grid .scanner-demo-link{min-width:0;min-height:40px;padding:8px 7px;font-size:11px}
+.catalog-bottom{display:flex;flex-direction:column;align-items:flex-start;gap:9px;margin-top:32px;padding:20px 22px;border:1px solid #C9D9EB;border-radius:14px;background:linear-gradient(115deg,#FFFFFF 0%,#F7FAFF 55%,#EAF3FF 100%);color:#183458}
+.catalog-bottom span{font-size:19px;font-weight:800;line-height:1.4}
+.catalog-bottom a{font-size:14px}
+.scanner-compare-section .section-heading{display:block}
+.scanner-compare-section .section-heading .section-sub{max-width:760px;margin:10px 0 0}
 .scanner-bubble-advice{margin-top:12px;padding:13px;border:1px solid rgba(21,88,192,.2);border-radius:11px;background:rgba(234,243,255,.72)}
 .scanner-bubble-advice>b{display:block;color:#183458;font-size:12px}
 .scanner-bubble-advice p{margin:5px 0 8px;color:#526783;font-size:10px;line-height:1.55}
@@ -837,7 +842,7 @@ small,.small{font-size:var(--fs-small);line-height:1.5;}
       <p>Conoce las distintas tecnologías de captura 3D de SHINING 3D para digitalizar piezas, inspeccionar componentes y llevar tus proyectos del entorno físico al digital. Compara sus aplicaciones y encuentra el equipo que mejor responde a tu proceso.</p>
     </div>
     <div class="section-heading scanner-subheading">
-      <div><h3>Para metrología e inspección de precisión</h3></div>
+      <div><h3>Para metrología de precisión</h3></div>
       <p class="section-sub">Cuando la exactitud es lo que decide: control de calidad, ingeniería inversa de precisión e inspección de piezas con tolerancias cerradas.</p>
     </div>
     <div class="product-grid scanner-catalog-grid"><article class="scanner-card group is-selected" id="freescan-combo-plus-wireless" data-model="combo"><div class="scanner-image"><img src="https://raw.githubusercontent.com/danielgarridoher-svg/pesta-as/acce7f59fcf3e39f32333cf06b2d64fd54f4d612/model-pro-escaneres-3d/images/combo.webp" alt="FreeScan Combo+ Wireless" loading="lazy"><span class="product-badge">EL MÁS SOLICITADO</span><span class="image-brand">SHINING 3D</span></div><div class="scanner-body"><span class="eyebrow small">Inalámbrico · Láser + infrarrojo</span><h3>FreeScan Combo+ Wireless</h3><p>Escáner 3D portátil híbrido inalámbrico para metrología.</p><dl class="scanner-card-specs">
