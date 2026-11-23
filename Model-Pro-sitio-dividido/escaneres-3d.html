@@ -666,6 +666,24 @@ small,.small{font-size:var(--fs-small);line-height:1.5;}
 .scanner-bubble-links .scanner-bubble-question:hover b,.scanner-bubble-links .scanner-bubble-question:hover span{text-decoration:underline}
 @media(max-width:900px){.scanner-size-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.scanner-application-layout{grid-template-columns:1fr;gap:20px}}
 @media(max-width:767px){.scanner-size-guide{padding:54px 0}.scanner-size-grid{grid-template-columns:1fr}.scanner-size-grid article{min-height:0}.scanner-application-bridge{padding:42px 0}}
+/* Correcciones de lectura, jerarquía y controles */
+.scanner-choice-guide .scanner-guide-lead{max-width:none;width:100%;font-size:15px;line-height:1.7}
+.scanner-choice-guide h2{max-width:100%}
+.scanner-size-guide .section-heading{display:block;text-align:left}
+.scanner-size-guide .section-heading>div{max-width:100%}
+.scanner-size-guide .section-sub{display:block;max-width:100%;width:100%;margin:10px 0 0;text-align:left}
+.scanner-size-note{max-width:100%;width:100%}
+.scanner-catalog-intro>p{max-width:100%;width:100%}
+.scanner-subheading .section-sub{max-width:100%;width:100%;margin:9px 0 0}
+.scanner-guide-grid article p{max-width:100%}
+.scanner-guide-contact p{max-width:100%}
+.scanner-select-model,.scanner-demo-link,.scanner-guide-contact-link,.catalog-bottom a{min-height:44px;padding:11px 16px;border-radius:10px;font-size:12px;font-weight:750;line-height:1.35;transition:transform .2s ease,box-shadow .2s ease,background .2s ease,border-color .2s ease}
+.scanner-select-model{border:1px solid #8CB8E8!important;background:rgba(255,255,255,.92)!important;color:#1558C0!important;box-shadow:0 3px 10px rgba(21,88,192,.08)}
+.scanner-card.is-selected .scanner-select-model{border-color:transparent!important;background:linear-gradient(100deg,#1558C0 0%,#2E82F0 58%,#00AEB5 100%)!important;color:#FFFFFF!important;box-shadow:0 8px 20px rgba(21,88,192,.22)}
+.scanner-demo-link{border:1px solid #8CB8E8!important;background:rgba(255,255,255,.9)!important;color:#1558C0!important;box-shadow:0 3px 10px rgba(21,88,192,.06)}
+.scanner-guide-contact-link,.catalog-bottom a{border:0!important;background:linear-gradient(100deg,#1558C0 0%,#2E82F0 58%,#00AEB5 100%)!important;color:#FFFFFF!important;box-shadow:0 8px 20px rgba(21,88,192,.2)}
+.scanner-select-model:hover,.scanner-demo-link:hover,.scanner-guide-contact-link:hover,.catalog-bottom a:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(21,88,192,.2)}
+.scanner-select-model:focus-visible,.scanner-demo-link:focus-visible,.scanner-guide-contact-link:focus-visible,.catalog-bottom a:focus-visible{outline:3px solid rgba(0,184,189,.45);outline-offset:3px}
 /* Ajustes de la propuesta: guía breve y catálogo unificado */
 .scanner-guide-grid a{color:#0877D8;font-weight:700;text-decoration:underline;text-underline-offset:2px}
 .scanner-guide-contact{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:24px;padding:22px 24px;border:1px solid #C9D9EB;border-radius:14px;background:rgba(255,255,255,.78)}
@@ -1115,17 +1133,26 @@ small,.small{font-size:var(--fs-small);line-height:1.5;}
 (function(){
   var cards=[...document.querySelectorAll('.scanner-card[data-model]')];
   var cells=[...document.querySelectorAll('.scanner-compare-table [data-model]')];
+  if(!cards.length)return;
   function select(key){
+    var exists=cards.some(function(card){return card.getAttribute('data-model')===key;});
+    if(!exists)return;
     cards.forEach(function(card){
       var active=card.getAttribute('data-model')===key;
       card.classList.toggle('is-selected',active);
       var button=card.querySelector('[data-select-model]');
-      if(button){button.setAttribute('aria-pressed',String(active));button.textContent=active?'Seleccionado':'Ver modelo';}
+      if(button){
+        button.setAttribute('aria-pressed',active?'true':'false');
+        button.textContent=active?'Seleccionado':'Ver modelo';
+      }
     });
     cells.forEach(function(cell){cell.classList.toggle('is-selected',cell.getAttribute('data-model')===key);});
   }
-  document.querySelectorAll('[data-select-model]').forEach(function(button){
-    button.addEventListener('click',function(){select(button.getAttribute('data-select-model'));});
+  document.addEventListener('click',function(event){
+    var button=event.target.closest('[data-select-model]');
+    if(!button||!document.documentElement.contains(button))return;
+    event.preventDefault();
+    select(button.getAttribute('data-select-model'));
   });
   select('combo');
 })();
