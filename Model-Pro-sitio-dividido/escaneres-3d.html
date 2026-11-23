@@ -255,6 +255,20 @@ body{font-family:Archivo,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-se
 }
 </style>
 
+
+<style id="scanner-hero-image-fix">
+/* Hero con la fotografía local del proyecto; la capa oscura conserva la legibilidad */
+.hero{
+  background:
+    linear-gradient(90deg,rgba(8,18,34,.92) 0%,rgba(8,18,34,.68) 54%,rgba(8,18,34,.22) 100%),
+    url("./Heros%20principales/hero-scanner.jpg") center/cover no-repeat!important;
+}
+.hero:before{background:none!important;opacity:1}
+@media(max-width:620px){
+  .hero{background-position:58% center!important}
+}
+</style>
+
 </head>
 <body>
 <div class="mp-wrap">
