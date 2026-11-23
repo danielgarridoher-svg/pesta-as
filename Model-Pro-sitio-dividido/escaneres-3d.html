@@ -380,6 +380,13 @@ body{font-family:Archivo,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-se
 }
 </style>
 
+
+<style id="scanner-catalog-card-accessibility">
+/* Las tarjetas llevan a la orientación de esta misma página; foco visible para teclado */
+.product:focus-visible{outline:3px solid #36A6D8;outline-offset:4px;border-color:#36A6D8}
+.product .more{display:inline-flex;align-items:center;gap:7px}
+@media(hover:hover){.product:hover .more{transform:translateX(3px)}}
+</style>
 </head>
 <body>
 <div class="mp-wrap">
@@ -447,17 +454,17 @@ body{font-family:Archivo,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-se
 <section class="section dark-section" id="metrologia"><div class="mp-co">
 <div class="category-intro"><div class="section-head"><p class="section-kicker">Metrología</p><h2>Escáneres 3D <span class="metrology-gradient">metrológicos</span></h2><p>Para aplicaciones donde conocer la geometría de una pieza y evaluar sus dimensiones es parte esencial del proceso.</p></div><a class="btn" href="#scanner-request-form">Solicitar asesoría</a></div>
 <div class="products">
-<a class="product" id="freescan-combo-plus-wireless" href="index.html#contacto"><div class="product-visual product-image"><img src="https://escaneres3d.com/wp-content/uploads/2026/07/Combo-.png" alt="freescan combo plus wireless" loading="lazy"></div><h3>FreeScan Combo+ Wireless</h3><p>Escáner 3D portátil híbrido inalámbrico para metrología.</p><span class="more">Conocer equipo →</span></a>
-<a class="product" id="freescan-trak-nova" href="index.html#contacto"><div class="product-visual product-image"><img src="https://escaneres3d.com/wp-content/uploads/2026/07/TrakNova-V.png" alt="freescan trak nova" loading="lazy"></div><h3>FreeScan Trak Nova</h3><p>Sistema dinámico de escaneo y seguimiento 3D.</p><span class="more">Conocer equipo →</span></a>
-<a class="product" id="freescan-omni" href="index.html#contacto"><div class="product-visual product-image"><img src="https://www.shining3d.com/hs-fs/hubfs/Website-2024/images/Product%20Page/FreeScan%20Omni/Omni%E7%BD%91页图包_Engineered%20for%20On-Site%20Quality%20Control.png?height=650&name=Omni%E7%BD%91页图包_Engineered+for+On-Site+Quality+Control.png&width=907" alt="Sistema FreeScan Omni para inspección 3D" loading="lazy"></div><h3>FreeScan Omni</h3><p>Escáner 3D de metrología autónomo y listo para inspección.</p><span class="more">Conocer equipo →</span></a>
-<a class="product" id="freescan-ue-pro2" href="index.html#contacto"><div class="product-visual product-image"><img src="https://escaneres3d.com/wp-content/uploads/2026/07/UE-PRO-2-V.png" alt="freescan ue pro2" loading="lazy"></div><h3>FreeScan UE Pro2</h3><p>Escáner 3D portátil láser para aplicaciones metrológicas.</p><span class="more">Conocer equipo →</span></a>
-<a class="product" id="optimscan-q12" href="index.html#contacto"><div class="product-visual product-image"><img src="https://escaneres3d.com/wp-content/uploads/2026/07/Q12-V.png" alt="optimscan q12" loading="lazy"></div><h3>OptimScan Q12 / Q12 HD</h3><p>Sistemas ópticos de inspección 3D de alta precisión.</p><span class="more">Conocer equipo →</span></a>
+<a class="product" id="freescan-combo-plus-wireless" href="#scanner-request-form"><div class="product-visual product-image"><img src="https://escaneres3d.com/wp-content/uploads/2026/07/Combo-.png" alt="freescan combo plus wireless" loading="lazy"></div><h3>FreeScan Combo+ Wireless</h3><p>Escáner 3D portátil híbrido inalámbrico para metrología.</p><span class="more">Solicitar información →</span></a>
+<a class="product" id="freescan-trak-nova" href="#scanner-request-form"><div class="product-visual product-image"><img src="https://escaneres3d.com/wp-content/uploads/2026/07/TrakNova-V.png" alt="freescan trak nova" loading="lazy"></div><h3>FreeScan Trak Nova</h3><p>Sistema dinámico de escaneo y seguimiento 3D.</p><span class="more">Solicitar información →</span></a>
+<a class="product" id="freescan-omni" href="#scanner-request-form"><div class="product-visual product-image"><img src="https://www.shining3d.com/hs-fs/hubfs/Website-2024/images/Product%20Page/FreeScan%20Omni/Omni%E7%BD%91页图包_Engineered%20for%20On-Site%20Quality%20Control.png?height=650&name=Omni%E7%BD%91页图包_Engineered+for+On-Site+Quality+Control.png&width=907" alt="Sistema FreeScan Omni para inspección 3D" loading="lazy"></div><h3>FreeScan Omni</h3><p>Escáner 3D de metrología autónomo y listo para inspección.</p><span class="more">Solicitar información →</span></a>
+<a class="product" id="freescan-ue-pro2" href="#scanner-request-form"><div class="product-visual product-image"><img src="https://escaneres3d.com/wp-content/uploads/2026/07/UE-PRO-2-V.png" alt="freescan ue pro2" loading="lazy"></div><h3>FreeScan UE Pro2</h3><p>Escáner 3D portátil láser para aplicaciones metrológicas.</p><span class="more">Solicitar información →</span></a>
+<a class="product" id="optimscan-q12" href="#scanner-request-form"><div class="product-visual product-image"><img src="https://escaneres3d.com/wp-content/uploads/2026/07/Q12-V.png" alt="optimscan q12" loading="lazy"></div><h3>OptimScan Q12 / Q12 HD</h3><p>Sistemas ópticos de inspección 3D de alta precisión.</p><span class="more">Solicitar información →</span></a>
 </div></div></section>
 <section class="section" id="profesionales"><div class="mp-co">
 <div class="category-intro"><div class="section-head"><p class="section-kicker">Escaneo profesional</p><h2>Escáneres 3D <span class="professional-gradient">profesionales</span></h2><p>Soluciones para digitalizar objetos físicos y llevar su geometría al entorno digital para diseño, documentación y desarrollo.</p></div><a class="btn" href="#scanner-request-form">Solicitar asesoría</a></div>
 <div class="products">
-<a class="product" id="einscan-libre" href="index.html#contacto"><div class="product-visual product-image"><img src="https://shop3d.ca/cdn/shop/files/Rigil1.png?v=1750871819&width=1200" alt="Escáner 3D portátil de la línea EinScan" loading="lazy"></div><h3>EinScan Libre</h3><p>Escáner 3D láser todo en uno, inalámbrico y a color.</p><span class="more">Conocer equipo →</span></a>
-<a class="product" id="einscan-rigil" href="index.html#contacto"><div class="product-visual product-image"><img src="https://shop3d.ca/cdn/shop/files/Rigil1.png?v=1750871819&width=1200" alt="Escáner 3D EinScan Rigil" loading="lazy"></div><h3>EinScan Rigil</h3><p>Escáner 3D portátil con distintos modos de captura.</p><span class="more">Conocer equipo →</span></a>
+<a class="product" id="einscan-libre" href="#scanner-request-form"><div class="product-visual product-image"><img src="https://shop3d.ca/cdn/shop/files/Rigil1.png?v=1750871819&width=1200" alt="Escáner 3D portátil de la línea EinScan" loading="lazy"></div><h3>EinScan Libre</h3><p>Escáner 3D láser todo en uno, inalámbrico y a color.</p><span class="more">Solicitar información →</span></a>
+<a class="product" id="einscan-rigil" href="#scanner-request-form"><div class="product-visual product-image"><img src="https://shop3d.ca/cdn/shop/files/Rigil1.png?v=1750871819&width=1200" alt="Escáner 3D EinScan Rigil" loading="lazy"></div><h3>EinScan Rigil</h3><p>Escáner 3D portátil con distintos modos de captura.</p><span class="more">Solicitar información →</span></a>
 </div></div></section>
 <section class="section dark-section" id="digital-process"><div class="mp-co">
 <div class="section-head"><p class="section-kicker">Del objeto físico al dato digital</p><h2>¿Cómo funciona el <span class="process-gradient">escaneo 3D?</span></h2><p>El escaneo 3D permite capturar la forma de un objeto sin contacto y generar información digital que puede aprovecharse en distintas etapas del trabajo.</p></div>
