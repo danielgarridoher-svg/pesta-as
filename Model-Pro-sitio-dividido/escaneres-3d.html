@@ -470,6 +470,57 @@ small,.small{font-size:var(--fs-small);line-height:1.5;}
 }
 .catalog-hero .hero-caption small{color:#00B8BD;}
 .catalog-hero .hero-caption strong{color:#FFFFFF;}
+/* Hero: reutiliza las variantes .btn existentes con el acabado del hero oscuro ZW3D */
+.catalog-hero .hero-actions .btn-hero{
+  min-height:48px;
+  padding:11px 22px;
+  border:1px solid transparent;
+  border-radius:10px;
+  background:linear-gradient(110deg,#00AEB5 0%,#1689E8 48%,#174EAD 100%);
+  background-image:linear-gradient(110deg,#00AEB5 0%,#1689E8 48%,#174EAD 100%);
+  color:#fff;
+  box-shadow:0 8px 20px rgba(23,78,173,.22);
+  transition:background .22s ease,background-image .22s ease,transform .22s ease,box-shadow .22s ease,filter .22s ease;
+}
+.catalog-hero .hero-actions .btn-hero:hover,
+.catalog-hero .hero-actions .btn-hero:focus-visible{
+  background:linear-gradient(110deg,#008F98 0%,#126FCB 52%,#123F91 100%);
+  background-image:linear-gradient(110deg,#008F98 0%,#126FCB 52%,#123F91 100%);
+  color:#fff;
+  transform:translateY(-3px);
+  box-shadow:0 14px 28px rgba(23,78,173,.32);
+  filter:saturate(1.12);
+}
+.catalog-hero .hero-actions .btn-hero-outline{
+  min-height:48px;
+  padding:11px 20px;
+  border:1px solid rgba(244,246,249,.72);
+  border-radius:10px;
+  background:transparent;
+  color:#F4F6F9;
+  box-shadow:none;
+  transition:background .22s ease,border-color .22s ease,color .22s ease,transform .22s ease;
+}
+.catalog-hero .hero-actions .btn-hero-outline:hover,
+.catalog-hero .hero-actions .btn-hero-outline:focus-visible{
+  border-color:#fff;
+  background:rgba(244,246,249,.12);
+  color:#fff;
+  transform:translateY(-2px);
+}
+.catalog-hero .hero-actions a:focus-visible{
+  outline:3px solid rgba(0,184,189,.38);
+  outline-offset:3px;
+}
+@media(max-width:767px){
+  .catalog-hero .hero-actions .btn-hero,
+  .catalog-hero .hero-actions .btn-hero-outline{
+    min-height:46px;
+    padding:11px 17px;
+    font-size:14px;
+  }
+}
+
 /* ===== Hero: composición limpia y mejor distribuida ===== */
 .catalog-hero{min-height:620px;}
 .catalog-hero .hero-content{
