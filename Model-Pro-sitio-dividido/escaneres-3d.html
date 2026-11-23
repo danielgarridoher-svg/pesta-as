@@ -14,6 +14,36 @@
 @media(max-width:850px){.mp-co{width:min(100% - 40px,680px)}.mp-bar{gap:12px}.mp-menu{gap:0}.mp-menu a{padding:9px 7px;font-size:13px}.mp-q{padding:10px 12px;font-size:12px}.products{grid-template-columns:repeat(2,minmax(0,1fr))}.process,.applications{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:620px){.mp-co{width:calc(100% - 36px)}.mp-bar{height:auto;min-height:64px;flex-wrap:wrap;padding:10px 0}.mp-nav{order:3;width:100%;overflow-x:auto}.mp-menu{width:max-content}.mp-q{margin-left:auto}.hero-inner{padding:64px 0 58px}.hero p.lead{font-size:15px}.section{padding:56px 0}.choice-grid,.products{grid-template-columns:1fr}.choice{min-height:250px}.category-intro,.advice-inner,.foot-inner{align-items:flex-start;flex-direction:column}.category-intro>a{margin:0}.process,.applications{grid-template-columns:1fr 1fr}.advice{padding:42px 0}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
+
+/* Alternancia de superficies Model Pro: claro primero, después oscuro */
+.hero-inner{padding:132px 0 116px;max-width:900px}
+.hero h1{max-width:860px;font-size:clamp(46px,6.2vw,76px);line-height:1.02}
+.hero p.lead{max-width:700px;font-size:19px;line-height:1.65}
+.hero-actions{margin-top:34px}
+.section.dark-section{background:var(--secondary);color:#F4F6F9}
+.section.dark-section .section-head>p:last-child,
+.section.dark-section .category-intro .section-head>p:last-child{color:#C3D0E0}
+.section.dark-section .section-kicker{color:var(--primary)}
+.section.dark-section .choice,
+.section.dark-section .product,
+.section.dark-section .process article,
+.section.dark-section .application{background:#142743;color:#F4F6F9;border-color:rgba(148,174,207,.2)}
+.section.dark-section .choice p,
+.section.dark-section .product p,
+.section.dark-section .process p,
+.section.dark-section .application p{color:#C3D0E0}
+.section.dark-section .choice-art,
+.section.dark-section .product-visual{background:linear-gradient(135deg,#1A3557,#183E59);color:#72C9D4}
+.section.dark-section .product .more,
+.section.dark-section .choice span{color:#69C8F2}
+.section.dark-section .category-intro .btn{background:var(--cta-gradient);color:#fff}
+.section.dark-section .choice:hover,
+.section.dark-section .product:hover{border-color:rgba(0,184,189,.55);box-shadow:0 18px 40px rgba(0,0,0,.24)}
+@media(max-width:620px){
+ .hero-inner{padding:88px 0 78px}
+ .hero h1{font-size:clamp(40px,11vw,56px)}
+ .hero p.lead{font-size:16px}
+}
 </style>
 <style id="mp-shared-shell">
 /* Tokens y componentes compartidos Model Pro: misma paleta, header y footer del Home */
@@ -115,7 +145,7 @@ body{font-family:Archivo,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-se
 <a class="choice" href="#metrologia"><div class="choice-art" aria-hidden="true">⌖</div><h3>Medir e inspeccionar</h3><p>Soluciones orientadas al control dimensional, la inspección y la evaluación de piezas y componentes.</p><span>Conocer escáneres metrológicos →</span></a>
 <a class="choice" href="#profesionales"><div class="choice-art" aria-hidden="true">◇</div><h3>Digitalizar y diseñar</h3><p>Equipos para capturar objetos físicos y convertirlos en datos 3D útiles para diseño, modelado y desarrollo.</p><span>Conocer escáneres profesionales →</span></a>
 </div></div></section>
-<section class="section alt" id="metrologia"><div class="mp-co">
+<section class="section dark-section" id="metrologia"><div class="mp-co">
 <div class="category-intro"><div class="section-head"><p class="section-kicker">Metrología</p><h2>Escáneres 3D metrológicos</h2><p>Para aplicaciones donde conocer la geometría de una pieza y evaluar sus dimensiones es parte esencial del proceso.</p></div><a class="btn" href="index.html#contacto">Solicitar asesoría</a></div>
 <div class="products">
 <a class="product" id="freescan-combo-plus-wireless" href="index.html#contacto"><div class="product-visual"><svg viewBox="0 0 64 64"><path d="M20 14h24l5 10-4 27H19l-4-27zM24 14V8h16v6M20 25h24M26 32h12"/></svg></div><h3>FreeScan Combo+ Wireless</h3><p>Escáner 3D portátil híbrido inalámbrico para metrología.</p><span class="more">Conocer equipo →</span></a>
@@ -130,7 +160,7 @@ body{font-family:Archivo,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-se
 <a class="product" id="einscan-libre" href="index.html#contacto"><div class="product-visual"><svg viewBox="0 0 64 64"><path d="M18 12h28l4 12-5 28H19l-5-28zM24 12V7h16v5M22 27h20M27 35h10"/></svg></div><h3>EinScan Libre</h3><p>Escáner 3D láser todo en uno, inalámbrico y a color.</p><span class="more">Conocer equipo →</span></a>
 <a class="product" id="einscan-rigil" href="index.html#contacto"><div class="product-visual"><svg viewBox="0 0 64 64"><path d="M17 13h30l4 12-5 27H18l-5-27zM24 13V8h16v5M21 28h22M26 36h12"/></svg></div><h3>EinScan Rigil</h3><p>Escáner 3D portátil con distintos modos de captura.</p><span class="more">Conocer equipo →</span></a>
 </div></div></section>
-<section class="section alt"><div class="mp-co">
+<section class="section dark-section"><div class="mp-co">
 <div class="section-head"><p class="section-kicker">Del objeto físico al dato digital</p><h2>¿Cómo funciona el escaneo 3D?</h2><p>El escaneo 3D permite capturar la forma de un objeto sin contacto y generar información digital que puede aprovecharse en distintas etapas del trabajo.</p></div>
 <div class="process">
 <article><h3>Captura</h3><p>El escáner registra la superficie del objeto mediante tecnología óptica.</p></article>
