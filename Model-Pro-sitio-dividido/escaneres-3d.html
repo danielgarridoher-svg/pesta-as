@@ -802,8 +802,14 @@ return key==='orientacion'?v==='Orientación':key==='demostracion'?v==='Demostra
 section.querySelectorAll('[data-detail]').forEach(function(panel){
 if(panel.hidden)panel.querySelectorAll('input,select,textarea').forEach(function(el){el.value='';});
 });
+var introKeyByValue={
+'Orientación':'orientacion',
+'Demostración':'demostracion',
+'Precios y cotización':'cotizacion'
+};
 introItems.forEach(function(item){
-item.hidden=!selected.some(function(value){return value.toLowerCase()===item.getAttribute('data-intro-for');});
+var key=item.getAttribute('data-intro-for');
+item.hidden=!selected.some(function(value){return introKeyByValue[value]===key;});
 });
 if(selected.length===1){
 var copy=headingCopy[selected[0]];
