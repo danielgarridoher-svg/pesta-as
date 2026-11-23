@@ -382,20 +382,53 @@ body{font-family:Archivo,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-se
 
 
 <style id="solution-choice-editorial">
-/* Selector principal: dos rutas claras después del hero */
+/* Selector principal: tarjetas con la misma presencia visual que el catálogo */
 .solution-section{padding-top:76px;padding-bottom:82px}
 .solution-section .section-head{max-width:790px;margin-bottom:34px}
 .solution-section .section-head .section-kicker{margin-bottom:12px}
 .solution-section .section-head h2{font-size:clamp(34px,4.2vw,52px);letter-spacing:-.04em}
 .solution-section .section-head>p:last-child{max-width:620px;font-size:18px;line-height:1.6}
-.solution-section .choice-grid{gap:20px}
-.solution-section .choice{min-height:250px;padding:30px 32px;border-radius:18px;justify-content:flex-start}
-.solution-section .choice-kicker{display:block;margin:0 0 18px;color:#168B9D;font-size:12px;font-weight:800;letter-spacing:.14em}
-.solution-section .choice h3{margin:0 0 10px;font-size:clamp(22px,2.2vw,28px);letter-spacing:-.025em}
-.solution-section .choice p{max-width:430px;margin:0 0 26px;font-size:15px;line-height:1.65}
-.solution-section .choice .choice-link{display:flex;align-items:center;gap:8px;margin-top:auto;padding-top:0;color:#1558C0;font-size:14px;font-weight:800}
-.solution-section .choice:hover .choice-link{gap:13px}
-@media(max-width:620px){.solution-section{padding-top:58px;padding-bottom:62px}.solution-section .section-head>p:last-child{font-size:16px}.solution-section .choice{min-height:220px;padding:24px}}
+.solution-section .choice-grid{gap:22px}
+.solution-section .choice{
+ min-height:276px;padding:34px 36px;border:1px solid #C9D9EB;
+ border-radius:18px;justify-content:flex-start;
+ background:linear-gradient(145deg,#FFFFFF 0%,#F8FBFF 100%);
+ box-shadow:0 8px 24px rgba(20,55,95,.07);
+}
+.solution-section .choice:before{
+ content:"";position:absolute;inset:0 0 auto;height:5px;
+ background:linear-gradient(100deg,#1558C0 0%,#2E82F0 58%,#00B8BD 100%);
+}
+.solution-section .choice-kicker{
+ display:inline-flex;align-items:center;width:max-content;margin:2px 0 20px;
+ padding:7px 11px;border-radius:6px;background:#EAF3FD;color:#1558C0;
+ font-size:12px;font-weight:800;letter-spacing:.13em;
+}
+.solution-section .choice h3{
+ margin:0 0 12px;color:#0E1B33;font-size:clamp(25px,2.5vw,32px);
+ line-height:1.15;letter-spacing:-.03em;
+}
+.solution-section .choice p{
+ max-width:460px;margin:0 0 28px;color:#43566F;
+ font-size:16px;line-height:1.65;
+}
+.solution-section .choice .choice-link{
+ display:flex;align-items:center;gap:9px;margin-top:auto;padding-top:0;
+ color:#1558C0;font-size:15px;font-weight:800;
+}
+.solution-section .choice:hover{
+ transform:translateY(-5px);border-color:#8FB5E2;
+ box-shadow:0 18px 36px rgba(20,55,95,.13);
+}
+.solution-section .choice:hover .choice-link{gap:14px}
+.solution-section .choice:focus-visible{outline:3px solid #2E82F0;outline-offset:4px}
+@media(max-width:620px){
+ .solution-section{padding-top:58px;padding-bottom:62px}
+ .solution-section .section-head>p:last-child{font-size:16px}
+ .solution-section .choice{min-height:240px;padding:28px 24px}
+ .solution-section .choice h3{font-size:25px}
+ .solution-section .choice p{font-size:15px}
+}
 </style>
 
 </head>
