@@ -198,7 +198,26 @@ body{font-family:Archivo,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-se
 @media(max-width:800px){#scanner-request-form{padding:62px 20px!important}#scanner-request-form .scanner-request-grid{grid-template-columns:1fr;gap:30px}}
 @media(max-width:540px){#scanner-request-form .scanner-request-fields{grid-template-columns:1fr}#scanner-request-form .scanner-request-full{grid-column:1}}
 </style>
-</head>
+<style id="scanner-form-two-step-and-product-images">
+#scanner-request-form .scanner-form-progress{display:flex;align-items:center;gap:14px;margin:0 0 24px;color:#087E9C;font-size:.75rem;font-weight:800;letter-spacing:.1em}
+#scanner-request-form .scanner-form-progress-track{height:5px;flex:1;overflow:hidden;border-radius:99px;background:#E3EDF7}
+#scanner-request-form .scanner-form-progress-track i{display:block;width:50%;height:100%;border-radius:99px;background:linear-gradient(90deg,#00B8BD,#2E82F0);transition:width .25s}
+#scanner-request-form .scanner-form-step[hidden]{display:none!important}
+#scanner-request-form .scanner-form-field{display:flex;flex-direction:column;gap:7px;margin-top:18px;color:#344B66;font-size:.88rem;font-weight:650}
+#scanner-request-form .scanner-form-field select{box-sizing:border-box;width:100%;min-height:46px;padding:11px 13px;border:1px solid #CCD9E8;border-radius:9px;background:#FFF;color:#172B45;font:inherit}
+#scanner-request-form .scanner-form-full{grid-column:1/-1}
+#scanner-request-form .scanner-form-actions{display:flex;justify-content:flex-end;gap:12px;margin-top:20px}
+#scanner-request-form .scanner-form-actions button{min-height:44px;padding:11px 25px;border:0;border-radius:999px;background:linear-gradient(135deg,#00B8BD,#2E82F0);color:#FFF;font:inherit;font-weight:750;cursor:pointer}
+#scanner-request-form .scanner-form-actions .scanner-form-back{border:1px solid #CCD9E8;background:#FFF;color:#31516F}
+#scanner-request-form .scanner-request-privacy{margin:13px 0 0;color:#7A8A9D;font-size:.78rem;text-align:center}
+#scanner-request-form .scanner-request-privacy a{color:#1558C0;text-decoration:underline}
+#scanner-request-form .scanner-form-optional{font-weight:400;color:#8795A6}
+#scanner-request-form .scanner-request-fields{margin-top:18px}
+#scanner-request-form .scanner-request-card .scanner-request-question{margin-bottom:18px}
+#metrologia .product-visual.product-image{display:flex;align-items:center;justify-content:center;min-height:210px;padding:10px;background:linear-gradient(145deg,#F0F5FA,#FFFFFF)}
+#metrologia .product-visual.product-image img{display:block;width:100%;height:210px;object-fit:contain}
+@media(max-width:540px){#scanner-request-form .scanner-request-fields{grid-template-columns:1fr}#scanner-request-form .scanner-form-full{grid-column:1}#scanner-request-form .scanner-form-actions{justify-content:space-between}#scanner-request-form .scanner-form-actions button{padding-inline:18px}}
+</style></head>
 <body>
 <div class="mp-wrap">
 <header class="mp-header">
@@ -265,11 +284,11 @@ body{font-family:Archivo,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-se
 <section class="section dark-section" id="metrologia"><div class="mp-co">
 <div class="category-intro"><div class="section-head"><p class="section-kicker">Metrología</p><h2>Escáneres 3D <span class="metrology-gradient">metrológicos</span></h2><p>Para aplicaciones donde conocer la geometría de una pieza y evaluar sus dimensiones es parte esencial del proceso.</p></div><a class="btn" href="#scanner-request-form">Solicitar asesoría</a></div>
 <div class="products">
-<a class="product" id="freescan-combo-plus-wireless" href="index.html#contacto"><div class="product-visual"><svg viewBox="0 0 64 64"><path d="M20 14h24l5 10-4 27H19l-4-27zM24 14V8h16v6M20 25h24M26 32h12"/></svg></div><h3>FreeScan Combo+ Wireless</h3><p>Escáner 3D portátil híbrido inalámbrico para metrología.</p><span class="more">Conocer equipo →</span></a>
-<a class="product" id="freescan-trak-nova" href="index.html#contacto"><div class="product-visual"><svg viewBox="0 0 64 64"><path d="M12 18h40v28H12zM20 25h24M20 32h24M20 39h15M32 18V9m-8 0h16"/></svg></div><h3>FreeScan Trak Nova</h3><p>Sistema dinámico de escaneo y seguimiento 3D.</p><span class="more">Conocer equipo →</span></a>
+<a class="product" id="freescan-combo-plus-wireless" href="index.html#contacto"><div class="product-visual product-image"><img src="https://escaneres3d.com/wp-content/uploads/2026/07/Combo-.png" alt="freescan combo plus wireless" loading="lazy"></div><h3>FreeScan Combo+ Wireless</h3><p>Escáner 3D portátil híbrido inalámbrico para metrología.</p><span class="more">Conocer equipo →</span></a>
+<a class="product" id="freescan-trak-nova" href="index.html#contacto"><div class="product-visual product-image"><img src="https://escaneres3d.com/wp-content/uploads/2026/07/TrakNova-V.png" alt="freescan trak nova" loading="lazy"></div><h3>FreeScan Trak Nova</h3><p>Sistema dinámico de escaneo y seguimiento 3D.</p><span class="more">Conocer equipo →</span></a>
 <a class="product" id="freescan-omni" href="index.html#contacto"><div class="product-visual"><svg viewBox="0 0 64 64"><rect x="18" y="9" width="28" height="46" rx="5"/><path d="M24 16h16M25 46h14M28 23h8"/></svg></div><h3>FreeScan Omni</h3><p>Escáner 3D de metrología autónomo y listo para inspección.</p><span class="more">Conocer equipo →</span></a>
-<a class="product" id="freescan-ue-pro2" href="index.html#contacto"><div class="product-visual"><svg viewBox="0 0 64 64"><path d="M17 17h30l-3 31H20zM23 17V9h18v8M23 27h18M27 35h10"/></svg></div><h3>FreeScan UE Pro2</h3><p>Escáner 3D portátil láser para aplicaciones metrológicas.</p><span class="more">Conocer equipo →</span></a>
-<a class="product" id="optimscan-q12" href="index.html#contacto"><div class="product-visual"><svg viewBox="0 0 64 64"><path d="M10 17h44v31H10zM18 17V9h28v8M22 27h20M22 34h20M22 41h12"/></svg></div><h3>OptimScan Q12 / Q12 HD</h3><p>Sistemas ópticos de inspección 3D de alta precisión.</p><span class="more">Conocer equipo →</span></a>
+<a class="product" id="freescan-ue-pro2" href="index.html#contacto"><div class="product-visual product-image"><img src="https://escaneres3d.com/wp-content/uploads/2026/07/UE-PRO-2-V.png" alt="freescan ue pro2" loading="lazy"></div><h3>FreeScan UE Pro2</h3><p>Escáner 3D portátil láser para aplicaciones metrológicas.</p><span class="more">Conocer equipo →</span></a>
+<a class="product" id="optimscan-q12" href="index.html#contacto"><div class="product-visual product-image"><img src="https://escaneres3d.com/wp-content/uploads/2026/07/Q12-V.png" alt="optimscan q12" loading="lazy"></div><h3>OptimScan Q12 / Q12 HD</h3><p>Sistemas ópticos de inspección 3D de alta precisión.</p><span class="more">Conocer equipo →</span></a>
 </div></div></section>
 <section class="section" id="profesionales"><div class="mp-co">
 <div class="category-intro"><div class="section-head"><p class="section-kicker">Escaneo profesional</p><h2>Escáneres 3D profesionales</h2><p>Soluciones para digitalizar objetos físicos y llevar su geometría al entorno digital para diseño, documentación y desarrollo.</p></div><a class="btn" href="index.html#contacto">Solicitar asesoría</a></div>
@@ -296,74 +315,33 @@ body{font-family:Archivo,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-se
 <section class="advice" id="asesoria"><div class="mp-co advice-inner"><div><h2>¿No sabes cuál elegir?</h2><p>Cuéntanos qué necesitas digitalizar, qué tamaño tiene la pieza y para qué utilizarás los datos. En Model Pro podemos orientarte para identificar una solución adecuada.</p></div><a class="btn" href="#scanner-request-form">Habla con un asesor</a></div></section>
 
 <section class="scanner-request-section" id="scanner-request-form" aria-labelledby="scanner-request-title">
-  <div class="mp-co scanner-request-grid">
-    <div class="scanner-request-intro">
-      <p class="scanner-request-eyebrow">HABLEMOS DE TU PROYECTO</p>
-      <h2 id="scanner-request-title">¿Cómo podemos <span>ayudarte?</span></h2>
-      <p>Cuéntanos qué estás buscando. Te pondremos en contacto con el equipo adecuado para orientarte sobre la solución que necesitas.</p>
-      <ul>
-        <li><span>✓</span> Identificamos la aplicación y tus necesidades.</li>
-        <li><span>✓</span> Te orientamos sobre los equipos y tecnologías disponibles.</li>
-        <li><span>✓</span> Damos seguimiento a tu solicitud.</li>
-      </ul>
-    </div>
-    <div class="scanner-request-card">
-      <form class="scanner-request-form" aria-label="Formulario de escáneres 3D" novalidate autocomplete="on">
-        <p class="scanner-request-question" id="scanner-request-question">¿Qué necesitas?<small>Selecciona la opción que mejor describe tu búsqueda.</small></p>
-        <div class="scanner-request-options" role="radiogroup" aria-labelledby="scanner-request-question">
-          <label class="scanner-request-option">
-            <input type="radio" name="tipo_solicitud" value="Necesito un escáner 3D" required>
-            <span><b>Necesito un escáner 3D</b><small>Busco un equipo para mi aplicación o quiero conocer las opciones disponibles.</small></span>
-          </label>
-          <label class="scanner-request-option">
-            <input type="radio" name="tipo_solicitud" value="Busco asesoría u orientación" required>
-            <span><b>Busco asesoría u orientación</b><small>Todavía no tengo claro qué tecnología o solución necesito.</small></span>
-          </label>
-        </div>
-        <p class="scanner-request-error" role="alert" aria-live="polite"></p>
-        <div class="scanner-request-fields" hidden>
-          <label>Nombre*<input type="text" name="nombre" placeholder="Tu nombre" autocomplete="given-name" required></label>
-          <label>Apellido*<input type="text" name="apellido" placeholder="Tu apellido" autocomplete="family-name" required></label>
-          <label>Correo de trabajo*<input type="email" name="correo" placeholder="nombre@empresa.com" autocomplete="email" required></label>
-          <label>Empresa*<input type="text" name="empresa" placeholder="Nombre de tu empresa" autocomplete="organization" required></label>
-          <label>País / Región*<select name="pais" required><option value="">Selecciona tu país</option><option value="México">México</option><option value="Otro">Otro</option></select></label>
-          <label>Número de teléfono*<input type="tel" name="telefono" placeholder="+52" autocomplete="tel" required></label>
-          <label class="scanner-request-full">Industria*<select name="industria" required><option value="">Selecciona una industria</option><option>Automotriz</option><option>Manufactura</option><option>Maquinaria y equipo</option><option>Plásticos y moldes</option><option>Educación</option><option>Otra</option></select></label>
-          <label class="scanner-request-project scanner-request-full">Cuéntanos de tu proyecto <span>(Opcional)</span><textarea name="mensaje" rows="4" placeholder="¿Qué pieza, producto o proceso necesitas digitalizar o medir?"></textarea></label>
-        </div>
-        <div class="scanner-request-submit" hidden>
-          <button type="submit">Enviar solicitud</button>
-          <p>Al enviar aceptas nuestro <a href="index.html#aviso-privacidad">aviso de privacidad</a>.</p>
-        </div>
-      </form>
-      <div class="scanner-request-thanks" hidden aria-live="polite"></div>
-    </div>
-  </div>
-</section>
+<div class="mp-co scanner-request-grid"><div class="scanner-request-intro"><p class="scanner-request-eyebrow">HABLEMOS DE TU PROYECTO</p><h2 id="scanner-request-title">¿Cómo podemos <span>ayudarte?</span></h2><p>Cuéntanos qué necesitas resolver. Con esta información podremos orientarte sobre el escáner, la tecnología o el siguiente paso más adecuado para tu proceso.</p><ul><li><span>✓</span> Identificamos tu aplicación y el reto que buscas resolver.</li><li><span>✓</span> Te orientamos sobre equipos y tecnologías disponibles.</li><li><span>✓</span> Podemos valorar una demostración con una pieza real.</li></ul></div>
+<div class="scanner-request-card"><form class="scanner-request-form" aria-label="Formulario de escáneres 3D" novalidate autocomplete="on">
+<div class="scanner-form-progress"><span data-step-label>PASO 1 DE 2</span><span class="scanner-form-progress-track"><i data-progress></i></span></div>
+<div class="scanner-form-step" data-form-step="1"><p class="scanner-request-question">Primero, cuéntanos qué buscas<small>Esto nos ayudará a dirigir tu solicitud.</small></p>
+<div class="scanner-request-options" role="radiogroup" aria-label="Tipo de solicitud"><label class="scanner-request-option"><input type="radio" name="tipo_solicitud" value="Necesito un escáner 3D" required><span><b>Necesito un escáner 3D</b><small>Estoy buscando un equipo para una aplicación o proceso.</small></span></label><label class="scanner-request-option"><input type="radio" name="tipo_solicitud" value="Busco asesoría u orientación" required><span><b>Busco asesoría u orientación</b><small>Quiero entender qué tecnología o solución puede funcionar.</small></span></label></div>
+<label class="scanner-form-field scanner-form-full">¿Cuál es tu principal desafío?<select name="desafio" required><option value="">Selecciona una opción</option><option>Trazabilidad, control de calidad o reducir tiempos de inspección</option><option>Ingeniería inversa de piezas</option><option>Ya tengo un equipo, pero necesito mayor capacidad o precisión</option><option>Digitalizar para fabricación aditiva</option><option>Otro</option></select></label>
+<label class="scanner-form-field scanner-form-full">¿Qué necesitas principalmente?<select name="necesidad_principal" required><option value="">Selecciona una opción</option><option>Adquirir un escáner 3D</option><option>Actualizar a un equipo de mayor capacidad</option><option>Capacitación en el equipo que ya tengo</option><option>Complementar con software o accesorios</option><option>Aún no lo sé, quiero orientación</option><option>Estoy buscando un servicio de escaneo</option></select></label>
+<p class="scanner-request-error" data-form-error role="alert" aria-live="polite"></p><div class="scanner-form-actions"><button type="button" data-next>Continuar</button></div></div>
+<div class="scanner-form-step" data-form-step="2" hidden><p class="scanner-request-question">Ahora, algunos datos de tu proyecto<small>Un especialista podrá dar seguimiento a tu solicitud.</small></p><div class="scanner-request-fields">
+<label>Nombre completo*<input type="text" name="nombre" placeholder="Tu nombre y apellido" autocomplete="name" required></label><label>Teléfono / WhatsApp*<input type="tel" name="telefono" placeholder="+52 222 000 0000" autocomplete="tel" required></label><label>Correo electrónico*<input type="email" name="correo" placeholder="nombre@empresa.com" autocomplete="email" required></label><label>Empresa*<input type="text" name="empresa" placeholder="Nombre de tu empresa" autocomplete="organization" required></label>
+<label>Industria*<select name="industria" required><option value="">Selecciona una industria</option><option>Automotriz</option><option>Aeroespacial</option><option>Moldes y troqueles</option><option>Inyección de plástico</option><option>Metalmecánica</option><option>Maquinaria industrial</option><option>MRO y mantenimiento</option><option>Manufactura CNC</option><option>Educación</option><option>Otra</option></select></label><label>Puesto o cargo<input type="text" name="puesto" placeholder="Tu puesto (opcional)"></label>
+<label>¿En qué etapa estás evaluando adquirir un escáner 3D?*<select name="etapa_compra" required><option value="">Selecciona una opción</option><option>Estoy evaluando adquirirlo actualmente</option><option>Me interesa para los próximos 3 meses</option><option>Por ahora solo quiero conocer la tecnología</option><option>Otro / Busco un servicio</option></select></label><label>Estado*<select name="estado" required><option value="">Selecciona tu estado</option><option>Aguascalientes</option><option>Baja California</option><option>Chihuahua</option><option>Ciudad de México</option><option>Coahuila</option><option>Estado de México</option><option>Guanajuato</option><option>Hidalgo</option><option>Jalisco</option><option>Nuevo León</option><option>Puebla</option><option>Querétaro</option><option>San Luis Potosí</option><option>Sonora</option><option>Tamaulipas</option><option>Veracruz</option><option>Otro</option></select></label>
+<label class="scanner-request-full">¿Tienes alguna pieza o proceso específico que te gustaría evaluar?<span class="scanner-form-optional"> (Opcional)</span><textarea name="mensaje" rows="3" placeholder="Tamaño de la pieza, material, tolerancias o qué necesitas obtener del escaneo."></textarea></label></div>
+<p class="scanner-request-error" data-form-error role="alert" aria-live="polite"></p><div class="scanner-form-actions scanner-form-actions-split"><button type="button" class="scanner-form-back" data-back>Volver</button><button type="submit">Enviar solicitud</button></div><p class="scanner-request-privacy">Al enviar aceptas nuestro <a href="index.html#aviso-privacidad">aviso de privacidad</a>.</p></div>
+</form><div class="scanner-request-thanks" hidden aria-live="polite"></div></div></div></section>
 </main>
 
 <script id="scanner-request-form-script">
 (function(){
-  var section=document.getElementById('scanner-request-form');
-  if(!section)return;
-  var form=section.querySelector('form');
-  var choices=form.querySelectorAll('input[name="tipo_solicitud"]');
-  var fields=form.querySelector('.scanner-request-fields');
-  var submit=form.querySelector('.scanner-request-submit');
-  var thanks=section.querySelector('.scanner-request-thanks');
-  var error=form.querySelector('.scanner-request-error');
-  choices.forEach(function(choice){choice.addEventListener('change',function(){
-    fields.hidden=false;submit.hidden=false;error.textContent='';
-  });});
-  form.addEventListener('submit',function(event){
-    event.preventDefault();
-    if(!form.querySelector('input[name="tipo_solicitud"]:checked')){error.textContent='Selecciona qué tipo de ayuda necesitas.';return;}
-    if(!form.reportValidity())return;
-    var name=form.elements.nombre.value.trim().split(/\\s+/)[0].replace(/[&<>"]/g,'');
-    thanks.innerHTML='<h3>Gracias, '+name+'.</h3><p>Tu solicitud quedó preparada en este prototipo. El formulario todavía no está conectado a Odoo ni envía datos.</p><p><b>Tipo de solicitud:</b> '+form.querySelector('input[name="tipo_solicitud"]:checked').value+'</p><button type="button" class="scanner-request-again">Enviar otra solicitud</button>';
-    form.hidden=true;thanks.hidden=false;
-    thanks.querySelector('button').addEventListener('click',function(){form.reset();form.hidden=false;fields.hidden=true;submit.hidden=true;thanks.hidden=true;error.textContent='';});
-  });
+var section=document.getElementById('scanner-request-form');if(!section)return;
+var form=section.querySelector('form'),steps=[].slice.call(form.querySelectorAll('[data-form-step]')),progress=section.querySelector('[data-progress]'),label=section.querySelector('[data-step-label]'),errors=[].slice.call(form.querySelectorAll('[data-form-error]')),thanks=section.querySelector('.scanner-request-thanks'),current=1;
+function showStep(n){current=n;steps.forEach(function(el){el.hidden=Number(el.getAttribute('data-form-step'))!==n;});progress.style.width=n===1?'50%':'100%';label.textContent='PASO '+n+' DE 2';}
+function valid(){var req=[].slice.call(steps[current-1].querySelectorAll('[required]')),bad=req.find(function(el){return !el.checkValidity();});if(bad){bad.reportValidity();bad.focus();return false;}return true;}
+form.querySelector('[data-next]').addEventListener('click',function(){errors[0].textContent='';if(!form.querySelector('input[name="tipo_solicitud"]:checked')){errors[0].textContent='Selecciona si necesitas un escáner 3D o asesoría.';return;}if(valid())showStep(2);});
+form.querySelector('[data-back]').addEventListener('click',function(){showStep(1);});
+form.addEventListener('submit',function(e){e.preventDefault();errors[1].textContent='';if(!valid())return;var n=form.elements.nombre.value.trim().split(/\s+/)[0].replace(/[&<>"]/g,'');var choice=form.querySelector('input[name="tipo_solicitud"]:checked').value;thanks.innerHTML='<h3>¡Gracias, '+n+'!</h3><p>Tu solicitud quedó preparada en esta maqueta. El formulario es demostrativo y no envía información.</p><p><b>Tipo de solicitud:</b> '+choice+'</p><button type="button">Volver al formulario</button>';form.hidden=true;thanks.hidden=false;thanks.querySelector('button').addEventListener('click',function(){form.reset();form.hidden=false;thanks.hidden=true;showStep(1);});});
+showStep(1);
 })();
 </script>
 <footer class="mp-foot">
