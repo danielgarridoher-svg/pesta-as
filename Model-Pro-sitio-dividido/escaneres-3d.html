@@ -424,7 +424,7 @@ e.preventDefault();
 error.textContent='';
 var invalid=form.querySelector(':invalid');
 if(invalid){invalid.reportValidity();invalid.focus();return;}
-var firstName=form.elements.nombre.value.trim().split(/\\s+/)[0].replace(/[&<>"]/g,'');
+var firstName=form.elements.nombre.value.trim().split(/\s+/)[0].replace(/[&<>"]/g,'');
 thanks.innerHTML='<h3>¡Gracias, '+firstName+'!</h3><p>Tus respuestas quedaron preparadas en esta maqueta. El formulario es demostrativo y no envía información.</p><button type="button">Volver al formulario</button>';
 form.hidden=true;
 thanks.hidden=false;
