@@ -401,18 +401,19 @@ a { text-decoration: none; }
 @media(max-width:700px){#scanner-request-form .scanner-choice-grid{grid-template-columns:1fr}#scanner-request-form .scanner-choice-card{min-height:110px}}
 
 
-body{font:400 var(--fs-body)/1.65 var(--font-body);}
-h1,h2,h3{margin:0;}
-h1{letter-spacing:-.02em;}
-h2{letter-spacing:-.015em;}
-h3{}
-.eyebrow{text-transform:uppercase;letter-spacing:.08em;}
-.lead{max-width:60ch;}
-.section-sub{max-width:65ch;}
-.spec{font-family:var(--font-mono);font-weight:500;}
-button,.btn{text-transform:none;}
-small,.small{}
 
+/* Reglas tipográficas globales: prevalecen sobre estilos heredados */
+body{font:400 var(--fs-body)/1.65 var(--font-body);}
+h1,h2,h3{font-family:var(--font-head);margin:0;}
+h1{font-size:var(--fs-h1);font-weight:800;line-height:1.05;letter-spacing:-.02em;}
+h2{font-size:var(--fs-h2);font-weight:700;line-height:1.15;letter-spacing:-.015em;}
+h3{font-size:var(--fs-h3);font-weight:700;line-height:1.3;}
+.eyebrow{font:600 var(--fs-eyebrow)/1.4 var(--font-body);text-transform:uppercase;letter-spacing:.08em;}
+.lead{font-size:var(--fs-lead);line-height:1.55;max-width:60ch;}
+.section-sub{font-size:var(--fs-sub);line-height:1.6;max-width:65ch;}
+.spec{font-family:var(--font-mono);font-weight:500;}
+button,.btn{font:600 15px/1 var(--font-body);text-transform:none;}
+small,.small{font-size:var(--fs-small);line-height:1.5;}
 </style>
 
 
