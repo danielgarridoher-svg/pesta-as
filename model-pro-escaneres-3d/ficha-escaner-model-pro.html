@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>FreeScan Combo+ Wireless — Escáner 3D metrológico | Model Pro</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Archivo:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+/* ===== Tokens compartidos con el Home (misma paleta) ===== */
+:root{
+  --az:#1E6FE0;--az2:#1558C0;--azlite:#2E82F0;--tq:#00C4B3;--tq2:#5FE6D8;
+  --ink:#131C2B;--mut:#515D6E;--bg:#FFFFFF;--bg2:#EEF4FC;--ln:#DCE6F2;--dk:#15202E;--dk2:#0C1422;
+}
+*{box-sizing:border-box}
+body{margin:0;font-family:"Archivo",system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;color:var(--ink);background:var(--bg);-webkit-font-smoothing:antialiased;font-size:16px;line-height:1.55}
+img{max-width:100%;display:block}
+.mp-co{max-width:1120px;margin:0 auto;padding:0 32px}
+.mp-ph{background:#DCE7F4;border:1px dashed #B6C8DE;border-radius:12px;display:flex;align-items:center;justify-content:center;color:#7E90A8;font-size:13px;text-align:center}
+.mp-ey{font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--az);font-weight:700;margin:0}
+.mp-h2{font-size:clamp(22px,3vw,30px);font-weight:700;letter-spacing:-.02em;margin:8px 0 10px}
+.mp-sect{padding:58px 0}
+.mp-alt{background:var(--bg2)}
+.mp-btn{display:inline-block;background:var(--az);color:#fff;border-radius:9px;padding:13px 24px;font-size:15px;font-weight:600;text-decoration:none;transition:background .15s}
+.mp-btn:hover{background:var(--az2)}
+.mp-btn2{display:inline-block;border:1.5px solid var(--az);color:var(--az);border-radius:9px;padding:11px 22px;font-size:15px;font-weight:600;text-decoration:none}
+.mp-lk{color:var(--az);font-size:14px;font-weight:700;text-decoration:none;display:inline-flex;align-items:center;gap:5px}
+.mp-lk:hover{gap:9px;transition:gap .15s}
+:where(a,button):focus-visible{outline:2px solid var(--az);outline-offset:2px}
+
+/* ===== Header (mismo del Home, versión reducida) ===== */
+.mp-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.95);backdrop-filter:blur(8px);border-bottom:1px solid var(--ln)}
+.mp-bar{display:flex;align-items:center;gap:30px;height:68px}
+.mp-logo{font-weight:800;font-size:19px;color:var(--ink);text-decoration:none}
+.mp-nav{display:flex;gap:26px;margin-left:8px}
+.mp-nav a{color:#3B4656;text-decoration:none;font-size:15px;font-weight:500}
+.mp-nav a:hover{color:var(--az)}
+.mp-q{margin-left:auto;background:var(--az);color:#fff;border-radius:8px;padding:10px 18px;font-size:14px;font-weight:600;text-decoration:none}
+.mp-burger{display:none;margin-left:auto;width:44px;height:44px;border:0;background:none;cursor:pointer;padding:11px;color:var(--ink)}
+.mp-burger span{display:block;height:2px;background:currentColor;margin:5px 0}
+
+/* ===== Breadcrumb ===== */
+.mp-bc{font-size:13px;color:var(--mut);padding:16px 0 0}
+.mp-bc a{color:var(--mut);text-decoration:none}
+.mp-bc a:hover{color:var(--az)}
+
+/* ===== HERO de producto ===== */
+.mp-phero{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center;padding:30px 0 56px}
+.mp-badge{display:inline-block;background:rgba(0,196,179,.14);color:#0B8578;font-size:12px;font-weight:700;letter-spacing:.06em;text-transform:uppercase;padding:5px 12px;border-radius:999px;margin-bottom:14px}
+.mp-ptit{font-size:clamp(28px,4vw,40px);font-weight:700;line-height:1.1;letter-spacing:-.02em;margin:0 0 14px}
+.mp-psub{color:var(--mut);font-size:17px;margin:0 0 26px;max-width:460px}
+.mp-pctas{display:flex;gap:14px;align-items:center;flex-wrap:wrap}
+.mp-note{font-size:13px;color:var(--mut);margin-top:16px;display:flex;align-items:center;gap:7px}
+.mp-note i{color:var(--tq)}
+
+/* ===== Bloques ===== */
+.mp-grid{display:grid;gap:18px}
+.mp-c3{grid-template-columns:repeat(3,1fr)}
+.mp-c4{grid-template-columns:repeat(4,1fr)}
+.mp-card{background:#fff;border:1px solid var(--ln);border-radius:14px;padding:22px;box-shadow:0 2px 12px rgba(22,60,120,.05)}
+.mp-ico{width:42px;height:42px;border-radius:11px;background:var(--az);color:#fff;display:flex;align-items:center;justify-content:center;font-size:21px;margin-bottom:14px}
+.mp-ct{font-weight:700;font-size:16px;margin:0 0 5px}
+.mp-cd{font-size:14px;color:var(--mut);margin:0;line-height:1.5}
+.mp-lead{color:var(--mut);font-size:16px;max-width:640px;margin:0 0 26px}
+
+/* ventajas */
+.mp-adv{display:grid;grid-template-columns:repeat(2,1fr);gap:26px}
+.mp-adv .it{display:flex;gap:14px}
+.mp-adv i{color:var(--tq);font-size:24px;flex-shrink:0}
+.mp-adv h4{margin:0 0 4px;font-size:16px}
+.mp-adv p{margin:0;font-size:14px;color:var(--mut)}
+
+/* especificaciones (colapsable) */
+.mp-spec{max-width:760px}
+.mp-spec summary{cursor:pointer;list-style:none;display:flex;align-items:center;justify-content:space-between;padding:16px 20px;background:#fff;border:1px solid var(--ln);border-radius:12px;font-weight:600}
+.mp-spec summary::-webkit-details-marker{display:none}
+.mp-spec summary .chev{transition:transform .2s}
+.mp-spec[open] summary .chev{transform:rotate(180deg)}
+.mp-table{width:100%;border-collapse:collapse;margin-top:6px}
+.mp-table tr{border-bottom:1px solid var(--ln)}
+.mp-table td{padding:13px 20px;font-size:15px}
+.mp-table td:first-child{color:var(--mut);width:46%}
+.mp-table td:last-child{font-weight:600}
+.mp-fill{color:#B06A00;background:#FFF4E0;border-radius:5px;padding:1px 8px;font-size:13px;font-weight:600}
+
+/* software compatible */
+.mp-soft{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}
+.mp-soft a{display:flex;flex-direction:column;align-items:center;gap:10px;padding:20px;background:#fff;border:1px solid var(--ln);border-radius:12px;text-decoration:none;color:var(--ink);font-weight:600;font-size:14px;text-align:center;transition:transform .15s}
+.mp-soft a:hover{transform:translateY(-3px)}
+.mp-soft .mp-ph{height:40px;width:100%}
+
+/* incluye */
+.mp-inc{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+.mp-inc .it i{color:var(--tq);font-size:26px}
+.mp-inc h4{margin:10px 0 4px;font-size:15px}
+.mp-inc p{margin:0;font-size:13px;color:var(--mut)}
+
+/* demo box */
+.mp-demo{background:var(--dk);color:#fff;border-radius:16px;padding:34px;display:grid;grid-template-columns:1fr auto;gap:24px;align-items:center}
+.mp-demo h3{margin:0 0 6px;font-size:20px}
+.mp-demo p{margin:0;color:#AEB9CB;font-size:14px;max-width:520px}
+.mp-demo .mp-ey{color:var(--tq2)}
+
+/* otros modelos */
+.mp-other a{display:block;background:#fff;border:1px solid var(--ln);border-radius:14px;overflow:hidden;text-decoration:none;color:inherit;transition:transform .15s,box-shadow .15s}
+.mp-other a:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(22,60,120,.12)}
+.mp-other .mp-ph{height:140px;border:0;border-radius:0}
+.mp-other .bd{padding:16px}
+.mp-other .bd .cat{font-size:12px;color:var(--tq);font-weight:700;text-transform:uppercase;letter-spacing:.05em}
+
+/* CTA final */
+.mp-cta{background:linear-gradient(115deg,var(--az2),var(--az));color:#fff;text-align:center}
+.mp-cta h2{color:#fff;font-size:clamp(22px,3vw,30px);margin:0 0 10px}
+.mp-cta p{color:#DCE8FA;max-width:520px;margin:0 auto 24px}
+.mp-cta .mp-white{background:#fff;color:var(--az);border-radius:9px;padding:13px 24px;font-weight:700;text-decoration:none}
+.mp-cta .mp-ghost{border:1.5px solid #fff;color:#fff;border-radius:9px;padding:11px 22px;font-weight:600;text-decoration:none}
+
+/* footer mini */
+.mp-foot{background:var(--dk2);color:#8FA0B8;font-size:14px;padding:30px 0;text-align:center}
+.mp-foot a{color:#8FA0B8;text-decoration:none}
+
+@media (max-width:860px){
+  .mp-nav,.mp-q{display:none}.mp-burger{display:block}
+  .mp-nav.is-open{display:flex;position:fixed;inset:68px 0 0;background:#fff;flex-direction:column;gap:0;margin:0;padding:8px 0;z-index:99}
+  .mp-nav.is-open a{padding:15px 32px;border-bottom:1px solid var(--ln);font-size:17px}
+  .mp-phero{grid-template-columns:1fr;gap:26px}
+  .mp-adv,.mp-soft,.mp-inc{grid-template-columns:1fr 1fr}
+  .mp-c3,.mp-c4{grid-template-columns:1fr 1fr}
+  .mp-demo{grid-template-columns:1fr;text-align:left}
+}
+@media (max-width:540px){.mp-adv,.mp-soft,.mp-inc,.mp-c3,.mp-c4{grid-template-columns:1fr}.mp-co{padding:0 20px}}
+@media (prefers-reduced-motion:reduce){*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<!-- HEADER -->
+<header class="mp-header">
+  <div class="mp-co mp-bar">
+    <a class="mp-logo" href="#">Model&nbsp;Pro</a>
+    <nav class="mp-nav" id="mpnav">
+      <a href="#">Software</a><a href="#">Escáneres 3D</a><a href="#">Servicios</a><a href="#">Casos</a><a href="#">Nosotros</a>
+    </nav>
+    <a class="mp-q" href="#cta">Cotizar ahora</a>
+    <button class="mp-burger" id="mpburger" aria-label="Menú"><span></span><span></span><span></span></button>
+  </div>
+</header>
+
+<div class="mp-co">
+  <p class="mp-bc"><a href="#">Inicio</a> › <a href="#">Escáneres 3D</a> › <a href="#">Metrológicos</a> › FreeScan Combo+ Wireless</p>
+</div>
+
+<!-- 1. HERO PRODUCTO -->
+<section class="mp-co mp-phero">
+  <div>
+    <span class="mp-badge">Escáner metrológico</span>
+    <h1 class="mp-ptit">FreeScan Combo+ Wireless</h1>
+    <p class="mp-psub">Escáner 3D portátil de metrología con fuente de luz híbrida y transmisión inalámbrica Wi-Fi 7. Vaya sin cables, inspeccione sin límites.</p>
+    <div class="mp-pctas">
+      <a class="mp-btn" href="#cta">Agenda una demo con tu pieza</a>
+      <a class="mp-btn2" href="#cta">Solicitar cotización</a>
+    </div>
+    <p class="mp-note"><i class="ti ti-shield-check"></i> Distribuidor autorizado SHINING 3D · soporte en español</p>
+  </div>
+  <div class="mp-ph" style="height:340px">Imagen del FreeScan Combo+ Wireless</div>
+</section>
+
+<!-- 2. QUÉ PROBLEMA RESUELVE -->
+<section class="mp-sect mp-alt">
+  <div class="mp-co">
+    <p class="mp-ey">Para qué sirve</p>
+    <h2 class="mp-h2">Resuelve estos retos de digitalización e inspección</h2>
+    <div class="mp-grid mp-c3" style="margin-top:22px">
+      <div class="mp-card"><div class="mp-ico"><i class="ti ti-rotate-3d"></i></div><p class="mp-ct">Ingeniería inversa</p><p class="mp-cd">Captura piezas sin planos y conviértelas en modelos CAD. Ideal para automoción, industria pesada, transporte y energía.</p></div>
+      <div class="mp-card"><div class="mp-ico"><i class="ti ti-chart-dots-3"></i></div><p class="mp-ct">Control de calidad</p><p class="mp-cd">Compara la pieza fabricada contra el CAD con mapas de color y reportes, junto a SHINING3D Inspect.</p></div>
+      <div class="mp-card"><div class="mp-ico"><i class="ti ti-ruler-measure"></i></div><p class="mp-ct">Piezas grandes</p><p class="mp-cd">La fotogrametría por vídeo (VPG) mantiene la precisión en componentes grandes, dentro o fuera de planta.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 3. POR QUÉ ESTE MODELO -->
+<section class="mp-sect">
+  <div class="mp-co">
+    <p class="mp-ey">Por qué este modelo</p>
+    <h2 class="mp-h2">Ventajas que notas en el trabajo diario</h2>
+    <div class="mp-adv" style="margin-top:24px">
+      <div class="it"><i class="ti ti-wifi"></i><div><h4>Sin cables, con Wi-Fi 7</h4><p>Transmisión inalámbrica estable incluso en planta o exteriores. Te mueves con libertad alrededor de piezas grandes.</p></div></div>
+      <div class="it"><i class="ti ti-target-arrow"></i><div><h4>Precisión hasta 0,02 mm</h4><p>Precisión certificada y trazable (ISO 10360) para inspección y control de calidad confiables.</p></div></div>
+      <div class="it"><i class="ti ti-bolt"></i><div><h4>Hasta 9,106,000 puntos/s</h4><p>93 líneas láser y 180 fps: captura más superficie por pasada y reduce el tiempo de escaneo.</p></div></div>
+      <div class="it"><i class="ti ti-feather"></i><div><h4>Solo 550 g, 2 h de batería</h4><p>Ligero y con batería intercambiable para turnos largos. Llega a espacios reducidos sin esfuerzo.</p></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- 4. ESPECIFICACIONES -->
+<section class="mp-sect mp-alt">
+  <div class="mp-co">
+    <p class="mp-ey">Ficha técnica</p>
+    <h2 class="mp-h2">Especificaciones</h2>
+    <p class="mp-lead">Datos técnicos oficiales de SHINING 3D para el FreeScan Combo+ Wireless.</p>
+    <details class="mp-spec" open>
+      <summary>Ver especificaciones técnicas <svg class="chev" width="14" height="14" viewBox="0 0 10 10"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></summary>
+      <table class="mp-table">
+        <tr><td>Precisión</td><td>0,02 mm (0.0008 in)</td></tr>
+        <tr><td>Precisión volumétrica</td><td>0,02 mm + 0,03 mm/m</td></tr>
+        <tr><td>Precisión volumétrica con VPG</td><td>0,02 mm + 0,015 mm/m</td></tr>
+        <tr><td>Velocidad de escaneo</td><td>Hasta 9,106,000 puntos/s</td></tr>
+        <tr><td>Líneas láser</td><td>93 líneas (alta velocidad) · 25 paralelas (detalle) · 1 (cavidades)</td></tr>
+        <tr><td>Campo de visión máx.</td><td>Láser: 580 × 650 mm · IR: 830 × 700 mm</td></tr>
+        <tr><td>Distancia de trabajo</td><td>300 mm (11.81 in)</td></tr>
+        <tr><td>Conectividad</td><td>Wi-Fi 7 / USB 3.0</td></tr>
+        <tr><td>Dimensiones</td><td>189 × 81 × 53 mm</td></tr>
+        <tr><td>Peso neto</td><td>550 g (1.212 lb)</td></tr>
+        <tr><td>Temperatura de funcionamiento</td><td>-10 ~ 40 °C</td></tr>
+        <tr><td>Certificaciones</td><td>CE, FCC, ROHS, WEEE, KC, FDA, UKCA, IP50, TELEC, TiSAX</td></tr>
+        <tr><td>Prueba de aceptación</td><td>Certificado ISO 10360 (lab. acreditado ISO/IEC 17025)</td></tr>
+      </table>
+    </details>
+  </div>
+</section>
+
+<!-- 5. SOFTWARE COMPATIBLE -->
+<section class="mp-sect">
+  <div class="mp-co">
+    <p class="mp-ey">Flujo completo</p>
+    <h2 class="mp-h2">Software con el que se complementa</h2>
+    <p class="mp-lead">Lleva los datos del escaneo directo a tu flujo de ingeniería e inspección.</p>
+    <div class="mp-soft">
+      <a href="#"><div class="mp-ph">Geomagic Design X</div>Ingeniería inversa</a>
+      <a href="#"><div class="mp-ph">Geomagic Control X</div>Inspección</a>
+      <a href="#"><div class="mp-ph">SHINING3D Inspect</div>Inspección 3D</a>
+      <a href="#"><div class="mp-ph">EXModel Pro</div>Procesamiento</a>
+    </div>
+  </div>
+</section>
+
+<!-- 6. QUÉ INCLUYE CON MODEL PRO -->
+<section class="mp-sect mp-alt">
+  <div class="mp-co">
+    <p class="mp-ey">Comprarlo con Model Pro</p>
+    <h2 class="mp-h2">No te llevas solo el equipo</h2>
+    <div class="mp-inc" style="margin-top:24px">
+      <div class="it"><i class="ti ti-settings-cog"></i><h4>Instalación y configuración</h4><p>Lo dejamos listo para trabajar.</p></div>
+      <div class="it"><i class="ti ti-school"></i><h4>Capacitación</h4><p>Entrenamos a tu equipo para usarlo desde el primer día.</p></div>
+      <div class="it"><i class="ti ti-headset"></i><h4>Soporte en español</h4><p>Acompañamiento en cada etapa de tu proyecto.</p></div>
+      <div class="it"><i class="ti ti-file-invoice"></i><h4>Factura en México</h4><p>Compra y facturación locales.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- 7. DEMO -->
+<section class="mp-sect">
+  <div class="mp-co">
+    <div class="mp-demo">
+      <div>
+        <p class="mp-ey">Pruébalo primero</p>
+        <h3>Agenda una demostración con tu propia pieza</h3>
+        <p>Antes de decidir, confirma que el equipo resuelve tu necesidad. Agenda con anticipación: este modelo se demuestra bajo solicitud a la marca.</p>
+      </div>
+      <a class="mp-btn" style="background:var(--azlite)" href="#cta">Agendar demo</a>
+    </div>
+  </div>
+</section>
+
+<!-- 8. OTROS MODELOS -->
+<section class="mp-sect mp-alt">
+  <div class="mp-co">
+    <p class="mp-ey">También te puede interesar</p>
+    <h2 class="mp-h2">Otros escáneres metrológicos</h2>
+    <div class="mp-grid mp-c3 mp-other" style="margin-top:22px">
+      <a href="#"><div class="mp-ph">FreeScan Trak Nova</div><div class="bd"><span class="cat">Metrológico</span><p class="mp-ct" style="margin:4px 0 0">FreeScan Trak Nova</p></div></a>
+      <a href="#"><div class="mp-ph">FreeScan Omni</div><div class="bd"><span class="cat">Metrológico</span><p class="mp-ct" style="margin:4px 0 0">FreeScan Omni</p></div></a>
+      <a href="#"><div class="mp-ph">OptimScan Q12</div><div class="bd"><span class="cat">Metrológico</span><p class="mp-ct" style="margin:4px 0 0">OptimScan Q12 / Q12 HD</p></div></a>
+    </div>
+  </div>
+</section>
+
+<!-- 9. CTA FINAL -->
+<section class="mp-sect mp-cta" id="cta">
+  <div class="mp-co">
+    <h2>¿Te interesa el FreeScan Combo+ Wireless?</h2>
+    <p>Agenda una demostración con tu pieza o solicita una cotización. Te asesoramos para confirmar que es el equipo adecuado.</p>
+    <div style="display:flex;gap:14px;justify-content:center;flex-wrap:wrap">
+      <a class="mp-white" href="#">Agendar demo</a>
+      <a class="mp-ghost" href="#">Solicitar cotización</a>
+    </div>
+  </div>
+</section>
+
+<footer class="mp-foot">
+  <div class="mp-co">© 2026 Model Pro · <a href="#">Escáneres 3D</a> · <a href="#">Contacto</a> · SHINING 3D · ZWSOFT · SimLab</div>
+</footer>
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@tabler/icons-webfont@3.17.0/dist/tabler-icons.min.css">
+<script>
+var b=document.getElementById('mpburger'),n=document.getElementById('mpnav');
+b.addEventListener('click',function(){var o=n.classList.toggle('is-open');document.body.style.overflow=o?'hidden':''});
+n.querySelectorAll('a').forEach(function(a){a.addEventListener('click',function(){n.classList.remove('is-open');document.body.style.overflow=''})});
+</script>
+</body>
+</html>
