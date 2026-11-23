@@ -1004,5 +1004,24 @@ small,.small{font-size:var(--fs-small);line-height:1.5;}
   document.addEventListener('keydown',function(e){if(e.key==='Escape'){toggle.setAttribute('aria-expanded','false');panel.hidden=true;toggle.focus();}});
 })();
 </script>
+<script id="scanner-model-selection-script">
+(function(){
+  var cards=[...document.querySelectorAll('.scanner-card[data-model]')];
+  var cells=[...document.querySelectorAll('.scanner-compare-table [data-model]')];
+  function select(key){
+    cards.forEach(function(card){
+      var active=card.getAttribute('data-model')===key;
+      card.classList.toggle('is-selected',active);
+      var button=card.querySelector('[data-select-model]');
+      if(button){button.setAttribute('aria-pressed',String(active));button.textContent=active?'Seleccionado':'Ver modelo';}
+    });
+    cells.forEach(function(cell){cell.classList.toggle('is-selected',cell.getAttribute('data-model')===key);});
+  }
+  document.querySelectorAll('[data-select-model]').forEach(function(button){
+    button.addEventListener('click',function(){select(button.getAttribute('data-select-model'));});
+  });
+  select('combo');
+})();
+</script>
 </body>
 </html>
