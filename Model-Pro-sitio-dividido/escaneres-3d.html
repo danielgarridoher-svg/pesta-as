@@ -781,6 +781,18 @@ small,.small{font-size:var(--fs-small);line-height:1.5;}
 .scanner-card .scanner-card-actions a{cursor:pointer}
 .scanner-card.is-selected{border:2px solid #2E82F0;box-shadow:0 12px 32px rgba(46,130,240,.16)}
 
+
+/* Orientación al cierre del catálogo */
+.catalog-bottom{align-items:center;gap:28px}
+.catalog-bottom-copy{display:grid;gap:7px;flex:1;min-width:0}
+.catalog-bottom-copy strong{color:#183458;font-size:16px;line-height:1.4}
+.catalog-bottom-copy p{max-width:760px;margin:0;color:#526783;font-size:13px;line-height:1.65}
+.catalog-bottom>a{flex-shrink:0}
+@media(max-width:767px){
+  .catalog-bottom{display:flex;flex-direction:column;align-items:flex-start;gap:15px}
+  .catalog-bottom>a{margin-top:0}
+}
+
 </style>
 
 
@@ -907,7 +919,7 @@ small,.small{font-size:var(--fs-small);line-height:1.5;}
     <div><dt>Cómo se usa</dt><dd>A mano, inalámbrico; captura láser e infrarroja</dd></div>
     <div><dt>Ideal para</dt><dd>Moldes, fundición, automotriz y manufactura</dd></div>
   </dl><div class="product-feature"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scan-line" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 12h10"/></svg>Precisión de hasta <span class="spec">0.02 mm</span></div><div class="card-action scanner-card-actions">
-    <button type="button" class="scanner-select-model" data-select-model="combo" aria-pressed="true">Seleccionado</button>
+    <button type="button" class="scanner-select-model" data-select-model="combo" aria-pressed="true">Ver modelo</button>
     <a class="scanner-demo-link" href="#scanner-request-form" data-demo-model="FreeScan Combo+ Wireless">Pedir demostración <span aria-hidden="true">→</span></a>
   </div></div></article><article class="scanner-card group" id="optimscan-q12" data-model="q12"><div class="scanner-image"><img src="https://raw.githubusercontent.com/danielgarridoher-svg/pesta-as/acce7f59fcf3e39f32333cf06b2d64fd54f4d612/model-pro-escaneres-3d/images/q12.webp" alt="OptimScan Q12 / Q12 HD" loading="lazy"><span class="image-brand">SHINING 3D</span></div><div class="scanner-body"><span class="eyebrow small">Escaneo óptico · Alta precisión</span><h3>OptimScan Q12 / Q12 HD</h3><p>Sistemas ópticos de inspección 3D de alta precisión.</p><dl class="scanner-card-specs">
     <div><dt>Tamaño de pieza</dt><dd>Pequeña a mediana</dd></div>
@@ -963,7 +975,7 @@ small,.small{font-size:var(--fs-small);line-height:1.5;}
     <button type="button" class="scanner-select-model" data-select-model="libre" aria-pressed="false">Ver modelo</button>
     <a class="scanner-demo-link" href="#scanner-request-form" data-demo-model="EinScan Libre">Pedir demostración <span aria-hidden="true">→</span></a>
   </div></div></article></div>
-    <div class="catalog-bottom"><span>¿No sabes cuál es el indicado para tu proyecto?</span><a class="btn btn-link btn-size-default" href="#scanner-request-form">Te ayudamos a elegir <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></div>
+    <div class="catalog-bottom"><div class="catalog-bottom-copy"><strong>¿No sabes cuál es el indicado para tu proyecto?</strong><p>Cuéntanos qué pieza necesitas digitalizar, qué nivel de exactitud buscas y dónde realizarás la captura. Te ayudamos a comparar los equipos según tu aplicación y la forma en que trabajas.</p></div><a class="btn btn-link btn-size-default" href="#scanner-request-form">Te ayudamos a elegir <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></div>
   </div>
 </section>
 <section class="scanner-compare-section" id="comparativa" aria-labelledby="scanner-compare-title">
@@ -1182,7 +1194,7 @@ small,.small{font-size:var(--fs-small);line-height:1.5;}
       var button=card.querySelector('[data-select-model]');
       if(button){
         button.setAttribute('aria-pressed',active?'true':'false');
-        button.textContent=active?'Seleccionado':'Ver modelo';
+        button.textContent='Ver modelo';
       }
     });
     cells.forEach(function(cell){
