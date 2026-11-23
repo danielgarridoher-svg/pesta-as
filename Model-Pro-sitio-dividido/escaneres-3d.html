@@ -598,6 +598,65 @@ small,.small{font-size:var(--fs-small);line-height:1.5;}
 #scanner-request-form .scanner-choice-card:has(input:checked){background:linear-gradient(135deg,rgba(23,71,125,.94),rgba(14,54,91,.94))!important;border-color:#00B8BD!important;box-shadow:0 0 0 2px rgba(0,184,189,.16)!important}
 #scanner-request-form .scanner-choice-hint{color:#AFC5DF!important}
 #scanner-request-form .scanner-request-intro li[hidden]{display:none!important}
+
+/* ===== Orientación, tarjetas ampliadas y navegación de Escáneres 3D ===== */
+.scanner-choice-guide{padding:64px 0;background:linear-gradient(115deg,#FFFFFF 0%,#F7FAFF 48%,#EAF3FF 100%);color:#172B45}
+.scanner-choice-guide h2,.scanner-compare-section h2,.scanner-faq-section h2{color:#183458}
+.scanner-choice-guide .eyebrow,.scanner-compare-section .eyebrow,.scanner-faq-section .eyebrow{color:#0877D8}
+.scanner-guide-lead{max-width:650px;margin:14px 0 30px;color:#526783}
+.scanner-guide-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.scanner-guide-grid article{padding:22px;border:1px solid #DCE6F2;border-radius:14px;background:#FFFFFF}
+.scanner-guide-grid article>span{display:inline-flex;margin-bottom:15px;color:#0877D8;font-weight:800}
+.scanner-guide-grid h3{color:#183458;font-size:18px}
+.scanner-guide-grid p{margin-top:9px;color:#526783;font-size:13px;line-height:1.65}
+.scanner-card{position:relative}
+.scanner-card.is-selected{border:2px solid #2E82F0;box-shadow:0 12px 32px rgba(46,130,240,.16)}
+.scanner-card-specs{display:grid;gap:0;margin-top:18px;border-top:1px solid #DCE6F2}
+.scanner-card-specs>div{display:grid;grid-template-columns:minmax(100px,.78fr) minmax(0,1.22fr);gap:12px;padding:9px 0;border-bottom:1px solid #E7EEF7}
+.scanner-card-specs dt{color:#64768B;font-size:11px;font-weight:650}
+.scanner-card-specs dd{margin:0;color:#183458;font-size:11px;line-height:1.45}
+.scanner-card .product-feature{margin-top:15px}
+.scanner-card-actions{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:10px;padding:12px 0}
+.scanner-select-model,.scanner-demo-link{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:9px 12px;border-radius:10px;font:inherit;font-size:11px;font-weight:700;text-align:center;text-decoration:none;cursor:pointer}
+.scanner-select-model{border:1px solid #8CB8E8;background:rgba(255,255,255,.82);color:#1558C0}
+.scanner-card.is-selected .scanner-select-model{border-color:transparent;background:linear-gradient(100deg,#1558C0 0%,#2E82F0 58%,#00AEB5 100%);color:#FFFFFF}
+.scanner-demo-link{border:1px solid #8CB8E8;background:#FFFFFF;color:#1558C0}
+.scanner-compare-section{padding:76px 0;background:#0C1422;color:#F4F6F9;background-image:radial-gradient(ellipse at 12% 0%,rgba(46,130,240,.18),transparent 42%),radial-gradient(ellipse at 88% 100%,rgba(0,184,189,.12),transparent 42%)}
+.scanner-compare-section h2{color:#F2F7FF}
+.scanner-compare-section .section-sub{color:#D6E7F8}
+.scanner-compare-section .eyebrow{color:#8BD8FF}
+.scanner-compare-scroll{overflow-x:auto;border:1px solid rgba(164,200,244,.22);border-radius:14px;background:#0E1B33}
+.scanner-compare-table{width:100%;min-width:980px;border-collapse:separate;border-spacing:0;color:#D6E7F8;font-size:12px}
+.scanner-compare-table th,.scanner-compare-table td{padding:15px 13px;border-bottom:1px solid rgba(164,200,244,.14);text-align:left;vertical-align:top;line-height:1.5}
+.scanner-compare-table thead th{position:sticky;top:0;background:#142D50;color:#F2F7FF;font-weight:750}
+.scanner-compare-table tbody th{min-width:145px;color:#8BD8FF;font-weight:700}
+.scanner-compare-table [data-model].is-selected{background:rgba(46,130,240,.18);box-shadow:inset 0 0 0 1px rgba(46,130,240,.3);color:#FFFFFF}
+.scanner-compare-note{margin-top:15px;color:#AFC5DF;font-size:11px;line-height:1.6}
+.scanner-faq-section{padding:76px 0;background:linear-gradient(115deg,#FFFFFF 0%,#F7FAFF 48%,#EAF3FF 100%);color:#172B45}
+.scanner-faq-section .section-sub{color:#526783}
+.scanner-faq-list{max-width:900px;margin:0 auto;border-top:1px solid #D6E3F1}
+.scanner-faq-list details{border-bottom:1px solid #D6E3F1}
+.scanner-faq-list summary{position:relative;padding:20px 44px 20px 4px;color:#183458;font-weight:750;cursor:pointer;list-style:none}
+.scanner-faq-list summary::-webkit-details-marker{display:none}
+.scanner-faq-list summary:after{content:"+";position:absolute;right:8px;top:14px;color:#0877D8;font-size:24px;font-weight:400}
+.scanner-faq-list details[open] summary:after{content:"−"}
+.scanner-faq-list details p{max-width:780px;padding:0 40px 20px 4px;color:#526783;font-size:13px;line-height:1.7}
+.scanner-bubble-nav{position:fixed;left:18px;top:50%;z-index:120;display:flex;align-items:center;gap:12px;transform:translateY(-50%)}
+.scanner-bubble-toggle{display:grid;place-content:center;gap:4px;width:46px;height:46px;border:1px solid rgba(255,255,255,.3);border-radius:50%;background:linear-gradient(110deg,#00AEB5,#2E82F0);box-shadow:0 8px 22px rgba(12,20,34,.24);cursor:pointer}
+.scanner-bubble-toggle span{display:block;width:4px;height:4px;border-radius:50%;background:#FFFFFF}
+.scanner-bubble-links{display:grid;gap:3px;min-width:180px;padding:9px;border:1px solid #DCE6F2;border-radius:13px;background:#FFFFFF;box-shadow:0 12px 32px rgba(12,20,34,.18)}
+.scanner-bubble-links[hidden]{display:none}
+.scanner-bubble-links a{padding:9px 11px;border-radius:8px;color:#183458;font-size:12px;font-weight:650;text-decoration:none}
+.scanner-bubble-links a:hover{background:#EAF3FF;color:#0877D8}
+@media(max-width:767px){
+ .scanner-choice-guide,.scanner-compare-section,.scanner-faq-section{padding:55px 0}
+ .scanner-guide-grid{grid-template-columns:1fr;gap:12px}
+ .scanner-card-actions{grid-template-columns:1fr}
+ .scanner-bubble-nav{left:10px;top:auto;bottom:18px;transform:none}
+ .scanner-bubble-toggle{width:42px;height:42px}
+ .scanner-bubble-links{min-width:165px}
+}
+
 </style>
 
 
@@ -676,90 +735,167 @@ small,.small{font-size:var(--fs-small);line-height:1.5;}
 </header>
 <main>
 <section class="catalog-hero"><img class="hero-photo" src="https://raw.githubusercontent.com/danielgarridoher-svg/pesta-as/acce7f59fcf3e39f32333cf06b2d64fd54f4d612/model-pro-escaneres-3d/images/hero.webp" alt="FreeScan Combo+ Wireless digitalizando un componente automotriz en una fábrica" fetchpriority="high"><div class="hero-shade"></div><div class="container hero-content"><span class="eyebrow hero-eyebrow">PRECISIÓN QUE ABRE POSIBILIDADES</span><h1>Escáneres 3D para<br><span>llevar tus proyectos más lejos.</span></h1><p class="lead">Explora soluciones de digitalización 3D para medición, inspección, diseño e ingeniería. Encuentra la tecnología que mejor responde a tu aplicación.</p><div class="hero-actions"><a class="btn btn-hero btn-lg" href="#metrologia"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-crosshair" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="22" x2="18" y1="12" y2="12"/><line x1="6" x2="2" y1="12" y2="12"/><line x1="12" x2="12" y1="6" y2="2"/><line x1="12" x2="12" y1="22" y2="18"/></svg> Metrología <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a><a class="btn btn-hero-outline btn-lg" href="#profesionales"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-box" aria-hidden="true"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg> Escaneo profesional <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></div></div></section>
-<div id="soluciones"><section class="solution-section"><div class="container"><div class="solution-intro"><span class="eyebrow">EL PUNTO DE PARTIDA</span><h2>Encuentra tu solución.</h2><p class="section-sub">Dos caminos. El mismo objetivo:<br>transformar la forma en que trabajas.</p></div><a href="#metrologia" class="solution-item"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-crosshair" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="22" x2="18" y1="12" y2="12"/><line x1="6" x2="2" y1="12" y2="12"/><line x1="12" x2="12" y1="6" y2="2"/><line x1="12" x2="12" y1="22" y2="18"/></svg><div><span class="eyebrow small">METROLOGÍA</span><h3>Medir e inspeccionar</h3><p>Control dimensional, inspección y evaluación de piezas y componentes.</p></div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right solution-arrow" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a><a href="#profesionales" class="solution-item"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-box" aria-hidden="true"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg><div><span class="eyebrow small">ESCANEO PROFESIONAL</span><h3>Digitalizar y diseñar</h3><p>Captura objetos físicos y conviértelos en datos 3D para crear y desarrollar.</p></div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right solution-arrow" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></div></section></div>
-<section id="metrologia" class="section catalog-section "><div class="container"><div class="section-heading"><div><span class="eyebrow">PRECISIÓN PARA LA INDUSTRIA</span><h2>Escáneres 3D metrológicos</h2></div><p class="section-sub">Para aplicaciones donde conocer la geometría de una pieza y evaluar sus dimensiones es parte esencial del proceso.</p></div><div class="product-grid"><article class="scanner-card group"><div class="scanner-image"><img src="https://raw.githubusercontent.com/danielgarridoher-svg/pesta-as/acce7f59fcf3e39f32333cf06b2d64fd54f4d612/model-pro-escaneres-3d/images/combo.webp" alt="FreeScan Combo+ Wireless" loading="lazy"><span class="product-badge">NUEVA GENERACIÓN</span><span class="image-brand">SHINING 3D</span></div><div class="scanner-body"><span class="eyebrow small">Inalámbrico · Láser + infrarrojo</span><h3>FreeScan Combo+ Wireless</h3><p>Escáner 3D portátil híbrido inalámbrico para metrología.</p><div class="product-feature"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scan-line" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 12h10"/></svg>Precisión de hasta <span class="spec">0.02 mm</span></div><div class="card-action"><a class="btn btn-link btn-size-default" href="#scanner-request-form">Explorar equipo <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a></div></div></article><article class="scanner-card group"><div class="scanner-image"><img src="https://raw.githubusercontent.com/danielgarridoher-svg/pesta-as/acce7f59fcf3e39f32333cf06b2d64fd54f4d612/model-pro-escaneres-3d/images/nova.webp" alt="FreeScan Trak Nova" loading="lazy"><span class="image-brand">SHINING 3D</span></div><div class="scanner-body"><span class="eyebrow small">Seguimiento dinámico</span><h3>FreeScan Trak Nova</h3><p>Sistema dinámico de escaneo y seguimiento 3D.</p><div class="product-feature"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scan-line" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 12h10"/></svg>Libertad para grandes componentes</div><div class="card-action"><a class="btn btn-link btn-size-default" href="#scanner-request-form">Consultar equipo <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a></div></div></article><article class="scanner-card group"><div class="scanner-image"><img src="https://raw.githubusercontent.com/danielgarridoher-svg/pesta-as/acce7f59fcf3e39f32333cf06b2d64fd54f4d612/model-pro-escaneres-3d/images/omni.webp" alt="FreeScan Omni" loading="lazy"><span class="image-brand">SHINING 3D</span></div><div class="scanner-body"><span class="eyebrow small">Todo en uno · Inspección</span><h3>FreeScan Omni</h3><p>Escáner 3D de metrología autónomo y listo para inspección.</p><div class="product-feature"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scan-line" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 12h10"/></svg>Del escaneo a la evaluación</div><div class="card-action"><a class="btn btn-link btn-size-default" href="#scanner-request-form">Consultar equipo <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a></div></div></article><article class="scanner-card group"><div class="scanner-image"><img src="https://raw.githubusercontent.com/danielgarridoher-svg/pesta-as/acce7f59fcf3e39f32333cf06b2d64fd54f4d612/model-pro-escaneres-3d/images/pro2.webp" alt="FreeScan UE Pro2" loading="lazy"><span class="image-brand">SHINING 3D</span></div><div class="scanner-body"><span class="eyebrow small">Láser azul · Portátil</span><h3>FreeScan UE Pro2</h3><p>Escáner 3D portátil láser para aplicaciones metrológicas.</p><div class="product-feature"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scan-line" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 12h10"/></svg>Captura eficiente de geometrías</div><div class="card-action"><a class="btn btn-link btn-size-default" href="#scanner-request-form">Consultar equipo <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a></div></div></article><article class="scanner-card group"><div class="scanner-image"><img src="https://raw.githubusercontent.com/danielgarridoher-svg/pesta-as/acce7f59fcf3e39f32333cf06b2d64fd54f4d612/model-pro-escaneres-3d/images/q12.webp" alt="OptimScan Q12 / Q12 HD" loading="lazy"><span class="image-brand">SHINING 3D</span></div><div class="scanner-body"><span class="eyebrow small">Escaneo óptico · Alta precisión</span><h3>OptimScan Q12 / Q12 HD</h3><p>Sistemas ópticos de inspección 3D de alta precisión.</p><div class="product-feature"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scan-line" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 12h10"/></svg>Detalle para inspección dimensional</div><div class="card-action"><a class="btn btn-link btn-size-default" href="#scanner-request-form">Consultar equipo <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a></div></div></article></div></div></section>
-<section id="profesionales" class="section catalog-section professional-section"><div class="container"><div class="section-heading"><div><span class="eyebrow">CAPTURA PARA CREAR</span><h2>Escaneo profesional</h2></div><p class="section-sub">Soluciones para digitalizar objetos físicos y llevar su geometría al entorno digital para diseño, documentación y desarrollo.</p></div><div class="product-grid"><article class="scanner-card group"><div class="scanner-image"><img src="https://raw.githubusercontent.com/danielgarridoher-svg/pesta-as/acce7f59fcf3e39f32333cf06b2d64fd54f4d612/model-pro-escaneres-3d/images/libre.webp" alt="EinScan Libre" loading="lazy"><span class="image-brand">SHINING 3D</span></div><div class="scanner-body"><span class="eyebrow small">Inalámbrico · A color</span><h3>EinScan Libre</h3><p>Escáner 3D láser todo en uno, inalámbrico y a color.</p><div class="product-feature"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scan-line" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 12h10"/></svg>Digitaliza sin límites de movimiento</div><div class="card-action"><a class="btn btn-link btn-size-default" href="#scanner-request-form">Consultar equipo <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a></div></div></article><article class="scanner-card group"><div class="scanner-image"><img src="https://raw.githubusercontent.com/danielgarridoher-svg/pesta-as/acce7f59fcf3e39f32333cf06b2d64fd54f4d612/model-pro-escaneres-3d/images/rigil.webp" alt="EinScan Rigil" loading="lazy"><span class="image-brand">SHINING 3D</span></div><div class="scanner-body"><span class="eyebrow small">Versátil · Multimodo</span><h3>EinScan Rigil</h3><p>Escáner 3D portátil con distintos modos de captura.</p><div class="product-feature"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scan-line" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 12h10"/></svg>Una solución, distintas aplicaciones</div><div class="card-action"><a class="btn btn-link btn-size-default" href="#scanner-request-form">Consultar equipo <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-up-right" aria-hidden="true"><path d="M7 7h10v10"/><path d="M7 17 17 7"/></svg></a></div></div></article></div><div class="catalog-bottom"><span>¿No sabes cuál es el indicado para tu proyecto?</span><a class="btn btn-link btn-size-default" href="#scanner-request-form">Te ayudamos a elegir <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></div></div></section>
+<div id="soluciones"><section class="solution-section"><div class="container"><div class="solution-intro"><span class="eyebrow">EL PUNTO DE PARTIDA</span><h2>Encuentra tu solución.</h2><p class="section-sub">Empieza por lo que necesitas: medir e inspeccionar con precisión o digitalizar para diseñar, desarrollar y trabajar en campo.</p></div><a href="#metrologia" class="solution-item"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-crosshair" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="22" x2="18" y1="12" y2="12"/><line x1="6" x2="2" y1="12" y2="12"/><line x1="12" x2="12" y1="6" y2="2"/><line x1="12" x2="12" y1="22" y2="18"/></svg><div><span class="eyebrow small">METROLOGÍA</span><h3>Medir e inspeccionar</h3><p>Control dimensional, inspección y evaluación de piezas y componentes.</p></div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right solution-arrow" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a><a href="#profesionales" class="solution-item"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-box" aria-hidden="true"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg><div><span class="eyebrow small">ESCANEO PROFESIONAL</span><h3>Digitalizar y diseñar</h3><p>Captura objetos físicos y conviértelos en datos 3D para crear y desarrollar.</p></div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right solution-arrow" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></div></section></div>
+<section class="scanner-choice-guide" aria-labelledby="scanner-guide-title">
+  <div class="container">
+    <span class="eyebrow">CÓMO ELEGIR</span>
+    <h2 id="scanner-guide-title">Tres preguntas para encontrar el escáner adecuado.</h2>
+    <p class="scanner-guide-lead">No todos los proyectos necesitan el mismo equipo. Estas tres respuestas ayudan a reducir las opciones.</p>
+    <div class="scanner-guide-grid">
+      <article><span>01</span><h3>¿Qué tamaño tiene tu pieza?</h3><p>Desde componentes pequeños hasta moldes, maquinaria o estructuras completas.</p></article>
+      <article><span>02</span><h3>¿Qué necesitas obtener?</h3><p>Mediciones y control dimensional, ingeniería inversa o un modelo 3D para diseño.</p></article>
+      <article><span>03</span><h3>¿Dónde vas a escanear?</h3><p>En laboratorio, taller, línea de producción o directamente en campo.</p></article>
+    </div>
+  </div>
+</section>
+<section id="metrologia" class="section catalog-section "><div class="container"><div class="section-heading"><div><span class="eyebrow">PRECISIÓN PARA LA INDUSTRIA</span><h2>Escáneres 3D metrológicos</h2></div><p class="section-sub">Cuando la exactitud define el resultado: control de calidad, inspección dimensional e ingeniería inversa de precisión.</p></div><div class="product-grid"><article class="scanner-card group is-selected" id="freescan-combo-plus-wireless" data-model="combo"><div class="scanner-image"><img src="https://raw.githubusercontent.com/danielgarridoher-svg/pesta-as/acce7f59fcf3e39f32333cf06b2d64fd54f4d612/model-pro-escaneres-3d/images/combo.webp" alt="FreeScan Combo+ Wireless" loading="lazy"><span class="product-badge">EL MÁS SOLICITADO</span><span class="image-brand">SHINING 3D</span></div><div class="scanner-body"><span class="eyebrow small">Inalámbrico · Láser + infrarrojo</span><h3>FreeScan Combo+ Wireless</h3><p>Escáner 3D portátil híbrido inalámbrico para metrología.</p><dl class="scanner-card-specs">
+    <div><dt>Tamaño de pieza</dt><dd>Pequeña a mediana</dd></div>
+    <div><dt>Exactitud</dt><dd>0.02 mm</dd></div>
+    <div><dt>Cómo se usa</dt><dd>A mano, inalámbrico; captura láser e infrarroja</dd></div>
+    <div><dt>Ideal para</dt><dd>Moldes, fundición, automotriz y manufactura</dd></div>
+  </dl><div class="product-feature"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scan-line" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 12h10"/></svg>Precisión de hasta <span class="spec">0.02 mm</span></div><div class="card-action scanner-card-actions">
+    <button type="button" class="scanner-select-model" data-select-model="combo" aria-pressed="true">Seleccionado</button>
+    <a class="scanner-demo-link" href="#scanner-request-form" data-demo-model="FreeScan Combo+ Wireless">Pedir demostración <span aria-hidden="true">→</span></a>
+  </div></div></article><article class="scanner-card group" id="freescan-trak-nova" data-model="trak"><div class="scanner-image"><img src="https://raw.githubusercontent.com/danielgarridoher-svg/pesta-as/acce7f59fcf3e39f32333cf06b2d64fd54f4d612/model-pro-escaneres-3d/images/nova.webp" alt="FreeScan Trak Nova" loading="lazy"><span class="image-brand">SHINING 3D</span></div><div class="scanner-body"><span class="eyebrow small">Seguimiento dinámico</span><h3>FreeScan Trak Nova</h3><p>Sistema dinámico de escaneo y seguimiento 3D.</p><dl class="scanner-card-specs">
+    <div><dt>Tamaño de pieza</dt><dd>Muy grande</dd></div>
+    <div><dt>Exactitud</dt><dd>Según el volumen y la configuración de medición</dd></div>
+    <div><dt>Cómo se usa</dt><dd>Sistema de rastreador y escáner de mano</dd></div>
+    <div><dt>Ideal para</dt><dd>Piezas grandes, inspección en planta y series</dd></div>
+  </dl><div class="product-feature"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scan-line" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 12h10"/></svg>Libertad para grandes componentes</div><div class="card-action scanner-card-actions">
+    <button type="button" class="scanner-select-model" data-select-model="trak" aria-pressed="false">Ver modelo</button>
+    <a class="scanner-demo-link" href="#scanner-request-form" data-demo-model="FreeScan Trak Nova">Pedir demostración <span aria-hidden="true">→</span></a>
+  </div></div></article><article class="scanner-card group" id="freescan-omni" data-model="omni"><div class="scanner-image"><img src="https://raw.githubusercontent.com/danielgarridoher-svg/pesta-as/acce7f59fcf3e39f32333cf06b2d64fd54f4d612/model-pro-escaneres-3d/images/omni.webp" alt="FreeScan Omni" loading="lazy"><span class="image-brand">SHINING 3D</span></div><div class="scanner-body"><span class="eyebrow small">Todo en uno · Inspección</span><h3>FreeScan Omni</h3><p>Escáner 3D de metrología autónomo y listo para inspección.</p><dl class="scanner-card-specs">
+    <div><dt>Tamaño de pieza</dt><dd>Según la pieza y la configuración</dd></div>
+    <div><dt>Exactitud</dt><dd>Consultar especificación del sistema</dd></div>
+    <div><dt>Cómo se usa</dt><dd>Sistema autónomo todo en uno</dd></div>
+    <div><dt>Ideal para</dt><dd>Inspección y evaluación directamente en planta</dd></div>
+  </dl><div class="product-feature"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scan-line" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 12h10"/></svg>Del escaneo a la evaluación</div><div class="card-action scanner-card-actions">
+    <button type="button" class="scanner-select-model" data-select-model="omni" aria-pressed="false">Ver modelo</button>
+    <a class="scanner-demo-link" href="#scanner-request-form" data-demo-model="FreeScan Omni">Pedir demostración <span aria-hidden="true">→</span></a>
+  </div></div></article><article class="scanner-card group" id="freescan-ue-pro2" data-model="ue"><div class="scanner-image"><img src="https://raw.githubusercontent.com/danielgarridoher-svg/pesta-as/acce7f59fcf3e39f32333cf06b2d64fd54f4d612/model-pro-escaneres-3d/images/pro2.webp" alt="FreeScan UE Pro2" loading="lazy"><span class="image-brand">SHINING 3D</span></div><div class="scanner-body"><span class="eyebrow small">Láser azul · Portátil</span><h3>FreeScan UE Pro2</h3><p>Escáner 3D portátil láser para aplicaciones metrológicas.</p><dl class="scanner-card-specs">
+    <div><dt>Tamaño de pieza</dt><dd>Mediana a grande</dd></div>
+    <div><dt>Exactitud</dt><dd>0.02 mm</dd></div>
+    <div><dt>Cómo se usa</dt><dd>A mano, inalámbrico y con fotogrametría integrada</dd></div>
+    <div><dt>Ideal para</dt><dd>Lámina automotriz, maquinaria y componentes grandes</dd></div>
+  </dl><div class="product-feature"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scan-line" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 12h10"/></svg>Captura eficiente de geometrías</div><div class="card-action scanner-card-actions">
+    <button type="button" class="scanner-select-model" data-select-model="ue" aria-pressed="false">Ver modelo</button>
+    <a class="scanner-demo-link" href="#scanner-request-form" data-demo-model="FreeScan UE Pro2">Pedir demostración <span aria-hidden="true">→</span></a>
+  </div></div></article><article class="scanner-card group" id="optimscan-q12" data-model="q12"><div class="scanner-image"><img src="https://raw.githubusercontent.com/danielgarridoher-svg/pesta-as/acce7f59fcf3e39f32333cf06b2d64fd54f4d612/model-pro-escaneres-3d/images/q12.webp" alt="OptimScan Q12 / Q12 HD" loading="lazy"><span class="image-brand">SHINING 3D</span></div><div class="scanner-body"><span class="eyebrow small">Escaneo óptico · Alta precisión</span><h3>OptimScan Q12 / Q12 HD</h3><p>Sistemas ópticos de inspección 3D de alta precisión.</p><dl class="scanner-card-specs">
+    <div><dt>Tamaño de pieza</dt><dd>Pequeña a mediana</dd></div>
+    <div><dt>Exactitud</dt><dd>Alta precisión óptica; depende de la versión</dd></div>
+    <div><dt>Cómo se usa</dt><dd>Fijo: trípode, mesa giratoria o integración con robot</dd></div>
+    <div><dt>Ideal para</dt><dd>Laboratorio, inspección dimensional y GD&T</dd></div>
+  </dl><div class="product-feature"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scan-line" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 12h10"/></svg>Detalle para inspección dimensional</div><div class="card-action scanner-card-actions">
+    <button type="button" class="scanner-select-model" data-select-model="q12" aria-pressed="false">Ver modelo</button>
+    <a class="scanner-demo-link" href="#scanner-request-form" data-demo-model="OptimScan Q12 / Q12 HD">Pedir demostración <span aria-hidden="true">→</span></a>
+  </div></div></article></div></div></section>
+<section id="profesionales" class="section catalog-section professional-section"><div class="container"><div class="section-heading"><div><span class="eyebrow">CAPTURA PARA CREAR</span><h2>Para taller, prototipos y trabajo en campo</h2></div><p class="section-sub">Cuando necesitas versatilidad y facilidad de uso para digitalizar objetos, desarrollar prototipos o trabajar directamente en planta y campo.</p></div><div class="product-grid"><article class="scanner-card group" id="einscan-libre" data-model="libre"><div class="scanner-image"><img src="https://raw.githubusercontent.com/danielgarridoher-svg/pesta-as/acce7f59fcf3e39f32333cf06b2d64fd54f4d612/model-pro-escaneres-3d/images/libre.webp" alt="EinScan Libre" loading="lazy"><span class="image-brand">SHINING 3D</span></div><div class="scanner-body"><span class="eyebrow small">Inalámbrico · A color</span><h3>EinScan Libre</h3><p>Escáner 3D láser todo en uno, inalámbrico y a color.</p><dl class="scanner-card-specs">
+    <div><dt>Tamaño de pieza</dt><dd>Mediana a grande</dd></div>
+    <div><dt>Exactitud</dt><dd>Hasta 0.04 mm</dd></div>
+    <div><dt>Cómo se usa</dt><dd>Sistema autónomo todo en uno, sin PC durante la captura</dd></div>
+    <div><dt>Ideal para</dt><dd>Trabajo en campo, mantenimiento e ingeniería inversa</dd></div>
+  </dl><div class="product-feature"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scan-line" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 12h10"/></svg>Digitaliza sin límites de movimiento</div><div class="card-action scanner-card-actions">
+    <button type="button" class="scanner-select-model" data-select-model="libre" aria-pressed="false">Ver modelo</button>
+    <a class="scanner-demo-link" href="#scanner-request-form" data-demo-model="EinScan Libre">Pedir demostración <span aria-hidden="true">→</span></a>
+  </div></div></article><article class="scanner-card group" id="einscan-rigil" data-model="rigil"><div class="scanner-image"><img src="https://raw.githubusercontent.com/danielgarridoher-svg/pesta-as/acce7f59fcf3e39f32333cf06b2d64fd54f4d612/model-pro-escaneres-3d/images/rigil.webp" alt="EinScan Rigil" loading="lazy"><span class="image-brand">SHINING 3D</span></div><div class="scanner-body"><span class="eyebrow small">Versátil · Multimodo</span><h3>EinScan Rigil</h3><p>Escáner 3D portátil con distintos modos de captura.</p><dl class="scanner-card-specs">
+    <div><dt>Tamaño de pieza</dt><dd>Pequeña a mediana</dd></div>
+    <div><dt>Exactitud</dt><dd>Consultar según versión y configuración</dd></div>
+    <div><dt>Cómo se usa</dt><dd>Autónomo, inalámbrico o conectado por cable</dd></div>
+    <div><dt>Ideal para</dt><dd>Taller, diseño de producto y prototipos</dd></div>
+  </dl><div class="product-feature"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scan-line" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 12h10"/></svg>Una solución, distintas aplicaciones</div><div class="card-action scanner-card-actions">
+    <button type="button" class="scanner-select-model" data-select-model="rigil" aria-pressed="false">Ver modelo</button>
+    <a class="scanner-demo-link" href="#scanner-request-form" data-demo-model="EinScan Rigil">Pedir demostración <span aria-hidden="true">→</span></a>
+  </div></div></article></div><div class="catalog-bottom"><span>¿No sabes cuál es el indicado para tu proyecto?</span><a class="btn btn-link btn-size-default" href="#scanner-request-form">Te ayudamos a elegir <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></div></div></section>
+<section class="scanner-compare-section" id="comparativa" aria-labelledby="scanner-compare-title">
+  <div class="container">
+    <div class="section-heading">
+      <div><span class="eyebrow">COMPARA TUS OPCIONES</span><h2 id="scanner-compare-title">Los modelos, lado a lado.</h2></div>
+      <p class="section-sub">Consulta las diferencias principales. Selecciona una tarjeta para destacar ese modelo también en esta tabla.</p>
+    </div>
+    <div class="scanner-compare-scroll" tabindex="0" aria-label="Tabla comparativa; desplázate horizontalmente para ver todos los modelos">
+      <table class="scanner-compare-table">
+        <thead><tr><th scope="col">Característica</th>
+          <th scope="col" data-model="combo" class="is-selected">Combo+ Wireless</th>
+          <th scope="col" data-model="trak">Trak Nova</th>
+          <th scope="col" data-model="omni">Omni</th>
+          <th scope="col" data-model="ue">UE Pro2</th>
+          <th scope="col" data-model="q12">OptimScan Q12</th>
+          <th scope="col" data-model="libre">EinScan Libre</th>
+          <th scope="col" data-model="rigil">EinScan Rigil</th>
+        </tr></thead>
+        <tbody>
+          <tr><th scope="row">Tamaño de pieza</th><td data-model="combo" class="is-selected">Pequeña a mediana</td><td data-model="trak">Muy grande</td><td data-model="omni">Según aplicación</td><td data-model="ue">Mediana a grande</td><td data-model="q12">Pequeña a mediana</td><td data-model="libre">Mediana a grande</td><td data-model="rigil">Pequeña a mediana</td></tr>
+          <tr><th scope="row">Exactitud</th><td data-model="combo" class="is-selected">0.02 mm</td><td data-model="trak">Según volumen de medición</td><td data-model="omni">Consultar especificación</td><td data-model="ue">0.02 mm</td><td data-model="q12">Alta precisión óptica</td><td data-model="libre">Hasta 0.04 mm</td><td data-model="rigil">Según versión</td></tr>
+          <tr><th scope="row">Cómo se usa</th><td data-model="combo" class="is-selected">Manual, inalámbrico</td><td data-model="trak">Rastreador + escáner de mano</td><td data-model="omni">Autónomo, todo en uno</td><td data-model="ue">Manual, inalámbrico</td><td data-model="q12">Fijo o automatizado</td><td data-model="libre">Autónomo, sin PC</td><td data-model="rigil">Autónomo, inalámbrico o cable</td></tr>
+          <tr><th scope="row">Ideal para</th><td data-model="combo" class="is-selected">Ingeniería inversa y control de calidad</td><td data-model="trak">Piezas grandes y producción</td><td data-model="omni">Inspección en planta</td><td data-model="ue">Automotriz y maquinaria</td><td data-model="q12">Laboratorio y GD&T</td><td data-model="libre">Campo y mantenimiento</td><td data-model="rigil">Taller y prototipos</td></tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="scanner-compare-note">Las especificaciones pueden variar según la versión, configuración y condiciones de medición. Para una comparación técnica final, revisamos tu pieza y la ficha correspondiente del fabricante.</p>
+  </div>
+</section>
 <section class="section process-section"><div class="container"><span class="eyebrow">TECNOLOGÍA QUE CONECTA DOS MUNDOS</span><div class="section-heading"><h2>Del objeto físico<br><span>al dato digital.</span></h2><p class="section-sub">De una superficie real a información que puedes medir, analizar y transformar.</p></div><div class="steps"><div class="step"><div class="step-top"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scan-line" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 12h10"/></svg><span>01</span></div><h3>Captura</h3><p>El escáner registra la superficie del objeto mediante tecnología óptica.</p></div><div class="step"><div class="step-top"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-box" aria-hidden="true"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg><span>02</span></div><h3>Datos 3D</h3><p>La captura genera información espacial que representa la geometría de la pieza.</p></div><div class="step"><div class="step-top"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layers" aria-hidden="true"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></svg><span>03</span></div><h3>Procesamiento</h3><p>Los datos se alinean y procesan para obtener una representación digital utilizable.</p></div><div class="step"><div class="step-top"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cpu" aria-hidden="true"><path d="M12 20v2"/><path d="M12 2v2"/><path d="M17 20v2"/><path d="M17 2v2"/><path d="M2 12h2"/><path d="M2 17h2"/><path d="M2 7h2"/><path d="M20 12h2"/><path d="M20 17h2"/><path d="M20 7h2"/><path d="M7 20v2"/><path d="M7 2v2"/><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="8" y="8" width="8" height="8" rx="1"/></svg><span>04</span></div><h3>Aplicación</h3><p>El resultado apoya tareas de inspección, diseño o ingeniería inversa, según el equipo y el flujo de trabajo.</p></div></div></div></section>
 <section class="section applications-section"><div class="container"><div class="applications-photo"><img src="https://raw.githubusercontent.com/danielgarridoher-svg/pesta-as/acce7f59fcf3e39f32333cf06b2d64fd54f4d612/model-pro-escaneres-3d/images/application.webp" alt="Escaneo 3D de componentes en un entorno industrial" loading="lazy"><span><span class="status-dot"></span> TECNOLOGÍA EN EL MUNDO REAL</span></div><div class="applications-copy"><span class="eyebrow">DE LOS DATOS A LAS DECISIONES</span><h2>Una nueva dimensión<br><span>para tu industria.</span></h2><div class="application-list"><div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-factory" aria-hidden="true"><path d="M12 16h.01"/><path d="M16 16h.01"/><path d="M3 19a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8.5a.5.5 0 0 0-.769-.422l-4.462 2.844A.5.5 0 0 1 15 10.5v-2a.5.5 0 0 0-.769-.422L9.77 10.922A.5.5 0 0 1 9 10.5V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2z"/><path d="M8 16h.01"/></svg><div><h3>Manufactura</h3><p>Captura y documentación de componentes y piezas.</p></div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div><div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ruler" aria-hidden="true"><path d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.41 2.41 0 0 1 0-3.4l2.6-2.6a2.41 2.41 0 0 1 3.4 0Z"/><path d="m14.5 12.5 2-2"/><path d="m11.5 9.5 2-2"/><path d="m8.5 6.5 2-2"/><path d="m17.5 15.5 2-2"/></svg><div><h3>Control de calidad</h3><p>Comparación de geometrías y apoyo a la inspección dimensional.</p></div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div><div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rotate-3d" aria-hidden="true"><path d="M16.466 7.5C15.643 4.237 13.952 2 12 2 9.239 2 7 6.477 7 12s2.239 10 5 10c.342 0 .677-.069 1-.2"/><path d="m15.194 13.707 3.814 1.86-1.86 3.814"/><path d="M19 15.57c-1.804.885-4.274 1.43-7 1.43-5.523 0-10-2.239-10-5s4.477-5 10-5c4.838 0 8.873 1.718 9.8 4"/></svg><div><h3>Ingeniería inversa</h3><p>Datos para reconstrucción y desarrollo de modelos 3D.</p></div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div><div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pen-tool" aria-hidden="true"><path d="M15.707 21.293a1 1 0 0 1-1.414 0l-1.586-1.586a1 1 0 0 1 0-1.414l5.586-5.586a1 1 0 0 1 1.414 0l1.586 1.586a1 1 0 0 1 0 1.414z"/><path d="m18 13-1.375-6.874a1 1 0 0 0-.746-.776L3.235 2.028a1 1 0 0 0-1.207 1.207L5.35 15.879a1 1 0 0 0 .776.746L13 18"/><path d="m2.3 2.3 7.286 7.286"/><circle cx="11" cy="11" r="2"/></svg><div><h3>Diseño de producto</h3><p>Digitalización para apoyar procesos de diseño y modificación.</p></div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div></div><a class="btn btn-link btn-size-default" href="#scanner-request-form">Conversemos sobre tu aplicación <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></div></div></section>
+<section class="scanner-faq-section" id="faq" aria-labelledby="scanner-faq-title">
+  <div class="container">
+    <div class="section-heading">
+      <div><span class="eyebrow">ANTES DE ELEGIR</span><h2 id="scanner-faq-title">Preguntas frecuentes.</h2></div>
+      <p class="section-sub">Resolvemos algunas dudas comunes para que puedas elegir con mayor claridad.</p>
+    </div>
+    <div class="scanner-faq-list">
+      <details><summary>¿Cuál es la diferencia entre un escáner portátil y uno fijo?</summary><p>El portátil se mueve alrededor de la pieza y ofrece flexibilidad para trabajar con distintos tamaños y geometrías. El fijo captura desde una posición estable y puede integrarse con mesas giratorias o robots, por lo que resulta útil en procesos repetitivos.</p></details>
+      <details><summary>¿Todos los escáneres necesitan marcadores?</summary><p>No. Depende del modelo, la geometría, el acabado y el tamaño de la pieza. En algunos trabajos los marcadores ayudan a mantener el seguimiento y la precisión. Podemos revisar tu aplicación para determinar si los necesitas.</p></details>
+      <details><summary>¿Necesito una computadora para utilizar el escáner?</summary><p>Depende del equipo. Algunos sistemas permiten trabajar de forma autónoma y otros requieren una computadora con determinadas características. Te orientamos con los requisitos del modelo que corresponda a tu proyecto.</p></details>
+      <details><summary>¿Puedo probar el escáner con una pieza de mi empresa?</summary><p>Sí. Podemos coordinar una demostración para evaluar la captura con una pieza representativa de tu aplicación y revisar si el resultado responde a lo que necesitas.</p></details>
+      <details><summary>¿Model Pro ofrece factura y soporte en México?</summary><p>Sí. Ofrecemos facturación en México, atención en español, demostraciones y acompañamiento técnico y capacitación.</p></details>
+    </div>
+  </div>
+</section>
 <section class="scanner-request-section" id="scanner-request-form" aria-labelledby="scanner-request-title">
 <div class="mp-co scanner-request-grid">
-<div class="scanner-request-intro">
-<p class="scanner-request-eyebrow eyebrow">HABLEMOS DE TU PROYECTO</p>
-<h2 id="scanner-request-title">¿Cómo quieres avanzar con <span>el escaneo 3D?</span></h2>
-<p class="section-sub">Cuéntanos qué necesitas. Según lo que selecciones, te mostraremos solo la información necesaria para orientar tu solicitud.</p>
-<ul>
-<li data-intro-for="demostracion"><span>01</span><div><b>Identificamos tu aplicación</b><br><small>Medición, inspección, ingeniería inversa o digitalización.</small></div></li>
-<li data-intro-for="cotizacion"><span>02</span><div><b>Revisamos las opciones</b><br><small>Consideramos el tamaño de tus piezas y el proceso.</small></div></li>
-<li data-intro-for="orientacion"><span>03</span><div><b>Te orientamos</b><br><small>Con información clara para dar el siguiente paso.</small></div></li>
-</ul>
-</div>
-<div class="scanner-request-card">
-<form class="scanner-request-form" aria-label="Formulario de orientación sobre escáneres 3D" novalidate autocomplete="on">
-<fieldset class="scanner-choice-fieldset">
-<legend>¿Qué necesitas? <span>Puedes elegir más de una</span></legend>
-<div class="scanner-choice-grid">
-<label class="scanner-choice-card">
-<input type="checkbox" name="interes" value="Orientación">
-<span class="scanner-choice-icon" aria-hidden="true">⌖</span><b>Orientación</b><small>Ayuda para elegir el escáner adecuado</small>
-</label>
-<label class="scanner-choice-card">
-<input type="checkbox" name="interes" value="Demostración">
-<span class="scanner-choice-icon" aria-hidden="true">▣</span><b>Demostración</b><small>Evaluar el escaneo con una pieza real</small>
-</label>
-<label class="scanner-choice-card">
-<input type="checkbox" name="interes" value="Precios y cotización">
-<span class="scanner-choice-icon" aria-hidden="true">▤</span><b>Precios y cotización</b><small>Conocer equipos, precios y opciones</small>
-</label>
-</div>
-<p class="scanner-choice-hint" data-choice-hint>Selecciona una opción para continuar.</p>
-</fieldset>
-<div class="scanner-dynamic-details" data-dynamic-details hidden>
-<div class="scanner-form-group" data-detail="orientacion" hidden>
-<h3 class="scanner-form-section-title">Sobre tu necesidad</h3>
-<div class="scanner-request-fields">
-<label class="scanner-request-full">¿Qué buscas resolver?<select name="desafio"><option value="">Selecciona una opción</option><option>Inspeccionar y medir piezas</option><option>Realizar ingeniería inversa</option><option>Digitalizar piezas para diseño o fabricación</option><option>Mejorar mi proceso de control de calidad</option><option>Comparar o actualizar mi escáner actual</option><option>Conocer las posibilidades del escaneo 3D</option><option>Otro</option></select></label>
-</div>
-</div>
-<div class="scanner-form-group" data-detail="demostracion" hidden>
-<h3 class="scanner-form-section-title">Sobre la demostración</h3>
-<div class="scanner-request-fields">
-<label class="scanner-request-full">¿Qué te gustaría evaluar en la demostración?<select name="objetivo_demo"><option value="">Selecciona una opción</option><option>Precisión y repetibilidad</option><option>Inspección dimensional y comparación CAD</option><option>Ingeniería inversa</option><option>Velocidad y facilidad de captura</option><option>Evaluar una pieza o proceso específico</option></select></label>
-</div>
-</div>
-<div class="scanner-form-group" data-detail="cotizacion" hidden>
-<h3 class="scanner-form-section-title">Sobre los equipos</h3>
-<div class="scanner-request-fields">
-<label class="scanner-request-full">¿Tienes algún equipo en mente?<select name="equipo_interes"><option value="">Selecciona una opción</option><option>FreeScan Combo+</option><option>FreeScan Trak Nova</option><option>FreeScan Omni</option><option>FreeScan UE Pro 2</option><option>OptimScan Q12 / Q12 HD</option><option>EinScan Libre</option><option>EinScan Rigil</option><option>Necesito orientación para elegir</option></select></label>
-</div>
-</div>
-<div class="scanner-form-group" data-detail="proyecto">
-<h3 class="scanner-form-section-title">Tu proyecto</h3>
-<p class="scanner-form-section-description section-sub">Estos datos nos ayudan a entender el tipo de aplicación.</p>
-<div class="scanner-request-fields">
-<label>Tipo de piezas<select name="tipo_pieza"><option value="">Selecciona una opción</option><option>Piezas pequeñas o de geometría compleja</option><option>Componentes medianos</option><option>Piezas grandes, maquinaria o estructuras</option><option>Diferentes tamaños de piezas</option><option>Aún no lo tengo definido</option></select></label>
-<label>Industria<select name="industria"><option value="">Selecciona una industria</option><option>Automotriz</option><option>Aeroespacial</option><option>Moldes y troqueles</option><option>Inyección de plástico</option><option>Metalmecánica</option><option>Maquinaria industrial</option><option>MRO y mantenimiento</option><option>Manufactura CNC</option><option>Educación</option><option>Otra</option></select></label>
-<label class="scanner-request-full">Cuéntanos un poco más <span class="scanner-form-optional">(Opcional)</span><textarea name="mensaje" rows="3" placeholder="Tamaño de la pieza, material, tolerancias o qué necesitas obtener del escaneo."></textarea></label>
-</div>
-</div>
-<div class="scanner-form-group" data-detail="contacto">
-<h3 class="scanner-form-section-title">Tus datos</h3>
-<p class="scanner-form-section-description section-sub">¿Cómo podemos contactarte?</p>
-<div class="scanner-request-fields">
-<label>Nombre completo*<input type="text" name="nombre" placeholder="Tu nombre y apellido" autocomplete="name" required></label>
-<label>Teléfono / WhatsApp*<input type="tel" name="telefono" placeholder="+52 222 000 0000" autocomplete="tel" required></label>
-<label>Correo electrónico*<input type="email" name="correo" placeholder="nombre@empresa.com" autocomplete="email" required></label>
-<label>Empresa*<input type="text" name="empresa" placeholder="Nombre de tu empresa" autocomplete="organization" required></label>
-<label>Estado <select name="estado"><option value="">Selecciona tu estado</option><option>Aguascalientes</option><option>Baja California</option><option>Chihuahua</option><option>Ciudad de México</option><option>Coahuila</option><option>Estado de México</option><option>Guanajuato</option><option>Hidalgo</option><option>Jalisco</option><option>Nuevo León</option><option>Puebla</option><option>Querétaro</option><option>San Luis Potosí</option><option>Sonora</option><option>Tamaulipas</option><option>Veracruz</option><option>Otro</option></select></label>
-<label>Puesto o cargo <span class="scanner-form-optional">(Opcional)</span><input type="text" name="puesto" placeholder="Tu puesto"></label>
-</div>
-</div>
-<p class="scanner-request-error" data-form-error role="alert" aria-live="polite"></p>
-<div class="scanner-form-actions"><button type="submit" data-submit-label>Enviar solicitud</button></div>
-<p class="scanner-request-privacy">Al enviar aceptas nuestro <a href="index.html#aviso-privacidad">aviso de privacidad</a>.</p>
-</div>
-</form>
-<div class="scanner-request-thanks" hidden aria-live="polite"></div>
-</div>
+  <div class="scanner-request-intro">
+    <p class="scanner-request-eyebrow eyebrow">HABLEMOS DE TU PROYECTO</p>
+    <h2 id="scanner-request-title">Cuéntanos qué necesitas <span>y te orientamos.</span></h2>
+    <p class="section-sub">Con unos pocos datos podemos entender tu aplicación y recomendarte el siguiente paso.</p>
+    <ul>
+      <li><span>01</span><div><b>Entendemos tu proyecto</b><br><small>Qué pieza quieres digitalizar y para qué la necesitas.</small></div></li>
+      <li><span>02</span><div><b>Revisamos las opciones</b><br><small>Te orientamos sobre el equipo que puede funcionar.</small></div></li>
+      <li><span>03</span><div><b>Avanzamos contigo</b><br><small>Podemos coordinar una demostración o cotización.</small></div></li>
+    </ul>
+  </div>
+  <div class="scanner-request-card">
+    <form class="scanner-request-form" aria-label="Formulario de orientación sobre escáneres 3D" novalidate autocomplete="on">
+      <fieldset class="scanner-choice-fieldset">
+        <legend>¿Qué necesitas? <span>Elige una opción</span></legend>
+        <div class="scanner-choice-grid">
+          <label class="scanner-choice-card"><input type="radio" name="interes" value="Orientación" required><span class="scanner-choice-icon" aria-hidden="true">⌖</span><b>Orientación</b><small>Ayuda para elegir un equipo</small></label>
+          <label class="scanner-choice-card"><input type="radio" name="interes" value="Demostración"><span class="scanner-choice-icon" aria-hidden="true">▣</span><b>Demostración</b><small>Probar con una pieza real</small></label>
+          <label class="scanner-choice-card"><input type="radio" name="interes" value="Cotización"><span class="scanner-choice-icon" aria-hidden="true">▤</span><b>Cotización</b><small>Conocer precio y opciones</small></label>
+        </div>
+        <p class="scanner-choice-hint" data-choice-hint>Selecciona cómo podemos ayudarte.</p>
+      </fieldset>
+      <div class="scanner-dynamic-details" data-dynamic-details hidden>
+        <div class="scanner-request-fields">
+          <label>Modelo de interés <span class="scanner-form-optional">(Opcional)</span>
+            <select name="equipo_interes"><option value="">Aún no lo sé</option><option>FreeScan Combo+ Wireless</option><option>FreeScan Trak Nova</option><option>FreeScan Omni</option><option>FreeScan UE Pro2</option><option>OptimScan Q12 / Q12 HD</option><option>EinScan Libre</option><option>EinScan Rigil</option></select>
+          </label>
+          <label>¿Qué tamaño tiene tu pieza? <span class="scanner-form-optional">(Opcional)</span>
+            <select name="tipo_pieza"><option value="">Selecciona una opción</option><option>Pequeña (cabe en la mano)</option><option>Mediana (hasta aproximadamente 1 m)</option><option>Grande (más de 1 m)</option><option>Varias piezas de distintos tamaños</option><option>Aún no lo tengo definido</option></select>
+          </label>
+          <label class="scanner-request-full">Cuéntanos brevemente sobre tu proyecto <span class="scanner-form-optional">(Opcional)</span>
+            <textarea name="mensaje" rows="3" placeholder="Qué quieres escanear y qué necesitas obtener del modelo 3D."></textarea>
+          </label>
+          <label>Nombre*<input type="text" name="nombre" placeholder="Tu nombre" autocomplete="name" required></label>
+          <label>WhatsApp o teléfono*<input type="tel" name="telefono" placeholder="+52" autocomplete="tel" required></label>
+          <label class="scanner-request-full">Correo electrónico*<input type="email" name="correo" placeholder="nombre@empresa.com" autocomplete="email" required></label>
+        </div>
+        <p class="scanner-request-error" data-form-error role="alert" aria-live="polite"></p>
+        <div class="scanner-form-actions"><button type="submit" data-submit-label>Enviar solicitud</button></div>
+        <p class="scanner-request-privacy">Al enviar aceptas nuestro <a href="index.html#aviso-privacidad">aviso de privacidad</a>.</p>
+      </div>
+    </form>
+    <div class="scanner-request-thanks" hidden aria-live="polite"></div>
+  </div>
 </div>
 </section>
 </main>
@@ -768,83 +904,44 @@ small,.small{font-size:var(--fs-small);line-height:1.5;}
 
 <script id="scanner-request-form-script">
 (function(){
-var section=document.getElementById('scanner-request-form');
-if(!section)return;
-var form=section.querySelector('form');
-var error=section.querySelector('[data-form-error]');
-var thanks=section.querySelector('.scanner-request-thanks');
-var checks=[...form.querySelectorAll('input[name="interes"]')];
-var dynamic=section.querySelector('[data-dynamic-details]');
-var hint=section.querySelector('[data-choice-hint]');
-var heading=section.querySelector('#scanner-request-title');
-var introItems=[...section.querySelectorAll('[data-intro-for]')];
-var submitLabel=section.querySelector('[data-submit-label]');
-var headingCopy={
-'Orientación':['Encuentra el escáner ideal','para tu proyecto.'],
-'Demostración':['Comprueba el escaneo 3D','con una pieza real.'],
-'Precios y cotización':['Conoce equipos y precios','para tu aplicación.']
-};
-var actionCopy={
-'Orientación':'Solicitar orientación',
-'Demostración':'Solicitar demostración',
-'Precios y cotización':'Solicitar precio y cotización'
-};
-function updateDetails(){
-var selected=checks.filter(function(x){return x.checked;}).map(function(x){return x.value;});
-dynamic.hidden=selected.length===0;
-hint.hidden=selected.length>0;
-['orientacion','demostracion','cotizacion'].forEach(function(key){
-var panel=section.querySelector('[data-detail="'+key+'"]');
-panel.hidden=!selected.some(function(v){
-return key==='orientacion'?v==='Orientación':key==='demostracion'?v==='Demostración':v==='Precios y cotización';
-});
-});
-section.querySelectorAll('[data-detail]').forEach(function(panel){
-if(panel.hidden)panel.querySelectorAll('input,select,textarea').forEach(function(el){el.value='';});
-});
-var introKeyByValue={
-'Orientación':'orientacion',
-'Demostración':'demostracion',
-'Precios y cotización':'cotizacion'
-};
-var visibleIntroIndex=0;
-introItems.forEach(function(item){
-var key=item.getAttribute('data-intro-for');
-item.hidden=!selected.some(function(value){return introKeyByValue[value]===key;});
-if(!item.hidden){
-visibleIntroIndex++;
-item.querySelector('span').textContent=String(visibleIntroIndex).padStart(2,'0');
-}
-});
-if(selected.length===1){
-var copy=headingCopy[selected[0]];
-heading.childNodes[0].textContent=copy[0]+' ';
-heading.querySelector('span').textContent=copy[1];
-submitLabel.textContent=actionCopy[selected[0]];
-}else if(selected.length>1){
-heading.childNodes[0].textContent='Avancemos con tu ';
-heading.querySelector('span').textContent='proyecto de escaneo 3D.';
-submitLabel.textContent='Enviar solicitud';
-}else{
-heading.childNodes[0].textContent='¿Cómo quieres avanzar con ';
-heading.querySelector('span').textContent='el escaneo 3D?';
-submitLabel.textContent='Enviar solicitud';
-}
-}
-checks.forEach(function(x){x.addEventListener('change',updateDetails);});
-updateDetails();
-form.addEventListener('submit',function(e){
-e.preventDefault();
-error.textContent='';
-if(!checks.some(function(x){return x.checked;})){hint.textContent='Selecciona una opción para continuar.';checks[0].focus();return;}
-var invalid=form.querySelector(':invalid');
-if(invalid){invalid.reportValidity();invalid.focus();return;}
-var firstName=form.elements.nombre.value.trim().split(/\s+/)[0].replace(/[&<>"]/g,'');
-thanks.innerHTML='<h3>¡Gracias, '+firstName+'!</h3><p>Tus respuestas quedaron preparadas en esta maqueta. El formulario es demostrativo y no envía información.</p><button type="button">Volver al formulario</button>';
-form.hidden=true;
-thanks.hidden=false;
-thanks.querySelector('button').addEventListener('click',function(){form.reset();form.hidden=false;thanks.hidden=true;updateDetails();});
-});
+  var section=document.getElementById('scanner-request-form');
+  if(!section)return;
+  var form=section.querySelector('form');
+  var checks=[...form.querySelectorAll('input[name="interes"]')];
+  var dynamic=section.querySelector('[data-dynamic-details]');
+  var hint=section.querySelector('[data-choice-hint]');
+  var error=section.querySelector('[data-form-error]');
+  var thanks=section.querySelector('.scanner-request-thanks');
+  var submitLabel=section.querySelector('[data-submit-label]');
+  function selected(){return checks.find(function(x){return x.checked;});}
+  function updateForm(){
+    var choice=selected();
+    dynamic.hidden=!choice;
+    hint.hidden=!!choice;
+    submitLabel.textContent=choice&&choice.value==='Demostración'?'Solicitar demostración':choice&&choice.value==='Cotización'?'Solicitar cotización':'Enviar solicitud';
+  }
+  checks.forEach(function(input){input.addEventListener('change',updateForm);});
+  updateForm();
+  form.addEventListener('submit',function(e){
+    e.preventDefault();
+    error.textContent='';
+    if(!selected()){hint.textContent='Selecciona cómo podemos ayudarte.';checks[0].focus();return;}
+    var invalid=form.querySelector(':invalid');
+    if(invalid){invalid.reportValidity();invalid.focus();return;}
+    var name=form.elements.nombre.value.trim().split(/\s+/)[0].replace(/[&<>"]/g,'');
+    thanks.innerHTML='<h3>¡Gracias, '+name+'!</h3><p>Tu solicitud quedó preparada en esta maqueta. El formulario es demostrativo y todavía no envía información.</p><button type="button">Volver al formulario</button>';
+    form.hidden=true;
+    thanks.hidden=false;
+    thanks.querySelector('button').addEventListener('click',function(){form.reset();form.hidden=false;thanks.hidden=true;updateForm();});
+  });
+  document.querySelectorAll('[data-demo-model]').forEach(function(link){
+    link.addEventListener('click',function(){
+      var model=form.elements.equipo_interes;
+      if(model)model.value=link.getAttribute('data-demo-model');
+      var demo=form.querySelector('input[name="interes"][value="Demostración"]');
+      if(demo){demo.checked=true;updateForm();}
+    });
+  });
 })();
 </script>
 
@@ -880,6 +977,32 @@ thanks.querySelector('button').addEventListener('click',function(){form.reset();
 (function(){var desk=window.matchMedia("(min-width:901px)"),items=document.querySelectorAll(".mp-mi, .mp-sub-li"),timers=new WeakMap();function setOpen(li,open){li.classList.toggle("is-open",open);var b=li.querySelector(":scope > button");if(b)b.setAttribute("aria-expanded",open?"true":"false");if(!open)li.querySelectorAll(".is-open").forEach(function(c){setOpen(c,false)})}function closeSib(li){Array.prototype.forEach.call(li.parentNode.children,function(x){if(x!==li&&x.classList.contains("is-open"))setOpen(x,false)})}items.forEach(function(li){var btn=li.querySelector(":scope > button");if(!btn)return;btn.addEventListener("click",function(e){e.stopPropagation();var o=!li.classList.contains("is-open");closeSib(li);setOpen(li,o)});li.addEventListener("mouseenter",function(){if(!desk.matches)return;clearTimeout(timers.get(li));closeSib(li);setOpen(li,true)});li.addEventListener("mouseleave",function(){if(!desk.matches)return;timers.set(li,setTimeout(function(){setOpen(li,false)},170))})});document.addEventListener("click",function(e){if(desk.matches&&!e.target.closest(".mp-mi"))document.querySelectorAll(".mp-mi.is-open").forEach(function(li){setOpen(li,false)})});document.addEventListener("keydown",function(e){if(e.key==="Escape")document.querySelectorAll(".mp-mi.is-open").forEach(function(li){setOpen(li,false)})})})();
 (function(){var burger=document.getElementById("mpburger"),nav=document.getElementById("mpnav");if(!burger||!nav)return;burger.addEventListener("click",function(){var open=nav.classList.toggle("is-open");burger.setAttribute("aria-expanded",open?"true":"false");document.body.style.overflow=open?"hidden":""});nav.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){nav.classList.remove("is-open");document.body.style.overflow=""})})})();
 (function(){var q=document.querySelector(".mp-q"),hero=document.querySelector(".hero");if(!q||!hero||!("IntersectionObserver"in window))return;var io=new IntersectionObserver(function(e){q.classList.toggle("is-solid",!e[0].isIntersecting)},{threshold:0});io.observe(hero)})();
+</script>
+<nav class="scanner-bubble-nav" aria-label="Accesos rápidos">
+  <button type="button" class="scanner-bubble-toggle" aria-expanded="false" aria-controls="scanner-bubble-links" aria-label="Abrir navegación rápida"><span></span><span></span><span></span></button>
+  <div class="scanner-bubble-links" id="scanner-bubble-links" hidden>
+    <a href="#metrologia">Metrología</a>
+    <a href="#profesionales">Taller y campo</a>
+    <a href="#comparativa">Comparar modelos</a>
+    <a href="#faq">Preguntas frecuentes</a>
+    <a href="#scanner-request-form">Contacto</a>
+  </div>
+</nav>
+<script id="scanner-bubble-script">
+(function(){
+  var nav=document.querySelector('.scanner-bubble-nav');
+  if(!nav)return;
+  var toggle=nav.querySelector('.scanner-bubble-toggle');
+  var panel=nav.querySelector('.scanner-bubble-links');
+  toggle.addEventListener('click',function(){
+    var open=toggle.getAttribute('aria-expanded')!=='true';
+    toggle.setAttribute('aria-expanded',String(open));
+    panel.hidden=!open;
+  });
+  panel.querySelectorAll('a').forEach(function(link){link.addEventListener('click',function(){toggle.setAttribute('aria-expanded','false');panel.hidden=true;});});
+  document.addEventListener('click',function(e){if(!nav.contains(e.target)){toggle.setAttribute('aria-expanded','false');panel.hidden=true;}});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'){toggle.setAttribute('aria-expanded','false');panel.hidden=true;toggle.focus();}});
+})();
 </script>
 </body>
 </html>
