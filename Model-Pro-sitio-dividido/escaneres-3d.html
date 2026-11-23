@@ -217,7 +217,45 @@ body{font-family:Archivo,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-se
 #metrologia .product-visual.product-image{display:flex;align-items:center;justify-content:center;min-height:210px;padding:10px;background:linear-gradient(145deg,#F0F5FA,#FFFFFF)}
 #metrologia .product-visual.product-image img{display:block;width:100%;height:210px;object-fit:contain}
 @media(max-width:540px){#scanner-request-form .scanner-request-fields{grid-template-columns:1fr}#scanner-request-form .scanner-form-full{grid-column:1}#scanner-request-form .scanner-form-actions{justify-content:space-between}#scanner-request-form .scanner-form-actions button{padding-inline:18px}}
-</style></head>
+</style>
+<style id="professional-scanning-visual-alignment">
+/* Escaneo profesional: superficie clara, jerarquía tipográfica y tarjetas centradas */
+#profesionales{
+  background:#F3F7FC!important;
+  color:#172B45!important;
+}
+#profesionales .category-intro .section-head h2{
+  color:#0E1B33;
+  -webkit-text-fill-color:#0E1B33;
+  font-weight:800;
+  letter-spacing:-.035em;
+}
+#profesionales .category-intro .section-head h2 .professional-gradient{
+  background:linear-gradient(105deg,#1558C0 0%,#2E82F0 52%,#00AEB5 100%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  -webkit-text-fill-color:transparent;
+}
+#profesionales .category-intro .section-head>p:last-child{color:#59697F}
+#profesionales .products{
+  grid-template-columns:repeat(2,minmax(0,390px));
+  justify-content:center;
+  gap:22px;
+  max-width:820px;
+  margin-inline:auto;
+}
+#profesionales .product{
+  min-height:250px;
+  padding:20px;
+}
+#profesionales .product-visual{height:130px}
+@media(max-width:700px){
+  #profesionales .products{grid-template-columns:minmax(0,1fr);max-width:430px}
+}
+</style>
+
+</head>
 <body>
 <div class="mp-wrap">
 <header class="mp-header">
@@ -291,7 +329,7 @@ body{font-family:Archivo,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-se
 <a class="product" id="optimscan-q12" href="index.html#contacto"><div class="product-visual product-image"><img src="https://escaneres3d.com/wp-content/uploads/2026/07/Q12-V.png" alt="optimscan q12" loading="lazy"></div><h3>OptimScan Q12 / Q12 HD</h3><p>Sistemas ópticos de inspección 3D de alta precisión.</p><span class="more">Conocer equipo →</span></a>
 </div></div></section>
 <section class="section" id="profesionales"><div class="mp-co">
-<div class="category-intro"><div class="section-head"><p class="section-kicker">Escaneo profesional</p><h2>Escáneres 3D profesionales</h2><p>Soluciones para digitalizar objetos físicos y llevar su geometría al entorno digital para diseño, documentación y desarrollo.</p></div><a class="btn" href="#scanner-request-form">Solicitar asesoría</a></div>
+<div class="category-intro"><div class="section-head"><p class="section-kicker">Escaneo profesional</p><h2>Escáneres 3D <span class="professional-gradient">profesionales</span></h2><p>Soluciones para digitalizar objetos físicos y llevar su geometría al entorno digital para diseño, documentación y desarrollo.</p></div><a class="btn" href="#scanner-request-form">Solicitar asesoría</a></div>
 <div class="products">
 <a class="product" id="einscan-libre" href="index.html#contacto"><div class="product-visual product-image"><img src="https://shop3d.ca/cdn/shop/files/Rigil1.png?v=1750871819&width=1200" alt="Escáner 3D portátil de la línea EinScan" loading="lazy"></div><h3>EinScan Libre</h3><p>Escáner 3D láser todo en uno, inalámbrico y a color.</p><span class="more">Conocer equipo →</span></a>
 <a class="product" id="einscan-rigil" href="index.html#contacto"><div class="product-visual product-image"><img src="https://shop3d.ca/cdn/shop/files/Rigil1.png?v=1750871819&width=1200" alt="Escáner 3D EinScan Rigil" loading="lazy"></div><h3>EinScan Rigil</h3><p>Escáner 3D portátil con distintos modos de captura.</p><span class="more">Conocer equipo →</span></a>
