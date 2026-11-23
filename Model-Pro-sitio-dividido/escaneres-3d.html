@@ -807,9 +807,14 @@ var introKeyByValue={
 'Demostración':'demostracion',
 'Precios y cotización':'cotizacion'
 };
+var visibleIntroIndex=0;
 introItems.forEach(function(item){
 var key=item.getAttribute('data-intro-for');
 item.hidden=!selected.some(function(value){return introKeyByValue[value]===key;});
+if(!item.hidden){
+visibleIntroIndex++;
+item.querySelector('span').textContent=String(visibleIntroIndex).padStart(2,'0');
+}
 });
 if(selected.length===1){
 var copy=headingCopy[selected[0]];
