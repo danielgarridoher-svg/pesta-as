@@ -347,6 +347,39 @@ body{font-family:Archivo,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-se
 }
 </style>
 
+
+<style id="metrology-card-size-alignment">
+/* Metrología: mismas dimensiones que las tarjetas de Escaneo profesional */
+#metrologia .products{
+  grid-template-columns:repeat(2,minmax(0,390px))!important;
+  justify-content:center!important;
+  gap:22px!important;
+  max-width:820px!important;
+  margin-inline:auto!important;
+}
+#metrologia .product{
+  width:100%;
+  min-height:250px!important;
+  padding:20px!important;
+}
+#metrologia .product-visual{height:130px!important}
+#metrologia .product:nth-child(5){
+  grid-column:1/-1;
+  width:min(100%,390px);
+  justify-self:center;
+}
+@media(max-width:700px){
+  #metrologia .products{
+    grid-template-columns:minmax(0,1fr)!important;
+    max-width:430px!important;
+  }
+  #metrologia .product:nth-child(5){
+    grid-column:auto;
+    width:100%;
+  }
+}
+</style>
+
 </head>
 <body>
 <div class="mp-wrap">
