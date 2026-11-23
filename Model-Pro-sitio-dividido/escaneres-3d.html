@@ -641,20 +641,25 @@ small,.small{font-size:var(--fs-small);line-height:1.5;}
 .scanner-faq-list summary:after{content:"+";position:absolute;right:8px;top:14px;color:#0877D8;font-size:24px;font-weight:400}
 .scanner-faq-list details[open] summary:after{content:"−"}
 .scanner-faq-list details p{max-width:780px;padding:0 40px 20px 4px;color:#526783;font-size:13px;line-height:1.7}
-.scanner-bubble-nav{position:fixed;left:18px;top:50%;z-index:120;display:flex;align-items:center;gap:12px;transform:translateY(-50%)}
-.scanner-bubble-toggle{display:grid;place-content:center;gap:4px;width:46px;height:46px;border:1px solid rgba(255,255,255,.3);border-radius:50%;background:linear-gradient(110deg,#00AEB5,#2E82F0);box-shadow:0 8px 22px rgba(12,20,34,.24);cursor:pointer}
-.scanner-bubble-toggle span{display:block;width:4px;height:4px;border-radius:50%;background:#FFFFFF}
-.scanner-bubble-links{display:grid;gap:3px;min-width:180px;padding:9px;border:1px solid #DCE6F2;border-radius:13px;background:#FFFFFF;box-shadow:0 12px 32px rgba(12,20,34,.18)}
+.scanner-bubble-nav{position:fixed;left:18px;bottom:24px;z-index:120;display:flex;flex-direction:column;align-items:flex-start;gap:10px}
+.scanner-bubble-toggle{display:inline-flex;align-items:center;gap:9px;min-height:46px;padding:0 18px;border:1px solid rgba(255,255,255,.38);border-radius:999px;background:linear-gradient(110deg,#00AEB5,#2E82F0);color:#FFFFFF;font:inherit;font-size:13px;font-weight:750;box-shadow:0 8px 24px rgba(12,20,34,.24);cursor:pointer;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.scanner-bubble-toggle:after{content:"+";font-size:20px;font-weight:400;line-height:1}
+.scanner-bubble-toggle[aria-expanded="true"]:after{content:"−"}
+.scanner-bubble-links{display:grid;gap:0;width:min(340px,calc(100vw - 36px));padding:17px;border:1px solid rgba(255,255,255,.48);border-radius:17px;background:rgba(248,251,255,.88);box-shadow:0 14px 38px rgba(12,20,34,.2);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);color:#172B45}
 .scanner-bubble-links[hidden]{display:none}
-.scanner-bubble-links a{padding:9px 11px;border-radius:8px;color:#183458;font-size:12px;font-weight:650;text-decoration:none}
-.scanner-bubble-links a:hover{background:#EAF3FF;color:#0877D8}
+.scanner-bubble-links strong{display:block;margin-bottom:11px;color:#183458;font-size:14px}
+.scanner-bubble-question{padding:10px 0;border-top:1px solid rgba(21,88,192,.14)}
+.scanner-bubble-question b{display:block;color:#1558C0;font-size:12px}
+.scanner-bubble-question p{margin:4px 0 0;color:#526783;font-size:11px;line-height:1.5}
+.scanner-bubble-links .scanner-bubble-more{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;padding-top:12px;border-top:1px solid rgba(21,88,192,.16)}
+.scanner-bubble-links .scanner-bubble-more a{padding:6px 9px;border-radius:7px;background:rgba(234,243,255,.8);color:#1558C0;font-size:10px;font-weight:700;text-decoration:none}
+.scanner-bubble-links .scanner-bubble-more a:hover{background:#D9EAFE}
 @media(max-width:767px){
- .scanner-choice-guide,.scanner-compare-section,.scanner-faq-section{padding:55px 0}
- .scanner-guide-grid{grid-template-columns:1fr;gap:12px}
+ .scanner-compare-section,.scanner-faq-section{padding:55px 0}
  .scanner-card-actions{grid-template-columns:1fr}
- .scanner-bubble-nav{left:10px;top:auto;bottom:18px;transform:none}
- .scanner-bubble-toggle{width:42px;height:42px}
- .scanner-bubble-links{min-width:165px}
+ .scanner-bubble-nav{left:10px;bottom:14px}
+ .scanner-bubble-toggle{min-height:43px;padding:0 15px;font-size:12px}
+ .scanner-bubble-links{width:min(320px,calc(100vw - 20px));padding:14px}
 }
 
 </style>
@@ -736,18 +741,7 @@ small,.small{font-size:var(--fs-small);line-height:1.5;}
 <main>
 <section class="catalog-hero"><img class="hero-photo" src="https://raw.githubusercontent.com/danielgarridoher-svg/pesta-as/acce7f59fcf3e39f32333cf06b2d64fd54f4d612/model-pro-escaneres-3d/images/hero.webp" alt="FreeScan Combo+ Wireless digitalizando un componente automotriz en una fábrica" fetchpriority="high"><div class="hero-shade"></div><div class="container hero-content"><span class="eyebrow hero-eyebrow">PRECISIÓN QUE ABRE POSIBILIDADES</span><h1>Escáneres 3D para<br><span>llevar tus proyectos más lejos.</span></h1><p class="lead">Explora soluciones de digitalización 3D para medición, inspección, diseño e ingeniería. Encuentra la tecnología que mejor responde a tu aplicación.</p><div class="hero-actions"><a class="btn btn-hero btn-lg" href="#metrologia"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-crosshair" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="22" x2="18" y1="12" y2="12"/><line x1="6" x2="2" y1="12" y2="12"/><line x1="12" x2="12" y1="6" y2="2"/><line x1="12" x2="12" y1="22" y2="18"/></svg> Metrología <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a><a class="btn btn-hero-outline btn-lg" href="#profesionales"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-box" aria-hidden="true"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg> Escaneo profesional <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></div></div></section>
 <div id="soluciones"><section class="solution-section"><div class="container"><div class="solution-intro"><span class="eyebrow">EL PUNTO DE PARTIDA</span><h2>Encuentra tu solución.</h2><p class="section-sub">Empieza por lo que necesitas: medir e inspeccionar con precisión o digitalizar para diseñar, desarrollar y trabajar en campo.</p></div><a href="#metrologia" class="solution-item"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-crosshair" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="22" x2="18" y1="12" y2="12"/><line x1="6" x2="2" y1="12" y2="12"/><line x1="12" x2="12" y1="6" y2="2"/><line x1="12" x2="12" y1="22" y2="18"/></svg><div><span class="eyebrow small">METROLOGÍA</span><h3>Medir e inspeccionar</h3><p>Control dimensional, inspección y evaluación de piezas y componentes.</p></div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right solution-arrow" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a><a href="#profesionales" class="solution-item"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-box" aria-hidden="true"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg><div><span class="eyebrow small">ESCANEO PROFESIONAL</span><h3>Digitalizar y diseñar</h3><p>Captura objetos físicos y conviértelos en datos 3D para crear y desarrollar.</p></div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right solution-arrow" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></div></section></div>
-<section class="scanner-choice-guide" aria-labelledby="scanner-guide-title">
-  <div class="container">
-    <span class="eyebrow">CÓMO ELEGIR</span>
-    <h2 id="scanner-guide-title">Tres preguntas para encontrar el escáner adecuado.</h2>
-    <p class="scanner-guide-lead">No todos los proyectos necesitan el mismo equipo. Estas tres respuestas ayudan a reducir las opciones.</p>
-    <div class="scanner-guide-grid">
-      <article><span>01</span><h3>¿Qué tamaño tiene tu pieza?</h3><p>Desde componentes pequeños hasta moldes, maquinaria o estructuras completas.</p></article>
-      <article><span>02</span><h3>¿Qué necesitas obtener?</h3><p>Mediciones y control dimensional, ingeniería inversa o un modelo 3D para diseño.</p></article>
-      <article><span>03</span><h3>¿Dónde vas a escanear?</h3><p>En laboratorio, taller, línea de producción o directamente en campo.</p></article>
-    </div>
-  </div>
-</section>
+
 <section id="metrologia" class="section catalog-section "><div class="container"><div class="section-heading"><div><span class="eyebrow">PRECISIÓN PARA LA INDUSTRIA</span><h2>Escáneres 3D metrológicos</h2></div><p class="section-sub">Cuando la exactitud define el resultado: control de calidad, inspección dimensional e ingeniería inversa de precisión.</p></div><div class="product-grid"><article class="scanner-card group is-selected" id="freescan-combo-plus-wireless" data-model="combo"><div class="scanner-image"><img src="https://raw.githubusercontent.com/danielgarridoher-svg/pesta-as/acce7f59fcf3e39f32333cf06b2d64fd54f4d612/model-pro-escaneres-3d/images/combo.webp" alt="FreeScan Combo+ Wireless" loading="lazy"><span class="product-badge">EL MÁS SOLICITADO</span><span class="image-brand">SHINING 3D</span></div><div class="scanner-body"><span class="eyebrow small">Inalámbrico · Láser + infrarrojo</span><h3>FreeScan Combo+ Wireless</h3><p>Escáner 3D portátil híbrido inalámbrico para metrología.</p><dl class="scanner-card-specs">
     <div><dt>Tamaño de pieza</dt><dd>Pequeña a mediana</dd></div>
     <div><dt>Exactitud</dt><dd>0.02 mm</dd></div>
@@ -978,14 +972,16 @@ small,.small{font-size:var(--fs-small);line-height:1.5;}
 (function(){var burger=document.getElementById("mpburger"),nav=document.getElementById("mpnav");if(!burger||!nav)return;burger.addEventListener("click",function(){var open=nav.classList.toggle("is-open");burger.setAttribute("aria-expanded",open?"true":"false");document.body.style.overflow=open?"hidden":""});nav.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){nav.classList.remove("is-open");document.body.style.overflow=""})})})();
 (function(){var q=document.querySelector(".mp-q"),hero=document.querySelector(".hero");if(!q||!hero||!("IntersectionObserver"in window))return;var io=new IntersectionObserver(function(e){q.classList.toggle("is-solid",!e[0].isIntersecting)},{threshold:0});io.observe(hero)})();
 </script>
-<nav class="scanner-bubble-nav" aria-label="Accesos rápidos">
-  <button type="button" class="scanner-bubble-toggle" aria-expanded="false" aria-controls="scanner-bubble-links" aria-label="Abrir navegación rápida"><span></span><span></span><span></span></button>
+<nav class="scanner-bubble-nav" aria-label="Ayuda para elegir un escáner 3D">
+  <button type="button" class="scanner-bubble-toggle" aria-expanded="false" aria-controls="scanner-bubble-links">¿No sabes por dónde empezar?</button>
   <div class="scanner-bubble-links" id="scanner-bubble-links" hidden>
-    <a href="#metrologia">Metrología</a>
-    <a href="#profesionales">Taller y campo</a>
-    <a href="#comparativa">Comparar modelos</a>
-    <a href="#faq">Preguntas frecuentes</a>
-    <a href="#scanner-request-form">Contacto</a>
+    <strong>Empieza por estas tres preguntas</strong>
+    <div class="scanner-bubble-question"><b>¿Qué tamaño tiene tu pieza?</b><p>Desde componentes pequeños hasta moldes, maquinaria o estructuras completas.</p></div>
+    <div class="scanner-bubble-question"><b>¿Qué necesitas obtener?</b><p>Mediciones y control dimensional, ingeniería inversa o un modelo 3D para diseño.</p></div>
+    <div class="scanner-bubble-question"><b>¿Dónde vas a escanear?</b><p>En laboratorio, taller, línea de producción o directamente en campo.</p></div>
+    <div class="scanner-bubble-more">
+      <a href="#metrologia">Metrología</a><a href="#profesionales">Taller y campo</a><a href="#comparativa">Comparar modelos</a><a href="#faq">Preguntas frecuentes</a><a href="#scanner-request-form">Contacto</a>
+    </div>
   </div>
 </nav>
 <script id="scanner-bubble-script">
