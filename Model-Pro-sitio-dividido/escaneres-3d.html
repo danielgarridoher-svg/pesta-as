@@ -15,10 +15,93 @@
 @media(max-width:620px){.mp-co{width:calc(100% - 36px)}.mp-bar{height:auto;min-height:64px;flex-wrap:wrap;padding:10px 0}.mp-nav{order:3;width:100%;overflow-x:auto}.mp-menu{width:max-content}.mp-q{margin-left:auto}.hero-inner{padding:64px 0 58px}.hero p.lead{font-size:15px}.section{padding:56px 0}.choice-grid,.products{grid-template-columns:1fr}.choice{min-height:250px}.category-intro,.advice-inner,.foot-inner{align-items:flex-start;flex-direction:column}.category-intro>a{margin:0}.process,.applications{grid-template-columns:1fr 1fr}.advice{padding:42px 0}}
 @media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*:before,*:after{transition:none!important}}
 </style>
+<style id="mp-shared-shell">
+/* Tokens y componentes compartidos Model Pro: misma paleta, header y footer del Home */
+:root{--carbon:color-mix(in srgb,var(--secondary) 82%,#000);--marino:var(--secondary);--profundo:color-mix(in srgb,var(--secondary) 62%,var(--brand-blue));--az:var(--brand-blue);--azsh:var(--brand-blue-bright);--azlum:color-mix(in srgb,var(--brand-blue-bright) 60%,#fff);--tq:var(--primary);--tq2:color-mix(in srgb,var(--primary) 66%,#fff);--ink:var(--foreground);--mut:var(--muted-foreground);--gris:color-mix(in srgb,var(--muted-foreground) 50%,#fff);--bg:var(--background);--bg2:color-mix(in srgb,var(--primary) 5%,var(--background));--ln:color-mix(in srgb,var(--brand-blue) 16%,#fff);--dk:var(--secondary);--dk2:color-mix(in srgb,var(--secondary) 82%,#000)}
+body{font-family:Archivo,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-serif;background:var(--bg);color:var(--ink)}
+.mp-co{max-width:1200px;margin:0 auto;padding:0 32px}
+.mp-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--ln)}
+.mp-bar{display:flex;align-items:center;gap:30px;height:68px}
+.mp-logo{font-weight:800;font-size:19px;color:var(--ink);text-decoration:none;letter-spacing:-.01em}
+.mp-nav{display:flex;gap:2px;margin-left:8px}
+.mp-q{margin-left:auto;background:var(--az);color:#fff;border-radius:8px;padding:10px 18px;font-size:14px;font-weight:600;text-decoration:none}
+.mp-q:hover{background:color-mix(in srgb,var(--brand-blue) 85%,#000)}.mp-q.is-solid{box-shadow:0 4px 14px color-mix(in srgb,var(--brand-blue) 40%,transparent)}
+.mp-burger{display:none;margin-left:auto;width:44px;height:44px;border:0;background:none;cursor:pointer;padding:11px;color:var(--ink)}
+.mp-burger span{display:block;height:2px;background:currentColor;margin:5px 0}
+.mp-menu{list-style:none;margin:0;padding:0;display:flex;height:68px;gap:2px}
+.mp-mi{position:relative;display:flex;align-items:center}
+.mp-top{position:relative;display:inline-flex;align-items:center;gap:6px;height:100%;padding:0 14px;background:none;border:0;font:inherit;font-size:15px;font-weight:500;color:var(--foreground);cursor:pointer;text-decoration:none}
+.mp-top:hover{color:var(--az)}.mp-cv{width:10px;height:10px;transition:transform .2s}
+.mp-mi.is-open>.mp-top{color:var(--az)}.mp-mi.is-open>.mp-top .mp-cv{transform:rotate(180deg)}
+.mp-drop,.mp-sub{list-style:none;margin:0;padding:6px 0;background:#fff;border:1px solid var(--ln);border-radius:10px;box-shadow:0 10px 28px rgba(11,20,34,.14);min-width:230px}
+.mp-drop{position:absolute;top:100%;left:0;opacity:0;visibility:hidden;transform:translateY(-4px);transition:.15s}
+.mp-mi.is-open>.mp-drop{opacity:1;visibility:visible;transform:none}.mp-drop li{position:relative}
+.mp-drop a,.mp-drop button{display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%;padding:9px 18px;background:none;border:0;font:inherit;font-size:14px;color:var(--ink);text-decoration:none;text-align:left;cursor:pointer;white-space:nowrap}
+.mp-drop a:hover,.mp-drop button:hover,.mp-sub-li.is-open>button{background:var(--bg2);color:var(--az)}
+.mp-ar{width:8px;height:8px;color:var(--mut);flex-shrink:0}
+.mp-sub{position:absolute;top:-7px;left:100%;opacity:0;visibility:hidden;transition:.15s}.mp-sub-li.is-open>.mp-sub{opacity:1;visibility:visible}
+.mp-hook-li{margin-top:4px;border-top:1px solid var(--ln);padding-top:4px}.mp-drop a.mp-hook{color:var(--az);font-weight:700}
+.mp-foot{background:var(--carbon);color:var(--gris);font-size:14px;padding:48px 0 22px}
+.mp-foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;gap:28px}
+.mp-foot h4{color:#fff;font-size:14px;font-weight:700;margin:0 0 10px}
+.mp-foot a{color:var(--gris);text-decoration:none;display:block;margin-bottom:5px}.mp-foot a:hover{color:#fff}
+.mp-social{display:flex;gap:12px;margin-top:14px}.mp-social a{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:8px;background:#16263E;color:var(--gris);margin:0}
+.mp-social a:hover{background:var(--az);color:#fff}.mp-social i{font-size:17px}
+.mp-foot-bottom{border-top:1px solid #1B2C44;margin-top:28px;padding-top:16px;font-size:12px;color:#5E6B7E;display:flex;gap:18px;flex-wrap:wrap}
+@media(max-width:900px){.mp-nav,.mp-q{display:none}.mp-burger{display:block}.mp-nav.is-open{display:flex;position:fixed;inset:68px 0 0;background:#fff;flex-direction:column;gap:0;margin:0;padding:8px 0;overflow-y:auto;z-index:99}.mp-nav.is-open .mp-menu{flex-direction:column;height:auto;gap:0}.mp-nav.is-open .mp-mi{display:block;border-bottom:1px solid var(--ln)}.mp-nav.is-open .mp-top{width:100%;height:54px;justify-content:space-between;font-size:17px}.mp-nav.is-open .mp-drop,.mp-nav.is-open .mp-sub{position:static;border:0;box-shadow:none;min-width:0;padding:0 0 8px;opacity:1;visibility:visible;transform:none;display:none}.mp-nav.is-open .mp-mi.is-open>.mp-drop,.mp-nav.is-open .mp-sub-li.is-open>.mp-sub{display:block}.mp-nav.is-open .mp-drop a,.mp-nav.is-open .mp-drop button{padding:11px 20px 11px 32px;white-space:normal}.mp-nav.is-open .mp-sub a{padding-left:46px;color:var(--mut)}.mp-nav.is-open .mp-sub-li>button .mp-ar{transform:rotate(90deg)}.mp-nav.is-open .mp-sub-li.is-open>button .mp-ar{transform:rotate(-90deg)}.mp-foot-grid{grid-template-columns:1fr 1fr;gap:24px}.mp-co{padding:0 22px}}
+@media(max-width:620px){.mp-co{width:calc(100% - 36px);padding:0}.mp-foot-grid{grid-template-columns:1fr}.mp-foot-bottom{gap:12px}.mp-foot-bottom span:last-child{margin-left:0!important}}
+</style>
 </head>
 <body>
 <div class="mp-wrap">
-<header class="mp-header"><div class="mp-co mp-bar">
+<header class="mp-header">
+  <div class="mp-co mp-bar">
+    <a class="mp-logo" href="index.html"><img src="LOGO-MPMX-COLOR-C.png" alt="Model Pro"></a>
+    <nav class="mp-nav" id="mpnav" aria-label="Principal">
+      <ul class="mp-menu">
+        <li class="mp-mi">
+          <button class="mp-top" aria-expanded="false">Software <svg class="mp-cv" viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+          <ul class="mp-drop">
+            <li class="mp-sub-li"><button aria-expanded="false">Ingeniería inversa <svg class="mp-ar" viewBox="0 0 8 8" aria-hidden="true"><path d="M2 1l3 3-3 3" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
+              <ul class="mp-sub"><li><a href="index.html#geomagic-design-x">Geomagic Design X</a></li><li><a href="index.html#exmodel-pro">EXModel Pro</a></li></ul></li>
+            <li class="mp-sub-li"><button aria-expanded="false">Inspección y metrología <svg class="mp-ar" viewBox="0 0 8 8" aria-hidden="true"><path d="M2 1l3 3-3 3" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
+              <ul class="mp-sub"><li><a href="index.html#geomagic-control-x">Geomagic Control X</a></li><li><a href="index.html#shining3d-inspect">SHINING3D Inspect</a></li></ul></li>
+            <li class="mp-sub-li"><button aria-expanded="false">Diseño CAD/CAM <svg class="mp-ar" viewBox="0 0 8 8" aria-hidden="true"><path d="M2 1l3 3-3 3" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
+              <ul class="mp-sub"><li><a href="zwcad.html#zwcad">ZWCAD</a></li><li><a href="zw3d.html#zw3d">ZW3D</a></li></ul></li>
+            <li><a href="#simlab">Realidad virtual</a></li>
+            <li class="mp-hook-li"><a class="mp-hook" href="index.html#contacto">¿No sabes cuál necesitas?</a></li>
+          </ul>
+        </li>
+        <li class="mp-mi">
+          <button class="mp-top" aria-expanded="false">Escáneres 3D <svg class="mp-cv" viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+          <ul class="mp-drop">
+            <li class="mp-sub-li"><button aria-expanded="false">Metrológicos <svg class="mp-ar" viewBox="0 0 8 8" aria-hidden="true"><path d="M2 1l3 3-3 3" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
+              <ul class="mp-sub"><li><a href="escaneres-3d.html#freescan-combo-plus-wireless">FreeScan Combo+ Wireless</a></li><li><a href="escaneres-3d.html#freescan-trak-nova">FreeScan Trak Nova</a></li><li><a href="escaneres-3d.html#freescan-omni">FreeScan Omni</a></li><li><a href="escaneres-3d.html#freescan-ue-pro2">FreeScan UE Pro2</a></li><li><a href="escaneres-3d.html#optimscan-q12">OptimScan Q12 / Q12 HD</a></li></ul></li>
+            <li class="mp-sub-li"><button aria-expanded="false">Profesionales <svg class="mp-ar" viewBox="0 0 8 8" aria-hidden="true"><path d="M2 1l3 3-3 3" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button>
+              <ul class="mp-sub"><li><a href="escaneres-3d.html#einscan-libre">EinScan Libre</a></li><li><a href="escaneres-3d.html#einscan-rigil">EinScan Rigil</a></li></ul></li>
+            <li class="mp-hook-li"><a class="mp-hook" href="index.html#contacto">¿No sabes cuál elegir?</a></li>
+          </ul>
+        </li>
+        <li class="mp-mi">
+          <button class="mp-top" aria-expanded="false">Servicios <svg class="mp-cv" viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+          <ul class="mp-drop">
+            <li><a href="index.html#servicio-escaneo-3d">Escaneo 3D</a></li><li><a href="index.html#servicio-ingenieria-inversa">Ingeniería inversa</a></li><li><a href="index.html#servicio-inspeccion">Inspección dimensional</a></li><li><a href="index.html#servicio-realidad-virtual">Realidad virtual y mixta</a></li>
+            <li class="mp-hook-li"><a class="mp-hook" href="index.html#contacto">¿Tienes una pieza para cotizar?</a></li>
+          </ul>
+        </li>
+        <li class="mp-mi"><a class="mp-top" href="index.html#casos">Casos</a></li>
+        <li class="mp-mi">
+          <button class="mp-top" aria-expanded="false">Nosotros <svg class="mp-cv" viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button>
+          <ul class="mp-drop">
+            <li><a href="index.html#nosotros">Quiénes somos</a></li><li><a href="index.html#acompanamiento">Acompañamiento y soporte</a></li><li><a href="index.html#contacto">Contacto</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+    <a class="mp-q" href="index.html#contacto">Cotizar ahora</a>
+    <button class="mp-burger" id="mpburger" aria-label="Menú" aria-expanded="false"><span></span><span></span><span></span></button>
+  </div>
+</header><div class="mp-co mp-bar">
 <a class="mp-logo" href="index.html"><img src="LOGO-MPMX-COLOR-C.png" alt="Model Pro"></a>
 <nav class="mp-nav" aria-label="Principal"><ul class="mp-menu">
 <li><a href="index.html">Inicio</a></li><li><a href="zwcad.html">Software</a></li><li><a href="escaneres-3d.html" aria-current="page">Escáneres 3D</a></li><li><a href="index.html#servicios">Servicios</a></li><li><a href="index.html#casos">Casos</a></li><li><a href="index.html#nosotros">Nosotros</a></li>
@@ -70,7 +153,36 @@
 </div></div></section>
 <section class="advice" id="asesoria"><div class="mp-co advice-inner"><div><h2>¿No sabes cuál elegir?</h2><p>Cuéntanos qué necesitas digitalizar, qué tamaño tiene la pieza y para qué utilizarás los datos. En Model Pro podemos orientarte para identificar una solución adecuada.</p></div><a class="btn" href="index.html#contacto">Habla con un asesor</a></div></section>
 </main>
-<footer class="mp-foot"><div class="mp-co foot-inner"><img src="LOGO-MPMX-blanco.png" alt="Model Pro"><span>Soluciones tecnológicas 3D para la industria mexicana.</span><a href="index.html">Volver al inicio</a><span>© 2026 Model Pro</span></div></footer>
+<footer class="mp-foot">
+  <div class="mp-co">
+    <div class="mp-foot-grid">
+      <div>
+        <img src="LOGO-MPMX-blanco.png" alt="Model Pro" style="height:30px;width:auto;margin-bottom:14px">
+        <p style="font-size:13px;margin:0 0 4px;max-width:260px">Soluciones tecnológicas 3D para la industria mexicana: diseño, digitalización, ingeniería y realidad virtual.</p>
+        <p style="font-size:12px;margin:8px 0 0;color:#6B7A8E">Facturación en México.</p>
+        <div class="mp-social">
+          <a href="#" aria-label="Facebook"><i class="ti ti-brand-facebook"></i></a>
+          <a href="#" aria-label="Instagram"><i class="ti ti-brand-instagram"></i></a>
+          <a href="https://youtube.com/@modelpromx" aria-label="YouTube"><i class="ti ti-brand-youtube"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="ti ti-brand-linkedin"></i></a>
+        </div>
+      </div>
+      <div><h4>Productos</h4><a href="zwcad.html#zwcad">Software</a><a href="escaneres-3d.html#metrologia">Escáneres 3D</a><a href="index.html#servicio-escaneo-3d">Servicios</a></div>
+      <div><h4>Empresa</h4><a href="index.html#nosotros">Nosotros</a><a href="index.html#casos">Casos</a><a href="index.html#contacto">Contacto</a></div>
+      <div><h4>Contacto</h4><a href="index.html#contacto">Correo</a><a href="index.html#contacto">Puebla · Querétaro</a><a href="https://youtube.com/@modelpromx">@modelpromx</a></div>
+    </div>
+    <div class="mp-foot-bottom">
+      <span>© 2026 Model Pro</span><a href="#" style="display:inline">Aviso de privacidad</a><a href="#" style="display:inline">Términos</a>
+      <span style="margin-left:auto">ZWSOFT · SHINING 3D · SimLab</span>
+    </div>
+  </div>
+</footer>
 </div>
+
+<script>
+(function(){var desk=window.matchMedia("(min-width:901px)"),items=document.querySelectorAll(".mp-mi, .mp-sub-li"),timers=new WeakMap();function setOpen(li,open){li.classList.toggle("is-open",open);var b=li.querySelector(":scope > button");if(b)b.setAttribute("aria-expanded",open?"true":"false");if(!open)li.querySelectorAll(".is-open").forEach(function(c){setOpen(c,false)})}function closeSib(li){Array.prototype.forEach.call(li.parentNode.children,function(x){if(x!==li&&x.classList.contains("is-open"))setOpen(x,false)})}items.forEach(function(li){var btn=li.querySelector(":scope > button");if(!btn)return;btn.addEventListener("click",function(e){e.stopPropagation();var o=!li.classList.contains("is-open");closeSib(li);setOpen(li,o)});li.addEventListener("mouseenter",function(){if(!desk.matches)return;clearTimeout(timers.get(li));closeSib(li);setOpen(li,true)});li.addEventListener("mouseleave",function(){if(!desk.matches)return;timers.set(li,setTimeout(function(){setOpen(li,false)},170))})});document.addEventListener("click",function(e){if(desk.matches&&!e.target.closest(".mp-mi"))document.querySelectorAll(".mp-mi.is-open").forEach(function(li){setOpen(li,false)})});document.addEventListener("keydown",function(e){if(e.key==="Escape")document.querySelectorAll(".mp-mi.is-open").forEach(function(li){setOpen(li,false)})})})();
+(function(){var burger=document.getElementById("mpburger"),nav=document.getElementById("mpnav");if(!burger||!nav)return;burger.addEventListener("click",function(){var open=nav.classList.toggle("is-open");burger.setAttribute("aria-expanded",open?"true":"false");document.body.style.overflow=open?"hidden":""});nav.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){nav.classList.remove("is-open");document.body.style.overflow=""})})})();
+(function(){var q=document.querySelector(".mp-q"),hero=document.querySelector(".hero");if(!q||!hero||!("IntersectionObserver"in window))return;var io=new IntersectionObserver(function(e){q.classList.toggle("is-solid",!e[0].isIntersecting)},{threshold:0});io.observe(hero)})();
+</script>
 </body>
 </html>
