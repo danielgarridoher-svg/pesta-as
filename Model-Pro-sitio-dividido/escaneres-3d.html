@@ -380,6 +380,24 @@ body{font-family:Archivo,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-se
 }
 </style>
 
+
+<style id="solution-choice-editorial">
+/* Selector principal: dos rutas claras después del hero */
+.solution-section{padding-top:76px;padding-bottom:82px}
+.solution-section .section-head{max-width:790px;margin-bottom:34px}
+.solution-section .section-head .section-kicker{margin-bottom:12px}
+.solution-section .section-head h2{font-size:clamp(34px,4.2vw,52px);letter-spacing:-.04em}
+.solution-section .section-head>p:last-child{max-width:620px;font-size:18px;line-height:1.6}
+.solution-section .choice-grid{gap:20px}
+.solution-section .choice{min-height:250px;padding:30px 32px;border-radius:18px;justify-content:flex-start}
+.solution-section .choice-kicker{display:block;margin:0 0 18px;color:#168B9D;font-size:12px;font-weight:800;letter-spacing:.14em}
+.solution-section .choice h3{margin:0 0 10px;font-size:clamp(22px,2.2vw,28px);letter-spacing:-.025em}
+.solution-section .choice p{max-width:430px;margin:0 0 26px;font-size:15px;line-height:1.65}
+.solution-section .choice .choice-link{display:flex;align-items:center;gap:8px;margin-top:auto;padding-top:0;color:#1558C0;font-size:14px;font-weight:800}
+.solution-section .choice:hover .choice-link{gap:13px}
+@media(max-width:620px){.solution-section{padding-top:58px;padding-bottom:62px}.solution-section .section-head>p:last-child{font-size:16px}.solution-section .choice{min-height:220px;padding:24px}}
+</style>
+
 </head>
 <body>
 <div class="mp-wrap">
@@ -438,11 +456,15 @@ body{font-family:Archivo,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-se
 <p class="lead">Explora soluciones de digitalización 3D para medición, inspección, diseño e ingeniería. Encuentra la tecnología que mejor responde a tu aplicación.</p>
 <div class="hero-actions"><a class="btn" href="#metrologia">Explorar metrología</a><a class="btn-outline" href="#profesionales">Explorar escaneo profesional</a></div>
 </div></div></section>
-<section class="section solution-section" id="solucion"><div class="mp-co">
-<div class="section-head"><p class="section-kicker">ENCUENTRA TU SOLUCIÓN</p><h2>¿Qué necesitas <span class="solution-gradient">hacer?</span></h2><p>Dos caminos para digitalizar tus piezas: medir e inspeccionar su geometría, o capturarla para diseño, modelado y desarrollo.</p></div>
+<section class="section solution-section" id="solucion" aria-labelledby="solution-title"><div class="mp-co">
+<div class="section-head"><p class="section-kicker">EL PUNTO DE PARTIDA</p><h2 id="solution-title">Encuentra tu solución.</h2><p>Dos caminos. El mismo objetivo: transformar la forma en que trabajas.</p></div>
 <div class="choice-grid">
-<a class="choice" href="#metrologia"><div class="choice-art"><img src="https://escaneres3d.com/wp-content/uploads/2026/07/Combo-.png" alt="Escáner 3D FreeScan Combo+"></div><h3>Medir e inspeccionar</h3><p>Soluciones orientadas al control dimensional, la inspección y la evaluación de piezas y componentes.</p><span>Conocer escáneres metrológicos →</span></a>
-<a class="choice" href="#profesionales"><div class="choice-art"><img src="https://shop3d.ca/cdn/shop/files/Rigil1.png?v=1750871819&width=1200" alt="Escáner 3D portátil EinScan Rigil"></div><h3>Digitalizar y diseñar</h3><p>Equipos para capturar objetos físicos y convertirlos en datos 3D útiles para diseño, modelado y desarrollo.</p><span>Conocer escáneres profesionales →</span></a>
+<a class="choice" href="#metrologia" aria-label="Explorar escáneres de metrología">
+<span class="choice-kicker">METROLOGÍA</span><h3>Medir e inspeccionar</h3><p>Control dimensional, inspección y evaluación de piezas y componentes.</p><span class="choice-link">Explorar soluciones <span aria-hidden="true">→</span></span>
+</a>
+<a class="choice" href="#profesionales" aria-label="Explorar escáneres profesionales">
+<span class="choice-kicker">ESCANEO PROFESIONAL</span><h3>Digitalizar y diseñar</h3><p>Captura objetos físicos y conviértelos en datos 3D para crear y desarrollar.</p><span class="choice-link">Explorar soluciones <span aria-hidden="true">→</span></span>
+</a>
 </div></div></section>
 <section class="section dark-section" id="metrologia"><div class="mp-co">
 <div class="category-intro"><div class="section-head"><p class="section-kicker">01 / PRECISIÓN PARA LA INDUSTRIA</p><h2>Escáneres 3D <span class="metrology-gradient">metrológicos</span></h2><p>Para aplicaciones donde conocer la geometría de una pieza y evaluar sus dimensiones es parte esencial del proceso.</p></div><a class="btn" href="#scanner-request-form">Solicitar asesoría</a></div>
