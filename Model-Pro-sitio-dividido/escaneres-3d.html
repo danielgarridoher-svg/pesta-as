@@ -666,6 +666,39 @@ small,.small{font-size:var(--fs-small);line-height:1.5;}
 .scanner-bubble-links .scanner-bubble-question:hover b,.scanner-bubble-links .scanner-bubble-question:hover span{text-decoration:underline}
 @media(max-width:900px){.scanner-size-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.scanner-application-layout{grid-template-columns:1fr;gap:20px}}
 @media(max-width:767px){.scanner-size-guide{padding:54px 0}.scanner-size-grid{grid-template-columns:1fr}.scanner-size-grid article{min-height:0}.scanner-application-bridge{padding:42px 0}}
+/* Ajustes de la propuesta: guía breve y catálogo unificado */
+.scanner-guide-grid a{color:#0877D8;font-weight:700;text-decoration:underline;text-underline-offset:2px}
+.scanner-guide-contact{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:24px;padding:22px 24px;border:1px solid #C9D9EB;border-radius:14px;background:rgba(255,255,255,.78)}
+.scanner-guide-contact strong{display:block;color:#183458;font-size:16px}
+.scanner-guide-contact p{max-width:690px;margin:6px 0 0;color:#526783;font-size:12px;line-height:1.65}
+.scanner-guide-contact-link{flex-shrink:0;display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:10px;background:linear-gradient(100deg,#1558C0 0%,#2E82F0 58%,#00AEB5 100%);color:#FFFFFF;font-size:11px;font-weight:750;text-decoration:none}
+.scanner-catalog-intro{max-width:850px;margin:0 auto 34px;text-align:center}
+.scanner-catalog-intro h2{margin:10px 0;color:#183458}
+.scanner-catalog-intro>p{max-width:760px;margin:0 auto;color:#526783;font-size:13px;line-height:1.7}
+.scanner-subheading{margin:0 0 20px}
+.scanner-subheading h3{margin:0;color:#183458;font-size:22px}
+.scanner-subheading .section-sub{max-width:520px;color:#526783}
+.scanner-workshop-heading{margin-top:46px;padding-top:34px;border-top:1px solid #DCE6F2}
+.scanner-catalog-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;align-items:stretch}
+.scanner-catalog-grid .scanner-card{min-width:0;display:flex;flex-direction:column}
+.scanner-catalog-grid .scanner-image{aspect-ratio:1.35}
+.scanner-catalog-grid .scanner-body{display:flex;flex:1;flex-direction:column;padding:15px 14px 10px}
+.scanner-catalog-grid .scanner-body h3{min-height:0;margin:6px 0;font-size:16px;line-height:1.3}
+.scanner-catalog-grid .scanner-body>p{min-height:0;margin:4px 0 0;font-size:11px;line-height:1.5}
+.scanner-catalog-grid .eyebrow.small{min-height:0;font-size:9px}
+.scanner-catalog-grid .scanner-card-specs{margin-top:12px}
+.scanner-catalog-grid .scanner-card-specs>div{grid-template-columns: minmax(76px,.72fr) minmax(0,1.28fr);gap:7px;padding:6px 0}
+.scanner-catalog-grid .scanner-card-specs dt,.scanner-catalog-grid .scanner-card-specs dd{font-size:9px;line-height:1.4}
+.scanner-catalog-grid .scanner-card .product-feature{margin-top:auto;padding-top:11px;font-size:10px}
+.scanner-catalog-grid .scanner-card-actions{grid-template-columns:1fr 1fr;gap:7px;padding:10px 0 2px}
+.scanner-catalog-grid .scanner-select-model,.scanner-catalog-grid .scanner-demo-link{min-width:0;min-height:37px;padding:7px 6px;font-size:9px}
+.scanner-bubble-advice{margin-top:12px;padding:13px;border:1px solid rgba(21,88,192,.2);border-radius:11px;background:rgba(234,243,255,.72)}
+.scanner-bubble-advice>b{display:block;color:#183458;font-size:12px}
+.scanner-bubble-advice p{margin:5px 0 8px;color:#526783;font-size:10px;line-height:1.55}
+.scanner-bubble-links .scanner-bubble-advice a{padding:0;background:none;color:#0877D8;font-size:10px;font-weight:800}
+@media(max-width:1100px){.scanner-catalog-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:850px){.scanner-catalog-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.scanner-guide-contact{align-items:flex-start;flex-direction:column}}
+@media(max-width:767px){.scanner-catalog-grid{grid-template-columns:1fr}.scanner-catalog-grid .scanner-image{aspect-ratio:1.5}.scanner-subheading h3{font-size:19px}.scanner-workshop-heading{margin-top:34px;padding-top:26px}}
 .scanner-bubble-nav{position:fixed;left:18px;bottom:24px;z-index:120;display:flex;flex-direction:column;align-items:flex-start;gap:10px}
 .scanner-bubble-toggle{display:inline-flex;align-items:center;gap:9px;min-height:46px;padding:0 18px;border:1px solid rgba(255,255,255,.38);border-radius:999px;background:linear-gradient(110deg,#00AEB5,#2E82F0);color:#FFFFFF;font:inherit;font-size:13px;font-weight:750;box-shadow:0 8px 24px rgba(12,20,34,.24);cursor:pointer;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
 .scanner-bubble-toggle:after{content:"+";font-size:20px;font-weight:400;line-height:1}
@@ -765,24 +798,49 @@ small,.small{font-size:var(--fs-small);line-height:1.5;}
 </header>
 <main>
 <section class="catalog-hero"><img class="hero-photo" src="https://raw.githubusercontent.com/danielgarridoher-svg/pesta-as/acce7f59fcf3e39f32333cf06b2d64fd54f4d612/model-pro-escaneres-3d/images/hero.webp" alt="FreeScan Combo+ Wireless digitalizando un componente automotriz en una fábrica" fetchpriority="high"><div class="hero-shade"></div><div class="container hero-content"><span class="eyebrow hero-eyebrow">PRECISIÓN QUE ABRE POSIBILIDADES</span><h1>Escáneres 3D para<br><span>llevar tus proyectos más lejos.</span></h1><p class="lead">Explora soluciones de digitalización 3D para medición, inspección, diseño e ingeniería. Encuentra la tecnología que mejor responde a tu aplicación.</p><div class="hero-actions"><a class="btn btn-hero btn-lg" href="#metrologia"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-crosshair" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="22" x2="18" y1="12" y2="12"/><line x1="6" x2="2" y1="12" y2="12"/><line x1="12" x2="12" y1="6" y2="2"/><line x1="12" x2="12" y1="22" y2="18"/></svg> Metrología <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a><a class="btn btn-hero-outline btn-lg" href="#profesionales"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-box" aria-hidden="true"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg> Escaneo profesional <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></div></div></section>
-<div id="soluciones"><section class="solution-section"><div class="container"><div class="solution-intro"><span class="eyebrow">EL PUNTO DE PARTIDA</span><h2>Encuentra tu solución.</h2><p class="section-sub">Empieza por lo que necesitas: medir e inspeccionar con precisión o digitalizar para diseñar, desarrollar y trabajar en campo.</p></div><a href="#metrologia" class="solution-item"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-crosshair" aria-hidden="true"><circle cx="12" cy="12" r="10"/><line x1="22" x2="18" y1="12" y2="12"/><line x1="6" x2="2" y1="12" y2="12"/><line x1="12" x2="12" y1="6" y2="2"/><line x1="12" x2="12" y1="22" y2="18"/></svg><div><span class="eyebrow small">METROLOGÍA</span><h3>Medir e inspeccionar</h3><p>Control dimensional, inspección y evaluación de piezas y componentes.</p></div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right solution-arrow" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a><a href="#profesionales" class="solution-item"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-box" aria-hidden="true"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg><div><span class="eyebrow small">ESCANEO PROFESIONAL</span><h3>Digitalizar y diseñar</h3><p>Captura objetos físicos y conviértelos en datos 3D para crear y desarrollar.</p></div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right solution-arrow" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></div></section></div>
-
+<div id="soluciones"><section id="como-elegir" class="scanner-choice-guide" aria-labelledby="scanner-guide-title">
+  <div class="container">
+    <span class="eyebrow">CÓMO ELEGIR</span>
+    <h2 id="scanner-guide-title">Tres preguntas para saber qué escáner necesitas.</h2>
+    <p class="scanner-guide-lead">No necesitas conocer todos los datos técnicos. Empieza por tu pieza, la exactitud que buscas y cómo realizarás la captura.</p>
+    <div class="scanner-guide-grid">
+      <article><span>01</span><h3>¿De qué tamaño es tu pieza?</h3><p>Desde componentes pequeños hasta maquinaria y estructuras. <a href="#guia-tamano">Consulta la guía de tamaños</a> para conocer qué características conviene considerar.</p></article>
+      <article><span>02</span><h3>¿Qué exactitud necesitas?</h3><p>Depende de las tolerancias de tu proyecto y del uso de los datos. Para inspección dimensional y tolerancias cerradas, revisa los <a href="#metrologia">equipos de metrología</a>.</p></article>
+      <article><span>03</span><h3>¿Cuántas piezas y dónde las escaneas?</h3><p>La producción en serie, el laboratorio, el taller y el trabajo en campo requieren flujos distintos. Revisa las aplicaciones y modelos que se ajustan a tu entorno.</p></article>
+    </div>
+    <div class="scanner-guide-contact">
+      <div><strong>¿O prefieres que lo veamos contigo?</strong><p>Cuéntanos sobre tu pieza, tu industria y las tolerancias que manejas. Te responderemos con una recomendación y, si lo deseas, una demostración con tu propia pieza.</p></div>
+      <a href="#scanner-request-form" class="scanner-guide-contact-link">Cuéntanos de tu proyecto <span aria-hidden="true">→</span></a>
+    </div>
+  </div>
+</section>
 <section id="guia-tamano" class="scanner-size-guide" aria-labelledby="scanner-size-title">
   <div class="container">
     <div class="section-heading">
-      <div><span class="eyebrow">EMPIEZA POR TU PIEZA</span><h2 id="scanner-size-title">¿Qué tan grande es lo que necesitas escanear?</h2></div>
-      <p class="section-sub">El tamaño ayuda a orientar la búsqueda, pero también importan el nivel de detalle, la exactitud y el lugar donde harás la captura.</p>
+      <div><span class="eyebrow">ORIENTACIÓN POR TAMAÑO</span><h2 id="scanner-size-title">¿Qué tamaño tiene lo que necesitas escanear?</h2></div>
+      <p class="section-sub">Una referencia inicial para entender qué tipo de captura puede necesitar tu proyecto.</p>
     </div>
     <div class="scanner-size-grid">
-      <article><span class="scanner-size-tag">01 · PEQUEÑA</span><h3>Detalle y máxima exactitud</h3><p>Componentes pequeños, piezas de precisión y geometrías con detalles finos. Si necesitas mediciones confiables, considera también el entorno de laboratorio y la aplicación metrológica.</p></article>
-      <article><span class="scanner-size-tag">02 · MEDIANA</span><h3>Precisión y versatilidad</h3><p>Componentes mecánicos, moldes y piezas industriales. Busca un equilibrio entre exactitud, facilidad de captura y el resultado que necesitas obtener.</p></article>
-      <article><span class="scanner-size-tag">03 · GRANDE</span><h3>Alcance para piezas voluminosas</h3><p>Carrocerías, maquinaria y conjuntos de mayor tamaño. Importan el volumen de captura, el seguimiento y la facilidad para recorrer toda la superficie.</p></article>
-      <article><span class="scanner-size-tag">04 · MUY GRANDE</span><h3>Movilidad en planta y campo</h3><p>Estructuras, equipos industriales o grandes instalaciones. Conviene priorizar soluciones que permitan cubrir áreas amplias y trabajar directamente en sitio.</p></article>
+      <article><span class="scanner-size-tag">01 · PEQUEÑA</span><h3>Detalle y máxima exactitud</h3><p>Componentes pequeños, piezas de precisión y geometrías con detalles finos. Para tolerancias cerradas, considera equipos metrológicos y condiciones controladas.</p></article>
+      <article><span class="scanner-size-tag">02 · MEDIANA</span><h3>Precisión y versatilidad</h3><p>Componentes mecánicos, moldes y piezas industriales. Equilibra exactitud, facilidad de captura y resultado esperado.</p></article>
+      <article><span class="scanner-size-tag">03 · GRANDE</span><h3>Alcance para piezas voluminosas</h3><p>Carrocerías, maquinaria y conjuntos grandes. Importan el volumen de captura y la facilidad para recorrer toda la superficie.</p></article>
+      <article><span class="scanner-size-tag">04 · MUY GRANDE</span><h3>Movilidad en planta y campo</h3><p>Estructuras, equipos industriales o grandes instalaciones. Prioriza soluciones que permitan cubrir áreas amplias directamente en sitio.</p></article>
     </div>
-    <p class="scanner-size-note">Esta guía es orientativa: el tamaño por sí solo no determina el escáner. La exactitud requerida, la superficie, el acceso a la pieza y el uso de los datos también influyen.</p>
+    <p class="scanner-size-note">El tamaño no determina por sí solo el escáner. También influyen la exactitud, la geometría, la superficie, el acceso y el uso de los datos.</p>
   </div>
 </section>
-<section id="metrologia" class="section catalog-section "><div class="container"><div class="section-heading"><div><span class="eyebrow">PRECISIÓN PARA LA INDUSTRIA</span><h2>Escáneres 3D metrológicos</h2></div><p class="section-sub">Cuando la exactitud define el resultado: control de calidad, inspección dimensional e ingeniería inversa de precisión.</p></div><div class="product-grid"><article class="scanner-card group is-selected" id="freescan-combo-plus-wireless" data-model="combo"><div class="scanner-image"><img src="https://raw.githubusercontent.com/danielgarridoher-svg/pesta-as/acce7f59fcf3e39f32333cf06b2d64fd54f4d612/model-pro-escaneres-3d/images/combo.webp" alt="FreeScan Combo+ Wireless" loading="lazy"><span class="product-badge">EL MÁS SOLICITADO</span><span class="image-brand">SHINING 3D</span></div><div class="scanner-body"><span class="eyebrow small">Inalámbrico · Láser + infrarrojo</span><h3>FreeScan Combo+ Wireless</h3><p>Escáner 3D portátil híbrido inalámbrico para metrología.</p><dl class="scanner-card-specs">
+<section id="metrologia" class="section catalog-section scanner-unified-catalog">
+  <div class="container">
+    <div class="scanner-catalog-intro">
+      <span class="eyebrow">PRECISIÓN PARA LA INDUSTRIA</span>
+      <h2>Nuestros escáneres 3D SHINING 3D</h2>
+      <p>Conoce las distintas tecnologías de captura 3D de SHINING 3D para digitalizar piezas, inspeccionar componentes y llevar tus proyectos del entorno físico al digital. Compara sus aplicaciones y encuentra el equipo que mejor responde a tu proceso.</p>
+    </div>
+    <div class="section-heading scanner-subheading">
+      <div><h3>Para metrología e inspección de precisión</h3></div>
+      <p class="section-sub">Cuando la exactitud es lo que decide: control de calidad, ingeniería inversa de precisión e inspección de piezas con tolerancias cerradas.</p>
+    </div>
+    <div class="product-grid scanner-catalog-grid"><article class="scanner-card group is-selected" id="freescan-combo-plus-wireless" data-model="combo"><div class="scanner-image"><img src="https://raw.githubusercontent.com/danielgarridoher-svg/pesta-as/acce7f59fcf3e39f32333cf06b2d64fd54f4d612/model-pro-escaneres-3d/images/combo.webp" alt="FreeScan Combo+ Wireless" loading="lazy"><span class="product-badge">EL MÁS SOLICITADO</span><span class="image-brand">SHINING 3D</span></div><div class="scanner-body"><span class="eyebrow small">Inalámbrico · Láser + infrarrojo</span><h3>FreeScan Combo+ Wireless</h3><p>Escáner 3D portátil híbrido inalámbrico para metrología.</p><dl class="scanner-card-specs">
     <div><dt>Tamaño de pieza</dt><dd>Pequeña a mediana</dd></div>
     <div><dt>Exactitud</dt><dd>0.02 mm</dd></div>
     <div><dt>Cómo se usa</dt><dd>A mano, inalámbrico; captura láser e infrarroja</dd></div>
@@ -790,30 +848,6 @@ small,.small{font-size:var(--fs-small);line-height:1.5;}
   </dl><div class="product-feature"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scan-line" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 12h10"/></svg>Precisión de hasta <span class="spec">0.02 mm</span></div><div class="card-action scanner-card-actions">
     <button type="button" class="scanner-select-model" data-select-model="combo" aria-pressed="true">Seleccionado</button>
     <a class="scanner-demo-link" href="#scanner-request-form" data-demo-model="FreeScan Combo+ Wireless">Pedir demostración <span aria-hidden="true">→</span></a>
-  </div></div></article><article class="scanner-card group" id="freescan-trak-nova" data-model="trak"><div class="scanner-image"><img src="https://raw.githubusercontent.com/danielgarridoher-svg/pesta-as/acce7f59fcf3e39f32333cf06b2d64fd54f4d612/model-pro-escaneres-3d/images/nova.webp" alt="FreeScan Trak Nova" loading="lazy"><span class="image-brand">SHINING 3D</span></div><div class="scanner-body"><span class="eyebrow small">Seguimiento dinámico</span><h3>FreeScan Trak Nova</h3><p>Sistema dinámico de escaneo y seguimiento 3D.</p><dl class="scanner-card-specs">
-    <div><dt>Tamaño de pieza</dt><dd>Muy grande</dd></div>
-    <div><dt>Exactitud</dt><dd>Según el volumen y la configuración de medición</dd></div>
-    <div><dt>Cómo se usa</dt><dd>Sistema de rastreador y escáner de mano</dd></div>
-    <div><dt>Ideal para</dt><dd>Piezas grandes, inspección en planta y series</dd></div>
-  </dl><div class="product-feature"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scan-line" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 12h10"/></svg>Libertad para grandes componentes</div><div class="card-action scanner-card-actions">
-    <button type="button" class="scanner-select-model" data-select-model="trak" aria-pressed="false">Ver modelo</button>
-    <a class="scanner-demo-link" href="#scanner-request-form" data-demo-model="FreeScan Trak Nova">Pedir demostración <span aria-hidden="true">→</span></a>
-  </div></div></article><article class="scanner-card group" id="freescan-omni" data-model="omni"><div class="scanner-image"><img src="https://raw.githubusercontent.com/danielgarridoher-svg/pesta-as/acce7f59fcf3e39f32333cf06b2d64fd54f4d612/model-pro-escaneres-3d/images/omni.webp" alt="FreeScan Omni" loading="lazy"><span class="image-brand">SHINING 3D</span></div><div class="scanner-body"><span class="eyebrow small">Todo en uno · Inspección</span><h3>FreeScan Omni</h3><p>Escáner 3D de metrología autónomo y listo para inspección.</p><dl class="scanner-card-specs">
-    <div><dt>Tamaño de pieza</dt><dd>Según la pieza y la configuración</dd></div>
-    <div><dt>Exactitud</dt><dd>Consultar especificación del sistema</dd></div>
-    <div><dt>Cómo se usa</dt><dd>Sistema autónomo todo en uno</dd></div>
-    <div><dt>Ideal para</dt><dd>Inspección y evaluación directamente en planta</dd></div>
-  </dl><div class="product-feature"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scan-line" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 12h10"/></svg>Del escaneo a la evaluación</div><div class="card-action scanner-card-actions">
-    <button type="button" class="scanner-select-model" data-select-model="omni" aria-pressed="false">Ver modelo</button>
-    <a class="scanner-demo-link" href="#scanner-request-form" data-demo-model="FreeScan Omni">Pedir demostración <span aria-hidden="true">→</span></a>
-  </div></div></article><article class="scanner-card group" id="freescan-ue-pro2" data-model="ue"><div class="scanner-image"><img src="https://raw.githubusercontent.com/danielgarridoher-svg/pesta-as/acce7f59fcf3e39f32333cf06b2d64fd54f4d612/model-pro-escaneres-3d/images/pro2.webp" alt="FreeScan UE Pro2" loading="lazy"><span class="image-brand">SHINING 3D</span></div><div class="scanner-body"><span class="eyebrow small">Láser azul · Portátil</span><h3>FreeScan UE Pro2</h3><p>Escáner 3D portátil láser para aplicaciones metrológicas.</p><dl class="scanner-card-specs">
-    <div><dt>Tamaño de pieza</dt><dd>Mediana a grande</dd></div>
-    <div><dt>Exactitud</dt><dd>0.02 mm</dd></div>
-    <div><dt>Cómo se usa</dt><dd>A mano, inalámbrico y con fotogrametría integrada</dd></div>
-    <div><dt>Ideal para</dt><dd>Lámina automotriz, maquinaria y componentes grandes</dd></div>
-  </dl><div class="product-feature"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scan-line" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 12h10"/></svg>Captura eficiente de geometrías</div><div class="card-action scanner-card-actions">
-    <button type="button" class="scanner-select-model" data-select-model="ue" aria-pressed="false">Ver modelo</button>
-    <a class="scanner-demo-link" href="#scanner-request-form" data-demo-model="FreeScan UE Pro2">Pedir demostración <span aria-hidden="true">→</span></a>
   </div></div></article><article class="scanner-card group" id="optimscan-q12" data-model="q12"><div class="scanner-image"><img src="https://raw.githubusercontent.com/danielgarridoher-svg/pesta-as/acce7f59fcf3e39f32333cf06b2d64fd54f4d612/model-pro-escaneres-3d/images/q12.webp" alt="OptimScan Q12 / Q12 HD" loading="lazy"><span class="image-brand">SHINING 3D</span></div><div class="scanner-body"><span class="eyebrow small">Escaneo óptico · Alta precisión</span><h3>OptimScan Q12 / Q12 HD</h3><p>Sistemas ópticos de inspección 3D de alta precisión.</p><dl class="scanner-card-specs">
     <div><dt>Tamaño de pieza</dt><dd>Pequeña a mediana</dd></div>
     <div><dt>Exactitud</dt><dd>Alta precisión óptica; depende de la versión</dd></div>
@@ -822,29 +856,36 @@ small,.small{font-size:var(--fs-small);line-height:1.5;}
   </dl><div class="product-feature"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scan-line" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 12h10"/></svg>Detalle para inspección dimensional</div><div class="card-action scanner-card-actions">
     <button type="button" class="scanner-select-model" data-select-model="q12" aria-pressed="false">Ver modelo</button>
     <a class="scanner-demo-link" href="#scanner-request-form" data-demo-model="OptimScan Q12 / Q12 HD">Pedir demostración <span aria-hidden="true">→</span></a>
-  </div></div></article></div></div></section>
-<section id="guia-aplicaciones" class="scanner-application-bridge" aria-labelledby="scanner-applications-title">
-  <div class="container">
-    <span class="eyebrow">MÁS ALLÁ DE LA METROLOGÍA</span>
-    <div class="scanner-application-layout">
-      <div><h2 id="scanner-applications-title">¿Y si lo que necesitas es crear, adaptar o dar mantenimiento?</h2>
-        <p>El escaneo 3D también permite llevar objetos reales al entorno digital para desarrollar prototipos, personalizar piezas, documentar componentes o apoyar trabajos de mantenimiento.</p>
-      </div>
-      <div class="scanner-application-tags" aria-label="Aplicaciones habituales">
-        <span>Taller</span><span>Prototipos</span><span>Personalización</span><span>Trabajo en campo</span><span>Mantenimiento</span>
-      </div>
-    </div>
-  </div>
-</section>
-<section id="profesionales" class="section catalog-section professional-section"><div class="container"><div class="section-heading"><div><span class="eyebrow">CAPTURA PARA CREAR</span><h2>Para taller, prototipos y trabajo en campo</h2></div><p class="section-sub">Cuando necesitas versatilidad y facilidad de uso para digitalizar objetos, desarrollar prototipos o trabajar directamente en planta y campo.</p></div><div class="product-grid"><article class="scanner-card group" id="einscan-libre" data-model="libre"><div class="scanner-image"><img src="https://raw.githubusercontent.com/danielgarridoher-svg/pesta-as/acce7f59fcf3e39f32333cf06b2d64fd54f4d612/model-pro-escaneres-3d/images/libre.webp" alt="EinScan Libre" loading="lazy"><span class="image-brand">SHINING 3D</span></div><div class="scanner-body"><span class="eyebrow small">Inalámbrico · A color</span><h3>EinScan Libre</h3><p>Escáner 3D láser todo en uno, inalámbrico y a color.</p><dl class="scanner-card-specs">
+  </div></div></article><article class="scanner-card group" id="freescan-ue-pro2" data-model="ue"><div class="scanner-image"><img src="https://raw.githubusercontent.com/danielgarridoher-svg/pesta-as/acce7f59fcf3e39f32333cf06b2d64fd54f4d612/model-pro-escaneres-3d/images/pro2.webp" alt="FreeScan UE Pro2" loading="lazy"><span class="image-brand">SHINING 3D</span></div><div class="scanner-body"><span class="eyebrow small">Láser azul · Portátil</span><h3>FreeScan UE Pro2</h3><p>Escáner 3D portátil láser para aplicaciones metrológicas.</p><dl class="scanner-card-specs">
     <div><dt>Tamaño de pieza</dt><dd>Mediana a grande</dd></div>
-    <div><dt>Exactitud</dt><dd>Hasta 0.04 mm</dd></div>
-    <div><dt>Cómo se usa</dt><dd>Sistema autónomo todo en uno, sin PC durante la captura</dd></div>
-    <div><dt>Ideal para</dt><dd>Trabajo en campo, mantenimiento e ingeniería inversa</dd></div>
-  </dl><div class="product-feature"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scan-line" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 12h10"/></svg>Digitaliza sin límites de movimiento</div><div class="card-action scanner-card-actions">
-    <button type="button" class="scanner-select-model" data-select-model="libre" aria-pressed="false">Ver modelo</button>
-    <a class="scanner-demo-link" href="#scanner-request-form" data-demo-model="EinScan Libre">Pedir demostración <span aria-hidden="true">→</span></a>
-  </div></div></article><article class="scanner-card group" id="einscan-rigil" data-model="rigil"><div class="scanner-image"><img src="https://raw.githubusercontent.com/danielgarridoher-svg/pesta-as/acce7f59fcf3e39f32333cf06b2d64fd54f4d612/model-pro-escaneres-3d/images/rigil.webp" alt="EinScan Rigil" loading="lazy"><span class="image-brand">SHINING 3D</span></div><div class="scanner-body"><span class="eyebrow small">Versátil · Multimodo</span><h3>EinScan Rigil</h3><p>Escáner 3D portátil con distintos modos de captura.</p><dl class="scanner-card-specs">
+    <div><dt>Exactitud</dt><dd>0.02 mm</dd></div>
+    <div><dt>Cómo se usa</dt><dd>A mano, inalámbrico y con fotogrametría integrada</dd></div>
+    <div><dt>Ideal para</dt><dd>Lámina automotriz, maquinaria y componentes grandes</dd></div>
+  </dl><div class="product-feature"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scan-line" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 12h10"/></svg>Captura eficiente de geometrías</div><div class="card-action scanner-card-actions">
+    <button type="button" class="scanner-select-model" data-select-model="ue" aria-pressed="false">Ver modelo</button>
+    <a class="scanner-demo-link" href="#scanner-request-form" data-demo-model="FreeScan UE Pro2">Pedir demostración <span aria-hidden="true">→</span></a>
+  </div></div></article><article class="scanner-card group" id="freescan-omni" data-model="omni"><div class="scanner-image"><img src="https://raw.githubusercontent.com/danielgarridoher-svg/pesta-as/acce7f59fcf3e39f32333cf06b2d64fd54f4d612/model-pro-escaneres-3d/images/omni.webp" alt="FreeScan Omni" loading="lazy"><span class="image-brand">SHINING 3D</span></div><div class="scanner-body"><span class="eyebrow small">Todo en uno · Inspección</span><h3>FreeScan Omni</h3><p>Escáner 3D de metrología autónomo y listo para inspección.</p><dl class="scanner-card-specs">
+    <div><dt>Tamaño de pieza</dt><dd>Según la pieza y la configuración</dd></div>
+    <div><dt>Exactitud</dt><dd>Consultar especificación del sistema</dd></div>
+    <div><dt>Cómo se usa</dt><dd>Sistema autónomo todo en uno</dd></div>
+    <div><dt>Ideal para</dt><dd>Inspección y evaluación directamente en planta</dd></div>
+  </dl><div class="product-feature"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scan-line" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 12h10"/></svg>Del escaneo a la evaluación</div><div class="card-action scanner-card-actions">
+    <button type="button" class="scanner-select-model" data-select-model="omni" aria-pressed="false">Ver modelo</button>
+    <a class="scanner-demo-link" href="#scanner-request-form" data-demo-model="FreeScan Omni">Pedir demostración <span aria-hidden="true">→</span></a>
+  </div></div></article><article class="scanner-card group" id="freescan-trak-nova" data-model="trak"><div class="scanner-image"><img src="https://raw.githubusercontent.com/danielgarridoher-svg/pesta-as/acce7f59fcf3e39f32333cf06b2d64fd54f4d612/model-pro-escaneres-3d/images/nova.webp" alt="FreeScan Trak Nova" loading="lazy"><span class="image-brand">SHINING 3D</span></div><div class="scanner-body"><span class="eyebrow small">Seguimiento dinámico</span><h3>FreeScan Trak Nova</h3><p>Sistema dinámico de escaneo y seguimiento 3D.</p><dl class="scanner-card-specs">
+    <div><dt>Tamaño de pieza</dt><dd>Muy grande</dd></div>
+    <div><dt>Exactitud</dt><dd>Según el volumen y la configuración de medición</dd></div>
+    <div><dt>Cómo se usa</dt><dd>Sistema de rastreador y escáner de mano</dd></div>
+    <div><dt>Ideal para</dt><dd>Piezas grandes, inspección en planta y series</dd></div>
+  </dl><div class="product-feature"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scan-line" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 12h10"/></svg>Libertad para grandes componentes</div><div class="card-action scanner-card-actions">
+    <button type="button" class="scanner-select-model" data-select-model="trak" aria-pressed="false">Ver modelo</button>
+    <a class="scanner-demo-link" href="#scanner-request-form" data-demo-model="FreeScan Trak Nova">Pedir demostración <span aria-hidden="true">→</span></a>
+  </div></div></article></div>
+    <div class="section-heading scanner-subheading scanner-workshop-heading">
+      <div><h3>Para talleres, prototipos y trabajo en campo</h3></div>
+      <p class="section-sub">Cuando lo que pesa es la versatilidad y la facilidad de uso: personalización, desarrollo de prototipos, mantenimiento y captura fuera del laboratorio.</p>
+    </div>
+    <div class="product-grid scanner-catalog-grid"><article class="scanner-card group" id="einscan-rigil" data-model="rigil"><div class="scanner-image"><img src="https://raw.githubusercontent.com/danielgarridoher-svg/pesta-as/acce7f59fcf3e39f32333cf06b2d64fd54f4d612/model-pro-escaneres-3d/images/rigil.webp" alt="EinScan Rigil" loading="lazy"><span class="image-brand">SHINING 3D</span></div><div class="scanner-body"><span class="eyebrow small">Versátil · Multimodo</span><h3>EinScan Rigil</h3><p>Escáner 3D portátil con distintos modos de captura.</p><dl class="scanner-card-specs">
     <div><dt>Tamaño de pieza</dt><dd>Pequeña a mediana</dd></div>
     <div><dt>Exactitud</dt><dd>Consultar según versión y configuración</dd></div>
     <div><dt>Cómo se usa</dt><dd>Autónomo, inalámbrico o conectado por cable</dd></div>
@@ -852,7 +893,18 @@ small,.small{font-size:var(--fs-small);line-height:1.5;}
   </dl><div class="product-feature"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scan-line" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 12h10"/></svg>Una solución, distintas aplicaciones</div><div class="card-action scanner-card-actions">
     <button type="button" class="scanner-select-model" data-select-model="rigil" aria-pressed="false">Ver modelo</button>
     <a class="scanner-demo-link" href="#scanner-request-form" data-demo-model="EinScan Rigil">Pedir demostración <span aria-hidden="true">→</span></a>
-  </div></div></article></div><div class="catalog-bottom"><span>¿No sabes cuál es el indicado para tu proyecto?</span><a class="btn btn-link btn-size-default" href="#scanner-request-form">Te ayudamos a elegir <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></div></div></section>
+  </div></div></article><article class="scanner-card group" id="einscan-libre" data-model="libre"><div class="scanner-image"><img src="https://raw.githubusercontent.com/danielgarridoher-svg/pesta-as/acce7f59fcf3e39f32333cf06b2d64fd54f4d612/model-pro-escaneres-3d/images/libre.webp" alt="EinScan Libre" loading="lazy"><span class="image-brand">SHINING 3D</span></div><div class="scanner-body"><span class="eyebrow small">Inalámbrico · A color</span><h3>EinScan Libre</h3><p>Escáner 3D láser todo en uno, inalámbrico y a color.</p><dl class="scanner-card-specs">
+    <div><dt>Tamaño de pieza</dt><dd>Mediana a grande</dd></div>
+    <div><dt>Exactitud</dt><dd>Hasta 0.04 mm</dd></div>
+    <div><dt>Cómo se usa</dt><dd>Sistema autónomo todo en uno, sin PC durante la captura</dd></div>
+    <div><dt>Ideal para</dt><dd>Trabajo en campo, mantenimiento e ingeniería inversa</dd></div>
+  </dl><div class="product-feature"><svg xmlns="http://www.w3.org/2000/svg" width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scan-line" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 12h10"/></svg>Digitaliza sin límites de movimiento</div><div class="card-action scanner-card-actions">
+    <button type="button" class="scanner-select-model" data-select-model="libre" aria-pressed="false">Ver modelo</button>
+    <a class="scanner-demo-link" href="#scanner-request-form" data-demo-model="EinScan Libre">Pedir demostración <span aria-hidden="true">→</span></a>
+  </div></div></article></div>
+    <div class="catalog-bottom"><span>¿No sabes cuál es el indicado para tu proyecto?</span><a class="btn btn-link btn-size-default" href="#scanner-request-form">Te ayudamos a elegir <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></div>
+  </div>
+</section>
 <section class="scanner-compare-section" id="comparativa" aria-labelledby="scanner-compare-title">
   <div class="container">
     <div class="section-heading">
@@ -1028,10 +1080,11 @@ small,.small{font-size:var(--fs-small);line-height:1.5;}
 <nav class="scanner-bubble-nav" aria-label="Ayuda para elegir un escáner 3D">
   <button type="button" class="scanner-bubble-toggle" aria-expanded="false" aria-controls="scanner-bubble-links">¿No sabes por dónde empezar?</button>
   <div class="scanner-bubble-links" id="scanner-bubble-links" hidden>
-    <strong>Responde estas preguntas y encuentra tu ruta</strong>
-    <a class="scanner-bubble-question" href="#guia-tamano"><b>¿Qué tamaño tiene tu pieza?</b><p>Conoce las diferencias entre piezas pequeñas, medianas, grandes y muy grandes.</p><span>Ver guía de tamaños →</span></a>
-    <a class="scanner-bubble-question" href="#metrologia"><b>¿Necesitas máxima exactitud o inspección?</b><p>Explora los equipos orientados a medición, control dimensional y metrología.</p><span>Ver escáneres metrológicos →</span></a>
-    <a class="scanner-bubble-question" href="#guia-aplicaciones"><b>¿Buscas crear, prototipar o trabajar en campo?</b><p>Descubre otras aplicaciones del escaneo 3D y los equipos para esos proyectos.</p><span>Ver aplicaciones →</span></a>
+    <strong>Te ayudamos a encontrar el escáner adecuado</strong>
+    <a class="scanner-bubble-question" href="#guia-tamano"><b>¿De qué tamaño es tu pieza?</b><p>Pequeña, mediana, grande o muy grande: conoce qué considerar en cada caso.</p><span>Ver guía de tamaños →</span></a>
+    <a class="scanner-bubble-question" href="#metrologia"><b>¿Qué exactitud necesitas?</b><p>Identifica cuándo conviene una solución metrológica para tus tolerancias y controles.</p><span>Ver nuestros escáneres →</span></a>
+    <a class="scanner-bubble-question" href="#metrologia"><b>¿Cuántas piezas y dónde las escaneas?</b><p>Compara las opciones para laboratorio, taller, producción y trabajo en campo.</p><span>Explorar modelos →</span></a>
+    <div class="scanner-bubble-advice"><b>¿Prefieres que lo veamos contigo?</b><p>Platícanos de tu pieza, tu industria y las tolerancias que manejas. Te recomendaremos una opción y, si quieres, una demostración con tu propia pieza.</p><a href="#scanner-request-form">Cuéntanos de tu proyecto →</a></div>
     <div class="scanner-bubble-more">
       <a href="#metrologia">Metrología</a><a href="#profesionales">Taller y campo</a><a href="#comparativa">Comparar modelos</a><a href="#faq">Preguntas frecuentes</a><a href="#scanner-request-form">Contacto</a>
     </div>
