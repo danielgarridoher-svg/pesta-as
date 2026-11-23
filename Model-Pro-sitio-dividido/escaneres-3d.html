@@ -470,36 +470,59 @@ small,.small{font-size:var(--fs-small);line-height:1.5;}
 }
 .catalog-hero .hero-caption small{color:#00B8BD;}
 .catalog-hero .hero-caption strong{color:#FFFFFF;}
+/* Botones del hero: mismo lenguaje de ZW3D y ZWCAD */
+.catalog-hero .hero-actions{
+  display:flex;
+  align-items:center;
+  gap:18px;
+  flex-wrap:wrap;
+}
 .catalog-hero .hero-actions a{
-  min-height:48px;
+  min-height:0;
   height:auto;
-  padding:0 23px;
-  border-radius:12px;
-  font:600 15px/1 var(--font-body);
+  padding:13px 24px;
+  border-radius:9px;
+  font:600 15px/1.2 var(--font-body);
   text-transform:none;
-  transition:transform .2s ease,box-shadow .2s ease,background .2s ease,border-color .2s ease;
+  text-decoration:none;
+  transition:background .15s ease,color .15s ease,transform .15s ease,box-shadow .15s ease;
 }
 .catalog-hero .hero-actions .btn-hero{
-  background:linear-gradient(105deg,#1558C0 0%,#2E82F0 54%,#00B8BD 100%);
-  border:1px solid transparent;
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  gap:9px;
   color:#FFFFFF;
-  box-shadow:0 8px 24px rgba(21,88,192,.28);
+  background:var(--brand-blue);
+  border:1px solid var(--brand-blue);
+  box-shadow:none;
 }
 .catalog-hero .hero-actions .btn-hero:hover{
+  color:#FFFFFF;
+  background:color-mix(in srgb,var(--brand-blue) 85%,#000);
+  border-color:color-mix(in srgb,var(--brand-blue) 85%,#000);
   transform:translateY(-2px);
-  box-shadow:0 12px 28px rgba(21,88,192,.38);
+  box-shadow:0 10px 24px color-mix(in srgb,var(--brand-blue) 30%,transparent);
 }
 .catalog-hero .hero-actions .btn-hero-outline{
-  background:rgba(14,27,51,.16);
-  border:1px solid rgba(244,246,249,.72);
+  display:inline-flex;
+  align-items:center;
+  gap:7px;
+  padding:13px 0;
   color:#FFFFFF;
-  backdrop-filter:blur(8px);
+  background:transparent;
+  border:0;
+  border-radius:0;
+  font-weight:600;
 }
 .catalog-hero .hero-actions .btn-hero-outline:hover{
-  background:rgba(14,27,51,.48);
-  border-color:#FFFFFF;
-  transform:translateY(-2px);
+  color:var(--primary);
+  background:transparent;
+  border:0;
+  transform:none;
+  box-shadow:none;
 }
+.catalog-hero .hero-actions a svg{width:18px;height:18px;flex-shrink:0;}
 @media(max-width:767px){
   .catalog-hero .hero-photo{object-position:66% 50%;}
   .catalog-hero .hero-shade{
