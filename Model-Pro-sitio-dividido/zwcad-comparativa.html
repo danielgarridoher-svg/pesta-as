@@ -1134,7 +1134,7 @@ body .mp-page[data-page="zwcad"] .mp-zwcad-page #zwcad-que-es .zcad-section-lead
   function refresh(){
     var values=selected();
     hidden.value=values.join(',');
-    next(values);groups(values);
+    copy(values);next(values);groups(values);
     error.textContent='';
   }
   function setIntent(values,source){
