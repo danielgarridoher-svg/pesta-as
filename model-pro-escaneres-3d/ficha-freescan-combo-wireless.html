@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FreeScan Combo+ Wireless | Model Pro</title>
+<meta name="description" content="FreeScan Combo+ Wireless: escaneo 3D híbrido inalámbrico para inspección dimensional e ingeniería inversa.">
+<meta name="author" content="Model Pro">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Barlow:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap">
+<link rel="stylesheet" href="css/styles.css">
+<link rel="icon" href="favicon.ico" type="image/x-icon">
+<style>
+/* Identidad cromática de la ficha: estilos locales, sin alterar el CSS compartido. */
+:root{--background:#F7FAFF;--foreground:#172B45;--card:#FFFFFF;--card-foreground:#172B45;--primary:#1558C0;--primary-foreground:#FFFFFF;--muted:#EAF3FF;--muted-foreground:#526783;--border:#DCE6F2;--deep:#0C1422;--inverse:#F4F6F9;--highlight:#8BD8FF;--inverse-border:rgba(244,246,249,.24)}
+body{background:#F7FAFF;color:#172B45}
+h1,h2,h3{font-family:var(--font-display)}
+.product-hero{padding-block:58px 76px;gap:6.5%;grid-template-columns:1.02fr .98fr}
+.product-main-image{background:linear-gradient(145deg,#FFFFFF 0%,#F7FAFF 55%,#EAF3FF 100%);border:1px solid #DCE6F2;border-radius:18px;box-shadow:0 20px 55px rgba(21,88,192,.08)}
+.product-main-image img{padding:5%;object-fit:contain}
+.product-presentation .eyebrow,.section .eyebrow,.light-section .eyebrow{color:#0877D8;letter-spacing:.08em}
+.product-presentation h1{font-size:clamp(44px,5vw,64px);line-height:1.02;color:#183458}
+.product-presentation h1 span,.gradient-text{background:linear-gradient(100deg,#1558C0 0%,#2E82F0 52%,#00B8BD 100%);background-clip:text;-webkit-background-clip:text;-webkit-text-fill-color:transparent;color:transparent}
+.product-lead{font-size:clamp(21px,2.1vw,27px);color:#183458;line-height:1.25}
+.product-presentation>p:not(.product-lead){font-size:15px;line-height:1.8;color:#526783}
+.product-stats{border-color:#D6E3F1;padding-block:23px}
+.product-stats strong{font-size:36px;color:#183458}
+.product-stats span{font-size:12px;color:#64768B}
+.product-ctas{gap:12px}
+.product-ctas a,.header-cta{min-height:48px;height:auto;padding:13px 22px;border-radius:10px;font-size:13px}
+.btn-default{background:linear-gradient(100deg,#1558C0 0%,#2E82F0 58%,#00AEB5 100%);color:#fff;box-shadow:0 8px 20px rgba(21,88,192,.20);border:0}
+.btn-default:hover{filter:brightness(1.08);transform:translateY(-2px)}
+.btn-outline{background:rgba(255,255,255,.82);border:1px solid #8CB8E8;color:#1558C0;box-shadow:none}
+.btn-outline:hover{background:#EAF3FF;color:#1558C0}
+.product-cert{font-size:11px;color:#64768B}
+.product-nav{background:rgba(255,255,255,.94);border-color:#DCE6F2;backdrop-filter:blur(12px)}
+.product-nav a{font-size:12px;color:#526783}
+.product-nav a:last-child{color:#0877D8}
+.section{padding-block:88px}
+.section h2,.light-section h2,.dark-section h2{font-size:clamp(34px,4vw,46px);line-height:1.08}
+.section-lead{font-size:16px;color:#526783;line-height:1.8}
+.benefit-grid{gap:34px;margin-top:48px}
+.benefit-grid>div{padding:25px 22px;border:1px solid #DCE6F2;border-radius:14px;background:#fff}
+.benefit-grid svg{color:#0877D8;margin-bottom:19px}
+.benefit-grid h3{font-size:22px;color:#183458}
+.benefit-grid p{font-size:14px;line-height:1.75;color:#526783}
+.product-use{margin-top:80px;gap:7%}
+.product-use img{border-radius:16px;box-shadow:0 18px 45px rgba(12,20,34,.12)}
+.product-use h2{color:#183458}
+.product-use p{font-size:15px;line-height:1.8;color:#526783}
+.product-use li{font-size:14px;color:#344D6B}
+.product-use li svg{color:#00AEB5;width:18px}
+.muted-note{font-size:12px;color:#64768B}
+.light-section{background:linear-gradient(115deg,#FFFFFF 0%,#F7FAFF 48%,#EAF3FF 100%);border-block:1px solid #DCE6F2}
+.specs-intro{display:flex;justify-content:space-between;gap:35px;align-items:end;margin-bottom:35px}
+.specs-intro p{max-width:440px;color:#526783;font-size:14px;line-height:1.7}
+.spec-table{grid-template-columns:1fr 1fr;column-gap:65px}
+.spec-table>div{font-size:14px;padding:16px 4px;border-color:#D6E3F1}
+.spec-table dt{color:#526783}
+.spec-table dd{color:#183458;font-weight:700}
+.dark-section{background:linear-gradient(125deg,#0C1422 0%,#10213A 58%,#0E1B33 100%);color:#F4F6F9}
+.dark-section .eyebrow{color:#8BD8FF}
+.dark-section h2{color:#F2F7FF}
+.dark-section .section-lead,.dark-section p{color:#D6E7F8}
+.workflow-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px;margin-top:44px}
+.workflow-grid article{padding:27px;border:1px solid rgba(244,246,249,.17);border-radius:14px;background:rgba(20,45,80,.48)}
+.workflow-grid b{font-family:var(--font-display);font-size:34px;color:#8BD8FF}
+.workflow-grid h3{font-size:22px;margin:15px 0 9px;color:#F2F7FF}
+.workflow-grid p{font-size:14px;line-height:1.75}
+.model-pro-section{background:linear-gradient(115deg,#FFFFFF 0%,#F7FAFF 48%,#EAF3FF 100%);color:#172B45;border:0}
+.model-pro-section .eyebrow{color:#0877D8}
+.model-pro-section h2{color:#183458}
+.model-pro-section p{font-size:15px;line-height:1.8;color:#526783}
+.purchase-list details{border-color:#C9D9EB;padding:20px 0}
+.purchase-list summary{font-size:20px;color:#183458}
+.purchase-list p{color:#526783}
+.contact-section{background:linear-gradient(125deg,#0C1422 0%,#10213A 58%,#0E1B33 100%);color:#F4F6F9}
+.contact-section .eyebrow{color:#8BD8FF}
+.contact-section h2{color:#F2F7FF}
+.contact-section p{color:#D6E7F8}
+.contact-section .btn-outline{background:transparent;border-color:rgba(244,246,249,.55);color:#F4F6F9}
+.contact-section .btn-default{background:linear-gradient(110deg,#00AEB5,#2E82F0);color:#fff}
+.contact-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:28px}
+.contact-actions a{min-height:48px;padding:13px 22px;border-radius:10px;font-size:13px}
+@media(max-width:767px){
+ .product-hero{grid-template-columns:1fr;padding-block:30px 48px;gap:28px}
+ .product-presentation h1{font-size:46px}
+ .product-nav .container{gap:22px}
+ .section{padding-block:60px}
+ .benefit-grid{grid-template-columns:1fr 1fr;gap:14px}
+ .benefit-grid>div{padding:20px 16px}
+ .product-use{grid-template-columns:1fr;gap:28px;margin-top:52px}
+ .specs-intro{display:block}.specs-intro p{margin-top:18px}
+ .spec-table{grid-template-columns:1fr}
+ .workflow-grid{grid-template-columns:1fr;gap:14px}
+ .model-pro-section .container{grid-template-columns:1fr;gap:28px}
+}
+@media(max-width:430px){.benefit-grid{grid-template-columns:1fr}.product-stats{gap:8px}.product-stats strong{font-size:29px}.product-ctas{align-items:stretch}.product-ctas a{width:100%}}
+</style>
+</head>
+<body>
+<header class="site-header">
+ <div class="container header-inner">
+  <a href="index.html" aria-label="Model Pro, inicio"><span class="brand"><span class="brand-symbol"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M13 5H19V11"/><path d="M19 5L5 19"/></svg></span><span>model<span class="brand-pro">pro</span><span class="brand-dot">.</span></span></span></a>
+  <nav class="main-nav" aria-label="Navegación principal"><a href="index.html">Escáneres 3D</a><a href="tecnologia.html">Tecnología</a><a href="aplicaciones.html">Aplicaciones</a><a href="contacto.html?motivo=Orientaci%C3%B3n">Asesoría</a></nav>
+  <a class="btn btn-default btn-size-default header-cta" href="contacto.html?motivo=Precios%20y%20cotizaci%C3%B3n&equipo=FreeScan%20Combo%2B%20Wireless">Solicitar cotización</a>
+ </div>
+</header>
+<main>
+ <div class="page-breadcrumb container"><a href="index.html">Escáneres 3D</a><span>/</span><span>Metrología</span><span>/</span>FreeScan Combo+ Wireless</div>
+ <section class="container product-hero">
+  <div class="product-main-image"><img src="images/combo.webp" alt="Escáner 3D FreeScan Combo+ Wireless de SHINING 3D"><span class="image-brand">SHINING 3D</span></div>
+  <div class="product-presentation">
+   <span class="eyebrow">ESCÁNER 3D · METROLOGÍA</span>
+   <h1>FreeScan Combo+ <span>Wireless</span></h1>
+   <p class="product-lead">Precisión metrológica con libertad para moverte.</p>
+   <p>Un escáner 3D portátil híbrido que combina láser azul e infrarrojo. Su conectividad Wi-Fi 7 y sus distintos modos de captura ayudan a digitalizar piezas en diferentes entornos de trabajo.</p>
+   <div class="product-stats">
+    <div><strong>0.02 <small>mm</small></strong><span>Precisión de escaneo</span></div>
+    <div><strong>550 <small>g</small></strong><span>Peso neto</span></div>
+    <div><strong>93</strong><span>Líneas láser</span></div>
+   </div>
+   <div class="product-ctas"><a class="btn btn-default btn-lg" href="contacto.html?motivo=Precios%20y%20cotizaci%C3%B3n&equipo=FreeScan%20Combo%2B%20Wireless">Solicitar cotización</a><a class="btn btn-outline btn-lg" href="contacto.html?motivo=Demostraci%C3%B3n&equipo=FreeScan%20Combo%2B%20Wireless">Solicitar demostración</a></div>
+   <small class="product-cert">Consulta con nuestro equipo las condiciones de precisión, calibración y configuración adecuadas para tu aplicación.</small>
+  </div>
+ </section>
+ <nav class="product-nav" aria-label="Contenido del equipo"><div class="container"><a href="#ventajas">Ventajas</a><a href="#aplicaciones">Aplicaciones</a><a href="#especificaciones">Especificaciones</a><a href="#flujo">Flujo de trabajo</a><a href="#model-pro">Model Pro</a></div></nav>
+
+ <section id="ventajas" class="section container">
+  <span class="eyebrow">TECNOLOGÍA PARA EL TRABAJO REAL</span>
+  <h2>Una captura flexible para <span class="gradient-text">retos exigentes.</span></h2>
+  <p class="section-lead">Combina distintos modos de escaneo en un solo equipo para adaptarte a geometrías, tamaños y necesidades de digitalización.</p>
+  <div class="benefit-grid">
+   <div><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M2 8.82a15 15 0 0 1 20 0M5 12.86a10 10 0 0 1 14 0M8.5 16.43a5 5 0 0 1 7 0M12 20h.01"/></svg><h3>Conectividad inalámbrica</h3><p>Wi-Fi 7 para trabajar sin depender de una conexión física constante entre el escáner y el equipo de cómputo.</p></div>
+   <div><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/></svg><h3>Captura híbrida</h3><p>Láser azul e infrarrojo VCSEL para abordar diferentes superficies, tamaños y condiciones de captura.</p></div>
+   <div><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="m13 2-3 8H4l7 12 3-9h6L13 2z"/></svg><h3>Ritmo de digitalización</h3><p>Hasta 9.1 millones de puntos por segundo y un modo rápido de 93 líneas láser.</p></div>
+   <div><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.7"><path d="M12 3 3 8v8l9 5 9-5V8l-9-5z"/><path d="m3 8 9 5 9-5M12 13v8"/></svg><h3>Formato compacto</h3><p>Con 550 gramos de peso neto, facilita el manejo manual y el acceso a diferentes zonas de la pieza.</p></div>
+  </div>
+ </section>
+
+ <section id="aplicaciones" class="section light-section">
+  <div class="container product-use">
+   <img src="images/detail.webp" alt="Detalle de escaneo 3D de una pieza industrial" loading="lazy">
+   <div><span class="eyebrow">DE LA CAPTURA A LA APLICACIÓN</span><h2>Digitaliza piezas. <span class="gradient-text">Obtén información útil.</span></h2>
+    <p>Los datos 3D pueden servir como base para revisar geometrías, comparar componentes o reconstruir modelos. El resultado dependerá de la preparación, la estrategia de captura y las condiciones de cada pieza.</p>
+    <ul><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4L19 6"/></svg>Inspección de piezas fundidas y mecanizadas</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4L19 6"/></svg>Control dimensional de componentes</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4L19 6"/></svg>Ingeniería inversa y reconstrucción</li><li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="m5 12 4 4L19 6"/></svg>Documentación de geometrías complejas</li></ul>
+   </div>
+  </div>
+ </section>
+
+ <section id="especificaciones" class="section light-section">
+  <div class="container">
+   <div class="specs-intro"><div><span class="eyebrow">DATOS DEL FABRICANTE</span><h2>Especificaciones <span class="gradient-text">técnicas.</span></h2></div><p>Consulta las capacidades principales del FreeScan Combo+ Wireless. Los resultados dependen de las condiciones y procedimientos de medición.</p></div>
+   <dl class="spec-table">
+    <div><dt>Precisión de escaneo</dt><dd>Hasta 0.02 mm</dd></div>
+    <div><dt>Precisión volumétrica</dt><dd>0.02 mm + 0.03 mm/m</dd></div>
+    <div><dt>Precisión volumétrica con VPG</dt><dd>0.02 mm + 0.015 mm/m</dd></div>
+    <div><dt>Velocidad máxima</dt><dd>9,106,000 puntos/s</dd></div>
+    <div><dt>Fuente de luz</dt><dd>Láser azul + infrarrojo VCSEL</dd></div>
+    <div><dt>Modo rápido</dt><dd>93 líneas láser</dd></div>
+    <div><dt>Modo de detalle</dt><dd>25 líneas paralelas</dd></div>
+    <div><dt>Modo de cavidades</dt><dd>1 línea láser</dd></div>
+    <div><dt>Conectividad</dt><dd>Wi-Fi 7 / USB 3.0</dd></div>
+    <div><dt>Campo de visión máximo</dt><dd>580 × 650 mm</dd></div>
+    <div><dt>Distancia de trabajo</dt><dd>300 mm</dd></div>
+    <div><dt>Peso neto</dt><dd>550 g</dd></div>
+    <div><dt>Dimensiones</dt><dd>189 × 81 × 53 mm</dd></div>
+    <div><dt>Autonomía</dt><dd>Hasta 2 horas de escaneo continuo</dd></div>
+   </dl>
+   <p class="muted-note">La precisión de escaneo y la precisión volumétrica son parámetros distintos. Consulta la <a href="https://www.shining3d.com/metrology-solutions/laser-handheld-3d-scanner/freescan-combo-wireless" target="_blank" rel="noopener noreferrer">ficha oficial de SHINING 3D ↗</a> para conocer las condiciones de ensayo y el detalle técnico.</p>
+  </div>
+ </section>
+
+ <section id="flujo" class="section dark-section">
+  <div class="container">
+   <span class="eyebrow">UN FLUJO DE TRABAJO CONECTADO</span><h2>De los datos a las <span class="gradient-text">decisiones.</span></h2>
+   <p class="section-lead">El escaneo es el inicio. Integra la información obtenida con las herramientas que tu proceso necesita.</p>
+   <div class="workflow-grid">
+    <article><b>01</b><h3>Captura</h3><p>Utiliza el software FreeScan para registrar la geometría, alinear tomas y generar los datos 3D.</p></article>
+    <article><b>02</b><h3>Procesamiento</h3><p>Prepara y revisa la malla para el análisis, la comparación o la reconstrucción del componente.</p></article>
+    <article><b>03</b><h3>Inspección o diseño</h3><p>Continúa el flujo con herramientas compatibles, según el objetivo y las licencias requeridas.</p></article>
+   </div>
+  </div>
+ </section>
+
+ <section id="model-pro" class="section model-pro-section">
+  <div class="container">
+   <div><span class="eyebrow">ACOMPAÑAMIENTO MODEL PRO</span><h2>El equipo correcto empieza con <span class="gradient-text">tu aplicación.</span></h2><p>Además de conocer las características del escáner, es importante revisar qué necesitas medir, el tamaño de tus piezas y cómo integrarás los datos a tu proceso.</p></div>
+   <div class="purchase-list">
+    <details open><summary>Orientación para elegir configuración</summary><p>Revisamos el tipo de pieza, material, dimensiones, tolerancias y entorno de trabajo para orientar la selección del equipo.</p></details>
+    <details><summary>Demostración del escáner</summary><p>Solicita una demostración para conocer el proceso de captura y valorar su aplicación en tu proyecto.</p></details>
+    <details><summary>Software y flujo de trabajo</summary><p>Consulta las opciones de software, licencias, compatibilidad y formatos de intercambio según tus necesidades.</p></details>
+    <details><summary>Cotización y condiciones</summary><p>Solicita una propuesta con el equipo, accesorios, licencias, entrega y servicios que correspondan a tu configuración.</p></details>
+   </div>
+  </div>
+ </section>
+
+ <section class="section contact-section">
+  <div class="container contact-layout">
+   <div class="contact-intro"><span class="eyebrow">HABLEMOS DE TU PROYECTO</span><h2>¿Qué necesitas <span class="gradient-text">digitalizar?</span></h2><p>Cuéntanos sobre tus piezas y el objetivo de tu proceso. Podemos ayudarte a evaluar si este escáner responde a lo que buscas.</p></div>
+   <div><p>Conoce el equipo, revisa las opciones de configuración y solicita información para avanzar con una decisión bien fundamentada.</p><div class="contact-actions"><a class="btn btn-default" href="contacto.html?motivo=Precios%20y%20cotizaci%C3%B3n&equipo=FreeScan%20Combo%2B%20Wireless">Solicitar cotización</a><a class="btn btn-outline" href="contacto.html?motivo=Demostraci%C3%B3n&equipo=FreeScan%20Combo%2B%20Wireless">Solicitar demostración</a></div></div>
+  </div>
+ </section>
+</main>
+<footer class="site-footer"><div class="container"><div class="footer-top"><div><a href="index.html" aria-label="Model Pro, inicio"><span class="brand"><span class="brand-symbol"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 5H19V11"/><path d="M19 5L5 19"/></svg></span><span>model<span class="brand-pro">pro</span><span class="brand-dot">.</span></span></span></a><p>Tecnología 3D para transformar procesos.</p></div><nav class="footer-nav"><a href="index.html">Escáneres 3D</a><a href="tecnologia.html">Tecnología</a><a href="aplicaciones.html">Aplicaciones</a><a href="contacto.html">Contacto</a></nav><span class="partner-mark">SHINING 3D<small>AUTHORIZED PARTNER</small></span></div><div class="footer-bottom"><span>© Model Pro. Todos los derechos reservados.</span><span>Escáneres 3D · Metrología</span></div></div></footer>
+</body>
+</html>
