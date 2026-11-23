@@ -588,6 +588,16 @@ small,.small{font-size:var(--fs-small);line-height:1.5;}
 #scanner-request-form .scanner-request-thanks{color:#F4F6F9!important}
 #scanner-request-form .scanner-request-thanks h3{color:#8AF5F0!important}
 @media(max-width:1000px){#scanner-request-form .scanner-request-intro{position:static!important;top:auto!important}}
+
+/* Opciones de selección: superficies oscuras, sin tarjetas blancas */
+#scanner-request-form .scanner-choice-card{background:rgba(20,45,80,.72)!important;border-color:rgba(164,200,244,.24)!important;color:#F4F6F9!important}
+#scanner-request-form .scanner-choice-card b{color:#F2F7FF!important}
+#scanner-request-form .scanner-choice-card small{color:#D6E7F8!important}
+#scanner-request-form .scanner-choice-icon{color:#8BD8FF!important}
+#scanner-request-form .scanner-choice-card input{accent-color:#00B8BD!important}
+#scanner-request-form .scanner-choice-card:has(input:checked){background:linear-gradient(135deg,rgba(23,71,125,.94),rgba(14,54,91,.94))!important;border-color:#00B8BD!important;box-shadow:0 0 0 2px rgba(0,184,189,.16)!important}
+#scanner-request-form .scanner-choice-hint{color:#AFC5DF!important}
+#scanner-request-form .scanner-request-intro li[hidden]{display:none!important}
 </style>
 
 
@@ -678,9 +688,9 @@ small,.small{font-size:var(--fs-small);line-height:1.5;}
 <h2 id="scanner-request-title">¿Cómo quieres avanzar con <span>el escaneo 3D?</span></h2>
 <p class="section-sub">Cuéntanos qué necesitas. Según lo que selecciones, te mostraremos solo la información necesaria para orientar tu solicitud.</p>
 <ul>
-<li><span>01</span><div><b>Identificamos tu aplicación</b><br><small>Medición, inspección, ingeniería inversa o digitalización.</small></div></li>
-<li><span>02</span><div><b>Revisamos las opciones</b><br><small>Consideramos el tamaño de tus piezas y el proceso.</small></div></li>
-<li><span>03</span><div><b>Te orientamos</b><br><small>Con información clara para dar el siguiente paso.</small></div></li>
+<li data-intro-for="demostracion"><span>01</span><div><b>Identificamos tu aplicación</b><br><small>Medición, inspección, ingeniería inversa o digitalización.</small></div></li>
+<li data-intro-for="cotizacion"><span>02</span><div><b>Revisamos las opciones</b><br><small>Consideramos el tamaño de tus piezas y el proceso.</small></div></li>
+<li data-intro-for="orientacion"><span>03</span><div><b>Te orientamos</b><br><small>Con información clara para dar el siguiente paso.</small></div></li>
 </ul>
 </div>
 <div class="scanner-request-card">
@@ -744,7 +754,7 @@ small,.small{font-size:var(--fs-small);line-height:1.5;}
 </div>
 </div>
 <p class="scanner-request-error" data-form-error role="alert" aria-live="polite"></p>
-<div class="scanner-form-actions"><button type="submit">Enviar solicitud</button></div>
+<div class="scanner-form-actions"><button type="submit" data-submit-label>Enviar solicitud</button></div>
 <p class="scanner-request-privacy">Al enviar aceptas nuestro <a href="index.html#aviso-privacidad">aviso de privacidad</a>.</p>
 </div>
 </form>
@@ -766,6 +776,19 @@ var thanks=section.querySelector('.scanner-request-thanks');
 var checks=[...form.querySelectorAll('input[name="interes"]')];
 var dynamic=section.querySelector('[data-dynamic-details]');
 var hint=section.querySelector('[data-choice-hint]');
+var heading=section.querySelector('#scanner-request-title');
+var introItems=[...section.querySelectorAll('[data-intro-for]')];
+var submitLabel=section.querySelector('[data-submit-label]');
+var headingCopy={
+'Orientación':['Encuentra el escáner ideal','para tu proyecto.'],
+'Demostración':['Comprueba el escaneo 3D','con una pieza real.'],
+'Precios y cotización':['Conoce equipos y precios','para tu aplicación.']
+};
+var actionCopy={
+'Orientación':'Solicitar orientación',
+'Demostración':'Solicitar demostración',
+'Precios y cotización':'Solicitar precio y cotización'
+};
 function updateDetails(){
 var selected=checks.filter(function(x){return x.checked;}).map(function(x){return x.value;});
 dynamic.hidden=selected.length===0;
@@ -779,13 +802,30 @@ return key==='orientacion'?v==='Orientación':key==='demostracion'?v==='Demostra
 section.querySelectorAll('[data-detail]').forEach(function(panel){
 if(panel.hidden)panel.querySelectorAll('input,select,textarea').forEach(function(el){el.value='';});
 });
+introItems.forEach(function(item){
+item.hidden=!selected.some(function(value){return value.toLowerCase()===item.getAttribute('data-intro-for');});
+});
+if(selected.length===1){
+var copy=headingCopy[selected[0]];
+heading.childNodes[0].textContent=copy[0]+' ';
+heading.querySelector('span').textContent=copy[1];
+submitLabel.textContent=actionCopy[selected[0]];
+}else if(selected.length>1){
+heading.childNodes[0].textContent='Avancemos con tu ';
+heading.querySelector('span').textContent='proyecto de escaneo 3D.';
+submitLabel.textContent='Enviar solicitud';
+}else{
+heading.childNodes[0].textContent='¿Cómo quieres avanzar con ';
+heading.querySelector('span').textContent='el escaneo 3D?';
+submitLabel.textContent='Enviar solicitud';
+}
 }
 checks.forEach(function(x){x.addEventListener('change',updateDetails);});
 updateDetails();
 form.addEventListener('submit',function(e){
 e.preventDefault();
 error.textContent='';
-if(!checks.some(function(x){return x.checked;})){hint.textContent='Selecciona al menos una opción para continuar.';checks[0].focus();return;}
+if(!checks.some(function(x){return x.checked;})){hint.textContent='Selecciona una opción para continuar.';checks[0].focus();return;}
 var invalid=form.querySelector(':invalid');
 if(invalid){invalid.reportValidity();invalid.focus();return;}
 var firstName=form.elements.nombre.value.trim().split(/\s+/)[0].replace(/[&<>"]/g,'');
