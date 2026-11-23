@@ -743,6 +743,44 @@ small,.small{font-size:var(--fs-small);line-height:1.5;}
  .scanner-bubble-links{width:min(320px,calc(100vw - 20px));padding:14px}
 }
 
+
+/* Ajustes de lectura y selección de modelos: catálogo SHINING 3D */
+.scanner-catalog-intro{max-width:none!important;width:100%!important}
+.scanner-catalog-intro>p{
+  max-width:none!important;width:100%!important;
+  margin:0!important;font-size:15px!important;line-height:1.7!important;
+  white-space:normal!important;text-wrap:pretty;
+}
+.scanner-subheading{width:100%;max-width:none}
+.scanner-subheading .section-sub{
+  max-width:none!important;width:100%!important;
+  margin:8px 0 0!important;font-size:15px!important;line-height:1.7!important;
+  white-space:normal!important;text-wrap:pretty;
+}
+.scanner-card-actions .scanner-select-model{
+  min-height:44px!important;padding:11px 16px!important;border:0!important;
+  border-radius:10px!important;
+  background:linear-gradient(100deg,#1558C0 0%,#2E82F0 58%,#00AEB5 100%)!important;
+  color:#FFFFFF!important;font-size:12px!important;font-weight:750!important;
+  line-height:1.35!important;box-shadow:0 8px 20px rgba(21,88,192,.20)!important;
+  cursor:pointer;pointer-events:auto;position:relative;z-index:2;
+  transition:transform .2s ease,box-shadow .2s ease;
+}
+.scanner-card-actions .scanner-select-model:hover{
+  transform:translateY(-2px);box-shadow:0 10px 24px rgba(21,88,192,.28)!important;
+}
+.scanner-card-actions .scanner-select-model:focus-visible{
+  outline:3px solid rgba(0,184,189,.45);outline-offset:3px;
+}
+.scanner-card-actions .scanner-demo-link{
+  min-height:44px;border:1px solid #8CB8E8!important;border-radius:10px!important;
+  background:#FFFFFF!important;color:#1558C0!important;
+  font-size:12px!important;font-weight:750!important;
+}
+.scanner-card{cursor:pointer}
+.scanner-card .scanner-card-actions a{cursor:pointer}
+.scanner-card.is-selected{border:2px solid #2E82F0;box-shadow:0 12px 32px rgba(46,130,240,.16)}
+
 </style>
 
 
@@ -1131,14 +1169,15 @@ small,.small{font-size:var(--fs-small);line-height:1.5;}
 </script>
 <script id="scanner-model-selection-script">
 (function(){
-  var cards=[...document.querySelectorAll('.scanner-card[data-model]')];
-  var cells=[...document.querySelectorAll('.scanner-compare-table [data-model]')];
+  var cards=Array.prototype.slice.call(document.querySelectorAll('.scanner-card[data-model]'));
+  var cells=Array.prototype.slice.call(document.querySelectorAll('.scanner-compare-table [data-model]'));
   if(!cards.length)return;
+
   function select(key){
-    var exists=cards.some(function(card){return card.getAttribute('data-model')===key;});
-    if(!exists)return;
+    var selected=cards.find(function(card){return card.getAttribute('data-model')===key;});
+    if(!selected)return;
     cards.forEach(function(card){
-      var active=card.getAttribute('data-model')===key;
+      var active=card===selected;
       card.classList.toggle('is-selected',active);
       var button=card.querySelector('[data-select-model]');
       if(button){
@@ -1146,14 +1185,27 @@ small,.small{font-size:var(--fs-small);line-height:1.5;}
         button.textContent=active?'Seleccionado':'Ver modelo';
       }
     });
-    cells.forEach(function(cell){cell.classList.toggle('is-selected',cell.getAttribute('data-model')===key);});
+    cells.forEach(function(cell){
+      cell.classList.toggle('is-selected',cell.getAttribute('data-model')===key);
+    });
   }
-  document.addEventListener('click',function(event){
-    var button=event.target.closest('[data-select-model]');
-    if(!button||!document.documentElement.contains(button))return;
-    event.preventDefault();
-    select(button.getAttribute('data-select-model'));
+
+  cards.forEach(function(card){
+    var key=card.getAttribute('data-model');
+    var button=card.querySelector('[data-select-model]');
+    if(button){
+      button.addEventListener('click',function(event){
+        event.preventDefault();
+        event.stopPropagation();
+        select(key);
+      });
+    }
+    card.addEventListener('click',function(event){
+      if(event.target.closest('a,button'))return;
+      select(key);
+    });
   });
+
   select('combo');
 })();
 </script>
