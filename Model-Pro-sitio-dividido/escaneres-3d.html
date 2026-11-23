@@ -44,6 +44,27 @@
  .hero h1{font-size:clamp(40px,11vw,56px)}
  .hero p.lead{font-size:16px}
 }
+
+/* Ajustes solicitados: hero protagonista y orientación en superficie clara */
+.hero-inner{padding:174px 0 154px;max-width:980px}
+.hero h1{max-width:940px;font-size:clamp(52px,7vw,88px);line-height:1.01;letter-spacing:-.045em}
+.hero p.lead{max-width:760px;font-size:20px;line-height:1.7}
+.hero-actions{margin-top:40px}
+.solution-section{background:#F3F7FC}
+.solution-section .section-head{max-width:790px}
+.solution-section .section-kicker{color:var(--brand-blue);font-weight:800;letter-spacing:.15em}
+.solution-section h2{color:#0E1B33;background:none;-webkit-text-fill-color:#0E1B33;font-weight:800}
+.solution-section h2 .solution-gradient{background-image:linear-gradient(105deg,#1558C0 0%,#2E82F0 52%,#00B8BD 100%);-webkit-background-clip:text;background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.solution-section .section-head>p:last-child{color:#59697F}
+.solution-section .choice{background:#FFFFFF;border-color:#DCE6F2}
+.solution-section .choice h3{color:#0E1B33}
+.solution-section .choice p{color:#59697F}
+.solution-section .choice span{color:#1558C0}
+@media(max-width:620px){
+ .hero-inner{padding:112px 0 96px}
+ .hero h1{font-size:clamp(43px,11.5vw,62px)}
+ .hero p.lead{font-size:16px}
+}
 </style>
 <style id="mp-shared-shell">
 /* Tokens y componentes compartidos Model Pro: misma paleta, header y footer del Home */
@@ -139,8 +160,8 @@ body{font-family:Archivo,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-se
 <p class="lead">Explora soluciones de digitalización 3D para medición, inspección, diseño e ingeniería. Encuentra la tecnología que mejor responde a tu aplicación.</p>
 <div class="hero-actions"><a class="btn" href="#metrologia">Explorar metrología</a><a class="btn-outline" href="#profesionales">Explorar escaneo profesional</a></div>
 </div></div></section>
-<section class="section"><div class="mp-co">
-<div class="section-head"><p class="section-kicker">Encuentra tu solución</p><h2>¿Qué necesitas hacer?</h2><p>El primer paso para elegir un escáner es identificar qué quieres obtener de tus piezas: mediciones confiables o datos 3D para desarrollar tus proyectos.</p></div>
+<section class="section solution-section" id="solucion"><div class="mp-co">
+<div class="section-head"><p class="section-kicker">ENCUENTRA TU SOLUCIÓN</p><h2>¿Qué necesitas <span class="solution-gradient">hacer?</span></h2><p>El primer paso para elegir un escáner es identificar qué quieres obtener de tus piezas: mediciones confiables o datos 3D para desarrollar tus proyectos.</p></div>
 <div class="choice-grid">
 <a class="choice" href="#metrologia"><div class="choice-art" aria-hidden="true">⌖</div><h3>Medir e inspeccionar</h3><p>Soluciones orientadas al control dimensional, la inspección y la evaluación de piezas y componentes.</p><span>Conocer escáneres metrológicos →</span></a>
 <a class="choice" href="#profesionales"><div class="choice-art" aria-hidden="true">◇</div><h3>Digitalizar y diseñar</h3><p>Equipos para capturar objetos físicos y convertirlos en datos 3D útiles para diseño, modelado y desarrollo.</p><span>Conocer escáneres profesionales →</span></a>
