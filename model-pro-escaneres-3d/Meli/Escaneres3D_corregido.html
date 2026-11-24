@@ -1,0 +1,1180 @@
+<!doctype html>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Escáneres 3D industriales en México | Metrología e ingeniería inversa | Model Pro</title>
+<meta name="description" content="Escáneres 3D industriales SHINING 3D en México para ingeniería inversa y control de calidad. Elige según el tamaño de tu pieza y la exactitud en micras que necesitas. Demostración con tu pieza.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="paleta-tokens.css">
+<style id="scanner-page-styles">
+/* ===== Sistema tipográfico Model Pro ===== */
+:root{
+  --font-head:"Plus Jakarta Sans",system-ui,sans-serif;
+  --font-body:"Inter",system-ui,sans-serif;
+  --font-mono:"JetBrains Mono",ui-monospace,monospace;
+  --fs-eyebrow:.8125rem;
+  --fs-h1:clamp(2.25rem,1.6rem + 3vw,4rem);
+  --fs-lead:clamp(1.0625rem,1rem + .4vw,1.25rem);
+  --fs-h2:clamp(1.75rem,1.3rem + 1.8vw,2.75rem);
+  --fs-sub:clamp(1rem,.95rem + .25vw,1.125rem);
+  --fs-h3:clamp(1.125rem,1rem + .5vw,1.375rem);
+  --fs-body:clamp(1rem,.97rem + .15vw,1.0625rem);
+  --fs-small:.875rem;
+}
+/* CSS consolidado: estructura principal, shell compartido y formulario. */
+
+
+/* ===== Shell compartido Model Pro ===== */
+/* Tokens y componentes compartidos Model Pro: misma paleta, header y footer del Home */
+:root{--carbon:color-mix(in srgb,var(--secondary) 82%,#000);--marino:var(--secondary);--profundo:color-mix(in srgb,var(--secondary) 62%,var(--brand-blue));--az:var(--brand-blue);--azsh:var(--brand-blue-bright);--azlum:color-mix(in srgb,var(--brand-blue-bright) 60%,#fff);--tq:var(--primary);--tq2:color-mix(in srgb,var(--primary) 66%,#fff);--ink:var(--foreground);--mut:var(--muted-foreground);--gris:color-mix(in srgb,var(--muted-foreground) 50%,#fff);--bg:var(--background);--bg2:color-mix(in srgb,var(--primary) 5%,var(--background));--ln:color-mix(in srgb,var(--brand-blue) 16%,#fff);--dk:var(--secondary);--dk2:color-mix(in srgb,var(--secondary) 82%,#000)}
+body{background:var(--bg);color:var(--ink)}
+.mp-co{max-width:1200px;margin:0 auto;padding:0 32px}
+.mp-header{position:sticky;top:0;z-index:100;background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border-bottom:1px solid var(--ln)}
+.mp-bar{display:flex;align-items:center;gap:30px;height:68px}
+.mp-logo{font-weight:800;font-size:19px;color:var(--ink);text-decoration:none;letter-spacing:-.01em}
+.mp-nav{display:flex;gap:2px;margin-left:8px}
+.mp-q{margin-left:auto;background:var(--az);color:#fff;border-radius:8px;padding:10px 18px;font-size:14px;font-weight:600;text-decoration:none}
+.mp-q:hover{background:color-mix(in srgb,var(--brand-blue) 85%,#000)}.mp-q.is-solid{box-shadow:0 4px 14px color-mix(in srgb,var(--brand-blue) 40%,transparent)}
+.mp-burger{display:none;margin-left:auto;width:44px;height:44px;border:0;background:none;cursor:pointer;padding:11px;color:var(--ink)}
+.mp-burger span{display:block;height:2px;background:currentColor;margin:5px 0}
+.mp-menu{list-style:none;margin:0;padding:0;display:flex;height:68px;gap:2px}
+.mp-mi{position:relative;display:flex;align-items:center}
+.mp-top{position:relative;display:inline-flex;align-items:center;gap:6px;height:100%;padding:0 14px;background:none;border:0;color:var(--foreground);cursor:pointer;text-decoration:none}
+.mp-top:hover{color:var(--az)}.mp-cv{width:10px;height:10px;transition:transform .2s}
+.mp-mi.is-open>.mp-top{color:var(--az)}.mp-mi.is-open>.mp-top .mp-cv{transform:rotate(180deg)}
+.mp-drop,.mp-sub{list-style:none;margin:0;padding:6px 0;background:#fff;border:1px solid var(--ln);border-radius:10px;box-shadow:0 10px 28px rgba(11,20,34,.14);min-width:230px}
+.mp-drop{position:absolute;top:100%;left:0;opacity:0;visibility:hidden;transform:translateY(-4px);transition:.15s}
+.mp-mi.is-open>.mp-drop{opacity:1;visibility:visible;transform:none}.mp-drop li{position:relative}
+.mp-drop a,.mp-drop button{display:flex;align-items:center;justify-content:space-between;gap:16px;width:100%;padding:9px 18px;background:none;border:0;color:var(--ink);text-decoration:none;text-align:left;cursor:pointer;white-space:nowrap}
+.mp-drop a:hover,.mp-drop button:hover,.mp-sub-li.is-open>button{background:var(--bg2);color:var(--az)}
+.mp-ar{width:8px;height:8px;color:var(--mut);flex-shrink:0}
+.mp-sub{position:absolute;top:-7px;left:100%;opacity:0;visibility:hidden;transition:.15s}.mp-sub-li.is-open>.mp-sub{opacity:1;visibility:visible}
+.mp-hook-li{margin-top:4px;border-top:1px solid var(--ln);padding-top:4px}.mp-drop a.mp-hook{color:var(--az);font-weight:700}
+.mp-foot{background:var(--carbon);color:var(--gris);font-size:14px;padding:48px 0 22px}
+.mp-foot-grid{display:grid;grid-template-columns:1.6fr 1fr 1fr 1.2fr;gap:28px}
+.mp-foot h4{color:#fff;font-size:14px;font-weight:700;margin:0 0 10px}
+.mp-foot a{color:var(--gris);text-decoration:none;display:block;margin-bottom:5px}.mp-foot a:hover{color:#fff}
+.mp-social{display:flex;gap:12px;margin-top:14px}.mp-social a{display:flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:8px;background:#16263E;color:var(--gris);margin:0}
+.mp-social a:hover{background:var(--az);color:#fff}.mp-social i{font-size:17px}
+.mp-foot-bottom{border-top:1px solid #1B2C44;margin-top:28px;padding-top:16px;font-size:12px;color:#5E6B7E;display:flex;gap:18px;flex-wrap:wrap}
+@media(max-width:900px){.mp-nav,.mp-q{display:none}.mp-burger{display:block}.mp-nav.is-open{display:flex;position:fixed;inset:68px 0 0;background:#fff;flex-direction:column;gap:0;margin:0;padding:8px 0;overflow-y:auto;z-index:99}.mp-nav.is-open .mp-menu{flex-direction:column;height:auto;gap:0}.mp-nav.is-open .mp-mi{display:block;border-bottom:1px solid var(--ln)}.mp-nav.is-open .mp-top{width:100%;height:54px;justify-content:space-between}.mp-nav.is-open .mp-drop,.mp-nav.is-open .mp-sub{position:static;border:0;box-shadow:none;min-width:0;padding:0 0 8px;opacity:1;visibility:visible;transform:none;display:none}.mp-nav.is-open .mp-mi.is-open>.mp-drop,.mp-nav.is-open .mp-sub-li.is-open>.mp-sub{display:block}.mp-nav.is-open .mp-drop a,.mp-nav.is-open .mp-drop button{padding:11px 20px 11px 32px;white-space:normal}.mp-nav.is-open .mp-sub a{padding-left:46px;color:var(--mut)}.mp-nav.is-open .mp-sub-li>button .mp-ar{transform:rotate(90deg)}.mp-nav.is-open .mp-sub-li.is-open>button .mp-ar{transform:rotate(-90deg)}.mp-foot-grid{grid-template-columns:1fr 1fr;gap:24px}.mp-co{padding:0 22px}}
+@media(max-width:620px){.mp-co{width:calc(100% - 36px);padding:0}.mp-foot-grid{grid-template-columns:1fr}.mp-foot-bottom{gap:12px}.mp-foot-bottom span:last-child{margin-left:0!important}}
+
+
+/* ===== Estilos base heredados del diseño de Escáneres 3D ===== */
+#scanner-request-form{padding:86px 24px!important;background:linear-gradient(115deg,#FFFFFF 0%,#F7FAFF 48%,#EAF3FF 100%)!important;color:#172B45!important}
+#scanner-request-form .scanner-request-grid{display:grid;grid-template-columns:minmax(0,.9fr) minmax(0,1.1fr);align-items:start;gap:clamp(32px,5vw,72px);max-width:1160px;margin:0 auto}
+#scanner-request-form .scanner-request-intro{position:sticky;top:92px;align-self:start}
+#scanner-request-form .scanner-request-eyebrow{margin:0 0 14px;color:#0877D8;font-size:.78rem;font-weight:800;letter-spacing:.13em}
+#scanner-request-form .scanner-request-intro h2{margin:0 0 18px;color:#1558C0;letter-spacing:-.04em}
+#scanner-request-form .scanner-request-intro h2 span{background:linear-gradient(100deg,#1558C0 0%,#2E82F0 52%,#00B8BD 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
+#scanner-request-form .scanner-request-intro>p:not(.scanner-request-eyebrow){color:#526783}
+#scanner-request-form .scanner-request-intro ul{display:grid;gap:14px;list-style:none;padding:0;margin:26px 0 0}
+#scanner-request-form .scanner-request-intro li{display:flex;align-items:flex-start;gap:11px;padding:13px 15px;border:1px solid #D6E3F1;border-radius:12px;background:rgba(255,255,255,.88);color:#526783;line-height:1.5;box-shadow:0 3px 10px rgba(20,55,95,.045)}
+#scanner-request-form .scanner-request-intro li span{display:inline-flex;flex:0 0 24px;width:24px;height:24px;align-items:center;justify-content:center;border-radius:50%;background:rgba(0,184,189,.13);color:#0877D8;font-weight:800}
+#scanner-request-form .scanner-request-card{padding:clamp(24px,3vw,38px);border:1px solid #DCE6F2;border-radius:20px;background:#FFFFFF;color:#172B45;box-shadow:0 18px 48px rgba(20,55,95,.10)}
+#scanner-request-form .scanner-request-question{margin:0 0 18px;color:#1558C0;font-size:1.35rem;font-weight:800}
+#scanner-request-form .scanner-request-question small{display:block;margin-top:5px;color:#64768B}
+#scanner-request-form .scanner-request-options{display:grid;gap:12px}
+#scanner-request-form .scanner-request-option{position:relative;display:flex;align-items:flex-start;gap:12px;padding:16px;border:1px solid #D6E3F1;border-radius:12px;background:#F8FBFF;cursor:pointer;transition:border-color .2s,background .2s,box-shadow .2s}
+#scanner-request-form .scanner-request-option:has(input:checked){border-color:#2E82F0;background:#EAF3FF;box-shadow:0 0 0 2px rgba(46,130,240,.10)}
+#scanner-request-form .scanner-request-option input{width:18px;height:18px;flex:0 0 18px;margin:3px 0 0;accent-color:#2E82F0}
+#scanner-request-form .scanner-request-option span{display:grid;gap:4px}
+#scanner-request-form .scanner-request-option b{color:#183458;font-size:.98rem}
+#scanner-request-form .scanner-request-option small{color:#64768B}
+#scanner-request-form .scanner-request-fields{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;margin-top:22px}
+#scanner-request-form .scanner-request-fields[hidden],#scanner-request-form .scanner-request-submit[hidden],#scanner-request-form .scanner-request-thanks[hidden]{display:none!important}
+#scanner-request-form .scanner-request-fields label{display:flex;flex-direction:column;gap:7px;color:#526783;font-size:.88rem;font-weight:650}
+#scanner-request-form .scanner-request-fields input,#scanner-request-form .scanner-request-fields select,#scanner-request-form .scanner-request-fields textarea{box-sizing:border-box;width:100%;min-height:46px;padding:11px 13px;border:1px solid #DCE6F2;border-radius:9px;background:#FFFFFF;color:#172B45;font:inherit}
+#scanner-request-form .scanner-request-fields textarea{min-height:112px;resize:vertical}
+#scanner-request-form .scanner-request-fields input:focus,#scanner-request-form .scanner-request-fields select:focus,#scanner-request-form .scanner-request-fields textarea:focus{outline:2px solid rgba(46,130,240,.22);border-color:#2E82F0}
+#scanner-request-form .scanner-request-fields input::placeholder,#scanner-request-form .scanner-request-fields textarea::placeholder{color:#64768B}
+#scanner-request-form .scanner-request-full{grid-column:1/-1}
+#scanner-request-form .scanner-request-submit{margin-top:20px;text-align:center}
+#scanner-request-form .scanner-request-submit button{min-height:44px;padding:11px 28px;border:0;border-radius:10px;background:linear-gradient(100deg,#1558C0 0%,#2E82F0 58%,#00AEB5 100%);color:#FFFFFF;cursor:pointer}
+#scanner-request-form .scanner-request-submit p{margin:13px 0 0;color:#64768B;font-size:.78rem;line-height:1.5}
+#scanner-request-form .scanner-request-submit a{color:#1558C0;text-decoration:underline}
+#scanner-request-form .scanner-request-error{margin:12px 0 0;color:#B42318;font-size:.84rem}
+#scanner-request-form .scanner-request-thanks{padding:18px;border-radius:12px;background:#EAF3FF;color:#526783;line-height:1.6}
+#scanner-request-form .scanner-request-thanks h3{margin:0 0 8px;color:#1558C0}
+@media(max-width:800px){#scanner-request-form{padding:62px 20px!important}#scanner-request-form .scanner-request-grid{grid-template-columns:1fr;gap:30px}#scanner-request-form .scanner-request-intro{position:static;top:auto}}
+@media(max-width:540px){#scanner-request-form .scanner-request-fields{grid-template-columns:1fr}#scanner-request-form .scanner-request-full{grid-column:1}}
+
+
+/* ===== Formulario: estilos base ===== */
+#scanner-request-form .scanner-form-progress{display:flex;align-items:center;gap:14px;margin:0 0 24px;color:#0877D8;font-size:.75rem;font-weight:800;letter-spacing:.1em}
+#scanner-request-form .scanner-form-progress-track{height:5px;flex:1;overflow:hidden;border-radius:99px;background:#DCE6F2}
+#scanner-request-form .scanner-form-progress-track i{display:block;width:50%;height:100%;border-radius:99px;background:linear-gradient(90deg,#00B8BD,#2E82F0);transition:width .25s}
+#scanner-request-form .scanner-form-step[hidden]{display:none!important}
+#scanner-request-form .scanner-form-field{display:flex;flex-direction:column;gap:7px;margin-top:18px;color:#526783;font-size:.88rem;font-weight:650}
+#scanner-request-form .scanner-form-field select{box-sizing:border-box;width:100%;min-height:46px;padding:11px 13px;border:1px solid #DCE6F2;border-radius:9px;background:#FFF;color:#172B45;font:inherit}
+#scanner-request-form .scanner-form-full{grid-column:1/-1}
+#scanner-request-form .scanner-form-actions{display:flex;justify-content:flex-end;gap:12px;margin-top:20px}
+#scanner-request-form .scanner-form-actions button{min-height:44px;padding:11px 25px;border:0;border-radius:10px;background:linear-gradient(100deg,#1558C0 0%,#2E82F0 58%,#00AEB5 100%);color:#FFF;cursor:pointer}
+#scanner-request-form .scanner-form-actions .scanner-form-back{border:1px solid #DCE6F2;background:#FFF;color:#526783}
+#scanner-request-form .scanner-request-privacy{margin:13px 0 0;color:#7A8A9D;font-size:.78rem;text-align:center}
+#scanner-request-form .scanner-request-privacy a{color:#1558C0;text-decoration:underline}
+#scanner-request-form .scanner-form-optional{font-weight:400;color:#64768B}
+#scanner-request-form .scanner-request-fields{margin-top:18px}
+#scanner-request-form .scanner-request-card .scanner-request-question{margin-bottom:18px}
+#metrologia .product-visual.product-image{display:flex;align-items:center;justify-content:center;min-height:210px;padding:10px;background:linear-gradient(145deg,#F7FAFF,#FFFFFF)}
+#metrologia .product-visual.product-image img{display:block;width:100%;height:210px;object-fit:contain}
+@media(max-width:540px){#scanner-request-form .scanner-request-fields{grid-template-columns:1fr}#scanner-request-form .scanner-form-full{grid-column:1}#scanner-request-form .scanner-form-actions{justify-content:space-between}#scanner-request-form .scanner-form-actions button{padding-inline:18px}}
+
+
+/* ===== Formulario: estructura y campos ===== */
+/* =====================================================================
+   Escáneres 3D · Traducción a CSS convencional del proyecto Lovable
+   Orden de capas equivalente a Tailwind v4: base < utilities < estilos propios
+   (los estilos propios van sin capa, igual que en el original).
+   ===================================================================== */
+@layer base, utilities;
+
+/* ---------- Tokens de diseño: conectados a la paleta oficial Model Pro ---------- */
+:root {
+  --radius: 0.375rem;
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --deep: var(--secondary);
+  --inverse: #F4F6F9;
+  --highlight: var(--primary);
+  --inverse-border: rgba(244,246,249,.30);
+  --border: color-mix(in srgb,var(--brand-blue) 16%,#FFFFFF);
+  --brand-tint: color-mix(in srgb,var(--brand-blue-bright) 9%,#FFFFFF);
+  --hero-overlay: linear-gradient(100deg,
+    color-mix(in srgb,var(--secondary) 94%,transparent) 0%,
+    color-mix(in srgb,var(--secondary) 86%,transparent) 38%,
+    color-mix(in srgb,var(--secondary) 66%,transparent) 70%,
+    color-mix(in srgb,var(--secondary) 48%,transparent) 100%);
+  --contact-gradient:linear-gradient(125deg,#0C1422 0%,#10213A 58%,#0E1B33 100%);
+  --shadow-product: 0 12px 32px rgba(14,27,51,.07);
+  --primary-foreground: #FFFFFF;
+  --secondary-foreground: #FFFFFF;
+  --muted: color-mix(in srgb,var(--secondary) 5%,#FFFFFF);
+  --accent-foreground: var(--secondary);
+  --destructive: #B42318;
+  --destructive-foreground: #FFFFFF;
+  --input: color-mix(in srgb,var(--muted-foreground) 22%,#FFFFFF);
+  --ring: var(--brand-blue-bright);
+  --sidebar: var(--secondary);
+  --sidebar-foreground: #FFFFFF;
+  --sidebar-primary: var(--brand-blue);
+  --sidebar-primary-foreground: #FFFFFF;
+  --sidebar-accent: color-mix(in srgb,var(--primary) 12%,var(--secondary));
+  --sidebar-accent-foreground: #FFFFFF;
+  --sidebar-border: rgba(255,255,255,.12);
+  --sidebar-ring: var(--primary);
+  --chart-1: var(--brand-blue);
+  --chart-2: var(--primary);
+  --chart-3: var(--brand-blue-bright);
+  --chart-4: #6A91C8;
+  --chart-5: #4B7F8A;
+}
+
+/* Se elimina el tema oscuro heredado de Lovable: la página usa la paleta oficial global. */
+
+:root {
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-border: var(--border);
+}
+
+/* ---------- Base (preflight de Tailwind v4 + base del proyecto) ---------- */
+@layer base {
+  *, ::after, ::before, ::backdrop, ::file-selector-button { box-sizing: border-box; margin: 0; padding: 0; border: 0 solid; }
+  html, :host { line-height: 1.5; -webkit-text-size-adjust: 100%; tab-size: 4; font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif; -webkit-tap-highlight-color: transparent; }
+  hr { height: 0; color: inherit; border-top-width: 1px; }
+  h1, h2, h3, h4, h5, h6 { }
+  a { color: inherit; -webkit-text-decoration: inherit; text-decoration: inherit; }
+  b, strong { font-weight: bolder; }
+  small { }
+  table { text-indent: 0; border-color: inherit; border-collapse: collapse; }
+  summary { display: list-item; }
+  ol, ul, menu { list-style: none; }
+  img, svg, video, canvas, audio, iframe, embed, object { display: block; vertical-align: middle; }
+  img, video { max-width: 100%; height: auto; }
+  button, input, select, optgroup, textarea, ::file-selector-button { font-feature-settings: inherit; font-variation-settings: inherit; letter-spacing: inherit; color: inherit; border-radius: 0; background-color: transparent; opacity: 1; }
+  ::placeholder { opacity: 1; color: color-mix(in oklab, currentcolor 50%, transparent); }
+  textarea { resize: vertical; }
+  button, input:where([type=button], [type=reset], [type=submit]), ::file-selector-button { appearance: button; }
+  ::-webkit-inner-spin-button, ::-webkit-outer-spin-button { height: auto; }
+  [hidden]:where(:not([hidden=until-found])) { display: none !important; }
+
+  * { border-color: var(--color-border); }
+  body { margin: 0; font-family: var(--font-body); background-color: var(--color-background); color: var(--color-foreground); }
+}
+
+/* ---------- Utilidades usadas por el proyecto ---------- */
+@layer utilities {
+  /* .container de Tailwind (el proyecto la combina con su propia .container) */
+  .container { width: 100%; }
+  @media (width >= 40rem) { .container { max-width: 40rem; } }
+  @media (width >= 48rem) { .container { max-width: 48rem; } }
+  @media (width >= 64rem) { .container { max-width: 64rem; } }
+  @media (width >= 80rem) { .container { max-width: 80rem; } }
+  @media (width >= 96rem) { .container { max-width: 96rem; } }
+
+  /* Componente Button (shadcn/ui) traducido a clases */
+  .btn {
+    display: inline-flex; align-items: center; justify-content: center; gap: .5rem;
+    white-space: nowrap; border-radius: var(--radius-md); cursor: pointer;
+    transition-property: color, background-color, border-color, outline-color, text-decoration-color, fill, stroke;
+    transition-timing-function: cubic-bezier(.4, 0, .2, 1); transition-duration: .15s;
+  }
+  .btn:focus-visible { outline: none; box-shadow: 0 0 0 1px var(--ring); }
+  .btn:disabled { pointer-events: none; opacity: .5; cursor: not-allowed; }
+  .btn svg { pointer-events: none; width: 1rem; height: 1rem; flex-shrink: 0; }
+
+  .btn-default{background:linear-gradient(100deg,#1558C0 0%,#2E82F0 58%,#00AEB5 100%);color:#FFFFFF; box-shadow: 0 1px 3px 0 rgb(0 0 0 / .1), 0 1px 2px -1px rgb(0 0 0 / .1); }
+  .btn-hero { background-color: var(--highlight); color: var(--deep); box-shadow: 0 1px 3px 0 rgb(0 0 0 / .1), 0 1px 2px -1px rgb(0 0 0 / .1); }
+  .btn-hero-outline { border: 1px solid var(--inverse-border); background-color: transparent; color: var(--inverse); }
+  .btn-outline { border: 1px solid var(--input); background-color: var(--background); box-shadow: 0 1px 3px 0 rgb(0 0 0 / .1), 0 1px 2px -1px rgb(0 0 0 / .1); }
+  .btn-ghost { background-color: transparent; }
+  .btn-link { color: var(--primary); text-underline-offset: 4px; }
+
+  @media (hover: hover) {
+    .btn-default:hover{filter:brightness(1.06);transform:translateY(-2px);box-shadow:0 12px 26px rgba(21,88,192,.28)}
+    .btn-hero:hover { background-color: color-mix(in oklab, var(--highlight) 90%, transparent); }
+    .btn-hero-outline:hover { background-color: color-mix(in oklab, var(--inverse) 10%, transparent); }
+    .btn-outline:hover, .btn-ghost:hover { background-color: var(--brand-tint); color: var(--accent-foreground); }
+    .btn-link:hover { text-decoration-line: underline; }
+  }
+
+  .btn-size-default { height: 2.25rem; padding: .5rem 1rem; }
+  .btn-lg { height: 2.5rem; border-radius: var(--radius-md); padding-inline: 2rem; }
+  .btn-icon { height: 2.25rem; width: 2.25rem; }
+}
+
+/* =====================================================================
+   Estilos del proyecto (copiados de src/styles.css, sin cambios)
+   ===================================================================== */
+html { scroll-behavior: smooth; scroll-padding-top: 95px; }
+body { font-size: 14px; -webkit-font-smoothing: antialiased; }
+h1,h2,h3,p { margin: 0; }
+h1,h2,h3 { letter-spacing: 0; }
+h2 { }
+h3 { }
+p { line-height: 1.75; }
+a { text-decoration: none; }
+.container { width: min(1240px, calc(100% - 96px)); margin-inline: auto; }
+.section { padding-block: 84px; }
+.eyebrow { display: block; color: var(--primary); margin-bottom: 16px; }
+.eyebrow.small { margin-bottom: 10px; }
+.section-heading { display: flex; justify-content: space-between; align-items: end; gap: 40px; margin-bottom: 36px; }
+.section-heading > p { max-width: 405px; color: var(--muted-foreground); }
+
+
+
+
+.brand-symbol svg {width: 25px;height: 25px;}
+
+.main-nav a:hover,
+
+.catalog-hero { position: relative; min-height: 590px; overflow: hidden; color:var(--inverse); }
+.hero-photo {position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:70% 50%;}
+
+.hero-content {position:relative;padding-top:78px;padding-bottom:32px;}
+.hero-eyebrow {;font-size:12px;font-weight:700;letter-spacing:.14em;margin-bottom:14px;}
+.catalog-hero h1 {max-width:720px;letter-spacing:-.025em;}.catalog-hero h1 span {-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent;}
+.hero-content > p {max-width:520px;margin-top:18px;}
+.hero-actions {display:flex;gap:12px;margin-top:29px;}.hero-actions a {height:44px;font-size:11px;padding-inline:20px;}
+.hero-discover {display:flex;align-items:center;gap:10px;font-size:9px;margin-top:35px;}
+.hero-caption {position:absolute;right:48px;bottom:35px;display:flex;align-items:center;gap:15px;border:1px solid var(--inverse-border);backdrop-filter:blur(10px);padding:15px 20px;border-radius:4px;}
+.hero-caption small {display:block;margin-bottom:4px;}.hero-caption strong {font-family:var(--font-head);font-size:16px;font-weight:500;}.status-dot {width:6px;height:6px;border-radius:50%;background:var(--highlight);display:inline-block;}
+.solution-section{background:linear-gradient(115deg,#FFFFFF 0%,#F7FAFF 48%,#EAF3FF 100%);border-bottom:1px solid #DCE6F2;padding-block:45px;}.solution-section .container {display:grid;grid-template-columns:1fr 1.1fr 1.1fr;gap:30px;align-items:center;}.solution-intro h2{color:#183458;}.solution-intro .eyebrow{margin-bottom:10px;color:#0877D8;}.solution-intro p{color:#526783;margin-top:11px;line-height:1.6;}
+.solution-item{position:relative;display:flex;align-items:center;gap:16px;border-left:1px solid #DCE6F2;padding:8px 22px;background:transparent;transition:background .2s,border-color .2s;}.solution-item > svg:first-child{width:27px;height:27px;color:#1558C0;flex-shrink:0;margin-top:0;}.solution-item > div {flex:1;min-width:0;}.solution-item h3{color:#183458;}.solution-item p{font-size:11px;color:#526783;margin-top:10px;line-height:1.6;}.solution-item .solution-arrow{width:17px;flex-shrink:0;color:#1558C0;align-self:center;transition:transform .2s;}.solution-item:hover h3{color:#0877D8;}.solution-item:hover .solution-arrow {transform:translateX(3px);}.catalog-section{background:linear-gradient(115deg,#FFFFFF 0%,#F7FAFF 48%,#EAF3FF 100%);border-bottom:1px solid #DCE6F2;}.professional-section{background:linear-gradient(115deg,#F8FBFF 0%,#FFFFFF 52%,#EDF5FF 100%);border-top:1px solid #DCE6F2;border-bottom:1px solid #DCE6F2;}
+#metrologia .section-heading .eyebrow,#profesionales .section-heading .eyebrow{color:#0877D8;}
+#metrologia .section-heading h2,#profesionales .section-heading h2{background:linear-gradient(100deg,#1558C0 0%,#2E82F0 52%,#00B8BD 100%);background-clip:text;-webkit-background-clip:text;color:transparent;-webkit-text-fill-color:transparent;}
+#metrologia .section-heading .section-sub,#profesionales .section-heading .section-sub{color:#526783;}
+.product-grid {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:24px;}.scanner-card {border:1px solid var(--border);border-radius:5px;overflow:hidden;background:var(--card);transition:box-shadow .25s,transform .25s;}.scanner-card:hover {box-shadow:var(--shadow-product);transform:translateY(-4px);}
+.scanner-image {aspect-ratio:1.5;position:relative;overflow:hidden;background:var(--muted);}.scanner-image img {width:100%;height:100%;object-fit:cover;transition:transform .5s;}.scanner-card:hover img {transform:scale(1.035);}.product-badge {position:absolute;top:15px;left:15px;padding:5px 8px;background:var(--primary);color:var(--primary-foreground);font-size:8px;font-weight:600;border-radius:2px;}.image-brand {position:absolute;bottom:15px;right:16px;font-family:var(--font-head);font-size:11px;font-weight:600;color:var(--foreground);}
+.scanner-body {padding:25px 24px 0;}.scanner-body h3 {min-height:28px;}.scanner-body > p {font-size:12px;color:var(--muted-foreground);margin-top:12px;min-height:43px;}.product-feature {display:flex;gap:8px;align-items:center;font-size:10px;color:var(--muted-foreground);margin-top:22px;}.product-feature svg {color:var(--primary);}.card-action {border-top:1px solid var(--border);margin-top:20px;padding-block:9px;}.card-action a {padding-inline:0;justify-content:space-between;width:100%;font-size:11px;}
+.catalog-bottom {display:flex;align-items:center;gap:25px;margin-top:30px;color:var(--muted-foreground);font-size:12px;}.catalog-bottom a {font-size:12px;}
+.process-section{background:linear-gradient(115deg,#FFFFFF 0%,#F7FAFF 48%,#EAF3FF 100%)!important;color:#172B45!important;}.process-section .eyebrow{color:#0877D8!important;}.process-section .section-heading h2{color:#183458!important;-webkit-text-fill-color:#183458!important;}.process-section .section-heading h2 span{background:linear-gradient(100deg,#1558C0 0%,#2E82F0 52%,#00B8BD 100%);background-clip:text;-webkit-background-clip:text;color:transparent!important;-webkit-text-fill-color:transparent!important;}.process-section .section-heading p,.process-section .step p{color:#526783!important;}.process-section .step h3{color:#183458!important;}.process-section .steps .step{border-top-color:#DCE6F2;}.process-section .steps .step:not(:first-child){border-left-color:#DCE6F2;}.process-section .step-top{color:#0877D8!important;}.process-section .step-top span{color:#8BA4C0!important;}
+.process-section .steps{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:18px;margin:42px auto 0;align-items:stretch;}
+.process-section .step{min-width:0;position:relative;padding:24px 20px 22px;border:1px solid #DCE6F2;border-radius:14px;background:rgba(255,255,255,.88);box-shadow:0 10px 28px rgba(21,88,192,.07);transition:transform .22s ease,border-color .22s ease,background .22s ease;}
+.process-section .step:hover{transform:translateY(-4px);border-color:#8CB8E8;background:#FFFFFF;}
+.process-section .step-top{margin-bottom:22px;}
+.process-section .step-top span{font-size:30px;line-height:1;}
+.process-section .step h3{color:#183458!important;}
+.applications-section{background:linear-gradient(125deg,#0C1422 0%,#10213A 58%,#0E1B33 100%)!important;color:#F4F6F9!important;}.applications-copy>.eyebrow{color:#8BD8FF!important;}.applications-copy h2{color:#F2F7FF!important;-webkit-text-fill-color:#F2F7FF!important;}.applications-copy h2 span{background:linear-gradient(100deg,#8AF5F0 0%,#A9C8FF 55%,#2E82F0 100%);background-clip:text;-webkit-background-clip:text;color:transparent!important;-webkit-text-fill-color:transparent!important;}.applications-section>.container{display:grid;grid-template-columns:1fr 1fr;gap:65px;align-items:center;}.applications-photo{position:relative;aspect-ratio:1.07;}.applications-photo img{width:100%;height:100%;object-fit:cover;border-radius:4px;}.applications-photo>span{position:absolute;bottom:20px;left:20px;display:flex;gap:10px;align-items:center;color:#F4F6F9;background:#0E1B33;padding:11px 14px;font-size:9px;} .applications-copy h3{color:#F2F7FF!important;}.application-list{margin-top:27px;} .application-list>div{display:flex;align-items:center;gap:17px;border-bottom:1px solid rgba(244,246,249,.22);padding:17px 0;} .application-list>div>svg:first-child{color:#00B8BD!important;}.application-list>div>svg:last-child{color:#8BD8FF!important;}.application-list>div>svg:first-child{width:21px;flex-shrink:0;}.application-list>div>svg:last-child{margin-left:auto;flex-shrink:0;} .application-list p{font-size:11px;color:#D6E7F8!important;margin-top:4px;}.applications-copy>a{padding:0;margin-top:25px;font-size:11px;}
+.contact-banner {background:var(--contact-gradient);padding:58px 0;color:var(--inverse);}.contact-banner .container {display:flex;align-items:center;justify-content:space-between;gap:30px;}.contact-banner .eyebrow {color:var(--highlight);}.contact-banner h2 {}.contact-banner p {font-size:12px;margin-top:16px;color:color-mix(in oklch,var(--inverse) 70%,transparent);}.contact-banner a {font-size:12px;height:47px;}
+.footer-top p {font-size:11px;color:var(--muted-foreground);margin-top:15px;}.partner-mark small {display:block;margin-top:5px;}
+.page-breadcrumb {font-size:10px;display:flex;gap:12px;padding-top:29px;flex-wrap:wrap;color:var(--muted-foreground);}.page-breadcrumb a {color:var(--primary);}.section-lead {max-width:640px;color:var(--muted-foreground);margin-top:22px;font-size:14px;}.three-columns {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:40px;margin-top:45px;}.three-columns > div {border-top:1px solid var(--border);padding-top:25px;}.three-columns p {font-size:13px;color:var(--muted-foreground);margin-top:16px;}.software-number {display:block;font-family:var(--font-head);font-size:35px;color:var(--primary);margin-bottom:18px;}
+.contact-layout {display:grid;grid-template-columns:.8fr 1.2fr;gap:80px;}.contact-intro h2 {}.contact-intro > p {margin-top:24px;color:var(--muted-foreground);font-size:13px;max-width:345px;}.contact-points {display:grid;gap:18px;margin-top:40px;font-size:12px;}.contact-points span {display:flex;gap:12px;align-items:center;}.contact-points svg {color:var(--primary);width:17px;height:17px;}.demo-note {margin-top:42px;border-top:1px solid var(--border);padding-top:18px;font-size:10px;color:var(--muted-foreground);}.project-form {display:grid;gap:21px;}.project-form fieldset {border:0;padding:0;margin:0;}.project-form legend {font-weight:600;margin-bottom:15px;font-size:12px;}.reason-grid {display:grid;grid-template-columns:repeat(3,1fr);gap:10px;}.reason-option {position:relative;display:flex;flex-direction:column;align-items:start;border:1px solid var(--border);padding:15px 12px;gap:14px;font-size:10px;font-weight:600;border-radius:4px;cursor:pointer;}.reason-option.selected {border-color:var(--primary);background:var(--brand-tint);color:var(--primary);}.reason-option > input {position:absolute;opacity:0;width:1px;height:1px;}.reason-option:focus-within {outline:2px solid var(--ring);outline-offset:2px;}.reason-option > svg {width:21px;height:21px;}.reason-check {position:absolute;right:12px;top:15px;width:15px;height:15px;border:1px solid var(--border);display:grid;place-items:center;border-radius:3px;}.selected .reason-check {background:var(--primary);border-color:var(--primary);color:var(--primary-foreground);}.form-grid {display:grid;grid-template-columns:1fr 1fr;gap:18px;}.project-form > label,.form-grid > label {display:flex;flex-direction:column;gap:9px;font-size:11px;font-weight:600;}.project-form label > span:not(.reason-check) {color:var(--primary);}.project-form input:not([type=checkbox]),.project-form select,.project-form textarea {width:100%;border:1px solid var(--border);border-radius:4px;background:var(--card);color:var(--foreground);padding:12px;font-family:var(--font-body);font-size:11px;font-weight:400;outline:none;}.project-form input:focus,.project-form select:focus,.project-form textarea:focus {border-color:var(--primary);box-shadow:0 0 0 2px var(--brand-tint);}.project-form textarea {resize:vertical;}.form-submit {display:flex;justify-content:space-between;align-items:center;gap:20px;}.form-submit > span {color:var(--muted-foreground);font-size:10px;}.form-submit button {}.form-error {color:var(--destructive);font-size:12px;}.form-success {align-self:center;padding:45px;border:1px solid var(--border);text-align:center;}.form-success h3 {margin-top:20px;}.form-success p {margin-block:20px;color:var(--muted-foreground);}.success-icon {width:55px;height:55px;background:var(--brand-tint);color:var(--primary);display:grid;place-items:center;margin:auto;border-radius:50%;}
+.product-hero {padding-block:40px 60px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;}.product-main-image {position:relative;aspect-ratio:1;background:var(--muted);border-radius:5px;overflow:hidden;}.product-main-image img {width:100%;height:100%;object-fit:contain;}.product-presentation h1 {}.product-presentation h1 span {color:var(--primary);}.product-lead {font-family:var(--font-head);font-size:23px;line-height:1.3;margin-top:23px;}.product-presentation > p:not(.product-lead) {font-size:12px;color:var(--muted-foreground);margin-top:18px;}.product-stats {display:grid;grid-template-columns:repeat(3,1fr);gap:15px;padding:24px 0;margin-top:15px;border-block:1px solid var(--border);}.product-stats strong {display:block;font-size:31px;font-family:var(--font-head);font-weight:600;}.product-stats small {}.product-stats span {font-size:9px;color:var(--muted-foreground);}.product-ctas {display:flex;flex-wrap:wrap;gap:10px;margin-top:23px;}.product-ctas a {font-size:10px;padding-inline:16px;}.product-cert {font-size:9px;color:var(--muted-foreground);display:block;margin-top:20px;line-height:1.6;}.product-nav {border-block:1px solid var(--border);background:var(--card);position:sticky;top:0;z-index:20;}.product-nav .container {display:flex;gap:35px;align-items:center;min-height:59px;}.product-nav a {font-size:11px;white-space:nowrap;}.product-nav a:last-child {margin-left:auto;display:flex;align-items:center;gap:10px;color:var(--primary);}.benefit-grid {display:grid;grid-template-columns:repeat(4,1fr);gap:32px;margin-top:45px;}.benefit-grid svg {color:var(--primary);margin-bottom:20px;width:27px;height:27px;}.benefit-grid h3 {}.benefit-grid p {color:var(--muted-foreground);font-size:12px;margin-top:14px;}.product-use {display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center;margin-top:80px;}.product-use img {width:100%;aspect-ratio:1.2;object-fit:cover;border-radius:4px;}.product-use p {margin-top:22px;color:var(--muted-foreground);font-size:12px;}.product-use ul {list-style:none;padding:0;display:grid;gap:14px;margin-top:25px;}.product-use li {display:flex;align-items:center;gap:10px;font-size:11px;}.product-use li svg {width:15px;color:var(--primary);}.muted-note {color:var(--muted-foreground);font-size:10px;line-height:1.8;margin-top:22px;}.muted-note a {color:var(--primary);display:inline-flex;align-items:center;gap:5px;}.specs-section {background:var(--card);border-block:1px solid var(--border);}.spec-table {display:grid;grid-template-columns:1fr 1fr;column-gap:50px;margin:0;}.spec-table > div {display:flex;justify-content:space-between;gap:15px;padding:17px 0;border-bottom:1px solid var(--border);font-size:11px;}.spec-table dt {color:var(--muted-foreground);}.spec-table dd {margin:0;text-align:right;font-weight:600;}.model-pro-section{background:linear-gradient(125deg,#0C1422 0%,#10213A 58%,#0E1B33 100%);color:var(--inverse);}.model-pro-section .container {display:grid;grid-template-columns:1fr 1fr;gap:80px;}.model-pro-section .eyebrow {color:var(--highlight);}.model-pro-section p {color:color-mix(in oklch,var(--inverse) 68%,transparent);font-size:12px;margin-top:22px;max-width:400px;}.purchase-list details {padding:21px 0;border-bottom:1px solid var(--inverse-border);}.purchase-list summary {font-family:var(--font-head);font-size:21px;cursor:pointer;}.purchase-list p {max-width:none;}
+@media(min-width:1600px){.catalog-hero{min-height:640px;}.hero-content{padding-top:60px;}.hero-photo{object-position:70% 55%;}}
+@media(max-width:1100px){.container{width:calc(100% - 56px);}.hero-caption{right:28px;}.hero-content > p{max-width:410px;}.catalog-hero h1{}.solution-section .container{gap:14px;}.solution-item{padding-inline:16px;gap:12px;}.solution-item h3{}.solution-arrow{display:none;}.applications-section > .container{gap:35px;}.contact-layout{gap:40px;}.product-hero{gap:35px;}.product-presentation h1{}.scanner-body h3{}.scanner-body{padding-inline:20px;}}
+@media(max-width:767px){.container{width:calc(100% - 40px);}.section{padding-block:55px;}h2{}.header-cta svg{width:13px;}.main-nav.open{display:flex;}.catalog-hero{min-height:625px;}.hero-photo{object-position:60% 50%;}.hero-content{padding-top:58px;padding-bottom:110px;}.catalog-hero h1{max-width:440px;}.hero-content > p{max-width:420px;margin-top:18px;}.hero-actions{gap:9px;flex-wrap:wrap;margin-top:27px;}.hero-actions a{padding-inline:12px;font-size:10px;height:43px;}.hero-discover{margin-top:27px;font-size:8px;}.hero-caption{left:20px;right:auto;bottom:23px;padding:12px 15px;}.hero-caption strong{font-size:14px;}.hero-caption small{}.solution-section{padding-block:35px;}.solution-section .container{grid-template-columns:1fr;gap:22px;}.solution-intro p br{display:none;}.solution-item{border-left:0;border-top:1px solid #DCE6F2;padding:23px 0 0;gap:18px;}.solution-item .solution-arrow{display:block;margin-left:auto;}.solution-item > svg:first-child{margin-top:10px;}.solution-item p{max-width:300px;}.section-heading{display:block;margin-bottom:28px;}.section-heading > p{margin-top:20px;}.product-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:15px;}.scanner-body{padding:18px 14px 0;}.scanner-body h3{min-height:48px;}.scanner-body > p{font-size:11px;min-height:58px;margin-top:7px;}.eyebrow.small{min-height:19px;}.scanner-image{aspect-ratio:1.15;}.product-badge{font-size:6px;left:8px;top:8px;padding:4px 5px;}.image-brand{font-size:8px;bottom:10px;right:10px;}.product-feature{font-size:8px;min-height:28px;gap:6px;margin-top:14px;}.product-feature svg{flex-shrink:0;width:12px;}.card-action{margin-top:13px;}.card-action a{font-size:9px;}.card-action a svg{width:13px;}.catalog-bottom{display:block;font-size:11px;}.catalog-bottom a{padding-left:0;margin-top:8px;}.steps{grid-template-columns:1fr 1fr;gap:30px 0;margin-top:35px;}.step{padding-right:18px;}.step:nth-child(3){border-left:0;padding-left:0;}.step h3{}.step p{font-size:11px;}.applications-section > .container{grid-template-columns:1fr;gap:35px;}.applications-photo{aspect-ratio:1.4;}.applications-copy h2{}.contact-banner .container{display:block;}.contact-banner h2{}.contact-banner a{margin-top:27px;}.footer-bottom > span{display:block;}.contact-layout{grid-template-columns:1fr;gap:40px;}.contact-intro h2{}.contact-points{margin-top:24px;gap:12px;}.demo-note{margin-top:25px;}.form-grid{gap:13px;}.reason-grid{gap:7px;}.reason-option{font-size:9px;padding:13px 10px;}.reason-check{right:8px;}.form-submit button{padding-inline:18px;}.form-success{padding:30px;}.three-columns{grid-template-columns:1fr;gap:25px;margin-top:30px;}.product-hero{grid-template-columns:1fr;gap:30px;padding-block:30px 45px;}.product-main-image{aspect-ratio:1.25;}.product-presentation h1{}.product-nav .container{overflow:auto;gap:25px;min-height:53px;}.product-nav a{font-size:10px;}.product-nav a:last-child{margin-left:0;}.benefit-grid{grid-template-columns:1fr 1fr;gap:30px 20px;}.benefit-grid h3{}.benefit-grid p{font-size:11px;}.product-use{grid-template-columns:1fr;gap:30px;margin-top:50px;}.spec-table{grid-template-columns:1fr;}.model-pro-section .container{grid-template-columns:1fr;gap:25px;}.page-breadcrumb{font-size:9px;gap:8px;}.technology-detail h2{}}
+@media(max-width:360px){.catalog-hero h1{}.hero-actions a{font-size:9px;}.scanner-body h3{}.reason-option{font-size:8px;}}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto;}*,*::before,*::after{transition:none!important;animation:none!important;}}
+
+
+/* ===== Imágenes de tarjetas, proceso y aplicaciones ===== */
+/* Imágenes reales y consistentes en las secciones de la maqueta */
+.choice-art{height:auto!important;aspect-ratio:16/9!important;min-height:150px!important;overflow:hidden!important;padding:12px!important;background:#F7FAFF!important}
+.choice-art img{display:block;width:100%;height:100%;max-height:190px;object-fit:contain}
+.product-visual.product-image{overflow:hidden;padding:10px}
+.product-visual.product-image img{display:block;width:100%;height:100%;object-fit:contain}
+.process article{overflow:hidden;padding:0 0 20px}
+.process-image{display:block;width:100%;height:138px;object-fit:contain;padding:12px;background:#F7FAFF;border-radius:12px 12px 0 0;margin-bottom:16px}
+.process article h3,.process article p{margin-left:20px;margin-right:20px}
+.application{overflow:hidden;padding:0 0 18px}
+.application-image{display:block;width:100%;height:130px;object-fit:contain;padding:10px;background:#F7FAFF;border-radius:12px 12px 0 0;margin-bottom:15px}
+.application b,.application p{margin-left:18px;margin-right:18px}
+#scanner-request-form .scanner-form-progress{display:none!important}
+#scanner-request-form .scanner-form-group{margin:0 0 26px;padding:0 0 24px;border-bottom:1px solid #DCE6F2}
+#scanner-request-form .scanner-form-group:last-of-type{margin-bottom:18px;padding-bottom:0;border-bottom:0}
+#scanner-request-form .scanner-form-section-title{margin:0 0 5px;color:#1558C0;letter-spacing:-.01em}
+#scanner-request-form .scanner-form-section-description{margin:0 0 16px;color:#64768B}
+#scanner-request-form .scanner-request-fields{margin-top:0!important}
+#scanner-request-form .scanner-request-fields>label{min-width:0}
+#scanner-request-form .scanner-request-full{grid-column:1/-1!important}
+#scanner-request-form .scanner-form-actions{justify-content:flex-start!important;margin-top:18px!important}
+#scanner-request-form .scanner-form-actions button{min-width:190px!important}
+#scanner-request-form .scanner-request-privacy{margin-top:12px!important}
+@media(max-width:520px){
+ .choice-art{min-height:125px!important}
+ .process-image,.application-image{height:115px}
+ #scanner-request-form .scanner-request-fields{grid-template-columns:1fr!important}
+}
+
+
+/* ===== Opciones visuales del formulario ===== */
+#scanner-request-form .scanner-choice-fieldset{border:0;padding:0;margin:0 0 20px;min-width:0}
+#scanner-request-form .scanner-choice-fieldset legend{display:block;width:100%;margin:0 0 18px;color:#183458;font-size:20px;font-weight:800}
+#scanner-request-form .scanner-choice-fieldset legend span{font-size:14px;font-weight:400;color:#64768B;margin-left:7px}
+#scanner-request-form .scanner-choice-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px}
+#scanner-request-form .scanner-choice-card{position:relative;display:flex;flex-direction:column;align-items:flex-start;gap:7px;min-height:154px;padding:20px 17px;border:1px solid #D6E3F1;border-radius:18px;background:#fff;cursor:pointer;transition:border-color .2s,background .2s,box-shadow .2s}
+#scanner-request-form .scanner-choice-card input{position:absolute;top:13px;right:13px;width:20px;height:20px;accent-color:#2E82F0}
+#scanner-request-form .scanner-choice-card b{padding-right:24px;color:#183458;font-size:16px;line-height:1.25}
+#scanner-request-form .scanner-choice-card small{color:#64768B}
+#scanner-request-form .scanner-choice-icon{font-size:23px;line-height:1;color:#64768B;margin-bottom:5px}
+#scanner-request-form .scanner-choice-card:has(input:checked){border-color:#2E82F0;background:#EAF3FF;box-shadow:0 0 0 2px rgba(24,134,213,.10)}
+#scanner-request-form .scanner-choice-hint{margin:12px 0 0;color:#64768B;font-size:13px}
+#scanner-request-form .scanner-dynamic-details{padding-top:8px}
+#scanner-request-form .scanner-form-group{margin:0 0 22px;padding:0 0 20px;border-bottom:1px solid #DCE6F2}
+#scanner-request-form .scanner-form-group:last-of-type{border-bottom:0}
+#scanner-request-form .scanner-form-section-title{margin:0 0 7px;color:#1558C0}
+#scanner-request-form .scanner-form-section-description{margin:0 0 14px;color:#64768B}
+#scanner-request-form [hidden]{display:none!important}
+@media(max-width:700px){#scanner-request-form .scanner-choice-grid{grid-template-columns:1fr}#scanner-request-form .scanner-choice-card{min-height:110px}}
+
+
+
+/* Reglas tipográficas globales: prevalecen sobre estilos heredados */
+body{font:400 var(--fs-body)/1.65 var(--font-body);}
+h1,h2,h3{font-family:var(--font-head);margin:0;}
+h1{font-size:var(--fs-h1);font-weight:800;line-height:1.05;letter-spacing:-.02em;}
+h2{font-size:var(--fs-h2);font-weight:700;line-height:1.15;letter-spacing:-.015em;}
+h3{font-size:var(--fs-h3);font-weight:700;line-height:1.3;}
+.eyebrow{font:600 var(--fs-eyebrow)/1.4 var(--font-body);text-transform:uppercase;letter-spacing:.08em;}
+.lead{font-size:var(--fs-lead);line-height:1.55;max-width:60ch;}
+.section-sub{font-size:var(--fs-sub);line-height:1.6;max-width:65ch;}
+.spec{font-family:var(--font-mono);font-weight:500;}
+button,.btn{font:600 15px/1 var(--font-body);text-transform:none;}
+small,.small{font-size:var(--fs-small);line-height:1.5;}
+
+/* ===== HERO: imagen visible bajo overlay marino translúcido ===== */
+.catalog-hero{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  background:var(--secondary);
+  color:#F4F6F9;
+}
+.catalog-hero .hero-photo{
+  position:absolute;
+  z-index:0;
+  inset:0;
+  display:block;
+  width:100%;
+  height:100%;
+  max-width:none;
+  object-fit:cover;
+  object-position:70% 50%;
+}
+.catalog-hero .hero-shade{
+  position:absolute;
+  z-index:1;
+  inset:0;
+  width:100%;
+  height:100%;
+  pointer-events:none;
+  background:linear-gradient(90deg,
+    rgba(14,27,51,.84) 0%,
+    rgba(14,27,51,.72) 38%,
+    rgba(14,27,51,.48) 68%,
+    rgba(14,27,51,.22) 100%);
+}
+.catalog-hero .hero-content{
+  position:relative;
+  z-index:2;
+}
+.catalog-hero h1{color:#FFFFFF;}
+.catalog-hero h1 span{
+  background-image:linear-gradient(100deg,#8AF5F0 0%,#A9C8FF 55%,#2E82F0 100%);
+  -webkit-background-clip:text;
+  background-clip:text;
+  color:transparent;
+  -webkit-text-fill-color:transparent;
+}
+.catalog-hero .hero-eyebrow{color:#8BD8FF;}
+.catalog-hero .hero-content > p{color:#F4F6F9;}
+.catalog-hero .hero-discover{color:rgba(244,246,249,.86);}
+.catalog-hero .hero-caption{
+  z-index:2;
+  background:rgba(14,27,51,.58);
+  border-color:rgba(244,246,249,.32);
+  color:#F4F6F9;
+}
+.catalog-hero .hero-caption small{color:#00B8BD;}
+.catalog-hero .hero-caption strong{color:#FFFFFF;}
+/* Hero: reutiliza las variantes .btn existentes con el acabado del hero oscuro ZW3D */
+.catalog-hero .hero-actions .btn-hero{
+  min-height:48px;
+  padding:11px 22px;
+  border:1px solid transparent;
+  border-radius:10px;
+  background:linear-gradient(110deg,#00AEB5,#2E82F0);
+  background-image:linear-gradient(110deg,#00AEB5,#2E82F0);
+  color:#fff;
+  box-shadow:0 8px 20px rgba(0,174,181,.20);
+  transition:background .22s ease,background-image .22s ease,transform .22s ease,box-shadow .22s ease,filter .22s ease;
+}
+.catalog-hero .hero-actions .btn-hero:hover,
+.catalog-hero .hero-actions .btn-hero:focus-visible{
+  background:linear-gradient(110deg,#00AEB5,#2E82F0);
+  background-image:linear-gradient(110deg,#00AEB5,#2E82F0);
+  color:#fff;
+  transform:translateY(-3px);
+  box-shadow:0 12px 26px rgba(0,174,181,.30);
+  filter:brightness(1.08);
+}
+.catalog-hero .hero-actions .btn-hero-outline{
+  min-height:48px;
+  padding:11px 20px;
+  border:1px solid rgba(244,246,249,.55);
+  border-radius:10px;
+  background:transparent;
+  color:#F4F6F9;
+  box-shadow:none;
+  transition:background .22s ease,border-color .22s ease,color .22s ease,transform .22s ease;
+}
+.catalog-hero .hero-actions .btn-hero-outline:hover,
+.catalog-hero .hero-actions .btn-hero-outline:focus-visible{
+  border-color:#fff;
+  background:rgba(244,246,249,.12);
+  color:#fff;
+  transform:translateY(-2px);
+}
+.catalog-hero .hero-actions a:focus-visible{
+  outline:3px solid rgba(0,184,189,.38);
+  outline-offset:3px;
+}
+@media(max-width:767px){
+  .catalog-hero .hero-actions .btn-hero,
+  .catalog-hero .hero-actions .btn-hero-outline{
+    min-height:46px;
+    padding:11px 17px;
+    font-size:14px;
+  }
+}
+
+/* ===== Hero: composición limpia y mejor distribuida ===== */
+.catalog-hero{min-height:620px;}
+.catalog-hero .hero-content{
+  min-height:620px;
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:flex-start;
+  padding-top:76px;
+  padding-bottom:76px;
+}
+.catalog-hero .hero-eyebrow{margin-bottom:22px;}
+.catalog-hero h1{max-width:760px;}
+.catalog-hero .hero-content > p{
+  max-width:570px;
+  margin-top:26px;
+  line-height:1.65;
+}
+.catalog-hero .hero-actions{margin-top:36px;gap:18px;}
+@media(max-width:767px){
+  .catalog-hero{min-height:640px;}
+  .catalog-hero .hero-content{
+    min-height:640px;
+    padding-top:64px;
+    padding-bottom:64px;
+  }
+  .catalog-hero .hero-eyebrow{margin-bottom:18px;}
+  .catalog-hero .hero-content > p{margin-top:22px;max-width:100%;}
+  .catalog-hero .hero-actions{margin-top:30px;gap:12px;}
+}
+
+
+/* ===== Orientación, tarjetas ampliadas y navegación de Escáneres 3D ===== */
+.scanner-choice-guide{padding:64px 0;background:linear-gradient(115deg,#FFFFFF 0%,#F7FAFF 48%,#EAF3FF 100%);color:#172B45}
+.scanner-choice-guide h2,.scanner-compare-section h2,.scanner-faq-section h2{color:#183458}
+.scanner-choice-guide .eyebrow,.scanner-compare-section .eyebrow,.scanner-faq-section .eyebrow{color:#0877D8}
+.scanner-guide-lead{max-width:650px;margin:14px 0 30px;color:#526783}
+.scanner-guide-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px}
+.scanner-guide-grid article{padding:22px;border:1px solid #DCE6F2;border-radius:14px;background:#FFFFFF}
+.scanner-guide-grid article>span{display:inline-flex;margin-bottom:15px;color:#0877D8;font-weight:800}
+.scanner-guide-grid h3{color:#183458;font-size:18px}
+.scanner-guide-grid p{margin-top:9px;color:#526783;font-size:13px;line-height:1.65}
+.scanner-card{position:relative}
+.scanner-card.is-selected{border:2px solid #2E82F0;box-shadow:0 12px 32px rgba(46,130,240,.16)}
+.scanner-card-specs{display:grid;gap:0;margin-top:18px;border-top:1px solid #DCE6F2}
+.scanner-card-specs>div{display:grid;grid-template-columns:minmax(100px,.78fr) minmax(0,1.22fr);gap:12px;padding:9px 0;border-bottom:1px solid #E7EEF7}
+.scanner-card-specs dt{color:#64768B;font-size:11px;font-weight:650}
+.scanner-card-specs dd{margin:0;color:#183458;font-size:11px;line-height:1.45}
+.scanner-card .product-feature{margin-top:15px}
+.scanner-card-actions{display:grid;grid-template-columns:1fr 1fr;align-items:center;gap:10px;padding:12px 0}
+.scanner-select-model,.scanner-demo-link{display:inline-flex;align-items:center;justify-content:center;min-height:42px;padding:9px 12px;border-radius:10px;font:inherit;font-size:11px;font-weight:700;text-align:center;text-decoration:none;cursor:pointer}
+.scanner-select-model{border:1px solid #8CB8E8;background:rgba(255,255,255,.82);color:#1558C0}
+.scanner-card.is-selected .scanner-select-model{border-color:transparent;background:linear-gradient(100deg,#1558C0 0%,#2E82F0 58%,#00AEB5 100%);color:#FFFFFF}
+.scanner-demo-link{border:1px solid #8CB8E8;background:#FFFFFF;color:#1558C0}
+.scanner-compare-section{padding:76px 0;background:#0C1422;color:#F4F6F9;background-image:radial-gradient(ellipse at 12% 0%,rgba(46,130,240,.18),transparent 42%),radial-gradient(ellipse at 88% 100%,rgba(0,184,189,.12),transparent 42%)}
+.scanner-compare-section .section-heading{display:block;text-align:left}
+.scanner-compare-section .section-heading>div{max-width:100%;text-align:left}
+.scanner-compare-section .section-heading .section-sub{display:block;max-width:100%;width:100%;margin:12px 0 0;text-align:left;color:#D6E7F8}
+.scanner-compare-section h2{color:#F2F7FF}
+.scanner-compare-section .section-sub{color:#D6E7F8}
+.scanner-compare-section .eyebrow{color:#8BD8FF}
+.scanner-compare-scroll{overflow-x:auto;border:1px solid rgba(164,200,244,.22);border-radius:14px;background:#0E1B33}
+.scanner-compare-table{width:100%;min-width:980px;border-collapse:separate;border-spacing:0;color:#D6E7F8;font-size:12px}
+.scanner-compare-table th,.scanner-compare-table td{padding:15px 13px;border-bottom:1px solid rgba(164,200,244,.14);text-align:left;vertical-align:top;line-height:1.5}
+.scanner-compare-table thead th{position:sticky;top:0;background:#142D50;color:#F2F7FF;font-weight:750}
+.scanner-compare-table tbody th{min-width:145px;color:#8BD8FF;font-weight:700}
+.scanner-compare-table [data-model].is-selected{background:rgba(46,130,240,.18);box-shadow:inset 0 0 0 1px rgba(46,130,240,.3);color:#FFFFFF}
+.scanner-compare-note{margin-top:15px;color:#AFC5DF;font-size:11px;line-height:1.6}
+.scanner-faq-section{
+  padding:76px 0;
+  background:linear-gradient(125deg,#0C1422 0%,#10213A 58%,#0E1B33 100%);
+  color:#F4F6F9;
+}
+.scanner-faq-section .section-heading{
+  display:flex;flex-direction:column;
+  align-items:flex-start;justify-content:flex-start;
+  gap:10px;margin:0 0 30px;text-align:left;
+}
+.scanner-faq-section .section-heading>div{
+  display:block;width:100%;max-width:none;margin:0;
+}
+.scanner-faq-section .eyebrow{color:#8BD8FF}
+.scanner-faq-section h2{
+  background:linear-gradient(100deg,#8AF5F0 0%,#A9C8FF 55%,#2E82F0 100%);
+  background-clip:text;-webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;color:transparent;
+}
+.scanner-faq-section .section-sub{
+  display:block;width:100%;max-width:none;
+  margin:0;text-align:left;color:#D6E7F8;
+}
+.scanner-faq-list{max-width:900px;margin:0 auto;border-top:1px solid rgba(139,216,255,.25)}
+.scanner-faq-list details{border-bottom:1px solid rgba(139,216,255,.2)}
+.scanner-faq-list summary{position:relative;padding:20px 44px 20px 4px;color:#F2F7FF;font-weight:750;cursor:pointer;list-style:none}
+.scanner-faq-list summary::-webkit-details-marker{display:none}
+.scanner-faq-list summary:after{content:"+";position:absolute;right:8px;top:14px;color:#00B8BD;font-size:24px;font-weight:400}
+.scanner-faq-list details[open] summary:after{content:"−"}
+.scanner-faq-list details p{max-width:780px;padding:0 40px 20px 4px;color:#D6E7F8;font-size:13px;line-height:1.7}
+/* Guía de decisión por tamaño y aplicación */
+.scanner-size-guide{padding:68px 0;background:linear-gradient(125deg,#0C1422 0%,#10213A 58%,#0E1B33 100%);color:#F4F6F9}
+.scanner-size-guide .section-heading{margin-bottom:26px}
+.scanner-size-guide h2{color:#F2F7FF}
+.scanner-size-guide .eyebrow{color:#8BD8FF}
+.scanner-size-guide .section-sub{color:#D6E7F8}
+.scanner-size-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.scanner-size-grid article{min-height:205px;padding:21px;border:1px solid rgba(139,216,255,.22);border-radius:14px;background:linear-gradient(145deg,rgba(20,45,80,.82),rgba(14,27,51,.94))}
+.scanner-size-tag{display:block;margin-bottom:14px;color:#00B8BD;font-size:10px;font-weight:800;letter-spacing:.07em}
+.scanner-size-grid h3{margin:0;color:#F2F7FF;font-size:16px;line-height:1.35}
+.scanner-size-grid p{margin:10px 0 0;color:#D6E7F8;font-size:12px;line-height:1.65}
+.scanner-size-note{margin:18px 0 0;color:#8BD8FF;font-size:11px;line-height:1.6}
+.scanner-application-bridge{padding:48px 0;background:linear-gradient(125deg,#0C1422 0%,#10213A 58%,#0E1B33 100%);color:#F4F6F9}
+.scanner-application-bridge .eyebrow{color:#8BD8FF}
+.scanner-application-layout{display:grid;grid-template-columns:minmax(0,1.3fr) minmax(260px,.9fr);align-items:center;gap:34px}
+.scanner-application-bridge h2{max-width:650px;color:#F2F7FF}
+.scanner-application-bridge p{max-width:680px;margin:12px 0 0;color:#D6E7F8;font-size:13px;line-height:1.7}
+.scanner-application-tags{display:flex;flex-wrap:wrap;gap:9px}
+.scanner-application-tags span{padding:9px 13px;border:1px solid rgba(139,216,255,.3);border-radius:999px;background:rgba(20,45,80,.62);color:#F2F7FF;font-size:11px;font-weight:650}
+.scanner-bubble-question{display:block;padding:11px 0;border-top:1px solid rgba(21,88,192,.14);text-decoration:none}
+.scanner-bubble-question b{display:block;color:#1558C0;font-size:12px}
+.scanner-bubble-question p{margin:4px 0;color:#526783;font-size:11px;line-height:1.5}
+.scanner-bubble-links .scanner-bubble-question span{color:#0877D8;font-size:10px;font-weight:750}
+.scanner-bubble-links .scanner-bubble-question:hover b,.scanner-bubble-links .scanner-bubble-question:hover span{text-decoration:underline}
+@media(max-width:900px){.scanner-size-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.scanner-application-layout{grid-template-columns:1fr;gap:20px}}
+@media(max-width:767px){.scanner-size-guide{padding:54px 0}.scanner-size-grid{grid-template-columns:1fr}.scanner-size-grid article{min-height:0}.scanner-application-bridge{padding:42px 0}}
+/* Correcciones de lectura, jerarquía y controles */
+.scanner-choice-guide .scanner-guide-lead{max-width:none;width:100%;font-size:15px;line-height:1.7}
+.scanner-choice-guide h2{max-width:100%}
+.scanner-size-guide .section-heading{display:block;text-align:left}
+.scanner-size-guide .section-heading>div{max-width:100%}
+.scanner-size-guide .section-sub{display:block;max-width:100%;width:100%;margin:10px 0 0;text-align:left}
+.scanner-size-note{max-width:100%;width:100%}
+.scanner-catalog-intro>p{max-width:100%;width:100%}
+.scanner-subheading .section-sub{max-width:100%;width:100%;margin:9px 0 0}
+.scanner-guide-grid article p{max-width:100%}
+.scanner-guide-contact p{max-width:100%}
+.scanner-select-model,.scanner-demo-link,.scanner-guide-contact-link,.catalog-bottom a{min-height:44px;padding:11px 16px;border-radius:10px;font-size:12px;font-weight:750;line-height:1.35;transition:transform .2s ease,box-shadow .2s ease,background .2s ease,border-color .2s ease}
+.scanner-select-model{border:1px solid #8CB8E8!important;background:rgba(255,255,255,.92)!important;color:#1558C0!important;box-shadow:0 3px 10px rgba(21,88,192,.08)}
+.scanner-card.is-selected .scanner-select-model{border-color:transparent!important;background:linear-gradient(100deg,#1558C0 0%,#2E82F0 58%,#00AEB5 100%)!important;color:#FFFFFF!important;box-shadow:0 8px 20px rgba(21,88,192,.22)}
+.scanner-demo-link{border:1px solid #8CB8E8!important;background:rgba(255,255,255,.9)!important;color:#1558C0!important;box-shadow:0 3px 10px rgba(21,88,192,.06)}
+.scanner-guide-contact-link,.catalog-bottom a{border:0!important;background:linear-gradient(100deg,#1558C0 0%,#2E82F0 58%,#00AEB5 100%)!important;color:#FFFFFF!important;box-shadow:0 8px 20px rgba(21,88,192,.2)}
+.scanner-select-model:hover,.scanner-demo-link:hover,.scanner-guide-contact-link:hover,.catalog-bottom a:hover{transform:translateY(-2px);box-shadow:0 10px 22px rgba(21,88,192,.2)}
+.scanner-select-model:focus-visible,.scanner-demo-link:focus-visible,.scanner-guide-contact-link:focus-visible,.catalog-bottom a:focus-visible{outline:3px solid rgba(0,184,189,.45);outline-offset:3px}
+/* Ajustes de la propuesta: guía breve y catálogo unificado */
+.scanner-guide-grid a{color:#0877D8;font-weight:700;text-decoration:underline;text-underline-offset:2px}
+.scanner-guide-contact{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:24px;padding:22px 24px;border:1px solid #C9D9EB;border-radius:14px;background:rgba(255,255,255,.78)}
+.scanner-guide-contact strong{display:block;color:#183458;font-size:16px}
+.scanner-guide-contact p{max-width:690px;margin:6px 0 0;color:#526783;font-size:12px;line-height:1.65}
+.scanner-guide-contact-link{flex-shrink:0;display:inline-flex;align-items:center;gap:10px;padding:12px 16px;border-radius:10px;background:linear-gradient(100deg,#1558C0 0%,#2E82F0 58%,#00AEB5 100%);color:#FFFFFF;font-size:11px;font-weight:750;text-decoration:none}
+.scanner-catalog-intro{max-width:100%;margin:0 0 34px;text-align:left}
+.scanner-catalog-intro h2{margin:10px 0;color:#183458}
+.scanner-catalog-intro>p{max-width:820px;margin:0;color:#526783;font-size:14px;line-height:1.7}
+.scanner-subheading{display:block;margin:0 0 20px}
+.scanner-subheading h3{margin:0;color:#183458;font-size:22px}
+.scanner-subheading .section-sub{max-width:760px;margin:8px 0 0;color:#526783}
+.scanner-workshop-heading{margin-top:46px;padding-top:34px;border-top:1px solid #DCE6F2}
+.scanner-catalog-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:20px;align-items:stretch}
+.scanner-catalog-grid .scanner-card{min-width:0;display:flex;flex-direction:column}
+.scanner-catalog-grid .scanner-image{aspect-ratio:1.45}
+.scanner-catalog-grid .scanner-body{display:flex;flex:1;flex-direction:column;padding:17px 16px 11px}
+.scanner-catalog-grid .scanner-body h3{min-height:0;margin:7px 0;font-size:17px;line-height:1.35}
+.scanner-catalog-grid .scanner-body>p{min-height:0;margin:5px 0 0;font-size:13px;line-height:1.5}
+.scanner-catalog-grid .eyebrow.small{min-height:0;font-size:11px}
+.scanner-catalog-grid .scanner-card-specs{margin-top:13px}
+.scanner-catalog-grid .scanner-card-specs>div{grid-template-columns:minmax(82px,.72fr) minmax(0,1.28fr);gap:8px;padding:7px 0}
+.scanner-catalog-grid .scanner-card-specs dt,.scanner-catalog-grid .scanner-card-specs dd{font-size:11px;line-height:1.45}
+.scanner-catalog-grid .scanner-card .product-feature{margin-top:auto;padding-top:12px;font-size:12px}
+.scanner-catalog-grid .scanner-card-actions{grid-template-columns:1fr 1fr;gap:8px;padding:11px 0 2px}
+.scanner-catalog-grid .scanner-select-model,.scanner-catalog-grid .scanner-demo-link{min-width:0;min-height:40px;padding:8px 7px;font-size:11px}
+.catalog-bottom{display:flex;flex-direction:column;align-items:flex-start;gap:9px;margin-top:32px;padding:20px 22px;border:1px solid #C9D9EB;border-radius:14px;background:linear-gradient(115deg,#FFFFFF 0%,#F7FAFF 55%,#EAF3FF 100%);color:#183458}
+.catalog-bottom span{font-size:19px;font-weight:800;line-height:1.4}
+.catalog-bottom a{font-size:14px}
+.scanner-compare-section .section-heading{display:block}
+.scanner-compare-section .section-heading .section-sub{max-width:760px;margin:10px 0 0}
+.scanner-bubble-advice{margin-top:12px;padding:13px;border:1px solid rgba(21,88,192,.2);border-radius:11px;background:rgba(234,243,255,.72)}
+.scanner-bubble-advice>b{display:block;color:#183458;font-size:12px}
+.scanner-bubble-advice p{margin:5px 0 8px;color:#526783;font-size:10px;line-height:1.55}
+.scanner-bubble-links .scanner-bubble-advice a{padding:0;background:none;color:#0877D8;font-size:10px;font-weight:800}
+@media(max-width:1100px){.scanner-catalog-grid{grid-template-columns:repeat(3,minmax(0,1fr))}}
+@media(max-width:850px){.scanner-catalog-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.scanner-guide-contact{align-items:flex-start;flex-direction:column}}
+@media(max-width:767px){.scanner-catalog-grid{grid-template-columns:1fr}.scanner-catalog-grid .scanner-image{aspect-ratio:1.5}.scanner-subheading h3{font-size:19px}.scanner-workshop-heading{margin-top:34px;padding-top:26px}}
+.scanner-bubble-nav{position:fixed;left:18px;bottom:24px;z-index:120;display:flex;flex-direction:column;align-items:flex-start;gap:10px}
+.scanner-bubble-toggle{display:inline-flex;align-items:center;gap:9px;min-height:46px;padding:0 18px;border:1px solid rgba(21,88,192,.16);border-radius:999px;background:rgba(255,255,255,.96);color:#1558C0;font:inherit;font-size:13px;font-weight:750;box-shadow:0 8px 24px rgba(12,20,34,.16);cursor:pointer;backdrop-filter:blur(12px);-webkit-backdrop-filter:blur(12px)}
+.scanner-bubble-toggle:after{content:"+";font-size:20px;font-weight:400;line-height:1}
+.scanner-bubble-toggle[aria-expanded="true"]:after{content:"−"}
+.scanner-bubble-links{display:grid;gap:0;width:min(340px,calc(100vw - 36px));padding:17px;border:1px solid rgba(255,255,255,.48);border-radius:17px;background:rgba(248,251,255,.74);box-shadow:0 14px 38px rgba(12,20,34,.18);backdrop-filter:blur(18px);-webkit-backdrop-filter:blur(18px);color:#172B45}
+.scanner-bubble-links[hidden]{display:none}
+.scanner-bubble-links strong{display:block;margin-bottom:11px;color:#183458;font-size:14px}
+.scanner-bubble-question{padding:10px 0;border-top:1px solid rgba(21,88,192,.14)}
+.scanner-bubble-question b{display:block;color:#1558C0;font-size:12px}
+.scanner-bubble-question p{margin:4px 0 0;color:#526783;font-size:11px;line-height:1.5}
+.scanner-bubble-links .scanner-bubble-more{display:flex;flex-wrap:wrap;gap:8px;margin-top:10px;padding-top:12px;border-top:1px solid rgba(21,88,192,.16)}
+.scanner-bubble-links .scanner-bubble-more a{padding:6px 9px;border-radius:7px;background:rgba(234,243,255,.8);color:#1558C0;font-size:10px;font-weight:700;text-decoration:none}
+.scanner-bubble-links .scanner-bubble-more a:hover{background:#D9EAFE}
+@media(max-width:767px){
+ .scanner-compare-section,.scanner-faq-section{padding:55px 0}
+ .scanner-card-actions{grid-template-columns:1fr}
+ .scanner-bubble-nav{left:10px;bottom:14px}
+ .scanner-bubble-toggle{min-height:43px;padding:0 15px;font-size:12px}
+ .scanner-bubble-links{width:min(320px,calc(100vw - 20px));padding:14px}
+}
+
+
+/* Ajustes de lectura y selección de modelos: catálogo SHINING 3D */
+.scanner-catalog-intro{max-width:none!important;width:100%!important}
+.scanner-catalog-intro>p{
+  max-width:none!important;width:100%!important;
+  margin:0!important;font-size:15px!important;line-height:1.7!important;
+  white-space:normal!important;text-wrap:pretty;
+}
+.scanner-subheading{width:100%;max-width:none}
+.scanner-subheading .section-sub{
+  max-width:none!important;width:100%!important;
+  margin:8px 0 0!important;font-size:15px!important;line-height:1.7!important;
+  white-space:normal!important;text-wrap:pretty;
+}
+.scanner-card-actions .scanner-select-model{
+  min-height:44px!important;padding:11px 16px!important;border:0!important;
+  border-radius:10px!important;
+  background:linear-gradient(100deg,#1558C0 0%,#2E82F0 58%,#00AEB5 100%)!important;
+  color:#FFFFFF!important;font-size:12px!important;font-weight:750!important;
+  line-height:1.35!important;box-shadow:0 8px 20px rgba(21,88,192,.20)!important;
+  cursor:pointer;pointer-events:auto;position:relative;z-index:2;
+  transition:transform .2s ease,box-shadow .2s ease;
+}
+.scanner-card-actions .scanner-select-model:hover{
+  transform:translateY(-2px);box-shadow:0 10px 24px rgba(21,88,192,.28)!important;
+}
+.scanner-card-actions .scanner-select-model:focus-visible{
+  outline:3px solid rgba(0,184,189,.45);outline-offset:3px;
+}
+.scanner-card-actions .scanner-demo-link{
+  min-height:44px;border:1px solid #8CB8E8!important;border-radius:10px!important;
+  background:#FFFFFF!important;color:#1558C0!important;
+  font-size:12px!important;font-weight:750!important;
+}
+.scanner-card{cursor:pointer}
+.scanner-card .scanner-card-actions a{cursor:pointer}
+.scanner-card.is-selected{border:2px solid #2E82F0;box-shadow:0 12px 32px rgba(46,130,240,.16)}
+
+
+/* Recuadro de orientación: compacto y proporcional al contenido */
+.catalog-bottom{
+  display:flex;flex-direction:row;align-items:center;justify-content:space-between;
+  width:fit-content;max-width:100%;gap:24px;
+  margin:24px auto 0;padding:12px 18px;text-align:left;
+}
+.catalog-bottom-copy{display:grid;justify-items:start;gap:4px;flex:0 1 auto;min-width:0;text-align:left}
+.catalog-bottom-copy strong{color:#183458;font-size:14px;line-height:1.3}
+.catalog-bottom-copy p{max-width:590px;margin:0;color:#526783;font-size:11px;line-height:1.45;text-align:left}
+.catalog-bottom>a{flex-shrink:0;margin-left:auto}
+@media(max-width:767px){
+  .catalog-bottom{flex-direction:column;align-items:flex-start;width:100%;gap:9px;padding:13px 15px}
+  .catalog-bottom-copy{width:100%;justify-items:start}
+  .catalog-bottom>a{margin-left:0;align-self:flex-end}
+}
+
+/* Comparativa: encabezado centrado y lectura continua */
+.scanner-compare-section .section-heading{display:block;text-align:center;margin-bottom:28px}
+.scanner-compare-section .section-heading>div{max-width:100%;margin:0 auto}
+.scanner-compare-section .section-heading .section-sub{
+  max-width:850px;margin:10px auto 0;text-align:center;
+  font-size:14px;line-height:1.65;white-space:normal;text-wrap:pretty;
+}
+
+/* Resaltado ligero al pasar el cursor; la selección activa conserva prioridad */
+.scanner-compare-table [data-model].is-hovered:not(.is-selected){
+  background:rgba(46,130,240,.075);
+  box-shadow:inset 0 0 0 1px rgba(139,216,255,.14);
+  color:#F2F7FF;
+}
+.scanner-compare-table [data-model].is-selected{
+  background:rgba(46,130,240,.18);
+  box-shadow:inset 0 0 0 1px rgba(46,130,240,.3);
+  color:#FFFFFF;
+}
+
+/* ===== Acompañamiento Model Pro: continuidad después de las aplicaciones ===== */
+.scanner-compare-transition{margin:10px 0 0;color:#D6E7F8;font-size:13px;line-height:1.65;font-weight:600}
+.scanner-modelpro-section{padding:84px 0;background:linear-gradient(115deg,#FFFFFF 0%,#F7FAFF 48%,#EAF3FF 100%);color:#172B45}
+.scanner-modelpro-section>.container{max-width:1200px}
+.scanner-modelpro-heading{max-width:780px;margin:0 0 38px;text-align:left}
+.scanner-modelpro-heading>.eyebrow{color:#0877D8}
+.scanner-modelpro-heading h2{margin:12px 0 14px;background:linear-gradient(100deg,#1558C0 0%,#2E82F0 52%,#00B8BD 100%);background-clip:text;-webkit-background-clip:text;color:transparent;-webkit-text-fill-color:transparent;font-family:var(--font-head);font-size:clamp(1.8rem,1.35rem + 1.7vw,2.65rem);line-height:1.18;letter-spacing:-.035em}
+.scanner-modelpro-heading>p{max-width:650px;margin:0;color:#526783;font-size:15px;line-height:1.7}
+.scanner-modelpro-process{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.scanner-modelpro-process article{min-width:0;padding:22px 20px;border:1px solid #DCE6F2;border-radius:13px;background:rgba(255,255,255,.88)}
+.scanner-modelpro-number{display:inline-block;margin-bottom:20px;color:#0877D8;font-family:var(--font-mono);font-size:13px}
+.scanner-modelpro-process h3,.scanner-modelpro-support h3{margin:0 0 8px;color:#183458;font-size:16px}
+.scanner-modelpro-process p,.scanner-modelpro-support p{margin:0;color:#526783;font-size:12px;line-height:1.65}
+.scanner-modelpro-support{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px;margin-top:34px;padding:26px 0;border-top:1px solid #DCE6F2;border-bottom:1px solid #DCE6F2}
+.scanner-modelpro-support>div{display:flex;align-items:flex-start;gap:13px;min-width:0}
+.scanner-modelpro-support-icon{display:grid;place-items:center;flex:0 0 34px;width:34px;height:34px;border:1px solid #B8D9F4;border-radius:9px;color:#0877D8;font-size:20px}
+.scanner-modelpro-cta{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:27px}
+.scanner-modelpro-cta p{display:grid;gap:4px;margin:0}
+.scanner-modelpro-cta strong{color:#183458;font-size:15px}
+.scanner-modelpro-cta p span{color:#526783;font-size:12px}
+.scanner-modelpro-cta .btn{min-height:48px;padding:12px 21px;border:0;border-radius:10px;background:linear-gradient(100deg,#1558C0 0%,#2E82F0 58%,#00AEB5 100%);color:#FFF;font-size:12px;font-weight:700;box-shadow:0 8px 20px rgba(21,88,192,.20);text-decoration:none}
+.scanner-modelpro-cta .btn:hover{transform:translateY(-2px);box-shadow:0 11px 24px rgba(46,130,240,.28)}
+.scanner-modelpro-cta .btn svg{width:16px;height:16px}
+@media(max-width:900px){.scanner-modelpro-process{grid-template-columns:repeat(2,minmax(0,1fr))}.scanner-modelpro-support{gap:18px}}
+@media(max-width:767px){.scanner-modelpro-section{padding:60px 0}.scanner-modelpro-heading{text-align:left;margin-bottom:28px}.scanner-modelpro-heading>p{margin:0}.scanner-modelpro-process{gap:10px}.scanner-modelpro-process article{padding:18px 15px}.scanner-modelpro-number{margin-bottom:14px}.scanner-modelpro-support{grid-template-columns:1fr;gap:18px;margin-top:25px;padding:22px 0}.scanner-modelpro-cta{align-items:flex-start;flex-direction:column}.scanner-modelpro-cta .btn{align-self:flex-start}}
+@media(max-width:420px){.scanner-modelpro-process{grid-template-columns:1fr}.scanner-modelpro-process article{padding:17px}}
+
+
+/* Ajustes finales: comparativa compacta y subtítulo debajo del título */
+.scanner-compare-section{
+  padding:54px 0!important;
+  background:linear-gradient(125deg,#0C1422 0%,#10213A 58%,#0E1B33 100%)!important;
+  color:#F4F6F9!important;
+}
+.scanner-compare-section .section-heading{
+  display:block!important;
+  margin:0 0 22px!important;
+  text-align:left!important;
+}
+.scanner-compare-section .section-heading>div{max-width:100%!important;margin:0!important;text-align:left!important}
+.scanner-compare-section .section-heading .section-sub{
+  display:block!important;width:100%!important;max-width:100%!important;
+  margin:9px 0 0!important;text-align:left!important;color:#D6E7F8!important;
+}
+.scanner-compare-section .eyebrow{color:#8BD8FF!important}
+.scanner-compare-section h2{color:#F2F7FF!important}
+.scanner-compare-scroll{
+  overflow-x:auto;border:1px solid rgba(139,216,255,.22)!important;
+  border-radius:12px;background:#0E1B33!important;
+}
+.scanner-compare-table{
+  width:100%;min-width:980px;table-layout:fixed;border-collapse:separate;
+  border-spacing:0;background:#0E1B33!important;color:#D6E7F8!important;font-size:12px;
+}
+.scanner-compare-table th,.scanner-compare-table td{
+  padding:10px 11px!important;border-bottom:1px solid rgba(164,200,244,.13)!important;
+  text-align:left;vertical-align:middle;line-height:1.38!important;overflow-wrap:break-word;
+}
+.scanner-compare-table thead th{background:#142D50!important;color:#F2F7FF!important;font-weight:750}
+.scanner-compare-table thead th:first-child,.scanner-compare-table tbody th{width:145px;min-width:145px}
+.scanner-compare-table tbody th{background:rgba(20,45,80,.58)!important;color:#8BD8FF!important;font-weight:700}
+.scanner-compare-table tbody tr:nth-child(even) td{background:rgba(20,45,80,.24)}
+.scanner-compare-table [data-model].is-hovered:not(.is-selected){background:rgba(46,130,240,.13)!important;box-shadow:inset 0 0 0 1px rgba(139,216,255,.16);color:#F2F7FF!important}
+.scanner-compare-table [data-model].is-selected{background:rgba(46,130,240,.25)!important;box-shadow:inset 0 0 0 1px rgba(46,130,240,.42);color:#FFFFFF!important}
+.scanner-compare-note{margin-top:11px!important;color:#AFC5DF!important}
+.scanner-compare-transition{margin-top:8px!important;color:#D6E7F8!important}
+
+/* En proceso: la descripción va debajo del título, no a su derecha */
+.process-section .section-heading{
+  display:flex!important;flex-direction:column!important;
+  align-items:flex-start!important;justify-content:flex-start!important;
+  gap:10px!important;margin-bottom:30px!important;text-align:left!important;
+}
+.process-section .section-heading h2{max-width:100%;width:100%}
+.process-section .section-heading .section-sub{
+  display:block!important;width:100%!important;max-width:100%!important;
+  margin:0!important;text-align:left!important;
+}
+@media(max-width:767px){
+  .scanner-compare-section{padding:44px 0!important}
+  .scanner-compare-table th,.scanner-compare-table td{padding:9px 10px!important}
+}
+
+/* Acompañamiento: encabezado corrido y descripción debajo */
+.scanner-modelpro-section .scanner-modelpro-heading{
+  display:flex!important;flex-direction:column!important;
+  align-items:flex-start!important;justify-content:flex-start!important;
+  gap:10px!important;text-align:left!important;
+}
+.scanner-modelpro-section .scanner-modelpro-heading .eyebrow{
+  display:block!important;width:100%!important;margin:0!important;
+}
+.scanner-modelpro-section .scanner-modelpro-heading h2{
+  display:block!important;width:100%!important;max-width:none!important;
+  margin:0!important;white-space:normal!important;
+}
+.scanner-modelpro-section .scanner-modelpro-heading p{
+  display:block!important;width:100%!important;max-width:none!important;
+  margin:0!important;text-align:left!important;
+}
+
+/* Acompañamiento: mantener el título continuo, sin saltos forzados */
+.scanner-modelpro-section .scanner-modelpro-heading h2 span{
+  display:inline!important;
+  white-space:normal!important;
+}
+.scanner-modelpro-section .scanner-modelpro-heading{
+  gap:8px!important;
+}
+
+
+/* =====================================================================
+   CORRECCIONES (revisión con Melissa) — todo lo nuevo está en este bloque
+   1) Tamaños de letra mínimos  2) Guía de tamaño visual  3) Etiquetas "validar"
+   ===================================================================== */
+.mp-val{display:inline-block;background:#FFF3C4;color:#7A5B00;border:1px solid #F0D77A;border-radius:5px;font-size:11px;font-weight:700;letter-spacing:.03em;padding:1px 6px;margin-left:5px;vertical-align:middle;text-transform:uppercase;white-space:nowrap;-webkit-text-fill-color:#7A5B00}
+body.mp-novals .mp-val{display:none}
+.mp-draftbar{position:fixed;left:14px;bottom:14px;z-index:300;background:#15202E;color:#fff;border-radius:10px;padding:9px 14px;font-size:13px;display:flex;gap:10px;align-items:center;box-shadow:0 6px 20px rgba(0,0,0,.25)}
+.mp-draftbar button{background:#FFF3C4;color:#7A5B00;border:0;border-radius:6px;font:inherit;font-weight:700;font-size:12px;padding:4px 9px;cursor:pointer}
+/* hero */
+.catalog-hero .hero-actions a{font-size:16px!important;min-height:52px!important;height:auto!important;padding-inline:26px!important}
+/* tres preguntas */
+.scanner-guide-grid p{font-size:16px!important}
+.scanner-guide-grid h3{font-size:21px!important}
+.scanner-guide-grid article>span{font-size:15px!important}
+/* guía de tamaño */
+.scanner-size-grid.mp-size article{display:flex;flex-direction:column;gap:6px;min-height:0;padding:22px}
+.mp-sq{display:block;width:var(--s);height:var(--s);border-radius:8px;background:linear-gradient(135deg,#2E82F0,#00B8BD);margin-bottom:10px;align-self:flex-start}
+.scanner-size-tag{font-size:13px!important}
+.scanner-size-grid h3{font-size:22px!important}
+.scanner-size-grid p{font-size:15px!important}
+.scanner-size-grid .mp-chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:auto;padding-top:12px}
+.scanner-size-grid .mp-chips a{font-size:14px;font-weight:700;color:#fff;background:rgba(255,255,255,.1);border:1px solid rgba(139,216,255,.4);border-radius:8px;padding:6px 12px}
+.scanner-size-grid .mp-chips a:hover{background:rgba(0,184,189,.35)}
+.scanner-size-note{font-size:14px!important}
+/* catálogo */
+.scanner-catalog-intro p{font-size:17px}
+.scanner-body>p{font-size:16px!important;min-height:0!important}
+.scanner-body .eyebrow.small{font-size:12px!important}
+.scanner-catalog-grid .scanner-card-specs dt,.scanner-catalog-grid .scanner-card-specs dd{font-size:15px!important;line-height:1.45}
+.scanner-catalog-grid .scanner-card-specs>div{grid-template-columns:minmax(96px,.8fr) minmax(0,1.2fr)!important;padding:10px 0!important}
+.scanner-catalog-grid .scanner-card-specs dd b{font-size:17px;color:#1558C0}
+.product-badge{font-size:12px!important;padding:6px 10px!important;letter-spacing:.04em}
+.scanner-catalog-grid .scanner-select-model,.scanner-catalog-grid .scanner-demo-link{font-size:15px!important;min-height:46px!important;padding:10px 12px!important}
+.scanner-card-actions .scanner-select-model{background:linear-gradient(100deg,#1558C0 0%,#2E82F0 58%,#00AEB5 100%)!important;color:#fff!important;border-color:transparent!important}
+.catalog-bottom-copy strong{font-size:18px!important}
+.catalog-bottom-copy p{font-size:15px!important}
+.catalog-bottom>a{font-size:15px!important}
+/* comparativa */
+.scanner-compare-table th,.scanner-compare-table td{font-size:15px!important;line-height:1.4}
+.scanner-compare-table tbody th{font-size:15px!important}
+.scanner-compare-table tbody td{vertical-align:top}
+.scanner-compare-table{min-width:1020px!important}
+.scanner-compare-note{font-size:14px!important}
+/* proceso, aplicaciones, Model Pro, FAQ */
+.process-section .step p{font-size:16px!important}
+.application-list p{font-size:15px!important}
+.application-list h3{font-size:20px!important}
+.scanner-modelpro-process p,.scanner-modelpro-support p{font-size:15px!important}
+.scanner-modelpro-heading p{font-size:17px!important}
+.scanner-faq-list p{font-size:16px!important}
+.scanner-faq-list summary{font-size:18px!important}
+.scanner-request-intro li small{font-size:14px}
+.scanner-choice-card small{font-size:14px}
+@media(max-width:767px){.scanner-catalog-grid .scanner-card-actions{grid-template-columns:1fr}}
+.scanner-size-grid.mp-size{align-items:stretch!important}
+.scanner-size-grid.mp-size article{justify-content:flex-start!important}
+.scanner-compare-scroll{max-width:100%}
+</style>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body> <div class="mp-wrap"> <header class="mp-header"> <div class="mp-co mp-bar"> <a class="mp-logo" href="index.html"><img src="LOGO-MPMX-COLOR-C.png" alt="Model Pro"></a> <nav class="mp-nav" id="mpnav" aria-label="Principal"> <ul class="mp-menu"> <li class="mp-mi"> <button class="mp-top" aria-expanded="false">Software <svg class="mp-cv" viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button> <ul class="mp-drop"> <li class="mp-sub-li"><button aria-expanded="false">Ingeniería inversa <svg class="mp-ar" viewBox="0 0 8 8" aria-hidden="true"><path d="M2 1l3 3-3 3" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button> <ul class="mp-sub"><li><a href="index.html#geomagic-design-x">Geomagic Design X</a></li><li><a href="index.html#exmodel-pro">EXModel Pro</a></li></ul></li> <li class="mp-sub-li"><button aria-expanded="false">Inspección y metrología <svg class="mp-ar" viewBox="0 0 8 8" aria-hidden="true"><path d="M2 1l3 3-3 3" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button> <ul class="mp-sub"><li><a href="index.html#geomagic-control-x">Geomagic Control X</a></li><li><a href="index.html#shining3d-inspect">SHINING3D Inspect</a></li></ul></li> <li class="mp-sub-li"><button aria-expanded="false">Diseño CAD/CAM <svg class="mp-ar" viewBox="0 0 8 8" aria-hidden="true"><path d="M2 1l3 3-3 3" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button> <ul class="mp-sub"><li><a href="zwcad.html#zwcad">ZWCAD</a></li><li><a href="zw3d.html#zw3d">ZW3D</a></li></ul></li> <li><a href="#simlab">Realidad virtual</a></li> <li class="mp-hook-li"><a class="mp-hook" href="index.html#contacto">¿No sabes cuál necesitas?</a></li> </ul> </li> <li class="mp-mi"> <button class="mp-top" aria-expanded="false">Escáneres 3D <svg class="mp-cv" viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button> <ul class="mp-drop"> <li class="mp-sub-li"><button aria-expanded="false">Metrológicos <svg class="mp-ar" viewBox="0 0 8 8" aria-hidden="true"><path d="M2 1l3 3-3 3" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button> <ul class="mp-sub"><li><a href="/escaneres-3d/freescan-combo-plus-wireless/">FreeScan Combo+ Wireless</a></li><li><a href="/escaneres-3d/freescan-trak-nova/">FreeScan Trak Nova</a></li><li><a href="/escaneres-3d/freescan-omni/">FreeScan Omni</a></li><li><a href="/escaneres-3d/freescan-ue-pro2/">FreeScan UE Pro2</a></li><li><a href="/escaneres-3d/optimscan-q12/">OptimScan Q12 / Q12 HD</a></li></ul></li> <li class="mp-sub-li"><button aria-expanded="false">Profesionales <svg class="mp-ar" viewBox="0 0 8 8" aria-hidden="true"><path d="M2 1l3 3-3 3" fill="none" stroke="currentColor" stroke-width="1.5"/></svg></button> <ul class="mp-sub"><li><a href="/escaneres-3d/einscan-libre/">EinScan Libre</a></li><li><a href="/escaneres-3d/einscan-rigil/">EinScan Rigil</a></li></ul></li> <li class="mp-hook-li"><a class="mp-hook" href="index.html#contacto">¿No sabes cuál elegir?</a></li> </ul> </li> <li class="mp-mi"> <button class="mp-top" aria-expanded="false">Servicios <svg class="mp-cv" viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button> <ul class="mp-drop"> <li><a href="index.html#servicio-escaneo-3d">Escaneo 3D</a></li><li><a href="index.html#servicio-ingenieria-inversa">Ingeniería inversa</a></li><li><a href="index.html#servicio-inspeccion">Inspección dimensional</a></li><li><a href="index.html#servicio-realidad-virtual">Realidad virtual y mixta</a></li> <li class="mp-hook-li"><a class="mp-hook" href="index.html#contacto">¿Tienes una pieza para cotizar?</a></li> </ul> </li> <li class="mp-mi"><a class="mp-top" href="index.html#casos">Casos</a></li> <li class="mp-mi"> <button class="mp-top" aria-expanded="false">Nosotros <svg class="mp-cv" viewBox="0 0 10 10" aria-hidden="true"><path d="M1 3l4 4 4-4" fill="none" stroke="currentColor" stroke-width="1.6"/></svg></button> <ul class="mp-drop"> <li><a href="index.html#nosotros">Quiénes somos</a></li><li><a href="index.html#acompanamiento">Acompañamiento y soporte</a></li><li><a href="index.html#contacto">Contacto</a></li> </ul> </li> </ul> </nav> <a class="mp-q" href="index.html#contacto">Cotizar ahora</a> <button class="mp-burger" id="mpburger" aria-label="Menú" aria-expanded="false"><span></span><span></span><span></span></button> </div> </header> <main> <section class="catalog-hero"><img class="hero-photo" src="https://raw.githubusercontent.com/danielgarridoher-svg/pesta-as/acce7f59fcf3e39f32333cf06b2d64fd54f4d612/model-pro-escaneres-3d/images/hero.webp" alt="FreeScan Combo+ Wireless digitalizando un componente automotriz en una fábrica" fetchpriority="high"><div class="hero-shade"></div><div class="container hero-content"><span class="eyebrow hero-eyebrow">PRECISIÓN QUE ABRE POSIBILIDADES</span><h1>Escáneres 3D industriales<br><span>para tus piezas, en México.</span></h1><p class="lead">Te ayudamos a elegir según el tamaño de tu pieza y la exactitud, en micras, que necesitas. Y lo probamos con tu pieza antes de que decidas.</p><div class="hero-actions"><a class="btn btn-hero btn-lg" href="#scanner-request-form">Cuéntanos tu pieza</a><a class="btn btn-hero-outline btn-lg" href="#metrologia">Ver los modelos</a></div></div></section> <div id="soluciones"><section id="como-elegir" class="scanner-choice-guide" aria-labelledby="scanner-guide-title"> <div class="container"> <span class="eyebrow">CÓMO ELEGIR</span> <h2 id="scanner-guide-title">Tres preguntas para saber qué escáner necesitas.</h2> <p class="scanner-guide-lead">Son las mismas que le hacemos a cada cliente. Con tus respuestas, casi siempre quedan uno o dos modelos.</p> <div class="scanner-guide-grid"> <article><span>01</span><h3>¿De qué tamaño es tu pieza?</h3><p>Desde un engrane hasta una carrocería. <a href="#guia-tamano">Ve la guía de tamaños</a>.</p></article> <article><span>02</span><h3>¿Qué exactitud necesitas?</h3><p>Piensa en tu tolerancia: ¿20 micras? ¿10? ¿5? Si tu pieza la pide, necesitas un equipo de metrología <b>aunque no sea para laboratorio</b>.</p></article> <article><span>03</span><h3>¿Cuántas piezas y dónde?</h3><p>Una pieza en taller, series en producción o trabajo en planta o campo.</p></article> </div> </div> </section> <section id="guia-tamano" class="scanner-size-guide" aria-labelledby="scanner-size-title"> <div class="container"> <div class="section-heading"> <div><span class="eyebrow">ORIENTACIÓN POR TAMAÑO</span><h2 id="scanner-size-title">¿Qué tamaño tiene lo que necesitas escanear?</h2></div> <p class="section-sub">Toca un modelo para ir directo a su tarjeta.</p> </div> <div class="scanner-size-grid mp-size">
+ <article><i class="mp-sq" style="--s:26px"></i><span class="scanner-size-tag">01 · PEQUEÑA</span><h3>Cabe en la mano</h3><p>Engranes, insertos, componentes electrónicos.</p><div class="mp-chips"><a href="#optimscan-q12">Q12</a><a href="#freescan-combo-plus-wireless">Combo+</a><a href="#einscan-rigil">Rigil</a></div></article>
+ <article><i class="mp-sq" style="--s:40px"></i><span class="scanner-size-tag">02 · MEDIANA</span><h3>Hasta ~1 m</h3><p>Moldes, piezas fundidas, componentes mecánicos.</p><div class="mp-chips"><a href="#freescan-combo-plus-wireless">Combo+</a><a href="#freescan-ue-pro2">UE Pro2</a><a href="#einscan-rigil">Rigil</a><a href="#einscan-libre">Libre</a></div></article>
+ <article><i class="mp-sq" style="--s:54px"></i><span class="scanner-size-tag">03 · GRANDE</span><h3>Más de 1 m</h3><p>Carrocerías, maquinaria, conjuntos grandes.</p><div class="mp-chips"><a href="#freescan-ue-pro2">UE Pro2</a><a href="#einscan-libre">Libre</a><a href="#freescan-trak-nova">Trak Nova</a></div></article>
+ <article><i class="mp-sq" style="--s:68px"></i><span class="scanner-size-tag">04 · MUY GRANDE</span><h3>Varios metros <span class="mp-val">validar</span></h3><p>Estructuras, equipos industriales, instalaciones.</p><div class="mp-chips"><a href="#freescan-trak-nova">Trak Nova</a></div></article>
+ </div> <p class="scanner-size-note">Medidas de referencia <span class="mp-val">validar</span>. El tamaño no decide solo: también importan la exactitud en micras y dónde escaneas.</p> </div> </section> <section id="metrologia" class="section catalog-section scanner-unified-catalog"> <div class="container"> <div class="scanner-catalog-intro"> <span class="eyebrow">PRECISIÓN PARA LA INDUSTRIA</span> <h2>Nuestros escáneres 3D SHINING 3D</h2> <p>Conoce las distintas tecnologías de captura 3D de SHINING 3D para digitalizar piezas, inspeccionar componentes y llevar tus proyectos del entorno físico al digital. Compara sus aplicaciones y encuentra el equipo que mejor responde a tu proceso.</p> </div> <div class="section-heading scanner-subheading"> <div><h3>Para metrología de precisión</h3></div> <p class="section-sub">Cuando la exactitud es lo que decide: control de calidad, ingeniería inversa de precisión e inspección de piezas con tolerancias cerradas.</p> </div> <div class="product-grid scanner-catalog-grid"><article class="scanner-card group is-selected" id="freescan-combo-plus-wireless" data-model="combo"><div class="scanner-image"><img src="https://raw.githubusercontent.com/danielgarridoher-svg/pesta-as/acce7f59fcf3e39f32333cf06b2d64fd54f4d612/model-pro-escaneres-3d/images/combo.webp" alt="FreeScan Combo+ Wireless" loading="lazy"><span class="product-badge">EL MÁS SOLICITADO <span class="mp-val">validar</span></span><span class="image-brand">SHINING 3D</span></div><div class="scanner-body"><span class="eyebrow small">Inalámbrico · Láser + infrarrojo</span><h3>FreeScan Combo+ Wireless</h3><p>Escáner 3D portátil híbrido inalámbrico para metrología.</p><dl class="scanner-card-specs"> <div><dt>Tamaño de pieza</dt><dd>Pequeña a mediana</dd></div> <div><dt>Exactitud</dt><dd><b>20 micras</b> (0.02 mm)</dd></div> <div><dt>Cómo se usa</dt><dd>A mano, inalámbrico; láser e infrarrojo</dd></div> <div><dt>Ideal para</dt><dd>Moldes, fundición, automotriz y manufactura</dd></div> </dl><div class="card-action scanner-card-actions"> <a class="scanner-select-model" href="/escaneres-3d/freescan-combo-plus-wireless/">Ver modelo</a> <a class="scanner-demo-link" href="#scanner-request-form" data-demo-model="FreeScan Combo+ Wireless">Pedir demostración <span aria-hidden="true">→</span></a> </div></div></article><article class="scanner-card group" id="optimscan-q12" data-model="q12"><div class="scanner-image"><img src="https://raw.githubusercontent.com/danielgarridoher-svg/pesta-as/acce7f59fcf3e39f32333cf06b2d64fd54f4d612/model-pro-escaneres-3d/images/q12.webp" alt="OptimScan Q12 / Q12 HD" loading="lazy"><span class="image-brand">SHINING 3D</span></div><div class="scanner-body"><span class="eyebrow small">Escaneo óptico · Alta precisión</span><h3>OptimScan Q12 / Q12 HD</h3><p>Sistemas ópticos de inspección 3D de alta precisión.</p><dl class="scanner-card-specs"> <div><dt>Tamaño de pieza</dt><dd>Pequeña a mediana</dd></div> <div><dt>Exactitud</dt><dd><b>5 a 15 micras</b> según el campo <span class="mp-val">validar</span></dd></div> <div><dt>Cómo se usa</dt><dd>Fijo: trípode, mesa giratoria o integración con robot</dd></div> <div><dt>Ideal para</dt><dd>Tolerancias de micras, aunque no sea laboratorio</dd></div> </dl><div class="card-action scanner-card-actions"> <a class="scanner-select-model" href="/escaneres-3d/optimscan-q12/">Ver modelo</a> <a class="scanner-demo-link" href="#scanner-request-form" data-demo-model="OptimScan Q12 / Q12 HD">Pedir demostración <span aria-hidden="true">→</span></a> </div></div></article><article class="scanner-card group" id="freescan-omni" data-model="omni"><div class="scanner-image"><img src="https://raw.githubusercontent.com/danielgarridoher-svg/pesta-as/acce7f59fcf3e39f32333cf06b2d64fd54f4d612/model-pro-escaneres-3d/images/omni.webp" alt="FreeScan Omni" loading="lazy"><span class="image-brand">SHINING 3D</span></div><div class="scanner-body"><span class="eyebrow small">Todo en uno · Inspección</span><h3>FreeScan Omni</h3><p>Escáner 3D de metrología autónomo y listo para inspección.</p><dl class="scanner-card-specs"> <div><dt>Tamaño de pieza</dt><dd>Según la pieza y la configuración</dd></div> <div><dt>Exactitud</dt><dd>Por confirmar <span class="mp-val">validar</span></dd></div> <div><dt>Cómo se usa</dt><dd>Sistema autónomo todo en uno</dd></div> <div><dt>Ideal para</dt><dd>Inspección y evaluación directamente en planta</dd></div> </dl><div class="card-action scanner-card-actions"> <a class="scanner-select-model" href="/escaneres-3d/freescan-omni/">Ver modelo</a> <a class="scanner-demo-link" href="#scanner-request-form" data-demo-model="FreeScan Omni">Pedir demostración <span aria-hidden="true">→</span></a> </div></div></article><article class="scanner-card group" id="freescan-trak-nova" data-model="trak"><div class="scanner-image"><img src="https://raw.githubusercontent.com/danielgarridoher-svg/pesta-as/acce7f59fcf3e39f32333cf06b2d64fd54f4d612/model-pro-escaneres-3d/images/nova.webp" alt="FreeScan Trak Nova" loading="lazy"><span class="image-brand">SHINING 3D</span></div><div class="scanner-body"><span class="eyebrow small">Seguimiento dinámico</span><h3>FreeScan Trak Nova</h3><p>Sistema dinámico de escaneo y seguimiento 3D.</p><dl class="scanner-card-specs"> <div><dt>Tamaño de pieza</dt><dd>Muy grande</dd></div> <div><dt>Exactitud</dt><dd><b>20 micras</b> (0.02 mm) <span class="mp-val">validar</span></dd></div> <div><dt>Cómo se usa</dt><dd>Sistema de rastreador y escáner de mano</dd></div> <div><dt>Ideal para</dt><dd>Piezas grandes, inspección en planta y series</dd></div> </dl><div class="card-action scanner-card-actions"> <a class="scanner-select-model" href="/escaneres-3d/freescan-trak-nova/">Ver modelo</a> <a class="scanner-demo-link" href="#scanner-request-form" data-demo-model="FreeScan Trak Nova">Pedir demostración <span aria-hidden="true">→</span></a> </div></div></article><article class="scanner-card group" id="freescan-ue-pro2" data-model="ue"><div class="scanner-image"><img src="https://raw.githubusercontent.com/danielgarridoher-svg/pesta-as/acce7f59fcf3e39f32333cf06b2d64fd54f4d612/model-pro-escaneres-3d/images/pro2.webp" alt="FreeScan UE Pro2" loading="lazy"><span class="image-brand">SHINING 3D</span></div><div class="scanner-body"><span class="eyebrow small">Láser azul · Portátil</span><h3>FreeScan UE Pro2</h3><p>Escáner 3D portátil láser para aplicaciones metrológicas.</p><dl class="scanner-card-specs"> <div><dt>Tamaño de pieza</dt><dd>Mediana a grande</dd></div> <div><dt>Exactitud</dt><dd><b>20 micras</b> (0.02 mm)</dd></div> <div><dt>Cómo se usa</dt><dd>A mano, inalámbrico, con fotogrametría</dd></div> <div><dt>Ideal para</dt><dd>Lámina automotriz, maquinaria y componentes grandes</dd></div> </dl><div class="card-action scanner-card-actions"> <a class="scanner-select-model" href="/escaneres-3d/freescan-ue-pro2/">Ver modelo</a> <a class="scanner-demo-link" href="#scanner-request-form" data-demo-model="FreeScan UE Pro2">Pedir demostración <span aria-hidden="true">→</span></a> </div></div></article></div> <div class="section-heading scanner-subheading scanner-workshop-heading"> <div><h3>Para talleres, prototipos y trabajo en campo</h3></div> <p class="section-sub">Cuando lo que pesa es la versatilidad y la facilidad de uso: personalización, desarrollo de prototipos, mantenimiento y captura fuera del laboratorio.</p> </div> <div class="product-grid scanner-catalog-grid"><article class="scanner-card group" id="einscan-rigil" data-model="rigil"><div class="scanner-image"><img src="https://raw.githubusercontent.com/danielgarridoher-svg/pesta-as/acce7f59fcf3e39f32333cf06b2d64fd54f4d612/model-pro-escaneres-3d/images/rigil.webp" alt="EinScan Rigil" loading="lazy"><span class="image-brand">SHINING 3D</span></div><div class="scanner-body"><span class="eyebrow small">Versátil · Multimodo</span><h3>EinScan Rigil</h3><p>Escáner 3D portátil con distintos modos de captura.</p><dl class="scanner-card-specs"> <div><dt>Tamaño de pieza</dt><dd>Pequeña a mediana</dd></div> <div><dt>Exactitud</dt><dd>Volumétrica 0.04 + 0.06 mm/m <span class="mp-val">validar</span></dd></div> <div><dt>Cómo se usa</dt><dd>Autónomo, inalámbrico o conectado por cable</dd></div> <div><dt>Ideal para</dt><dd>Taller, diseño de producto y prototipos</dd></div> </dl><div class="card-action scanner-card-actions"> <a class="scanner-select-model" href="/escaneres-3d/einscan-rigil/">Ver modelo</a> <a class="scanner-demo-link" href="#scanner-request-form" data-demo-model="EinScan Rigil">Pedir demostración <span aria-hidden="true">→</span></a> </div></div></article><article class="scanner-card group" id="einscan-libre" data-model="libre"><div class="scanner-image"><img src="https://raw.githubusercontent.com/danielgarridoher-svg/pesta-as/acce7f59fcf3e39f32333cf06b2d64fd54f4d612/model-pro-escaneres-3d/images/libre.webp" alt="EinScan Libre" loading="lazy"><span class="image-brand">SHINING 3D</span></div><div class="scanner-body"><span class="eyebrow small">Inalámbrico · A color</span><h3>EinScan Libre</h3><p>Escáner 3D láser todo en uno, inalámbrico y a color.</p><dl class="scanner-card-specs"> <div><dt>Tamaño de pieza</dt><dd>Mediana a grande</dd></div> <div><dt>Exactitud</dt><dd>Hasta <b>40 micras</b> (0.04 mm)</dd></div> <div><dt>Cómo se usa</dt><dd>Todo en uno, sin PC al capturar</dd></div> <div><dt>Ideal para</dt><dd>Trabajo en campo, mantenimiento e ingeniería inversa</dd></div> </dl><div class="card-action scanner-card-actions"> <a class="scanner-select-model" href="/escaneres-3d/einscan-libre/">Ver modelo</a> <a class="scanner-demo-link" href="#scanner-request-form" data-demo-model="EinScan Libre">Pedir demostración <span aria-hidden="true">→</span></a> </div></div></article></div> <div class="catalog-bottom"><div class="catalog-bottom-copy"><strong>¿No sabes cuál es el indicado para tu proyecto?</strong><p>Cuéntanos qué pieza necesitas digitalizar, qué nivel de exactitud buscas y dónde realizarás la captura. Te ayudamos a comparar los equipos según tu aplicación y la forma en que trabajas.</p></div><a class="btn btn-link btn-size-default" href="#scanner-request-form">Te ayudamos a elegir <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></div> </div> </section> <section class="scanner-compare-section" id="comparativa" aria-labelledby="scanner-compare-title"> <div class="container"> <div class="section-heading"> <div><span class="eyebrow">COMPARA TUS OPCIONES</span><h2 id="scanner-compare-title">Los modelos, lado a lado.</h2></div> <p class="section-sub">Ordenados de pieza más pequeña a más grande. Toca una tarjeta de arriba para resaltar ese modelo aquí.</p> </div> <div class="scanner-compare-scroll" tabindex="0" aria-label="Tabla comparativa; desplázate horizontalmente para ver todos los modelos"> <table class="scanner-compare-table"> <thead><tr><th scope="col">Característica</th> <th scope="col" data-model="q12">OptimScan Q12</th><th scope="col" data-model="combo" class="is-selected">Combo+ Wireless</th><th scope="col" data-model="rigil">EinScan Rigil</th><th scope="col" data-model="ue">UE Pro2</th><th scope="col" data-model="libre">EinScan Libre</th><th scope="col" data-model="trak">Trak Nova</th><th scope="col" data-model="omni">Omni</th></tr></thead> <tbody><tr><th scope="row">Exactitud</th><td data-model="q12">5 a 15 micras <span class="mp-val">validar</span></td><td data-model="combo" class="is-selected">20 micras</td><td data-model="rigil">Volumétrica 0.04 + 0.06 mm/m <span class="mp-val">validar</span></td><td data-model="ue">20 micras</td><td data-model="libre">40 micras</td><td data-model="trak">20 micras <span class="mp-val">validar</span></td><td data-model="omni">Por confirmar <span class="mp-val">validar</span></td></tr><tr><th scope="row">Tamaño de pieza</th><td data-model="q12">Pequeña a mediana</td><td data-model="combo" class="is-selected">Pequeña a mediana</td><td data-model="rigil">Pequeña a mediana</td><td data-model="ue">Mediana a grande</td><td data-model="libre">Mediana a grande</td><td data-model="trak">Muy grande</td><td data-model="omni">Por confirmar <span class="mp-val">validar</span></td></tr><tr><th scope="row">Cómo se usa</th><td data-model="q12">Fijo: trípode, giratoria o robot</td><td data-model="combo" class="is-selected">Mano, inalámbrico</td><td data-model="rigil">Mano, autónomo o cable</td><td data-model="ue">Mano, inalámbrico</td><td data-model="libre">Mano, autónomo, sin PC</td><td data-model="trak">Rastreador + mano</td><td data-model="omni">Autónomo, todo en uno</td></tr></tbody> </table> </div> <p class="scanner-compare-note">Las especificaciones pueden variar según la versión, configuración y condiciones de medición. Para una comparación técnica final, revisamos tu pieza y la ficha correspondiente del fabricante.</p> <p class="scanner-compare-transition">La mejor elección no depende solo de las especificaciones, sino de cómo responde el equipo a tu pieza y a tu proceso.</p> </div> </section> <section class="section process-section"><div class="container"><span class="eyebrow">TECNOLOGÍA QUE CONECTA DOS MUNDOS</span><div class="section-heading"><h2>Del objeto físico <span>al dato digital.</span></h2><p class="section-sub">De una superficie real a información que puedes medir, analizar y transformar.</p></div><div class="steps"><div class="step"><div class="step-top"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scan-line" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 12h10"/></svg><span>01</span></div><h3>Captura</h3><p>El escáner registra la superficie del objeto mediante tecnología óptica.</p></div><div class="step"><div class="step-top"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-box" aria-hidden="true"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg><span>02</span></div><h3>Datos 3D</h3><p>La captura genera información espacial que representa la geometría de la pieza.</p></div><div class="step"><div class="step-top"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layers" aria-hidden="true"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></svg><span>03</span></div><h3>Malla y archivo STL</h3><p>El software del propio escáner genera la malla y tu archivo STL.</p></div><div class="step"><div class="step-top"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cpu" aria-hidden="true"><path d="M12 20v2"/><path d="M12 2v2"/><path d="M17 20v2"/><path d="M17 2v2"/><path d="M2 12h2"/><path d="M2 17h2"/><path d="M2 7h2"/><path d="M20 12h2"/><path d="M20 17h2"/><path d="M20 7h2"/><path d="M7 20v2"/><path d="M7 2v2"/><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="8" y="8" width="8" height="8" rx="1"/></svg><span>04</span></div><h3>Aplicación</h3><p>Abre el STL en el programa que quieras: imprimir, ingeniería inversa o inspección. Otro software es opcional.</p></div></div></div></section> <section class="section applications-section"><div class="container"><div class="applications-photo"><img src="https://raw.githubusercontent.com/danielgarridoher-svg/pesta-as/acce7f59fcf3e39f32333cf06b2d64fd54f4d612/model-pro-escaneres-3d/images/application.webp" alt="Escaneo 3D de componentes en un entorno industrial" loading="lazy"><span><span class="status-dot"></span> TECNOLOGÍA EN EL MUNDO REAL</span></div><div class="applications-copy"><span class="eyebrow">DE LOS DATOS A LAS DECISIONES</span><h2>Una nueva dimensión<br><span>para tu industria.</span></h2><div class="application-list"><div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-factory" aria-hidden="true"><path d="M12 16h.01"/><path d="M16 16h.01"/><path d="M3 19a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8.5a.5.5 0 0 0-.769-.422l-4.462 2.844A.5.5 0 0 1 15 10.5v-2a.5.5 0 0 0-.769-.422L9.77 10.922A.5.5 0 0 1 9 10.5V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2z"/><path d="M8 16h.01"/></svg><div><h3>Manufactura</h3><p>Captura y documentación de componentes y piezas.</p></div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div><div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ruler" aria-hidden="true"><path d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.41 2.41 0 0 1 0-3.4l2.6-2.6a2.41 2.41 0 0 1 3.4 0Z"/><path d="m14.5 12.5 2-2"/><path d="m11.5 9.5 2-2"/><path d="m8.5 6.5 2-2"/><path d="m17.5 15.5 2-2"/></svg><div><h3>Control de calidad</h3><p>Comparación de geometrías y apoyo a la inspección dimensional.</p></div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div><div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rotate-3d" aria-hidden="true"><path d="M16.466 7.5C15.643 4.237 13.952 2 12 2 9.239 2 7 6.477 7 12s2.239 10 5 10c.342 0 .677-.069 1-.2"/><path d="m15.194 13.707 3.814 1.86-1.86 3.814"/><path d="M19 15.57c-1.804.885-4.274 1.43-7 1.43-5.523 0-10-2.239-10-5s4.477-5 10-5c4.838 0 8.873 1.718 9.8 4"/></svg><div><h3>Ingeniería inversa</h3><p>Datos para reconstrucción y desarrollo de modelos 3D.</p></div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div><div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pen-tool" aria-hidden="true"><path d="M15.707 21.293a1 1 0 0 1-1.414 0l-1.586-1.586a1 1 0 0 1 0-1.414l5.586-5.586a1 1 0 0 1 1.414 0l1.586 1.586a1 1 0 0 1 0 1.414z"/><path d="m18 13-1.375-6.874a1 1 0 0 0-.746-.776L3.235 2.028a1 1 0 0 0-1.207 1.207L5.35 15.879a1 1 0 0 0 .776.746L13 18"/><path d="m2.3 2.3 7.286 7.286"/><circle cx="11" cy="11" r="2"/></svg><div><h3>Diseño de producto</h3><p>Digitalización para apoyar procesos de diseño y modificación.</p></div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div></div></div></div></section> <section class="scanner-modelpro-section" aria-labelledby="scanner-modelpro-title"> <div class="container"> <div class="scanner-modelpro-heading"> <span class="eyebrow">ACOMPAÑAMIENTO MODEL PRO</span> <h2 id="scanner-modelpro-title">No solo eliges un escáner. Lo ponemos a prueba contigo.</h2> <p>La diferencia está en cómo llevamos la tecnología a tu operación: desde entender tu necesidad hasta que tu equipo pueda aprovecharla.</p> </div> <div class="scanner-modelpro-process"> <article> <span class="scanner-modelpro-number">01</span> <h3>Cuéntanos tu pieza</h3> <p>Conocemos su geometría, tamaño, aplicación y tolerancias.</p> </article> <article> <span class="scanner-modelpro-number">02</span> <h3>Te orientamos</h3> <p>Comparamos opciones y recomendamos los equipos adecuados para tu proceso.</p> </article> <article> <span class="scanner-modelpro-number">03</span> <h3>Pruébalo con tu pieza</h3> <p>Coordinamos una demostración para evaluar resultados sobre tu aplicación.</p> </article> <article> <span class="scanner-modelpro-number">04</span> <h3>Llévalo a tu operación</h3> <p>Te acompañamos con la cotización, capacitación y soporte.</p> </article> </div> <div class="scanner-modelpro-support"> <div> <span class="scanner-modelpro-support-icon" aria-hidden="true">↗</span> <div><h3>Capacitación aplicada</h3><p>Formación con piezas y procesos de tu industria para que tu equipo trabaje con autonomía.</p></div> </div> <div> <span class="scanner-modelpro-support-icon" aria-hidden="true">⌁</span> <div><h3>Soporte cercano</h3><p>Atención en español y acompañamiento técnico en México, también después de la compra.</p></div> </div> <div> <span class="scanner-modelpro-support-icon" aria-hidden="true">◎</span> <div><h3>Experiencia en industria</h3><p>Acompañamos aplicaciones de manufactura, automotriz, aeroespacial y talleres de precisión.</p></div> </div> </div> <div class="scanner-modelpro-cta"> <p><strong>Tu proyecto es el punto de partida.</strong><span>Cuéntanos qué necesitas y vemos juntos el siguiente paso.</span></p> <a class="btn btn-default btn-size-default" href="#scanner-request-form">Hablemos de tu proyecto <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a> </div> </div> </section> <section class="scanner-faq-section" id="faq" aria-labelledby="scanner-faq-title"> <div class="container"> <div class="section-heading"> <div><span class="eyebrow">ANTES DE ELEGIR</span><h2 id="scanner-faq-title">Preguntas frecuentes.</h2></div> <p class="section-sub">Resolvemos algunas dudas comunes para que puedas elegir con mayor claridad.</p> </div> <div class="scanner-faq-list"> <details><summary>¿Cuál es la diferencia entre un escáner portátil y uno fijo?</summary><p>El portátil se mueve alrededor de la pieza y ofrece flexibilidad para trabajar con distintos tamaños y geometrías. El fijo captura desde una posición estable y puede integrarse con mesas giratorias o robots, por lo que resulta útil en procesos repetitivos.</p></details> <details><summary>¿Todos los escáneres necesitan marcadores?</summary><p>No. Depende del modelo, la geometría, el acabado y el tamaño de la pieza. En algunos trabajos los marcadores ayudan a mantener el seguimiento y la precisión. Podemos revisar tu aplicación para determinar si los necesitas.</p></details> <details><summary>¿Necesito una computadora para utilizar el escáner?</summary><p>Depende del equipo. Algunos sistemas permiten trabajar de forma autónoma y otros requieren una computadora con determinadas características. Te orientamos con los requisitos del modelo que corresponda a tu proyecto.</p></details> <details><summary>¿Necesito comprar otro software para usarlo?</summary><p>No. El escáner trae su propio software, con el que obtienes la malla y el archivo STL. Ese STL lo abres en cualquier programa compatible: para imprimir, hacer ingeniería inversa o inspeccionar. Si lo quieres, te asesoramos con software adicional, pero no es obligatorio. <span class="mp-val">validar</span></p></details> <details><summary>¿Puedo probar el escáner con una pieza de mi empresa?</summary><p>Sí. Podemos coordinar una demostración para evaluar la captura con una pieza representativa de tu aplicación y revisar si el resultado responde a lo que necesitas.</p></details> <details><summary>¿Model Pro ofrece factura y soporte en México?</summary><p>Sí. Ofrecemos facturación en México, atención en español, demostraciones y acompañamiento técnico y capacitación.</p></details> </div> </div> </section> <section class="scanner-request-section" id="scanner-request-form" aria-labelledby="scanner-request-title"> <div class="mp-co scanner-request-grid"> <div class="scanner-request-intro"> <p class="scanner-request-eyebrow eyebrow" data-intro-eyebrow>HABLEMOS DE TU PROYECTO</p> <h2 id="scanner-request-title"><span data-intro-title>Cuéntanos qué necesitas</span> <span data-intro-highlight>y te orientamos.</span></h2> <p class="section-sub" data-intro-description>Comparte algunos datos de tu aplicación y te ayudaremos a identificar el siguiente paso.</p> <ul data-intro-steps> <li><span>01</span><div><b>Entendemos tu proyecto</b><br><small>Qué pieza quieres digitalizar y para qué la necesitas.</small></div></li> <li><span>02</span><div><b>Revisamos las opciones</b><br><small>Te orientamos sobre el equipo que puede funcionar.</small></div></li> <li><span>03</span><div><b>Avanzamos contigo</b><br><small>Podemos coordinar una demostración o cotización.</small></div></li> </ul> </div> <div class="scanner-request-card"> <form class="scanner-request-form" aria-label="Formulario de orientación sobre escáneres 3D" novalidate autocomplete="on"> <fieldset class="scanner-choice-fieldset"> <legend>¿Qué necesitas? <span>Puedes elegir más de una opción</span></legend> <div class="scanner-choice-grid"> <label class="scanner-choice-card"><input type="checkbox" name="interes" value="Orientación"><span class="scanner-choice-icon" aria-hidden="true">⌖</span><b>Orientación</b><small>Ayuda para elegir un equipo</small></label> <label class="scanner-choice-card"><input type="checkbox" name="interes" value="Demostración"><span class="scanner-choice-icon" aria-hidden="true">▣</span><b>Demostración</b><small>Probar con una pieza real</small></label> <label class="scanner-choice-card"><input type="checkbox" name="interes" value="Cotización"><span class="scanner-choice-icon" aria-hidden="true">▤</span><b>Cotización</b><small>Conocer precio y opciones</small></label> </div> <p class="scanner-choice-hint" data-choice-hint>Selecciona cómo podemos ayudarte.</p> </fieldset> <div class="scanner-dynamic-details" data-dynamic-details hidden> <div class="scanner-request-fields"> <label data-field="model" hidden>Modelo de interés <span class="scanner-form-optional">(Opcional)</span> <select name="equipo_interes"> <option value="">Aún no lo sé</option> <option>FreeScan Combo+ Wireless</option> <option>OptimScan Q12 / Q12 HD</option> <option>FreeScan Omni</option> <option>FreeScan Trak Nova</option> <option>FreeScan UE Pro2</option> <option>EinScan Rigil</option> <option>EinScan Libre</option> </select> </label> <label data-field="size">Tamaño de la pieza*
+            <select name="tipo_pieza" required> <option value="">Selecciona una opción</option> <option>Pequeña (cabe en la mano)</option> <option>Mediana (hasta aproximadamente 1 m)</option> <option>Grande (más de 1 m)</option> <option>Varias piezas de tamaños distintos</option> </select> </label> <label data-field="accuracy">Exactitud que necesitas*
+            <select name="exactitud" required> <option value="">Selecciona una opción</option> <option>Micras (control de calidad / metrología)</option> <option>Décimas de milímetro (ingeniería inversa)</option> <option>No lo tengo claro</option> </select> </label> <label>Nombre*<input type="text" name="nombre" placeholder="Tu nombre" autocomplete="name" required></label> <label>Empresa*<input type="text" name="empresa" placeholder="Nombre de tu empresa" autocomplete="organization" required></label> <label>Correo electrónico*<input type="email" name="correo" placeholder="nombre@empresa.com" autocomplete="email" required></label> <label>WhatsApp o teléfono*<input type="tel" name="telefono" placeholder="+52" autocomplete="tel" required></label> <label class="scanner-request-full">¿Qué quieres escanear?* 
+            <textarea name="mensaje" rows="3" placeholder="Describe la pieza, el material o la industria a la que pertenece." required></textarea> </label> <label class="scanner-request-full" data-field="comments" hidden>Comentarios adicionales <span class="scanner-form-optional">(Opcional)</span> <textarea name="comentarios" rows="3" placeholder="Indica cantidades, accesorios u otros detalles que debamos considerar en la cotización."></textarea> </label> </div> <p class="scanner-request-error" data-form-error role="alert" aria-live="polite"></p> <div class="scanner-form-actions"><button type="submit" data-submit-label>Solicitar orientación</button></div> <p class="scanner-request-privacy">Al enviar aceptas nuestro <a href="index.html#aviso-privacidad">aviso de privacidad</a>.</p> </div> </form> <div class="scanner-request-thanks" hidden aria-live="polite"></div> </div> </div> </section> </main> <script id="scanner-request-form-script">
+(function(){
+  var section=document.getElementById('scanner-request-form');
+  if(!section)return;
+  var form=section.querySelector('form');
+  var choices=Array.prototype.slice.call(form.querySelectorAll('input[name="interes"]'));
+  var dynamic=section.querySelector('[data-dynamic-details]');
+  var hint=section.querySelector('[data-choice-hint]');
+  var error=section.querySelector('[data-form-error]');
+  var thanks=section.querySelector('.scanner-request-thanks');
+  var submit=section.querySelector('[data-submit-label]');
+  var introEyebrow=section.querySelector('[data-intro-eyebrow]');
+  var introTitle=section.querySelector('[data-intro-title]');
+  var introHighlight=section.querySelector('[data-intro-highlight]');
+  var introDescription=section.querySelector('[data-intro-description]');
+  var introSteps=section.querySelector('[data-intro-steps]');
+  var modelField=section.querySelector('[data-field="model"]');
+  var commentsField=section.querySelector('[data-field="comments"]');
+  var sizeField=section.querySelector('[data-field="size"]');
+  var accuracyField=section.querySelector('[data-field="accuracy"]');
+  var copy={
+    'Orientación':{
+      eyebrow:'ORIENTACIÓN PARA TU PROYECTO',title:'Encuentra el escáner',highlight:'adecuado para tu aplicación.',
+      description:'Cuéntanos sobre la pieza, el nivel de exactitud y el entorno de trabajo. Te ayudaremos a identificar qué tecnología puede responder a tu necesidad.',
+      button:'Solicitar orientación',
+      cardTitle:'Encuentra el equipo adecuado',
+      cardDescription:'Revisamos el tamaño de tu pieza, la exactitud que necesitas y tu proceso para orientarte entre las tecnologías disponibles.'
+    },
+    'Demostración':{
+      eyebrow:'DEMOSTRACIÓN DE ESCANEO 3D',title:'Prueba el equipo',highlight:'con una pieza de tu operación.',
+      description:'Indícanos qué modelo te interesa y cómo es tu aplicación para preparar una demostración enfocada en tu necesidad.',
+      button:'Solicitar demostración',
+      cardTitle:'Prueba el escáner con tu pieza',
+      cardDescription:'Identificamos el modelo de interés y revisamos tu aplicación para preparar una demostración enfocada en tu operación.'
+    },
+    'Cotización':{
+      eyebrow:'COTIZACIÓN DE EQUIPO',title:'Prepara tu proyecto',highlight:'y solicita una cotización.',
+      description:'Comparte el modelo de interés y los detalles de tu aplicación para preparar una propuesta acorde con lo que necesitas.',
+      button:'Solicitar cotización',
+      cardTitle:'Prepara tu cotización',
+      cardDescription:'Tomamos en cuenta el modelo, las características de tu aplicación, las cantidades y los detalles adicionales para preparar una propuesta.'
+    }
+  };
+  function selected(){return choices.filter(function(input){return input.checked;}).map(function(input){return input.value;});}
+  function setFieldVisible(field,visible){
+    field.hidden=!visible;
+    var control=field.querySelector('select,textarea,input');
+    if(control){control.disabled=!visible;if(!visible)control.value='';}
+  }
+  function updateForm(){
+    var values=selected();
+    var hasSelection=values.length>0;
+    var multiple=values.length>1;
+    dynamic.hidden=!hasSelection;
+    hint.hidden=hasSelection;
+    if(!hasSelection){
+      introSteps.innerHTML='';
+      introSteps.hidden=true;
+      introEyebrow.textContent='HABLEMOS DE TU PROYECTO';
+      introTitle.textContent='Cuéntanos qué necesitas';
+      introHighlight.textContent='y te orientamos.';
+      introDescription.textContent='Selecciona una o varias opciones y aquí verás cómo podemos acompañarte en cada una.';
+      submit.textContent='Enviar solicitud';
+      setFieldVisible(modelField,false);
+      setFieldVisible(commentsField,false);
+      setFieldVisible(sizeField,false);
+      setFieldVisible(accuracyField,false);
+      form.setAttribute('aria-label','Formulario de orientación sobre escáneres 3D');
+      return;
+    }
+    var contents=values.map(function(value){return copy[value];});
+    if(multiple){
+      introEyebrow.textContent='ATENCIÓN PARA TU PROYECTO';
+      introTitle.textContent='Cuéntanos qué necesitas';
+      introHighlight.textContent='y lo revisamos contigo.';
+      introDescription.textContent='Has seleccionado varias opciones. Comparte los datos de tu aplicación para que podamos atender cada una de tus necesidades.';
+      submit.textContent='Enviar solicitud';
+    }else{
+      var content=contents[0];
+      introEyebrow.textContent=content.eyebrow;
+      introTitle.textContent=content.title;
+      introHighlight.textContent=content.highlight;
+      introDescription.textContent=content.description;
+      submit.textContent=content.button;
+    }
+    introSteps.innerHTML=contents.map(function(content,index){
+      var number=String(index+1).padStart(2,'0');
+      return '<li><span>'+number+'</span><div><b>'+content.cardTitle+'</b><br><small>'+content.cardDescription+'</small><br><small class="scanner-step-category">'+values[index]+'</small></div></li>';
+    }).join('');
+    introSteps.hidden=false;
+    setFieldVisible(modelField,values.indexOf('Demostración')!==-1||values.indexOf('Cotización')!==-1);
+    setFieldVisible(commentsField,values.indexOf('Cotización')!==-1);
+    setFieldVisible(sizeField,true);
+    setFieldVisible(accuracyField,true);
+    form.setAttribute('aria-label','Formulario de '+values.join(', ').toLowerCase()+' sobre escáneres 3D');
+  }
+  form.addEventListener('change',function(event){
+    if(event.target.matches('input[name="interes"]'))updateForm();
+  });
+  updateForm();
+  form.addEventListener('submit',function(event){
+    event.preventDefault();
+    error.textContent='';
+    var values=selected();
+    if(!values.length){hint.textContent='Selecciona una o varias opciones para continuar.';choices[0].focus();return;}
+    var invalid=form.querySelector(':invalid');
+    if(invalid){invalid.reportValidity();invalid.focus();return;}
+    var name=form.elements.nombre.value.trim().split(/\s+/)[0].replace(/[&<>"]/g,'');
+    thanks.innerHTML='<h3>¡Gracias, '+name+'!</h3><p>Tu solicitud ('+values.join(', ').toLowerCase()+') quedó preparada en esta maqueta. El formulario es demostrativo y todavía no envía información.</p><button type="button">Volver al formulario</button>';
+    form.hidden=true;
+    thanks.hidden=false;
+    thanks.querySelector('button').addEventListener('click',function(){
+      form.reset();form.hidden=false;thanks.hidden=true;error.textContent='';updateForm();
+    });
+  });
+  document.querySelectorAll('[data-demo-model]').forEach(function(link){
+    link.addEventListener('click',function(){
+      var model=form.elements.equipo_interes;
+      if(model)model.value=link.getAttribute('data-demo-model');
+      var demo=form.querySelector('input[name="interes"][value="Demostración"]');
+      if(demo){demo.checked=true;updateForm();}
+    });
+  });
+})();
+</script> <footer class="mp-foot"> <div class="mp-co"> <div class="mp-foot-grid"> <div> <img src="LOGO-MPMX-blanco.png" alt="Model Pro" style="height:30px;width:auto;margin-bottom:14px"> <p style="margin:0 0 4px;max-width:260px">Soluciones tecnológicas 3D para la industria mexicana: diseño, digitalización, ingeniería y realidad virtual.</p> <p style="margin:8px 0 0;color:#6B7A8E">Facturación en México.</p> <div class="mp-social"> <a href="#" aria-label="Facebook"><i class="ti ti-brand-facebook"></i></a> <a href="#" aria-label="Instagram"><i class="ti ti-brand-instagram"></i></a> <a href="https://youtube.com/@modelpromx" aria-label="YouTube"><i class="ti ti-brand-youtube"></i></a> <a href="#" aria-label="LinkedIn"><i class="ti ti-brand-linkedin"></i></a> </div> </div> <div><h4>Productos</h4><a href="zwcad.html#zwcad">Software</a><a href="/escaneres-3d/#metrologia">Escáneres 3D</a><a href="index.html#servicio-escaneo-3d">Servicios</a></div> <div><h4>Empresa</h4><a href="index.html#nosotros">Nosotros</a><a href="index.html#casos">Casos</a><a href="index.html#contacto">Contacto</a></div> <div><h4>Contacto</h4><a href="index.html#contacto">Correo</a><a href="index.html#contacto">Puebla · Querétaro</a><a href="https://youtube.com/@modelpromx">@modelpromx</a></div> </div> <div class="mp-foot-bottom"> <span>© 2026 Model Pro</span><a href="#" style="display:inline">Aviso de privacidad</a><a href="#" style="display:inline">Términos</a> <span style="margin-left:auto">ZWSOFT · SHINING 3D · SimLab</span> </div> </div> </footer> </div> <script>
+(function(){var desk=window.matchMedia("(min-width:901px)"),items=document.querySelectorAll(".mp-mi, .mp-sub-li"),timers=new WeakMap();function setOpen(li,open){li.classList.toggle("is-open",open);var b=li.querySelector(":scope > button");if(b)b.setAttribute("aria-expanded",open?"true":"false");if(!open)li.querySelectorAll(".is-open").forEach(function(c){setOpen(c,false)})}function closeSib(li){Array.prototype.forEach.call(li.parentNode.children,function(x){if(x!==li&&x.classList.contains("is-open"))setOpen(x,false)})}items.forEach(function(li){var btn=li.querySelector(":scope > button");if(!btn)return;btn.addEventListener("click",function(e){e.stopPropagation();var o=!li.classList.contains("is-open");closeSib(li);setOpen(li,o)});li.addEventListener("mouseenter",function(){if(!desk.matches)return;clearTimeout(timers.get(li));closeSib(li);setOpen(li,true)});li.addEventListener("mouseleave",function(){if(!desk.matches)return;timers.set(li,setTimeout(function(){setOpen(li,false)},170))})});document.addEventListener("click",function(e){if(desk.matches&&!e.target.closest(".mp-mi"))document.querySelectorAll(".mp-mi.is-open").forEach(function(li){setOpen(li,false)})});document.addEventListener("keydown",function(e){if(e.key==="Escape")document.querySelectorAll(".mp-mi.is-open").forEach(function(li){setOpen(li,false)})})})();
+(function(){var burger=document.getElementById("mpburger"),nav=document.getElementById("mpnav");if(!burger||!nav)return;burger.addEventListener("click",function(){var open=nav.classList.toggle("is-open");burger.setAttribute("aria-expanded",open?"true":"false");document.body.style.overflow=open?"hidden":""});nav.querySelectorAll("a").forEach(function(a){a.addEventListener("click",function(){nav.classList.remove("is-open");document.body.style.overflow=""})})})();
+(function(){var q=document.querySelector(".mp-q"),hero=document.querySelector(".hero");if(!q||!hero||!("IntersectionObserver"in window))return;var io=new IntersectionObserver(function(e){q.classList.toggle("is-solid",!e[0].isIntersecting)},{threshold:0});io.observe(hero)})();
+</script>  <script id="scanner-bubble-script">
+(function(){
+  var nav=document.querySelector('.scanner-bubble-nav');
+  if(!nav)return;
+  var toggle=nav.querySelector('.scanner-bubble-toggle');
+  var panel=nav.querySelector('.scanner-bubble-links');
+  toggle.addEventListener('click',function(){
+    var open=toggle.getAttribute('aria-expanded')!=='true';
+    toggle.setAttribute('aria-expanded',String(open));
+    panel.hidden=!open;
+  });
+  panel.querySelectorAll('a').forEach(function(link){link.addEventListener('click',function(){toggle.setAttribute('aria-expanded','false');panel.hidden=true;});});
+  document.addEventListener('click',function(e){if(!nav.contains(e.target)){toggle.setAttribute('aria-expanded','false');panel.hidden=true;}});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'){toggle.setAttribute('aria-expanded','false');panel.hidden=true;toggle.focus();}});
+})();
+</script> <script id="scanner-model-selection-script">
+(function(){
+  var cards=Array.prototype.slice.call(document.querySelectorAll('.scanner-card[data-model]'));
+  var table=document.querySelector('.scanner-compare-table');
+  if(!cards.length)return;
+
+  function select(key){
+    var selectedCard=cards.find(function(card){return card.getAttribute('data-model')===key;});
+    if(!selectedCard)return;
+
+    cards.forEach(function(card){
+      var active=card.getAttribute('data-model')===key;
+      card.classList.toggle('is-selected',active);
+      var button=card.querySelector('[data-select-model]');
+      if(button){
+        button.setAttribute('aria-pressed',active?'true':'false');
+        button.textContent='Ver modelo';
+      }
+    });
+
+    if(table){
+      table.querySelectorAll('[data-model].is-selected').forEach(function(cell){
+        cell.classList.remove('is-selected');
+      });
+      table.querySelectorAll('[data-model]').forEach(function(cell){
+        cell.classList.remove('is-hovered');
+        if(cell.getAttribute('data-model')===key)cell.classList.add('is-selected');
+      });
+    }
+  }
+
+  cards.forEach(function(card){
+    var key=card.getAttribute('data-model');
+    var button=card.querySelector('[data-select-model]');
+    if(button)button.addEventListener('click',function(event){
+      event.preventDefault();
+      event.stopPropagation();
+      select(key);
+    });
+    card.addEventListener('click',function(event){
+      if(event.target.closest('a,button'))return;
+      select(key);
+    });
+  });
+
+  if(table){
+    table.addEventListener('click',function(event){
+      var cell=event.target.closest('[data-model]');
+      if(cell&&table.contains(cell))select(cell.getAttribute('data-model'));
+    });
+    table.addEventListener('pointerover',function(event){
+      var cell=event.target.closest('[data-model]');
+      if(!cell||!table.contains(cell))return;
+      table.querySelectorAll('[data-model="'+cell.getAttribute('data-model')+'"]').forEach(function(item){
+        item.classList.add('is-hovered');
+      });
+    });
+    table.addEventListener('pointerout',function(event){
+      var cell=event.target.closest('[data-model]');
+      if(!cell||!table.contains(cell))return;
+      var next=event.relatedTarget&&event.relatedTarget.closest?event.relatedTarget.closest('[data-model]'):null;
+      if(next&&next.getAttribute('data-model')===cell.getAttribute('data-model'))return;
+      table.querySelectorAll('[data-model="'+cell.getAttribute('data-model')+'"]').forEach(function(item){
+        item.classList.remove('is-hovered');
+      });
+    });
+  }
+
+  select('combo');
+})();
+</script> <div class="mp-draftbar">Borrador · amarillo = por validar con Emanuel <button type="button" id="mpvt">Ocultar marcas</button></div><script>document.getElementById("mpvt").addEventListener("click",function(){var h=document.body.classList.toggle("mp-novals");this.textContent=h?"Mostrar marcas":"Ocultar marcas"});</script></body> </html>
