@@ -1018,6 +1018,124 @@ small,.small{font-size:var(--fs-small);line-height:1.5;}
  .scanner-choice-guide .scanner-guide-grid p{font-size:14px}
  .applications-section .application-list p{font-size:14px}
 }
+
+
+/* ===== CÓMO ELEGIR: tarjetas tecnológicas con movimiento sutil ===== */
+.scanner-choice-guide{
+  position:relative;
+  isolation:isolate;
+  overflow:hidden;
+  background:
+    radial-gradient(ellipse at 12% 8%,rgba(0,184,189,.09),transparent 34%),
+    radial-gradient(ellipse at 90% 92%,rgba(46,130,240,.10),transparent 38%),
+    linear-gradient(115deg,#FFFFFF 0%,#F5F9FF 52%,#EAF3FF 100%);
+}
+.scanner-choice-guide:before{
+  content:"";
+  position:absolute;
+  z-index:-1;
+  inset:0;
+  pointer-events:none;
+  opacity:.25;
+  background-image:linear-gradient(rgba(46,130,240,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(46,130,240,.07) 1px,transparent 1px);
+  background-size:34px 34px;
+  mask-image:linear-gradient(90deg,transparent,#000 18%,#000 82%,transparent);
+}
+.scanner-choice-guide .scanner-guide-grid{
+  gap:18px;
+  margin-top:32px;
+  border:0;
+}
+.scanner-choice-guide .scanner-guide-grid article{
+  position:relative;
+  min-height:210px;
+  overflow:hidden;
+  grid-template-columns:1fr;
+  gap:22px;
+  padding:24px 24px 26px;
+  border:1px solid rgba(46,130,240,.20);
+  border-radius:17px;
+  background:linear-gradient(145deg,rgba(255,255,255,.98),rgba(244,249,255,.94));
+  box-shadow:0 8px 24px rgba(21,62,112,.055),inset 0 1px 0 rgba(255,255,255,.95);
+  transition:transform .35s cubic-bezier(.2,.75,.25,1),border-color .35s ease,box-shadow .35s ease;
+  animation:scanner-card-arrive .7s cubic-bezier(.2,.7,.25,1) both;
+}
+.scanner-choice-guide .scanner-guide-grid article:nth-child(2){animation-delay:.12s}
+.scanner-choice-guide .scanner-guide-grid article:nth-child(3){animation-delay:.24s}
+.scanner-choice-guide .scanner-guide-grid article+article{border-left:1px solid rgba(46,130,240,.20)}
+.scanner-choice-guide .scanner-guide-grid article:before{
+  content:"";
+  position:absolute;
+  top:0;left:-115%;
+  width:75%;height:2px;
+  background:linear-gradient(90deg,transparent,#00B8BD,#2E82F0,transparent);
+  opacity:0;
+  transition:left .65s ease,opacity .25s ease;
+}
+.scanner-choice-guide .scanner-guide-grid article:after{
+  content:"";
+  position:absolute;
+  width:150px;height:150px;
+  right:-75px;bottom:-88px;
+  border:1px solid rgba(46,130,240,.13);
+  border-radius:50%;
+  box-shadow:0 0 0 13px rgba(46,130,240,.035),0 0 0 27px rgba(0,184,189,.025);
+  transition:transform .5s ease,border-color .5s ease;
+  pointer-events:none;
+}
+.scanner-choice-guide .scanner-guide-grid article:hover{
+  transform:translateY(-8px);
+  border-color:rgba(46,130,240,.55);
+  box-shadow:0 18px 38px rgba(21,88,192,.13),0 0 0 3px rgba(46,130,240,.045);
+}
+.scanner-choice-guide .scanner-guide-grid article:hover:before{left:120%;opacity:1}
+.scanner-choice-guide .scanner-guide-grid article:hover:after{transform:scale(1.22);border-color:rgba(0,184,189,.35)}
+.scanner-choice-guide .scanner-guide-grid article>span{
+  position:relative;
+  z-index:1;
+  display:grid;
+  place-items:center;
+  width:48px;height:48px;
+  margin:0;
+  border:1px solid rgba(46,130,240,.22);
+  border-radius:13px;
+  background:linear-gradient(145deg,#EAF4FF,#F4FCFF);
+  color:#0877D8;
+  font-family:var(--font-mono);
+  font-size:14px;
+  box-shadow:0 5px 14px rgba(46,130,240,.10);
+  transition:transform .35s ease,background .35s ease,box-shadow .35s ease;
+}
+.scanner-choice-guide .scanner-guide-grid article:nth-child(2)>span{border-radius:50%;background:linear-gradient(145deg,#E5FAFA,#F0FCFF);color:#078C9A}
+.scanner-choice-guide .scanner-guide-grid article:nth-child(3)>span{border-radius:8px 16px 8px 16px;background:linear-gradient(145deg,#EDF0FF,#F7F8FF);color:#4C68C8}
+.scanner-choice-guide .scanner-guide-grid article:hover>span{transform:translateY(-3px) rotate(-4deg);box-shadow:0 9px 20px rgba(46,130,240,.18)}
+.scanner-choice-guide .scanner-guide-grid h3{position:relative;z-index:1;font-size:19px;line-height:1.35}
+.scanner-choice-guide .scanner-guide-grid p{position:relative;z-index:1;margin:10px 0 0;font-size:14px;line-height:1.7}
+.scanner-choice-guide .scanner-guide-grid a{font-weight:750;text-decoration:none;border-bottom:1px solid rgba(8,119,216,.35);transition:color .2s,border-color .2s}
+.scanner-choice-guide .scanner-guide-grid a:hover{color:#00A5AE;border-color:#00A5AE}
+@keyframes scanner-card-arrive{
+  from{opacity:0;transform:translateY(22px)}
+  to{opacity:1;transform:translateY(0)}
+}
+@media(max-width:900px){
+  .scanner-choice-guide .scanner-guide-grid{grid-template-columns:1fr;gap:12px}
+  .scanner-choice-guide .scanner-guide-grid article{min-height:0;grid-template-columns:48px minmax(0,1fr);gap:17px;padding:20px}
+  .scanner-choice-guide .scanner-guide-grid article+article{border-left:1px solid rgba(46,130,240,.20)}
+  .scanner-choice-guide .scanner-guide-grid article>span{grid-row:1}
+}
+@media(max-width:767px){
+  .scanner-choice-guide .scanner-guide-grid article{padding:19px;grid-template-columns:42px minmax(0,1fr);gap:14px}
+  .scanner-choice-guide .scanner-guide-grid article>span{width:42px;height:42px}
+  .scanner-choice-guide .scanner-guide-grid h3{font-size:17px}
+  .scanner-choice-guide .scanner-guide-grid p{font-size:14px}
+}
+@media(hover:none){
+  .scanner-choice-guide .scanner-guide-grid article:hover{transform:none}
+}
+@media(prefers-reduced-motion:reduce){
+  .scanner-choice-guide .scanner-guide-grid article{animation:none;transition:none}
+  .scanner-choice-guide .scanner-guide-grid article:before{display:none}
+}
 </style>
 
 
