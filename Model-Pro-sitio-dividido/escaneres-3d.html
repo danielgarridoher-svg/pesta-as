@@ -1352,105 +1352,157 @@ small,.small{font-size:var(--fs-small);line-height:1.5;}
  #guia-tamano .scanner-size-grid .mp-sq,#guia-tamano .scanner-size-grid .mp-chips a{transition:none}
 }
 
-/* ===== Comparativa premium: ficha técnica de producto ===== */
+
+/* ===== Comparativa tecnológica: lenguaje visual SHINING 3D / Model Pro ===== */
 .scanner-compare-section{
-  position:relative;padding:88px 0 82px!important;overflow:hidden;
-  color:#193653!important;
+  position:relative;isolation:isolate;overflow:hidden;
+  padding:88px 0 82px!important;color:#F4F6F9!important;
   background:
-    radial-gradient(ellipse at 4% 8%,rgba(48,132,239,.09),transparent 34%),
-    radial-gradient(ellipse at 96% 92%,rgba(0,180,190,.08),transparent 30%),
-    linear-gradient(125deg,#F8FBFF 0%,#EFF6FD 52%,#F8FBFF 100%)!important;
+    radial-gradient(ellipse at 12% 0%,rgba(46,130,240,.22),transparent 38%),
+    radial-gradient(ellipse at 88% 90%,rgba(0,184,189,.15),transparent 34%),
+    linear-gradient(115deg,#0C1422 0%,#10213A 58%,#0E1B33 100%)!important;
 }
 .scanner-compare-section:before{
-  content:"";position:absolute;inset:0;pointer-events:none;opacity:.25;
-  background-image:linear-gradient(rgba(31,91,151,.055) 1px,transparent 1px),linear-gradient(90deg,rgba(31,91,151,.055) 1px,transparent 1px);
-  background-size:34px 34px;
-  mask-image:linear-gradient(to bottom,black,transparent 82%);
+  content:"";position:absolute;inset:0;z-index:-1;pointer-events:none;opacity:.28;
+  background-image:linear-gradient(rgba(139,216,255,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(139,216,255,.08) 1px,transparent 1px);
+  background-size:42px 42px;
+  mask-image:linear-gradient(to bottom,black,transparent 88%);
+}
+.scanner-compare-section:after{
+  content:"";position:absolute;top:0;left:8%;right:8%;height:1px;
+  background:linear-gradient(90deg,transparent,#2E82F0 28%,#00B8BD 72%,transparent);
+  box-shadow:0 0 18px rgba(0,184,189,.55);
 }
 .scanner-compare-section>.container{position:relative;z-index:1;max-width:1280px}
 .scanner-compare-section .section-heading{margin-bottom:30px!important}
-.scanner-compare-section .eyebrow{color:#087BCB!important;letter-spacing:.16em}
+.scanner-compare-section .eyebrow{color:#8BD8FF!important;letter-spacing:.16em}
 .scanner-compare-section h2{
-  color:#142F4D!important;font-size:clamp(2rem,1.4rem + 1.8vw,2.8rem)!important;
+  color:#F2F7FF!important;font-size:clamp(2rem,1.4rem + 1.8vw,2.8rem)!important;
   letter-spacing:-.045em;
 }
 .scanner-compare-section .section-sub{
-  color:#5D728A!important;max-width:760px!important;font-size:14px!important;
+  color:#D6E7F8!important;max-width:760px!important;font-size:14px!important;
 }
 .scanner-compare-scroll{
-  position:relative;overflow:auto!important;border:1px solid #C9D9E9!important;
-  border-radius:18px!important;background:#FFFFFF!important;
-  box-shadow:0 22px 60px rgba(26,66,108,.12),0 3px 10px rgba(26,66,108,.05);
-  scrollbar-color:#7EA9D0 #E8F0F8;scrollbar-width:thin;
+  position:relative;overflow:auto!important;
+  border:1px solid rgba(139,216,255,.28)!important;border-radius:15px!important;
+  background:#0E1B33!important;
+  box-shadow:0 24px 65px rgba(0,0,0,.28),0 0 32px rgba(46,130,240,.09);
+  scrollbar-color:#2E82F0 #10213A;scrollbar-width:thin;
+}
+.scanner-compare-scroll:before{
+  content:"";display:block;height:3px;
+  background:linear-gradient(90deg,#1558C0 0%,#2E82F0 48%,#00B8BD 100%);
 }
 .scanner-compare-table{
-  min-width:1120px!important;width:100%;table-layout:fixed;
+  min-width:1160px!important;width:100%;table-layout:fixed;
   border-collapse:separate!important;border-spacing:0!important;
-  background:#FFFFFF!important;color:#29445F!important;font-size:13px!important;
+  background:#0E1B33!important;color:#D6E7F8!important;font-size:12px!important;
 }
 .scanner-compare-table th,.scanner-compare-table td{
-  padding:19px 16px!important;border-bottom:1px solid #E5EDF5!important;
-  border-right:1px solid #EDF2F7;text-align:left;vertical-align:middle!important;
-  line-height:1.5!important;overflow-wrap:normal!important;
+  padding:15px 13px!important;
+  border-bottom:1px solid rgba(164,200,244,.15)!important;
+  border-right:1px solid rgba(164,200,244,.09);
+  text-align:left;vertical-align:middle!important;
+  line-height:1.5!important;overflow-wrap:break-word;
 }
 .scanner-compare-table tr>*:last-child{border-right:0}
 .scanner-compare-table thead th{
-  position:sticky;top:0;z-index:2;background:#142F4D!important;color:#FFFFFF!important;
-  font-size:12px!important;font-weight:750;letter-spacing:.01em;
-  height:82px;vertical-align:bottom!important;
-  border-bottom:3px solid #2489D8!important;
+  position:sticky;top:0;z-index:2;height:128px;
+  padding:12px 10px!important;vertical-align:middle!important;
+  background:linear-gradient(160deg,#18395F 0%,#142D50 70%,#102741 100%)!important;
+  color:#F2F7FF!important;border-bottom:1px solid rgba(139,216,255,.35)!important;
+  font-size:11px!important;font-weight:750;text-align:center;
 }
 .scanner-compare-table thead th:first-child{
-  left:0;z-index:4;width:172px;min-width:172px;
-  color:#A9C8E4!important;background:#102741!important;
-  text-transform:uppercase;font-size:10px!important;letter-spacing:.13em;
+  left:0;z-index:4;width:160px;min-width:160px;
+  background:#102741!important;color:#8BD8FF!important;
+  text-align:left;text-transform:uppercase;font-size:10px!important;letter-spacing:.12em;
 }
 .scanner-compare-table tbody th{
-  position:sticky;left:0;z-index:1;width:172px;min-width:172px;
-  color:#244D73!important;background:#F1F6FB!important;
-  font-size:11px!important;font-weight:800;letter-spacing:.025em;
-  text-transform:uppercase;
+  position:sticky;left:0;z-index:1;width:160px;min-width:160px;
+  background:#142D50!important;color:#8BD8FF!important;
+  font-size:10px!important;font-weight:800;letter-spacing:.07em;text-transform:uppercase;
 }
-.scanner-compare-table tbody td{background:#FFFFFF!important;color:#405A73!important}
-.scanner-compare-table tbody tr:nth-child(even) td{background:#F8FAFD!important}
-.scanner-compare-table tbody tr{transition:background .22s ease}
-.scanner-compare-table tbody tr:hover td{background:#EDF6FF!important}
+.scanner-compare-table tbody td{background:#0E1B33!important;color:#D6E7F8!important}
+.scanner-compare-table tbody tr:nth-child(even) td{background:#112541!important}
+.scanner-compare-table tbody tr{transition:background .2s ease}
+.scanner-compare-table tbody tr:hover td{background:#173456!important}
 .scanner-compare-table [data-model].is-selected{
-  position:relative;background:#E8F4FF!important;color:#174F83!important;
-  box-shadow:inset 1px 0 #B4D8F5,inset -1px 0 #B4D8F5!important;
-  font-weight:700;
+  position:relative;background:rgba(46,130,240,.19)!important;
+  color:#FFFFFF!important;font-weight:700;
+  box-shadow:inset 1px 0 rgba(46,130,240,.42),inset -1px 0 rgba(46,130,240,.42)!important;
 }
 .scanner-compare-table thead [data-model].is-selected{
-  background:linear-gradient(155deg,#1769B5 0%,#15528E 100%)!important;
-  color:#FFFFFF!important;border-bottom-color:#53D5D1!important;
-  box-shadow:inset 1px 0 rgba(255,255,255,.16),inset -1px 0 rgba(255,255,255,.16)!important;
+  background:linear-gradient(155deg,#1769B5 0%,#1558A6 58%,#12477D 100%)!important;
+  color:#FFFFFF!important;border-bottom:2px solid #00B8BD!important;
+  box-shadow:inset 0 0 22px rgba(0,184,189,.12)!important;
 }
 .scanner-compare-table tbody [data-model].is-selected:after{
   content:"";position:absolute;top:0;bottom:0;right:-1px;width:2px;
-  background:linear-gradient(180deg,#2C9BEA,#22BFC0);opacity:.8;
+  background:linear-gradient(180deg,#2E82F0,#00B8BD);box-shadow:0 0 9px #00B8BD;
 }
 .scanner-compare-table [data-model].is-hovered:not(.is-selected){
-  background:#F0F7FD!important;color:#174F83!important;
-  box-shadow:inset 0 0 0 1px #D6E9F8!important;
+  background:rgba(46,130,240,.14)!important;color:#FFFFFF!important;
+  box-shadow:inset 0 0 0 1px rgba(139,216,255,.2)!important;
+}
+.compare-product-visual{
+  position:relative;display:flex;align-items:center;justify-content:center;
+  width:100%;height:68px;margin:0 auto 9px;overflow:hidden;
+  border:1px solid rgba(139,216,255,.14);border-radius:8px;
+  background:linear-gradient(145deg,rgba(255,255,255,.08),rgba(46,130,240,.07));
+}
+.compare-product-visual:after{
+  content:"";position:absolute;left:0;right:0;top:-2px;height:1px;
+  background:linear-gradient(90deg,transparent,#8BD8FF,transparent);
+  opacity:0;transform:translateY(0);
+}
+.scanner-compare-table thead th.is-selected .compare-product-visual{
+  border-color:rgba(139,216,255,.42);
+  background:linear-gradient(145deg,rgba(255,255,255,.13),rgba(0,184,189,.12));
+  box-shadow:inset 0 0 18px rgba(0,184,189,.09);
+}
+.scanner-compare-table thead th.is-selected .compare-product-visual:after{
+  opacity:1;animation:compare-scan 3.8s ease-in-out infinite;
+}
+.compare-product-visual img{
+  display:block;width:90%;height:62px;object-fit:contain;
+  filter:drop-shadow(0 5px 9px rgba(0,0,0,.28));
+  transition:transform .3s ease,filter .3s ease;
+}
+.scanner-compare-table thead th:hover .compare-product-visual img{
+  transform:translateY(-3px) scale(1.05);
+  filter:drop-shadow(0 7px 12px rgba(0,184,189,.22));
+}
+.compare-product-name{display:block;min-height:30px;line-height:1.35}
+@keyframes compare-scan{
+  0%,100%{transform:translateY(0);opacity:0}
+  15%,75%{opacity:.9}
+  85%{transform:translateY(66px);opacity:0}
 }
 .scanner-compare-note{
-  max-width:1050px;margin:18px 0 0!important;color:#6C8095!important;
+  max-width:1050px;margin:18px 0 0!important;color:#AFC5DF!important;
   font-size:11px!important;line-height:1.7!important;
 }
 .scanner-compare-transition{
   margin:14px 0 0!important;padding:17px 20px;
-  border-left:3px solid #20A8C4;background:rgba(255,255,255,.72);
-  color:#24496B!important;font-size:14px!important;line-height:1.6;font-weight:650;
+  border-left:3px solid #00B8BD;
+  background:linear-gradient(100deg,rgba(21,88,192,.2),rgba(0,184,189,.07));
+  color:#F2F7FF!important;font-size:14px!important;line-height:1.6;font-weight:650;
   border-radius:0 10px 10px 0;
 }
 @media(max-width:767px){
   .scanner-compare-section{padding:64px 0!important}
-  .scanner-compare-scroll{border-radius:13px!important}
-  .scanner-compare-table th,.scanner-compare-table td{padding:15px 13px!important}
+  .scanner-compare-scroll{border-radius:12px!important}
+  .scanner-compare-table th,.scanner-compare-table td{padding:13px 11px!important}
+  .scanner-compare-table thead th{height:116px}
+  .compare-product-visual{height:60px}
+  .compare-product-visual img{height:55px}
   .scanner-compare-transition{padding:14px 16px}
 }
 @media(prefers-reduced-motion:reduce){
-  .scanner-compare-table tbody tr{transition:none}
+  .scanner-compare-table tbody tr,.compare-product-visual img{transition:none}
+  .scanner-compare-table thead th.is-selected .compare-product-visual:after{animation:none}
 }
 </style>
 
@@ -1619,13 +1671,13 @@ small,.small{font-size:var(--fs-small);line-height:1.5;}
     <div class="scanner-compare-scroll" tabindex="0" aria-label="Tabla comparativa; desplázate horizontalmente para consultar todos los modelos">
       <table class="scanner-compare-table">
         <thead><tr><th scope="col">Característica</th>
-          <th scope="col" data-model="q12">OptimScan Q12</th>
-          <th scope="col" data-model="combo" class="is-selected">FreeScan Combo Plus Wireless</th>
-          <th scope="col" data-model="rigil">EinScan Rigil</th>
-          <th scope="col" data-model="ue">FreeScan UE Pro2</th>
-          <th scope="col" data-model="libre">EinScan Libre</th>
-          <th scope="col" data-model="trak">FreeScan Trak Nova</th>
-          <th scope="col" data-model="omni">FreeScan Omni</th>
+          <th scope="col" data-model="q12"><span class="compare-product-visual"><img src="https://raw.githubusercontent.com/danielgarridoher-svg/pesta-as/acce7f59fcf3e39f32333cf06b2d64fd54f4d612/model-pro-escaneres-3d/images/q12.webp" alt="" loading="lazy"></span><span class="compare-product-name">OptimScan Q12</span></th>
+          <th scope="col" data-model="combo" class="is-selected"><span class="compare-product-visual"><img src="https://raw.githubusercontent.com/danielgarridoher-svg/pesta-as/acce7f59fcf3e39f32333cf06b2d64fd54f4d612/model-pro-escaneres-3d/images/combo.webp" alt="" loading="lazy"></span><span class="compare-product-name">FreeScan Combo Plus Wireless</span></th>
+          <th scope="col" data-model="rigil"><span class="compare-product-visual"><img src="https://raw.githubusercontent.com/danielgarridoher-svg/pesta-as/acce7f59fcf3e39f32333cf06b2d64fd54f4d612/model-pro-escaneres-3d/images/rigil.webp" alt="" loading="lazy"></span><span class="compare-product-name">EinScan Rigil</span></th>
+          <th scope="col" data-model="ue"><span class="compare-product-visual"><img src="https://raw.githubusercontent.com/danielgarridoher-svg/pesta-as/acce7f59fcf3e39f32333cf06b2d64fd54f4d612/model-pro-escaneres-3d/images/pro2.webp" alt="" loading="lazy"></span><span class="compare-product-name">FreeScan UE Pro2</span></th>
+          <th scope="col" data-model="libre"><span class="compare-product-visual"><img src="https://raw.githubusercontent.com/danielgarridoher-svg/pesta-as/acce7f59fcf3e39f32333cf06b2d64fd54f4d612/model-pro-escaneres-3d/images/libre.webp" alt="" loading="lazy"></span><span class="compare-product-name">EinScan Libre</span></th>
+          <th scope="col" data-model="trak"><span class="compare-product-visual"><img src="https://raw.githubusercontent.com/danielgarridoher-svg/pesta-as/acce7f59fcf3e39f32333cf06b2d64fd54f4d612/model-pro-escaneres-3d/images/nova.webp" alt="" loading="lazy"></span><span class="compare-product-name">FreeScan Trak Nova</span></th>
+          <th scope="col" data-model="omni"><span class="compare-product-visual"><img src="https://raw.githubusercontent.com/danielgarridoher-svg/pesta-as/acce7f59fcf3e39f32333cf06b2d64fd54f4d612/model-pro-escaneres-3d/images/omni.webp" alt="" loading="lazy"></span><span class="compare-product-name">FreeScan Omni</span></th>
         </tr></thead>
         <tbody>
           <tr><th scope="row">Exactitud de escaneo</th>
