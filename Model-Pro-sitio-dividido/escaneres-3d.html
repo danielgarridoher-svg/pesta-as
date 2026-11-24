@@ -1141,11 +1141,11 @@ small,.small{font-size:var(--fs-small);line-height:1.5;}
   <div class="scanner-request-card">
     <form class="scanner-request-form" aria-label="Formulario de orientación sobre escáneres 3D" novalidate autocomplete="on">
       <fieldset class="scanner-choice-fieldset">
-        <legend>¿Qué necesitas? <span>Elige una opción</span></legend>
+        <legend>¿Qué necesitas? <span>Puedes elegir más de una opción</span></legend>
         <div class="scanner-choice-grid">
-          <label class="scanner-choice-card"><input type="radio" name="interes" value="Orientación" required><span class="scanner-choice-icon" aria-hidden="true">⌖</span><b>Orientación</b><small>Ayuda para elegir un equipo</small></label>
-          <label class="scanner-choice-card"><input type="radio" name="interes" value="Demostración"><span class="scanner-choice-icon" aria-hidden="true">▣</span><b>Demostración</b><small>Probar con una pieza real</small></label>
-          <label class="scanner-choice-card"><input type="radio" name="interes" value="Cotización"><span class="scanner-choice-icon" aria-hidden="true">▤</span><b>Cotización</b><small>Conocer precio y opciones</small></label>
+          <label class="scanner-choice-card"><input type="checkbox" name="interes" value="Orientación"><span class="scanner-choice-icon" aria-hidden="true">⌖</span><b>Orientación</b><small>Ayuda para elegir un equipo</small></label>
+          <label class="scanner-choice-card"><input type="checkbox" name="interes" value="Demostración"><span class="scanner-choice-icon" aria-hidden="true">▣</span><b>Demostración</b><small>Probar con una pieza real</small></label>
+          <label class="scanner-choice-card"><input type="checkbox" name="interes" value="Cotización"><span class="scanner-choice-icon" aria-hidden="true">▤</span><b>Cotización</b><small>Conocer precio y opciones</small></label>
         </div>
         <p class="scanner-choice-hint" data-choice-hint>Selecciona cómo podemos ayudarte.</p>
       </fieldset>
@@ -1225,70 +1225,77 @@ small,.small{font-size:var(--fs-small);line-height:1.5;}
   var accuracyField=section.querySelector('[data-field="accuracy"]');
   var copy={
     'Orientación':{
-      eyebrow:'ORIENTACIÓN PARA TU PROYECTO',
-      title:'Encuentra el escáner',
-      highlight:'adecuado para tu aplicación.',
+      eyebrow:'ORIENTACIÓN PARA TU PROYECTO',title:'Encuentra el escáner',highlight:'adecuado para tu aplicación.',
       description:'Cuéntanos sobre la pieza, el nivel de exactitud y el entorno de trabajo. Te ayudaremos a identificar qué tecnología puede responder a tu necesidad.',
       button:'Solicitar orientación',
-      steps:[['01','Conocemos tu aplicación','Revisamos el tamaño de la pieza, su material y el uso que tendrá el escaneo.'],['02','Identificamos tus necesidades','Consideramos la exactitud que buscas y el tipo de proceso.'],['03','Te orientamos','Comparamos las opciones adecuadas para tu proyecto.']]
+      steps:[['Conocemos tu aplicación','Revisamos el tamaño de la pieza, su material y el uso que tendrá el escaneo.'],['Identificamos tus necesidades','Consideramos la exactitud que buscas y el tipo de proceso.'],['Te orientamos','Comparamos las opciones adecuadas para tu proyecto.']]
     },
     'Demostración':{
-      eyebrow:'DEMOSTRACIÓN DE ESCANEO 3D',
-      title:'Prueba el equipo',
-      highlight:'con una pieza de tu operación.',
+      eyebrow:'DEMOSTRACIÓN DE ESCANEO 3D',title:'Prueba el equipo',highlight:'con una pieza de tu operación.',
       description:'Indícanos qué modelo te interesa y cómo es tu aplicación para preparar una demostración enfocada en tu necesidad.',
       button:'Solicitar demostración',
-      steps:[['01','Elegimos el equipo','Indica el modelo que te interesa o déjalo pendiente si aún no lo decides.'],['02','Revisamos tu pieza','Conocemos su tamaño, la exactitud requerida y el material.'],['03','Coordinamos la prueba','Evaluamos contigo una demostración sobre tu aplicación.']]
+      steps:[['Elegimos el equipo','Indica el modelo que te interesa o déjalo pendiente si aún no lo decides.'],['Revisamos tu pieza','Conocemos su tamaño, la exactitud requerida y el material.'],['Coordinamos la prueba','Evaluamos contigo una demostración sobre tu aplicación.']]
     },
     'Cotización':{
-      eyebrow:'COTIZACIÓN DE EQUIPO',
-      title:'Prepara tu proyecto',
-      highlight:'y solicita una cotización.',
+      eyebrow:'COTIZACIÓN DE EQUIPO',title:'Prepara tu proyecto',highlight:'y solicita una cotización.',
       description:'Comparte el modelo de interés y los detalles de tu aplicación para preparar una propuesta acorde con lo que necesitas.',
       button:'Solicitar cotización',
-      steps:[['01','Definimos el equipo','Selecciona el modelo que te interesa o indica si necesitas orientación.'],['02','Revisamos el alcance','Consideramos la pieza, exactitud, cantidades y necesidades adicionales.'],['03','Preparamos la propuesta','Con la información de tu proyecto podremos avanzar con la cotización.']]
+      steps:[['Definimos el equipo','Selecciona el modelo que te interesa o indica si necesitas orientación.'],['Revisamos el alcance','Consideramos la pieza, exactitud, cantidades y necesidades adicionales.'],['Preparamos la propuesta','Con la información de tu proyecto podremos avanzar con la cotización.']]
     }
   };
-  function selected(){return choices.find(function(input){return input.checked;});}
+  function selected(){return choices.filter(function(input){return input.checked;}).map(function(input){return input.value;});}
   function setFieldVisible(field,visible){
     field.hidden=!visible;
     var control=field.querySelector('select,textarea,input');
-    if(control){
-      control.disabled=!visible;
-      if(!visible)control.value='';
-    }
+    if(control){control.disabled=!visible;if(!visible)control.value='';}
   }
   function updateForm(){
-    var choice=selected();
-    var value=choice?choice.value:'';
-    var content=copy[value];
-    dynamic.hidden=!choice;
-    hint.hidden=!!choice;
-    if(!content)return;
-    introEyebrow.textContent=content.eyebrow;
-    introTitle.textContent=content.title;
-    introHighlight.textContent=content.highlight;
-    introDescription.textContent=content.description;
-    introSteps.innerHTML=content.steps.map(function(step){
-      return '<li><span>'+step[0]+'</span><div><b>'+step[1]+'</b><br><small>'+step[2]+'</small></div></li>';
+    var values=selected();
+    var hasSelection=values.length>0;
+    var multiple=values.length>1;
+    dynamic.hidden=!hasSelection;
+    hint.hidden=hasSelection;
+    if(!hasSelection)return;
+    var contents=values.map(function(value){return copy[value];});
+    if(multiple){
+      introEyebrow.textContent='ATENCIÓN PARA TU PROYECTO';
+      introTitle.textContent='Cuéntanos qué necesitas';
+      introHighlight.textContent='y lo revisamos contigo.';
+      introDescription.textContent='Has seleccionado varias opciones. Comparte los datos de tu aplicación para que podamos atender cada una de tus necesidades.';
+      submit.textContent='Enviar solicitud';
+    }else{
+      var content=contents[0];
+      introEyebrow.textContent=content.eyebrow;
+      introTitle.textContent=content.title;
+      introHighlight.textContent=content.highlight;
+      introDescription.textContent=content.description;
+      submit.textContent=content.button;
+    }
+    var steps=[];
+    contents.forEach(function(content,index){
+      content.steps.forEach(function(step){steps.push({label:values[index],title:step[0],description:step[1]});});
+    });
+    introSteps.innerHTML=steps.map(function(step,index){
+      var number=String(index+1).padStart(2,'0');
+      return '<li><span>'+number+'</span><div><b>'+step.title+'</b><br><small>'+step.description+'</small><br><small class="scanner-step-category">'+step.label+'</small></div></li>';
     }).join('');
-    setFieldVisible(modelField,value==='Demostración'||value==='Cotización');
-    setFieldVisible(commentsField,value==='Cotización');
+    setFieldVisible(modelField,values.indexOf('Demostración')!==-1||values.indexOf('Cotización')!==-1);
+    setFieldVisible(commentsField,values.indexOf('Cotización')!==-1);
     setFieldVisible(sizeField,true);
     setFieldVisible(accuracyField,true);
-    submit.textContent=content.button;
-    form.setAttribute('aria-label','Formulario de '+value.toLowerCase()+' sobre escáneres 3D');
+    form.setAttribute('aria-label','Formulario de '+values.join(', ').toLowerCase()+' sobre escáneres 3D');
   }
   choices.forEach(function(input){input.addEventListener('change',updateForm);});
   updateForm();
   form.addEventListener('submit',function(event){
     event.preventDefault();
     error.textContent='';
-    if(!selected()){hint.textContent='Selecciona cómo podemos ayudarte.';choices[0].focus();return;}
+    var values=selected();
+    if(!values.length){hint.textContent='Selecciona una o varias opciones para continuar.';choices[0].focus();return;}
     var invalid=form.querySelector(':invalid');
     if(invalid){invalid.reportValidity();invalid.focus();return;}
     var name=form.elements.nombre.value.trim().split(/\s+/)[0].replace(/[&<>"]/g,'');
-    thanks.innerHTML='<h3>¡Gracias, '+name+'!</h3><p>Tu solicitud de '+selected().value.toLowerCase()+' quedó preparada en esta maqueta. El formulario es demostrativo y todavía no envía información.</p><button type="button">Volver al formulario</button>';
+    thanks.innerHTML='<h3>¡Gracias, '+name+'!</h3><p>Tu solicitud ('+values.join(', ').toLowerCase()+') quedó preparada en esta maqueta. El formulario es demostrativo y todavía no envía información.</p><button type="button">Volver al formulario</button>';
     form.hidden=true;
     thanks.hidden=false;
     thanks.querySelector('button').addEventListener('click',function(){
