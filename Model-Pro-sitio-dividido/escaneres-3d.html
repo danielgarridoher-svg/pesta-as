@@ -1231,6 +1231,13 @@ small,.small{font-size:var(--fs-small);line-height:1.5;}
 
 
 
+
+<style id="scanner-guide-no-numbers">
+.scanner-choice-guide .scanner-guide-grid article{grid-template-columns:1fr!important;gap:10px!important}
+.scanner-choice-guide .scanner-guide-grid article>span{display:none!important}
+@media(max-width:900px){.scanner-choice-guide .scanner-guide-grid article{grid-template-columns:1fr!important;gap:10px!important}}
+</style>
+
 </head>
 <body>
 <div class="mp-wrap">
@@ -1290,9 +1297,9 @@ small,.small{font-size:var(--fs-small);line-height:1.5;}
     <h2 id="scanner-guide-title">Tres preguntas para saber qué escáner necesitas.</h2>
     <p class="scanner-guide-lead">Son las mismas que le hacemos a cada cliente. Con tus respuestas, podemos reducir las opciones a uno o dos modelos.</p>
     <div class="scanner-guide-grid">
-      <article><span>01</span><div><h3>¿De qué tamaño es tu pieza?</h3><p>Desde un engrane hasta una carrocería. <a href="#guia-tamano">Ve la guía de tamaños <b aria-hidden="true">→</b></a></p></div></article>
-      <article><span>02</span><div><h3>¿Qué exactitud necesitas?</h3><p>Piensa en las tolerancias de tu pieza: ¿20 micras, 10 o 5? La exactitud requerida ayuda a definir la tecnología adecuada.</p></div></article>
-      <article><span>03</span><div><h3>¿Cuántas piezas y dónde?</h3><p>Una pieza en taller, series en producción o trabajo en planta y campo. El entorno también importa.</p></div></article>
+      <article><div><h3>¿De qué tamaño es tu pieza?</h3><p>Desde un engrane hasta una carrocería. <a href="#guia-tamano">Ve la guía de tamaños <b aria-hidden="true">→</b></a></p></div></article>
+      <article><div><h3>¿Qué exactitud necesitas?</h3><p>Piensa en las tolerancias de tu pieza: ¿20 micras, 10 o 5? La exactitud requerida ayuda a definir la tecnología adecuada.</p></div></article>
+      <article><div><h3>¿Cuántas piezas y dónde?</h3><p>Una pieza en taller, series en producción o trabajo en planta y campo. El entorno también importa.</p></div></article>
     </div>
   </div>
 </section>
