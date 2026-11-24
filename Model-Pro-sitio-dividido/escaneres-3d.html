@@ -1129,10 +1129,10 @@ small,.small{font-size:var(--fs-small);line-height:1.5;}
 <section class="scanner-request-section" id="scanner-request-form" aria-labelledby="scanner-request-title">
 <div class="mp-co scanner-request-grid">
   <div class="scanner-request-intro">
-    <p class="scanner-request-eyebrow eyebrow">HABLEMOS DE TU PROYECTO</p>
-    <h2 id="scanner-request-title">Cuéntanos qué necesitas <span>y te orientamos.</span></h2>
-    <p class="section-sub">Con unos pocos datos podemos entender tu aplicación y recomendarte el siguiente paso.</p>
-    <ul>
+    <p class="scanner-request-eyebrow eyebrow" data-intro-eyebrow>HABLEMOS DE TU PROYECTO</p>
+    <h2 id="scanner-request-title"><span data-intro-title>Cuéntanos qué necesitas</span> <span data-intro-highlight>y te orientamos.</span></h2>
+    <p class="section-sub" data-intro-description>Comparte algunos datos de tu aplicación y te ayudaremos a identificar el siguiente paso.</p>
+    <ul data-intro-steps>
       <li><span>01</span><div><b>Entendemos tu proyecto</b><br><small>Qué pieza quieres digitalizar y para qué la necesitas.</small></div></li>
       <li><span>02</span><div><b>Revisamos las opciones</b><br><small>Te orientamos sobre el equipo que puede funcionar.</small></div></li>
       <li><span>03</span><div><b>Avanzamos contigo</b><br><small>Podemos coordinar una demostración o cotización.</small></div></li>
@@ -1151,24 +1151,50 @@ small,.small{font-size:var(--fs-small);line-height:1.5;}
       </fieldset>
       <div class="scanner-dynamic-details" data-dynamic-details hidden>
         <div class="scanner-request-fields">
-          <label>Modelo de interés <span class="scanner-form-optional">(Opcional)</span>
-            <select name="equipo_interes"><option value="">Aún no lo sé</option><option>FreeScan Combo+ Wireless</option><option>OptimScan Q12 / Q12 HD</option><option>FreeScan UE Pro2</option><option>FreeScan Omni</option><option>FreeScan Trak Nova</option><option>EinScan Libre</option><option>EinScan Rigil</option></select>
+          <label data-field="model" hidden>Modelo de interés <span class="scanner-form-optional">(Opcional)</span>
+            <select name="equipo_interes">
+              <option value="">Aún no lo sé</option>
+              <option>FreeScan Combo+ Wireless</option>
+              <option>OptimScan Q12 / Q12 HD</option>
+              <option>FreeScan Omni</option>
+              <option>FreeScan Trak Nova</option>
+              <option>FreeScan UE Pro2</option>
+              <option>EinScan Rigil</option>
+              <option>EinScan Libre</option>
+            </select>
           </label>
-          <label>¿Qué tamaño tiene tu pieza? <span class="scanner-form-optional">(Opcional)</span>
-            <select name="tipo_pieza"><option value="">Selecciona una opción</option><option>Pequeña (cabe en la mano)</option><option>Mediana (hasta aproximadamente 1 m)</option><option>Grande (más de 1 m)</option><option>Muy grande (maquinaria o estructuras)</option><option>Varias piezas de distintos tamaños</option><option>Aún no lo tengo definido</option></select>
+          <label data-field="size">Tamaño de la pieza*
+            <select name="tipo_pieza" required>
+              <option value="">Selecciona una opción</option>
+              <option>Pequeña (cabe en la mano)</option>
+              <option>Mediana (hasta aproximadamente 1 m)</option>
+              <option>Grande (más de 1 m)</option>
+              <option>Varias piezas de tamaños distintos</option>
+            </select>
           </label>
-          <label class="scanner-request-full">Cuéntanos brevemente sobre tu proyecto <span class="scanner-form-optional">(Opcional)</span>
-            <textarea name="mensaje" rows="3" placeholder="Cuéntanos qué pieza necesitas escanear, a qué industria pertenece, qué tolerancias manejas y dónde realizarás la captura."></textarea>
+          <label data-field="accuracy">Exactitud que necesitas*
+            <select name="exactitud" required>
+              <option value="">Selecciona una opción</option>
+              <option>Micras (control de calidad / metrología)</option>
+              <option>Décimas de milímetro (ingeniería inversa)</option>
+              <option>No lo tengo claro</option>
+            </select>
           </label>
           <label>Nombre*<input type="text" name="nombre" placeholder="Tu nombre" autocomplete="name" required></label>
+          <label>Empresa*<input type="text" name="empresa" placeholder="Nombre de tu empresa" autocomplete="organization" required></label>
+          <label>Correo electrónico*<input type="email" name="correo" placeholder="nombre@empresa.com" autocomplete="email" required></label>
           <label>WhatsApp o teléfono*<input type="tel" name="telefono" placeholder="+52" autocomplete="tel" required></label>
-          <label class="scanner-request-full">Correo electrónico*<input type="email" name="correo" placeholder="nombre@empresa.com" autocomplete="email" required></label>
+          <label class="scanner-request-full">¿Qué quieres escanear?* 
+            <textarea name="mensaje" rows="3" placeholder="Describe la pieza, el material o la industria a la que pertenece." required></textarea>
+          </label>
+          <label class="scanner-request-full" data-field="comments" hidden>Comentarios adicionales <span class="scanner-form-optional">(Opcional)</span>
+            <textarea name="comentarios" rows="3" placeholder="Indica cantidades, accesorios u otros detalles que debamos considerar en la cotización."></textarea>
+          </label>
         </div>
         <p class="scanner-request-error" data-form-error role="alert" aria-live="polite"></p>
-        <div class="scanner-form-actions"><button type="submit" data-submit-label>Enviar solicitud</button></div>
+        <div class="scanner-form-actions"><button type="submit" data-submit-label>Solicitar orientación</button></div>
         <p class="scanner-request-privacy">Al enviar aceptas nuestro <a href="index.html#aviso-privacidad">aviso de privacidad</a>.</p>
-      </div>
-    </form>
+      </div>    </form>
     <div class="scanner-request-thanks" hidden aria-live="polite"></div>
   </div>
 </div>
@@ -1182,32 +1208,92 @@ small,.small{font-size:var(--fs-small);line-height:1.5;}
   var section=document.getElementById('scanner-request-form');
   if(!section)return;
   var form=section.querySelector('form');
-  var checks=[...form.querySelectorAll('input[name="interes"]')];
+  var choices=Array.prototype.slice.call(form.querySelectorAll('input[name="interes"]'));
   var dynamic=section.querySelector('[data-dynamic-details]');
   var hint=section.querySelector('[data-choice-hint]');
   var error=section.querySelector('[data-form-error]');
   var thanks=section.querySelector('.scanner-request-thanks');
-  var submitLabel=section.querySelector('[data-submit-label]');
-  function selected(){return checks.find(function(x){return x.checked;});}
+  var submit=section.querySelector('[data-submit-label]');
+  var introEyebrow=section.querySelector('[data-intro-eyebrow]');
+  var introTitle=section.querySelector('[data-intro-title]');
+  var introHighlight=section.querySelector('[data-intro-highlight]');
+  var introDescription=section.querySelector('[data-intro-description]');
+  var introSteps=section.querySelector('[data-intro-steps]');
+  var modelField=section.querySelector('[data-field="model"]');
+  var commentsField=section.querySelector('[data-field="comments"]');
+  var sizeField=section.querySelector('[data-field="size"]');
+  var accuracyField=section.querySelector('[data-field="accuracy"]');
+  var copy={
+    'Orientación':{
+      eyebrow:'ORIENTACIÓN PARA TU PROYECTO',
+      title:'Encuentra el escáner',
+      highlight:'adecuado para tu aplicación.',
+      description:'Cuéntanos sobre la pieza, el nivel de exactitud y el entorno de trabajo. Te ayudaremos a identificar qué tecnología puede responder a tu necesidad.',
+      button:'Solicitar orientación',
+      steps:[['01','Conocemos tu aplicación','Revisamos el tamaño de la pieza, su material y el uso que tendrá el escaneo.'],['02','Identificamos tus necesidades','Consideramos la exactitud que buscas y el tipo de proceso.'],['03','Te orientamos','Comparamos las opciones adecuadas para tu proyecto.']]
+    },
+    'Demostración':{
+      eyebrow:'DEMOSTRACIÓN DE ESCANEO 3D',
+      title:'Prueba el equipo',
+      highlight:'con una pieza de tu operación.',
+      description:'Indícanos qué modelo te interesa y cómo es tu aplicación para preparar una demostración enfocada en tu necesidad.',
+      button:'Solicitar demostración',
+      steps:[['01','Elegimos el equipo','Indica el modelo que te interesa o déjalo pendiente si aún no lo decides.'],['02','Revisamos tu pieza','Conocemos su tamaño, la exactitud requerida y el material.'],['03','Coordinamos la prueba','Evaluamos contigo una demostración sobre tu aplicación.']]
+    },
+    'Cotización':{
+      eyebrow:'COTIZACIÓN DE EQUIPO',
+      title:'Prepara tu proyecto',
+      highlight:'y solicita una cotización.',
+      description:'Comparte el modelo de interés y los detalles de tu aplicación para preparar una propuesta acorde con lo que necesitas.',
+      button:'Solicitar cotización',
+      steps:[['01','Definimos el equipo','Selecciona el modelo que te interesa o indica si necesitas orientación.'],['02','Revisamos el alcance','Consideramos la pieza, exactitud, cantidades y necesidades adicionales.'],['03','Preparamos la propuesta','Con la información de tu proyecto podremos avanzar con la cotización.']]
+    }
+  };
+  function selected(){return choices.find(function(input){return input.checked;});}
+  function setFieldVisible(field,visible){
+    field.hidden=!visible;
+    var control=field.querySelector('select,textarea,input');
+    if(control){
+      control.disabled=!visible;
+      if(!visible)control.value='';
+    }
+  }
   function updateForm(){
     var choice=selected();
+    var value=choice?choice.value:'';
+    var content=copy[value];
     dynamic.hidden=!choice;
     hint.hidden=!!choice;
-    submitLabel.textContent=choice&&choice.value==='Demostración'?'Solicitar demostración':choice&&choice.value==='Cotización'?'Solicitar cotización':'Enviar solicitud';
+    if(!content)return;
+    introEyebrow.textContent=content.eyebrow;
+    introTitle.textContent=content.title;
+    introHighlight.textContent=content.highlight;
+    introDescription.textContent=content.description;
+    introSteps.innerHTML=content.steps.map(function(step){
+      return '<li><span>'+step[0]+'</span><div><b>'+step[1]+'</b><br><small>'+step[2]+'</small></div></li>';
+    }).join('');
+    setFieldVisible(modelField,value==='Demostración'||value==='Cotización');
+    setFieldVisible(commentsField,value==='Cotización');
+    setFieldVisible(sizeField,true);
+    setFieldVisible(accuracyField,true);
+    submit.textContent=content.button;
+    form.setAttribute('aria-label','Formulario de '+value.toLowerCase()+' sobre escáneres 3D');
   }
-  checks.forEach(function(input){input.addEventListener('change',updateForm);});
+  choices.forEach(function(input){input.addEventListener('change',updateForm);});
   updateForm();
-  form.addEventListener('submit',function(e){
-    e.preventDefault();
+  form.addEventListener('submit',function(event){
+    event.preventDefault();
     error.textContent='';
-    if(!selected()){hint.textContent='Selecciona cómo podemos ayudarte.';checks[0].focus();return;}
+    if(!selected()){hint.textContent='Selecciona cómo podemos ayudarte.';choices[0].focus();return;}
     var invalid=form.querySelector(':invalid');
     if(invalid){invalid.reportValidity();invalid.focus();return;}
     var name=form.elements.nombre.value.trim().split(/\s+/)[0].replace(/[&<>"]/g,'');
-    thanks.innerHTML='<h3>¡Gracias, '+name+'!</h3><p>Tu solicitud quedó preparada en esta maqueta. El formulario es demostrativo y todavía no envía información.</p><button type="button">Volver al formulario</button>';
+    thanks.innerHTML='<h3>¡Gracias, '+name+'!</h3><p>Tu solicitud de '+selected().value.toLowerCase()+' quedó preparada en esta maqueta. El formulario es demostrativo y todavía no envía información.</p><button type="button">Volver al formulario</button>';
     form.hidden=true;
     thanks.hidden=false;
-    thanks.querySelector('button').addEventListener('click',function(){form.reset();form.hidden=false;thanks.hidden=true;updateForm();});
+    thanks.querySelector('button').addEventListener('click',function(){
+      form.reset();form.hidden=false;thanks.hidden=true;error.textContent='';updateForm();
+    });
   });
   document.querySelectorAll('[data-demo-model]').forEach(function(link){
     link.addEventListener('click',function(){
