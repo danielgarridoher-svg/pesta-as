@@ -1513,28 +1513,52 @@ small,.small{font-size:var(--fs-small);line-height:1.5;}
   <div class="container">
     <div class="section-heading">
       <div><span class="eyebrow">COMPARA TUS OPCIONES</span><h2 id="scanner-compare-title">Los modelos, lado a lado.</h2></div>
-      <p class="section-sub">Compara especificaciones técnicas que no se repiten en las tarjetas. Selecciona un modelo para destacarlo en la tabla.</p>
+      <p class="section-sub">Ordenados de piezas pequeñas a grandes. Selecciona un modelo para destacarlo en la tabla.</p>
     </div>
-    <div class="scanner-compare-scroll" tabindex="0" aria-label="Tabla comparativa técnica; desplázate horizontalmente para consultar todos los modelos">
+    <div class="scanner-compare-scroll" tabindex="0" aria-label="Tabla comparativa; desplázate horizontalmente para consultar todos los modelos">
       <table class="scanner-compare-table">
-        <thead><tr><th scope="col">Especificación</th>
-          <th scope="col" data-model="combo" class="is-selected">Combo+ Wireless</th>
-          <th scope="col" data-model="trak">Trak Nova</th>
-          <th scope="col" data-model="omni">Omni</th>
-          <th scope="col" data-model="ue">UE Pro2</th>
+        <thead><tr><th scope="col">Característica</th>
           <th scope="col" data-model="q12">OptimScan Q12</th>
-          <th scope="col" data-model="libre">EinScan Libre</th>
+          <th scope="col" data-model="combo" class="is-selected">FreeScan Combo+ Wireless</th>
           <th scope="col" data-model="rigil">EinScan Rigil</th>
+          <th scope="col" data-model="ue">FreeScan UE Pro2</th>
+          <th scope="col" data-model="libre">EinScan Libre</th>
+          <th scope="col" data-model="trak">FreeScan Trak Nova</th>
+          <th scope="col" data-model="omni">FreeScan Omni</th>
         </tr></thead>
         <tbody>
-          <tr><th scope="row">Exactitud de escaneo</th><td data-model="combo" class="is-selected">20 µm</td><td data-model="trak">20 µm</td><td data-model="omni">20 µm</td><td data-model="ue">20 µm</td><td data-model="q12">5 µm (rango corto) / 15 µm (rango largo)</td><td data-model="libre">Hasta 40 µm</td><td data-model="rigil">40 µm (láser HD) / 100 µm (IR)</td></tr>
-          <tr><th scope="row">Exactitud volumétrica</th><td data-model="combo">No indicada en esta ficha</td><td data-model="trak">62 µm en 12 m³; con VPG: 46 µm + 12 µm/m</td><td data-model="omni">20 µm + 30 µm/m; con VPG: 20 µm + 15 µm/m</td><td data-model="ue">No indicada en esta ficha</td><td data-model="q12">No indicada en esta ficha</td><td data-model="libre">No indicada en esta ficha</td><td data-model="rigil">60 µm/m (láser HD) / 300 µm/m (IR)</td></tr>
-          <tr><th scope="row">Configuración de trabajo</th><td data-model="combo">Manual e inalámbrica</td><td data-model="trak">Rastreador + escáner de mano</td><td data-model="omni">Autónomo, todo en uno</td><td data-model="ue">Manual e inalámbrica</td><td data-model="q12">Fijo o automatizado</td><td data-model="libre">Autónomo, sin PC</td><td data-model="rigil">Autónomo, inalámbrico o por cable</td></tr>
+          <tr><th scope="row">Exactitud de escaneo</th>
+            <td data-model="q12">5 a 15 micras (según el rango de escaneo)</td>
+            <td data-model="combo" class="is-selected">20 micras</td>
+            <td data-model="rigil">40 micras (láser HD) / 100 micras (infrarrojo)</td>
+            <td data-model="ue">20 micras</td>
+            <td data-model="libre">Hasta 40 micras</td>
+            <td data-model="trak">20 micras</td>
+            <td data-model="omni">20 micras</td>
+          </tr>
+          <tr><th scope="row">Tamaño de pieza</th>
+            <td data-model="q12">Pequeña a mediana</td>
+            <td data-model="combo" class="is-selected">Pequeña a mediana</td>
+            <td data-model="rigil">Pequeña a mediana</td>
+            <td data-model="ue">Mediana a grande</td>
+            <td data-model="libre">Mediana a grande</td>
+            <td data-model="trak">Grande a muy grande</td>
+            <td data-model="omni">Según la pieza y la configuración</td>
+          </tr>
+          <tr><th scope="row">Cómo se utiliza</th>
+            <td data-model="q12">Fijo: trípode, mesa giratoria o robot</td>
+            <td data-model="combo" class="is-selected">Manual e inalámbrico</td>
+            <td data-model="rigil">Manual, autónomo o conectado por cable</td>
+            <td data-model="ue">Manual e inalámbrico</td>
+            <td data-model="libre">Autónomo, sin PC</td>
+            <td data-model="trak">Rastreador óptico y escáner de mano</td>
+            <td data-model="omni">Autónomo, todo en uno</td>
+          </tr>
         </tbody>
       </table>
     </div>
-    <p class="scanner-compare-note">Las cifras corresponden a especificaciones del fabricante y pueden variar según el modo, volumen, configuración y condiciones de medición. “No indicada en esta ficha” significa que no se presenta aquí un valor volumétrico comparable; no implica que el equipo carezca de esa especificación.</p>
-    <p class="scanner-compare-transition">La precisión es solo una parte de la elección: también importa el volumen de la pieza, el entorno y el flujo de trabajo.</p>
+    <p class="scanner-compare-note">Las cifras de exactitud se expresan en micras para facilitar su lectura. En el OptimScan Q12, el valor cambia según el rango de escaneo; en el EinScan Rigil, según el modo de captura. El tamaño recomendado es orientativo y debe confirmarse según la geometría, la exactitud requerida y las condiciones de trabajo.</p>
+    <p class="scanner-compare-transition">La mejor elección no depende solo de las micras: también importa el tamaño de la pieza, dónde la escaneas y cómo trabajas.</p>
   </div>
 </section>
 <section class="section process-section"><div class="container"><span class="eyebrow">TECNOLOGÍA QUE CONECTA DOS MUNDOS</span><div class="section-heading"><h2>Del objeto físico <span>al dato digital.</span></h2><p class="section-sub">De una superficie real a información que puedes medir, analizar y transformar.</p></div><div class="steps"><div class="step"><div class="step-top"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scan-line" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 12h10"/></svg><span>01</span></div><h3>Captura</h3><p>El escáner registra la superficie del objeto mediante tecnología óptica.</p></div><div class="step"><div class="step-top"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-box" aria-hidden="true"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg><span>02</span></div><h3>Datos 3D</h3><p>La captura genera información espacial que representa la geometría de la pieza.</p></div><div class="step"><div class="step-top"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layers" aria-hidden="true"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></svg><span>03</span></div><h3>Procesamiento</h3><p>Los datos se alinean y procesan para obtener una representación digital utilizable.</p></div><div class="step"><div class="step-top"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cpu" aria-hidden="true"><path d="M12 20v2"/><path d="M12 2v2"/><path d="M17 20v2"/><path d="M17 2v2"/><path d="M2 12h2"/><path d="M2 17h2"/><path d="M2 7h2"/><path d="M20 12h2"/><path d="M20 17h2"/><path d="M20 7h2"/><path d="M7 20v2"/><path d="M7 2v2"/><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="8" y="8" width="8" height="8" rx="1"/></svg><span>04</span></div><h3>Aplicación</h3><p>El resultado apoya tareas de inspección, diseño o ingeniería inversa, según el equipo y el flujo de trabajo.</p></div></div></div></section>
