@@ -357,11 +357,26 @@ table.mp-cmp{min-width:980px}
 .mp-vs dt{color:var(--mut)}.mp-vs dd{margin:0;font-weight:700;text-align:right}
 .mp-pick{background:var(--bg2);border-radius:10px;padding:12px 14px;font-size:14px}
 .mp-pick b{display:block;font-size:12px;letter-spacing:.06em;text-transform:uppercase;color:var(--az);margin-bottom:2px}
-.mp-modes2{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
-.mp-modes2 div{background:#fff;border:1px solid var(--ln);border-radius:14px;padding:16px 12px;text-align:center}
-.mp-modes2 b{display:block;font-size:26px;font-weight:800;line-height:1;background:linear-gradient(120deg,var(--az),var(--tq));-webkit-background-clip:text;background-clip:text;color:transparent}
-.mp-modes2 h3{margin:8px 0 2px;font-size:14.5px}
-.mp-modes2 p{margin:0;font-size:12.5px;color:var(--mut);line-height:1.4}
+/* Modos de escaneo · paneles tecnológicos con microinteracciones */
+.mp-modes2{display:grid;grid-template-columns:repeat(5,minmax(0,1fr));gap:14px;perspective:1000px}
+.mp-modes2>div{--mode-accent:#2E82F0;position:relative;isolation:isolate;overflow:hidden;min-height:174px;background:linear-gradient(155deg,#FFFFFF 0%,#F7FAFF 72%,#EDF5FF 100%);border:1px solid #D6E3F1;border-radius:16px;padding:20px 15px 18px;text-align:left;box-shadow:0 5px 16px rgba(23,52,88,.045);transition:transform .32s cubic-bezier(.2,.75,.25,1),border-color .32s ease,box-shadow .32s ease;animation:mp-mode-enter .65s both;animation-delay:calc(var(--mode-order,0)*90ms)}
+.mp-modes2>div:nth-child(2){--mode-accent:#00AEB5;--mode-order:1}
+.mp-modes2>div:nth-child(3){--mode-accent:#3975C8;--mode-order:2}
+.mp-modes2>div:nth-child(4){--mode-accent:#009C9D;--mode-order:3}
+.mp-modes2>div:nth-child(5){--mode-accent:#2366B5;--mode-order:4}
+.mp-modes2>div:first-child{--mode-order:0}
+.mp-modes2>div::before{content:"";position:absolute;z-index:-1;inset:0;background:radial-gradient(ellipse at 85% 12%,color-mix(in srgb,var(--mode-accent) 13%,transparent),transparent 48%),linear-gradient(135deg,transparent 40%,rgba(255,255,255,.78) 50%,transparent 60%);background-size:auto,230% 230%;background-position:center,-130% -130%;transition:background-position .65s ease,opacity .3s ease;opacity:.8}
+.mp-modes2>div::after{content:"";position:absolute;top:0;left:14px;right:14px;height:3px;border-radius:0 0 5px 5px;background:linear-gradient(90deg,var(--mode-accent),#00B8BD);transform:scaleX(.38);transform-origin:left;transition:transform .35s ease}
+.mp-modes2 b{position:relative;display:block;font-size:clamp(27px,2.4vw,34px);font-weight:800;letter-spacing:-.045em;line-height:1;background:linear-gradient(115deg,var(--mode-accent),#00AEB5 85%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.mp-modes2 h3{position:relative;margin:13px 0 5px;font-size:14.5px;line-height:1.25;color:#183458}
+.mp-modes2 p{position:relative;margin:0;font-size:12.5px;color:#526783;line-height:1.45}
+@media(hover:hover){
+ .mp-modes2>div:hover{transform:translateY(-8px) rotateX(2deg);border-color:color-mix(in srgb,var(--mode-accent) 42%,#D6E3F1);box-shadow:0 16px 34px rgba(21,88,192,.12),0 0 0 1px color-mix(in srgb,var(--mode-accent) 10%,transparent)}
+ .mp-modes2>div:hover::before{background-position:center,130% 130%;opacity:1}
+ .mp-modes2>div:hover::after{transform:scaleX(1)}
+}
+@keyframes mp-mode-enter{from{opacity:0;transform:translateY(14px)}to{opacity:1;transform:translateY(0)}}
+@media(prefers-reduced-motion:reduce){.mp-modes2>div{animation:none!important;transition:none!important}.mp-modes2>div::before,.mp-modes2>div::after{transition:none!important}}
 .mp-fs2{font-size:13px;color:#A8B4C8}
 @media (max-width:980px){.mp-big4{grid-template-columns:1fr 1fr}.mp-vs{grid-template-columns:1fr}.mp-modes2{grid-template-columns:1fr 1fr}}
 @media (max-width:560px){.mp-big4,.mp-modes2{grid-template-columns:1fr 1fr}.mp-scale-h,.mp-scale-r{grid-template-columns:78px repeat(4,1fr)}.mp-scale-h{font-size:10px}.mp-scale{padding:16px}}
@@ -583,6 +598,7 @@ body{font-family:Archivo,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-se
   <div class="mp-co">
     <p class="mp-ey">Modos de escaneo</p>
     <h2 class="mp-h2">Un equipo, cinco formas de escanear</h2>
+    <p class="mp-lead">Cada modo responde a una condición distinta de la pieza: desde cubrir superficies amplias hasta capturar zonas de difícil acceso o mantener la precisión en piezas grandes.</p>
     <div class="mp-modes2" style="margin-top:22px">
       <div><b>93</b><h3>Alta velocidad</h3><p>Superficies grandes rápido</p></div>
       <div><b>25</b><h3>Detallado</h3><p>Detalle fino</p></div>
