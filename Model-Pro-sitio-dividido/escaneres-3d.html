@@ -1864,3 +1864,19 @@ small,.small{font-size:var(--fs-small);line-height:1.5;}
   .scanner-compare-table tbody td{min-width:126px}
   .scanner-compare-note{font-size:12.5px!important}
 }
+
+
+/* CÓMO ELEGIR: retirar la numeración y recuperar una composición limpia */
+.scanner-choice-guide .scanner-guide-grid article{
+  grid-template-columns:1fr!important;
+  gap:10px!important;
+}
+.scanner-choice-guide .scanner-guide-grid article>span{
+  display:none!important;
+}
+@media(max-width:900px){
+  .scanner-choice-guide .scanner-guide-grid article{
+    grid-template-columns:1fr!important;
+    gap:10px!important;
+  }
+}
