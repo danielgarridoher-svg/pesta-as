@@ -1238,6 +1238,26 @@ small,.small{font-size:var(--fs-small);line-height:1.5;}
 @media(max-width:900px){.scanner-choice-guide .scanner-guide-grid article{grid-template-columns:1fr!important;gap:10px!important}}
 </style>
 
+
+<style id="scanner-size-meli-layout">
+.scanner-size-grid.mp-size{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;align-items:stretch;margin-top:28px}
+.scanner-size-grid.mp-size article{display:flex;flex-direction:column;gap:7px;min-width:0;min-height:250px;padding:22px;border:1px solid #DCE6F2;border-radius:16px;background:linear-gradient(150deg,#fff 0%,#F7FAFF 100%);box-shadow:0 8px 24px rgba(21,62,112,.055);transition:transform .3s ease,border-color .3s ease,box-shadow .3s ease}
+.scanner-size-grid.mp-size article:hover{transform:translateY(-5px);border-color:rgba(46,130,240,.5);box-shadow:0 15px 30px rgba(21,88,192,.11)}
+.scanner-size-grid .mp-sq{display:block;flex:0 0 auto;width:var(--s);height:var(--s);border-radius:8px;background:linear-gradient(135deg,#2E82F0,#00B8BD);margin:0 0 8px}
+.scanner-size-grid .scanner-size-tag{font-size:12px!important;font-weight:750;letter-spacing:.07em;color:#3974B8}
+.scanner-size-grid.mp-size h3{font-size:20px!important;line-height:1.3}
+.scanner-size-grid.mp-size p{font-size:14px!important;line-height:1.6;color:#526783}
+.scanner-size-grid .mp-chips{display:flex;flex-wrap:wrap;gap:7px;margin-top:auto;padding-top:14px}
+.scanner-size-grid .mp-chips a{display:inline-flex;align-items:center;font-size:13px;font-weight:700;color:#1558C0;background:#EDF5FF;border:1px solid #C9DDF5;border-radius:8px;padding:6px 10px;transition:background .2s,border-color .2s,color .2s}
+.scanner-size-grid .mp-chips a:hover{background:#1558C0;border-color:#1558C0;color:#fff}
+.scanner-size-grid .mp-val{display:inline-block;margin-left:5px;padding:2px 6px;border-radius:5px;background:#FFF3D8;color:#93600A;font-size:10px;font-weight:750;letter-spacing:.04em;text-transform:uppercase;vertical-align:middle}
+.scanner-size-note{font-size:13px!important;line-height:1.65!important;margin-top:16px}
+@media(max-width:1050px){.scanner-size-grid.mp-size{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.scanner-size-grid.mp-size{grid-template-columns:1fr;gap:12px}.scanner-size-grid.mp-size article{min-height:0;padding:19px}.scanner-size-grid.mp-size h3{font-size:19px!important}}
+@media(hover:none){.scanner-size-grid.mp-size article:hover{transform:none}}
+@media(prefers-reduced-motion:reduce){.scanner-size-grid.mp-size article,.scanner-size-grid .mp-chips a{transition:none}}
+</style>
+
 </head>
 <body>
 <div class="mp-wrap">
@@ -1307,19 +1327,15 @@ small,.small{font-size:var(--fs-small);line-height:1.5;}
   <div class="container">
     <div class="section-heading">
       <div><span class="eyebrow">ORIENTACIÓN POR TAMAÑO</span><h2 id="scanner-size-title">¿Qué tamaño tiene lo que necesitas escanear?</h2></div>
-      <p class="section-sub">Una referencia inicial para entender qué tipo de captura puede necesitar tu proyecto.</p>
+      <p class="section-sub">Toca un modelo para ir directo a su tarjeta.</p>
     </div>
-    <div class="scanner-size-ruler" role="group" aria-label="Escala visual orientativa de tamaños de pieza">
-      <div class="scanner-size-ruler-axis" aria-hidden="true"><span></span><span></span><span></span><span></span><span></span></div>
-      <div class="scanner-size-ruler-zones">
-        <div class="scanner-size-zone"><span class="scanner-size-zone-index">01</span><strong>Formato pequeño</strong><small>Dimensión real: por definir</small><div class="scanner-size-models"><a href="#optimscan-q12">OptimScan Q12 / Q12 HD</a><a href="#freescan-combo-plus-wireless">FreeScan Combo+ Wireless</a><a href="#einscan-rigil">EinScan Rigil</a></div></div>
-        <div class="scanner-size-zone"><span class="scanner-size-zone-index">02</span><strong>Formato mediano</strong><small>Dimensión real: por definir</small><div class="scanner-size-models"><a href="#freescan-combo-plus-wireless">FreeScan Combo+ Wireless</a><a href="#einscan-libre">EinScan Libre</a><a href="#freescan-ue-pro2">FreeScan UE Pro2</a></div></div>
-        <div class="scanner-size-zone"><span class="scanner-size-zone-index">03</span><strong>Formato grande</strong><small>Dimensión real: por definir</small><div class="scanner-size-models"><a href="#freescan-ue-pro2">FreeScan UE Pro2</a><a href="#einscan-libre">EinScan Libre</a><a href="#freescan-trak-nova">FreeScan Trak Nova</a></div></div>
-        <div class="scanner-size-zone"><span class="scanner-size-zone-index">04</span><strong>Gran formato</strong><small>Dimensión real: por definir</small><div class="scanner-size-models"><a href="#freescan-trak-nova">FreeScan Trak Nova</a></div></div>
-      </div>
-      <div class="scanner-size-unplaced"><span>Rango según pieza y configuración</span><a href="#freescan-omni">FreeScan Omni</a></div>
+    <div class="scanner-size-grid mp-size">
+      <article><i class="mp-sq" style="--s:26px" aria-hidden="true"></i><span class="scanner-size-tag">01 · PEQUEÑA</span><h3>Cabe en la mano</h3><p>Engranes, insertos, componentes electrónicos.</p><div class="mp-chips"><a href="#optimscan-q12">Q12</a><a href="#freescan-combo-plus-wireless">Combo+</a><a href="#einscan-rigil">Rigil</a></div></article>
+      <article><i class="mp-sq" style="--s:40px" aria-hidden="true"></i><span class="scanner-size-tag">02 · MEDIANA</span><h3>Hasta ~1 m</h3><p>Moldes, piezas fundidas, componentes mecánicos.</p><div class="mp-chips"><a href="#freescan-combo-plus-wireless">Combo+</a><a href="#freescan-ue-pro2">UE Pro2</a><a href="#einscan-rigil">Rigil</a><a href="#einscan-libre">Libre</a></div></article>
+      <article><i class="mp-sq" style="--s:54px" aria-hidden="true"></i><span class="scanner-size-tag">03 · GRANDE</span><h3>Más de 1 m</h3><p>Carrocerías, maquinaria, conjuntos grandes.</p><div class="mp-chips"><a href="#freescan-ue-pro2">UE Pro2</a><a href="#einscan-libre">Libre</a><a href="#freescan-trak-nova">Trak Nova</a></div></article>
+      <article><i class="mp-sq" style="--s:68px" aria-hidden="true"></i><span class="scanner-size-tag">04 · MUY GRANDE</span><h3>Varios metros <span class="mp-val">validar</span></h3><p>Estructuras, equipos industriales, instalaciones.</p><div class="mp-chips"><a href="#freescan-trak-nova">Trak Nova</a></div></article>
     </div>
-    <p class="scanner-size-note"><strong>Escala provisional.</strong> Las medidas exactas y la ubicación definitiva de cada modelo quedan pendientes de validación con Emanuel. La selección también depende de la geometría, la superficie, la exactitud requerida y el entorno de captura.</p>
+    <p class="scanner-size-note">Medidas de referencia <span class="mp-val">validar</span>. El tamaño no decide solo: también importan la exactitud en micras y dónde escaneas.</p>
   </div>
 </section>
 <section id="metrologia" class="section catalog-section scanner-unified-catalog">
