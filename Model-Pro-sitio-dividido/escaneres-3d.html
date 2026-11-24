@@ -1255,7 +1255,21 @@ small,.small{font-size:var(--fs-small);line-height:1.5;}
     var multiple=values.length>1;
     dynamic.hidden=!hasSelection;
     hint.hidden=hasSelection;
-    if(!hasSelection)return;
+    if(!hasSelection){
+      introSteps.innerHTML='';
+      introSteps.hidden=true;
+      introEyebrow.textContent='HABLEMOS DE TU PROYECTO';
+      introTitle.textContent='Cuéntanos qué necesitas';
+      introHighlight.textContent='y te orientamos.';
+      introDescription.textContent='Selecciona una o varias opciones y aquí verás cómo podemos acompañarte en cada una.';
+      submit.textContent='Enviar solicitud';
+      setFieldVisible(modelField,false);
+      setFieldVisible(commentsField,false);
+      setFieldVisible(sizeField,false);
+      setFieldVisible(accuracyField,false);
+      form.setAttribute('aria-label','Formulario de orientación sobre escáneres 3D');
+      return;
+    }
     var contents=values.map(function(value){return copy[value];});
     if(multiple){
       introEyebrow.textContent='ATENCIÓN PARA TU PROYECTO';
@@ -1279,13 +1293,16 @@ small,.small{font-size:var(--fs-small);line-height:1.5;}
       var number=String(index+1).padStart(2,'0');
       return '<li><span>'+number+'</span><div><b>'+step.title+'</b><br><small>'+step.description+'</small><br><small class="scanner-step-category">'+step.label+'</small></div></li>';
     }).join('');
+    introSteps.hidden=false;
     setFieldVisible(modelField,values.indexOf('Demostración')!==-1||values.indexOf('Cotización')!==-1);
     setFieldVisible(commentsField,values.indexOf('Cotización')!==-1);
     setFieldVisible(sizeField,true);
     setFieldVisible(accuracyField,true);
     form.setAttribute('aria-label','Formulario de '+values.join(', ').toLowerCase()+' sobre escáneres 3D');
   }
-  choices.forEach(function(input){input.addEventListener('change',updateForm);});
+  form.addEventListener('change',function(event){
+    if(event.target.matches('input[name="interes"]'))updateForm();
+  });
   updateForm();
   form.addEventListener('submit',function(event){
     event.preventDefault();
