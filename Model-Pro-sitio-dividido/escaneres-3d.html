@@ -1228,19 +1228,22 @@ small,.small{font-size:var(--fs-small);line-height:1.5;}
       eyebrow:'ORIENTACIÓN PARA TU PROYECTO',title:'Encuentra el escáner',highlight:'adecuado para tu aplicación.',
       description:'Cuéntanos sobre la pieza, el nivel de exactitud y el entorno de trabajo. Te ayudaremos a identificar qué tecnología puede responder a tu necesidad.',
       button:'Solicitar orientación',
-      steps:[['Conocemos tu aplicación','Revisamos el tamaño de la pieza, su material y el uso que tendrá el escaneo.'],['Identificamos tus necesidades','Consideramos la exactitud que buscas y el tipo de proceso.'],['Te orientamos','Comparamos las opciones adecuadas para tu proyecto.']]
+      cardTitle:'Encuentra el equipo adecuado',
+      cardDescription:'Revisamos el tamaño de tu pieza, la exactitud que necesitas y tu proceso para orientarte entre las tecnologías disponibles.'
     },
     'Demostración':{
       eyebrow:'DEMOSTRACIÓN DE ESCANEO 3D',title:'Prueba el equipo',highlight:'con una pieza de tu operación.',
       description:'Indícanos qué modelo te interesa y cómo es tu aplicación para preparar una demostración enfocada en tu necesidad.',
       button:'Solicitar demostración',
-      steps:[['Elegimos el equipo','Indica el modelo que te interesa o déjalo pendiente si aún no lo decides.'],['Revisamos tu pieza','Conocemos su tamaño, la exactitud requerida y el material.'],['Coordinamos la prueba','Evaluamos contigo una demostración sobre tu aplicación.']]
+      cardTitle:'Prueba el escáner con tu pieza',
+      cardDescription:'Identificamos el modelo de interés y revisamos tu aplicación para preparar una demostración enfocada en tu operación.'
     },
     'Cotización':{
       eyebrow:'COTIZACIÓN DE EQUIPO',title:'Prepara tu proyecto',highlight:'y solicita una cotización.',
       description:'Comparte el modelo de interés y los detalles de tu aplicación para preparar una propuesta acorde con lo que necesitas.',
       button:'Solicitar cotización',
-      steps:[['Definimos el equipo','Selecciona el modelo que te interesa o indica si necesitas orientación.'],['Revisamos el alcance','Consideramos la pieza, exactitud, cantidades y necesidades adicionales.'],['Preparamos la propuesta','Con la información de tu proyecto podremos avanzar con la cotización.']]
+      cardTitle:'Prepara tu cotización',
+      cardDescription:'Tomamos en cuenta el modelo, las características de tu aplicación, las cantidades y los detalles adicionales para preparar una propuesta.'
     }
   };
   function selected(){return choices.filter(function(input){return input.checked;}).map(function(input){return input.value;});}
@@ -1285,13 +1288,9 @@ small,.small{font-size:var(--fs-small);line-height:1.5;}
       introDescription.textContent=content.description;
       submit.textContent=content.button;
     }
-    var steps=[];
-    contents.forEach(function(content,index){
-      content.steps.forEach(function(step){steps.push({label:values[index],title:step[0],description:step[1]});});
-    });
-    introSteps.innerHTML=steps.map(function(step,index){
+    introSteps.innerHTML=contents.map(function(content,index){
       var number=String(index+1).padStart(2,'0');
-      return '<li><span>'+number+'</span><div><b>'+step.title+'</b><br><small>'+step.description+'</small><br><small class="scanner-step-category">'+step.label+'</small></div></li>';
+      return '<li><span>'+number+'</span><div><b>'+content.cardTitle+'</b><br><small>'+content.cardDescription+'</small><br><small class="scanner-step-category">'+values[index]+'</small></div></li>';
     }).join('');
     introSteps.hidden=false;
     setFieldVisible(modelField,values.indexOf('Demostración')!==-1||values.indexOf('Cotización')!==-1);
