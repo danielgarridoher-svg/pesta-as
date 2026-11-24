@@ -635,15 +635,36 @@ small,.small{font-size:var(--fs-small);line-height:1.5;}
 .scanner-compare-table tbody th{min-width:145px;color:#8BD8FF;font-weight:700}
 .scanner-compare-table [data-model].is-selected{background:rgba(46,130,240,.18);box-shadow:inset 0 0 0 1px rgba(46,130,240,.3);color:#FFFFFF}
 .scanner-compare-note{margin-top:15px;color:#AFC5DF;font-size:11px;line-height:1.6}
-.scanner-faq-section{padding:76px 0;background:linear-gradient(115deg,#FFFFFF 0%,#F7FAFF 48%,#EAF3FF 100%);color:#172B45}
-.scanner-faq-section .section-sub{color:#526783}
-.scanner-faq-list{max-width:900px;margin:0 auto;border-top:1px solid #D6E3F1}
-.scanner-faq-list details{border-bottom:1px solid #D6E3F1}
-.scanner-faq-list summary{position:relative;padding:20px 44px 20px 4px;color:#183458;font-weight:750;cursor:pointer;list-style:none}
+.scanner-faq-section{
+  padding:76px 0;
+  background:linear-gradient(125deg,#0C1422 0%,#10213A 58%,#0E1B33 100%);
+  color:#F4F6F9;
+}
+.scanner-faq-section .section-heading{
+  display:flex;flex-direction:column;
+  align-items:flex-start;justify-content:flex-start;
+  gap:10px;margin:0 0 30px;text-align:left;
+}
+.scanner-faq-section .section-heading>div{
+  display:block;width:100%;max-width:none;margin:0;
+}
+.scanner-faq-section .eyebrow{color:#8BD8FF}
+.scanner-faq-section h2{
+  background:linear-gradient(100deg,#8AF5F0 0%,#A9C8FF 55%,#2E82F0 100%);
+  background-clip:text;-webkit-background-clip:text;
+  -webkit-text-fill-color:transparent;color:transparent;
+}
+.scanner-faq-section .section-sub{
+  display:block;width:100%;max-width:none;
+  margin:0;text-align:left;color:#D6E7F8;
+}
+.scanner-faq-list{max-width:900px;margin:0 auto;border-top:1px solid rgba(139,216,255,.25)}
+.scanner-faq-list details{border-bottom:1px solid rgba(139,216,255,.2)}
+.scanner-faq-list summary{position:relative;padding:20px 44px 20px 4px;color:#F2F7FF;font-weight:750;cursor:pointer;list-style:none}
 .scanner-faq-list summary::-webkit-details-marker{display:none}
-.scanner-faq-list summary:after{content:"+";position:absolute;right:8px;top:14px;color:#0877D8;font-size:24px;font-weight:400}
+.scanner-faq-list summary:after{content:"+";position:absolute;right:8px;top:14px;color:#00B8BD;font-size:24px;font-weight:400}
 .scanner-faq-list details[open] summary:after{content:"−"}
-.scanner-faq-list details p{max-width:780px;padding:0 40px 20px 4px;color:#526783;font-size:13px;line-height:1.7}
+.scanner-faq-list details p{max-width:780px;padding:0 40px 20px 4px;color:#D6E7F8;font-size:13px;line-height:1.7}
 /* Guía de decisión por tamaño y aplicación */
 .scanner-size-guide{padding:68px 0;background:linear-gradient(125deg,#0C1422 0%,#10213A 58%,#0E1B33 100%);color:#F4F6F9}
 .scanner-size-guide .section-heading{margin-bottom:26px}
@@ -933,30 +954,6 @@ small,.small{font-size:var(--fs-small);line-height:1.5;}
   gap:8px!important;
 }
 
-/* FAQ: paleta oscura y encabezado en una sola columna */
-.scanner-faq-section{
-  background:linear-gradient(125deg,#0C1422 0%,#10213A 58%,#0E1B33 100%)!important;
-  color:#F4F6F9!important;
-}
-.scanner-faq-section .section-heading{
-  display:flex!important;flex-direction:column!important;
-  align-items:flex-start!important;justify-content:flex-start!important;
-  gap:10px!important;margin:0 0 30px!important;text-align:left!important;
-}
-.scanner-faq-section .section-heading>div{
-  display:block!important;width:100%!important;max-width:none!important;margin:0!important;
-}
-.scanner-faq-section .eyebrow{color:#8BD8FF!important;margin:0 0 8px!important}
-.scanner-faq-section h2{color:#F2F7FF!important;margin:0!important}
-.scanner-faq-section .section-sub{
-  display:block!important;width:100%!important;max-width:none!important;
-  margin:0!important;text-align:left!important;color:#D6E7F8!important;
-}
-.scanner-faq-list{border-top-color:rgba(139,216,255,.25)!important}
-.scanner-faq-list details{border-bottom-color:rgba(139,216,255,.2)!important}
-.scanner-faq-list summary{color:#F2F7FF!important}
-.scanner-faq-list summary:after{color:#00B8BD!important}
-.scanner-faq-list details p{color:#D6E7F8!important}
 </style>
 
 
