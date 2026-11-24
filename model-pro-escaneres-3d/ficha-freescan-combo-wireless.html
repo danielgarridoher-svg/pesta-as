@@ -199,6 +199,43 @@ a.mp-card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(22,60,120,
 }
 @media(max-width:560px){.mp-fit-head{padding:19px 18px 16px}.mp-fit ul{padding:6px 18px 14px}.mp-fit li{font-size:14px}}
 
+
+/* Especificaciones técnicas · resumen visual y ficha desplegable */
+.mp-specs{position:relative;overflow:hidden;background:linear-gradient(115deg,#FFFFFF 0%,#F7FAFF 52%,#EAF3FF 100%)}
+.mp-spec-head{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:26px}
+.mp-spec-head .mp-lead{margin-bottom:0;max-width:690px}
+.mp-spec-mark{display:inline-flex;align-items:center;gap:8px;white-space:nowrap;padding:9px 13px;border:1px solid #D6E3F1;border-radius:999px;background:rgba(255,255,255,.78);color:#1558C0;font-size:12px;font-weight:700}
+.mp-spec-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}
+.mp-spec-card{position:relative;overflow:hidden;min-height:224px;padding:21px 20px 17px;border:1px solid #DCE6F2;border-radius:16px;background:rgba(255,255,255,.88);box-shadow:0 8px 24px rgba(23,52,88,.055);transition:transform .28s ease,border-color .28s ease,box-shadow .28s ease}
+.mp-spec-card::before{content:"";position:absolute;inset:0 0 auto;height:3px;background:linear-gradient(90deg,#1558C0,#2E82F0,#00B8BD);transform:scaleX(.32);transform-origin:left;transition:transform .3s ease}
+.mp-spec-icon{width:42px;height:42px;display:grid;place-items:center;margin-bottom:17px;border:1px solid #D7E7F8;border-radius:12px;background:linear-gradient(135deg,#EAF3FF,#D9F3F0);color:#1558C0;font-size:21px}
+.mp-spec-label{display:block;margin-bottom:5px;color:#64768B;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
+.mp-spec-card strong{display:block;color:#183458;font-size:clamp(27px,3vw,35px);font-weight:800;line-height:1.1;letter-spacing:-.045em}
+.mp-spec-card strong small{font-size:.56em;color:#2E82F0}
+.mp-spec-card p{min-height:43px;margin:8px 0 14px;color:#526783;font-size:13px;line-height:1.5}
+.mp-spec-foot{padding-top:11px;border-top:1px solid #E5EDF6;color:#1558C0;font-size:15px;font-weight:800}
+.mp-spec-foot span{display:block;margin-top:2px;color:#7A8BA0;font-size:10px;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+.mp-spec-computer{display:grid;grid-template-columns:.78fr 1.6fr;gap:24px;align-items:center;margin-top:17px;padding:24px;border:1px solid #C9D9EB;border-radius:17px;background:linear-gradient(120deg,#FFFFFF 0%,#F1F7FF 100%);box-shadow:0 10px 28px rgba(23,52,88,.055)}
+.mp-spec-computer-copy{display:flex;align-items:flex-start;gap:14px}
+.mp-spec-computer-copy .mp-spec-icon{flex:0 0 42px;margin:0}
+.mp-spec-computer-copy h3{margin:2px 0 5px;color:#183458;font-size:19px}
+.mp-spec-computer-copy p{margin:0;color:#526783;font-size:13px;line-height:1.5}
+.mp-spec-requirements{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+.mp-spec-requirements div{padding:11px 13px;border:1px solid #DCE6F2;border-radius:10px;background:rgba(255,255,255,.82)}
+.mp-spec-requirements span{display:block;margin-bottom:4px;color:#64768B;font-size:10px;font-weight:800;letter-spacing:.08em;text-transform:uppercase}
+.mp-spec-requirements b{display:block;color:#183458;font-size:12.5px;line-height:1.4}
+.mp-spec-details{margin-top:18px;padding:0 18px;border:1px solid #DCE6F2;border-radius:13px;background:rgba(255,255,255,.8)}
+.mp-spec-details summary{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 2px;color:#1558C0;list-style:none}
+.mp-spec-details summary::-webkit-details-marker{display:none}
+.mp-spec-details summary span{display:flex;align-items:center;gap:9px}
+.mp-spec-details[open] summary>i{transform:rotate(180deg)}
+.mp-spec-details summary>i{transition:transform .2s ease}
+.mp-spec-source{margin:12px 0 15px;color:#64768B;font-size:12px;line-height:1.5}
+@media(hover:hover){.mp-spec-card:hover{transform:translateY(-5px);border-color:#A9C8E8;box-shadow:0 16px 32px rgba(21,88,192,.11)}.mp-spec-card:hover::before{transform:scaleX(1)}}
+@media(max-width:980px){.mp-spec-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.mp-spec-computer{grid-template-columns:1fr}.mp-spec-computer-copy{align-items:center}}
+@media(max-width:560px){.mp-spec-head{align-items:flex-start;flex-direction:column;gap:12px}.mp-spec-grid{gap:11px}.mp-spec-card{min-height:215px;padding:17px 15px}.mp-spec-card strong{font-size:28px}.mp-spec-computer{padding:18px}.mp-spec-requirements{grid-template-columns:1fr}.mp-spec-details{padding:0 13px}}
+@media(prefers-reduced-motion:reduce){.mp-spec-card,.mp-spec-card::before,.mp-spec-details summary>i{transition:none!important}}
+
 /* tablas */
 .mp-tbl-wrap{overflow-x:auto;border:1px solid var(--ln);border-radius:14px;background:#fff}
 table.mp-tbl{width:100%;border-collapse:collapse;font-size:14.5px;min-width:520px}
@@ -661,17 +698,61 @@ body{font-family:Archivo,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-se
   </div>
 </section>
 
-<section class="mp-sect mp-alt" id="datos">
+<section class="mp-sect mp-specs" id="datos">
   <div class="mp-co">
-    <p class="mp-ey">Datos técnicos</p>
-    <h2 class="mp-h2">Los números que más pesan</h2>
-    <div class="mp-big4" style="margin:22px 0 0">
-      <div><b>0.02 mm</b><span>Precisión</span></div>
-      <div><b>0.02 + 0.03 mm/m</b><span>Precisión volumétrica<br>(0.02 + 0.015 con VPG)</span></div>
-      <div><b>580 × 650 mm</b><span>Campo de visión láser<br>(IR: 830 × 700 mm)</span></div>
-      <div><b>9.1 M pts/s</b><span>Velocidad de escaneo</span></div>
+    <div class="mp-spec-head">
+      <div>
+        <p class="mp-ey">Características del equipo</p>
+        <h2 class="mp-h2">Especificaciones técnicas</h2>
+        <p class="mp-lead">Dimensiones, autonomía y requisitos para integrar el FreeScan Combo+ Wireless a tu estación de trabajo.</p>
+      </div>
+      <span class="mp-spec-mark"><i class="ti ti-ruler-measure"></i> Ficha del equipo</span>
     </div>
-    <details class="mp-det"><summary>Ver ficha técnica completa</summary>
+    <div class="mp-spec-grid">
+      <article class="mp-spec-card mp-spec-card-main">
+        <span class="mp-spec-icon"><i class="ti ti-device-mobile"></i></span>
+        <span class="mp-spec-label">Diseño compacto</span>
+        <strong>550 <small>g</small></strong>
+        <p>Peso neto del escáner para facilitar el manejo manual durante la captura.</p>
+        <div class="mp-spec-foot">189 × 81 × 53 mm <span>Dimensiones</span></div>
+      </article>
+      <article class="mp-spec-card">
+        <span class="mp-spec-icon"><i class="ti ti-battery-2"></i></span>
+        <span class="mp-spec-label">Trabajo inalámbrico</span>
+        <strong>Hasta 2 <small>h</small></strong>
+        <p>Autonomía de escaneo continuo con batería.</p>
+        <div class="mp-spec-foot">Wi-Fi 7 <span>Conectividad inalámbrica</span></div>
+      </article>
+      <article class="mp-spec-card">
+        <span class="mp-spec-icon"><i class="ti ti-ruler-2"></i></span>
+        <span class="mp-spec-label">Distancia de trabajo</span>
+        <strong>300 <small>mm</small></strong>
+        <p>Distancia de trabajo especificada para la captura.</p>
+        <div class="mp-spec-foot">USB 3.0 <span>Conexión por cable</span></div>
+      </article>
+      <article class="mp-spec-card">
+        <span class="mp-spec-icon"><i class="ti ti-temperature-sun"></i></span>
+        <span class="mp-spec-label">Condiciones ambientales</span>
+        <strong>−10 a 40 <small>°C</small></strong>
+        <p>Rango de temperatura de operación.</p>
+        <div class="mp-spec-foot">10 a 90 % <span>Humedad</span></div>
+      </article>
+    </div>
+    <div class="mp-spec-computer">
+      <div class="mp-spec-computer-copy">
+        <span class="mp-spec-icon"><i class="ti ti-device-desktop"></i></span>
+        <div><span class="mp-spec-label">Estación de trabajo</span><h3>Computadora recomendada</h3><p>Considera estos requisitos para trabajar con el software de escaneo.</p></div>
+      </div>
+      <div class="mp-spec-requirements">
+        <div><span>Sistema operativo</span><b>Windows 10 / 11 Pro</b></div>
+        <div><span>Procesador</span><b>Intel Core Ultra 9 275HX o superior</b></div>
+        <div><span>Tarjeta gráfica</span><b>NVIDIA RTX 5080 Laptop o superior · 12 GB</b></div>
+        <div><span>Memoria</span><b>64 GB DDR5</b></div>
+        <div><span>Conexión</span><b>USB 3.0</b></div>
+      </div>
+    </div>
+    <details class="mp-det mp-spec-details">
+      <summary><span><i class="ti ti-list-details"></i> Consultar todas las especificaciones</span><i class="ti ti-chevron-down"></i></summary>
       <div class="mp-tbl-wrap"><table class="mp-tbl"><tbody>
         <tr><td>Precisión de escaneo</td><td>0.02 mm</td></tr>
         <tr><td>Precisión volumétrica</td><td>0.02 mm + 0.03 mm/m</td></tr>
@@ -685,11 +766,11 @@ body{font-family:Archivo,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-se
         <tr><td>Peso neto</td><td>550 g</td></tr>
         <tr><td>Dimensiones</td><td>189 × 81 × 53 mm</td></tr>
         <tr><td>Autonomía</td><td>Hasta 2 horas de escaneo continuo</td></tr>
-        <tr><td>Temperatura / humedad</td><td>-10 a 40 °C · 10 a 90 %</td></tr>
+        <tr><td>Temperatura / humedad</td><td>−10 a 40 °C · 10 a 90 %</td></tr>
         <tr><td>Computadora recomendada</td><td>Windows 10/11 Pro · Intel Core Ultra 9 275HX o superior · NVIDIA RTX 5080 Laptop o superior (12 GB) · 64 GB DDR5 · USB 3.0</td></tr>
         <tr><td>Calibración y pruebas</td><td>Laboratorio acreditado ISO/IEC 17025 · ISO 10360</td></tr>
       </tbody></table></div>
-      <p style="margin:12px 0 0"><a class="mp-lk" href="#">Descargar ficha técnica (PDF) <i class="ti ti-download"></i></a></p>
+      <p class="mp-spec-source">Las especificaciones pueden variar según la configuración y las condiciones de uso. Consulta la documentación del fabricante para confirmar los requisitos de tu proyecto.</p>
     </details>
   </div>
 </section>
