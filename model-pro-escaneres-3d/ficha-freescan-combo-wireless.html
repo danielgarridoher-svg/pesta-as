@@ -451,7 +451,7 @@ table.mp-cmp{min-width:980px}
 .mp-accomp-index b{grid-row:span 2;color:#1558C0;font-size:24px;letter-spacing:-.04em}
 .mp-accomp-index small{color:#64768B;font-size:10px;line-height:1.45;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
 .mp-accomp-layout{display:grid;grid-template-columns:minmax(250px,.72fr) minmax(0,1.55fr);gap:16px;align-items:stretch}
-.mp-accomp-visual{position:relative;isolation:isolate;overflow:hidden;min-height:290px;border-radius:16px;background:linear-gradient(145deg,#0C1422 0%,#10213A 58%,#123A70 100%);box-shadow:0 16px 38px rgba(18,48,87,.15)}
+.mp-accomp-visual{position:relative;isolation:isolate;overflow:hidden;min-height:250px;border-radius:16px;background:linear-gradient(145deg,#0C1422 0%,#10213A 58%,#123A70 100%);box-shadow:0 16px 38px rgba(18,48,87,.15)}
 .mp-accomp-visual-grid{position:absolute;inset:0;opacity:.32;background-image:linear-gradient(rgba(139,216,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(139,216,255,.12) 1px,transparent 1px);background-size:31px 31px;mask-image:linear-gradient(145deg,#000 5%,transparent 90%)}
 .mp-accomp-visual::before{content:"";position:absolute;width:330px;height:330px;left:50%;top:43%;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle,rgba(46,130,240,.27),rgba(0,184,189,.08) 42%,transparent 70%);filter:blur(3px)}
 .mp-accomp-orbit{position:absolute;left:50%;top:43%;width:250px;height:250px;border:1px solid rgba(139,216,255,.3);border-radius:50%;transform:translate(-50%,-50%) rotate(-25deg)}
@@ -463,12 +463,12 @@ table.mp-cmp{min-width:980px}
 .mp-accomp-visual-label{position:absolute;left:25px;top:24px;color:#B7CBE5;font-size:10px;font-weight:800;letter-spacing:.16em}
 .mp-accomp-visual-label i{display:inline-block;width:5px;height:5px;margin:0 7px 1px;border-radius:50%;background:#00B8BD;box-shadow:0 0 8px #00B8BD}
 .mp-accomp-visual-caption{position:absolute;left:26px;bottom:25px;color:#F2F7FF;font-size:clamp(22px,2.5vw,29px);font-weight:700;line-height:1.12;letter-spacing:-.035em}
-.mp-accomp-modules{display:grid;.mp-accomp-grid-placeholder}
+.mp-accomp-modules{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:9px}
 .mp-accomp-item{position:relative;overflow:hidden;min-height:0;border:1px solid #D6E3F1;border-radius:12px;background:rgba(255,255,255,.9);box-shadow:0 7px 20px rgba(23,52,88,.045);transition:transform .28s ease,border-color .28s ease,box-shadow .28s ease}
 .mp-accomp-summary{position:relative;display:grid;grid-template-columns:24px 36px minmax(0,1fr);align-items:center;gap:9px;min-height:0;padding:12px 13px 5px}
 
 .mp-accomp-number{align-self:start;padding-top:4px;color:#8BA3BF;font-size:12px;font-weight:800;letter-spacing:-.02em}
-.mp-accomp-icon{width:42px;height:42px;display:grid;place-items:center;border:1px solid #D7E7F8;border-radius:12px;background:linear-gradient(135deg,#EAF3FF,#D9F3F0);color:#1558C0;font-size:18px;transition:transform .3s ease,box-shadow .3s ease}
+.mp-accomp-icon{width:36px;height:36px;display:grid;place-items:center;border:1px solid #D7E7F8;border-radius:10px;background:linear-gradient(135deg,#EAF3FF,#D9F3F0);color:#1558C0;font-size:18px;transition:transform .3s ease,box-shadow .3s ease}
 .mp-accomp-title{display:grid;gap:3px;min-width:0}
 .mp-accomp-title small{color:#0877D8;font-size:8px;font-weight:800;letter-spacing:.1em;line-height:1.3}
 .mp-accomp-title b{color:#183458;font-size:14px;line-height:1.25}
@@ -478,7 +478,7 @@ table.mp-cmp{min-width:980px}
 @keyframes mp-accomp-reveal{from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:translateY(0)}}
 .mp-accomp-feature{grid-column:auto;min-height:0;background:linear-gradient(110deg,#FFFFFF 0%,#F1F7FF 72%,#E7F5F7 100%)}
 .mp-accomp-feature .mp-accomp-summary{min-height:0;grid-template-columns:24px 36px minmax(0,1fr);padding:12px 13px 5px}
-.mp-accomp-feature .mp-accomp-number{font-size:15px;color:#1558C0}
+.mp-accomp-feature .mp-accomp-number{font-size:12px;color:#1558C0}
 .mp-accomp-feature .mp-accomp-icon{width:36px;height:36px;font-size:18px}
 .mp-accomp-feature .mp-accomp-title b{font-size:14px}
 .mp-accomp-feature .mp-accomp-body{padding:4px 13px 12px 82px}
@@ -492,7 +492,7 @@ table.mp-cmp{min-width:980px}
 .mp-accomp-service-link:hover{gap:11px}
 @media(hover:hover){.mp-accomp-item:hover{transform:translateY(-3px);border-color:#A9C8E8;box-shadow:0 13px 27px rgba(21,88,192,.09)}.mp-accomp-item:hover .mp-accomp-icon{box-shadow:0 5px 14px rgba(21,88,192,.12)}}
 @media(max-width:900px){.mp-accomp-layout{grid-template-columns:1fr}.mp-accomp-visual{min-height:250px}.mp-accomp-visual::before{top:50%}.mp-accomp-orbit,.mp-accomp-orbit.orbit-two,.mp-accomp-core{top:50%}.mp-accomp-visual-caption{font-size:24px}.mp-accomp-modules{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:620px){.mp-accomp-heading{display:block}.mp-accomp-index{display:none}.mp-accomp-modules{grid-template-columns:1fr}.mp-accomp-summary{grid-template-columns:24px 40px minmax(0,1fr);padding:15px 13px 7px;gap:9px}.mp-accomp-feature{grid-column:auto}.mp-accomp-feature .mp-accomp-summary{min-height:0;padding:12px 13px 5px}.mp-accomp-title b{font-size:14px}.mp-accomp-feature .mp-accomp-title b{font-size:15px}.mp-accomp-body,.mp-accomp-feature .mp-accomp-body{padding:4px 13px 12px 82px}.mp-accomp-visual{min-height:250px}.mp-accomp-service{grid-template-columns:42px minmax(0,1fr);padding:16px;gap:12px}.mp-accomp-service-mark{width:40px;height:40px}.mp-accomp-service-link{grid-column:2;justify-self:start;margin-top:3px}}
+@media(max-width:620px){.mp-accomp-heading{display:block}.mp-accomp-index{display:none}.mp-accomp-modules{grid-template-columns:1fr}.mp-accomp-summary{grid-template-columns:22px 34px minmax(0,1fr);padding:12px 12px 5px;gap:8px}.mp-accomp-feature{grid-column:auto}.mp-accomp-feature .mp-accomp-summary{min-height:0;padding:12px 13px 5px}.mp-accomp-title b{font-size:14px}.mp-accomp-feature .mp-accomp-title b{font-size:14px}.mp-accomp-body,.mp-accomp-feature .mp-accomp-body{padding:4px 13px 12px 82px}.mp-accomp-visual{min-height:250px}.mp-accomp-service{grid-template-columns:42px minmax(0,1fr);padding:16px;gap:12px}.mp-accomp-service-mark{width:40px;height:40px}.mp-accomp-service-link{grid-column:2;justify-self:start;margin-top:3px}}
 @media(prefers-reduced-motion:reduce){.mp-accomp-item,.mp-accomp-icon,.mp-accomp-service-link{animation:none!important;transition:none!important}}
 
 </style>
