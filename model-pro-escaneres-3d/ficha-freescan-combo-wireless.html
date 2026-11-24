@@ -134,18 +134,26 @@ a.mp-card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(22,60,120,
 .mp-flow-note{margin-top:22px;font-size:14px;color:#C3CEE0}
 .mp-flow-note a{color:var(--tq2);font-weight:700;text-decoration:none}
 
-/* ¿es para ti? */
-.mp-fit{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.mp-yes,.mp-no{border-radius:14px;padding:24px;border:1px solid var(--ln);background:#fff}
-.mp-yes{border-top:4px solid var(--tq)}
-.mp-no{border-top:4px solid var(--azc)}
-.mp-fit h3{margin:0 0 12px;font-size:18px}
-.mp-fit ul{margin:0;padding:0;list-style:none}
-.mp-fit li{display:flex;gap:10px;font-size:14.5px;margin-bottom:10px;color:var(--ink)}
-.mp-fit li i{flex-shrink:0;margin-top:2px;font-size:18px}
-.mp-yes li i{color:var(--tq)}
-.mp-no li i{color:var(--az)}
-.mp-no li a{color:var(--az);font-weight:700;text-decoration:none}
+/* ¿es para ti? · tarjetas de orientación */
+.mp-fit{display:grid;grid-template-columns:1fr 1fr;gap:22px;align-items:stretch}
+.mp-yes,.mp-no{position:relative;overflow:hidden;border-radius:18px;padding:0;border:1px solid #D6E3F1;background:#fff;box-shadow:0 10px 28px rgba(23,52,88,.07)}
+.mp-yes::before,.mp-no::before{content:"";display:block;height:5px;background:linear-gradient(90deg,#1558C0 0%,#2E82F0 58%,#00B8BD 100%)}
+.mp-no::before{background:linear-gradient(90deg,#00AEB5 0%,#2E82F0 100%)}
+.mp-fit-head{display:flex;align-items:center;gap:14px;padding:23px 24px 18px;border-bottom:1px solid #E5EDF6}
+.mp-fit-symbol{width:46px;height:46px;flex:0 0 46px;display:flex;align-items:center;justify-content:center;border-radius:14px;background:#EAF3FF;color:#1558C0;font-size:23px}
+.mp-no .mp-fit-symbol{background:#E5F7F6;color:#008F98}
+.mp-fit-kicker{display:block;color:#0877D8;font-size:11px;font-weight:800;letter-spacing:.12em;text-transform:uppercase;margin-bottom:3px}
+.mp-no .mp-fit-kicker{color:#008F98}
+.mp-fit h3{margin:0;font-size:18px;line-height:1.25;color:#183458}
+.mp-fit ul{margin:0;padding:8px 24px 18px;list-style:none}
+.mp-fit li{display:flex;gap:12px;align-items:flex-start;font-size:14.5px;line-height:1.5;margin:0;padding:13px 0;color:var(--ink);border-bottom:1px solid #EDF2F8}
+.mp-fit li:last-child{border-bottom:0}
+.mp-fit li i{flex:0 0 22px;width:22px;height:22px;display:flex;align-items:center;justify-content:center;margin-top:0;border-radius:50%;font-size:14px;background:#E5F7F6;color:#008F98}
+.mp-yes li i{background:#EAF3FF;color:#1558C0}
+.mp-no li i{background:#E5F7F6;color:#008F98}
+.mp-no li a{color:#0877D8;font-weight:700;text-decoration:none;border-bottom:1px solid rgba(8,119,216,.25)}
+.mp-no li a:hover{border-color:#0877D8}
+@media(max-width:560px){.mp-fit-head{padding:19px 18px 16px}.mp-fit ul{padding:6px 18px 14px}.mp-fit li{font-size:14px}}
 
 /* tablas */
 .mp-tbl-wrap{overflow-x:auto;border:1px solid var(--ln);border-radius:14px;background:#fff}
@@ -519,17 +527,29 @@ body{font-family:Archivo,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-se
   <div class="mp-co">
     <p class="mp-ey">¿Es para ti?</p>
     <h2 class="mp-h2">Revisa si es el indicado para tu pieza</h2>
-    <div class="mp-fit" style="margin-top:22px">
-      <div class="mp-yes"><h3>Es buena opción si…</h3><ul>
-        <li><i class="ti ti-circle-check"></i><span>Tus piezas son pequeñas a medianas.</span></li>
-        <li><i class="ti ti-circle-check"></i><span>Tu tolerancia es de hasta 20 micras.</span></li>
-        <li><i class="ti ti-circle-check"></i><span>Necesitas moverte sin cables, en planta o espacios reducidos.</span></li>
-      </ul></div>
-      <div class="mp-no"><h3>Mejor mira otro modelo si…</h3><ul>
-        <li><i class="ti ti-arrow-right"></i><span>Tus piezas son grandes o muy grandes: <a href="#">UE Pro2</a> · <a href="#">Trak Nova</a></span></li>
-        <li><i class="ti ti-arrow-right"></i><span>Tu tolerancia es más exigente que 20 micras (por ejemplo 10 o 5 micras), aunque no sea para laboratorio: <a href="#">OptimScan Q12</a></span></li>
-        <li><i class="ti ti-arrow-right"></i><span>Trabajas en taller o campo: <a href="#">Rigil</a> · <a href="#">Libre</a></span></li>
-      </ul></div>
+    <div class="mp-fit" style="margin-top:26px">
+      <article class="mp-yes">
+        <div class="mp-fit-head">
+          <span class="mp-fit-symbol"><i class="ti ti-circle-check"></i></span>
+          <div><span class="mp-fit-kicker">Este modelo encaja contigo</span><h3>Es buena opción si…</h3></div>
+        </div>
+        <ul>
+          <li><i class="ti ti-ruler-measure"></i><span>Tus piezas son pequeñas a medianas.</span></li>
+          <li><i class="ti ti-target"></i><span>Tu tolerancia requerida es de hasta 20 micras.</span></li>
+          <li><i class="ti ti-wifi"></i><span>Necesitas libertad de movimiento en planta o espacios reducidos.</span></li>
+        </ul>
+      </article>
+      <article class="mp-no">
+        <div class="mp-fit-head">
+          <span class="mp-fit-symbol"><i class="ti ti-adjustments-horizontal"></i></span>
+          <div><span class="mp-fit-kicker">Conviene comparar alternativas</span><h3>Mejor mira otro modelo si…</h3></div>
+        </div>
+        <ul>
+          <li><i class="ti ti-box"></i><span>Tus piezas son grandes o muy grandes: <a href="#">UE Pro2</a> · <a href="#">Trak Nova</a></span></li>
+          <li><i class="ti ti-crosshair"></i><span>Necesitas una tolerancia más exigente que 20 micras (por ejemplo, 10 o 5): <a href="#">OptimScan Q12</a></span></li>
+          <li><i class="ti ti-tool"></i><span>Trabajas principalmente en taller o campo: <a href="#">Rigil</a> · <a href="#">Libre</a></span></li>
+        </ul>
+      </article>
     </div>
     <p style="margin-top:26px"><a class="mp-btn" href="#contacto" data-mp-intent="recomendacion">No sé cuál necesito: cuéntanos tu pieza</a></p>
   </div>
