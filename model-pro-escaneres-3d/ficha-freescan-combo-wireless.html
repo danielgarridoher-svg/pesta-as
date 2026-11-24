@@ -441,7 +441,7 @@ table.mp-cmp{min-width:980px}
 /* Acompañamiento Model Pro · composición técnica modular */
 .mp-accomp{position:relative;isolation:isolate;overflow:hidden;background:linear-gradient(115deg,#FFFFFF 0%,#F7FAFF 52%,#EAF3FF 100%)}
 .mp-accomp::before{content:"";position:absolute;z-index:-1;top:0;right:0;width:42%;height:100%;background:radial-gradient(ellipse at 70% 35%,rgba(46,130,240,.09),transparent 66%);pointer-events:none}
-.mp-accomp-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:32px;margin-bottom:34px}
+.mp-accomp-heading{display:flex;align-items:flex-end;justify-content:space-between;gap:32px;margin-bottom:25px}
 .mp-accomp-intro{max-width:790px}
 .mp-accomp-intro .mp-h2{font-size:clamp(29px,4vw,43px);line-height:1.1;letter-spacing:-.04em;max-width:760px}
 .mp-accomp-intro .mp-h2 span{display:inline;background:linear-gradient(100deg,#1558C0 0%,#2E82F0 52%,#00B8BD 100%);-webkit-background-clip:text;background-clip:text;color:transparent}
@@ -450,8 +450,8 @@ table.mp-cmp{min-width:980px}
 .mp-accomp-index-line{position:absolute;left:-2px;top:0;width:3px;height:28px;border-radius:3px;background:linear-gradient(#2E82F0,#00B8BD)}
 .mp-accomp-index b{grid-row:span 2;color:#1558C0;font-size:24px;letter-spacing:-.04em}
 .mp-accomp-index small{color:#64768B;font-size:10px;line-height:1.45;font-weight:700;letter-spacing:.04em;text-transform:uppercase}
-.mp-accomp-layout{display:grid;grid-template-columns:minmax(260px,.78fr) minmax(0,1.5fr);gap:19px;align-items:stretch}
-.mp-accomp-visual{position:relative;isolation:isolate;overflow:hidden;min-height:510px;border-radius:18px;background:linear-gradient(145deg,#0C1422 0%,#10213A 58%,#123A70 100%);box-shadow:0 16px 38px rgba(18,48,87,.15)}
+.mp-accomp-layout{display:grid;grid-template-columns:minmax(250px,.72fr) minmax(0,1.55fr);gap:16px;align-items:stretch}
+.mp-accomp-visual{position:relative;isolation:isolate;overflow:hidden;min-height:390px;border-radius:18px;background:linear-gradient(145deg,#0C1422 0%,#10213A 58%,#123A70 100%);box-shadow:0 16px 38px rgba(18,48,87,.15)}
 .mp-accomp-visual-grid{position:absolute;inset:0;opacity:.32;background-image:linear-gradient(rgba(139,216,255,.12) 1px,transparent 1px),linear-gradient(90deg,rgba(139,216,255,.12) 1px,transparent 1px);background-size:31px 31px;mask-image:linear-gradient(145deg,#000 5%,transparent 90%)}
 .mp-accomp-visual::before{content:"";position:absolute;width:330px;height:330px;left:50%;top:43%;transform:translate(-50%,-50%);border-radius:50%;background:radial-gradient(circle,rgba(46,130,240,.27),rgba(0,184,189,.08) 42%,transparent 70%);filter:blur(3px)}
 .mp-accomp-orbit{position:absolute;left:50%;top:43%;width:250px;height:250px;border:1px solid rgba(139,216,255,.3);border-radius:50%;transform:translate(-50%,-50%) rotate(-25deg)}
@@ -464,29 +464,25 @@ table.mp-cmp{min-width:980px}
 .mp-accomp-visual-label i{display:inline-block;width:5px;height:5px;margin:0 7px 1px;border-radius:50%;background:#00B8BD;box-shadow:0 0 8px #00B8BD}
 .mp-accomp-visual-caption{position:absolute;left:26px;bottom:25px;color:#F2F7FF;font-size:clamp(22px,2.5vw,29px);font-weight:700;line-height:1.12;letter-spacing:-.035em}
 .mp-accomp-modules{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:13px}
-.mp-accomp-item{position:relative;overflow:hidden;min-height:160px;border:1px solid #D6E3F1;border-radius:15px;background:rgba(255,255,255,.9);box-shadow:0 7px 20px rgba(23,52,88,.045);transition:transform .28s ease,border-color .28s ease,box-shadow .28s ease}
-.mp-accomp-item summary{position:relative;display:grid;grid-template-columns:28px 42px minmax(0,1fr) 20px;align-items:center;gap:10px;min-height:158px;padding:18px 16px;cursor:pointer;list-style:none}
-.mp-accomp-item summary::-webkit-details-marker{display:none}
+.mp-accomp-item{position:relative;overflow:hidden;min-height:0;border:1px solid #D6E3F1;border-radius:15px;background:rgba(255,255,255,.9);box-shadow:0 7px 20px rgba(23,52,88,.045);transition:transform .28s ease,border-color .28s ease,box-shadow .28s ease}
+.mp-accomp-summary{position:relative;display:grid;grid-template-columns:28px 42px minmax(0,1fr);align-items:center;gap:10px;min-height:0;padding:17px 16px 8px}
+
 .mp-accomp-number{align-self:start;padding-top:4px;color:#8BA3BF;font-size:12px;font-weight:800;letter-spacing:-.02em}
 .mp-accomp-icon{width:42px;height:42px;display:grid;place-items:center;border:1px solid #D7E7F8;border-radius:12px;background:linear-gradient(135deg,#EAF3FF,#D9F3F0);color:#1558C0;font-size:20px;transition:transform .3s ease,box-shadow .3s ease}
 .mp-accomp-title{display:grid;gap:5px;min-width:0}
 .mp-accomp-title small{color:#0877D8;font-size:9px;font-weight:800;letter-spacing:.11em;line-height:1.35}
 .mp-accomp-title b{color:#183458;font-size:15px;line-height:1.3}
 .mp-accomp-chevron{align-self:start;margin-top:3px;color:#2E82F0;font-size:19px;transition:transform .3s ease}
-.mp-accomp-body{padding:0 20px 20px 96px}
+.mp-accomp-body{padding:7px 18px 18px 96px}
 .mp-accomp-body p{margin:0;color:#526783;font-size:13px;line-height:1.65}
-.mp-accomp-item[open]{border-color:#8DB9E8;background:linear-gradient(145deg,#FFFFFF,#F1F8FF);box-shadow:0 13px 28px rgba(21,88,192,.1)}
-.mp-accomp-item[open] summary{min-height:105px}
-.mp-accomp-item[open] .mp-accomp-chevron{transform:rotate(45deg)}
-.mp-accomp-item[open] .mp-accomp-icon{transform:translateY(-2px);box-shadow:0 6px 16px rgba(21,88,192,.14)}
-.mp-accomp-body{animation:mp-accomp-reveal .3s ease both}
+.mp-accomp-icon{box-shadow:0 3px 10px rgba(21,88,192,.07)}
 @keyframes mp-accomp-reveal{from{opacity:0;transform:translateY(-5px)}to{opacity:1;transform:translateY(0)}}
 .mp-accomp-feature{grid-column:1/-1;min-height:132px;background:linear-gradient(110deg,#FFFFFF 0%,#F1F7FF 72%,#E7F5F7 100%)}
-.mp-accomp-feature summary{min-height:132px;grid-template-columns:34px 48px minmax(0,1fr) 22px;padding:20px 22px}
+.mp-accomp-feature .mp-accomp-summary{min-height:0;grid-template-columns:34px 48px minmax(0,1fr);padding:18px 20px 8px}
 .mp-accomp-feature .mp-accomp-number{font-size:15px;color:#1558C0}
 .mp-accomp-feature .mp-accomp-icon{width:48px;height:48px;font-size:23px}
 .mp-accomp-feature .mp-accomp-title b{font-size:18px}
-.mp-accomp-feature .mp-accomp-body{padding-left:124px}
+.mp-accomp-feature .mp-accomp-body{padding-left:122px;padding-bottom:17px}
 .mp-accomp-service{display:grid;grid-template-columns:48px minmax(0,1fr) auto;align-items:center;gap:17px;margin-top:20px;padding:19px 23px;border:1px solid #C9D9EB;border-radius:15px;background:linear-gradient(105deg,rgba(255,255,255,.96),rgba(234,243,255,.94));box-shadow:0 6px 20px rgba(23,52,88,.04)}
 .mp-accomp-service-mark{width:46px;height:46px;display:grid;place-items:center;border-radius:13px;background:linear-gradient(135deg,#EAF3FF,#D9F3F0);color:#1558C0;font-size:22px}
 .mp-accomp-service div{display:grid;gap:3px}
@@ -496,9 +492,9 @@ table.mp-cmp{min-width:980px}
 .mp-accomp-service-link{display:inline-flex;align-items:center;gap:7px;color:#1558C0;font-size:13px;font-weight:800;text-decoration:none;white-space:nowrap}
 .mp-accomp-service-link:hover{gap:11px}
 @media(hover:hover){.mp-accomp-item:hover{transform:translateY(-3px);border-color:#A9C8E8;box-shadow:0 13px 27px rgba(21,88,192,.09)}.mp-accomp-item:hover .mp-accomp-icon{box-shadow:0 5px 14px rgba(21,88,192,.12)}}
-@media(max-width:900px){.mp-accomp-layout{grid-template-columns:1fr}.mp-accomp-visual{min-height:290px}.mp-accomp-visual::before{top:50%}.mp-accomp-orbit,.mp-accomp-orbit.orbit-two,.mp-accomp-core{top:50%}.mp-accomp-visual-caption{font-size:24px}.mp-accomp-modules{grid-template-columns:repeat(2,minmax(0,1fr))}}
-@media(max-width:620px){.mp-accomp-heading{display:block}.mp-accomp-index{display:none}.mp-accomp-modules{grid-template-columns:1fr}.mp-accomp-item,.mp-accomp-item summary{min-height:0}.mp-accomp-item summary{grid-template-columns:24px 40px minmax(0,1fr) 18px;padding:17px 13px;gap:9px}.mp-accomp-feature{grid-column:auto}.mp-accomp-feature summary{min-height:0;padding:17px 13px}.mp-accomp-title b{font-size:14px}.mp-accomp-feature .mp-accomp-title b{font-size:15px}.mp-accomp-body,.mp-accomp-feature .mp-accomp-body{padding:0 15px 18px 86px}.mp-accomp-visual{min-height:250px}.mp-accomp-service{grid-template-columns:42px minmax(0,1fr);padding:16px;gap:12px}.mp-accomp-service-mark{width:40px;height:40px}.mp-accomp-service-link{grid-column:2;justify-self:start;margin-top:3px}}
-@media(prefers-reduced-motion:reduce){.mp-accomp-item,.mp-accomp-icon,.mp-accomp-chevron,.mp-accomp-body,.mp-accomp-service-link{animation:none!important;transition:none!important}}
+@media(max-width:900px){.mp-accomp-layout{grid-template-columns:1fr}.mp-accomp-visual{min-height:280px}.mp-accomp-visual::before{top:50%}.mp-accomp-orbit,.mp-accomp-orbit.orbit-two,.mp-accomp-core{top:50%}.mp-accomp-visual-caption{font-size:24px}.mp-accomp-modules{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.mp-accomp-heading{display:block}.mp-accomp-index{display:none}.mp-accomp-modules{grid-template-columns:1fr}.mp-accomp-summary{grid-template-columns:24px 40px minmax(0,1fr);padding:15px 13px 7px;gap:9px}.mp-accomp-feature{grid-column:auto}.mp-accomp-feature .mp-accomp-summary{min-height:0;padding:15px 13px 7px}.mp-accomp-title b{font-size:14px}.mp-accomp-feature .mp-accomp-title b{font-size:15px}.mp-accomp-body,.mp-accomp-feature .mp-accomp-body{padding:6px 15px 16px 86px}.mp-accomp-visual{min-height:250px}.mp-accomp-service{grid-template-columns:42px minmax(0,1fr);padding:16px;gap:12px}.mp-accomp-service-mark{width:40px;height:40px}.mp-accomp-service-link{grid-column:2;justify-self:start;margin-top:3px}}
+@media(prefers-reduced-motion:reduce){.mp-accomp-item,.mp-accomp-icon,.mp-accomp-service-link{animation:none!important;transition:none!important}}
 
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -859,22 +855,22 @@ body{font-family:Archivo,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-se
         <span class="mp-accomp-visual-caption">De tu aplicación<br>al resultado.</span>
       </div>
       <div class="mp-accomp-modules">
-        <details class="mp-accomp-item mp-accomp-feature">
-          <summary><span class="mp-accomp-number">01</span><span class="mp-accomp-icon"><i class="ti ti-adjustments-horizontal"></i></span><span class="mp-accomp-title"><small>ANÁLISIS DE APLICACIÓN</small><b>Configuración adecuada para tu pieza</b></span><i class="ti ti-arrow-up-right mp-accomp-chevron"></i></summary>
+        <article class="mp-accomp-item mp-accomp-feature">
+          <div class="mp-accomp-summary"><span class="mp-accomp-number">01</span><span class="mp-accomp-icon"><i class="ti ti-adjustments-horizontal"></i></span><span class="mp-accomp-title"><small>ANÁLISIS DE APLICACIÓN</small><b>Configuración adecuada para tu pieza</b></span><i class="ti ti-arrow-up-right mp-accomp-chevron"></i></div>
           <div class="mp-accomp-body"><p>Revisamos material, dimensiones, geometría, tolerancias y entorno de trabajo para valorar si este escáner responde a lo que necesitas digitalizar.</p></div>
-        </details>
-        <details class="mp-accomp-item">
-          <summary><span class="mp-accomp-number">02</span><span class="mp-accomp-icon"><i class="ti ti-scan"></i></span><span class="mp-accomp-title"><small>VALIDACIÓN</small><b>Demostración con tu pieza</b></span><i class="ti ti-arrow-up-right mp-accomp-chevron"></i></summary>
+        </article>
+        <article class="mp-accomp-item">
+          <div class="mp-accomp-summary"><span class="mp-accomp-number">02</span><span class="mp-accomp-icon"><i class="ti ti-scan"></i></span><span class="mp-accomp-title"><small>VALIDACIÓN</small><b>Demostración con tu pieza</b></span><i class="ti ti-arrow-up-right mp-accomp-chevron"></i></div>
           <div class="mp-accomp-body"><p>Comprueba el proceso de captura con una pieza de tu operación. Podemos realizar la demostración de forma presencial o remota.</p></div>
-        </details>
-        <details class="mp-accomp-item">
-          <summary><span class="mp-accomp-number">03</span><span class="mp-accomp-icon"><i class="ti ti-cube-3d-sphere"></i></span><span class="mp-accomp-title"><small>INTEGRACIÓN</small><b>Software y flujo de trabajo</b></span><i class="ti ti-arrow-up-right mp-accomp-chevron"></i></summary>
+        </article>
+        <article class="mp-accomp-item">
+          <div class="mp-accomp-summary"><span class="mp-accomp-number">03</span><span class="mp-accomp-icon"><i class="ti ti-cube-3d-sphere"></i></span><span class="mp-accomp-title"><small>INTEGRACIÓN</small><b>Software y flujo de trabajo</b></span><i class="ti ti-arrow-up-right mp-accomp-chevron"></i></div>
           <div class="mp-accomp-body"><p>Revisamos el software de escaneo, las herramientas complementarias, licencias, compatibilidad y formatos para integrar los datos a tu proceso.</p></div>
-        </details>
-        <details class="mp-accomp-item">
-          <summary><span class="mp-accomp-number">04</span><span class="mp-accomp-icon"><i class="ti ti-headset"></i></span><span class="mp-accomp-title"><small>CONTINUIDAD</small><b>Capacitación y soporte</b></span><i class="ti ti-arrow-up-right mp-accomp-chevron"></i></summary>
+        </article>
+        <article class="mp-accomp-item">
+          <div class="mp-accomp-summary"><span class="mp-accomp-number">04</span><span class="mp-accomp-icon"><i class="ti ti-headset"></i></span><span class="mp-accomp-title"><small>CONTINUIDAD</small><b>Capacitación y soporte</b></span><i class="ti ti-arrow-up-right mp-accomp-chevron"></i></div>
           <div class="mp-accomp-body"><p>Te orientamos sobre la puesta en marcha, capacitación y soporte en español para que tu equipo pueda incorporar la tecnología a su trabajo.</p></div>
-        </details>
+        </article>
       </div>
     </div>
     <div class="mp-accomp-service">
