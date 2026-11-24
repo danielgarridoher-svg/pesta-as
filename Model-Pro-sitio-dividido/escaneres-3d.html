@@ -817,6 +817,35 @@ small,.small{font-size:var(--fs-small);line-height:1.5;}
   box-shadow:inset 0 0 0 1px rgba(46,130,240,.3);
   color:#FFFFFF;
 }
+
+/* ===== Acompañamiento Model Pro: continuidad después de las aplicaciones ===== */
+.scanner-compare-transition{margin:10px 0 0;color:#D6E7F8;font-size:13px;line-height:1.65;font-weight:600}
+.scanner-modelpro-section{padding:84px 0;background:linear-gradient(125deg,#0C1422 0%,#10213A 58%,#0E1B33 100%);color:#F4F6F9}
+.scanner-modelpro-section>.container{max-width:1200px}
+.scanner-modelpro-heading{max-width:780px;margin:0 auto 38px;text-align:center}
+.scanner-modelpro-heading>.eyebrow{color:#8BD8FF}
+.scanner-modelpro-heading h2{margin:12px 0 14px;color:#F2F7FF;font-family:var(--font-head);font-size:clamp(1.8rem,1.35rem + 1.7vw,2.65rem);line-height:1.18;letter-spacing:-.035em}
+.scanner-modelpro-heading h2 span{background:linear-gradient(100deg,#8AF5F0 0%,#A9C8FF 55%,#2E82F0 100%);background-clip:text;-webkit-background-clip:text;color:transparent;-webkit-text-fill-color:transparent}
+.scanner-modelpro-heading>p{max-width:650px;margin:0 auto;color:#D6E7F8;font-size:15px;line-height:1.7}
+.scanner-modelpro-process{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:14px}
+.scanner-modelpro-process article{min-width:0;padding:22px 20px;border:1px solid rgba(244,246,249,.16);border-radius:13px;background:rgba(255,255,255,.045)}
+.scanner-modelpro-number{display:inline-block;margin-bottom:20px;color:#8BD8FF;font-family:var(--font-mono);font-size:13px}
+.scanner-modelpro-process h3,.scanner-modelpro-support h3{margin:0 0 8px;color:#F2F7FF;font-size:16px}
+.scanner-modelpro-process p,.scanner-modelpro-support p{margin:0;color:#D6E7F8;font-size:12px;line-height:1.65}
+.scanner-modelpro-support{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:26px;margin-top:34px;padding:26px 0;border-top:1px solid rgba(244,246,249,.18);border-bottom:1px solid rgba(244,246,249,.18)}
+.scanner-modelpro-support>div{display:flex;align-items:flex-start;gap:13px;min-width:0}
+.scanner-modelpro-support-icon{display:grid;place-items:center;flex:0 0 34px;width:34px;height:34px;border:1px solid rgba(138,245,240,.35);border-radius:9px;color:#8AF5F0;font-size:20px}
+.scanner-modelpro-cta{display:flex;align-items:center;justify-content:space-between;gap:24px;margin-top:27px}
+.scanner-modelpro-cta p{display:grid;gap:4px;margin:0}
+.scanner-modelpro-cta strong{color:#F2F7FF;font-size:15px}
+.scanner-modelpro-cta p span{color:#D6E7F8;font-size:12px}
+.scanner-modelpro-cta .btn{min-height:48px;padding:12px 21px;border:0;border-radius:10px;background:linear-gradient(110deg,#00AEB5 0%,#2E82F0 100%);color:#FFF;font-size:12px;font-weight:700;box-shadow:0 8px 20px rgba(0,174,181,.18);text-decoration:none}
+.scanner-modelpro-cta .btn:hover{transform:translateY(-2px);box-shadow:0 11px 24px rgba(46,130,240,.28)}
+.scanner-modelpro-cta .btn svg{width:16px;height:16px}
+@media(max-width:900px){.scanner-modelpro-process{grid-template-columns:repeat(2,minmax(0,1fr))}.scanner-modelpro-support{gap:18px}}
+@media(max-width:767px){.scanner-modelpro-section{padding:60px 0}.scanner-modelpro-heading{text-align:left;margin-bottom:28px}.scanner-modelpro-heading>p{margin:0}.scanner-modelpro-process{gap:10px}.scanner-modelpro-process article{padding:18px 15px}.scanner-modelpro-number{margin-bottom:14px}.scanner-modelpro-support{grid-template-columns:1fr;gap:18px;margin-top:25px;padding:22px 0}.scanner-modelpro-cta{align-items:flex-start;flex-direction:column}.scanner-modelpro-cta .btn{align-self:flex-start}}
+@media(max-width:420px){.scanner-modelpro-process{grid-template-columns:1fr}.scanner-modelpro-process article{padding:17px}}
+
 </style>
 
 
@@ -1028,10 +1057,60 @@ small,.small{font-size:var(--fs-small);line-height:1.5;}
       </table>
     </div>
     <p class="scanner-compare-note">Las especificaciones pueden variar según la versión, configuración y condiciones de medición. Para una comparación técnica final, revisamos tu pieza y la ficha correspondiente del fabricante.</p>
+    <p class="scanner-compare-transition">La mejor elección no depende solo de las especificaciones, sino de cómo responde el equipo a tu pieza y a tu proceso.</p>
   </div>
 </section>
 <section class="section process-section"><div class="container"><span class="eyebrow">TECNOLOGÍA QUE CONECTA DOS MUNDOS</span><div class="section-heading"><h2>Del objeto físico<br><span>al dato digital.</span></h2><p class="section-sub">De una superficie real a información que puedes medir, analizar y transformar.</p></div><div class="steps"><div class="step"><div class="step-top"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scan-line" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 12h10"/></svg><span>01</span></div><h3>Captura</h3><p>El escáner registra la superficie del objeto mediante tecnología óptica.</p></div><div class="step"><div class="step-top"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-box" aria-hidden="true"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg><span>02</span></div><h3>Datos 3D</h3><p>La captura genera información espacial que representa la geometría de la pieza.</p></div><div class="step"><div class="step-top"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layers" aria-hidden="true"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></svg><span>03</span></div><h3>Procesamiento</h3><p>Los datos se alinean y procesan para obtener una representación digital utilizable.</p></div><div class="step"><div class="step-top"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cpu" aria-hidden="true"><path d="M12 20v2"/><path d="M12 2v2"/><path d="M17 20v2"/><path d="M17 2v2"/><path d="M2 12h2"/><path d="M2 17h2"/><path d="M2 7h2"/><path d="M20 12h2"/><path d="M20 17h2"/><path d="M20 7h2"/><path d="M7 20v2"/><path d="M7 2v2"/><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="8" y="8" width="8" height="8" rx="1"/></svg><span>04</span></div><h3>Aplicación</h3><p>El resultado apoya tareas de inspección, diseño o ingeniería inversa, según el equipo y el flujo de trabajo.</p></div></div></div></section>
 <section class="section applications-section"><div class="container"><div class="applications-photo"><img src="https://raw.githubusercontent.com/danielgarridoher-svg/pesta-as/acce7f59fcf3e39f32333cf06b2d64fd54f4d612/model-pro-escaneres-3d/images/application.webp" alt="Escaneo 3D de componentes en un entorno industrial" loading="lazy"><span><span class="status-dot"></span> TECNOLOGÍA EN EL MUNDO REAL</span></div><div class="applications-copy"><span class="eyebrow">DE LOS DATOS A LAS DECISIONES</span><h2>Una nueva dimensión<br><span>para tu industria.</span></h2><div class="application-list"><div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-factory" aria-hidden="true"><path d="M12 16h.01"/><path d="M16 16h.01"/><path d="M3 19a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8.5a.5.5 0 0 0-.769-.422l-4.462 2.844A.5.5 0 0 1 15 10.5v-2a.5.5 0 0 0-.769-.422L9.77 10.922A.5.5 0 0 1 9 10.5V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2z"/><path d="M8 16h.01"/></svg><div><h3>Manufactura</h3><p>Captura y documentación de componentes y piezas.</p></div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div><div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ruler" aria-hidden="true"><path d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.41 2.41 0 0 1 0-3.4l2.6-2.6a2.41 2.41 0 0 1 3.4 0Z"/><path d="m14.5 12.5 2-2"/><path d="m11.5 9.5 2-2"/><path d="m8.5 6.5 2-2"/><path d="m17.5 15.5 2-2"/></svg><div><h3>Control de calidad</h3><p>Comparación de geometrías y apoyo a la inspección dimensional.</p></div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div><div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rotate-3d" aria-hidden="true"><path d="M16.466 7.5C15.643 4.237 13.952 2 12 2 9.239 2 7 6.477 7 12s2.239 10 5 10c.342 0 .677-.069 1-.2"/><path d="m15.194 13.707 3.814 1.86-1.86 3.814"/><path d="M19 15.57c-1.804.885-4.274 1.43-7 1.43-5.523 0-10-2.239-10-5s4.477-5 10-5c4.838 0 8.873 1.718 9.8 4"/></svg><div><h3>Ingeniería inversa</h3><p>Datos para reconstrucción y desarrollo de modelos 3D.</p></div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div><div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pen-tool" aria-hidden="true"><path d="M15.707 21.293a1 1 0 0 1-1.414 0l-1.586-1.586a1 1 0 0 1 0-1.414l5.586-5.586a1 1 0 0 1 1.414 0l1.586 1.586a1 1 0 0 1 0 1.414z"/><path d="m18 13-1.375-6.874a1 1 0 0 0-.746-.776L3.235 2.028a1 1 0 0 0-1.207 1.207L5.35 15.879a1 1 0 0 0 .776.746L13 18"/><path d="m2.3 2.3 7.286 7.286"/><circle cx="11" cy="11" r="2"/></svg><div><h3>Diseño de producto</h3><p>Digitalización para apoyar procesos de diseño y modificación.</p></div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div></div><a class="btn btn-link btn-size-default" href="#scanner-request-form">Conversemos sobre tu aplicación <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></div></div></section>
+<section class="scanner-modelpro-section" aria-labelledby="scanner-modelpro-title">
+  <div class="container">
+    <div class="scanner-modelpro-heading">
+      <span class="eyebrow">ACOMPAÑAMIENTO MODEL PRO</span>
+      <h2 id="scanner-modelpro-title">No solo eliges un escáner. <span>Lo ponemos a prueba contigo.</span></h2>
+      <p>La diferencia está en cómo llevamos la tecnología a tu operación: desde entender tu necesidad hasta que tu equipo pueda aprovecharla.</p>
+    </div>
+    <div class="scanner-modelpro-process">
+      <article>
+        <span class="scanner-modelpro-number">01</span>
+        <h3>Cuéntanos tu pieza</h3>
+        <p>Conocemos su geometría, tamaño, aplicación y tolerancias.</p>
+      </article>
+      <article>
+        <span class="scanner-modelpro-number">02</span>
+        <h3>Te orientamos</h3>
+        <p>Comparamos opciones y recomendamos los equipos adecuados para tu proceso.</p>
+      </article>
+      <article>
+        <span class="scanner-modelpro-number">03</span>
+        <h3>Pruébalo con tu pieza</h3>
+        <p>Coordinamos una demostración para evaluar resultados sobre tu aplicación.</p>
+      </article>
+      <article>
+        <span class="scanner-modelpro-number">04</span>
+        <h3>Llévalo a tu operación</h3>
+        <p>Te acompañamos con la cotización, capacitación y soporte.</p>
+      </article>
+    </div>
+    <div class="scanner-modelpro-support">
+      <div>
+        <span class="scanner-modelpro-support-icon" aria-hidden="true">↗</span>
+        <div><h3>Capacitación aplicada</h3><p>Formación con piezas y procesos de tu industria para que tu equipo trabaje con autonomía.</p></div>
+      </div>
+      <div>
+        <span class="scanner-modelpro-support-icon" aria-hidden="true">⌁</span>
+        <div><h3>Soporte cercano</h3><p>Atención en español y acompañamiento técnico en México, también después de la compra.</p></div>
+      </div>
+      <div>
+        <span class="scanner-modelpro-support-icon" aria-hidden="true">◎</span>
+        <div><h3>Experiencia en industria</h3><p>Acompañamos aplicaciones de manufactura, automotriz, aeroespacial y talleres de precisión.</p></div>
+      </div>
+    </div>
+    <div class="scanner-modelpro-cta">
+      <p><strong>Tu proyecto es el punto de partida.</strong><span>Cuéntanos qué necesitas y vemos juntos el siguiente paso.</span></p>
+      <a class="btn btn-default btn-size-default" href="#scanner-request-form">Hablemos de tu proyecto <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a>
+    </div>
+  </div>
+</section>
 <section class="scanner-faq-section" id="faq" aria-labelledby="scanner-faq-title">
   <div class="container">
     <div class="section-heading">
