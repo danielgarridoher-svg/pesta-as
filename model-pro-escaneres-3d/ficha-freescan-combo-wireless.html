@@ -153,6 +153,30 @@ a.mp-card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(22,60,120,
 .mp-no li i{background:#E5F7F6;color:#008F98}
 .mp-no li a{color:#0877D8;font-weight:700;text-decoration:none;border-bottom:1px solid rgba(8,119,216,.25)}
 .mp-no li a:hover{border-color:#0877D8}
+
+/* Interacción tecnológica: halo, reflejo y micro movimiento */
+.mp-yes,.mp-no{isolation:isolate;transition:transform .28s ease,border-color .28s ease,box-shadow .28s ease}
+.mp-yes::after,.mp-no::after{content:"";position:absolute;z-index:-1;inset:0;pointer-events:none;opacity:0;background:radial-gradient(circle at 12% 8%,rgba(46,130,240,.13),transparent 38%),radial-gradient(circle at 92% 88%,rgba(0,184,189,.11),transparent 34%);transition:opacity .35s ease}
+.mp-yes::before,.mp-no::before{position:relative;overflow:hidden}
+.mp-yes::before,.mp-no::before{background-size:200% 100%;animation:mp-fit-scan 5s ease-in-out infinite}
+.mp-no::before{background-image:linear-gradient(90deg,#00AEB5 0%,#2E82F0 48%,#00B8BD 100%)}
+.mp-fit-symbol{position:relative;overflow:hidden;transition:transform .3s ease,box-shadow .3s ease}
+.mp-fit-symbol::after{content:"";position:absolute;inset:-40%;background:linear-gradient(110deg,transparent 35%,rgba(255,255,255,.8) 50%,transparent 65%);transform:translateX(-130%);transition:transform .55s ease}
+.mp-fit li{transition:transform .22s ease,color .22s ease}
+.mp-fit li i{transition:transform .22s ease,box-shadow .22s ease}
+@media(hover:hover){
+  .mp-yes:hover,.mp-no:hover{transform:translateY(-7px);border-color:#A9C8E8;box-shadow:0 18px 42px rgba(21,88,192,.14),0 0 0 1px rgba(46,130,240,.08)}
+  .mp-yes:hover::after,.mp-no:hover::after{opacity:1}
+  .mp-yes:hover .mp-fit-symbol,.mp-no:hover .mp-fit-symbol{transform:translateY(-2px) rotate(-4deg);box-shadow:0 7px 18px rgba(21,88,192,.16)}
+  .mp-yes:hover .mp-fit-symbol::after,.mp-no:hover .mp-fit-symbol::after{transform:translateX(130%)}
+  .mp-fit li:hover{transform:translateX(4px);color:#1558C0}
+  .mp-fit li:hover i{transform:scale(1.12);box-shadow:0 3px 10px rgba(21,88,192,.14)}
+}
+@keyframes mp-fit-scan{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+@media(prefers-reduced-motion:reduce){
+  .mp-yes,.mp-no,.mp-fit-symbol,.mp-fit-symbol::after,.mp-fit li,.mp-fit li i{transition:none!important;animation:none!important}
+  .mp-yes::before,.mp-no::before{animation:none!important}
+}
 @media(max-width:560px){.mp-fit-head{padding:19px 18px 16px}.mp-fit ul{padding:6px 18px 14px}.mp-fit li{font-size:14px}}
 
 /* tablas */
