@@ -207,7 +207,7 @@ a.mp-card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(22,60,120,
 .mp-spec-mark{display:inline-flex;align-items:center;gap:8px;white-space:nowrap;padding:9px 13px;border:1px solid #D6E3F1;border-radius:999px;background:rgba(255,255,255,.78);color:#1558C0;font-size:12px;font-weight:700}
 .mp-spec-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:15px}
 .mp-spec-card{position:relative;overflow:hidden;min-height:224px;padding:21px 20px 17px;border:1px solid #DCE6F2;border-radius:16px;background:rgba(255,255,255,.88);box-shadow:0 8px 24px rgba(23,52,88,.055);transition:transform .28s ease,border-color .28s ease,box-shadow .28s ease}
-.mp-spec-card::before{content:"";position:absolute;inset:0 0 auto;height:3px;background:linear-gradient(90deg,#1558C0,#2E82F0,#00B8BD);transform:scaleX(.32);transform-origin:left;transition:transform .3s ease}
+.mp-spec-card::before{content:"";position:absolute;top:-34px;right:-34px;width:132px;height:132px;border-radius:50%;background:radial-gradient(circle,rgba(46,130,240,.16) 0%,rgba(0,184,189,.08) 42%,transparent 72%);opacity:.55;transform:scale(.82);transition:transform .35s ease,opacity .35s ease;pointer-events:none}
 .mp-spec-icon{width:42px;height:42px;display:grid;place-items:center;margin-bottom:17px;border:1px solid #D7E7F8;border-radius:12px;background:linear-gradient(135deg,#EAF3FF,#D9F3F0);color:#1558C0;font-size:21px}
 .mp-spec-label{display:block;margin-bottom:5px;color:#64768B;font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase}
 .mp-spec-card strong{display:block;color:#183458;font-size:clamp(27px,3vw,35px);font-weight:800;line-height:1.1;letter-spacing:-.045em}
@@ -231,7 +231,7 @@ a.mp-card:hover{transform:translateY(-3px);box-shadow:0 8px 22px rgba(22,60,120,
 .mp-spec-details[open] summary>i{transform:rotate(180deg)}
 .mp-spec-details summary>i{transition:transform .2s ease}
 .mp-spec-source{margin:12px 0 15px;color:#64768B;font-size:12px;line-height:1.5}
-@media(hover:hover){.mp-spec-card:hover{transform:translateY(-5px);border-color:#A9C8E8;box-shadow:0 16px 32px rgba(21,88,192,.11)}.mp-spec-card:hover::before{transform:scaleX(1)}}
+@media(hover:hover){.mp-spec-card:hover{transform:translateY(-5px);border-color:#A9C8E8;box-shadow:0 16px 32px rgba(21,88,192,.11)}.mp-spec-card:hover::before{transform:scale(1.12);opacity:1}}
 @media(max-width:980px){.mp-spec-grid{grid-template-columns:repeat(2,minmax(0,1fr))}.mp-spec-computer{grid-template-columns:1fr}.mp-spec-computer-copy{align-items:center}}
 @media(max-width:560px){.mp-spec-head{align-items:flex-start;flex-direction:column;gap:12px}.mp-spec-grid{gap:11px}.mp-spec-card{min-height:215px;padding:17px 15px}.mp-spec-card strong{font-size:28px}.mp-spec-computer{padding:18px}.mp-spec-requirements{grid-template-columns:1fr}.mp-spec-details{padding:0 13px}}
 @media(prefers-reduced-motion:reduce){.mp-spec-card,.mp-spec-card::before,.mp-spec-details summary>i{transition:none!important}}
@@ -738,19 +738,21 @@ body{font-family:Archivo,system-ui,-apple-system,"Segoe UI",Roboto,Arial,sans-se
         <div class="mp-spec-foot">10 a 90 % <span>Humedad</span></div>
       </article>
     </div>
-    <div class="mp-spec-computer">
-      <div class="mp-spec-computer-copy">
-        <span class="mp-spec-icon"><i class="ti ti-device-desktop"></i></span>
-        <div><span class="mp-spec-label">Estación de trabajo</span><h3>Computadora recomendada</h3><p>Considera estos requisitos para trabajar con el software de escaneo.</p></div>
+    <details class="mp-det mp-spec-details mp-computer-details">
+      <summary><span><i class="ti ti-device-desktop"></i> Computadora recomendada</span><i class="ti ti-chevron-down"></i></summary>
+      <div class="mp-spec-computer">
+        <div class="mp-spec-computer-copy">
+          <div><span class="mp-spec-label">Estación de trabajo</span><h3>Requisitos para el software de escaneo</h3><p>Considera esta configuración al integrar el equipo a tu operación.</p></div>
+        </div>
+        <div class="mp-spec-requirements">
+          <div><span>Sistema operativo</span><b>Windows 10 / 11 Pro</b></div>
+          <div><span>Procesador</span><b>Intel Core Ultra 9 275HX o superior</b></div>
+          <div><span>Tarjeta gráfica</span><b>NVIDIA RTX 5080 Laptop o superior · 12 GB</b></div>
+          <div><span>Memoria</span><b>64 GB DDR5</b></div>
+          <div><span>Conexión</span><b>USB 3.0</b></div>
+        </div>
       </div>
-      <div class="mp-spec-requirements">
-        <div><span>Sistema operativo</span><b>Windows 10 / 11 Pro</b></div>
-        <div><span>Procesador</span><b>Intel Core Ultra 9 275HX o superior</b></div>
-        <div><span>Tarjeta gráfica</span><b>NVIDIA RTX 5080 Laptop o superior · 12 GB</b></div>
-        <div><span>Memoria</span><b>64 GB DDR5</b></div>
-        <div><span>Conexión</span><b>USB 3.0</b></div>
-      </div>
-    </div>
+    </details>
     <details class="mp-det mp-spec-details">
       <summary><span><i class="ti ti-list-details"></i> Consultar todas las especificaciones</span><i class="ti ti-chevron-down"></i></summary>
       <div class="mp-tbl-wrap"><table class="mp-tbl"><tbody>
