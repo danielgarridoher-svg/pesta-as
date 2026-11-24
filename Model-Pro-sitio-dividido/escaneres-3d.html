@@ -1136,6 +1136,76 @@ small,.small{font-size:var(--fs-small);line-height:1.5;}
   .scanner-choice-guide .scanner-guide-grid article{animation:none;transition:none}
   .scanner-choice-guide .scanner-guide-grid article:before{display:none}
 }
+
+
+/* Numeración editorial-tech: sin medallones ni apariencia de botón */
+.scanner-choice-guide .scanner-guide-grid article>span{
+  position:relative;
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  width:max-content;
+  height:auto;
+  min-width:0;
+  margin:0;
+  padding:0 0 8px 12px;
+  border:0;
+  border-radius:0;
+  background:transparent;
+  box-shadow:none;
+  color:#0877D8;
+  font-family:var(--font-mono),monospace;
+  font-size:30px;
+  font-weight:500;
+  line-height:1;
+  letter-spacing:-.09em;
+  font-variant-numeric:tabular-nums;
+  -webkit-text-fill-color:transparent;
+  background-image:linear-gradient(115deg,#0877D8 5%,#00AEB5 95%);
+  background-clip:text;
+  -webkit-background-clip:text;
+  transition:transform .35s ease,filter .35s ease;
+}
+.scanner-choice-guide .scanner-guide-grid article>span:before{
+  content:"";
+  position:absolute;
+  left:0;
+  top:1px;
+  width:2px;
+  height:25px;
+  background:linear-gradient(180deg,#00B8BD,#2E82F0);
+  box-shadow:0 0 9px rgba(0,184,189,.35);
+}
+.scanner-choice-guide .scanner-guide-grid article>span:after{
+  content:"";
+  position:absolute;
+  left:12px;
+  bottom:0;
+  width:28px;
+  height:1px;
+  background:linear-gradient(90deg,#00B8BD,rgba(46,130,240,0));
+  transition:width .35s ease;
+}
+.scanner-choice-guide .scanner-guide-grid article:nth-child(2)>span,
+.scanner-choice-guide .scanner-guide-grid article:nth-child(3)>span{
+  border:0;
+  border-radius:0;
+  background-color:transparent;
+  background-image:linear-gradient(115deg,#0877D8 5%,#00AEB5 95%);
+  color:transparent;
+}
+.scanner-choice-guide .scanner-guide-grid article:hover>span{
+  transform:translateX(3px);
+  filter:drop-shadow(0 0 7px rgba(0,174,181,.22));
+  box-shadow:none;
+}
+.scanner-choice-guide .scanner-guide-grid article:hover>span:after{width:48px}
+@media(max-width:900px){
+  .scanner-choice-guide .scanner-guide-grid article>span{width:max-content;height:auto}
+}
+@media(max-width:767px){
+  .scanner-choice-guide .scanner-guide-grid article>span{font-size:26px}
+}
 </style>
 
 
