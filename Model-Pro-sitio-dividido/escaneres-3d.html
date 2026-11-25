@@ -1506,6 +1506,42 @@ small,.small{font-size:var(--fs-small);line-height:1.5;}
 }
 </style>
 
+<style>
+/* Rediseño localizado: solo la sección de transición físico-digital */
+.mp-physical-digital{position:relative;isolation:isolate;overflow:hidden;background:radial-gradient(ellipse at 76% 40%,rgba(24,110,190,.22),transparent 36%),linear-gradient(135deg,#0c1422,#10213a 58%,#0b1729);color:#eaf5ff;padding:clamp(76px,8vw,112px) 0}
+.mp-physical-digital:before{content:"";position:absolute;inset:0;z-index:-1;opacity:.16;background-image:linear-gradient(rgba(126,190,239,.2) 1px,transparent 1px),linear-gradient(90deg,rgba(126,190,239,.2) 1px,transparent 1px);background-size:42px 42px;mask-image:linear-gradient(90deg,transparent,#000 35%,#000)}
+.mp-process-head{display:grid;grid-template-columns:1.15fr .65fr;gap:48px;align-items:end;margin-bottom:36px}
+.mp-process-title .eyebrow{color:#8bd8ff;letter-spacing:.16em;font-size:11px;font-weight:700}
+.mp-process-title h2{font-size:clamp(38px,5vw,66px);line-height:1;letter-spacing:-.055em;color:#f4f9ff;margin:18px 0 0}
+.mp-process-title h2 span{background:linear-gradient(90deg,#70c8ff,#19d0d0);background-clip:text;-webkit-background-clip:text;color:transparent}
+.mp-process-head .section-sub{max-width:410px;color:#b4c9df;font-size:16px;line-height:1.75;margin:0 0 4px}
+.mp-process-visual{height:clamp(280px,34vw,390px);position:relative;overflow:hidden;border:1px solid rgba(111,183,240,.28);border-radius:16px;background:radial-gradient(ellipse at 25% 55%,rgba(64,132,193,.16),transparent 32%),radial-gradient(ellipse at 78% 50%,rgba(0,190,205,.13),transparent 34%),rgba(8,24,43,.72);display:grid;grid-template-columns:1fr 1fr;align-items:center;box-shadow:0 24px 70px rgba(0,0,0,.2),inset 0 1px rgba(255,255,255,.05)}
+.mp-process-grid{position:absolute;inset:0;background:linear-gradient(90deg,transparent 49.9%,rgba(118,190,240,.12) 50%,transparent 50.1%),repeating-linear-gradient(0deg,transparent 0 39px,rgba(112,176,224,.05) 40px)}
+.mp-process-object,.mp-process-mesh{position:relative;z-index:2;justify-self:center;width:min(100%,270px);height:230px;display:grid;place-items:center}
+.mp-process-object svg,.mp-process-mesh svg{width:100%;height:100%;overflow:visible;filter:drop-shadow(0 12px 20px rgba(0,0,0,.28))}
+.mp-object-tag,.mp-mesh-tag{position:absolute;top:0;left:0;color:#8ec9ed;font:700 8px Manrope,sans-serif;letter-spacing:.14em}
+.mp-mesh-tag{color:#5bdde0}
+.mp-object-tag i,.mp-mesh-tag i{display:inline-block;width:5px;height:5px;background:#39c6ed;border-radius:50%;margin-left:6px;vertical-align:2px;box-shadow:0 0 9px currentColor}
+.mp-object-meta,.mp-mesh-meta{position:absolute;bottom:0;color:#82b8dc;font:8px monospace;letter-spacing:.1em}
+.mp-mesh-meta{color:#56d6df}
+.mp-process-beam{position:absolute;z-index:3;left:50%;top:12%;bottom:12%;width:1px;background:linear-gradient(transparent,#25d9e4 18%,#69c8ff 50%,#25d9e4 82%,transparent);box-shadow:0 0 15px #28d9e8;animation:mp-beam 4s ease-in-out infinite}
+.mp-process-beam i{position:absolute;left:-24px;top:48%;width:48px;height:2px;background:#5be7ed;box-shadow:0 0 20px 4px rgba(32,211,226,.35)}
+.mp-visual-center{position:absolute;z-index:4;left:50%;top:50%;transform:translate(-50%,-50%);display:flex;align-items:center;gap:7px;padding:9px 11px;border:1px solid rgba(105,195,230,.25);background:rgba(6,20,37,.9);color:#8fb2d0;font:700 7px Manrope,sans-serif;letter-spacing:.1em;white-space:nowrap}
+.mp-visual-center b{font-size:11px;color:#b9fbf5}
+.mp-visual-coord{position:absolute;right:16px;bottom:12px;color:#6487a6;font:8px monospace;letter-spacing:.12em}
+.mp-process-steps{display:grid;grid-template-columns:repeat(4,1fr);margin-top:25px;border-top:1px solid rgba(112,176,224,.2)}
+.mp-process-steps .step{display:block;padding:18px 18px 0 0;min-width:0}
+.mp-process-steps .step+.step{padding-left:18px;border-left:1px solid rgba(112,176,224,.16)}
+.mp-process-steps .step-top{display:flex;align-items:center;justify-content:space-between;margin-bottom:12px}
+.mp-process-steps .mp-step-index{font:700 10px Manrope,sans-serif;color:#39cbd6}
+.mp-process-steps .mp-step-symbol{font-size:19px;color:#6cbce8}
+.mp-process-steps h3{font-size:15px;color:#f0f7ff;margin:0 0 7px}
+.mp-process-steps p{font-size:11px;line-height:1.65;color:#91abc5;margin:0;max-width:220px}
+@keyframes mp-beam{0%,100%{opacity:.55;transform:translateX(-14px)}50%{opacity:1;transform:translateX(14px)}}
+@media(max-width:760px){.mp-process-head{grid-template-columns:1fr;gap:16px}.mp-process-head .section-sub{max-width:560px}.mp-process-visual{height:310px}.mp-process-object,.mp-process-mesh{height:190px;width:100%}.mp-process-steps{grid-template-columns:repeat(2,1fr);row-gap:18px}.mp-process-steps .step:nth-child(3){padding-left:0;border-left:0}}
+@media(max-width:480px){.mp-physical-digital{padding:68px 0}.mp-process-title h2{font-size:38px}.mp-process-visual{height:260px}.mp-process-object,.mp-process-mesh{height:150px}.mp-object-tag,.mp-mesh-tag{font-size:6px}.mp-object-meta,.mp-mesh-meta{font-size:6px}.mp-process-steps .step{padding-right:8px}.mp-process-steps .step+.step{padding-left:12px}.mp-process-steps h3{font-size:14px}.mp-process-steps p{font-size:10px}}
+@media(prefers-reduced-motion:reduce){.mp-process-beam{animation:none}}
+</style>
 </head>
 <body>
 <div class="mp-wrap">
@@ -1714,7 +1750,56 @@ small,.small{font-size:var(--fs-small);line-height:1.5;}
     <p class="scanner-compare-transition">La mejor elección no depende solo de las micras: también importa el tamaño de la pieza, dónde la escaneas y cómo trabajas.</p>
   </div>
 </section>
-<section class="section process-section"><div class="container"><span class="eyebrow">TECNOLOGÍA QUE CONECTA DOS MUNDOS</span><div class="section-heading"><h2>Del objeto físico <span>al dato digital.</span></h2><p class="section-sub">De una superficie real a información que puedes medir, analizar y transformar.</p></div><div class="steps"><div class="step"><div class="step-top"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-scan-line" aria-hidden="true"><path d="M3 7V5a2 2 0 0 1 2-2h2"/><path d="M17 3h2a2 2 0 0 1 2 2v2"/><path d="M21 17v2a2 2 0 0 1-2 2h-2"/><path d="M7 21H5a2 2 0 0 1-2-2v-2"/><path d="M7 12h10"/></svg><span>01</span></div><h3>Captura</h3><p>El escáner registra la superficie del objeto mediante tecnología óptica.</p></div><div class="step"><div class="step-top"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-box" aria-hidden="true"><path d="M21 8a2 2 0 0 0-1-1.73l-7-4a2 2 0 0 0-2 0l-7 4A2 2 0 0 0 3 8v8a2 2 0 0 0 1 1.73l7 4a2 2 0 0 0 2 0l7-4A2 2 0 0 0 21 16Z"/><path d="m3.3 7 8.7 5 8.7-5"/><path d="M12 22V12"/></svg><span>02</span></div><h3>Datos 3D</h3><p>La captura genera información espacial que representa la geometría de la pieza.</p></div><div class="step"><div class="step-top"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-layers" aria-hidden="true"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/><path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/><path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></svg><span>03</span></div><h3>Procesamiento</h3><p>Los datos se alinean y procesan para obtener una representación digital utilizable.</p></div><div class="step"><div class="step-top"><svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-cpu" aria-hidden="true"><path d="M12 20v2"/><path d="M12 2v2"/><path d="M17 20v2"/><path d="M17 2v2"/><path d="M2 12h2"/><path d="M2 17h2"/><path d="M2 7h2"/><path d="M20 12h2"/><path d="M20 17h2"/><path d="M20 7h2"/><path d="M7 20v2"/><path d="M7 2v2"/><rect x="4" y="4" width="16" height="16" rx="2"/><rect x="8" y="8" width="8" height="8" rx="1"/></svg><span>04</span></div><h3>Aplicación</h3><p>El resultado apoya tareas de inspección, diseño o ingeniería inversa, según el equipo y el flujo de trabajo.</p></div></div></div></section>
+<section class="section process-section mp-physical-digital" aria-label="Del objeto físico al dato digital">
+  <div class="container">
+    <div class="mp-process-head">
+      <div class="mp-process-title">
+        <span class="eyebrow">TECNOLOGÍA QUE CONECTA DOS MUNDOS</span>
+        <h2>Del objeto físico <span>al dato digital.</span></h2>
+      </div>
+      <p class="section-sub">De una superficie real a información que puedes medir, analizar y transformar.</p>
+    </div>
+    <div class="mp-process-visual">
+      <div class="mp-process-grid" aria-hidden="true"></div>
+      <div class="mp-process-object" aria-hidden="true">
+        <span class="mp-object-tag">GEOMETRÍA REAL <i></i></span>
+        <svg viewBox="0 0 260 220">
+          <defs><linearGradient id="mpSolid" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#b9e7ff"/><stop offset=".5" stop-color="#4389c5"/><stop offset="1" stop-color="#173b63"/></linearGradient></defs>
+          <path d="M54 66 128 25 207 68 132 111Z" fill="url(#mpSolid)" stroke="#b9e7ff" stroke-width="1.5"/>
+          <path d="M54 66 132 111 132 190 54 145Z" fill="#28547c" stroke="#83bde8"/>
+          <path d="M132 111 207 68 207 147 132 190Z" fill="#173552" stroke="#83bde8"/>
+          <path d="m91 86 37-21 41 23-37 22Z" fill="#15334f" stroke="#c1eaff"/>
+          <path d="M91 86v42l41 23v-41M169 88v42l-37 21" fill="none" stroke="#8fc9f2"/>
+          <path d="m54 66 74-41 79 43" fill="none" stroke="#fff" opacity=".65"/>
+          <circle cx="128" cy="25" r="3" fill="#e5f8ff"/><circle cx="207" cy="68" r="3" fill="#e5f8ff"/>
+        </svg>
+        <span class="mp-object-meta">X 248.6&nbsp; / &nbsp;Y 116.2&nbsp; / &nbsp;Z 084.0</span>
+      </div>
+      <div class="mp-process-beam" aria-hidden="true"><i></i></div>
+      <div class="mp-process-mesh" aria-hidden="true">
+        <span class="mp-mesh-tag">REPRESENTACIÓN DIGITAL <i></i></span>
+        <svg viewBox="0 0 280 220">
+          <g fill="none" stroke="url(#mpMeshGradient)" stroke-width="1.2">
+            <defs><linearGradient id="mpMeshGradient" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#00d4d2"/><stop offset="1" stop-color="#67aaff"/></linearGradient></defs>
+            <path d="m35 65 65-38 78 18 67 42-12 75-76 32-78-17-58-48Z"/>
+            <path d="m35 65 65 29 78-49 67 42-79 37-66-30-58 48m58-77 1 77 78 31 0-80m66 1-66 79m-78-108 78 29 66 42m-145 0 79-71"/>
+            <path d="m65 47 1 114m34-134 78 18 0 149M211 68l-33 56-78-30"/>
+          </g>
+          <g fill="#c5ffff"><circle cx="35" cy="65" r="2.5"/><circle cx="100" cy="27" r="2.5"/><circle cx="178" cy="45" r="2.5"/><circle cx="245" cy="87" r="2.5"/><circle cx="233" cy="162" r="2.5"/><circle cx="157" cy="194" r="2.5"/><circle cx="79" cy="177" r="2.5"/><circle cx="21" cy="129" r="2.5"/></g>
+        </svg>
+        <span class="mp-mesh-meta">MALLA · PUNTOS · COORDENADAS</span>
+      </div>
+      <div class="mp-visual-center"><span>CAPTURA</span><b>3D</b><span>TRANSFORMACIÓN</span></div>
+      <div class="mp-visual-coord">MODEL PRO / DIGITAL WORKFLOW</div>
+    </div>
+    <div class="steps mp-process-steps">
+      <div class="step"><div class="step-top"><span class="mp-step-index">01</span><span class="mp-step-symbol">⌖</span></div><h3>Captura</h3><p>El escáner registra la superficie del objeto mediante tecnología óptica.</p></div>
+      <div class="step"><div class="step-top"><span class="mp-step-index">02</span><span class="mp-step-symbol">◇</span></div><h3>Datos 3D</h3><p>La captura genera información espacial que representa la geometría de la pieza.</p></div>
+      <div class="step"><div class="step-top"><span class="mp-step-index">03</span><span class="mp-step-symbol">▧</span></div><h3>Procesamiento</h3><p>Los datos se alinean y procesan para obtener una representación digital utilizable.</p></div>
+      <div class="step"><div class="step-top"><span class="mp-step-index">04</span><span class="mp-step-symbol">↗</span></div><h3>Aplicación</h3><p>El resultado apoya tareas de inspección, diseño o ingeniería inversa, según el equipo y el flujo de trabajo.</p></div>
+    </div>
+  </div>
+</section>
 <section class="section applications-section" id="aplicaciones-industria"><div class="container"><div class="applications-photo"><img src="https://raw.githubusercontent.com/danielgarridoher-svg/pesta-as/acce7f59fcf3e39f32333cf06b2d64fd54f4d612/model-pro-escaneres-3d/images/application.webp" alt="Escaneo 3D de componentes en un entorno industrial" loading="lazy"><span><span class="status-dot"></span> TECNOLOGÍA EN EL MUNDO REAL</span></div><div class="applications-copy"><span class="eyebrow">DE LOS DATOS A LAS DECISIONES</span><h2>Una nueva dimensión<br><span>para tu industria.</span></h2><div class="application-list"><div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-factory" aria-hidden="true"><path d="M12 16h.01"/><path d="M16 16h.01"/><path d="M3 19a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V8.5a.5.5 0 0 0-.769-.422l-4.462 2.844A.5.5 0 0 1 15 10.5v-2a.5.5 0 0 0-.769-.422L9.77 10.922A.5.5 0 0 1 9 10.5V5a2 2 0 0 0-2-2H5a2 2 0 0 0-2 2z"/><path d="M8 16h.01"/></svg><div><h3>Manufactura</h3><p>Captura y documentación de componentes y piezas.</p></div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div><div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-ruler" aria-hidden="true"><path d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.41 2.41 0 0 1 0-3.4l2.6-2.6a2.41 2.41 0 0 1 3.4 0Z"/><path d="m14.5 12.5 2-2"/><path d="m11.5 9.5 2-2"/><path d="m8.5 6.5 2-2"/><path d="m17.5 15.5 2-2"/></svg><div><h3>Control de calidad</h3><p>Comparación de geometrías y apoyo a la inspección dimensional.</p></div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div><div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-rotate-3d" aria-hidden="true"><path d="M16.466 7.5C15.643 4.237 13.952 2 12 2 9.239 2 7 6.477 7 12s2.239 10 5 10c.342 0 .677-.069 1-.2"/><path d="m15.194 13.707 3.814 1.86-1.86 3.814"/><path d="M19 15.57c-1.804.885-4.274 1.43-7 1.43-5.523 0-10-2.239-10-5s4.477-5 10-5c4.838 0 8.873 1.718 9.8 4"/></svg><div><h3>Ingeniería inversa</h3><p>Datos para reconstrucción y desarrollo de modelos 3D.</p></div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div><div><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-pen-tool" aria-hidden="true"><path d="M15.707 21.293a1 1 0 0 1-1.414 0l-1.586-1.586a1 1 0 0 1 0-1.414l5.586-5.586a1 1 0 0 1 1.414 0l1.586 1.586a1 1 0 0 1 0 1.414z"/><path d="m18 13-1.375-6.874a1 1 0 0 0-.746-.776L3.235 2.028a1 1 0 0 0-1.207 1.207L5.35 15.879a1 1 0 0 0 .776.746L13 18"/><path d="m2.3 2.3 7.286 7.286"/><circle cx="11" cy="11" r="2"/></svg><div><h3>Diseño de producto</h3><p>Digitalización para apoyar procesos de diseño y modificación.</p></div><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-check" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg></div></div><a class="btn btn-link btn-size-default" href="#scanner-request-form">Conversemos sobre tu aplicación <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="lucide lucide-arrow-right" aria-hidden="true"><path d="M5 12h14"/><path d="m12 5 7 7-7 7"/></svg></a></div></div></section>
 <section class="scanner-modelpro-section" aria-labelledby="scanner-modelpro-title">
   <div class="container">
