@@ -615,6 +615,17 @@ table.mp-cmp{min-width:980px}
 @media(max-width:560px){#uso .mp-big4{grid-template-columns:1fr}#uso .mp-big4>div{min-height:0}}
 @media(prefers-reduced-motion:reduce){#uso .mp-big4>div,#uso .mp-big4>div::before,#uso .mp-big4>div::after,#uso .mp-big4 i{transition:none!important}}
 
+
+/* Aviso de precisión · integrado a la plantilla clara de #uso */
+#uso .mp-callout{position:relative;isolation:isolate;overflow:hidden;grid-template-columns:minmax(170px,auto) 1fr;gap:28px;margin-top:26px;padding:26px 30px;border:1px solid #D5E5F5;border-left:4px solid #2E82F0;border-radius:16px;background:linear-gradient(115deg,#F0F7FF 0%,#FFFFFF 58%,#EAF8F7 100%);box-shadow:0 10px 28px rgba(23,52,88,.065);color:#183458}
+#uso .mp-callout::after{content:"";position:absolute;z-index:-1;right:-55px;top:-95px;width:240px;height:240px;border-radius:50%;background:radial-gradient(circle,rgba(46,130,240,.13),rgba(0,184,189,.07) 48%,transparent 72%);pointer-events:none}
+#uso .mp-callout .mp-big{font-size:clamp(30px,4vw,42px);font-weight:850;letter-spacing:-.04em;line-height:1.05;background:linear-gradient(110deg,#1558C0,#2E82F0 65%,#00AFAF);-webkit-background-clip:text;background-clip:text;color:transparent;white-space:nowrap}
+#uso .mp-callout .mp-big small{display:block;margin-top:7px;font-size:14px;font-weight:700;letter-spacing:.01em;color:#52718F;-webkit-text-fill-color:#52718F}
+#uso .mp-callout h3{margin:0 0 7px;color:#183458;font-size:clamp(17px,2vw,20px);line-height:1.3}
+#uso .mp-callout p{margin:0;color:#526783;font-size:14.5px;line-height:1.6;max-width:720px}
+@media(max-width:600px){#uso .mp-callout{grid-template-columns:1fr;gap:14px;padding:22px 20px}#uso .mp-callout .mp-big{font-size:34px}}
+@media(prefers-reduced-motion:no-preference){#uso .mp-callout{transition:box-shadow .3s ease,border-color .3s ease}#uso .mp-callout:hover{border-color:#A9C8E8;box-shadow:0 16px 34px rgba(21,88,192,.10)}}
+
 </style>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
