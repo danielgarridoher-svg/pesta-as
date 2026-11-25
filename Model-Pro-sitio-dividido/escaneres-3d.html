@@ -1535,6 +1535,19 @@ small,.small{font-size:var(--fs-small);line-height:1.5;}
 @keyframes process-line-in{from{transform:scaleX(.15);opacity:.3}to{transform:scaleX(1);opacity:1}}
 @media(max-width:760px){.process-section .steps:before{display:none}.process-section .step{min-height:0}}
 @media(prefers-reduced-motion:reduce){.process-section:after,.process-section .section-heading:after{animation:none}.process-section .step,.process-section .step:after,.process-section .step-top svg{transition:none}}
+
+/* Corrección de cascada: la paleta clara anterior tenía !important y anulaba el tema oscuro */
+.process-section{
+  background:radial-gradient(ellipse at 82% 20%,rgba(0,184,189,.13),transparent 34%),linear-gradient(135deg,#0c1422 0%,#10213a 58%,#0b1729 100%)!important;
+  color:#eaf5ff!important;
+}
+.process-section>.container{position:relative;z-index:1}
+.process-section .eyebrow{color:#8bd8ff!important}
+.process-section .section-heading h2{color:#f4f9ff!important;-webkit-text-fill-color:#f4f9ff!important}
+.process-section .section-heading p{color:#b4c9df!important}
+.process-section .step h3{color:#f0f7ff!important}
+.process-section .step p{color:#9bb4cd!important}
+.process-section .step-top span{color:#4bd1d8!important}
 </style>
 </head>
 <body>
